@@ -5,8 +5,9 @@ close all
 syms x1
 Gaussfunc(x1) = exp(-x1.^2/2);
 %%
-N = 4; %Number of boxes
+N = 8; %Number of boxes
 [z,v] = zigplot(N,Gaussfunc); % Generate N box points with area v
+xi = z(:,1);
 z_p = zeros(length(z)-1,2);
 effiniency = zeros(1,1);
 %% Area calculations
@@ -23,6 +24,8 @@ end
 MSE = mean((area-area(1)).^2);
 
 %% Plot squares
+clc
+close all
 plot(z(:,1),z(:,2),'.')
 xlim([0 4])
 grid on
@@ -42,5 +45,20 @@ fill([M,4,z(1,1)],[Gaussfunc(M),0,0],'r')
 
 %%
 %rng(1);
-j = uint32(round(2^32*rand));
-i = bit2int(int2bit(j,log2(N)),log2(N));
+x = zeros(1000,1);
+
+for L = 1:1000
+    U = rand;
+    j = uint32(round(2^32*U));
+    i = bit2int(int2bit(j,log2(N)),log2(N))+1;
+    x(L) = U*xi(i);
+end
+%%
+xline(x);
+if i == N
+    fprintf('i:     %d \nN: %d\nGoto Tail\n',i,N)
+elseif x < xi(i+1)
+    fprintf('i:     %d \nN: %d\nx is in C\n',i,N)
+else
+    fprintf('i:     %d \nN: %d\nGoto top region\n',i,N)
+end
