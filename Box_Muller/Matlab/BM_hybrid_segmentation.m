@@ -1,7 +1,7 @@
 %Hybrid segmentation of f() for Box Muller implementation
 %f = sqrt(-2*ln(U1))
 clear all
-
+% John dillermand
 U = logspace(-12, log10(0.5), 1000);
 U = [U expspace(0.5, 1, 1000)];
 U = [U linspace(0.3, 0.7, 1000)];
