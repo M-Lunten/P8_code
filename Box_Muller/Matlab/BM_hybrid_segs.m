@@ -1,4 +1,4 @@
-function [coefficients, coefficients_tr, segments] = BM_hybrid_segs(WordLength, L)
+function [coefficients, coefficients_tr, segments] = BM_hybrid_segs(WordLength, L, n_p)
 %BM_hybrid_segs: creates the hybrid segmentation of the function 
 %sqrt(-2*ln(U1))
 w = 2*(WordLength - 1);
@@ -26,22 +26,36 @@ for i = 1:L:w*(L/2)
 end
 r0(end+1) = r0_end; 
 
-f_r0 = sqrt(-2.*log(r0));
-f_r1 = sqrt(-2.*log(r1));
-coeffs_r0 = zeros(124,2);
-coeffs_r1 = zeros(124,2);
+coeffs_r0 = zeros((WordLength-1)*L,2);
+coeffs_r1 = zeros((WordLength-1)*L,2);
 
 for i = 1:length(r0)-1
-    coeffs_r0(i,:) = polyfit([r0(i), r0(i+1)], [f_r0(i), f_r0(i+1)], 1);
-    coeffs_r1(i,:) = polyfit([r1(i), r1(i+1)], [f_r1(i), f_r1(i+1)], 1);
+    x_points = linspace(r0(i), r0(i+1), n_p);
+    y_points = sqrt(-2.*log(x_points));
+    coeffs_r0(i,:) = polyfit(x_points, y_points, 1);
+    x_points = linspace(r1(i), r1(i+1), n_p);
+    y_points = sqrt(-2.*log(x_points));
+    coeffs_r1(i,:) = polyfit(x_points, y_points, 1);
 end
 
 coefficients = [flip(coeffs_r0); coeffs_r1];
 segments = [flip(r0); r1(2:length(r1))];
 
 %Truncated version of the coefficients
-for i = 1:100
+coeffs_r0_tr = zeros(length(coeffs_r0),3); 
+coeffs_r1_tr = zeros(length(coeffs_r0),3); 
 
+n_seg = 0;
+for i = 1:L:length(coeffs_r1)
+    for j = 0:L-1
+        coeffs_r0_tr(i+j, 1) = 2^(-n_seg)*coeffs_r0(i+j,1);
+        coeffs_r0_tr(i+j, 2) = coeffs_r0(i+j, 2);
+        coeffs_r0_tr(i+j, 3) = n_seg;
+        coeffs_r1_tr(i+j, 1) = -2^(-n_seg)*coeffs_r1(i+j,1);
+        coeffs_r1_tr(i+j, 2) = coeffs_r1(i+j, 1) + coeffs_r1(i+j, 2);
+        coeffs_r1_tr(i+j, 3) = n_seg;
+    end
+    n_seg = n_seg+1;
 end
-
+coefficients_tr = [flip(coeffs_r0_tr); coeffs_r1_tr];
 end
