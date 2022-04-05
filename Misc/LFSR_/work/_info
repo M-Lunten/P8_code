@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+Efibo_tb
+Z0 w1646398981
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Morten/Desktop/P8 - VHDL code/LFSR_
+Z4 8C:\Users\Morten\Desktop\P8 - VHDL code\LFSR_\fibo_tb.vhd
+Z5 FC:\Users\Morten\Desktop\P8 - VHDL code\LFSR_\fibo_tb.vhd
+l0
+L4
+V=@0S9eJ]gSf>l2TLLPOi:0
+!s100 0m^PhR1oOnlPF;PSS24KM1
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1646400884
+!i10b 1
+Z8 !s108 1646400884.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Morten\Desktop\P8 - VHDL code\LFSR_\fibo_tb.vhd|
+Z10 !s107 C:\Users\Morten\Desktop\P8 - VHDL code\LFSR_\fibo_tb.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehave
+R1
+R2
+Z13 DEx4 work 7 fibo_tb 0 22 =@0S9eJ]gSf>l2TLLPOi:0
+l17
+L7
+Z14 VZMfRj]:PE8lhgjEbmZeoc1
+Z15 !s100 XFnhHkC?MZ6oM8bT[<[Ne2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Efibonacci_number_generator
+Z16 w1646400876
+R1
+R2
+R3
+Z17 8C:\Users\Morten\Desktop\P8 - VHDL code\LFSR_\Fibonacci_number_generator.vhd
+Z18 FC:\Users\Morten\Desktop\P8 - VHDL code\LFSR_\Fibonacci_number_generator.vhd
+l0
+L4
+VQP9?8;YmH1H9Sf]F2NXYA1
+!s100 Wei85nccM^`8MeO7PiOW82
+R6
+32
+R7
+!i10b 1
+R8
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Morten\Desktop\P8 - VHDL code\LFSR_\Fibonacci_number_generator.vhd|
+Z20 !s107 C:\Users\Morten\Desktop\P8 - VHDL code\LFSR_\Fibonacci_number_generator.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+DEx4 work 26 fibonacci_number_generator 0 22 QP9?8;YmH1H9Sf]F2NXYA1
+l13
+L11
+ViLTXHzRZ=c2fkNcoK?PBm2
+!s100 NiO<Vh2Z>:dBm7<ZkUgkT3
+R6
+32
+R7
+!i10b 1
+R8
+R19
+R20
+!i113 1
+R11
+R12

@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Tue Mar 01 14:34:50 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Fibonacci_number_generator
+Top-level Entity Name : Fibonacci_number_generator
+Family : Cyclone V
+Device : 5CGXFC7C7F23C8
+Power Models : Final
+Total Thermal Power Dissipation : 353.90 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 349.45 mW
+I/O Thermal Power Dissipation : 4.45 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

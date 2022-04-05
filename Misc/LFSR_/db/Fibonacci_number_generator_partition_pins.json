@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "fibo[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fibo[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fibo[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fibo[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
