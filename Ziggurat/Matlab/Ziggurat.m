@@ -43,4 +43,4 @@ fill([M,4,z(1,1)],[Gaussfunc(M),0,0],'r')
 %rng(1);
 j = uint32(round(2^32*rand));
 i = bit2int(int2bit(j,log2(N)),log2(N));
-
+j*i;
