@@ -1,4 +1,4 @@
-function [coefficients, segments] = BM_hybrid_segs(WordLength, L)
+function [coefficients, coefficients_tr, segments] = BM_hybrid_segs(WordLength, L)
 %BM_hybrid_segs: creates the hybrid segmentation of the function 
 %sqrt(-2*ln(U1))
 w = 2*(WordLength - 1);
@@ -38,4 +38,12 @@ end
 
 coefficients = [flip(coeffs_r0); coeffs_r1];
 segments = [flip(r0); r1(2:length(r1))];
+
+%Truncated version of the coefficients
+coefficients_tr = zeros(size(coeffs));
+coefficients_tr(1:half_p, 1) = 2^(-w)*coeffs(1:half_p, 1);
+coefficients_tr(1:half_p, 2) = coeffs(1:half_p, 2);
+coefficients_tr(1+half_p:end, 1) = -2^(-w)*coeffs(1+half_p:end, 1);
+coefficients_tr(1+half_p:end, 2) = coeffs(1+half_p:end, 2) + coeffs(1+half_p:end, 1);
+
 end
