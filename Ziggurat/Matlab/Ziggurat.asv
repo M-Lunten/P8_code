@@ -20,7 +20,7 @@ effiniency(1) = (1/sum(area))*int(Gaussfunc(x1),[0 inf]);
 for i = 1:N
     err(i) = (area(i)-area(1))^2;
 end
-MSE = mean((area-area(1)).^2);
+MSE = mean(err)
 
 %% Plot squares
 plot(z(:,1),z(:,2),'.')
