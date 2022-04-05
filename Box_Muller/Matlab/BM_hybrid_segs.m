@@ -40,6 +40,8 @@ coefficients = [flip(coeffs_r0); coeffs_r1];
 segments = [flip(r0); r1(2:length(r1))];
 
 %Truncated version of the coefficients
+for i = 1:100
 
+end
 
 end
