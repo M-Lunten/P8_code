@@ -6,7 +6,7 @@ syms x1
 Gaussfunc(x1) = 1/sqrt(2*pi)*exp(-x1.^2/2);
 efficiency = zeros(1,1);
 %%
-N = 256; %Number of boxes
+N = 16; %Number of boxes
 [z,v] = zigplot(N,Gaussfunc); % Generate N box points with area v
 
 % Area calculations
@@ -46,17 +46,19 @@ for L = 1:100000
         end
     elseif i == N
         if yi(i) < X^2/2
-            x(end+1) = X;
+            %x(end+1) = X;
             tail = tail + 1;
         else
             reject2 = reject2 + 1;
         end
     end
 end
+R = xcorr(x);
+fprintf('Mean of x: %d\nVariance of x %d\n',mean(x),var(x))
 %% Plot squares
-clc
-close all
+figure()
 plot(z(:,1),z(:,2),'.')
+title('PDF with Ziggurat rectangles')
 xlim([-4 4])
 grid on
 hold on
@@ -71,3 +73,7 @@ ksdensity(x); %Plot generated dist
 % Plot color
 M = (z(1,1):0.001:4);
 fill([M,4,z(1,1)],[Gaussfunc(M),0,0],'r')
+
+figure()
+plot(R)
+title('Auto-Corrolation of GRN samples')
