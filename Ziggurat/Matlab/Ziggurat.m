@@ -6,8 +6,12 @@ syms x1
 Gaussfunc(x1) = 1/sqrt(2*pi)*exp(-x1.^2/2);
 efficiency = zeros(1,1);
 %%
-N = 16; %Number of boxes
-[z,v] = zigplot(N,Gaussfunc); % Generate N box points with area v
+N = 2^10; %Number of boxes
+%[z,v] = zigplot(N,Gaussfunc); % Generate N box points with area v
+str = append('Z_',num2str(N),'.mat');
+load(str)
+fprintf('Number of rectangles: %d\nLoading %s\n',N,str);
+%%
 
 % Area calculations
 er = zeros(N-1,1);
@@ -17,19 +21,22 @@ for i=2:N
     area(i) = z(i-1,1)*(z(i,2)-z(i-1,2));
 end
 efficiency(1) = (1/sum(area))*int(Gaussfunc(x1),[0 inf]);
+fprintf('Efficiency: %d\nArea of rectangles: %d\n',efficiency(1),area(1));
+
 z_p = zeros(length(z)-1,2);
 xi = z(:,1);
 yi = z(:,2);
 
 %%
 %rng(1);
+samples = 100000;
 reject1 = 0;
 reject2 = 0;
 gauss = 0;
 tail = 0;
 X = 0;
 x = [];
-for L = 1:100000
+for L = 1:samples
     U = rand;
     j = uint16(round(2^16*U));
     i = bit2int(int2bit(j,log2(N)),log2(N))+1;
@@ -53,8 +60,10 @@ for L = 1:100000
         end
     end
 end
-R = xcorr(x);
-fprintf('Mean of x: %d\nVariance of x %d\n',mean(x),var(x))
+[R1,lag1] = xcorr(x);
+x2 = randn(samples,1);
+[R2,lag2] = xcorr(x2);
+fprintf('Mean of x: %d\nVariance of x: %d\n',mean(x),var(x))
 %% Plot squares
 figure()
 plot(z(:,1),z(:,2),'.')
@@ -69,11 +78,16 @@ for i = 1:N-1
 end
 fplot(Gaussfunc(x1),'--',LineWidth=0.8)
 plot(z_p(:,1),z_p(:,2),'.')
-ksdensity(x); %Plot generated dist
 % Plot color
 M = (z(1,1):0.001:4);
 fill([M,4,z(1,1)],[Gaussfunc(M),0,0],'r')
+ksdensity(x); %Plot generated dist
 
 figure()
-plot(R)
+subplot(2,1,1)
+plot(lag1,R1/samples)
+axis([min(lag1) max(lag1) -0.1 1.1])
 title('Auto-Corrolation of GRN samples')
+subplot(2,1,2)
+plot(lag2,R2/samples)
+axis([min(lag2) max(lag2) -0.1 1.1])
