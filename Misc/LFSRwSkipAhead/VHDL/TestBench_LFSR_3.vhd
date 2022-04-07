@@ -27,10 +27,10 @@ t_prcs_CLK: PROCESS
 begin
 loop
 	CLK <= '0';
-	wait for 10000 ps;
+	wait for 1000 ps;
 	CLK <= '1';
-	wait for 10000 ps;
-	if (now >= 1000000 ps) then wait; end if;
+	wait for 1000 ps;
+	if (now >= 100000 ps) then wait; end if;
 end loop;
 end process t_prcs_CLK;
 end LFSR_3_arch;

@@ -9,7 +9,7 @@ entity LFSR_8 is
 end LFSR_8;
 
 architecture Behavioral of LFSR_8 is
-	signal shift_register : std_logic_vector(7 downto 0) := "00001010";
+	signal shift_register : std_logic_vector(7 downto 0) := "00000010";
 begin
 
 -- ShiftRegister
@@ -18,13 +18,9 @@ begin
 		if (CLK'event and CLK  = '1') then
 			shift_register(0) <= shift_register(3);
 			shift_register(1) <= not(shift_register(0) xor shift_register(4));
-			shift_register(2) <= not(shift_register(0) xor shift_register(1)xor shift_register(5));
-			shift_register(3) <= not(shift_register(0) xor shift_register(1)xor shift_register(2)xor shift_register(6));
-			shift_register(4) <= not(shift_register(1) xor shift_register(2)xor shift_register(7));
+			shift_register(2) <= not(shift_register(0) xor shift_register(1) xor shift_register(5));
+			shift_register(3) <= not(shift_register(0) xor shift_register(1) xor shift_register(2) xor shift_register(6));
+			shift_register(4) <= not(shift_register(1) xor shift_register(2) xor shift_register(7));
 			shift_register(5) <= not(shift_register(0) xor shift_register(2));
 			shift_register(6) <= shift_register(1);
 			shift_register(7) <= shift_register(2);
-		end if;
-	end process;
-	OUTPUT <= shift_register;
-end Behavioral;

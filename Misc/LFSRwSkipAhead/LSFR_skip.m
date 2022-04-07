@@ -1,7 +1,7 @@
 function [samples,A] = LSFR_skip(sampleN,n,Seed,skips)
 FB = readcell('LFSR Feedback Table.xlsx');
 
-Seedint = int2bit(uint64(Seed),n)';
+Seedint = int2bit(uint64(Seed),n);
 coef = str2num(cell2mat(FB(n-2,2)));
 
 f = zeros(1,n);
@@ -72,7 +72,7 @@ for N = 1:sampleN
         end
     end
     Seedint = temp;
-    samples(N,:) = bit2int(Seedint',n);
+    samples(N,:) = bit2int(fliplr(Seedint)',n);
 end
 fprintf(fid1,'\t\tend if;\n');
 fprintf(fid1,'\tend process;\n');
@@ -99,8 +99,8 @@ fprintf(TBench,'-- list connections between master ports and signals\n');
 fprintf(TBench,'\tCLK => CLK,\n\tOUTPUT => OUTPUT\n\t);\n\n');
 fprintf(TBench,'-- CLK\n');
 fprintf(TBench,'t_prcs_CLK: PROCESS\n');
-fprintf(TBench,'begin\nloop\n\tCLK <= ''0'';\n\twait for 10000 ps;\n');
-fprintf(TBench,'\tCLK <= ''1'';\n\twait for 10000 ps;\n');
-fprintf(TBench,'\tif (now >= 1000000 ps) then wait; end if;\n');
+fprintf(TBench,'begin\nloop\n\tCLK <= ''0'';\n\twait for 1000 ps;\n');
+fprintf(TBench,'\tCLK <= ''1'';\n\twait for 1000 ps;\n');
+fprintf(TBench,'\tif (now >= 100000 ps) then wait; end if;\n');
 fprintf(TBench,'end loop;\nend process t_prcs_CLK;\nend %s_arch;',file_name);
 end
