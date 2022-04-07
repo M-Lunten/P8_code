@@ -22,7 +22,7 @@ f_approx_4 = coeffs(selected_coeff, 1).*U_4 + coeffs(selected_coeff, 2);
 
 %% L = 4 optimized
 L = 4;
-[coeffs, coeffs_tr, segments] = BM_hybrid_segs(WordLength, L, 100);
+[coeffs, coeffs_tr, segments] = BM_hybrid_segs_op(WordLength, L, 100);
 
 U_4_op = zeros((length(segments)-1)*n,1);
 for i = 1:length(segments)-1
