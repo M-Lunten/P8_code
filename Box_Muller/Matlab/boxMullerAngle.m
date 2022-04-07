@@ -42,6 +42,10 @@ if (C == 0)
     C = 1;
 end
 
+if (C==1025)
+    C = 1024;
+end
+
 outputSin = sinAnglesBi(B,:);
 outputCos = sinAnglesBi(C,:);
 if (negative ==1)
