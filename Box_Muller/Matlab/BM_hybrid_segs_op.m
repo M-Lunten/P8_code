@@ -1,6 +1,6 @@
-function [coefficients, coefficients_tr, segments] = BM_hybrid_segs(WordLength, L, n_p)
-%BM_hybrid_segs: creates the hybrid segmentation of the function 
-%sqrt(-2*ln(U1))
+function [coefficients, coefficients_tr, segments] = BM_hybrid_segs_op(WordLength, L, n_p)
+%BM_hybrid_segs_op: creates the optimized hybrid segmentation of the
+%function sqrt(-2*ln(U1))
 w = 2*(WordLength - 1);
 
 r0 = zeros((WordLength-1)*L, 1);
@@ -29,10 +29,11 @@ coeffs_r0 = zeros((WordLength-1)*L,2);
 coeffs_r1 = zeros((WordLength-1)*L,2);
 
 for i = 1:length(r0)-1
-    x_points = linspace(r0(i), r0(i+1), n_p);
+    x_points = logspace(log10(r0(i)), log10(r0(i+1)), n_p);
     y_points = sqrt(-2.*log(x_points));
     coeffs_r0(i,:) = polyfit(x_points, y_points, 1);
-    x_points = linspace(r1(i), r1(i+1), n_p);
+    x_points = linspace(10^(r1(i)), 10^(r1(i+1)), n_p);
+    x_points = log10(x_points);
     y_points = sqrt(-2.*log(x_points));
     coeffs_r1(i,:) = polyfit(x_points, y_points, 1);
 end

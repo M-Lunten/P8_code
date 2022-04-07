@@ -1,7 +1,7 @@
 %Hybrid segmentation of f() for Box Muller implementation
 %f = sqrt(-2*ln(U1))
 clear all
-% John dillermand
+
 U = logspace(-12, log10(0.5), 1000);
 U = [U expspace(0.5, 1, 1000)];
 U = [U linspace(0.3, 0.7, 1000)];
@@ -36,33 +36,15 @@ r1(WordLength-1, 1) = r1(WordLength-2, 5);
 r1(WordLength-1, 2) = r1(WordLength-2, 5)+(1-r1(WordLength-2, 5))/L;
 r1(WordLength-1, 3) = r1(WordLength-2, 5)+2*(1-r1(WordLength-2, 5))/L;
 r1(WordLength-1, 4) = r1(WordLength-2, 5)+3*(1-r1(WordLength-2, 5))/L;
-%883585
+
 plot(U, f, 'LineWidth', 1)
 hold on
 for i = 1:L+1
     xline(r0(:,i), "color", 'red')
-    xline(r1(:,i), 'color', '#77AC30')
+    xline(r1(:,i), 'color', '#588024')
 end
 hold off
 
-%{
-lin_approx = [];
-temp = [];
-coeff = [];
-
-for i = 1:length(r0)
-    for j = 1:width(r0)-1
-        U_sel = find(U >= r0(i, j) & U < r0(i, j+1));
-        x = U(U_sel);
-        y = sqrt(-2*log(U(U_sel)));
-        P = polyfit(x, y, 1);
-        coeff(i,j,:) = P; 
-        temp = [temp (P(1)*x + P(2))];
-        lin_approx = [lin_approx x];
-    end
-end
-%}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function [space] = expspace(a, b, steps)
     gf = (b/a)^(1/steps - 1);
     space = -a*gf.^((1:steps)-1) + 1;
