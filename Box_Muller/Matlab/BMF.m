@@ -3,8 +3,9 @@ function [outSin, outCos] = BMF(in,ang,sinAng)
 input = in;
 half2 = bitsliceget(input,12,12);
 negative = bitsliceget(input,11,11);
-fmWrapFloor = fimath('RoundingMethod', 'Floor', 'OverflowAction', 'Wrap');
-inputA = fi(input,0,10,9,fmWrapFloor);
+
+inputA = bitshift(input,2)
+inputA = bitshift(inputA,-2)
 %angles = [0:(pi/2)/1023:(pi/2)];
 anglesF = ang;
 sinAngles = sinAng;
