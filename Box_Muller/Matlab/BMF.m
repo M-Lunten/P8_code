@@ -7,10 +7,7 @@ negative = n;
 sinAngles = sinAng;
 
 A = input;
-B = 1024 - (A);
-if (B==0)
-    B=1;
-end
+B = 1025 - (A);
 
 if (half2==0) && (negative==0)
     outputSin = sinAngles(A);

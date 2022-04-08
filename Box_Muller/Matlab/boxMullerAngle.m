@@ -8,11 +8,7 @@ angles = [0:(pi/2)/1023:(pi/2)];
 sinAngles = sin(angles);
 
 A = input;
-B = 1024 - (A);
-
-if (B == 0)
-    B = 1;
-end
+B = 1025 - (A);
 
 if (half2==0) && (negative==0)
     outputSin = sinAngles(A);

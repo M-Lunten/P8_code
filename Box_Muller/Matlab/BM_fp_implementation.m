@@ -13,20 +13,21 @@ n = 10^3;
 s = zeros(n,1);
 c = zeros(n,1);
 f = zeros(n,1);
-U = rand(n, 2);
+U_1 = rand(n, 1);
+U_2 = [randi([1, 1024], [n, 1]), randi([0,1], [n, 1]), randi([0,1], [n, 1])];
 Z = zeros(n, 2);
 for i = 1:n
-    [s(i), c(i)] = boxMullerAngle(2*pi*U(i, 2)*(180/pi));
+    [s(i), c(i)] = boxMullerAngle(U_2(i, 1), U_2(i, 2), U_2(i, 3));
 
     % Calculation of f(.)
-    selected_coeff = discretize(U(i, 1), segments);
+    selected_coeff = discretize(U_1(i, 1), segments);
     if selected_coeff <= 124
         f(i) = coeff_tr(selected_coeff, 1)...
-            .*2.^(coeff_tr(selected_coeff, 3)).*U(i, 1)...
+            .*2.^(coeff_tr(selected_coeff, 3)).*U_1(i, 1)...
             + coeff_tr(selected_coeff, 2);
     else
         f(i) = coeff_tr(selected_coeff, 1)...
-            .*2.^(coeff_tr(selected_coeff, 3)).*(1-U(i, 1))...
+            .*2.^(coeff_tr(selected_coeff, 3)).*(1-U_1(i, 1))...
             + coeff_tr(selected_coeff, 2);
     end
     Z(i, 1) = f(i)*s(i);
