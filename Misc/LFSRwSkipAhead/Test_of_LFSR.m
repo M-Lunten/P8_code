@@ -2,13 +2,15 @@ clc
 clear all
 close all
 
-Nsamples = 10;
 SR_count = 3;
+Nsamples = 2^SR_count-1;
 Seed = 0;
 Skips = 1;
 
-S = LSFR_skip(Nsamples,SR_count,Seed,Skips);
-LFSR_VHDL_GEN(SR_count,Seed,Skips);
+S1 = LSFR_skip(Nsamples,SR_count,Seed,Skips);
+S2 = LSFR_skip(Nsamples,SR_count,Seed,2);
+LFSR_VHDL_GEN(SR_count,Seed,2);
+[S1 S2]
 
 %%
 Data = zeros(Nsamples-1,2);
