@@ -1,4 +1,4 @@
-function [decOutSin,decOutCos] = boxMullerAngle(in,m,n)
+function [outputSin,outputCos] = boxMullerAngle(in,m,n)
 
 input = in;
 negative = n;
