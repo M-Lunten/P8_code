@@ -1,22 +1,13 @@
-function [outSin, outCos] = BMF(in,ang,sinAng)
+function [outSin, outCos] = BMF(in,m,n,sinAng)
 
 input = in;
-half2 = bitsliceget(input,12,12);
-negative = bitsliceget(input,11,11);
+half2 = m;
+negative = n;
 
-inputA = bitshift(input,2)
-inputA = bitshift(inputA,-2)
-%angles = [0:(pi/2)/1023:(pi/2)];
-anglesF = ang;
 sinAngles = sinAng;
 
-for i = 1:1024
-    if inputA == anglesF(i)
-        break
-    end   
-end
-A = i;
-B = 1024 - (i);
+A = input;
+B = 1024 - (A);
 if (B==0)
     B=1;
 end
