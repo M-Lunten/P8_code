@@ -23,9 +23,9 @@ if sum(any(A > 1)) > 0
 end
 
 % Find the register outputs that should be combined as feedback
-K = zeros(1,n);
+K = zeros(n,1);
 for i = 1:n
-    K(i) = length(find(A(:,i) == 1));
+    K(i) = length(find(A(i,:) == 1));
 end
 
 file_name = strcat('LFSR_',num2str(n));
@@ -50,7 +50,7 @@ fprintf(fid1,'-- ShiftRegister\n');
 fprintf(fid1,'\tprocess(CLK)\n\tbegin\n');
 fprintf(fid1,'\t\tif (CLK\''event and CLK  = ''1'') then\n');
 for i = 1:n
-    C = find(A(:,i));
+    C = find(A(i,:));
     if K(i) == 1
         fprintf(fid1,'\t\t\tshift_register(%d) <= shift_register(%d);\n',i-1,C-1);
     else

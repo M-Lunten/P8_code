@@ -24,16 +24,16 @@ if sum(any(A > 1)) > 0
 end
 
 % Find the register outputs that should be combined as feedback
-K = zeros(1,n);
+K = zeros(n,1);
 for i = 1:n
-    K(i) = length(find(A(:,i) == 1));
+    K(i) = length(find(A(i,:) == 1));
 end
 
 samples = zeros(sampleN,1);
 for N = 1:sampleN
     for i = 1:n
         res = false;
-        C = find(A(:,i));
+        C = find(A(i,:));
         if K(i) == 1
             temp(i) = Seedint(C); % If in- and output are directly connected
         else
