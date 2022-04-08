@@ -1,6 +1,7 @@
 % Box Muller fixed point implementation 
 clear all
 % Loading the sine angle values
+load('anglesF.mat');
 load('sinAngles.mat');
 % Segmentation creation
 n_seg = 100;
@@ -18,12 +19,12 @@ s = zeros(n,1);
 c = zeros(n,1);
 f = sfi(zeros(n,1), 16, 11);
 U_1 = rand(n, 1);
-U_2 = [randi([1, 1024], [n, 1]), randi([0,1], [n, 1]), randi([0,1], [n, 1])];
+U_2 = [randi([1, 1024], [n, 1]), randi([0,1], n), randi([0,1], n)];
 Z = zeros(n, 2);
-
 for i = 1:n
-    % Calculation of g(.)
-    [s(i), c(i)] = BMF(U_2(i, 1), U_2(i, 2), U_2(i, 3), sinAngles);
+    [s(i), c(i)] = BMF(U_2(i), anglesF, sinAngles);
+    %s(i) = sfi(sin(2*pi*U_2(i)), 16, 15);
+    %c(i) = sfi(cos(2*pi*U_2(i)), 16, 15);
     % Calculation of f(.)
     selected_coeff = discretize(U_1(i, 1), segments);
     U_1_fi = ufi(U_1(i), 32, 32);

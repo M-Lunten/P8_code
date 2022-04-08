@@ -28,6 +28,6 @@ if (half2==1) && (negative==1)
     outputSin = -1 * sinAngles(B);
     outputCos = sinAngles(A);
 end
-outSin = fi(outputSin,1,16,14);
-outCos = fi(outputCos,1,16,14);
+outSin = fi(outputSin,1,16,15);
+outCos = fi(outputCos,1,16,15);
 
