@@ -1,13 +1,13 @@
-function [outSin, outCos] = BMF(in)
+function [outSin, outCos] = BMF(in,ang,sinAng)
 
 input = in;
 half2 = bitsliceget(input,12,12);
 negative = bitsliceget(input,11,11);
 fmWrapFloor = fimath('RoundingMethod', 'Floor', 'OverflowAction', 'Wrap');
 inputA = fi(input,0,10,9,fmWrapFloor);
-angles = [0:(pi/2)/1023:(pi/2)];
-anglesF = fi(angles, 0, 10, 9);
-sinAngles = sin(anglesF);
+%angles = [0:(pi/2)/1023:(pi/2)];
+anglesF = ang;
+sinAngles = sinAng;
 
 for i = 1:1024
     if inputA == anglesF(i)
