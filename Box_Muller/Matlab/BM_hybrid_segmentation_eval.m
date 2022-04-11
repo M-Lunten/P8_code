@@ -50,9 +50,9 @@ f_approx_4_op_tr_2 = coeffs_tr(selected_coeff_2, 1)...
 
 f_approx_4_op_tr = [f_approx_4_op_tr_1; f_approx_4_op_tr_2];
 %% Figures
-me_4 = (f_approx_4-f_4);
-me_4_op = (f_approx_4_op-f_4_op);
-me_4_op_tr = (f_approx_4_op_tr-f_4_op);
+me_4 = abs(f_approx_4-f_4);
+me_4_op = abs(f_approx_4_op-f_4_op);
+me_4_op_tr = abs(f_approx_4_op_tr-f_4_op);
 
 max_me_4 = max(me_4);
 max_me_4_op = max(me_4_op);
