@@ -1,0 +1,387 @@
+|LOD
+X[0] => LOD_2b:gen_LOD:0:leading_ones.x_1
+X[1] => LOD_2b:gen_LOD:1:leading_ones.x_1
+X[2] => LOD_2b:gen_LOD:2:leading_ones.x_1
+X[3] => LOD_2b:gen_LOD:3:leading_ones.x_1
+X[4] => LOD_2b:gen_LOD:4:leading_ones.x_1
+X[5] => LOD_2b:gen_LOD:5:leading_ones.x_1
+X[6] => LOD_2b:gen_LOD:6:leading_ones.x_1
+X[7] => LOD_2b:gen_LOD:7:leading_ones.x_1
+X[8] => LOD_2b:gen_LOD:8:leading_ones.x_1
+X[9] => LOD_2b:gen_LOD:9:leading_ones.x_1
+X[10] => LOD_2b:gen_LOD:10:leading_ones.x_1
+X[11] => LOD_2b:gen_LOD:11:leading_ones.x_1
+X[12] => LOD_2b:gen_LOD:12:leading_ones.x_1
+X[13] => LOD_2b:gen_LOD:13:leading_ones.x_1
+X[14] => LOD_2b:gen_LOD:14:leading_ones.x_1
+X[15] => LOD_2b:gen_LOD:15:leading_ones.x_1
+X[16] => LOD_2b:gen_LOD:16:leading_ones.x_1
+X[17] => LOD_2b:gen_LOD:17:leading_ones.x_1
+X[18] => LOD_2b:gen_LOD:18:leading_ones.x_1
+X[19] => LOD_2b:gen_LOD:19:leading_ones.x_1
+X[20] => LOD_2b:gen_LOD:20:leading_ones.x_1
+X[21] => LOD_2b:gen_LOD:21:leading_ones.x_1
+X[22] => LOD_2b:gen_LOD:22:leading_ones.x_1
+X[23] => LOD_2b:gen_LOD:23:leading_ones.x_1
+X[24] => LOD_2b:gen_LOD:24:leading_ones.x_1
+X[25] => LOD_2b:gen_LOD:25:leading_ones.x_1
+X[26] => LOD_2b:gen_LOD:26:leading_ones.x_1
+X[27] => LOD_2b:gen_LOD:27:leading_ones.x_1
+X[28] => LOD_2b:gen_LOD:28:leading_ones.x_1
+X[29] => LOD_2b:gen_LOD:29:leading_ones.x_1
+X[30] => LOD_2b:gen_LOD:30:leading_ones.x_1
+X[31] => LOD_2b:gen_LOD:31:leading_ones.x_1
+sum[0] <= LOD_2b:gen_LOD:0:leading_ones.o_and
+sum[1] <= LOD_2b:gen_LOD:1:leading_ones.o_and
+sum[2] <= LOD_2b:gen_LOD:2:leading_ones.o_and
+sum[3] <= LOD_2b:gen_LOD:3:leading_ones.o_and
+sum[4] <= LOD_2b:gen_LOD:4:leading_ones.o_and
+sum[5] <= LOD_2b:gen_LOD:5:leading_ones.o_and
+sum[6] <= LOD_2b:gen_LOD:6:leading_ones.o_and
+sum[7] <= LOD_2b:gen_LOD:7:leading_ones.o_and
+sum[8] <= LOD_2b:gen_LOD:8:leading_ones.o_and
+sum[9] <= LOD_2b:gen_LOD:9:leading_ones.o_and
+sum[10] <= LOD_2b:gen_LOD:10:leading_ones.o_and
+sum[11] <= LOD_2b:gen_LOD:11:leading_ones.o_and
+sum[12] <= LOD_2b:gen_LOD:12:leading_ones.o_and
+sum[13] <= LOD_2b:gen_LOD:13:leading_ones.o_and
+sum[14] <= LOD_2b:gen_LOD:14:leading_ones.o_and
+sum[15] <= LOD_2b:gen_LOD:15:leading_ones.o_and
+sum[16] <= LOD_2b:gen_LOD:16:leading_ones.o_and
+sum[17] <= LOD_2b:gen_LOD:17:leading_ones.o_and
+sum[18] <= LOD_2b:gen_LOD:18:leading_ones.o_and
+sum[19] <= LOD_2b:gen_LOD:19:leading_ones.o_and
+sum[20] <= LOD_2b:gen_LOD:20:leading_ones.o_and
+sum[21] <= LOD_2b:gen_LOD:21:leading_ones.o_and
+sum[22] <= LOD_2b:gen_LOD:22:leading_ones.o_and
+sum[23] <= LOD_2b:gen_LOD:23:leading_ones.o_and
+sum[24] <= LOD_2b:gen_LOD:24:leading_ones.o_and
+sum[25] <= LOD_2b:gen_LOD:25:leading_ones.o_and
+sum[26] <= LOD_2b:gen_LOD:26:leading_ones.o_and
+sum[27] <= LOD_2b:gen_LOD:27:leading_ones.o_and
+sum[28] <= LOD_2b:gen_LOD:28:leading_ones.o_and
+sum[29] <= LOD_2b:gen_LOD:29:leading_ones.o_and
+sum[30] <= LOD_2b:gen_LOD:30:leading_ones.o_and
+sum[31] <= LOD_2b:gen_LOD:31:leading_ones.o_and
+sum_1[0] <= LOD_2b:gen_LOD:0:leading_ones.o_or
+sum_1[1] <= LOD_2b:gen_LOD:1:leading_ones.o_or
+sum_1[2] <= LOD_2b:gen_LOD:2:leading_ones.o_or
+sum_1[3] <= LOD_2b:gen_LOD:3:leading_ones.o_or
+sum_1[4] <= LOD_2b:gen_LOD:4:leading_ones.o_or
+sum_1[5] <= LOD_2b:gen_LOD:5:leading_ones.o_or
+sum_1[6] <= LOD_2b:gen_LOD:6:leading_ones.o_or
+sum_1[7] <= LOD_2b:gen_LOD:7:leading_ones.o_or
+sum_1[8] <= LOD_2b:gen_LOD:8:leading_ones.o_or
+sum_1[9] <= LOD_2b:gen_LOD:9:leading_ones.o_or
+sum_1[10] <= LOD_2b:gen_LOD:10:leading_ones.o_or
+sum_1[11] <= LOD_2b:gen_LOD:11:leading_ones.o_or
+sum_1[12] <= LOD_2b:gen_LOD:12:leading_ones.o_or
+sum_1[13] <= LOD_2b:gen_LOD:13:leading_ones.o_or
+sum_1[14] <= LOD_2b:gen_LOD:14:leading_ones.o_or
+sum_1[15] <= LOD_2b:gen_LOD:15:leading_ones.o_or
+sum_1[16] <= LOD_2b:gen_LOD:16:leading_ones.o_or
+sum_1[17] <= LOD_2b:gen_LOD:17:leading_ones.o_or
+sum_1[18] <= LOD_2b:gen_LOD:18:leading_ones.o_or
+sum_1[19] <= LOD_2b:gen_LOD:19:leading_ones.o_or
+sum_1[20] <= LOD_2b:gen_LOD:20:leading_ones.o_or
+sum_1[21] <= LOD_2b:gen_LOD:21:leading_ones.o_or
+sum_1[22] <= LOD_2b:gen_LOD:22:leading_ones.o_or
+sum_1[23] <= LOD_2b:gen_LOD:23:leading_ones.o_or
+sum_1[24] <= LOD_2b:gen_LOD:24:leading_ones.o_or
+sum_1[25] <= LOD_2b:gen_LOD:25:leading_ones.o_or
+sum_1[26] <= LOD_2b:gen_LOD:26:leading_ones.o_or
+sum_1[27] <= LOD_2b:gen_LOD:27:leading_ones.o_or
+sum_1[28] <= LOD_2b:gen_LOD:28:leading_ones.o_or
+sum_1[29] <= LOD_2b:gen_LOD:29:leading_ones.o_or
+sum_1[30] <= LOD_2b:gen_LOD:30:leading_ones.o_or
+sum_1[31] <= LOD_2b:gen_LOD:31:leading_ones.o_or
+
+
+|LOD|LOD_2b:\gen_LOD:0:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:1:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:2:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:3:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:4:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:5:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:6:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:7:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:8:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:9:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:10:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:11:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:12:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:13:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:14:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:15:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:16:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:17:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:18:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:19:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:20:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:21:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:22:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:23:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:24:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:25:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:26:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:27:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:28:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:29:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:30:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LOD|LOD_2b:\gen_LOD:31:leading_ones
+x_1 => o_and.IN0
+x_1 => o_or.IN0
+x_2 => o_and.IN1
+x_3 => o_or.IN1
+o_and <= o_and.DB_MAX_OUTPUT_PORT_TYPE
+o_or <= o_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
