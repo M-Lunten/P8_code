@@ -12,10 +12,11 @@ L = 4;
 file_name = 'b_coeff.mif';
 bit_width = 16;
 fraction_length = 12;
-depth = length(coeffs_tr);
+data = coeffs_tr(:,2);
+depth = length(data);
 address_type = 'DEC';
 data_type = 'BIN';
-data = coeffs_tr(:,2);
+
 
 % Writing to the file
 file = fopen(file_name, 'wt');
