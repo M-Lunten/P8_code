@@ -1,5 +1,5 @@
 Assembler report for Box_Muller
-Mon Apr 11 16:38:17 2022
+Mon Apr 11 20:18:01 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.sof
+  5. Assembler Device Options: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Apr 11 16:38:17 2022 ;
+; Assembler Status      ; Successful - Mon Apr 11 20:18:01 2022 ;
 ; Revision Name         ; Box_Muller                            ;
 ; Top-level Entity Name ; LOD                                   ;
 ; Family                ; Cyclone IV E                          ;
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                            ;
-+--------------------------------------------------------------------------------------+
-; File Name                                                                            ;
-+--------------------------------------------------------------------------------------+
-; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.sof ;
-+--------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                           ;
++-------------------------------------------------------------------------------------+
+; File Name                                                                           ;
++-------------------------------------------------------------------------------------+
+; C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.sof ;
++-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.sof ;
-+----------------+-----------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                       ;
-+----------------+-----------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00565131                                                                                    ;
-; Checksum       ; 0x00565131                                                                                    ;
-+----------------+-----------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.sof ;
++----------------+----------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                      ;
++----------------+----------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00574BF4                                                                                   ;
+; Checksum       ; 0x00574BF4                                                                                   ;
++----------------+----------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,15 +77,15 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Apr 11 16:37:51 2022
+    Info: Processing started: Mon Apr 11 20:17:57 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Box_Muller -c Box_Muller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4683 megabytes
-    Info: Processing ended: Mon Apr 11 16:38:17 2022
-    Info: Elapsed time: 00:00:26
+    Info: Peak virtual memory: 4680 megabytes
+    Info: Processing ended: Mon Apr 11 20:18:01 2022
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

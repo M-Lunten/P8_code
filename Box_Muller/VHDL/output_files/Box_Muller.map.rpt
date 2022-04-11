@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Box_Muller
-Mon Apr 11 16:37:19 2022
+Mon Apr 11 20:17:43 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,16 +42,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 11 16:37:19 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 11 20:17:43 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Box_Muller                                  ;
 ; Top-level Entity Name              ; LOD                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
+; Total logic elements               ; 153                                         ;
+;     Total combinational functions  ; 153                                         ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 96                                          ;
+; Total pins                         ; 38                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -150,7 +150,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -161,54 +161,75 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
-; LOD_2b.vhd                       ; yes             ; User VHDL File  ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd ;         ;
-; LOD.vhd                          ; yes             ; User VHDL File  ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd    ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; LOD_2b.vhd                       ; yes             ; User VHDL File  ; C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd       ;         ;
+; LOD.vhd                          ; yes             ; User VHDL File  ; C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd          ;         ;
+; ones_counter.vhd                 ; yes             ; User VHDL File  ; C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 96    ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; X[0]  ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 96    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 153         ;
+;                                             ;             ;
+; Total combinational functions               ; 153         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 47          ;
+;     -- 3 input functions                    ; 63          ;
+;     -- <=2 input functions                  ; 43          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 91          ;
+;     -- arithmetic mode                      ; 62          ;
+;                                             ;             ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 38          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; U[30]~input ;
+; Maximum fan-out                             ; 8           ;
+; Total fan-out                               ; 479         ;
+; Average fan-out                             ; 2.09        ;
++---------------------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |LOD                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 96   ; 0            ; |LOD                ; LOD         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                          ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name  ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+--------------+
+; |LOD                             ; 153 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |LOD                             ; LOD          ; work         ;
+;    |LOD_2b:\gen_LOD:10:detector| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:10:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:12:detector| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:12:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:13:detector| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:13:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:14:detector| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:14:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:16:detector| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:16:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:17:detector| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:17:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:18:detector| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:18:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:20:detector| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:20:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:21:detector| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:21:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:22:detector| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:22:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:24:detector| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:24:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:26:detector| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:26:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:28:detector| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:28:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:29:detector| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:29:detector ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:4:detector|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:4:detector  ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:5:detector|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:5:detector  ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:6:detector|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:6:detector  ; LOD_2b       ; work         ;
+;    |LOD_2b:\gen_LOD:8:detector|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|LOD_2b:\gen_LOD:8:detector  ; LOD_2b       ; work         ;
+;    |ones_counter:oc0|            ; 129 (129)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LOD|ones_counter:oc0            ; ones_counter ; work         ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -232,13 +253,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 96                          ;
-; cycloneiii_lcell_comb ; 2                           ;
-;     normal            ; 2                           ;
-;         0 data inputs ; 2                           ;
+; boundary_port         ; 38                          ;
+; cycloneiii_lcell_comb ; 153                         ;
+;     arith             ; 62                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 53                          ;
+;     normal            ; 91                          ;
+;         0 data inputs ; 14                          ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 47                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 14.40                       ;
+; Average LUT depth     ; 11.70                       ;
 +-----------------------+-----------------------------+
 
 
@@ -257,131 +284,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Apr 11 16:36:52 2022
+    Info: Processing started: Mon Apr 11 20:17:29 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Box_Muller -c Box_Muller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file f_a_lut.vhd
-    Info (12022): Found design unit 1: f_a_lut-SYN File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 52
-    Info (12023): Found entity 1: f_a_lut File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 42
+    Info (12022): Found design unit 1: f_a_lut-SYN File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 52
+    Info (12023): Found entity 1: f_a_lut File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file box_muller.vhd
-    Info (12022): Found design unit 1: Box_Muller-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 13
-    Info (12023): Found entity 1: Box_Muller File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 6
+    Info (12022): Found design unit 1: Box_Muller-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 13
+    Info (12023): Found entity 1: Box_Muller File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file lod_2b.vhd
-    Info (12022): Found design unit 1: LOD_2b-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd Line: 13
-    Info (12023): Found entity 1: LOD_2b File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd Line: 6
+    Info (12022): Found design unit 1: LOD_2b-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd Line: 13
+    Info (12023): Found entity 1: LOD_2b File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file lod.vhd
-    Info (12022): Found design unit 1: LOD-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 13
-    Info (12023): Found entity 1: LOD File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 6
+    Info (12022): Found design unit 1: LOD-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 13
+    Info (12023): Found entity 1: LOD File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file ones_counter.vhd
+    Info (12022): Found design unit 1: ones_counter-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd Line: 13
+    Info (12023): Found entity 1: ones_counter File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file au_mux.vhd
+    Info (12022): Found design unit 1: au_mux-SYN File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 115
+    Info (12023): Found entity 1: AU_MUX File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file addressing_unit.vhd
+    Info (12022): Found design unit 1: addressing_unit-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd Line: 14
+    Info (12023): Found entity 1: addressing_unit File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd Line: 6
 Info (12127): Elaborating entity "LOD" for the top level hierarchy
-Info (12128): Elaborating entity "LOD_2b" for hierarchy "LOD_2b:\gen_LOD:0:leading_ones" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 28
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sum[0]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[1]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[2]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[3]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[4]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[5]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[6]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[7]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[8]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[9]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[10]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[11]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[12]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[13]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[14]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[15]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[16]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[17]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[18]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[19]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[20]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[21]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[22]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[23]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[24]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[25]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[26]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[27]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[28]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[29]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[30]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum[31]" is stuck at GND File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[0]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[1]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[2]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[3]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[4]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[5]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[6]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[7]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[8]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[9]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[10]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[11]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[12]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[13]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[14]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[15]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[16]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[17]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[18]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[19]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[20]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[21]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[22]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[23]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[24]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[25]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[26]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[27]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[28]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[29]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[30]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
-    Warning (13410): Pin "sum_1[31]" is stuck at VCC File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 9
+Info (12128): Elaborating entity "LOD_2b" for hierarchy "LOD_2b:\gen_LOD:0:detector" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 35
+Info (12128): Elaborating entity "ones_counter" for hierarchy "ones_counter:oc0" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 42
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 32 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "X[0]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[1]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[2]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[3]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[4]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[5]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[6]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[7]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[8]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[9]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[10]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[11]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[12]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[13]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[14]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[15]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[16]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[17]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[18]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[19]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[20]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[21]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[22]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[23]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[24]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[25]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[26]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[27]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[28]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[29]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[30]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-    Warning (15610): No output dependent on input pin "X[31]" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
-Info (21057): Implemented 96 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "U[0]" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 8
+Info (21057): Implemented 191 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 32 input pins
-    Info (21059): Implemented 64 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 99 warnings
-    Info: Peak virtual memory: 4789 megabytes
-    Info: Processing ended: Mon Apr 11 16:37:19 2022
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:22
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 153 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4786 megabytes
+    Info: Processing ended: Mon Apr 11 20:17:43 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:25
 
 

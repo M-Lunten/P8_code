@@ -1,0 +1,26 @@
+--Addressing unit for the ROM with the LUT for f
+Library ieee; 
+use ieee.std_logic_1164.all;  
+use ieee.std_logic_unsigned.all;
+
+entity addressing_unit is 
+	port (
+		U: in std_logic_vector(31 downto 0);
+		w: out std_logic_vector(5 downto 0);
+		L: out std_logic_vector(1 downto 0)
+	);
+end addressing_unit;
+
+architecture behavior of addressing_unit is
+
+	component LOD is
+	port(
+		U: in std_logic_vector(31 downto 0);
+		res: out std_logic_vector(5 downto 0)
+	);
+	end component;
+	
+begin
+
+
+end behavior;

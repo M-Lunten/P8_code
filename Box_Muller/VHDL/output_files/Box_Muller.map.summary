@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Apr 11 16:37:19 2022
+Analysis & Synthesis Status : Successful - Mon Apr 11 20:17:43 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Box_Muller
 Top-level Entity Name : LOD
 Family : Cyclone IV E
-Total logic elements : 0
-    Total combinational functions : 0
+Total logic elements : 153
+    Total combinational functions : 153
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 96
+Total pins : 38
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
