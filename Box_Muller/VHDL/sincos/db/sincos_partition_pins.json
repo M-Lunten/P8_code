@@ -1,0 +1,189 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sinOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "sinOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "cosOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "i_clock",
+					"strict" : false
+				},
+				{
+					"name" : "data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "data[9]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

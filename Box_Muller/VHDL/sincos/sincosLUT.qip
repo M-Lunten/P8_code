@@ -1,0 +1,8 @@
+set_global_assignment -name IP_TOOL_NAME "ROM: 2-PORT"
+set_global_assignment -name IP_TOOL_VERSION "21.1"
+set_global_assignment -name IP_GENERATED_DEVICE_FAMILY "{Cyclone IV E}"
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "sincosLUT.vhd"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "sincosLUT.bsf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "sincosLUT_inst.vhd"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "sincosLUT.inc"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "sincosLUT.cmp"]

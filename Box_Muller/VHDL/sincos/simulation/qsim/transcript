@@ -1,0 +1,16 @@
+# do sincos.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 16:53:05 on Apr 12,2022
+# vcom -work work sincos.vho 
+# -- Loading package STANDARD
+# ** Error: sincos.vho(30): (vcom-1598) Library "cycloneive" not found.
+# ** Error: sincos.vho(32): (vcom-1136) Unknown identifier "CYCLONEIVE".
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Note: sincos.vho(35): VHDL Compiler exiting
+# End time: 16:53:05 on Apr 12,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_pro/21.2/modelsim_ase/win32aloem/vcom failed.
+# Executing ONERROR command at macro ./sincos.do line 3
