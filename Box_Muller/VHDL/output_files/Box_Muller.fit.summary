@@ -1,16 +1,16 @@
-Fitter Status : Successful - Tue Apr 12 17:02:05 2022
+Fitter Status : Successful - Tue Apr 12 21:19:29 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Box_Muller
-Top-level Entity Name : sincos
+Top-level Entity Name : f_block
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 75 / 114,480 ( < 1 % )
-    Total combinational functions : 53 / 114,480 ( < 1 % )
-    Dedicated logic registers : 74 / 114,480 ( < 1 % )
-Total registers : 74
-Total pins : 46 / 529 ( 9 % )
+Total logic elements : 496 / 114,480 ( < 1 % )
+    Total combinational functions : 449 / 114,480 ( < 1 % )
+    Dedicated logic registers : 86 / 114,480 ( < 1 % )
+Total registers : 86
+Total pins : 81 / 529 ( 15 % )
 Total virtual pins : 0
-Total memory bits : 16,384 / 3,981,312 ( < 1 % )
-Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total memory bits : 8,192 / 3,981,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 2 / 532 ( < 1 % )
 Total PLLs : 0 / 4 ( 0 % )

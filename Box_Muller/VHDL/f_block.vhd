@@ -8,6 +8,7 @@ entity f_block is
 		U: in std_logic_vector(31 downto 0);
 		clk_in: in std_logic;
 		f_res: out std_logic_vector(15 downto 0)
+		
 	);
 end f_block;
 
@@ -55,7 +56,7 @@ begin
 	process(clk_in)
 	
 	variable shift_res: unsigned(31 downto 0);
-	variable mult_res : signed(31 downto 0);
+	variable mult_res : signed(33 downto 0);
 	variable mac_res : signed(16 downto 0);
 	
 	begin
@@ -69,10 +70,9 @@ begin
 				U_tilde <= U;
 			
 			end if;
-			
 			shift_res := shift_left(unsigned(U_tilde), to_integer(shift_num));
-			mult_res := signed(a)*signed(shift_res(31 downto 16));
-			mac_res := signed(mult_res(31 downto 15)) + signed(b);
+			mult_res := signed(a & '0')*signed("00" & shift_res(31 downto 17));
+			mac_res := signed(mult_res(31) & mult_res(33 downto 18)) + signed(b(15) & b);
 			f_res <= std_logic_vector(mac_res(15 downto 0));
 			
 		end if;
