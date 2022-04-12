@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Box_Muller
-Tue Apr 12 21:19:08 2022
+Wed Apr 13 00:03:26 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -55,16 +55,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 12 21:19:08 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 13 00:03:26 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Box_Muller                                  ;
 ; Top-level Entity Name              ; f_block                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 481                                         ;
-;     Total combinational functions  ; 449                                         ;
-;     Dedicated logic registers      ; 86                                          ;
-; Total registers                    ; 86                                          ;
-; Total pins                         ; 81                                          ;
+; Total logic elements               ; 453                                         ;
+;     Total combinational functions  ; 453                                         ;
+;     Dedicated logic registers      ; 54                                          ;
+; Total registers                    ; 54                                          ;
+; Total pins                         ; 49                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 8,192                                       ;
 ; Embedded Multiplier 9-bit elements ; 2                                           ;
@@ -171,7 +171,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -209,41 +210,41 @@ refer to the applicable agreement for further details.
 ; lpm_mult.tdf                                                        ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
 ; lpm_add_sub.inc                                                     ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
 ; multcore.inc                                                        ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/multcore.inc          ;         ;
-; db/mult_56t.tdf                                                     ; yes             ; Auto-Generated Megafunction            ; C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_56t.tdf            ;         ;
+; db/mult_66t.tdf                                                     ; yes             ; Auto-Generated Megafunction            ; C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_66t.tdf            ;         ;
 +---------------------------------------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 481          ;
-;                                             ;              ;
-; Total combinational functions               ; 449          ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 186          ;
-;     -- 3 input functions                    ; 173          ;
-;     -- <=2 input functions                  ; 90           ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 336          ;
-;     -- arithmetic mode                      ; 113          ;
-;                                             ;              ;
-; Total registers                             ; 86           ;
-;     -- Dedicated logic registers            ; 86           ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 81           ;
-; Total memory bits                           ; 8192         ;
-;                                             ;              ;
-; Embedded Multiplier 9-bit elements          ; 2            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; clk_in~input ;
-; Maximum fan-out                             ; 118          ;
-; Total fan-out                               ; 2097         ;
-; Average fan-out                             ; 2.87         ;
-+---------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                          ;
++---------------------------------------------+--------------------------------------------------------+
+; Resource                                    ; Usage                                                  ;
++---------------------------------------------+--------------------------------------------------------+
+; Estimated Total logic elements              ; 453                                                    ;
+;                                             ;                                                        ;
+; Total combinational functions               ; 453                                                    ;
+; Logic element usage by number of LUT inputs ;                                                        ;
+;     -- 4 input functions                    ; 180                                                    ;
+;     -- 3 input functions                    ; 184                                                    ;
+;     -- <=2 input functions                  ; 89                                                     ;
+;                                             ;                                                        ;
+; Logic elements by mode                      ;                                                        ;
+;     -- normal mode                          ; 339                                                    ;
+;     -- arithmetic mode                      ; 114                                                    ;
+;                                             ;                                                        ;
+; Total registers                             ; 54                                                     ;
+;     -- Dedicated logic registers            ; 54                                                     ;
+;     -- I/O registers                        ; 0                                                      ;
+;                                             ;                                                        ;
+; I/O pins                                    ; 49                                                     ;
+; Total memory bits                           ; 8192                                                   ;
+;                                             ;                                                        ;
+; Embedded Multiplier 9-bit elements          ; 2                                                      ;
+;                                             ;                                                        ;
+; Maximum fan-out node                        ; addressing_unit:AU0|LOD:LOD0|ones_counter:oc0|sum[0]~0 ;
+; Maximum fan-out                             ; 92                                                     ;
+; Total fan-out                               ; 1976                                                   ;
+; Average fan-out                             ; 3.09                                                   ;
++---------------------------------------------+--------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -251,7 +252,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                       ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+-----------------+--------------+
-; |f_block                                  ; 449 (195)           ; 86 (86)                   ; 8192        ; 2            ; 0       ; 1         ; 81   ; 0            ; |f_block                                                                                  ; f_block         ; work         ;
+; |f_block                                  ; 453 (199)           ; 54 (54)                   ; 8192        ; 2            ; 0       ; 1         ; 49   ; 0            ; |f_block                                                                                  ; f_block         ; work         ;
 ;    |addressing_unit:AU0|                  ; 254 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |f_block|addressing_unit:AU0                                                              ; addressing_unit ; work         ;
 ;       |AU_MUX:mux0|                       ; 102 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |f_block|addressing_unit:AU0|AU_MUX:mux0                                                  ; AU_MUX          ; work         ;
 ;          |lpm_mux:LPM_MUX_component|      ; 102 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |f_block|addressing_unit:AU0|AU_MUX:mux0|lpm_mux:LPM_MUX_component                        ; lpm_mux         ; work         ;
@@ -282,7 +283,7 @@ refer to the applicable agreement for further details.
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |f_block|f_b_lut:LUT_b|altsyncram:altsyncram_component                                    ; altsyncram      ; work         ;
 ;          |altsyncram_h3s3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |f_block|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated     ; altsyncram_h3s3 ; work         ;
 ;    |lpm_mult:Mult0|                       ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |f_block|lpm_mult:Mult0                                                                   ; lpm_mult        ; work         ;
-;       |mult_56t:auto_generated|           ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |f_block|lpm_mult:Mult0|mult_56t:auto_generated                                           ; mult_56t        ; work         ;
+;       |mult_66t:auto_generated|           ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |f_block|lpm_mult:Mult0|mult_66t:auto_generated                                           ; mult_66t        ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -331,7 +332,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 86    ;
+; Total registers                              ; 54    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -346,8 +347,8 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |f_block|ShiftLeft0        ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |f_block|ShiftLeft0        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |f_block|ShiftLeft0        ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |f_block|ShiftLeft0        ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |f_block|ShiftLeft0        ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |f_block|ShiftLeft0        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
@@ -521,8 +522,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
 ; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 17           ; Untyped             ;
-; LPM_WIDTHB                                     ; 16           ; Untyped             ;
+; LPM_WIDTHA                                     ; 16           ; Untyped             ;
+; LPM_WIDTHB                                     ; 17           ; Untyped             ;
 ; LPM_WIDTHP                                     ; 33           ; Untyped             ;
 ; LPM_WIDTHR                                     ; 33           ; Untyped             ;
 ; LPM_WIDTHS                                     ; 1            ; Untyped             ;
@@ -539,7 +540,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_56t     ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_66t     ; Untyped             ;
 ; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
 ; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
@@ -585,8 +586,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+----------------+
 ; Number of entity instances            ; 1              ;
 ; Entity Instance                       ; lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 17             ;
-;     -- LPM_WIDTHB                     ; 16             ;
+;     -- LPM_WIDTHA                     ; 16             ;
+;     -- LPM_WIDTHB                     ; 17             ;
 ;     -- LPM_WIDTHP                     ; 33             ;
 ;     -- LPM_REPRESENTATION             ; SIGNED         ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO             ;
@@ -617,26 +618,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 81                          ;
-; cycloneiii_ff         ; 86                          ;
+; boundary_port         ; 49                          ;
+; cycloneiii_ff         ; 54                          ;
 ;     SLD               ; 32                          ;
-;     plain             ; 54                          ;
-; cycloneiii_lcell_comb ; 449                         ;
-;     arith             ; 113                         ;
+;     plain             ; 22                          ;
+; cycloneiii_lcell_comb ; 453                         ;
+;     arith             ; 114                         ;
 ;         2 data inputs ; 40                          ;
-;         3 data inputs ; 73                          ;
-;     normal            ; 336                         ;
+;         3 data inputs ; 74                          ;
+;     normal            ; 339                         ;
 ;         0 data inputs ; 15                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 34                          ;
-;         3 data inputs ; 100                         ;
-;         4 data inputs ; 186                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 110                         ;
+;         4 data inputs ; 180                         ;
 ; cycloneiii_mac_mult   ; 1                           ;
 ; cycloneiii_mac_out    ; 1                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 20.10                       ;
-; Average LUT depth     ; 10.00                       ;
+; Average LUT depth     ; 10.41                       ;
 +-----------------------+-----------------------------+
 
 
@@ -655,7 +656,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 12 21:18:51 2022
+    Info: Processing started: Wed Apr 13 00:03:08 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Box_Muller -c Box_Muller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -687,7 +688,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file f_b_lut
     Info (12022): Found design unit 1: f_b_lut-SYN File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 52
     Info (12023): Found entity 1: f_b_lut File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file f_block.vhd
-    Info (12022): Found design unit 1: f_block-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 17
+    Info (12022): Found design unit 1: f_block-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 15
     Info (12023): Found entity 1: f_block File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file f_block_tb.vhd
     Info (12022): Found design unit 1: f_block_tb-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd Line: 9
@@ -699,7 +700,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file sincos/
     Info (12022): Found design unit 1: sincos-Behavioural File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd Line: 15
     Info (12023): Found entity 1: sincos File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd Line: 5
 Info (12127): Elaborating entity "f_block" for the top level hierarchy
-Info (12128): Elaborating entity "addressing_unit" for hierarchy "addressing_unit:AU0" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 54
+Info (12128): Elaborating entity "addressing_unit" for hierarchy "addressing_unit:AU0" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 52
 Info (12128): Elaborating entity "AU_MUX" for hierarchy "addressing_unit:AU0|AU_MUX:mux0" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd Line: 97
 Info (12128): Elaborating entity "LPM_MUX" for hierarchy "addressing_unit:AU0|AU_MUX:mux0|LPM_MUX:LPM_MUX_component" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 381
 Info (12130): Elaborated megafunction instantiation "addressing_unit:AU0|AU_MUX:mux0|LPM_MUX:LPM_MUX_component" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 381
@@ -716,7 +717,7 @@ Info (12128): Elaborating entity "mux_g9e" for hierarchy "addressing_unit:AU0|AU
 Info (12128): Elaborating entity "LOD" for hierarchy "addressing_unit:AU0|LOD:LOD0" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd Line: 115
 Info (12128): Elaborating entity "LOD_2b" for hierarchy "addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:0:detector" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 35
 Info (12128): Elaborating entity "ones_counter" for hierarchy "addressing_unit:AU0|LOD:LOD0|ones_counter:oc0" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 41
-Info (12128): Elaborating entity "f_a_lut" for hierarchy "f_a_lut:LUT_a" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 55
+Info (12128): Elaborating entity "f_a_lut" for hierarchy "f_a_lut:LUT_a" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 53
 Info (12128): Elaborating entity "altsyncram" for hierarchy "f_a_lut:LUT_a|altsyncram:altsyncram_component" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 59
 Info (12130): Elaborated megafunction instantiation "f_a_lut:LUT_a|altsyncram:altsyncram_component" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 59
 Info (12133): Instantiated megafunction "f_a_lut:LUT_a|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 59
@@ -773,7 +774,7 @@ Info (12133): Instantiated megafunction "f_a_lut:LUT_a|altsyncram:altsyncram_com
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g3s3.tdf
     Info (12023): Found entity 1: altsyncram_g3s3 File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_g3s3" for hierarchy "f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated" File: d:/programs/quartusprimelite/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "f_b_lut" for hierarchy "f_b_lut:LUT_b" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 56
+Info (12128): Elaborating entity "f_b_lut" for hierarchy "f_b_lut:LUT_b" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 54
 Info (12128): Elaborating entity "altsyncram" for hierarchy "f_b_lut:LUT_b|altsyncram:altsyncram_component" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 59
 Info (12130): Elaborated megafunction instantiation "f_b_lut:LUT_b|altsyncram:altsyncram_component" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 59
 Info (12133): Instantiated megafunction "f_b_lut:LUT_b|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 59
@@ -831,11 +832,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_h3s3 File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_h3s3" for hierarchy "f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated" File: d:/programs/quartusprimelite/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 78
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 78
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 78
-    Info (12134): Parameter "LPM_WIDTHA" = "17"
-    Info (12134): Parameter "LPM_WIDTHB" = "16"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 74
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 74
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 74
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "17"
     Info (12134): Parameter "LPM_WIDTHP" = "33"
     Info (12134): Parameter "LPM_WIDTHR" = "33"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -843,21 +844,21 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following para
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_56t.tdf
-    Info (12023): Found entity 1: mult_56t File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_56t.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_66t.tdf
+    Info (12023): Found entity 1: mult_66t File: C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_66t.tdf Line: 28
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 596 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 536 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 33 input pins
-    Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 481 logic cells
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 453 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4815 megabytes
-    Info: Processing ended: Tue Apr 12 21:19:08 2022
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Wed Apr 13 00:03:26 2022
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:29
 
 

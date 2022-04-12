@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/12/2022 21:22:27"
+-- Generated on "04/13/2022 00:04:03"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          f_block
 -- 
@@ -35,15 +35,11 @@ ARCHITECTURE f_block_arch OF f_block_vhd_vec_tst IS
 -- signals                                                   
 SIGNAL clk_in : STD_LOGIC;
 SIGNAL f_res : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL test_a : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL test_b : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL U : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT f_block
 	PORT (
 	clk_in : IN STD_LOGIC;
 	f_res : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-	test_a : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-	test_b : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	U : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
@@ -53,8 +49,6 @@ BEGIN
 -- list connections between master ports and signals
 	clk_in => clk_in,
 	f_res => f_res,
-	test_a => test_a,
-	test_b => test_b,
 	U => U
 	);
 
@@ -78,7 +72,7 @@ END PROCESS t_prcs_U_31;
 -- U[30]
 t_prcs_U_30: PROCESS
 BEGIN
-	U(30) <= '1';
+	U(30) <= '0';
 WAIT;
 END PROCESS t_prcs_U_30;
 -- U[29]
@@ -90,13 +84,13 @@ END PROCESS t_prcs_U_29;
 -- U[28]
 t_prcs_U_28: PROCESS
 BEGIN
-	U(28) <= '0';
+	U(28) <= '1';
 WAIT;
 END PROCESS t_prcs_U_28;
 -- U[27]
 t_prcs_U_27: PROCESS
 BEGIN
-	U(27) <= '0';
+	U(27) <= '1';
 WAIT;
 END PROCESS t_prcs_U_27;
 -- U[26]
@@ -126,7 +120,7 @@ END PROCESS t_prcs_U_23;
 -- U[22]
 t_prcs_U_22: PROCESS
 BEGIN
-	U(22) <= '1';
+	U(22) <= '0';
 WAIT;
 END PROCESS t_prcs_U_22;
 -- U[21]
@@ -138,19 +132,19 @@ END PROCESS t_prcs_U_21;
 -- U[20]
 t_prcs_U_20: PROCESS
 BEGIN
-	U(20) <= '0';
+	U(20) <= '1';
 WAIT;
 END PROCESS t_prcs_U_20;
 -- U[19]
 t_prcs_U_19: PROCESS
 BEGIN
-	U(19) <= '0';
+	U(19) <= '1';
 WAIT;
 END PROCESS t_prcs_U_19;
 -- U[18]
 t_prcs_U_18: PROCESS
 BEGIN
-	U(18) <= '0';
+	U(18) <= '1';
 WAIT;
 END PROCESS t_prcs_U_18;
 -- U[17]
@@ -186,7 +180,7 @@ END PROCESS t_prcs_U_13;
 -- U[12]
 t_prcs_U_12: PROCESS
 BEGIN
-	U(12) <= '1';
+	U(12) <= '0';
 WAIT;
 END PROCESS t_prcs_U_12;
 -- U[11]
@@ -228,7 +222,7 @@ END PROCESS t_prcs_U_6;
 -- U[5]
 t_prcs_U_5: PROCESS
 BEGIN
-	U(5) <= '0';
+	U(5) <= '1';
 WAIT;
 END PROCESS t_prcs_U_5;
 -- U[4]
@@ -240,7 +234,7 @@ END PROCESS t_prcs_U_4;
 -- U[3]
 t_prcs_U_3: PROCESS
 BEGIN
-	U(3) <= '1';
+	U(3) <= '0';
 WAIT;
 END PROCESS t_prcs_U_3;
 -- U[2]
@@ -252,13 +246,13 @@ END PROCESS t_prcs_U_2;
 -- U[1]
 t_prcs_U_1: PROCESS
 BEGIN
-	U(1) <= '0';
+	U(1) <= '1';
 WAIT;
 END PROCESS t_prcs_U_1;
 -- U[0]
 t_prcs_U_0: PROCESS
 BEGIN
-	U(0) <= '1';
+	U(0) <= '0';
 WAIT;
 END PROCESS t_prcs_U_0;
 END f_block_arch;

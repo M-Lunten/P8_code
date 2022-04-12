@@ -27,7 +27,7 @@ begin
 	process is
 	begin
 		U_in <= "00011111000111110010011101100110";
-		-- expected result 0010000011011001
+		-- expected result 0001000001101100
 		wait for 20 ns;
 		clk_in <= not(clk_in);
 		wait for 20 ns;
