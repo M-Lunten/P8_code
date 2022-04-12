@@ -1,0 +1,29 @@
+-- Leading ones detector 32 bit
+Library ieee; 
+use ieee.std_logic_1164.all;  
+use ieee.std_logic_unsigned.all;
+
+entity LOD is 
+	port (
+		X: in std_logic_vector(31 downto 0);
+		sum: out std_logic_vector(61 downto 0)
+	);
+end LOD;
+
+architecture behavior of LOD is
+
+	component LOD_2b is
+	port(
+		X: in std_logic_vector(1 downto 0);
+		sum: out std_logic_vector(1 downto 0)
+	);
+	end component;
+
+begin
+	gen_LOD:
+	for i in 31 to 0  generate
+		leading_ones: LOD_2b port map (X => sum(i));
+	end generate gen_LOD;
+
+
+end behavior;
