@@ -4,151 +4,183 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "res[0]",
+					"name" : "sinOut[0]",
 					"strict" : false
 				},
 				{
-					"name" : "res[1]",
+					"name" : "sinOut[1]",
 					"strict" : false
 				},
 				{
-					"name" : "res[2]",
+					"name" : "sinOut[2]",
 					"strict" : false
 				},
 				{
-					"name" : "res[3]",
+					"name" : "sinOut[3]",
 					"strict" : false
 				},
 				{
-					"name" : "res[4]",
+					"name" : "sinOut[4]",
 					"strict" : false
 				},
 				{
-					"name" : "res[5]",
+					"name" : "sinOut[5]",
 					"strict" : false
 				},
 				{
-					"name" : "U[29]",
+					"name" : "sinOut[6]",
 					"strict" : false
 				},
 				{
-					"name" : "U[30]",
+					"name" : "sinOut[7]",
 					"strict" : false
 				},
 				{
-					"name" : "U[31]",
+					"name" : "sinOut[8]",
 					"strict" : false
 				},
 				{
-					"name" : "U[27]",
+					"name" : "sinOut[9]",
 					"strict" : false
 				},
 				{
-					"name" : "U[26]",
+					"name" : "sinOut[10]",
 					"strict" : false
 				},
 				{
-					"name" : "U[28]",
+					"name" : "sinOut[11]",
 					"strict" : false
 				},
 				{
-					"name" : "U[21]",
+					"name" : "sinOut[12]",
 					"strict" : false
 				},
 				{
-					"name" : "U[24]",
+					"name" : "sinOut[13]",
 					"strict" : false
 				},
 				{
-					"name" : "U[25]",
+					"name" : "sinOut[14]",
 					"strict" : false
 				},
 				{
-					"name" : "U[22]",
+					"name" : "sinOut[15]",
 					"strict" : false
 				},
 				{
-					"name" : "U[23]",
+					"name" : "cosOut[0]",
 					"strict" : false
 				},
 				{
-					"name" : "U[19]",
+					"name" : "cosOut[1]",
 					"strict" : false
 				},
 				{
-					"name" : "U[18]",
+					"name" : "cosOut[2]",
 					"strict" : false
 				},
 				{
-					"name" : "U[20]",
+					"name" : "cosOut[3]",
 					"strict" : false
 				},
 				{
-					"name" : "U[13]",
+					"name" : "cosOut[4]",
 					"strict" : false
 				},
 				{
-					"name" : "U[16]",
+					"name" : "cosOut[5]",
 					"strict" : false
 				},
 				{
-					"name" : "U[17]",
+					"name" : "cosOut[6]",
 					"strict" : false
 				},
 				{
-					"name" : "U[14]",
+					"name" : "cosOut[7]",
 					"strict" : false
 				},
 				{
-					"name" : "U[15]",
+					"name" : "cosOut[8]",
 					"strict" : false
 				},
 				{
-					"name" : "U[11]",
+					"name" : "cosOut[9]",
 					"strict" : false
 				},
 				{
-					"name" : "U[10]",
+					"name" : "cosOut[10]",
 					"strict" : false
 				},
 				{
-					"name" : "U[12]",
+					"name" : "cosOut[11]",
 					"strict" : false
 				},
 				{
-					"name" : "U[5]",
+					"name" : "cosOut[12]",
 					"strict" : false
 				},
 				{
-					"name" : "U[6]",
+					"name" : "cosOut[13]",
 					"strict" : false
 				},
 				{
-					"name" : "U[7]",
+					"name" : "cosOut[14]",
 					"strict" : false
 				},
 				{
-					"name" : "U[8]",
+					"name" : "cosOut[15]",
 					"strict" : false
 				},
 				{
-					"name" : "U[9]",
+					"name" : "i_clock",
 					"strict" : false
 				},
 				{
-					"name" : "U[3]",
+					"name" : "data[10]",
 					"strict" : false
 				},
 				{
-					"name" : "U[2]",
+					"name" : "data[11]",
 					"strict" : false
 				},
 				{
-					"name" : "U[4]",
+					"name" : "data[0]",
 					"strict" : false
 				},
 				{
-					"name" : "U[1]",
+					"name" : "data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "data[9]",
 					"strict" : false
 				}
 			]
