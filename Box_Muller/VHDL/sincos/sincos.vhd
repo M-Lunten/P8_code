@@ -53,6 +53,8 @@ architecture Behavioural of sincos is
 					
 					if m='1' then
 						dSinpLUT <= not(dSin);
+					else 
+						dSinpLUT <= dSin;
 					end if;
 					
 					if m='0' and n='0' then 
@@ -62,13 +64,13 @@ architecture Behavioural of sincos is
 					end if;
 					
 					if n='1' then 
-						sinOut <= not(dSinOut);
+						sinOut <= not(dSinOut) + 1;
 					else 
 						sinOut <= dSinOut;
 					end if;
 					
 					if n='1' xor m='1' then 
-						cosOut <= not(dCosOut);
+						cosOut <= not(dCosOut) + 1;
 					else 
 						cosOut <= dCosOut;
 					end if;
