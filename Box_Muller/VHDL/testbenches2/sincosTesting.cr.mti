@@ -1,4 +1,14 @@
-C:/Users/fivan/Documents/University/Master/sincos/sincosTestbench.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\fivan\Documents\University\Master\sincos\sincosTestbench.vhd}
+C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity sincos
+-- Compiling architecture Behavioural of sincos
+
+} {} {}} C:/Users/fivan/Documents/University/Master/sincos/sincosTestbench.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\fivan\Documents\University\Master\sincos\sincosTestbench.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
 -- Loading package STANDARD
 -- Loading package TEXTIO

@@ -28,7 +28,7 @@ begin
 	process is
 	begin
 		
-		d <= "001101010100";
+		d <= "011010011101";
 		wait for 20 ns;
 		clk <= '1';
 		wait for 20 ns;

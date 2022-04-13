@@ -1,0 +1,149 @@
+# Compile of sincos.vhd was successful.
+# Compile of sincosTestbench.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.sincostestbench
+# vsim -gui work.sincostestbench 
+# Start time: 10:34:56 on Apr 13,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.sincostestbench(behaviour)
+# Loading work.sincos(behavioural)
+# ** Warning: (vsim-3473) Component instance "c1 : sincosLUT" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /sincostestbench/c2 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd
+add wave -position insertpoint sim:/sincostestbench/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/testbenches2/sincosTesting.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/testbenches2/sincosTesting.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/testbenches2/sincosTesting.mpf).  File can not be renamed.
+# End time: 10:35:40 on Apr 13,2022, Elapsed time: 0:00:44
+# Errors: 3, Warnings: 7
+vsim -gui work.sincostestbench
+# vsim -gui work.sincostestbench 
+# Start time: 10:38:01 on Apr 13,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.sincostestbench(behaviour)
+# Loading work.sincos(behavioural)
+# ** Warning: (vsim-3473) Component instance "c1 : sincosLUT" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /sincostestbench/c2 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd
+add wave -position insertpoint sim:/sincostestbench/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/testbenches2/sincosTesting.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/testbenches2/sincosTesting.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/testbenches2/sincosTesting.mpf).  File can not be renamed.
+# End time: 10:38:29 on Apr 13,2022, Elapsed time: 0:00:28
+# Errors: 3, Warnings: 2
+# Compile of sincos.vhd was successful.
+# Compile of sincosTestbench.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.sincostestbench
+# vsim -gui work.sincostestbench 
+# Start time: 10:40:27 on Apr 13,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.sincostestbench(behaviour)
+# Loading work.sincos(behavioural)
+# ** Warning: (vsim-3473) Component instance "c1 : sincosLUT" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /sincostestbench/c2 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd
+add wave -position insertpoint sim:/sincostestbench/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/testbenches2/sincosTesting.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/testbenches2/sincosTesting.mpf).  File can not be renamed.
+# End time: 10:40:56 on Apr 13,2022, Elapsed time: 0:00:29
+# Errors: 2, Warnings: 3
