@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Apr 13 11:59:24 2022
+Fitter Status : Successful - Wed Apr 13 12:24:23 2022
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : sincos
 Top-level Entity Name : sincos
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 77 / 114,480 ( < 1 % )
+Total logic elements : 76 / 114,480 ( < 1 % )
     Total combinational functions : 56 / 114,480 ( < 1 % )
     Dedicated logic registers : 74 / 114,480 ( < 1 % )
 Total registers : 74

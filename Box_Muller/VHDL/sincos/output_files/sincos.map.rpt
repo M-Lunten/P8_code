@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sincos
-Wed Apr 13 11:58:49 2022
+Wed Apr 13 12:23:48 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 13 11:58:49 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 13 12:23:48 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; sincos                                      ;
 ; Top-level Entity Name              ; sincos                                      ;
@@ -218,8 +218,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;               ;
 ; Maximum fan-out node                        ; i_clock~input ;
 ; Maximum fan-out                             ; 90            ;
-; Total fan-out                               ; 719           ;
-; Average fan-out                             ; 3.02          ;
+; Total fan-out                               ; 709           ;
+; Average fan-out                             ; 2.98          ;
 +---------------------------------------------+---------------+
 
 
@@ -283,7 +283,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -385,20 +385,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; boundary_port         ; 46                          ;
 ; cycloneiii_ff         ; 74                          ;
-;     ENA               ; 20                          ;
-;     plain             ; 54                          ;
+;     plain             ; 74                          ;
 ; cycloneiii_lcell_comb ; 56                          ;
 ;     arith             ; 30                          ;
 ;         3 data inputs ; 30                          ;
 ;     normal            ; 26                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 20                          ;
-;         2 data inputs ; 4                           ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 14                          ;
 ;         3 data inputs ; 1                           ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.50                        ;
-; Average LUT depth     ; 1.46                        ;
+; Average LUT depth     ; 1.60                        ;
 +-----------------------+-----------------------------+
 
 
@@ -417,7 +416,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed Apr 13 11:58:24 2022
+    Info: Processing started: Wed Apr 13 12:23:24 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sincos -c sincos
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -493,15 +492,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd Line: 8
-Info (21057): Implemented 140 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 150 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 78 logic cells
+    Info (21061): Implemented 88 logic cells
     Info (21064): Implemented 16 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Wed Apr 13 11:58:49 2022
-    Info: Elapsed time: 00:00:25
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Wed Apr 13 12:23:48 2022
+    Info: Elapsed time: 00:00:24
     Info: Total CPU time (on all processors): 00:00:18
 
 

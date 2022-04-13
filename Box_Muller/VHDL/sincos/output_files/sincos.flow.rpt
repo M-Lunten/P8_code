@@ -1,5 +1,5 @@
 Flow report for sincos
-Wed Apr 13 12:00:10 2022
+Wed Apr 13 12:25:10 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -41,14 +41,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Apr 13 11:59:51 2022       ;
+; Flow Status                        ; Successful - Wed Apr 13 12:24:50 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; sincos                                      ;
 ; Top-level Entity Name              ; sincos                                      ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 77 / 114,480 ( < 1 % )                      ;
+; Total logic elements               ; 76 / 114,480 ( < 1 % )                      ;
 ;     Total combinational functions  ; 56 / 114,480 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 74 / 114,480 ( < 1 % )                      ;
 ; Total registers                    ; 74                                          ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/13/2022 11:58:41 ;
+; Start date & time ; 04/13/2022 12:23:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; sincos              ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 83689965950041.164984392125968         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 83689965950041.164984542114344         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; sincosLUT.bsf                          ; --            ; --          ; --         ;
@@ -95,10 +95,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 4843 MB             ; 00:00:18                           ;
-; Fitter               ; 00:00:34     ; 1.0                     ; 5872 MB             ; 00:00:23                           ;
-; Assembler            ; 00:00:26     ; 1.0                     ; 4724 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:18     ; 1.1                     ; 4882 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 4846 MB             ; 00:00:17                           ;
+; Fitter               ; 00:00:34     ; 1.0                     ; 5880 MB             ; 00:00:23                           ;
+; Assembler            ; 00:00:26     ; 1.0                     ; 4724 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:19     ; 1.1                     ; 4885 MB             ; 00:00:02                           ;
 ; Total                ; 00:01:43     ; --                      ; --                  ; 00:00:45                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
