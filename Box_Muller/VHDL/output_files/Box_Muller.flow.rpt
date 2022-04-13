@@ -1,5 +1,5 @@
 Flow report for Box_Muller
-Wed Apr 13 11:56:49 2022
+Wed Apr 13 16:01:06 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,21 +40,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Apr 13 11:56:49 2022       ;
+; Flow Status                        ; Successful - Wed Apr 13 16:01:06 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Box_Muller                                  ;
-; Top-level Entity Name              ; f_block                                     ;
+; Top-level Entity Name              ; Box_Muller                                  ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 453 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 453 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 54 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 54                                          ;
-; Total pins                         ; 49 / 529 ( 9 % )                            ;
+; Total logic elements               ; 107 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 59 / 114,480 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 107 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 107                                         ;
+; Total pins                         ; 34 / 529 ( 6 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 8,192 / 3,981,312 ( < 1 % )                 ;
-; Embedded Multiplier 9-bit elements ; 2 / 532 ( < 1 % )                           ;
+; Total memory bits                  ; 16,384 / 3,981,312 ( < 1 % )                ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/13/2022 11:53:40 ;
+; Start date & time ; 04/13/2022 15:59:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Box_Muller          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589205.164984361917816         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 83689965950041.164985834912532         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim (Verilog)                     ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -86,13 +86,12 @@ refer to the applicable agreement for further details.
 ; MISC_FILE                           ; AU_MUX.cmp                             ; --            ; --          ; --             ;
 ; MISC_FILE                           ; f_b_lut.cmp                            ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; f_block     ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; f_block     ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; f_block     ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; f_block                                ; Box_Muller    ; --          ; --             ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
@@ -101,14 +100,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:43     ; 1.0                     ; 4833 MB             ; 00:00:47                           ;
-; Fitter               ; 00:00:45     ; 1.0                     ; 5782 MB             ; 00:00:37                           ;
-; Assembler            ; 00:00:29     ; 1.0                     ; 4682 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:21     ; 1.1                     ; 4848 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:19     ; 1.0                     ; 4657 MB             ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:18     ; 1.0                     ; 4632 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:19     ; 1.0                     ; 4645 MB             ; 00:00:02                           ;
-; Total                ; 00:03:14     ; --                      ; --                  ; 00:01:40                           ;
+; Analysis & Synthesis ; 00:00:30     ; 1.0                     ; 4832 MB             ; 00:00:24                           ;
+; Fitter               ; 00:00:36     ; 1.0                     ; 5906 MB             ; 00:00:24                           ;
+; Assembler            ; 00:00:26     ; 1.0                     ; 4682 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:19     ; 1.0                     ; 4870 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:18     ; 1.0                     ; 4652 MB             ; 00:00:01                           ;
+; Total                ; 00:02:09     ; --                      ; --                  ; 00:00:54                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -117,13 +114,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -135,8 +130,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off Box_Muller -c B
 quartus_asm --read_settings_files=off --write_settings_files=off Box_Muller -c Box_Muller
 quartus_sta Box_Muller -c Box_Muller
 quartus_eda --read_settings_files=off --write_settings_files=off Box_Muller -c Box_Muller
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Box_Muller -c Box_Muller --vector_source=C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Waveform11.vwf --testbench_file=C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Waveform11.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/ Box_Muller -c Box_Muller
 
 
 

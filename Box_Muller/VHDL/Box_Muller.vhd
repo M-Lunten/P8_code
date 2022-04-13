@@ -10,7 +10,7 @@ port(
 	U1 : out std_logic_vector(15 downto 0);
 	U2 : out std_logic_vector(15 downto 0)
 	);
-end sincos;
+end Box_Muller;
 
 architecture behavioural of Box_Muller is 
 
@@ -19,14 +19,14 @@ component LFSR_16 is
 		CLK: in std_logic;
 		OUTPUT: out std_logic_vector(15 downto 0)
 	);
-end LFSR_16;
+end component;
 
 component LFSR_33 is
 	 port (
 		CLK: in std_logic;
 		OUTPUT: out std_logic_vector(32 downto 0)
 	);
-end LFSR_33;
+end component;
 
 component f_block is 
 	port (
@@ -35,7 +35,7 @@ component f_block is
 		f_res: out std_logic_vector(15 downto 0)
 		
 	);
-end f_block;
+end component;
 
 component sincos is
 	port(
@@ -45,6 +45,27 @@ component sincos is
 		sinOut : out std_logic_vector(15 downto 0);
 		cosOut : out std_logic_vector(15 downto 0)
 	);
-	end component;
+end component;
+	
+	signal LF1sincos : std_logic_vector(11 downto 0);
+	signal LF2fblock : std_logic_vector(31 downto 0);
+	signal clksig : std_logic;
+	signal sinMul : std_logic_vector(15 downto 0);
+	signal cosMul : std_logic_vector(15 downto 0);
+	signal fblockMul : std_logic_vector(15 downto 0);
+	
+	begin
+		LF16 : LFSR_16 port map(gclk,OUTPUT(15 downto 4) => LF1sincos);
+		LF33 : LFSR_33 port map(gclk,OUTPUT(31 downto 0) => LF2fblock);
+		f1 : f_block port map(LF2fblock,gclk,fblockMul);
+		sc : sincos port map(gclk,greset,LF1sincos,sinMul,cosMul);
+		
+		process(gclk) is
+			begin	
+				if rising_edge(gclk) then
+					U1 <= sinMul;
+					U2 <= cosMul;
+				end if;
+		end process;
 
 end architecture;
