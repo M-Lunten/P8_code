@@ -8,7 +8,7 @@ WordLength = 32;
 L = 4;
 [coeff, coeff_tr, segments] = BM_hybrid_segs(WordLength, L, n_seg);
 w_seg = coeff_tr(:,3);
-a = sfi(coeff_tr(:,1), 16, 14);
+a = sfi(coeff_tr(:,1), 16, 13);
 b = sfi(coeff_tr(:,2), 16, 12);
 
 %% GRNG
@@ -30,7 +30,7 @@ for i = 1:n
     if selected_coeff <= 124
         U_tilde = bitshift(U_1_fi, w_seg(selected_coeff));
         tmp = a(selected_coeff) * U_tilde;
-        tmp = sfi(tmp, 16, 11);
+        tmp = sfi(tmp, 16, 12);
         tmp = tmp + b(selected_coeff);   
         tmp = sfi(tmp, 16, 11);
         f(i) = tmp;
@@ -38,7 +38,7 @@ for i = 1:n
         U_tilde = bitcmp(U_1_fi);
         U_tilde = bitshift(U_tilde, w_seg(selected_coeff));
         tmp = a(selected_coeff) * U_tilde;
-        tmp = sfi(tmp, 16, 11);
+        tmp = sfi(tmp, 16, 12);
         tmp = tmp + b(selected_coeff); 
         tmp = sfi(tmp, 16, 11);
         f(i) = tmp;

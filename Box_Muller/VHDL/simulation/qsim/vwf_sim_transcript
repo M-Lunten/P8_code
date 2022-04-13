@@ -25,9 +25,11 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Wed Apr 13 00:04:02 2022
+    Info: Processing started: Wed Apr 13 10:30:37 2022
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Box_Muller -c Box_Muller --vector_source=C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/Waveform10.vwf --testbench_file=C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Waveform10.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+source file when writing test bench files
 
 Completed successfully. 
 
@@ -51,13 +53,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Wed Apr 13 00:04:03 2022
+    Info: Processing started: Wed Apr 13 10:30:38 2022
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/ Box_Muller -c Box_Muller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Box_Muller.vho in folder "C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4641 megabytes
-    Info: Processing ended: Wed Apr 13 00:04:04 2022
+    Info: Processing ended: Wed Apr 13 10:30:39 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -75,15 +77,15 @@ d:/programs/quartusprimelite/modelsim_ase/win32aloem//vsim -c -do Box_Muller.do
 
 Reading D:/Programs/QuartusPrimeLite/modelsim_ase/tcl/vsim/pref.tcl
 
-# 10.5b
 
+# 10.5b
 
 # do Box_Muller.do
 # ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:04:05 on Apr 13,2022
-# vcom -work work Box_Muller.vho 
 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:30:40 on Apr 13,2022
+# vcom -work work Box_Muller.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -98,22 +100,22 @@ Reading D:/Programs/QuartusPrimeLite/modelsim_ase/tcl/vsim/pref.tcl
 # -- Compiling entity f_block
 # -- Compiling architecture structure of f_block
 
-# End time: 00:04:05 on Apr 13,2022, Elapsed time: 0:00:00
+# End time: 10:30:40 on Apr 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:04:05 on Apr 13,2022
-# vcom -work work Waveform10.vwf.vht 
 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:30:40 on Apr 13,2022
+# vcom -work work Waveform10.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity f_block_vhd_vec_tst
 # -- Compiling architecture f_block_arch of f_block_vhd_vec_tst
-# End time: 00:04:05 on Apr 13,2022, Elapsed time: 0:00:00
+# End time: 10:30:40 on Apr 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.f_block_vhd_vec_tst 
-# Start time: 00:04:05 on Apr 13,2022
+# Start time: 10:30:40 on Apr 13,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -142,10 +144,9 @@ Reading D:/Programs/QuartusPrimeLite/modelsim_ase/tcl/vsim/pref.tcl
 # Loading cycloneive.cycloneive_mac_sign_reg(cycloneive_mac_sign_reg)
 # Loading cycloneive.cycloneive_mac_mult_internal(vital_cycloneive_mac_mult_internal)
 # Loading cycloneive.cycloneive_mac_out(vital_cycloneive_mac_out)
-# ** Warning: Design size of 65936 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 66744 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
-
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -167,7 +168,7 @@ Reading D:/Programs/QuartusPrimeLite/modelsim_ase/tcl/vsim/pref.tcl
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 13  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
 
-# End time: 00:04:06 on Apr 13,2022, Elapsed time: 0:00:01
+# End time: 10:30:41 on Apr 13,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 11
 
 Completed successfully. 
@@ -180,7 +181,71 @@ Reading C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Box_Muller_20220413000406.sim.vwf
+Warning: test1[15] - signal not found in VCD.
+
+Warning: test1[14] - signal not found in VCD.
+
+Warning: test1[13] - signal not found in VCD.
+
+Warning: test1[12] - signal not found in VCD.
+
+Warning: test1[11] - signal not found in VCD.
+
+Warning: test1[10] - signal not found in VCD.
+
+Warning: test1[9] - signal not found in VCD.
+
+Warning: test1[8] - signal not found in VCD.
+
+Warning: test1[7] - signal not found in VCD.
+
+Warning: test1[6] - signal not found in VCD.
+
+Warning: test1[5] - signal not found in VCD.
+
+Warning: test1[4] - signal not found in VCD.
+
+Warning: test1[3] - signal not found in VCD.
+
+Warning: test1[2] - signal not found in VCD.
+
+Warning: test1[1] - signal not found in VCD.
+
+Warning: test1[0] - signal not found in VCD.
+
+Warning: test2[15] - signal not found in VCD.
+
+Warning: test2[14] - signal not found in VCD.
+
+Warning: test2[13] - signal not found in VCD.
+
+Warning: test2[12] - signal not found in VCD.
+
+Warning: test2[11] - signal not found in VCD.
+
+Warning: test2[10] - signal not found in VCD.
+
+Warning: test2[9] - signal not found in VCD.
+
+Warning: test2[8] - signal not found in VCD.
+
+Warning: test2[7] - signal not found in VCD.
+
+Warning: test2[6] - signal not found in VCD.
+
+Warning: test2[5] - signal not found in VCD.
+
+Warning: test2[4] - signal not found in VCD.
+
+Warning: test2[3] - signal not found in VCD.
+
+Warning: test2[2] - signal not found in VCD.
+
+Warning: test2[1] - signal not found in VCD.
+
+Warning: test2[0] - signal not found in VCD.
+
+Writing the resulting VWF to C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Box_Muller_20220413103041.sim.vwf
 
 Finished VCD to VWF conversion.
 
