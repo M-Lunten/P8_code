@@ -40,9 +40,9 @@ architecture Behavioural of sincos is
 	
 	begin
 	
-		c1: sincosLUT port map(dSin, dCos, i_clock, dSinOut, dCosOut);
+		c1: sincosLUT port map(dSinpLUT, dCospLUT, i_clock, dSinOut, dCosOut);
 		
-		process(i_clock,data) is 
+		process(i_clock) is 
 			begin
 				if rising_edge(i_clock) then
 					m <= data(11);
@@ -52,14 +52,14 @@ architecture Behavioural of sincos is
 					dCos <= d;
 					
 					if m='1' then
-						dSin <= not(dSin);
+						dSinpLUT <= not(dSin);
 					
 					end if;
 					
 					if m='0' and n='0' then 
-						dCos <= not(dCos);
+						dCospLUT <= not(dCos);
 					elsif m='0'and n='1' then
-						dCos <= not(dCos);
+						dCospLUT <= not(dCos);
 					end if;
 					
 					if n='1' then 
