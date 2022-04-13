@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Box_Muller
-Wed Apr 13 00:03:26 2022
+Wed Apr 13 10:29:24 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -55,7 +55,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 13 00:03:26 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 13 10:29:24 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Box_Muller                                  ;
 ; Top-level Entity Name              ; f_block                                     ;
@@ -171,8 +171,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -242,7 +241,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                        ;
 ; Maximum fan-out node                        ; addressing_unit:AU0|LOD:LOD0|ones_counter:oc0|sum[0]~0 ;
 ; Maximum fan-out                             ; 92                                                     ;
-; Total fan-out                               ; 1976                                                   ;
+; Total fan-out                               ; 1977                                                   ;
 ; Average fan-out                             ; 3.09                                                   ;
 +---------------------------------------------+--------------------------------------------------------+
 
@@ -628,8 +627,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 74                          ;
 ;     normal            ; 339                         ;
 ;         0 data inputs ; 15                          ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 32                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 33                          ;
 ;         3 data inputs ; 110                         ;
 ;         4 data inputs ; 180                         ;
 ; cycloneiii_mac_mult   ; 1                           ;
@@ -637,7 +636,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 20.10                       ;
-; Average LUT depth     ; 10.41                       ;
+; Average LUT depth     ; 10.43                       ;
 +-----------------------+-----------------------------+
 
 
@@ -656,7 +655,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Apr 13 00:03:08 2022
+    Info: Processing started: Wed Apr 13 10:29:06 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Box_Muller -c Box_Muller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -857,8 +856,8 @@ Info (21057): Implemented 536 device resources after synthesis - the final resou
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4814 megabytes
-    Info: Processing ended: Wed Apr 13 00:03:26 2022
+    Info: Processing ended: Wed Apr 13 10:29:24 2022
     Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Total CPU time (on all processors): 00:00:31
 
 

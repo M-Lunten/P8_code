@@ -11,7 +11,7 @@ L = 4;
 % Setting for the MIF
 file_name = 'a_coeff.mif';
 bit_width = 16;
-fraction_length = 14;
+fraction_length = 13;
 data = coeffs_tr(:,1);
 depth = length(data);
 address_type = 'DEC';
@@ -31,7 +31,7 @@ fprintf(file, '\n');
 fprintf(file, 'CONTENT BEGIN\n');
 
 for i = 0:length(data)-1
-    line = bin(sfi(data(i+1), bit_width, 14));
+    line = bin(sfi(data(i+1), bit_width, fraction_length));
     fprintf(file, '\t%i : %s;\n', i, line);
 end
 fprintf(file, 'END;');

@@ -42,8 +42,8 @@ architecture behavior of f_block is
 	
 	signal seg_w : std_logic_vector(5 downto 0);
 	signal seg_L : std_logic_vector(1 downto 0);
-	signal a : std_logic_vector(15 downto 0); --Q(16, 14)
-	signal b : std_logic_vector(15 downto 0); --Q(16, 12)
+	signal a : std_logic_vector(15 downto 0); --Q(3, 13)
+	signal b : std_logic_vector(15 downto 0); --Q(4, 12)
 	signal shift_num : unsigned(5 downto 0);
 	signal U_tilde: std_logic_vector(31 downto 0);
 	
@@ -57,7 +57,7 @@ begin
 	
 	variable shift_res: unsigned(31 downto 0);
 	variable mult_res : signed(33 downto 0);
-	variable mac_res : signed(19 downto 0);
+	variable mac_res : signed(16 downto 0);
 	
 	begin
 		if rising_edge(clk_in) then
@@ -71,9 +71,9 @@ begin
 			
 			end if;
 			shift_res := shift_left(unsigned(U_tilde), to_integer(shift_num));
-			mult_res := signed(a(15) & a)*signed('0' & shift_res(31 downto 16));
-			mac_res := signed("00" & mult_res(32 downto 17)) + signed(b) & "00";
-			f_res <= std_logic_vector(mac_res(18 downto 3));
+			mult_res := signed(a(15) & a)*signed('0' & shift_res(31 downto 16)); --Q(4, 13) * Q(1, 16) = Q(5, 29) 
+			mac_res := signed(mult_res(32) & mult_res(32 downto 17)) + signed(b(15) & b); --Q(5, 29) + Q(4, 12)
+			f_res <= std_logic_vector(mac_res(16 downto 1)); --Output in Q(5, 11)
 			
 		end if;
 		
