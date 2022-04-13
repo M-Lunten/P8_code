@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Wed Apr 13 10:29:24 2022
+Analysis & Synthesis Status : Successful - Wed Apr 13 11:54:05 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Box_Muller
 Top-level Entity Name : f_block
 Family : Cyclone IV E
 Total logic elements : 453
     Total combinational functions : 453
-    Dedicated logic registers : 54
-Total registers : 54
+    Dedicated logic registers : 70
+Total registers : 70
 Total pins : 49
 Total virtual pins : 0
 Total memory bits : 8,192

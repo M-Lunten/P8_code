@@ -46,6 +46,8 @@ architecture behavior of f_block is
 	signal b : std_logic_vector(15 downto 0); --Q(4, 12)
 	signal shift_num : unsigned(5 downto 0);
 	signal U_tilde: std_logic_vector(31 downto 0);
+	signal shift1: std_logic_vector(15 downto 0);
+	--signal b1: std_logic_vector(15 downto 0);
 	
 begin
 
@@ -71,7 +73,8 @@ begin
 			
 			end if;
 			shift_res := shift_left(unsigned(U_tilde), to_integer(shift_num));
-			mult_res := signed(a(15) & a)*signed('0' & shift_res(31 downto 16)); --Q(4, 13) * Q(1, 16) = Q(5, 29) 
+			shift1 <= std_logic_vector(shift_res(31 downto 16));
+			mult_res := signed(a(15) & a)*signed('0' & shift1); --Q(4, 13) * Q(1, 16) = Q(5, 29) 
 			mac_res := signed(mult_res(32) & mult_res(32 downto 17)) + signed(b(15) & b); --Q(5, 29) + Q(4, 12)
 			f_res <= std_logic_vector(mac_res(16 downto 1)); --Output in Q(5, 11)
 			
