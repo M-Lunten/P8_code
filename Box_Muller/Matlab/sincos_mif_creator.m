@@ -15,6 +15,7 @@ data = sinAngles;
 depth = length(data);
 address_type = 'DEC';
 data_type = 'BIN';
+bsin = fi(sinAngles,1,16,15);
 
 % Writing to the file
 file = fopen(file_name, 'wt');

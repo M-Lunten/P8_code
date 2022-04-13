@@ -8,3 +8,95 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/fivan/Documents/University/Master/sincos/simulation/qsim
+Esincos
+Z0 w1649853563
+Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
+Z2 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
+Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+Z10 dC:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/simulation/qsim
+Z11 8sincos.vho
+Z12 Fsincos.vho
+l0
+L38
+V@04m`iNEZD<UdezmQk<V_2
+!s100 V2cb=OXJ6S1iPD5TNEZe^2
+Z13 OV;C;10.5b;63
+32
+Z14 !s110 1649853563
+!i10b 1
+Z15 !s108 1649853563.000000
+Z16 !s90 -work|work|sincos.vho|
+Z17 !s107 sincos.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 6 sincos 0 22 @04m`iNEZD<UdezmQk<V_2
+l293
+L97
+VW?iFXifLe:o:28PDNDJ;^0
+!s100 ^:T<8SG5^=78Sl`G>agl80
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Esincos_vhd_vec_tst
+Z20 w1649853541
+R7
+R8
+R10
+Z21 8Waveform1.vwf.vht
+Z22 FWaveform1.vwf.vht
+l0
+L31
+VRV_e28iZGCT5CX@^XKmM<2
+!s100 o1^2RWB^d]6RIY3Q8KI@70
+R13
+32
+R14
+!i10b 1
+R15
+Z23 !s90 -work|work|Waveform1.vwf.vht|
+Z24 !s107 Waveform1.vwf.vht|
+!i113 1
+R18
+R19
+Asincos_arch
+R7
+R8
+Z25 DEx4 work 18 sincos_vhd_vec_tst 0 22 RV_e28iZGCT5CX@^XKmM<2
+l50
+L33
+VF__DZbI:>`h?0;`V8BI2g3
+!s100 ahg@R<QbbO[M<oN[h>JZh0
+R13
+32
+R14
+!i10b 1
+R15
+R23
+R24
+!i113 1
+R18
+R19

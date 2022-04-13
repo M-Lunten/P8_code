@@ -1,6 +1,6 @@
 Analysis & Synthesis report for sincos
-Wed Apr 13 12:23:48 2022
-Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Wed Apr 13 14:04:16 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   9. Analysis & Synthesis IP Cores Summary
  10. Registers Removed During Synthesis
  11. General Register Statistics
- 12. Source assignments for sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated
+ 12. Source assignments for sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated
  13. Parameter Settings for User Entity Instance: sincosLUT:c1|altsyncram:altsyncram_component
  14. altsyncram Parameter Settings by Entity Instance
  15. Post-Synthesis Netlist Statistics for Top Partition
@@ -29,9 +29,9 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2021  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -41,115 +41,118 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 13 12:23:48 2022       ;
-; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
-; Revision Name                      ; sincos                                      ;
-; Top-level Entity Name              ; sincos                                      ;
-; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 78                                          ;
-;     Total combinational functions  ; 56                                          ;
-;     Dedicated logic registers      ; 74                                          ;
-; Total registers                    ; 74                                          ;
-; Total pins                         ; 46                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 16,384                                      ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Apr 13 14:04:16 2022       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; sincos                                      ;
+; Top-level Entity Name           ; sincos                                      ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 74                                          ;
+; Total pins                      ; 46                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 16,384                                      ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                           ; Setting            ; Default Value      ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; sincos             ; sincos             ;
-; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
-; Use smart compilation                                            ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                      ; Off                ; Off                ;
-; Restructure Multiplexers                                         ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
-; Preserve fewer node names                                        ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
-; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                         ; Auto               ; Auto               ;
-; Safe State Machine                                               ; Off                ; Off                ;
-; Extract Verilog State Machines                                   ; On                 ; On                 ;
-; Extract VHDL State Machines                                      ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
-; Parallel Synthesis                                               ; On                 ; On                 ;
-; DSP Block Balancing                                              ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                               ; On                 ; On                 ;
-; Power-Up Don't Care                                              ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
-; Remove Duplicate Registers                                       ; On                 ; On                 ;
-; Ignore CARRY Buffers                                             ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
-; Ignore LCELL Buffers                                             ; Off                ; Off                ;
-; Ignore SOFT Buffers                                              ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
-; Optimization Technique                                           ; Balanced           ; Balanced           ;
-; Carry Chain Length                                               ; 70                 ; 70                 ;
-; Auto Carry Chains                                                ; On                 ; On                 ;
-; Auto Open-Drain Pins                                             ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
-; Auto ROM Replacement                                             ; On                 ; On                 ;
-; Auto RAM Replacement                                             ; On                 ; On                 ;
-; Auto DSP Block Replacement                                       ; On                 ; On                 ;
-; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
-; Strict RAM Replacement                                           ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
-; Auto RAM Block Balancing                                         ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
-; Auto Resource Sharing                                            ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
-; Timing-Driven Synthesis                                          ; On                 ; On                 ;
-; Report Parameter Settings                                        ; On                 ; On                 ;
-; Report Source Assignments                                        ; On                 ; On                 ;
-; Report Connectivity Checks                                       ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
-; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
-; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
-; Clock MUX Protection                                             ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
-; Block Design Naming                                              ; Auto               ; Auto               ;
-; SDC constraint protection                                        ; Off                ; Off                ;
-; Synthesis Effort                                                 ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
-+------------------------------------------------------------------+--------------------+--------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F17C8        ;                    ;
+; Top-level entity name                                                           ; sincos             ; sincos             ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -176,16 +179,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
 ; sincos.vhd                       ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd             ;         ;
 ; sincosLUT.vhd                    ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd          ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf                 ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_ram_block.inc          ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.inc                    ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.inc                 ;         ;
-; aglobal211.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc                 ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_rdenreg.inc                  ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altrom.inc                     ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altram.inc                     ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.inc                   ;         ;
-; db/altsyncram_egq3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/db/altsyncram_egq3.tdf ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                 ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc          ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                    ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                 ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                 ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                  ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                     ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                     ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                   ;         ;
+; db/altsyncram_um04.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/db/altsyncram_um04.tdf ;         ;
 ; sin_cos.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sin_cos.mif            ;         ;
 +----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
 
@@ -195,44 +198,40 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 78            ;
+; Estimate of Logic utilization (ALMs needed) ; 38            ;
 ;                                             ;               ;
-; Total combinational functions               ; 56            ;
-; Logic element usage by number of LUT inputs ;               ;
+; Combinational ALUT usage for logic          ; 43            ;
+;     -- 7 input functions                    ; 0             ;
+;     -- 6 input functions                    ; 0             ;
+;     -- 5 input functions                    ; 0             ;
 ;     -- 4 input functions                    ; 0             ;
-;     -- 3 input functions                    ; 31            ;
-;     -- <=2 input functions                  ; 25            ;
+;     -- <=3 input functions                  ; 43            ;
 ;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 26            ;
-;     -- arithmetic mode                      ; 30            ;
-;                                             ;               ;
-; Total registers                             ; 74            ;
-;     -- Dedicated logic registers            ; 74            ;
-;     -- I/O registers                        ; 0             ;
+; Dedicated logic registers                   ; 74            ;
 ;                                             ;               ;
 ; I/O pins                                    ; 46            ;
-; Total memory bits                           ; 16384         ;
+; Total MLAB memory bits                      ; 0             ;
+; Total block memory bits                     ; 16384         ;
 ;                                             ;               ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
+; Total DSP Blocks                            ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; i_clock~input ;
 ; Maximum fan-out                             ; 90            ;
-; Total fan-out                               ; 709           ;
-; Average fan-out                             ; 2.98          ;
+; Total fan-out                               ; 738           ;
+; Average fan-out                             ; 3.28          ;
 +---------------------------------------------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                         ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Entity Name     ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+-----------------+--------------+
-; |sincos                                   ; 56 (56)             ; 74 (74)                   ; 16384       ; 0            ; 0       ; 0         ; 46   ; 0            ; |sincos                                                                             ; sincos          ; work         ;
-;    |sincosLUT:c1|                         ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |sincos|sincosLUT:c1                                                                ; sincosLUT       ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |sincos|sincosLUT:c1|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;          |altsyncram_egq3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |sincos|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated ; altsyncram_egq3 ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+-----------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+-----------------+--------------+
+; |sincos                                   ; 43 (43)             ; 74 (74)                   ; 16384             ; 0          ; 46   ; 0            ; |sincos                                                                             ; sincos          ; work         ;
+;    |sincosLUT:c1|                         ; 0 (0)               ; 0 (0)                     ; 16384             ; 0          ; 0    ; 0            ; |sincos|sincosLUT:c1                                                                ; sincosLUT       ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 16384             ; 0          ; 0    ; 0            ; |sincos|sincosLUT:c1|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;          |altsyncram_um04:auto_generated| ; 0 (0)               ; 0 (0)                     ; 16384             ; 0          ; 0    ; 0            ; |sincos|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated ; altsyncram_um04 ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -241,7 +240,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-------------+
 ; Name                                                                                   ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF         ;
 +----------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-------------+
-; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; 1024         ; 16           ; 1024         ; 16           ; 16384 ; sin_cos.mif ;
+; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; 1024         ; 16           ; 1024         ; 16           ; 16384 ; sin_cos.mif ;
 +----------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-------------+
 
 
@@ -280,7 +279,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Total registers                              ; 74    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 20    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
@@ -289,7 +288,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------+
-; Source assignments for sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated ;
+; Source assignments for sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                   ;
 +---------------------------------+--------------------+------+--------------------------------------+
@@ -352,8 +351,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ENABLE_ECC                         ; FALSE                ; Untyped                       ;
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                       ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                ;
-; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                       ;
-; CBXI_PARAMETER                     ; altsyncram_egq3      ; Untyped                       ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                       ;
+; CBXI_PARAMETER                     ; altsyncram_um04      ; Untyped                       ;
 +------------------------------------+----------------------+-------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -383,21 +382,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 46                          ;
-; cycloneiii_ff         ; 74                          ;
-;     plain             ; 74                          ;
-; cycloneiii_lcell_comb ; 56                          ;
-;     arith             ; 30                          ;
-;         3 data inputs ; 30                          ;
-;     normal            ; 26                          ;
+; arriav_ff             ; 74                          ;
+;     SLD               ; 20                          ;
+;     plain             ; 54                          ;
+; arriav_lcell_comb     ; 43                          ;
+;     arith             ; 32                          ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 16                          ;
+;     normal            ; 11                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 10                          ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 1                           ;
-; cycloneiii_ram_block  ; 16                          ;
+; boundary_port         ; 46                          ;
+; stratixv_ram_block    ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.50                        ;
-; Average LUT depth     ; 1.60                        ;
+; Max LUT depth         ; 2.50                        ;
+; Average LUT depth     ; 1.10                        ;
 +-----------------------+-----------------------------+
 
 
@@ -415,8 +414,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed Apr 13 12:23:24 2022
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Apr 13 14:03:45 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sincos -c sincos
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -447,7 +446,7 @@ Info (12133): Instantiated megafunction "sincosLUT:c1|altsyncram:altsyncram_comp
     Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
-    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
     Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
     Info (12134): Parameter "enable_ecc" = "FALSE"
     Info (12134): Parameter "implement_in_les" = "OFF"
@@ -484,23 +483,23 @@ Info (12133): Instantiated megafunction "sincosLUT:c1|altsyncram:altsyncram_comp
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_egq3.tdf
-    Info (12023): Found entity 1: altsyncram_egq3 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/db/altsyncram_egq3.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_egq3" for hierarchy "sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_um04.tdf
+    Info (12023): Found entity 1: altsyncram_um04 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/db/altsyncram_um04.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_um04" for hierarchy "sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd Line: 8
-Info (21057): Implemented 150 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 147 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 88 logic cells
+    Info (21061): Implemented 85 logic cells
     Info (21064): Implemented 16 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Wed Apr 13 12:23:48 2022
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4886 megabytes
+    Info: Processing ended: Wed Apr 13 14:04:16 2022
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:21
 
 

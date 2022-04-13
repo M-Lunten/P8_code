@@ -1,16 +1,61 @@
 # do sincos.do
 # ** Warning: (vlib-34) Library already exists at "work".
-# Errors: 0, Warnings: 1
-# Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 16:53:05 on Apr 12,2022
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:39:23 on Apr 13,2022
 # vcom -work work sincos.vho 
 # -- Loading package STANDARD
-# ** Error: sincos.vho(30): (vcom-1598) Library "cycloneive" not found.
-# ** Error: sincos.vho(32): (vcom-1136) Unknown identifier "CYCLONEIVE".
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# ** Note: sincos.vho(35): VHDL Compiler exiting
-# End time: 16:53:05 on Apr 12,2022, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# ** Error: C:/intelFPGA_pro/21.2/modelsim_ase/win32aloem/vcom failed.
-# Executing ONERROR command at macro ./sincos.do line 3
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package altera_lnsim_components
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity sincos
+# -- Compiling architecture structure of sincos
+# End time: 14:39:23 on Apr 13,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:39:23 on Apr 13,2022
+# vcom -work work Waveform1.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity sincos_vhd_vec_tst
+# -- Compiling architecture sincos_arch of sincos_vhd_vec_tst
+# End time: 14:39:23 on Apr 13,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.sincos_vhd_vec_tst 
+# Start time: 14:39:23 on Apr 13,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.sincos_vhd_vec_tst(sincos_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading altera_lnsim.altera_lnsim_components
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.sincos(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_clkena(behavior)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# Loading cyclonev.cyclonev_ram_block(block_arch)
+# Loading sv_std.std
+# Loading altera_lnsim.generic_m10k
+# Loading altera_lnsim.altera_lnsim_functions
+# Loading altera_lnsim.common_28nm_ram_block
+# Loading altera_lnsim.common_28nm_ram_register
+# Loading altera_lnsim.common_28nm_ram_pulse_generator
+# ** Warning: Design size of 33323 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# after#34
+# End time: 14:39:24 on Apr 13,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

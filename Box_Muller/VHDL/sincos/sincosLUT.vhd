@@ -76,7 +76,7 @@ BEGIN
 		clock_enable_output_b => "BYPASS",
 		indata_reg_b => "CLOCK0",
 		init_file => "sin_cos.mif",
-		intended_device_family => "Cyclone IV E",
+		intended_device_family => "Cyclone V",
 		lpm_type => "altsyncram",
 		numwords_a => 1024,
 		numwords_b => 1024,
@@ -139,7 +139,7 @@ END SYN;
 -- Retrieval info: PRIVATE: INDATA_REG_B NUMERIC "1"
 -- Retrieval info: PRIVATE: INIT_FILE_LAYOUT STRING "PORT_A"
 -- Retrieval info: PRIVATE: INIT_TO_SIM_X NUMERIC "0"
--- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone IV E"
+-- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone V"
 -- Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 -- Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 -- Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
@@ -178,7 +178,7 @@ END SYN;
 -- Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_B STRING "BYPASS"
 -- Retrieval info: CONSTANT: INDATA_REG_B STRING "CLOCK0"
 -- Retrieval info: CONSTANT: INIT_FILE STRING "sin_cos.mif"
--- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone IV E"
+-- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone V"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
 -- Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "1024"
 -- Retrieval info: CONSTANT: NUMWORDS_B NUMERIC "1024"
@@ -210,8 +210,8 @@ END SYN;
 -- Retrieval info: CONNECT: q_a 0 0 16 0 @q_a 0 0 16 0
 -- Retrieval info: CONNECT: q_b 0 0 16 0 @q_b 0 0 16 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL sincosLUT.vhd TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL sincosLUT.inc TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL sincosLUT.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL sincosLUT.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL sincosLUT.bsf TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL sincosLUT_inst.vhd TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL sincosLUT.bsf FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL sincosLUT_inst.vhd FALSE
 -- Retrieval info: LIB_FILE: altera_mf

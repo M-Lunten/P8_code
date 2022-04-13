@@ -1,16 +1,20 @@
-Fitter Status : Successful - Wed Apr 13 12:24:23 2022
-Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Fitter Status : Successful - Wed Apr 13 14:05:06 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : sincos
 Top-level Entity Name : sincos
-Family : Cyclone IV E
-Device : EP4CE115F29C7
+Family : Cyclone V
+Device : 5CEBA4F17C8
 Timing Models : Final
-Total logic elements : 76 / 114,480 ( < 1 % )
-    Total combinational functions : 56 / 114,480 ( < 1 % )
-    Dedicated logic registers : 74 / 114,480 ( < 1 % )
+Logic utilization (in ALMs) : 27 / 18,480 ( < 1 % )
 Total registers : 74
-Total pins : 46 / 529 ( 9 % )
+Total pins : 46 / 128 ( 36 % )
 Total virtual pins : 0
-Total memory bits : 16,384 / 3,981,312 ( < 1 % )
-Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total block memory bits : 16,384 / 3,153,920 ( < 1 % )
+Total RAM Blocks : 2 / 308 ( < 1 % )
+Total DSP Blocks : 0 / 66 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
 Total PLLs : 0 / 4 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )
