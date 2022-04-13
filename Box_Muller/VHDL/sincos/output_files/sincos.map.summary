@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue Apr 12 16:51:06 2022
+Analysis & Synthesis Status : Successful - Wed Apr 13 09:53:16 2022
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : sincos
 Top-level Entity Name : sincos
 Family : Cyclone IV E
-Total logic elements : 75
-    Total combinational functions : 53
-    Dedicated logic registers : 74
-Total registers : 74
+Total logic elements : 88
+    Total combinational functions : 56
+    Dedicated logic registers : 64
+Total registers : 64
 Total pins : 46
 Total virtual pins : 0
 Total memory bits : 16,384

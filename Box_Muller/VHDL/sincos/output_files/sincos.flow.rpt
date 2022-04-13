@@ -1,5 +1,5 @@
 Flow report for sincos
-Tue Apr 12 16:53:04 2022
+Wed Apr 13 09:54:37 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Apr 12 16:53:04 2022       ;
+; Flow Status                        ; Successful - Wed Apr 13 09:54:18 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; sincos                                      ;
 ; Top-level Entity Name              ; sincos                                      ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 75 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 53 / 114,480 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 74 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 74                                          ;
+; Total logic elements               ; 88 / 114,480 ( < 1 % )                      ;
+;     Total combinational functions  ; 56 / 114,480 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 64 / 114,480 ( < 1 % )                      ;
+; Total registers                    ; 64                                          ;
 ; Total pins                         ; 46 / 529 ( 9 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 16,384 / 3,981,312 ( < 1 % )                ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/12/2022 16:50:59 ;
+; Start date & time ; 04/13/2022 09:53:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; sincos              ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 83689965950041.164977505916064         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 83689965950041.164983638901068         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; sincosLUT.bsf                          ; --            ; --          ; --         ;
@@ -95,13 +95,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 4853 MB             ; 00:00:17                           ;
-; Fitter               ; 00:00:32     ; 1.0                     ; 5872 MB             ; 00:00:19                           ;
-; Assembler            ; 00:00:25     ; 1.0                     ; 4724 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:18     ; 1.0                     ; 4883 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:17     ; 1.0                     ; 4656 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:17     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
-; Total                ; 00:02:13     ; --                      ; --                  ; 00:00:41                           ;
+; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 4834 MB             ; 00:00:17                           ;
+; Fitter               ; 00:00:34     ; 1.0                     ; 5876 MB             ; 00:00:22                           ;
+; Assembler            ; 00:00:26     ; 1.0                     ; 4730 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:18     ; 1.0                     ; 4882 MB             ; 00:00:02                           ;
+; Total                ; 00:01:42     ; --                      ; --                  ; 00:00:44                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,8 +112,6 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -126,8 +122,6 @@ quartus_map --read_settings_files=on --write_settings_files=off sincos -c sincos
 quartus_fit --read_settings_files=off --write_settings_files=off sincos -c sincos
 quartus_asm --read_settings_files=off --write_settings_files=off sincos -c sincos
 quartus_sta sincos -c sincos
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off sincos -c sincos --vector_source=C:/Users/fivan/Documents/University/Master/sincos/Waveform.vwf --testbench_file=C:/Users/fivan/Documents/University/Master/sincos/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/fivan/Documents/University/Master/sincos/simulation/qsim/ sincos -c sincos
 
 
 

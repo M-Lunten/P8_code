@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Apr 12 16:51:39 2022
+Fitter Status : Successful - Wed Apr 13 09:53:51 2022
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : sincos
 Top-level Entity Name : sincos
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 75 / 114,480 ( < 1 % )
-    Total combinational functions : 53 / 114,480 ( < 1 % )
-    Dedicated logic registers : 74 / 114,480 ( < 1 % )
-Total registers : 74
+Total logic elements : 88 / 114,480 ( < 1 % )
+    Total combinational functions : 56 / 114,480 ( < 1 % )
+    Dedicated logic registers : 64 / 114,480 ( < 1 % )
+Total registers : 64
 Total pins : 46 / 529 ( 9 % )
 Total virtual pins : 0
 Total memory bits : 16,384 / 3,981,312 ( < 1 % )
