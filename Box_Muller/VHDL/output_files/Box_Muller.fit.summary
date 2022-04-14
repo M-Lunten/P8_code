@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed Apr 13 11:54:51 2022
+Fitter Status : Successful - Wed Apr 13 15:59:59 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Box_Muller
-Top-level Entity Name : f_block
+Top-level Entity Name : Box_Muller
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 453 / 114,480 ( < 1 % )
-    Total combinational functions : 453 / 114,480 ( < 1 % )
-    Dedicated logic registers : 54 / 114,480 ( < 1 % )
-Total registers : 54
-Total pins : 49 / 529 ( 9 % )
+Total logic elements : 107 / 114,480 ( < 1 % )
+    Total combinational functions : 59 / 114,480 ( < 1 % )
+    Dedicated logic registers : 107 / 114,480 ( < 1 % )
+Total registers : 107
+Total pins : 34 / 529 ( 6 % )
 Total virtual pins : 0
-Total memory bits : 8,192 / 3,981,312 ( < 1 % )
-Embedded Multiplier 9-bit elements : 2 / 532 ( < 1 % )
+Total memory bits : 16,384 / 3,981,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )
