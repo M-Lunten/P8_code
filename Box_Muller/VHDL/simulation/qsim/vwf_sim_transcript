@@ -7,8 +7,9 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Box_Muller -c Box_Muller --vector_source="C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Waveform11.vwf" --testbench_file="C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Waveform11.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Box_Muller -c Box_Muller --vector_source="C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Waveform.vwf" --testbench_file="C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Waveform.vwf.vht"
 
+Warning (292006): Can't contact license server "13333@Altera.srv.aau.dk" -- this server will be ignored.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
@@ -25,16 +26,19 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Wed Apr 13 11:56:11 2022
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Box_Muller -c Box_Muller --vector_source=C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Waveform11.vwf --testbench_file=C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Waveform11.vwf.vht
+    Info: Processing started: Fri Apr 15 11:50:46 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Box_Muller -c Box_Muller --vector_source=C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Waveform.vwf --testbench_file=C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Waveform.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+utput pin "U2[10]" in vector source file when writing test bench files
 
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/" Box_Muller -c Box_Muller
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/" Box_Muller -c Box_Muller
 
+Warning (292006): Can't contact license server "13333@Altera.srv.aau.dk" -- this server will be ignored.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
@@ -51,21 +55,21 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Wed Apr 13 11:56:30 2022
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/ Box_Muller -c Box_Muller
+    Info: Processing started: Fri Apr 15 11:50:47 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/ Box_Muller -c Box_Muller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file Box_Muller.vho in folder "C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim//" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Wed Apr 13 11:56:49 2022
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:02
+Info (204019): Generated file Box_Muller.vho in folder "C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4641 megabytes
+    Info: Processing ended: Fri Apr 15 11:50:48 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Box_Muller.do generated.
+C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Box_Muller.do generated.
 
 Completed successfully. 
 
@@ -77,12 +81,11 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
 
-
 # do Box_Muller.do
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:56:50 on Apr 13,2022
+# Start time: 11:50:49 on Apr 15,2022
 # vcom -work work Box_Muller.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -93,40 +96,38 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package cycloneive_components
 # -- Compiling entity hard_block
 # -- Compiling architecture structure of hard_block
-
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
-# -- Compiling entity f_block
-# -- Compiling architecture structure of f_block
+# -- Compiling entity Box_Muller
+# -- Compiling architecture structure of Box_Muller
 
-# End time: 11:56:50 on Apr 13,2022, Elapsed time: 0:00:00
+# End time: 11:50:49 on Apr 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:56:50 on Apr 13,2022
-# vcom -work work Waveform11.vwf.vht 
+# Start time: 11:50:49 on Apr 15,2022
+# vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity f_block_vhd_vec_tst
-# -- Compiling architecture f_block_arch of f_block_vhd_vec_tst
-
-# End time: 11:56:50 on Apr 13,2022, Elapsed time: 0:00:00
+# -- Compiling entity Box_Muller_vhd_vec_tst
+# -- Compiling architecture Box_Muller_arch of Box_Muller_vhd_vec_tst
+# End time: 11:50:49 on Apr 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.f_block_vhd_vec_tst 
-# Start time: 11:56:50 on Apr 13,2022
+# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Box_Muller_vhd_vec_tst 
+# Start time: 11:50:49 on Apr 15,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.f_block_vhd_vec_tst(f_block_arch)
+# Loading work.box_muller_vhd_vec_tst(box_muller_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading altera.dffeas_pack
 # Loading altera.altera_primitives_components
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
-# Loading work.f_block(structure)
+# Loading work.box_muller(structure)
 # Loading work.hard_block(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
@@ -134,46 +135,69 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
 # Loading cycloneive.cycloneive_ena_reg(behave)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
 # Loading cycloneive.cycloneive_ram_block(block_arch)
 # Loading cycloneive.cycloneive_ram_register(reg_arch)
 # Loading cycloneive.cycloneive_ram_pulse_generator(pgen_arch)
-# Loading altera.dffeas(vital_dffeas)
 # Loading ieee.std_logic_unsigned(body)
 # Loading cycloneive.cycloneive_mac_mult(vital_cycloneive_mac_mult)
 # Loading cycloneive.cycloneive_mac_data_reg(vital_cycloneive_mac_data_reg)
 # Loading cycloneive.cycloneive_mac_sign_reg(cycloneive_mac_sign_reg)
 # Loading cycloneive.cycloneive_mac_mult_internal(vital_cycloneive_mac_mult_internal)
 # Loading cycloneive.cycloneive_mac_out(vital_cycloneive_mac_out)
-# ** Warning: Design size of 65632 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 92848 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 2  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 2  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 4  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
 
-# End time: 11:56:51 on Apr 13,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 7
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /box_muller_vhd_vec_tst/i1/\Mult1|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /box_muller_vhd_vec_tst/i1/\Mult1|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /box_muller_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /box_muller_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /box_muller_vhd_vec_tst/i1/\Mult1|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /box_muller_vhd_vec_tst/i1/\Mult1|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /box_muller_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /box_muller_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 16  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 16  Instance: /box_muller_vhd_vec_tst/i1/\Mult1|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 16  Instance: /box_muller_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
+
+# End time: 11:50:50 on Apr 15,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 18
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Waveform11.vwf...
+Reading C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Waveform.vwf...
 
-Reading C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Box_Muller.msim.vcd...
+Reading C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Box_Muller.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Box_Muller_20220413115651.sim.vwf
+Writing the resulting VWF to C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Box_Muller_20220415115051.sim.vwf
 
 Finished VCD to VWF conversion.
 

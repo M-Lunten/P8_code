@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Box_Muller
-Wed Apr 13 15:59:22 2022
+Fri Apr 15 11:22:39 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,25 +14,29 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. Analysis & Synthesis IP Cores Summary
+ 11. Registers Removed During Synthesis
  12. General Register Statistics
- 13. Source assignments for f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated
- 14. Source assignments for f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated
- 15. Source assignments for sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated
- 16. Parameter Settings for User Entity Instance: f_block:f1|addressing_unit:AU0|AU_MUX:mux0|LPM_MUX:LPM_MUX_component
- 17. Parameter Settings for User Entity Instance: f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component
- 18. Parameter Settings for User Entity Instance: f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component
- 19. Parameter Settings for User Entity Instance: sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component
- 20. altsyncram Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "f_block:f1|addressing_unit:AU0|AU_MUX:mux0"
- 22. Port Connectivity Checks: "f_block:f1"
- 23. Port Connectivity Checks: "LFSR_33:LF33"
- 24. Port Connectivity Checks: "LFSR_16:LF16"
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated
+ 15. Source assignments for f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated
+ 16. Source assignments for sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated
+ 17. Parameter Settings for User Entity Instance: f_block:f1|addressing_unit:AU0|AU_MUX:mux0|LPM_MUX:LPM_MUX_component
+ 18. Parameter Settings for User Entity Instance: f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component
+ 19. Parameter Settings for User Entity Instance: f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component
+ 20. Parameter Settings for User Entity Instance: sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component
+ 21. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 22. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
+ 23. Parameter Settings for Inferred Entity Instance: f_block:f1|lpm_mult:Mult0
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. lpm_mult Parameter Settings by Entity Instance
+ 26. Port Connectivity Checks: "f_block:f1|addressing_unit:AU0|AU_MUX:mux0"
+ 27. Port Connectivity Checks: "LFSR_33:LF33"
+ 28. Port Connectivity Checks: "LFSR_16:LF16"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
 
 
 
@@ -58,19 +62,19 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 13 15:59:22 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 15 11:22:39 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Box_Muller                                  ;
 ; Top-level Entity Name              ; Box_Muller                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 110                                         ;
-;     Total combinational functions  ; 58                                          ;
-;     Dedicated logic registers      ; 107                                         ;
-; Total registers                    ; 107                                         ;
+; Total logic elements               ; 632                                         ;
+;     Total combinational functions  ; 521                                         ;
+;     Dedicated logic registers      ; 241                                         ;
+; Total registers                    ; 241                                         ;
 ; Total pins                         ; 34                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 16,384                                      ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total memory bits                  ; 24,576                                      ;
+; Embedded Multiplier 9-bit elements ; 6                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
@@ -174,48 +178,57 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                   ; Library ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
-; sincos/sincosLUT.vhd             ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd   ;         ;
-; f_a_lut.vhd                      ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd            ;         ;
-; Box_Muller.vhd                   ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd         ;         ;
-; LOD_2b.vhd                       ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd             ;         ;
-; LOD.vhd                          ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd                ;         ;
-; ones_counter.vhd                 ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd       ;         ;
-; AU_MUX.vhd                       ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd             ;         ;
-; addressing_unit.vhd              ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd    ;         ;
-; f_b_lut.vhd                      ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd            ;         ;
-; f_block.vhd                      ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd            ;         ;
-; sincos/sincos.vhd                ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd      ;         ;
-; LFSR_16.vhd                      ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd            ;         ;
-; LFSR_33.vhd                      ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd            ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muxlut.inc              ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
-; altshift.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; db/mux_g9e.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mux_g9e.tdf         ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc              ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
-; db/altsyncram_g3s3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf ;         ;
-; ../Matlab/a_coeff.mif            ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/Matlab/a_coeff.mif          ;         ;
-; db/altsyncram_h3s3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf ;         ;
-; ../Matlab/b_coeff.mif            ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/Matlab/b_coeff.mif          ;         ;
-; db/altsyncram_egq3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_egq3.tdf ;         ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                    ;
++---------------------------------------------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                    ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                   ; Library ;
++---------------------------------------------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
+; sincos/sincosLUT.vhd                                                ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd   ;         ;
+; f_a_lut.vhd                                                         ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd            ;         ;
+; Box_Muller.vhd                                                      ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd         ;         ;
+; LOD_2b.vhd                                                          ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd             ;         ;
+; LOD.vhd                                                             ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd                ;         ;
+; ones_counter.vhd                                                    ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd       ;         ;
+; AU_MUX.vhd                                                          ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd             ;         ;
+; addressing_unit.vhd                                                 ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd    ;         ;
+; f_b_lut.vhd                                                         ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd            ;         ;
+; f_block.vhd                                                         ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd            ;         ;
+; sincos/sincos.vhd                                                   ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd      ;         ;
+; LFSR_16.vhd                                                         ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd            ;         ;
+; LFSR_33.vhd                                                         ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd            ;         ;
+; lpm_mux.tdf                                                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
+; aglobal181.inc                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
+; muxlut.inc                                                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muxlut.inc              ;         ;
+; bypassff.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; db/mux_g9e.tdf                                                      ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mux_g9e.tdf         ;         ;
+; altsyncram.tdf                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc                                               ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                                                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; a_rdenreg.inc                                                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                                                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                                                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_g3s3.tdf                                              ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf ;         ;
+; /users/fivan/documents/github/p8_code/box_muller/matlab/a_coeff.mif ; yes             ; Auto-Found Memory Initialization File  ; /users/fivan/documents/github/p8_code/box_muller/matlab/a_coeff.mif            ;         ;
+; db/altsyncram_h3s3.tdf                                              ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf ;         ;
+; /users/fivan/documents/github/p8_code/box_muller/matlab/b_coeff.mif ; yes             ; Auto-Found Memory Initialization File  ; /users/fivan/documents/github/p8_code/box_muller/matlab/b_coeff.mif            ;         ;
+; db/altsyncram_egq3.tdf                                              ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_egq3.tdf ;         ;
+; lpm_mult.tdf                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
+; lpm_add_sub.inc                                                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; multcore.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc            ;         ;
+; db/mult_7dt.tdf                                                     ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_7dt.tdf        ;         ;
+; db/mult_66t.tdf                                                     ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_66t.tdf        ;         ;
++---------------------------------------------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -223,56 +236,113 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 110        ;
+; Estimated Total logic elements              ; 632        ;
 ;                                             ;            ;
-; Total combinational functions               ; 58         ;
+; Total combinational functions               ; 521        ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 5          ;
-;     -- 3 input functions                    ; 31         ;
-;     -- <=2 input functions                  ; 22         ;
+;     -- 4 input functions                    ; 182        ;
+;     -- 3 input functions                    ; 222        ;
+;     -- <=2 input functions                  ; 117        ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 28         ;
-;     -- arithmetic mode                      ; 30         ;
+;     -- normal mode                          ; 377        ;
+;     -- arithmetic mode                      ; 144        ;
 ;                                             ;            ;
-; Total registers                             ; 107        ;
-;     -- Dedicated logic registers            ; 107        ;
+; Total registers                             ; 241        ;
+;     -- Dedicated logic registers            ; 241        ;
 ;     -- I/O registers                        ; 0          ;
 ;                                             ;            ;
 ; I/O pins                                    ; 34         ;
-; Total memory bits                           ; 16384      ;
+; Total memory bits                           ; 24576      ;
 ;                                             ;            ;
-; Embedded Multiplier 9-bit elements          ; 0          ;
+; Embedded Multiplier 9-bit elements          ; 6          ;
 ;                                             ;            ;
 ; Maximum fan-out node                        ; gclk~input ;
-; Maximum fan-out                             ; 123        ;
-; Total fan-out                               ; 761        ;
-; Average fan-out                             ; 3.06       ;
+; Maximum fan-out                             ; 289        ;
+; Total fan-out                               ; 2922       ;
+; Average fan-out                             ; 3.31       ;
 +---------------------------------------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                          ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Entity Name     ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |Box_Muller                                  ; 58 (1)              ; 107 (32)                  ; 16384       ; 0            ; 0       ; 0         ; 34   ; 0            ; |Box_Muller                                                                                       ; Box_Muller      ; work         ;
-;    |LFSR_16:LF16|                            ; 5 (5)               ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|LFSR_16:LF16                                                                          ; LFSR_16         ; work         ;
-;    |sincos:sc|                               ; 52 (52)             ; 66 (66)                   ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|sincos:sc                                                                             ; sincos          ; work         ;
-;       |sincosLUT:c1|                         ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|sincos:sc|sincosLUT:c1                                                                ; sincosLUT       ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;             |altsyncram_egq3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated ; altsyncram_egq3 ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |Box_Muller                                  ; 521 (1)             ; 241 (64)                  ; 24576       ; 6            ; 0       ; 3         ; 34   ; 0            ; |Box_Muller                                                                                             ; Box_Muller      ; work         ;
+;    |LFSR_16:LF16|                            ; 5 (5)               ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|LFSR_16:LF16                                                                                ; LFSR_16         ; work         ;
+;    |LFSR_33:LF33|                            ; 5 (5)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|LFSR_33:LF33                                                                                ; LFSR_33         ; work         ;
+;    |f_block:f1|                              ; 458 (198)           ; 70 (70)                   ; 8192        ; 2            ; 0       ; 1         ; 0    ; 0            ; |Box_Muller|f_block:f1                                                                                  ; f_block         ; work         ;
+;       |addressing_unit:AU0|                  ; 260 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0                                                              ; addressing_unit ; work         ;
+;          |AU_MUX:mux0|                       ; 100 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|AU_MUX:mux0                                                  ; AU_MUX          ; work         ;
+;             |lpm_mux:LPM_MUX_component|      ; 100 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|AU_MUX:mux0|lpm_mux:LPM_MUX_component                        ; lpm_mux         ; work         ;
+;                |mux_g9e:auto_generated|      ; 100 (100)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|AU_MUX:mux0|lpm_mux:LPM_MUX_component|mux_g9e:auto_generated ; mux_g9e         ; work         ;
+;          |LOD:LOD0|                          ; 160 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0                                                     ; LOD             ; work         ;
+;             |LOD_2b:\gen_LOD:10:detector|    ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:10:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:12:detector|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:12:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:13:detector|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:13:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:14:detector|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:14:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:16:detector|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:16:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:17:detector|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:17:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:18:detector|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:18:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:20:detector|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:20:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:21:detector|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:21:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:22:detector|    ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:22:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:25:detector|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:25:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:26:detector|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:26:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:28:detector|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:28:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:29:detector|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:29:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:4:detector|     ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:4:detector                          ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:6:detector|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:6:detector                          ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:8:detector|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:8:detector                          ; LOD_2b          ; work         ;
+;             |ones_counter:oc0|               ; 127 (127)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|ones_counter:oc0                                    ; ones_counter    ; work         ;
+;       |f_a_lut:LUT_a|                        ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_a_lut:LUT_a                                                                    ; f_a_lut         ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component                                    ; altsyncram      ; work         ;
+;             |altsyncram_g3s3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated     ; altsyncram_g3s3 ; work         ;
+;       |f_b_lut:LUT_b|                        ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_b_lut:LUT_b                                                                    ; f_b_lut         ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component                                    ; altsyncram      ; work         ;
+;             |altsyncram_h3s3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated     ; altsyncram_h3s3 ; work         ;
+;       |lpm_mult:Mult0|                       ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Box_Muller|f_block:f1|lpm_mult:Mult0                                                                   ; lpm_mult        ; work         ;
+;          |mult_66t:auto_generated|           ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Box_Muller|f_block:f1|lpm_mult:Mult0|mult_66t:auto_generated                                           ; mult_66t        ; work         ;
+;    |lpm_mult:Mult0|                          ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Box_Muller|lpm_mult:Mult0                                                                              ; lpm_mult        ; work         ;
+;       |mult_7dt:auto_generated|              ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Box_Muller|lpm_mult:Mult0|mult_7dt:auto_generated                                                      ; mult_7dt        ; work         ;
+;    |lpm_mult:Mult1|                          ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Box_Muller|lpm_mult:Mult1                                                                              ; lpm_mult        ; work         ;
+;       |mult_7dt:auto_generated|              ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Box_Muller|lpm_mult:Mult1|mult_7dt:auto_generated                                                      ; mult_7dt        ; work         ;
+;    |sincos:sc|                               ; 52 (52)             ; 66 (66)                   ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|sincos:sc                                                                                   ; sincos          ; work         ;
+;       |sincosLUT:c1|                         ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|sincos:sc|sincosLUT:c1                                                                      ; sincosLUT       ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component                                      ; altsyncram      ; work         ;
+;             |altsyncram_egq3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated       ; altsyncram_egq3 ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                           ;
-+--------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-------------+
-; Name                                                                                             ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF         ;
-+--------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-------------+
-; sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; 1024         ; 16           ; 1024         ; 16           ; 16384 ; sin_cos.mif ;
-+--------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                       ;
++----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-----------------------+
+; Name                                                                                               ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                   ;
++----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-----------------------+
+; f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|ALTSYNCRAM ; AUTO ; ROM            ; 256          ; 16           ; --           ; --           ; 4096  ; ../Matlab/a_coeff.mif ;
+; f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|ALTSYNCRAM ; AUTO ; ROM            ; 256          ; 16           ; --           ; --           ; 4096  ; ../Matlab/b_coeff.mif ;
+; sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ALTSYNCRAM   ; AUTO ; True Dual Port ; 1024         ; 16           ; 1024         ; 16           ; 16384 ; sin_cos.mif           ;
++----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-----------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 3           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 6           ;
+; Signed Embedded Multipliers           ; 1           ;
+; Unsigned Embedded Multipliers         ; 2           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -291,7 +361,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
-; LFSR_33:LF33|shift_register[0..32]     ; Lost fanout                            ;
 ; sincos:sc|dSin[0]                      ; Merged with sincos:sc|dCos[0]          ;
 ; sincos:sc|dSin[1]                      ; Merged with sincos:sc|dCos[1]          ;
 ; sincos:sc|dSin[2]                      ; Merged with sincos:sc|dCos[2]          ;
@@ -317,17 +386,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sincos:sc|dCos[5]                      ; Merged with sincos:sc|n                ;
 ; sincos:sc|dCos[6]                      ; Merged with sincos:sc|m                ;
 ; sincos:sc|dSinpLUT[6]                  ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 58 ;                                        ;
+; LFSR_33:LF33|shift_register[5]         ; Merged with f_block:f1|U_tilde[0]      ;
+; Total Number of Removed Registers = 26 ;                                        ;
 +----------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                            ;
-+--------------------------------+--------------------+------------------------------------------------------------------+
-; Register name                  ; Reason for Removal ; Registers Removed due to This Register                           ;
-+--------------------------------+--------------------+------------------------------------------------------------------+
-; LFSR_33:LF33|shift_register[0] ; Lost Fanouts       ; LFSR_33:LF33|shift_register[15], LFSR_33:LF33|shift_register[28] ;
-+--------------------------------+--------------------+------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -335,14 +396,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 107   ;
+; Total registers                              ; 241   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |Box_Muller|f_block:f1|shift1[2]  ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Box_Muller|f_block:f1|shift1[8]  ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Box_Muller|f_block:f1|shift1[12] ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |Box_Muller|f_block:f1|shift1[14] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -574,6 +647,111 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                     ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16           ; Untyped             ;
+; LPM_WIDTHB                                     ; 16           ; Untyped             ;
+; LPM_WIDTHP                                     ; 32           ; Untyped             ;
+; LPM_WIDTHR                                     ; 32           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_7dt     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1                     ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16           ; Untyped             ;
+; LPM_WIDTHB                                     ; 16           ; Untyped             ;
+; LPM_WIDTHP                                     ; 32           ; Untyped             ;
+; LPM_WIDTHR                                     ; 32           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_7dt     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: f_block:f1|lpm_mult:Mult0          ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16           ; Untyped             ;
+; LPM_WIDTHB                                     ; 17           ; Untyped             ;
+; LPM_WIDTHP                                     ; 33           ; Untyped             ;
+; LPM_WIDTHR                                     ; 33           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_66t     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                     ;
 +-------------------------------------------+----------------------------------------------------------+
@@ -616,6 +794,48 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------------------+
 
 
++-------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                    ;
++---------------------------------------+---------------------------+
+; Name                                  ; Value                     ;
++---------------------------------------+---------------------------+
+; Number of entity instances            ; 3                         ;
+; Entity Instance                       ; lpm_mult:Mult0            ;
+;     -- LPM_WIDTHA                     ; 16                        ;
+;     -- LPM_WIDTHB                     ; 16                        ;
+;     -- LPM_WIDTHP                     ; 32                        ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                  ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                        ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                        ;
+;     -- USE_EAB                        ; OFF                       ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                      ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                        ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                        ;
+; Entity Instance                       ; lpm_mult:Mult1            ;
+;     -- LPM_WIDTHA                     ; 16                        ;
+;     -- LPM_WIDTHB                     ; 16                        ;
+;     -- LPM_WIDTHP                     ; 32                        ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                  ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                        ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                        ;
+;     -- USE_EAB                        ; OFF                       ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                      ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                        ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                        ;
+; Entity Instance                       ; f_block:f1|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 16                        ;
+;     -- LPM_WIDTHB                     ; 17                        ;
+;     -- LPM_WIDTHP                     ; 33                        ;
+;     -- LPM_REPRESENTATION             ; SIGNED                    ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                        ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                        ;
+;     -- USE_EAB                        ; OFF                       ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                      ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                        ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                        ;
++---------------------------------------+---------------------------+
+
+
 +------------------------------------------------------------------------+
 ; Port Connectivity Checks: "f_block:f1|addressing_unit:AU0|AU_MUX:mux0" ;
 +------------+-------+----------+----------------------------------------+
@@ -628,15 +848,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; data62x    ; Input ; Info     ; Stuck at GND                           ;
 ; data63x    ; Input ; Info     ; Stuck at GND                           ;
 +------------+-------+----------+----------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "f_block:f1"                                                                          ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; f_res ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -663,21 +874,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 34                          ;
-; cycloneiii_ff         ; 107                         ;
-;     plain             ; 107                         ;
-; cycloneiii_lcell_comb ; 58                          ;
-;     arith             ; 30                          ;
-;         3 data inputs ; 30                          ;
-;     normal            ; 28                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 5                           ;
-; cycloneiii_ram_block  ; 16                          ;
+; cycloneiii_ff         ; 241                         ;
+;     SLD               ; 32                          ;
+;     plain             ; 209                         ;
+; cycloneiii_lcell_comb ; 521                         ;
+;     arith             ; 144                         ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 104                         ;
+;     normal            ; 377                         ;
+;         0 data inputs ; 15                          ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 52                          ;
+;         3 data inputs ; 118                         ;
+;         4 data inputs ; 182                         ;
+; cycloneiii_mac_mult   ; 3                           ;
+; cycloneiii_mac_out    ; 3                           ;
+; cycloneiii_ram_block  ; 48                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.50                        ;
-; Average LUT depth     ; 1.48                        ;
+; Max LUT depth         ; 18.10                       ;
+; Average LUT depth     ; 6.79                        ;
 +-----------------------+-----------------------------+
 
 
@@ -686,7 +901,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -696,7 +911,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Apr 13 15:58:52 2022
+    Info: Processing started: Fri Apr 15 11:22:22 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Box_Muller -c Box_Muller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -752,12 +967,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file testben
     Info (12022): Found design unit 1: TestBench_LFSR_33-LFSR_33_arch File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/TestBench_LFSR_33.vhd Line: 6
     Info (12023): Found entity 1: TestBench_LFSR_33 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/TestBench_LFSR_33.vhd Line: 4
 Info (12127): Elaborating entity "Box_Muller" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Box_Muller.vhd(55): object "fblockMul" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 55
-Critical Warning (10920): VHDL Incomplete Partial Association warning at Box_Muller.vhd(58): port or argument "OUTPUT" has 4/16 unassociated elements File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 58
-Critical Warning (10920): VHDL Incomplete Partial Association warning at Box_Muller.vhd(59): port or argument "OUTPUT" has 1/33 unassociated elements File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 59
-Info (12128): Elaborating entity "LFSR_16" for hierarchy "LFSR_16:LF16" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 58
-Info (12128): Elaborating entity "LFSR_33" for hierarchy "LFSR_33:LF33" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 59
-Info (12128): Elaborating entity "f_block" for hierarchy "f_block:f1" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 60
+Critical Warning (10920): VHDL Incomplete Partial Association warning at Box_Muller.vhd(60): port or argument "OUTPUT" has 4/16 unassociated elements File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 60
+Critical Warning (10920): VHDL Incomplete Partial Association warning at Box_Muller.vhd(61): port or argument "OUTPUT" has 1/33 unassociated elements File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 61
+Info (12128): Elaborating entity "LFSR_16" for hierarchy "LFSR_16:LF16" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 60
+Info (12128): Elaborating entity "LFSR_33" for hierarchy "LFSR_33:LF33" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 61
+Info (12128): Elaborating entity "f_block" for hierarchy "f_block:f1" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 62
 Info (12128): Elaborating entity "addressing_unit" for hierarchy "f_block:f1|addressing_unit:AU0" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 54
 Info (12128): Elaborating entity "AU_MUX" for hierarchy "f_block:f1|addressing_unit:AU0|AU_MUX:mux0" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd Line: 97
 Info (12128): Elaborating entity "LPM_MUX" for hierarchy "f_block:f1|addressing_unit:AU0|AU_MUX:mux0|LPM_MUX:LPM_MUX_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 381
@@ -832,7 +1046,6 @@ Info (12133): Instantiated megafunction "f_block:f1|f_a_lut:LUT_a|altsyncram:alt
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g3s3.tdf
     Info (12023): Found entity 1: altsyncram_g3s3 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_g3s3" for hierarchy "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (248) in the Memory Initialization File "C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/Matlab/a_coeff.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 59
 Info (12128): Elaborating entity "f_b_lut" for hierarchy "f_block:f1|f_b_lut:LUT_b" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 56
 Info (12128): Elaborating entity "altsyncram" for hierarchy "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 59
 Info (12130): Elaborated megafunction instantiation "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 59
@@ -890,8 +1103,7 @@ Info (12133): Instantiated megafunction "f_block:f1|f_b_lut:LUT_b|altsyncram:alt
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_h3s3.tdf
     Info (12023): Found entity 1: altsyncram_h3s3 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_h3s3" for hierarchy "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (248) in the Memory Initialization File "C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/Matlab/b_coeff.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 59
-Info (12128): Elaborating entity "sincos" for hierarchy "sincos:sc" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 61
+Info (12128): Elaborating entity "sincos" for hierarchy "sincos:sc" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 63
 Info (12128): Elaborating entity "sincosLUT" for hierarchy "sincos:sc|sincosLUT:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd Line: 43
 Info (12128): Elaborating entity "altsyncram" for hierarchy "sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd Line: 70
 Info (12130): Elaborated megafunction instantiation "sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd Line: 70
@@ -949,55 +1161,51 @@ Info (12133): Instantiated megafunction "sincos:sc|sincosLUT:c1|altsyncram:altsy
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_egq3.tdf
     Info (12023): Found entity 1: altsyncram_egq3 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_egq3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_egq3" for hierarchy "sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[0]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 34
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[1]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 57
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[2]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 80
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[3]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 103
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[4]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 126
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[5]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 149
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[6]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 172
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[7]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 195
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[8]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 218
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[9]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 241
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[10]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 264
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[11]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 287
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[12]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 310
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[13]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 333
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[14]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 356
-        Warning (14320): Synthesized away node "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|q_a[15]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 379
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[0]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 34
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[1]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 57
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[2]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 80
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[3]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 103
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[4]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 126
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[5]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 149
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[6]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 172
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[7]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 195
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[8]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 218
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[9]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 241
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[10]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 264
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[11]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 287
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[12]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 310
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[13]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 333
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[14]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 356
-        Warning (14320): Synthesized away node "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|q_a[15]" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 379
+Info (278001): Inferred 3 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: c:/intelfpga_lite/18.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "f_block:f1|Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 77
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: c:/intelfpga_lite/18.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "16"
+    Info (12134): Parameter "LPM_WIDTHP" = "32"
+    Info (12134): Parameter "LPM_WIDTHR" = "32"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
+    Info (12023): Found entity 1: mult_7dt File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_7dt.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "f_block:f1|lpm_mult:Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 77
+Info (12133): Instantiated megafunction "f_block:f1|lpm_mult:Mult0" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 77
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "17"
+    Info (12134): Parameter "LPM_WIDTHP" = "33"
+    Info (12134): Parameter "LPM_WIDTHR" = "33"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_66t.tdf
+    Info (12023): Found entity 1: mult_66t File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_66t.tdf Line: 28
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 33 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "greset" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 8
-Info (21057): Implemented 170 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 730 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 120 logic cells
-    Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4832 megabytes
-    Info: Processing ended: Wed Apr 13 15:59:22 2022
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:24
+    Info (21061): Implemented 642 logic cells
+    Info (21064): Implemented 48 RAM segments
+    Info (21062): Implemented 6 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Fri Apr 15 11:22:39 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:28
 
 
