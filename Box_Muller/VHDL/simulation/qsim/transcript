@@ -1,7 +1,7 @@
 # do Box_Muller.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:56:50 on Apr 13,2022
+# Start time: 11:50:49 on Apr 15,2022
 # vcom -work work Box_Muller.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -14,33 +14,33 @@
 # -- Compiling architecture structure of hard_block
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
-# -- Compiling entity f_block
-# -- Compiling architecture structure of f_block
-# End time: 11:56:50 on Apr 13,2022, Elapsed time: 0:00:00
+# -- Compiling entity Box_Muller
+# -- Compiling architecture structure of Box_Muller
+# End time: 11:50:49 on Apr 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:56:50 on Apr 13,2022
-# vcom -work work Waveform11.vwf.vht 
+# Start time: 11:50:49 on Apr 15,2022
+# vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity f_block_vhd_vec_tst
-# -- Compiling architecture f_block_arch of f_block_vhd_vec_tst
-# End time: 11:56:50 on Apr 13,2022, Elapsed time: 0:00:00
+# -- Compiling entity Box_Muller_vhd_vec_tst
+# -- Compiling architecture Box_Muller_arch of Box_Muller_vhd_vec_tst
+# End time: 11:50:49 on Apr 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.f_block_vhd_vec_tst 
-# Start time: 11:56:50 on Apr 13,2022
+# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Box_Muller_vhd_vec_tst 
+# Start time: 11:50:49 on Apr 15,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.f_block_vhd_vec_tst(f_block_arch)
+# Loading work.box_muller_vhd_vec_tst(box_muller_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading altera.dffeas_pack
 # Loading altera.altera_primitives_components
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
-# Loading work.f_block(structure)
+# Loading work.box_muller(structure)
 # Loading work.hard_block(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
@@ -48,30 +48,52 @@
 # Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
 # Loading cycloneive.cycloneive_ena_reg(behave)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
 # Loading cycloneive.cycloneive_ram_block(block_arch)
 # Loading cycloneive.cycloneive_ram_register(reg_arch)
 # Loading cycloneive.cycloneive_ram_pulse_generator(pgen_arch)
-# Loading altera.dffeas(vital_dffeas)
 # Loading ieee.std_logic_unsigned(body)
 # Loading cycloneive.cycloneive_mac_mult(vital_cycloneive_mac_mult)
 # Loading cycloneive.cycloneive_mac_data_reg(vital_cycloneive_mac_data_reg)
 # Loading cycloneive.cycloneive_mac_sign_reg(cycloneive_mac_sign_reg)
 # Loading cycloneive.cycloneive_mac_mult_internal(vital_cycloneive_mac_mult_internal)
 # Loading cycloneive.cycloneive_mac_out(vital_cycloneive_mac_out)
-# ** Warning: Design size of 65632 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 92848 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
+#    Time: 0 ps  Iteration: 0  Instance: /box_muller_vhd_vec_tst/i1/\Mult1|auto_generated|mac_mult1\/mac_multiply
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
+#    Time: 0 ps  Iteration: 0  Instance: /box_muller_vhd_vec_tst/i1/\Mult1|auto_generated|mac_mult1\/mac_multiply
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 2  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
+#    Time: 0 ps  Iteration: 0  Instance: /box_muller_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 2  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
+#    Time: 0 ps  Iteration: 0  Instance: /box_muller_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
+#    Time: 0 ps  Iteration: 0  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 4  Instance: /f_block_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
-# End time: 11:56:51 on Apr 13,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 7
+#    Time: 0 ps  Iteration: 0  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /box_muller_vhd_vec_tst/i1/\Mult1|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /box_muller_vhd_vec_tst/i1/\Mult1|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /box_muller_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /box_muller_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 16  Instance: /box_muller_vhd_vec_tst/i1/\f1|Mult0|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 16  Instance: /box_muller_vhd_vec_tst/i1/\Mult1|auto_generated|mac_mult1\/mac_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 16  Instance: /box_muller_vhd_vec_tst/i1/\Mult0|auto_generated|mac_mult1\/mac_multiply
+# End time: 11:50:50 on Apr 15,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 18

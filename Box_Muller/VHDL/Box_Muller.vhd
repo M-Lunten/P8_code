@@ -53,6 +53,8 @@ end component;
 	signal sinMul : std_logic_vector(15 downto 0);
 	signal cosMul : std_logic_vector(15 downto 0);
 	signal fblockMul : std_logic_vector(15 downto 0);
+	signal mulres1 : std_logic_vector(31 downto 0);
+	signal mulres2 : std_logic_vector(31 downto 0);
 	
 	begin
 		LF16 : LFSR_16 port map(gclk,OUTPUT(15 downto 4) => LF1sincos);
@@ -63,8 +65,12 @@ end component;
 		process(gclk) is
 			begin	
 				if rising_edge(gclk) then
-					U1 <= sinMul;
-					U2 <= cosMul;
+					mulres1 <= fblockMul*sinMul;
+					mulres2 <= fblockMul*cosMul;
+					
+					U1 <= mulres1(30 downto 15);
+					U2 <= mulres2(30 downto 15);
+					
 				end if;
 		end process;
 
