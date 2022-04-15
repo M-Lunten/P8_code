@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "04/15/2022 11:23:10"
+// DATE "04/15/2022 14:48:04"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -10936,9 +10936,9 @@ cycloneive_ram_block \f1|LUT_a|altsyncram_component|auto_generated|ram_block1a0 
 // synopsys translate_off
 defparam \f1|LUT_a|altsyncram_component|auto_generated|ram_block1a0 .data_interleave_offset_in_bits = 1;
 defparam \f1|LUT_a|altsyncram_component|auto_generated|ram_block1a0 .data_interleave_width_in_bits = 1;
-defparam \f1|LUT_a|altsyncram_component|auto_generated|ram_block1a0 .init_file = "../Matlab/a_coeff.mif";
+defparam \f1|LUT_a|altsyncram_component|auto_generated|ram_block1a0 .init_file = "a_coeff.mif";
 defparam \f1|LUT_a|altsyncram_component|auto_generated|ram_block1a0 .init_file_layout = "port_a";
-defparam \f1|LUT_a|altsyncram_component|auto_generated|ram_block1a0 .logical_ram_name = "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|ALTSYNCRAM";
+defparam \f1|LUT_a|altsyncram_component|auto_generated|ram_block1a0 .logical_ram_name = "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_5ar3:auto_generated|ALTSYNCRAM";
 defparam \f1|LUT_a|altsyncram_component|auto_generated|ram_block1a0 .operation_mode = "rom";
 defparam \f1|LUT_a|altsyncram_component|auto_generated|ram_block1a0 .port_a_address_clear = "none";
 defparam \f1|LUT_a|altsyncram_component|auto_generated|ram_block1a0 .port_a_address_width = 8;

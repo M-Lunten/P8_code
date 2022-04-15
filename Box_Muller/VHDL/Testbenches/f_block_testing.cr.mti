@@ -1,4 +1,13 @@
-C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd
+C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity f_block
+-- Compiling architecture behavior of f_block
+
+} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -17,15 +26,59 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity f_a_lut
 -- Compiling architecture SYN of f_a_lut
 
-} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd
+} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity f_b_lut
+-- Compiling architecture SYN of f_b_lut
+
+} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity LFSR_33
+-- Compiling architecture Behavioral of LFSR_33
+
+} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Testbenches/Box_Muller_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Testbenches/Box_Muller_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity Box_Muller_tb
+-- Compiling architecture behavior of Box_Muller_tb
+
+} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package std_logic_arith
 -- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity addressing_unit
--- Compiling architecture behavior of addressing_unit
+-- Compiling entity sincos
+-- Compiling architecture Behavioural of sincos
+
+} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity f_block_tb
+-- Compiling architecture behavior of f_block_tb
+
+} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity LFSR_16
+-- Compiling architecture Behavioral of LFSR_16
 
 } {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -37,15 +90,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity LOD
 -- Compiling architecture behavior of LOD
 
-} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package altera_mf_components
--- Compiling entity f_b_lut
--- Compiling architecture SYN of f_b_lut
-
 } {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -55,14 +99,33 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity AU_MUX
 -- Compiling architecture SYN of au_mux
 
-} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd
+} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity f_block
--- Compiling architecture behavior of f_block
+-- Compiling entity Box_Muller
+-- Compiling architecture behavioural of Box_Muller
+
+} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity sincosLUT
+-- Compiling architecture SYN of sincoslut
+
+} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity addressing_unit
+-- Compiling architecture behavior of addressing_unit
 
 } {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -72,14 +135,5 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NUMERIC_STD
 -- Compiling entity ones_counter
 -- Compiling architecture behavior of ones_counter
-
-} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity f_block_tb
--- Compiling architecture behavior of f_block_tb
 
 } {} {}}

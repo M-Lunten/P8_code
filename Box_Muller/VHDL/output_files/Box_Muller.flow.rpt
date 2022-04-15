@@ -1,5 +1,5 @@
 Flow report for Box_Muller
-Fri Apr 15 11:50:48 2022
+Fri Apr 15 14:48:05 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Apr 15 11:50:48 2022       ;
+; Flow Status                        ; Successful - Fri Apr 15 14:48:05 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Box_Muller                                  ;
 ; Top-level Entity Name              ; Box_Muller                                  ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/15/2022 11:22:23 ;
+; Start date & time ; 04/15/2022 14:46:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Box_Muller          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 83689965950041.165001454307656         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 10995770589205.165002680406176         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim (Verilog)                     ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -100,16 +100,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4823 MB             ; 00:00:28                           ;
-; Fitter               ; 00:00:19     ; 1.0                     ; 5831 MB             ; 00:00:32                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4681 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.2                     ; 4869 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4654 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4641 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4641 MB             ; 00:00:01                           ;
-; Total                ; 00:00:45     ; --                      ; --                  ; 00:01:11                           ;
+; Analysis & Synthesis ; 00:00:31     ; 1.0                     ; 4817 MB             ; 00:00:49                           ;
+; Fitter               ; 00:00:31     ; 1.0                     ; 5694 MB             ; 00:00:45                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4680 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.2                     ; 4841 MB             ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4653 MB             ; 00:00:03                           ;
+; Total                ; 00:01:14     ; --                      ; --                  ; 00:01:47                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,15 +114,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -138,10 +130,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off Box_Muller -c B
 quartus_asm --read_settings_files=off --write_settings_files=off Box_Muller -c Box_Muller
 quartus_sta Box_Muller -c Box_Muller
 quartus_eda --read_settings_files=off --write_settings_files=off Box_Muller -c Box_Muller
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Box_Muller -c Box_Muller --vector_source=C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Waveform.vwf --testbench_file=C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/ Box_Muller -c Box_Muller
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Box_Muller -c Box_Muller --vector_source=C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Waveform.vwf --testbench_file=C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/qsim/ Box_Muller -c Box_Muller
 
 
 

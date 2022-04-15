@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Box_Muller
-Fri Apr 15 11:22:39 2022
+Fri Apr 15 14:47:14 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -19,8 +19,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  11. Registers Removed During Synthesis
  12. General Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated
- 15. Source assignments for f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated
+ 14. Source assignments for f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_5ar3:auto_generated
+ 15. Source assignments for f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_6ar3:auto_generated
  16. Source assignments for sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated
  17. Parameter Settings for User Entity Instance: f_block:f1|addressing_unit:AU0|AU_MUX:mux0|LPM_MUX:LPM_MUX_component
  18. Parameter Settings for User Entity Instance: f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 15 11:22:39 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 15 14:47:14 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Box_Muller                                  ;
 ; Top-level Entity Name              ; Box_Muller                                  ;
@@ -170,65 +170,63 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                    ;
-+---------------------------------------------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                    ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                   ; Library ;
-+---------------------------------------------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
-; sincos/sincosLUT.vhd                                                ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd   ;         ;
-; f_a_lut.vhd                                                         ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd            ;         ;
-; Box_Muller.vhd                                                      ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd         ;         ;
-; LOD_2b.vhd                                                          ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd             ;         ;
-; LOD.vhd                                                             ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd                ;         ;
-; ones_counter.vhd                                                    ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd       ;         ;
-; AU_MUX.vhd                                                          ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd             ;         ;
-; addressing_unit.vhd                                                 ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd    ;         ;
-; f_b_lut.vhd                                                         ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd            ;         ;
-; f_block.vhd                                                         ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd            ;         ;
-; sincos/sincos.vhd                                                   ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd      ;         ;
-; LFSR_16.vhd                                                         ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd            ;         ;
-; LFSR_33.vhd                                                         ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd            ;         ;
-; lpm_mux.tdf                                                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
-; aglobal181.inc                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
-; muxlut.inc                                                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muxlut.inc              ;         ;
-; bypassff.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
-; altshift.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; db/mux_g9e.tdf                                                      ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mux_g9e.tdf         ;         ;
-; altsyncram.tdf                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
-; stratix_ram_block.inc                                               ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
-; lpm_mux.inc                                                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
-; lpm_decode.inc                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; a_rdenreg.inc                                                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
-; altrom.inc                                                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
-; altram.inc                                                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc              ;         ;
-; altdpram.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
-; db/altsyncram_g3s3.tdf                                              ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf ;         ;
-; /users/fivan/documents/github/p8_code/box_muller/matlab/a_coeff.mif ; yes             ; Auto-Found Memory Initialization File  ; /users/fivan/documents/github/p8_code/box_muller/matlab/a_coeff.mif            ;         ;
-; db/altsyncram_h3s3.tdf                                              ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf ;         ;
-; /users/fivan/documents/github/p8_code/box_muller/matlab/b_coeff.mif ; yes             ; Auto-Found Memory Initialization File  ; /users/fivan/documents/github/p8_code/box_muller/matlab/b_coeff.mif            ;         ;
-; db/altsyncram_egq3.tdf                                              ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_egq3.tdf ;         ;
-; lpm_mult.tdf                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
-; lpm_add_sub.inc                                                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
-; multcore.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc            ;         ;
-; db/mult_7dt.tdf                                                     ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_7dt.tdf        ;         ;
-; db/mult_66t.tdf                                                     ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_66t.tdf        ;         ;
-+---------------------------------------------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------+---------+
+; sincos/sincosLUT.vhd             ; yes             ; User Wizard-Generated File             ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd   ;         ;
+; f_a_lut.vhd                      ; yes             ; User Wizard-Generated File             ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd            ;         ;
+; Box_Muller.vhd                   ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd         ;         ;
+; LOD_2b.vhd                       ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd             ;         ;
+; LOD.vhd                          ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd                ;         ;
+; ones_counter.vhd                 ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd       ;         ;
+; AU_MUX.vhd                       ; yes             ; User Wizard-Generated File             ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd             ;         ;
+; addressing_unit.vhd              ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd    ;         ;
+; f_b_lut.vhd                      ; yes             ; User Wizard-Generated File             ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd            ;         ;
+; f_block.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd            ;         ;
+; sincos/sincos.vhd                ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd      ;         ;
+; LFSR_16.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd            ;         ;
+; LFSR_33.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd            ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf              ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc           ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muxlut.inc               ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc             ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc             ;         ;
+; db/mux_g9e.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mux_g9e.tdf         ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf           ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc    ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc              ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc           ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc            ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc               ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc               ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc             ;         ;
+; db/altsyncram_5ar3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_5ar3.tdf ;         ;
+; a_coeff.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/a_coeff.mif            ;         ;
+; db/altsyncram_6ar3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_6ar3.tdf ;         ;
+; b_coeff.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/b_coeff.mif            ;         ;
+; db/altsyncram_egq3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_egq3.tdf ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf             ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc          ;         ;
+; multcore.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc             ;         ;
+; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_7dt.tdf        ;         ;
+; db/mult_66t.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_66t.tdf        ;         ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -298,10 +296,10 @@ refer to the applicable agreement for further details.
 ;             |ones_counter:oc0|               ; 127 (127)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|ones_counter:oc0                                    ; ones_counter    ; work         ;
 ;       |f_a_lut:LUT_a|                        ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_a_lut:LUT_a                                                                    ; f_a_lut         ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component                                    ; altsyncram      ; work         ;
-;             |altsyncram_g3s3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated     ; altsyncram_g3s3 ; work         ;
+;             |altsyncram_5ar3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_5ar3:auto_generated     ; altsyncram_5ar3 ; work         ;
 ;       |f_b_lut:LUT_b|                        ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_b_lut:LUT_b                                                                    ; f_b_lut         ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component                                    ; altsyncram      ; work         ;
-;             |altsyncram_h3s3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated     ; altsyncram_h3s3 ; work         ;
+;             |altsyncram_6ar3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Box_Muller|f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_6ar3:auto_generated     ; altsyncram_6ar3 ; work         ;
 ;       |lpm_mult:Mult0|                       ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Box_Muller|f_block:f1|lpm_mult:Mult0                                                                   ; lpm_mult        ; work         ;
 ;          |mult_66t:auto_generated|           ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Box_Muller|f_block:f1|lpm_mult:Mult0|mult_66t:auto_generated                                           ; mult_66t        ; work         ;
 ;    |lpm_mult:Mult0|                          ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Box_Muller|lpm_mult:Mult0                                                                              ; lpm_mult        ; work         ;
@@ -316,15 +314,15 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                       ;
-+----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-----------------------+
-; Name                                                                                               ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                   ;
-+----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-----------------------+
-; f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated|ALTSYNCRAM ; AUTO ; ROM            ; 256          ; 16           ; --           ; --           ; 4096  ; ../Matlab/a_coeff.mif ;
-; f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated|ALTSYNCRAM ; AUTO ; ROM            ; 256          ; 16           ; --           ; --           ; 4096  ; ../Matlab/b_coeff.mif ;
-; sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ALTSYNCRAM   ; AUTO ; True Dual Port ; 1024         ; 16           ; 1024         ; 16           ; 16384 ; sin_cos.mif           ;
-+----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-----------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                             ;
++----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-------------+
+; Name                                                                                               ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF         ;
++----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-------------+
+; f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_5ar3:auto_generated|ALTSYNCRAM ; AUTO ; ROM            ; 256          ; 16           ; --           ; --           ; 4096  ; a_coeff.mif ;
+; f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_6ar3:auto_generated|ALTSYNCRAM ; AUTO ; ROM            ; 256          ; 16           ; --           ; --           ; 4096  ; b_coeff.mif ;
+; sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ALTSYNCRAM   ; AUTO ; True Dual Port ; 1024         ; 16           ; 1024         ; 16           ; 16384 ; sin_cos.mif ;
++----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+-------------+
 
 
 +-----------------------------------------------------+
@@ -419,7 +417,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Source assignments for f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated ;
+; Source assignments for f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_5ar3:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                               ;
 +---------------------------------+--------------------+------+--------------------------------------------------+
@@ -428,7 +426,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Source assignments for f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated ;
+; Source assignments for f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_6ar3:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                               ;
 +---------------------------------+--------------------+------+--------------------------------------------------+
@@ -466,123 +464,123 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component ;
-+------------------------------------+-----------------------+------------------------------------------+
-; Parameter Name                     ; Value                 ; Type                                     ;
-+------------------------------------+-----------------------+------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                     ; Untyped                                  ;
-; AUTO_CARRY_CHAINS                  ; ON                    ; AUTO_CARRY                               ;
-; IGNORE_CARRY_BUFFERS               ; OFF                   ; IGNORE_CARRY                             ;
-; AUTO_CASCADE_CHAINS                ; ON                    ; AUTO_CASCADE                             ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                   ; IGNORE_CASCADE                           ;
-; WIDTH_BYTEENA                      ; 1                     ; Untyped                                  ;
-; OPERATION_MODE                     ; ROM                   ; Untyped                                  ;
-; WIDTH_A                            ; 16                    ; Signed Integer                           ;
-; WIDTHAD_A                          ; 8                     ; Signed Integer                           ;
-; NUMWORDS_A                         ; 256                   ; Signed Integer                           ;
-; OUTDATA_REG_A                      ; CLOCK0                ; Untyped                                  ;
-; ADDRESS_ACLR_A                     ; NONE                  ; Untyped                                  ;
-; OUTDATA_ACLR_A                     ; NONE                  ; Untyped                                  ;
-; WRCONTROL_ACLR_A                   ; NONE                  ; Untyped                                  ;
-; INDATA_ACLR_A                      ; NONE                  ; Untyped                                  ;
-; BYTEENA_ACLR_A                     ; NONE                  ; Untyped                                  ;
-; WIDTH_B                            ; 1                     ; Signed Integer                           ;
-; WIDTHAD_B                          ; 1                     ; Signed Integer                           ;
-; NUMWORDS_B                         ; 0                     ; Signed Integer                           ;
-; INDATA_REG_B                       ; CLOCK1                ; Untyped                                  ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                ; Untyped                                  ;
-; RDCONTROL_REG_B                    ; CLOCK1                ; Untyped                                  ;
-; ADDRESS_REG_B                      ; CLOCK1                ; Untyped                                  ;
-; OUTDATA_REG_B                      ; UNREGISTERED          ; Untyped                                  ;
-; BYTEENA_REG_B                      ; CLOCK1                ; Untyped                                  ;
-; INDATA_ACLR_B                      ; NONE                  ; Untyped                                  ;
-; WRCONTROL_ACLR_B                   ; NONE                  ; Untyped                                  ;
-; ADDRESS_ACLR_B                     ; NONE                  ; Untyped                                  ;
-; OUTDATA_ACLR_B                     ; NONE                  ; Untyped                                  ;
-; RDCONTROL_ACLR_B                   ; NONE                  ; Untyped                                  ;
-; BYTEENA_ACLR_B                     ; NONE                  ; Untyped                                  ;
-; WIDTH_BYTEENA_A                    ; 1                     ; Signed Integer                           ;
-; WIDTH_BYTEENA_B                    ; 1                     ; Signed Integer                           ;
-; RAM_BLOCK_TYPE                     ; AUTO                  ; Untyped                                  ;
-; BYTE_SIZE                          ; 8                     ; Signed Integer                           ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE             ; Untyped                                  ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ  ; Untyped                                  ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ  ; Untyped                                  ;
-; INIT_FILE                          ; ../Matlab/a_coeff.mif ; Untyped                                  ;
-; INIT_FILE_LAYOUT                   ; PORT_A                ; Untyped                                  ;
-; MAXIMUM_DEPTH                      ; 0                     ; Signed Integer                           ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                ; Untyped                                  ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                ; Untyped                                  ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                ; Untyped                                  ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                ; Untyped                                  ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN       ; Untyped                                  ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN       ; Untyped                                  ;
-; ENABLE_ECC                         ; FALSE                 ; Untyped                                  ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                 ; Untyped                                  ;
-; WIDTH_ECCSTATUS                    ; 3                     ; Signed Integer                           ;
-; DEVICE_FAMILY                      ; Cyclone IV E          ; Untyped                                  ;
-; CBXI_PARAMETER                     ; altsyncram_g3s3       ; Untyped                                  ;
-+------------------------------------+-----------------------+------------------------------------------+
++------------------------------------+----------------------+-------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                      ;
++------------------------------------+----------------------+-------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                   ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                            ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                   ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                   ;
+; WIDTH_A                            ; 16                   ; Signed Integer                            ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                            ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                            ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                   ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                   ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                   ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                   ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                   ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                   ;
+; WIDTH_B                            ; 1                    ; Signed Integer                            ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                            ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                            ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                   ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                   ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                   ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                   ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                   ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                   ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                   ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                   ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                   ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                   ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                            ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                            ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                   ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                            ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                   ;
+; INIT_FILE                          ; a_coeff.mif          ; Untyped                                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                   ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                            ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                   ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                   ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                   ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                            ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                   ;
+; CBXI_PARAMETER                     ; altsyncram_5ar3      ; Untyped                                   ;
++------------------------------------+----------------------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component ;
-+------------------------------------+-----------------------+------------------------------------------+
-; Parameter Name                     ; Value                 ; Type                                     ;
-+------------------------------------+-----------------------+------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                     ; Untyped                                  ;
-; AUTO_CARRY_CHAINS                  ; ON                    ; AUTO_CARRY                               ;
-; IGNORE_CARRY_BUFFERS               ; OFF                   ; IGNORE_CARRY                             ;
-; AUTO_CASCADE_CHAINS                ; ON                    ; AUTO_CASCADE                             ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                   ; IGNORE_CASCADE                           ;
-; WIDTH_BYTEENA                      ; 1                     ; Untyped                                  ;
-; OPERATION_MODE                     ; ROM                   ; Untyped                                  ;
-; WIDTH_A                            ; 16                    ; Signed Integer                           ;
-; WIDTHAD_A                          ; 8                     ; Signed Integer                           ;
-; NUMWORDS_A                         ; 256                   ; Signed Integer                           ;
-; OUTDATA_REG_A                      ; CLOCK0                ; Untyped                                  ;
-; ADDRESS_ACLR_A                     ; NONE                  ; Untyped                                  ;
-; OUTDATA_ACLR_A                     ; NONE                  ; Untyped                                  ;
-; WRCONTROL_ACLR_A                   ; NONE                  ; Untyped                                  ;
-; INDATA_ACLR_A                      ; NONE                  ; Untyped                                  ;
-; BYTEENA_ACLR_A                     ; NONE                  ; Untyped                                  ;
-; WIDTH_B                            ; 1                     ; Signed Integer                           ;
-; WIDTHAD_B                          ; 1                     ; Signed Integer                           ;
-; NUMWORDS_B                         ; 0                     ; Signed Integer                           ;
-; INDATA_REG_B                       ; CLOCK1                ; Untyped                                  ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                ; Untyped                                  ;
-; RDCONTROL_REG_B                    ; CLOCK1                ; Untyped                                  ;
-; ADDRESS_REG_B                      ; CLOCK1                ; Untyped                                  ;
-; OUTDATA_REG_B                      ; UNREGISTERED          ; Untyped                                  ;
-; BYTEENA_REG_B                      ; CLOCK1                ; Untyped                                  ;
-; INDATA_ACLR_B                      ; NONE                  ; Untyped                                  ;
-; WRCONTROL_ACLR_B                   ; NONE                  ; Untyped                                  ;
-; ADDRESS_ACLR_B                     ; NONE                  ; Untyped                                  ;
-; OUTDATA_ACLR_B                     ; NONE                  ; Untyped                                  ;
-; RDCONTROL_ACLR_B                   ; NONE                  ; Untyped                                  ;
-; BYTEENA_ACLR_B                     ; NONE                  ; Untyped                                  ;
-; WIDTH_BYTEENA_A                    ; 1                     ; Signed Integer                           ;
-; WIDTH_BYTEENA_B                    ; 1                     ; Signed Integer                           ;
-; RAM_BLOCK_TYPE                     ; AUTO                  ; Untyped                                  ;
-; BYTE_SIZE                          ; 8                     ; Signed Integer                           ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE             ; Untyped                                  ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ  ; Untyped                                  ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ  ; Untyped                                  ;
-; INIT_FILE                          ; ../Matlab/b_coeff.mif ; Untyped                                  ;
-; INIT_FILE_LAYOUT                   ; PORT_A                ; Untyped                                  ;
-; MAXIMUM_DEPTH                      ; 0                     ; Signed Integer                           ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                ; Untyped                                  ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                ; Untyped                                  ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                ; Untyped                                  ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                ; Untyped                                  ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN       ; Untyped                                  ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN       ; Untyped                                  ;
-; ENABLE_ECC                         ; FALSE                 ; Untyped                                  ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                 ; Untyped                                  ;
-; WIDTH_ECCSTATUS                    ; 3                     ; Signed Integer                           ;
-; DEVICE_FAMILY                      ; Cyclone IV E          ; Untyped                                  ;
-; CBXI_PARAMETER                     ; altsyncram_h3s3       ; Untyped                                  ;
-+------------------------------------+-----------------------+------------------------------------------+
++------------------------------------+----------------------+-------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                      ;
++------------------------------------+----------------------+-------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                   ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                            ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                   ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                   ;
+; WIDTH_A                            ; 16                   ; Signed Integer                            ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                            ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                            ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                   ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                   ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                   ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                   ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                   ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                   ;
+; WIDTH_B                            ; 1                    ; Signed Integer                            ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                            ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                            ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                   ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                   ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                   ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                   ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                   ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                   ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                   ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                   ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                   ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                   ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                            ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                            ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                   ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                            ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                   ;
+; INIT_FILE                          ; b_coeff.mif          ; Untyped                                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                   ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                            ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                   ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                   ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                   ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                            ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                   ;
+; CBXI_PARAMETER                     ; altsyncram_6ar3      ; Untyped                                   ;
++------------------------------------+----------------------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -901,7 +899,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -911,72 +909,72 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Apr 15 11:22:22 2022
+    Info: Processing started: Fri Apr 15 14:46:42 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Box_Muller -c Box_Muller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file sincos/sincoslut.vhd
-    Info (12022): Found design unit 1: sincoslut-SYN File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd Line: 55
-    Info (12023): Found entity 1: sincosLUT File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd Line: 43
+    Info (12022): Found design unit 1: sincoslut-SYN File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd Line: 55
+    Info (12023): Found entity 1: sincosLUT File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file f_a_lut.vhd
-    Info (12022): Found design unit 1: f_a_lut-SYN File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 52
-    Info (12023): Found entity 1: f_a_lut File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 42
+    Info (12022): Found design unit 1: f_a_lut-SYN File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 52
+    Info (12023): Found entity 1: f_a_lut File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file box_muller.vhd
-    Info (12022): Found design unit 1: Box_Muller-behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 15
-    Info (12023): Found entity 1: Box_Muller File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 5
+    Info (12022): Found design unit 1: Box_Muller-behavioural File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 15
+    Info (12023): Found entity 1: Box_Muller File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file lod_2b.vhd
-    Info (12022): Found design unit 1: LOD_2b-behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd Line: 13
-    Info (12023): Found entity 1: LOD_2b File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd Line: 6
+    Info (12022): Found design unit 1: LOD_2b-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd Line: 13
+    Info (12023): Found entity 1: LOD_2b File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file lod.vhd
-    Info (12022): Found design unit 1: LOD-behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 13
-    Info (12023): Found entity 1: LOD File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 6
+    Info (12022): Found design unit 1: LOD-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 13
+    Info (12023): Found entity 1: LOD File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ones_counter.vhd
-    Info (12022): Found design unit 1: ones_counter-behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd Line: 13
-    Info (12023): Found entity 1: ones_counter File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd Line: 6
+    Info (12022): Found design unit 1: ones_counter-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd Line: 13
+    Info (12023): Found entity 1: ones_counter File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file au_mux.vhd
-    Info (12022): Found design unit 1: au_mux-SYN File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 115
-    Info (12023): Found entity 1: AU_MUX File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 42
+    Info (12022): Found design unit 1: au_mux-SYN File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 115
+    Info (12023): Found entity 1: AU_MUX File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file addressing_unit.vhd
-    Info (12022): Found design unit 1: addressing_unit-behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd Line: 14
-    Info (12023): Found entity 1: addressing_unit File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd Line: 6
+    Info (12022): Found design unit 1: addressing_unit-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd Line: 14
+    Info (12023): Found entity 1: addressing_unit File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file f_b_lut.vhd
-    Info (12022): Found design unit 1: f_b_lut-SYN File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 52
-    Info (12023): Found entity 1: f_b_lut File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 42
+    Info (12022): Found design unit 1: f_b_lut-SYN File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 52
+    Info (12023): Found entity 1: f_b_lut File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file f_block.vhd
-    Info (12022): Found design unit 1: f_block-behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 15
-    Info (12023): Found entity 1: f_block File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 6
+    Info (12022): Found design unit 1: f_block-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 15
+    Info (12023): Found entity 1: f_block File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file f_block_tb.vhd
-    Info (12022): Found design unit 1: f_block_tb-behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd Line: 9
-    Info (12023): Found entity 1: f_block_tb File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd Line: 6
+    Info (12022): Found design unit 1: f_block_tb-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd Line: 9
+    Info (12023): Found entity 1: f_block_tb File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file addressing_unit_tb.vhd
-    Info (12022): Found design unit 1: addressing_unit_tb-behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit_tb.vhd Line: 9
-    Info (12023): Found entity 1: addressing_unit_tb File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit_tb.vhd Line: 6
+    Info (12022): Found design unit 1: addressing_unit_tb-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit_tb.vhd Line: 9
+    Info (12023): Found entity 1: addressing_unit_tb File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit_tb.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file sincos/sincos.vhd
-    Info (12022): Found design unit 1: sincos-Behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd Line: 15
-    Info (12023): Found entity 1: sincos File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd Line: 5
+    Info (12022): Found design unit 1: sincos-Behavioural File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd Line: 15
+    Info (12023): Found entity 1: sincos File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_16.vhd
-    Info (12022): Found design unit 1: LFSR_16-Behavioral File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd Line: 11
-    Info (12023): Found entity 1: LFSR_16 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd Line: 4
+    Info (12022): Found design unit 1: LFSR_16-Behavioral File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd Line: 11
+    Info (12023): Found entity 1: LFSR_16 File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbench_lfsr_16.vhd
-    Info (12022): Found design unit 1: TestBench_LFSR_16-LFSR_16_arch File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/TestBench_LFSR_16.vhd Line: 6
-    Info (12023): Found entity 1: TestBench_LFSR_16 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/TestBench_LFSR_16.vhd Line: 4
+    Info (12022): Found design unit 1: TestBench_LFSR_16-LFSR_16_arch File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/TestBench_LFSR_16.vhd Line: 6
+    Info (12023): Found entity 1: TestBench_LFSR_16 File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/TestBench_LFSR_16.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_33.vhd
-    Info (12022): Found design unit 1: LFSR_33-Behavioral File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd Line: 11
-    Info (12023): Found entity 1: LFSR_33 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd Line: 4
+    Info (12022): Found design unit 1: LFSR_33-Behavioral File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd Line: 11
+    Info (12023): Found entity 1: LFSR_33 File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbench_lfsr_33.vhd
-    Info (12022): Found design unit 1: TestBench_LFSR_33-LFSR_33_arch File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/TestBench_LFSR_33.vhd Line: 6
-    Info (12023): Found entity 1: TestBench_LFSR_33 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/TestBench_LFSR_33.vhd Line: 4
+    Info (12022): Found design unit 1: TestBench_LFSR_33-LFSR_33_arch File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/TestBench_LFSR_33.vhd Line: 6
+    Info (12023): Found entity 1: TestBench_LFSR_33 File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/TestBench_LFSR_33.vhd Line: 4
 Info (12127): Elaborating entity "Box_Muller" for the top level hierarchy
-Critical Warning (10920): VHDL Incomplete Partial Association warning at Box_Muller.vhd(60): port or argument "OUTPUT" has 4/16 unassociated elements File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 60
-Critical Warning (10920): VHDL Incomplete Partial Association warning at Box_Muller.vhd(61): port or argument "OUTPUT" has 1/33 unassociated elements File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 61
-Info (12128): Elaborating entity "LFSR_16" for hierarchy "LFSR_16:LF16" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 60
-Info (12128): Elaborating entity "LFSR_33" for hierarchy "LFSR_33:LF33" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 61
-Info (12128): Elaborating entity "f_block" for hierarchy "f_block:f1" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 62
-Info (12128): Elaborating entity "addressing_unit" for hierarchy "f_block:f1|addressing_unit:AU0" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 54
-Info (12128): Elaborating entity "AU_MUX" for hierarchy "f_block:f1|addressing_unit:AU0|AU_MUX:mux0" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd Line: 97
-Info (12128): Elaborating entity "LPM_MUX" for hierarchy "f_block:f1|addressing_unit:AU0|AU_MUX:mux0|LPM_MUX:LPM_MUX_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 381
-Info (12130): Elaborated megafunction instantiation "f_block:f1|addressing_unit:AU0|AU_MUX:mux0|LPM_MUX:LPM_MUX_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 381
-Info (12133): Instantiated megafunction "f_block:f1|addressing_unit:AU0|AU_MUX:mux0|LPM_MUX:LPM_MUX_component" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 381
+Critical Warning (10920): VHDL Incomplete Partial Association warning at Box_Muller.vhd(60): port or argument "OUTPUT" has 4/16 unassociated elements File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 60
+Critical Warning (10920): VHDL Incomplete Partial Association warning at Box_Muller.vhd(61): port or argument "OUTPUT" has 1/33 unassociated elements File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 61
+Info (12128): Elaborating entity "LFSR_16" for hierarchy "LFSR_16:LF16" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 60
+Info (12128): Elaborating entity "LFSR_33" for hierarchy "LFSR_33:LF33" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 61
+Info (12128): Elaborating entity "f_block" for hierarchy "f_block:f1" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 62
+Info (12128): Elaborating entity "addressing_unit" for hierarchy "f_block:f1|addressing_unit:AU0" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 54
+Info (12128): Elaborating entity "AU_MUX" for hierarchy "f_block:f1|addressing_unit:AU0|AU_MUX:mux0" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd Line: 98
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "f_block:f1|addressing_unit:AU0|AU_MUX:mux0|LPM_MUX:LPM_MUX_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 381
+Info (12130): Elaborated megafunction instantiation "f_block:f1|addressing_unit:AU0|AU_MUX:mux0|LPM_MUX:LPM_MUX_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 381
+Info (12133): Instantiated megafunction "f_block:f1|addressing_unit:AU0|AU_MUX:mux0|LPM_MUX:LPM_MUX_component" with the following parameter: File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd Line: 381
     Info (12134): Parameter "LPM_WIDTH" = "2"
     Info (12134): Parameter "LPM_SIZE" = "64"
     Info (12134): Parameter "LPM_WIDTHS" = "6"
@@ -984,15 +982,15 @@ Info (12133): Instantiated megafunction "f_block:f1|addressing_unit:AU0|AU_MUX:m
     Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_g9e.tdf
-    Info (12023): Found entity 1: mux_g9e File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mux_g9e.tdf Line: 22
+    Info (12023): Found entity 1: mux_g9e File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mux_g9e.tdf Line: 22
 Info (12128): Elaborating entity "mux_g9e" for hierarchy "f_block:f1|addressing_unit:AU0|AU_MUX:mux0|LPM_MUX:LPM_MUX_component|mux_g9e:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
-Info (12128): Elaborating entity "LOD" for hierarchy "f_block:f1|addressing_unit:AU0|LOD:LOD0" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd Line: 115
-Info (12128): Elaborating entity "LOD_2b" for hierarchy "f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:0:detector" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 35
-Info (12128): Elaborating entity "ones_counter" for hierarchy "f_block:f1|addressing_unit:AU0|LOD:LOD0|ones_counter:oc0" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 41
-Info (12128): Elaborating entity "f_a_lut" for hierarchy "f_block:f1|f_a_lut:LUT_a" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 55
-Info (12128): Elaborating entity "altsyncram" for hierarchy "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 59
-Info (12133): Instantiated megafunction "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 59
+Info (12128): Elaborating entity "LOD" for hierarchy "f_block:f1|addressing_unit:AU0|LOD:LOD0" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd Line: 116
+Info (12128): Elaborating entity "LOD_2b" for hierarchy "f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:0:detector" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 35
+Info (12128): Elaborating entity "ones_counter" for hierarchy "f_block:f1|addressing_unit:AU0|LOD:LOD0|ones_counter:oc0" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd Line: 41
+Info (12128): Elaborating entity "f_a_lut" for hierarchy "f_block:f1|f_a_lut:LUT_a" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 55
+Info (12128): Elaborating entity "altsyncram" for hierarchy "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 59
+Info (12133): Instantiated megafunction "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1013,7 +1011,7 @@ Info (12133): Instantiated megafunction "f_block:f1|f_a_lut:LUT_a|altsyncram:alt
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "../Matlab/a_coeff.mif"
+    Info (12134): Parameter "init_file" = "a_coeff.mif"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "256"
@@ -1043,13 +1041,14 @@ Info (12133): Instantiated megafunction "f_block:f1|f_a_lut:LUT_a|altsyncram:alt
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g3s3.tdf
-    Info (12023): Found entity 1: altsyncram_g3s3 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_g3s3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_g3s3" for hierarchy "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_g3s3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "f_b_lut" for hierarchy "f_block:f1|f_b_lut:LUT_b" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 56
-Info (12128): Elaborating entity "altsyncram" for hierarchy "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 59
-Info (12133): Instantiated megafunction "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 59
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5ar3.tdf
+    Info (12023): Found entity 1: altsyncram_5ar3 File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_5ar3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_5ar3" for hierarchy "f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_5ar3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (248) in the Memory Initialization File "C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/a_coeff.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd Line: 59
+Info (12128): Elaborating entity "f_b_lut" for hierarchy "f_block:f1|f_b_lut:LUT_b" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 56
+Info (12128): Elaborating entity "altsyncram" for hierarchy "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 59
+Info (12133): Instantiated megafunction "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1070,7 +1069,7 @@ Info (12133): Instantiated megafunction "f_block:f1|f_b_lut:LUT_b|altsyncram:alt
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "../Matlab/b_coeff.mif"
+    Info (12134): Parameter "init_file" = "b_coeff.mif"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "256"
@@ -1100,14 +1099,15 @@ Info (12133): Instantiated megafunction "f_block:f1|f_b_lut:LUT_b|altsyncram:alt
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_h3s3.tdf
-    Info (12023): Found entity 1: altsyncram_h3s3 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_h3s3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_h3s3" for hierarchy "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_h3s3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "sincos" for hierarchy "sincos:sc" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 63
-Info (12128): Elaborating entity "sincosLUT" for hierarchy "sincos:sc|sincosLUT:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd Line: 43
-Info (12128): Elaborating entity "altsyncram" for hierarchy "sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd Line: 70
-Info (12130): Elaborated megafunction instantiation "sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd Line: 70
-Info (12133): Instantiated megafunction "sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd Line: 70
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6ar3.tdf
+    Info (12023): Found entity 1: altsyncram_6ar3 File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_6ar3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_6ar3" for hierarchy "f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_6ar3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (248) in the Memory Initialization File "C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/b_coeff.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd Line: 59
+Info (12128): Elaborating entity "sincos" for hierarchy "sincos:sc" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 63
+Info (12128): Elaborating entity "sincosLUT" for hierarchy "sincos:sc|sincosLUT:c1" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd Line: 43
+Info (12128): Elaborating entity "altsyncram" for hierarchy "sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd Line: 70
+Info (12130): Elaborated megafunction instantiation "sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd Line: 70
+Info (12133): Instantiated megafunction "sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd Line: 70
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
@@ -1159,12 +1159,12 @@ Info (12133): Instantiated megafunction "sincos:sc|sincosLUT:c1|altsyncram:altsy
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_egq3.tdf
-    Info (12023): Found entity 1: altsyncram_egq3 File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_egq3.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_egq3 File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/db/altsyncram_egq3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_egq3" for hierarchy "sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (278001): Inferred 3 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: c:/intelfpga_lite/18.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "f_block:f1|Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 77
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "f_block:f1|Mult0" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 77
 Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
 Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: c:/intelfpga_lite/18.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
     Info (12134): Parameter "LPM_WIDTHA" = "16"
@@ -1177,9 +1177,9 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following para
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
-    Info (12023): Found entity 1: mult_7dt File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_7dt.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "f_block:f1|lpm_mult:Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 77
-Info (12133): Instantiated megafunction "f_block:f1|lpm_mult:Mult0" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 77
+    Info (12023): Found entity 1: mult_7dt File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_7dt.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "f_block:f1|lpm_mult:Mult0" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 77
+Info (12133): Instantiated megafunction "f_block:f1|lpm_mult:Mult0" with the following parameter: File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd Line: 77
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "17"
     Info (12134): Parameter "LPM_WIDTHP" = "33"
@@ -1190,22 +1190,22 @@ Info (12133): Instantiated megafunction "f_block:f1|lpm_mult:Mult0" with the fol
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_66t.tdf
-    Info (12023): Found entity 1: mult_66t File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_66t.tdf Line: 28
+    Info (12023): Found entity 1: mult_66t File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/db/mult_66t.tdf Line: 28
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "greset" File: C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 8
+    Warning (15610): No output dependent on input pin "greset" File: C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd Line: 8
 Info (21057): Implemented 730 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 642 logic cells
     Info (21064): Implemented 48 RAM segments
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Fri Apr 15 11:22:39 2022
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:28
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4817 megabytes
+    Info: Processing ended: Fri Apr 15 14:47:14 2022
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:50
 
 
