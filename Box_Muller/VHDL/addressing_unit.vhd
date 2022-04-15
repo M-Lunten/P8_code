@@ -92,6 +92,7 @@ architecture behavior of addressing_unit is
 	end component;
 	
 	signal ctrl_mux : std_logic_vector(5 downto 0);
+	signal seg_L : std_logic_vector(1 downto 0);
 	
 begin
 	mux0 : AU_MUX port map (data0x => "00", data1x(1) => U_in(31), data1x(0) => '0', data2x => U_in(1 downto 0), data3x => U_in(2 downto 1),
@@ -110,10 +111,11 @@ begin
 		 data52x => U_in(8 downto 7), data53x => U_in(7 downto 6), data54x => U_in(6 downto 5), data55x => U_in(5 downto 4),
 		 data56x => U_in(4 downto 3), data57x => U_in(3 downto 2), data58x => U_in(2 downto 1), data59x => U_in(1 downto 0),
 		 data60x(1) => U_in(31), data60x(0) => '0', data61x => "00", data62x => "00", data63x => "00", 
-		 sel => ctrl_mux, result => L);
+		 sel => ctrl_mux, result => seg_L);
 	
 	LOD0 : LOD port map (U => U_in, res => ctrl_mux);
 	
+	L <= seg_L;
 	w <= ctrl_mux;
 	
 end behavior;

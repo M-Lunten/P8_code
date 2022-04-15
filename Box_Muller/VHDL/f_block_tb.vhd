@@ -16,14 +16,22 @@ architecture behavior of f_block_tb is
 	);
 	end component;
 	
+	constant clock_period : time := 40 ns;
+
 	signal U_in : std_logic_vector(31 downto 0);
-	signal clk_in : std_logic := '0';
-	signal f_res : std_logic_vector(15 downto 0);
+	signal clk : std_logic := '0';
+	signal res : std_logic_vector(15 downto 0);
 	
 begin
 	
-	f0 : f_block port map (U_in, clk_in, f_res);
+	f0 : f_block port map (U => U_in, clk_in => clk, f_res => res);
 	
+	CLK_GEN : process is 
+	begin 
+		wait for clock_period/2;
+		clk <= not clk;
+	end process CLK_GEN;
+
 	process is
 	begin
 		U_in <= "00011111000111110010011101100110";
@@ -36,26 +44,10 @@ begin
 		--0000101001111001
 		--11011000010000110011111110100101
 		--0000010010100111
-		wait for 20 ns;
-		clk_in <= not(clk_in);
-		wait for 20 ns;
-		clk_in <= not(clk_in);
-		wait for 20 ns;
-		clk_in <= not(clk_in);
-		wait for 20 ns;
-		clk_in <= not(clk_in);
-		wait for 20 ns;
-		clk_in <= not(clk_in);
-		wait for 20 ns;
-		clk_in <= not(clk_in);
-		wait for 20 ns;
-		clk_in <= not(clk_in);
-		wait for 20 ns;
-		clk_in <= not(clk_in);
-		wait for 20 ns;
-		clk_in <= not(clk_in);
-		wait for 20 ns;
-		clk_in <= not(clk_in);
-		
+		wait for clock_period;
+		U_in <= "10001011000111001001011000010101";
+		wait for clock_period;
+		U_in <= "01000111010000110011011101001101";
+		wait for clock_period;
 	end process;
 end behavior;

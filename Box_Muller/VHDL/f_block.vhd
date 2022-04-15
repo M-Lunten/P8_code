@@ -40,11 +40,11 @@ architecture behavior of f_block is
 	);
 	end component;
 	
-	signal seg_w : std_logic_vector(5 downto 0);
+	signal seg_w : std_logic_vector(5 downto 0) := "000000";
 	signal seg_L : std_logic_vector(1 downto 0);
-	signal a : std_logic_vector(15 downto 0); --Q(3, 13)
-	signal b : std_logic_vector(15 downto 0); --Q(4, 12)
-	signal shift_num : unsigned(5 downto 0);
+	signal a : std_logic_vector(15 downto 0) := "0000000000000000"; --Q(3, 13)
+	signal b : std_logic_vector(15 downto 0) := "0000000000000000"; --Q(4, 12)
+	signal shift_num : unsigned(5 downto 0) := "000000";
 	signal U_tilde: std_logic_vector(31 downto 0);
 	signal shift1: std_logic_vector(15 downto 0);
 	--signal b1: std_logic_vector(15 downto 0);
