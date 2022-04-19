@@ -41,9 +41,9 @@ begin
 	variable out_line : line;
 	begin
 		file_open(file_RESULTS, "output_results.txt", write_mode);
-		wait for 3*clock_period;
+		wait for 5*clock_period;
 		
-		for i in 0 to 10000 loop
+		for i in 0 to 100000 loop
 			write(out_line, res1, right, 16);
 			write(out_line, ',', right, 1);
 			write(out_line, res2, right, 16);
@@ -52,7 +52,8 @@ begin
 			wait for clock_period;			
 		end loop;
 		file_close(file_RESULTS);
+		report "Finished";
+		wait;
 	end process;
-
 end behavior;
 	

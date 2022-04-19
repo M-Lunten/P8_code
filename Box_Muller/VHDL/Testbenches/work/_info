@@ -23,9 +23,9 @@ V[b8o@WLJI]TVWd[@XA_W21
 !s100 [PjNY4U`7XSGI4RDJ>Kbi3
 Z8 OV;C;10.5b;63
 32
-Z9 !s110 1650035960
+Z9 !s110 1650050176
 !i10b 1
-Z10 !s108 1650035960.000000
+Z10 !s108 1650050176.000000
 Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd|
 Z12 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/addressing_unit.vhd|
 !i113 1
@@ -106,11 +106,11 @@ V9>Sknbf=9N1cH[KT4P7Pi1
 !s100 :b?MWJXbK2nngBh7oHzUM1
 R8
 32
-R9
+Z28 !s110 1650050177
 !i10b 1
 R10
-Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd|
-Z29 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd|
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd|
+Z30 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/AU_MUX.vhd|
 !i113 1
 R13
 R14
@@ -125,33 +125,33 @@ V3>T`[7W5oBOiDg6FGS?kG3
 !s100 ;cNUC4XY<mC<W?92I306Q1
 R8
 32
-R9
+R28
 !i10b 1
 R10
-R28
 R29
+R30
 !i113 1
 R13
 R14
 Ebox_muller
-Z30 w1650027967
+Z31 w1650050075
 R15
 R3
 R4
 R5
-Z31 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd
-Z32 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd
+Z32 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd
+Z33 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd
 l0
 L5
 VlJVdSn0:=KB;]]k_6S_I>1
 !s100 I<UQUE]m<fO<ng>n5z:Td2
 R8
 32
-R9
+R28
 !i10b 1
-R10
-Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd|
-Z34 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd|
+Z34 !s108 1650050177.000000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd|
+Z36 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Box_Muller.vhd|
 !i113 1
 R13
 R14
@@ -166,65 +166,65 @@ VdJD;hf4zRL^O2:9NoiR@M1
 !s100 K]FTga[22]0V^@e8COML@0
 R8
 32
-R9
+R28
 !i10b 1
-R10
-R33
 R34
+R35
+R36
 !i113 1
 R13
 R14
 Ebox_muller_tb
-Z35 w1650036505
-Z36 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z37 w1650050161
+Z38 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R15
 R3
 R4
 R5
-Z37 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Testbenches/Box_Muller_tb.vhd
-Z38 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Testbenches/Box_Muller_tb.vhd
+Z39 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Testbenches/Box_Muller_tb.vhd
+Z40 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Testbenches/Box_Muller_tb.vhd
 l0
 L8
 VI@j?24GmO0LGYc?KLS2S70
 !s100 R_ZC_<E0VT[@4_n]^eH@C0
 R8
 32
-Z39 !s110 1650036545
+Z41 !s110 1650050180
 !i10b 1
-Z40 !s108 1650036545.000000
-Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Testbenches/Box_Muller_tb.vhd|
-Z42 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Testbenches/Box_Muller_tb.vhd|
+Z42 !s108 1650050180.000000
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Testbenches/Box_Muller_tb.vhd|
+Z44 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/Testbenches/Box_Muller_tb.vhd|
 !i113 1
 R13
 R14
 Abehavior
-R36
+R38
 R15
 R3
 R4
-Z43 DEx4 work 13 box_muller_tb 0 22 I@j?24GmO0LGYc?KLS2S70
+Z45 DEx4 work 13 box_muller_tb 0 22 I@j?24GmO0LGYc?KLS2S70
 l31
 L11
-V9X>6CQ7;oFlE7^73GecoP3
-!s100 A7c_O9:3?h9mIR2e1X5HC2
+V?MbXJ@`W:OLS4@5hfnOL73
+!s100 nT:mWM4RAleEAGXEHEN[62
 R8
 32
-R39
-!i10b 1
-R40
 R41
+!i10b 1
 R42
+R43
+R44
 !i113 1
 R13
 R14
 Ef_a_lut
-Z44 w1650019889
-Z45 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+Z46 w1650019889
+Z47 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
 R3
 R4
 R5
-Z46 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd
-Z47 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd
+Z48 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd
+Z49 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd
 l0
 L42
 VZ_o8hD6Qn94f`@2LDES[H0
@@ -234,13 +234,13 @@ R8
 R9
 !i10b 1
 R10
-Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd|
-Z49 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd|
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd|
+Z51 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_a_lut.vhd|
 !i113 1
 R13
 R14
 Asyn
-R45
+R47
 R3
 R4
 DEx4 work 7 f_a_lut 0 22 Z_o8hD6Qn94f`@2LDES[H0
@@ -253,19 +253,19 @@ R8
 R9
 !i10b 1
 R10
-R48
-R49
+R50
+R51
 !i113 1
 R13
 R14
 Ef_b_lut
-Z50 w1650019904
-R45
+Z52 w1650019904
+R47
 R3
 R4
 R5
-Z51 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd
-Z52 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd
+Z53 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd
+Z54 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd
 l0
 L42
 VYJZ5FDUXlYXDJb_A0Pj6A2
@@ -275,13 +275,13 @@ R8
 R9
 !i10b 1
 R10
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd|
-Z54 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd|
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd|
+Z56 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_b_lut.vhd|
 !i113 1
 R13
 R14
 Asyn
-R45
+R47
 R3
 R4
 DEx4 work 7 f_b_lut 0 22 YJZ5FDUXlYXDJb_A0Pj6A2
@@ -294,19 +294,19 @@ R8
 R9
 !i10b 1
 R10
-R53
-R54
+R55
+R56
 !i113 1
 R13
 R14
 Ef_block
-Z55 w1650018294
+Z57 w1650018294
 R15
 R3
 R4
 R5
-Z56 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd
-Z57 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd
+Z58 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd
+Z59 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd
 l0
 L6
 V2iBnIdTnRWONOJgJjUG>f1
@@ -315,9 +315,9 @@ R8
 32
 R9
 !i10b 1
-R10
-Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd|
-Z59 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd|
+Z60 !s108 1650050175.000000
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd|
+Z62 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block.vhd|
 !i113 1
 R13
 R14
@@ -334,31 +334,31 @@ R8
 32
 R9
 !i10b 1
-R10
-R58
-R59
+R60
+R61
+R62
 !i113 1
 R13
 R14
 Ef_block_tb
-Z60 w1650025865
+Z63 w1650025865
 R15
 R3
 R4
 R5
-Z61 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd
-Z62 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd
+Z64 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd
+Z65 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd
 l0
 L6
 Va1>adaQV>9S[<S>F>GH;72
 !s100 i0EMEOX1P2m;_UdX96O310
 R8
 32
-!s110 1650035959
+Z66 !s110 1650050175
 !i10b 1
-Z63 !s108 1650035959.000000
-Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd|
-Z65 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd|
+R60
+Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd|
+Z68 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/f_block_tb.vhd|
 !i113 1
 R13
 R14
@@ -373,32 +373,32 @@ V`afB?3J9Z@0Jj9IFcE^AR2
 !s100 jf4oJXoz9JKeZQAMP`1jJ0
 R8
 32
-R9
+R66
 !i10b 1
-R63
-R64
-R65
+R60
+R67
+R68
 !i113 1
 R13
 R14
 Elfsr_16
-Z66 w1649857226
+Z69 w1649857226
 R3
 R4
 R5
-Z67 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd
-Z68 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd
+Z70 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd
+Z71 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd
 l0
 L4
 V=?Weg_7?7Z3fE?g9SnBc^1
 !s100 L`JoJk4RnH3XTWOO_TJ<90
 R8
 32
-R9
+R28
 !i10b 1
-R10
-Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd|
-Z70 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd|
+R34
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd|
+Z73 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_16.vhd|
 !i113 1
 R13
 R14
@@ -412,32 +412,32 @@ VmMFMO]fS]X:?3ZUgk=dmP3
 !s100 ^MR5S=6[7YnajV6Fm_C?b3
 R8
 32
-R9
+R28
 !i10b 1
-R10
-R69
-R70
+R34
+R72
+R73
 !i113 1
 R13
 R14
 Elfsr_33
-R66
+R69
 R3
 R4
 R5
-Z71 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd
-Z72 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd
+Z74 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd
+Z75 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd
 l0
 L4
 Vhz9]2ZZjJ6gEQ83BGaG330
 !s100 :d@<RIGR0kkWUbch?E^7E0
 R8
 32
-R9
+R28
 !i10b 1
-R10
-Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd|
-Z74 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd|
+R34
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd|
+Z77 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LFSR_33.vhd|
 !i113 1
 R13
 R14
@@ -451,23 +451,23 @@ V:PBhhbCkNmiMa?<?klFX=0
 !s100 a8`DaR2>kDXXkHl[;3]PU3
 R8
 32
-R9
+R28
 !i10b 1
-R10
-R73
-R74
+R34
+R76
+R77
 !i113 1
 R13
 R14
 Elod
-Z75 w1649747738
+Z78 w1649747738
 R1
 R2
 R3
 R4
 R5
-Z76 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd
-Z77 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd
+Z79 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd
+Z80 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd
 l0
 L6
 V=RRiRNSN56zW0[nB7chPM1
@@ -477,8 +477,8 @@ R8
 R9
 !i10b 1
 R10
-Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd|
-Z79 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd|
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd|
+Z82 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD.vhd|
 !i113 1
 R13
 R14
@@ -497,20 +497,20 @@ R8
 R9
 !i10b 1
 R10
-R78
-R79
+R81
+R82
 !i113 1
 R13
 R14
 Elod_2b
-Z80 w1649687375
+Z83 w1649687375
 R1
 R2
 R3
 R4
 R5
-Z81 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd
-Z82 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd
+Z84 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd
+Z85 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd
 l0
 L6
 VXVO5Ai><CQ;MdlZ^2mo4@0
@@ -520,8 +520,8 @@ R8
 R9
 !i10b 1
 R10
-Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd|
-Z84 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd|
+Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd|
+Z87 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/LOD_2b.vhd|
 !i113 1
 R13
 R14
@@ -540,19 +540,19 @@ R8
 R9
 !i10b 1
 R10
-R83
-R84
+R86
+R87
 !i113 1
 R13
 R14
 Eones_counter
-R75
+R78
 R15
 R3
 R4
 R5
-Z85 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd
-Z86 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd
+Z88 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd
+Z89 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd
 l0
 L6
 VmCYE1onlnVKGSP6Ib`<kX1
@@ -562,8 +562,8 @@ R8
 R9
 !i10b 1
 R10
-Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd|
-Z88 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd|
+Z90 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd|
+Z91 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/ones_counter.vhd|
 !i113 1
 R13
 R14
@@ -581,31 +581,31 @@ R8
 R9
 !i10b 1
 R10
-R87
-R88
+R90
+R91
 !i113 1
 R13
 R14
 Esincos
-Z89 w1649857227
+Z92 w1649857227
 R1
 R2
 R3
 R4
 R5
-Z90 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd
-Z91 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd
+Z93 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd
+Z94 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd
 l0
 L5
 V=?eTKjn[j@IR^bG<Rd@752
 !s100 W?[3j[8=@BBnbVB6AO=R91
 R8
 32
-Z92 !s110 1650035961
+R28
 !i10b 1
-Z93 !s108 1650035961.000000
-Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd|
-Z95 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd|
+R34
+Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd|
+Z96 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincos.vhd|
 !i113 1
 R13
 R14
@@ -621,38 +621,38 @@ V_7[TAA5g]o`36O=mF7hDO1
 !s100 I`bL8d`Uj14Z=dd2D=aoQ0
 R8
 32
-R92
+R28
 !i10b 1
-R93
-R94
+R34
 R95
+R96
 !i113 1
 R13
 R14
 Esincoslut
-R89
-R45
+R92
+R47
 R3
 R4
 R5
-Z96 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd
-Z97 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd
+Z97 8C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd
+Z98 FC:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd
 l0
 L43
 VBf;XH0McV:KCfUz7EQa;?2
 !s100 PoEd6NT=;=3N82LAI0EjY3
 R8
 32
-R92
+R28
 !i10b 1
-R93
-Z98 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd|
-Z99 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd|
+R34
+Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd|
+Z100 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/sincosLUT.vhd|
 !i113 1
 R13
 R14
 Asyn
-R45
+R47
 R3
 R4
 DEx4 work 9 sincoslut 0 22 Bf;XH0McV:KCfUz7EQa;?2
@@ -662,11 +662,11 @@ Vlj4J]AChJJ[WKV5k9?:Og2
 !s100 O1P<i5P=XGdkeW_ioFAR12
 R8
 32
-R92
+R28
 !i10b 1
-R93
-R98
+R34
 R99
+R100
 !i113 1
 R13
 R14

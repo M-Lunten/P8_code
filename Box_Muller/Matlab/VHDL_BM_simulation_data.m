@@ -17,6 +17,7 @@ end
 x = [-6:.01:6];
 y = normpdf(x,0,1);
 
+%%
 semilogy(x, y);
 hold on
 plot(xi, fi);
