@@ -56,10 +56,13 @@ y = normpdf(x,0,1);
 load("BM_fp_res_3.mat");
 
 figure(2)
-plot(xi_f, yi_f)
+semilogy(xi_f, yi_f)
 hold on 
 plot(xi, yi)
 plot(x, y)
-xlim([-8, 8])
+xlim([-4, 4])
 legend('Fixed point', 'Floating point', 'Ideal PDF')
 hold off
+grid on
+ylabel('Probability')
+xlabel('Standard deviation (\sigma)')
