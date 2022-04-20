@@ -24,8 +24,16 @@ architecture Behavioural of sincos is
 	);
 	end component;
 
-	signal m : std_logic := '0';
-	signal n : std_logic := '0';
+	signal m0 : std_logic;
+	signal n0 : std_logic;
+	signal a1 : std_logic;
+	signal b1 : std_logic;
+	signal c2 : std_logic;
+	signal d2 : std_logic;
+	signal e3 : std_logic;
+	signal f3 : std_logic;
+	signal g4 : std_logic;
+	signal h4 : std_logic;
 	signal d : std_logic_vector(9 downto 0) := "0000000000";
 	signal dSin : std_logic_vector(9 downto 0) := "0000000000";
 	signal dCos : std_logic_vector(9 downto 0) := "0000000000";
@@ -33,8 +41,9 @@ architecture Behavioural of sincos is
 	signal dCospLUT : std_logic_vector(9 downto 0) := "0000000000";
 	signal dSinOut : std_logic_vector(15 downto 0) := "0000000000000000";
 	signal dCosOut : std_logic_vector(15 downto 0) := "0000000000000000";
-	signal dSinsOut : std_logic_vector(15 downto 0);
-	signal dCossOut : std_logic_vector(15 downto 0);
+	
+	signal sinPOut : std_logic_vector(15 downto 0);
+	signal cosPOut : std_logic_vector(15 downto 0);
 	
 	
 	
@@ -43,40 +52,54 @@ architecture Behavioural of sincos is
 		c1: sincosLUT port map(dSinpLUT, dCospLUT, i_clock, dSinOut, dCosOut);
 		
 		process(i_clock) is 
+		
+			
 			begin
 				if rising_edge(i_clock) then
-					m <= data(11);
-					n <= data(10);
+					m0 <= data(11);
+					n0 <= data(10);
 					d <= data(9 downto 0);
-					dSin <= d;
-					dCos <= d;
 					
-					if m='1' then
-						dSinpLUT <= not(dSin);
+					if (m0='1') then 
+						dSinpLUT <= not(d);
+					elsif (m0='0') then 
+						dSinpLUT <= d;
+					end if;
+					
+					if((m0='0') and (n0='0')) or ((m0='0') and (n0='1')) then 
+						dCospLUT <= not(d);
 					else
-						dSinpLUT <= dSin;
+						dCosPLUT <= d;
 					end if;
 					
-					if m='0' and n='0' then 
-						dCospLUT <= not(dCos);
-					elsif m='0'and n='1' then
-						dCospLUT <= not(dCos);
-					else 
-						dCospLUT <= dCos;
-					end if;
 					
-					if n='1' then 
+					a1 <= m0;
+					b1 <= n0;
+					
+					c2 <= a1;
+					d2 <= b1;
+					
+					e3 <= c2;
+					f3 <= d2;
+					
+					if (f3='1') then 
 						sinOut <= not(dSinOut) + 1;
-					else 
-						sinOut <= dSinOut;
+					elsif (f3='0') then 
+						sinOut <= dsinOut;
 					end if;
 					
-					if n='1' xor m='1' then 
+					if((e3='0') and (f3='1')) or ((e3='1') and (f3='0')) then 
 						cosOut <= not(dCosOut) + 1;
-					else 
+					else
 						cosOut <= dCosOut;
 					end if;
 					
+					
+					
+					g4 <= e3;
+					h4 <= f3;
+					
+				
 					
 				end if;
 

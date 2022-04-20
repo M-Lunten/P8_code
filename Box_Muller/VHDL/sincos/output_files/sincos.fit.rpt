@@ -1,5 +1,5 @@
 Fitter report for sincos
-Wed Apr 13 14:05:06 2022
+Wed Apr 20 19:10:10 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Wed Apr 13 14:05:06 2022       ;
+; Fitter Status                   ; Successful - Wed Apr 20 19:10:10 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; sincos                                      ;
 ; Top-level Entity Name           ; sincos                                      ;
@@ -71,7 +71,7 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CEBA4F17C8                                 ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 27 / 18,480 ( < 1 % )                       ;
-; Total registers                 ; 74                                          ;
+; Total registers                 ; 72                                          ;
 ; Total pins                      ; 46 / 128 ( 36 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 16,384 / 3,153,920 ( < 1 % )                ;
@@ -158,21 +158,23 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.5%      ;
-;     Processor 3            ;   0.5%      ;
+;     Processor 2            ;   0.4%      ;
+;     Processor 3            ;   0.4%      ;
 ;     Processor 4            ;   0.4%      ;
-;     Processor 5            ;   0.4%      ;
-;     Processor 6            ;   0.4%      ;
+;     Processor 5            ;   0.3%      ;
+;     Processor 6            ;   0.3%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                       ;
-+----------------------+---------+-----------+----------------------------+-----------+----------------+------------------+------------------+-----------------------+
-; Node                 ; Action  ; Operation ; Reason                     ; Node Port ; Node Port Name ; Destination Node ; Destination Port ; Destination Port Name ;
-+----------------------+---------+-----------+----------------------------+-----------+----------------+------------------+------------------+-----------------------+
-; i_clock~inputCLKENA0 ; Created ; Placement ; Fitter Periphery Placement ;           ;                ;                  ;                  ;                       ;
-+----------------------+---------+-----------+----------------------------+-----------+----------------+------------------+------------------+-----------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                       ;
++----------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------+------------------+-----------------------+
+; Node                 ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node      ; Destination Port ; Destination Port Name ;
++----------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------+------------------+-----------------------+
+; i_clock~inputCLKENA0 ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                       ;                  ;                       ;
+; dCospLUT[6]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; dCospLUT[6]~DUPLICATE ;                  ;                       ;
+; f3                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; f3~DUPLICATE          ;                  ;                       ;
++----------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------+------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -181,8 +183,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 226 ) ; 0.00 % ( 0 / 226 )         ; 0.00 % ( 0 / 226 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 226 ) ; 0.00 % ( 0 / 226 )         ; 0.00 % ( 0 / 226 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 232 ) ; 0.00 % ( 0 / 232 )         ; 0.00 % ( 0 / 232 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 232 ) ; 0.00 % ( 0 / 232 )         ; 0.00 % ( 0 / 232 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -205,7 +207,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 226 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 232 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -223,12 +225,12 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 27 / 18,480        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 27                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 38 / 18,480        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 21                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 35 / 18,480        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 26                 ;       ;
 ;         [b] ALMs used for LUT logic                         ; 1                  ;       ;
-;         [c] ALMs used for registers                         ; 16                 ;       ;
+;         [c] ALMs used for registers                         ; 8                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 11 / 18,480        ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 8 / 18,480         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18,480         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -237,29 +239,29 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 8 / 1,848          ; < 1 % ;
-;     -- Logic LABs                                           ; 8                  ;       ;
+; Total LABs:  partially or completely used                   ; 7 / 1,848          ; < 1 % ;
+;     -- Logic LABs                                           ; 7                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 43                 ;       ;
+; Combinational ALUT usage for logic                          ; 53                 ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
 ;     -- 6 input functions                                    ; 0                  ;       ;
 ;     -- 5 input functions                                    ; 0                  ;       ;
 ;     -- 4 input functions                                    ; 0                  ;       ;
-;     -- <=3 input functions                                  ; 43                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 19                 ;       ;
+;     -- <=3 input functions                                  ; 53                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 8                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 74                 ;       ;
+; Dedicated logic registers                                   ; 72                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 74 / 36,960        ; < 1 % ;
-;         -- Secondary logic registers                        ; 0 / 36,960         ; 0 %   ;
+;         -- Primary logic registers                          ; 68 / 36,960        ; < 1 % ;
+;         -- Secondary logic registers                        ; 4 / 36,960         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 74                 ;       ;
-;         -- Routing optimization registers                   ; 0                  ;       ;
+;         -- Design implementation registers                  ; 70                 ;       ;
+;         -- Routing optimization registers                   ; 2                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 46 / 128           ; 36 %  ;
-;     -- Clock pins                                           ; 2 / 5              ; 40 %  ;
+;     -- Clock pins                                           ; 4 / 5              ; 80 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 11             ; 0 %   ;
 ;                                                             ;                    ;       ;
 ; M10K blocks                                                 ; 2 / 308            ; < 1 % ;
@@ -282,11 +284,11 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.2% / 1.3% / 1.0% ;       ;
-; Maximum fan-out                                             ; 76                 ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.0% / 1.0% / 0.9% ;       ;
+; Maximum fan-out                                             ; 74                 ;       ;
 ; Highest non-global fan-out                                  ; 64                 ;       ;
-; Total fan-out                                               ; 450                ;       ;
-; Average fan-out                                             ; 1.95               ;       ;
+; Total fan-out                                               ; 443                ;       ;
+; Average fan-out                                             ; 1.94               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -297,12 +299,12 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 27 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 27                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 38 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 21                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 35 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 26                   ; 0                              ;
 ;         [b] ALMs used for LUT logic                         ; 1                    ; 0                              ;
-;         [c] ALMs used for registers                         ; 16                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 8                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 11 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 8 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18480 ( 0 % )    ; 0 / 18480 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -311,28 +313,28 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 8 / 1848 ( < 1 % )   ; 0 / 1848 ( 0 % )               ;
-;     -- Logic LABs                                           ; 8                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 7 / 1848 ( < 1 % )   ; 0 / 1848 ( 0 % )               ;
+;     -- Logic LABs                                           ; 7                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 43                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 53                   ; 0                              ;
 ;     -- 7 input functions                                    ; 0                    ; 0                              ;
 ;     -- 6 input functions                                    ; 0                    ; 0                              ;
 ;     -- 5 input functions                                    ; 0                    ; 0                              ;
 ;     -- 4 input functions                                    ; 0                    ; 0                              ;
-;     -- <=3 input functions                                  ; 43                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 19                   ; 0                              ;
+;     -- <=3 input functions                                  ; 53                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 8                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
-;         -- Primary logic registers                          ; 74 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 0 / 36960 ( 0 % )    ; 0 / 36960 ( 0 % )              ;
+;         -- Primary logic registers                          ; 68 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 4 / 36960 ( < 1 % )  ; 0 / 36960 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
-;         -- Design implementation registers                  ; 74                   ; 0                              ;
-;         -- Routing optimization registers                   ; 0                    ; 0                              ;
+;         -- Design implementation registers                  ; 70                   ; 0                              ;
+;         -- Routing optimization registers                   ; 2                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
@@ -350,8 +352,8 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 512                  ; 0                              ;
-;     -- Registered Connections                               ; 212                  ; 0                              ;
+;     -- Total Connections                                    ; 505                  ; 0                              ;
+;     -- Registered Connections                               ; 198                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
@@ -383,20 +385,20 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; data[0]  ; L9    ; 3B       ; 24           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; data[10] ; J2    ; 2A       ; 0            ; 19           ; 20           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; data[11] ; T2    ; 3A       ; 12           ; 0            ; 51           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; data[1]  ; M8    ; 3B       ; 24           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; data[2]  ; T5    ; 3B       ; 23           ; 0            ; 91           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; data[3]  ; R7    ; 3B       ; 23           ; 0            ; 57           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; data[4]  ; R16   ; 4A       ; 33           ; 0            ; 40           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; data[5]  ; T4    ; 3B       ; 23           ; 0            ; 74           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; data[6]  ; R9    ; 3B       ; 29           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; data[7]  ; P8    ; 3B       ; 23           ; 0            ; 40           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; data[8]  ; R11   ; 3B       ; 25           ; 0            ; 51           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; data[9]  ; T13   ; 3B       ; 25           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; i_clock  ; G12   ; 5B       ; 54           ; 18           ; 60           ; 76                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; reset    ; F4    ; 2A       ; 0            ; 21           ; 37           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; data[0]  ; P7    ; 3A       ; 14           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; data[10] ; M11   ; 4A       ; 36           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; data[11] ; P3    ; 3A       ; 12           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; data[1]  ; R4    ; 3A       ; 14           ; 0            ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; data[2]  ; T3    ; 3A       ; 14           ; 0            ; 51           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; data[3]  ; N1    ; 3A       ; 10           ; 0            ; 91           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; data[4]  ; N4    ; 3A       ; 10           ; 0            ; 57           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; data[5]  ; R6    ; 3A       ; 14           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; data[6]  ; L7    ; 3A       ; 11           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; data[7]  ; P4    ; 3A       ; 10           ; 0            ; 40           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; data[8]  ; P1    ; 3A       ; 10           ; 0            ; 74           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; data[9]  ; M7    ; 3A       ; 11           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; i_clock  ; G12   ; 5B       ; 54           ; 18           ; 60           ; 74                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; reset    ; F11   ; 7A       ; 38           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -405,38 +407,38 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; cosOut[0]  ; H5    ; 2A       ; 0            ; 20           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[10] ; T10   ; 3B       ; 29           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[11] ; P1    ; 3A       ; 10           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[12] ; T8    ; 3B       ; 24           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[13] ; N3    ; 3A       ; 12           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[14] ; P13   ; 4A       ; 36           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[15] ; R2    ; 3A       ; 12           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[1]  ; P7    ; 3A       ; 14           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[2]  ; K14   ; 5A       ; 54           ; 14           ; 60           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[3]  ; R6    ; 3A       ; 14           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[4]  ; J1    ; 2A       ; 0            ; 18           ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[5]  ; T3    ; 3A       ; 14           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[6]  ; P3    ; 3A       ; 12           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[7]  ; R4    ; 3A       ; 14           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[8]  ; K4    ; 2A       ; 0            ; 18           ; 60           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; cosOut[9]  ; H1    ; 2A       ; 0            ; 18           ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[0]  ; R12   ; 3B       ; 25           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[10] ; T12   ; 3B       ; 25           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[11] ; M10   ; 4A       ; 34           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[12] ; P4    ; 3A       ; 10           ; 0            ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[13] ; N16   ; 5A       ; 54           ; 14           ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[14] ; R1    ; 3A       ; 11           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[15] ; P2    ; 3A       ; 11           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[1]  ; T7    ; 3B       ; 24           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[2]  ; J3    ; 2A       ; 0            ; 19           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[3]  ; M7    ; 3A       ; 11           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[4]  ; K5    ; 2A       ; 0            ; 18           ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[5]  ; P9    ; 3B       ; 29           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[6]  ; N1    ; 3A       ; 10           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[7]  ; L7    ; 3A       ; 11           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[8]  ; R10   ; 3B       ; 29           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sinOut[9]  ; N4    ; 3A       ; 10           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[0]  ; T7    ; 3B       ; 24           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[10] ; T13   ; 3B       ; 25           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[11] ; P2    ; 3A       ; 11           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[12] ; M8    ; 3B       ; 24           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[13] ; R1    ; 3A       ; 11           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[14] ; T8    ; 3B       ; 24           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[15] ; T5    ; 3B       ; 23           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[1]  ; N3    ; 3A       ; 12           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[2]  ; R2    ; 3A       ; 12           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[3]  ; L9    ; 3B       ; 24           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[4]  ; T4    ; 3B       ; 23           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[5]  ; T12   ; 3B       ; 25           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[6]  ; R7    ; 3B       ; 23           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[7]  ; R12   ; 3B       ; 25           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[8]  ; P8    ; 3B       ; 23           ; 0            ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; cosOut[9]  ; T2    ; 3A       ; 12           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[0]  ; T15   ; 4A       ; 33           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[10] ; P9    ; 3B       ; 29           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[11] ; R10   ; 3B       ; 29           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[12] ; R11   ; 3B       ; 25           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[13] ; R15   ; 4A       ; 33           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[14] ; P11   ; 4A       ; 38           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[15] ; N14   ; 4A       ; 34           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[1]  ; M12   ; 4A       ; 36           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[2]  ; L10   ; 4A       ; 34           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[3]  ; R16   ; 4A       ; 33           ; 0            ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[4]  ; M10   ; 4A       ; 34           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[5]  ; P13   ; 4A       ; 36           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[6]  ; R9    ; 3B       ; 29           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[7]  ; T10   ; 3B       ; 29           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[8]  ; M13   ; 4A       ; 34           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sinOut[9]  ; P16   ; 4A       ; 33           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -445,13 +447,13 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 +----------+-------------------+---------------+--------------+---------------+
 ; I/O Bank ; Usage             ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
 +----------+-------------------+---------------+--------------+---------------+
-; 2A       ; 8 / 16 ( 50 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 2A       ; 0 / 16 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
 ; 3A       ; 16 / 16 ( 100 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 3B       ; 16 / 16 ( 100 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 3 / 16 ( 19 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 5A       ; 2 / 16 ( 13 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 12 / 16 ( 75 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 5A       ; 0 / 16 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
 ; 5B       ; 1 / 16 ( 6 % )    ; 2.5V          ; --           ; 2.5V          ;
-; 7A       ; 0 / 16 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 7A       ; 1 / 16 ( 6 % )    ; 2.5V          ; --           ; 2.5V          ;
 ; 8A       ; 0 / 16 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
 +----------+-------------------+---------------+--------------+---------------+
 
@@ -544,14 +546,14 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 ; F1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F2       ; 23         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; F3       ; 16         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; F4       ; 18         ; 2A       ; reset                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; F4       ; 18         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; F5       ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; F6       ; 291        ; 9A       ; ^MSEL4                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F7       ; 253        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F8       ; 251        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F9       ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; F10      ; 237        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; F11      ; 235        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; F11      ; 235        ; 7A       ; reset                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; F12      ; 170        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; F13      ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; F14      ; 182        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -573,11 +575,11 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 ; G14      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; G15      ; 162        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; G16      ; 164        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; H1       ; 29         ; 2A       ; cosOut[9]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; H1       ; 29         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; H2       ;            ; 2A       ; VCCIO2A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; H3       ; 19         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; H4       ; 20         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; H5       ; 22         ; 2A       ; cosOut[0]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; H5       ; 22         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; H6       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; H7       ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; H8       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -589,9 +591,9 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 ; H14      ;            ; 5B       ; VCCPD5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; H15      ; 168        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; H16      ; 158        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; J1       ; 31         ; 2A       ; cosOut[4]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; J2       ; 25         ; 2A       ; data[10]                        ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; J3       ; 27         ; 2A       ; sinOut[2]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; J1       ; 31         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; J2       ; 25         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; J3       ; 27         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; J4       ;            ; 1A, 2A   ; VCCPD1A2A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; J5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J6       ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
@@ -608,8 +610,8 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 ; K1       ; 55         ; 3A       ; ^AS_DATA1, DATA1                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; K2       ;            ; 2A       ; VREFB2AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K3       ;            ; 2A       ; VCCIO2A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; K4       ; 28         ; 2A       ; cosOut[8]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; K5       ; 30         ; 2A       ; sinOut[4]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; K4       ; 28         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; K5       ; 30         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; K6       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K7       ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; K8       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -618,7 +620,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 ; K11      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; K12      ; 163        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; K13      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; K14      ; 157        ; 5A       ; cosOut[2]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; K14      ; 157        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; K15      ; 167        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; K16      ; 169        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; L1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -627,10 +629,10 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 ; L4       ; 54         ; 3A       ; #TDI                            ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L5       ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; L6       ; 50         ; 3A       ; #TMS                            ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
-; L7       ; 64         ; 3A       ; sinOut[7]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; L7       ; 64         ; 3A       ; data[6]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; L8       ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; L9       ; 96         ; 3B       ; data[0]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; L10      ; 112        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; L9       ; 96         ; 3B       ; cosOut[3]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; L10      ; 112        ; 4A       ; sinOut[2]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; L11      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L12      ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; L13      ; 155        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -643,20 +645,20 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 ; M4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M5       ; 56         ; 3A       ; ^DCLK                           ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; M6       ; 48         ; 3A       ; #TDO                            ; output ;              ;                     ; --           ;                 ; --       ; --           ;
-; M7       ; 62         ; 3A       ; sinOut[3]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; M8       ; 94         ; 3B       ; data[1]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; M7       ; 62         ; 3A       ; data[9]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; M8       ; 94         ; 3B       ; cosOut[12]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; M9       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; M10      ; 110        ; 4A       ; sinOut[11]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; M11      ; 117        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; M12      ; 115        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; M13      ; 111        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; M10      ; 110        ; 4A       ; sinOut[4]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; M11      ; 117        ; 4A       ; data[10]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; M12      ; 115        ; 4A       ; sinOut[1]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; M13      ; 111        ; 4A       ; sinOut[8]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; M14      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M15      ;            ; --       ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
 ; M16      ;            ; 5A       ; VREFB5AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; N1       ; 59         ; 3A       ; sinOut[6]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; N1       ; 59         ; 3A       ; data[3]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; N2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; N3       ; 68         ; 3A       ; cosOut[13]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; N4       ; 58         ; 3A       ; sinOut[9]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; N3       ; 68         ; 3A       ; cosOut[1]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; N4       ; 58         ; 3A       ; data[4]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; N5       ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; N6       ;            ; 3A       ; VCCPD3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; N7       ;            ; 3A       ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -666,56 +668,56 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Mul
 ; N11      ; 120        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; N12      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; N13      ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; N14      ; 113        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; N14      ; 113        ; 4A       ; sinOut[15]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; N15      ; 154        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; N16      ; 156        ; 5A       ; sinOut[13]                      ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; P1       ; 61         ; 3A       ; cosOut[11]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; P2       ; 65         ; 3A       ; sinOut[15]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; P3       ; 66         ; 3A       ; cosOut[6]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; P4       ; 60         ; 3A       ; sinOut[12]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; N16      ; 156        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; P1       ; 61         ; 3A       ; data[8]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; P2       ; 65         ; 3A       ; cosOut[11]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; P3       ; 66         ; 3A       ; data[11]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; P4       ; 60         ; 3A       ; data[7]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; P5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; P6       ;            ; --       ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
-; P7       ; 72         ; 3A       ; cosOut[1]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; P8       ; 93         ; 3B       ; data[7]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; P9       ; 104        ; 3B       ; sinOut[5]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; P7       ; 72         ; 3A       ; data[0]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; P8       ; 93         ; 3B       ; cosOut[8]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; P9       ; 104        ; 3B       ; sinOut[10]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; P10      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; P11      ; 118        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; P11      ; 118        ; 4A       ; sinOut[14]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; P12      ;            ; 4A       ; VREFB4AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; P13      ; 116        ; 4A       ; cosOut[14]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; P13      ; 116        ; 4A       ; sinOut[5]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; P14      ; 114        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; P15      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; P16      ; 108        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; R1       ; 63         ; 3A       ; sinOut[14]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; R2       ; 69         ; 3A       ; cosOut[15]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; P16      ; 108        ; 4A       ; sinOut[9]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; R1       ; 63         ; 3A       ; cosOut[13]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; R2       ; 69         ; 3A       ; cosOut[2]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; R3       ;            ; 3A       ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; R4       ; 73         ; 3A       ; cosOut[7]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; R4       ; 73         ; 3A       ; data[1]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; R5       ;            ; 3A       ; VREFB3AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; R6       ; 70         ; 3A       ; cosOut[3]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; R7       ; 91         ; 3B       ; data[3]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; R6       ; 70         ; 3A       ; data[5]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; R7       ; 91         ; 3B       ; cosOut[6]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; R8       ;            ; 3B       ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; R9       ; 102        ; 3B       ; data[6]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; R10      ; 105        ; 3B       ; sinOut[8]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; R11      ; 98         ; 3B       ; data[8]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; R12      ; 100        ; 3B       ; sinOut[0]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; R9       ; 102        ; 3B       ; sinOut[6]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; R10      ; 105        ; 3B       ; sinOut[11]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; R11      ; 98         ; 3B       ; sinOut[12]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; R12      ; 100        ; 3B       ; cosOut[7]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; R13      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; R14      ; 121        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; R15      ; 106        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; R16      ; 109        ; 4A       ; data[4]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; R15      ; 106        ; 4A       ; sinOut[13]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; R16      ; 109        ; 4A       ; sinOut[3]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; T1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; T2       ; 67         ; 3A       ; data[11]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; T3       ; 71         ; 3A       ; cosOut[5]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; T4       ; 92         ; 3B       ; data[5]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; T5       ; 90         ; 3B       ; data[2]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; T2       ; 67         ; 3A       ; cosOut[9]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; T3       ; 71         ; 3A       ; data[2]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; T4       ; 92         ; 3B       ; cosOut[4]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; T5       ; 90         ; 3B       ; cosOut[15]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; T6       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; T7       ; 95         ; 3B       ; sinOut[1]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; T8       ; 97         ; 3B       ; cosOut[12]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; T7       ; 95         ; 3B       ; cosOut[0]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; T8       ; 97         ; 3B       ; cosOut[14]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; T9       ;            ; 3B       ; VREFB3BN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; T10      ; 103        ; 3B       ; cosOut[10]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; T10      ; 103        ; 3B       ; sinOut[7]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; T11      ;            ; 3B       ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; T12      ; 99         ; 3B       ; sinOut[10]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; T13      ; 101        ; 3B       ; data[9]                         ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; T12      ; 99         ; 3B       ; cosOut[5]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; T13      ; 101        ; 3B       ; cosOut[10]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; T14      ; 119        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; T15      ; 107        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; T15      ; 107        ; 4A       ; sinOut[0]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; T16      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 +----------+------------+----------+---------------------------------+--------+--------------+---------------------+--------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
@@ -826,7 +828,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Entity Name     ; Library Name ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------+-----------------+--------------+
-; |sincos                                   ; 26.5 (26.5)          ; 37.5 (37.5)                      ; 11.0 (11.0)                                       ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 43 (43)             ; 74 (74)                   ; 0 (0)         ; 16384             ; 2     ; 0          ; 46   ; 0            ; |sincos                                                                             ; sincos          ; work         ;
+; |sincos                                   ; 26.5 (26.5)          ; 34.5 (34.5)                      ; 8.0 (8.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 53 (53)             ; 72 (72)                   ; 0 (0)         ; 16384             ; 2     ; 0          ; 46   ; 0            ; |sincos                                                                             ; sincos          ; work         ;
 ;    |sincosLUT:c1|                         ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 16384             ; 2     ; 0          ; 0    ; 0            ; |sincos|sincosLUT:c1                                                                ; sincosLUT       ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 16384             ; 2     ; 0          ; 0    ; 0            ; |sincos|sincosLUT:c1|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;          |altsyncram_um04:auto_generated| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 16384             ; 2     ; 0          ; 0    ; 0            ; |sincos|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated ; altsyncram_um04 ; work         ;
@@ -876,15 +878,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; data[10]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; data[11]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; data[0]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; data[1]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; data[2]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; data[1]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; data[2]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; data[3]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; data[4]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; data[4]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; data[5]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; data[6]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; data[7]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; data[8]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; data[9]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; data[9]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -896,40 +898,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; reset               ;                   ;         ;
 ; i_clock             ;                   ;         ;
 ; data[10]            ;                   ;         ;
-;      - n~feeder     ; 0                 ; 0       ;
+;      - n0~feeder    ; 0                 ; 0       ;
 ; data[11]            ;                   ;         ;
-;      - m~feeder     ; 1                 ; 0       ;
+;      - m0           ; 1                 ; 0       ;
 ; data[0]             ;                   ;         ;
-;      - d[0]~feeder  ; 0                 ; 0       ;
+;      - d[0]         ; 0                 ; 0       ;
 ; data[1]             ;                   ;         ;
-;      - d[1]         ; 1                 ; 0       ;
+;      - d[1]~feeder  ; 0                 ; 0       ;
 ; data[2]             ;                   ;         ;
-;      - d[2]         ; 0                 ; 0       ;
+;      - d[2]         ; 1                 ; 0       ;
 ; data[3]             ;                   ;         ;
 ;      - d[3]         ; 0                 ; 0       ;
 ; data[4]             ;                   ;         ;
-;      - d[4]         ; 1                 ; 0       ;
+;      - d[4]~feeder  ; 0                 ; 0       ;
 ; data[5]             ;                   ;         ;
 ;      - d[5]~feeder  ; 0                 ; 0       ;
 ; data[6]             ;                   ;         ;
-;      - d[6]         ; 1                 ; 0       ;
+;      - d[6]~feeder  ; 1                 ; 0       ;
 ; data[7]             ;                   ;         ;
-;      - d[7]~feeder  ; 0                 ; 0       ;
+;      - d[7]         ; 0                 ; 0       ;
 ; data[8]             ;                   ;         ;
 ;      - d[8]         ; 0                 ; 0       ;
 ; data[9]             ;                   ;         ;
-;      - d[9]         ; 0                 ; 0       ;
+;      - d[9]         ; 1                 ; 0       ;
 +---------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                              ;
-+---------+--------------+---------+------------+--------+----------------------+------------------+---------------------------+
-; Name    ; Location     ; Fan-Out ; Usage      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------+--------------+---------+------------+--------+----------------------+------------------+---------------------------+
-; i_clock ; PIN_G12      ; 76      ; Clock      ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; m       ; FF_X9_Y4_N50 ; 36      ; Sync. load ; no     ; --                   ; --               ; --                        ;
-+---------+--------------+---------+------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                     ;
++---------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; Name    ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; i_clock ; PIN_G12  ; 74      ; Clock ; yes    ; Global Clock         ; GCLK9            ; --                        ;
++---------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -937,7 +938,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+----------+---------+----------------------+------------------+---------------------------+
 ; Name    ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------+----------+---------+----------------------+------------------+---------------------------+
-; i_clock ; PIN_G12  ; 76      ; Global Clock         ; GCLK9            ; --                        ;
+; i_clock ; PIN_G12  ; 74      ; Global Clock         ; GCLK9            ; --                        ;
 +---------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -946,7 +947,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+-------------+--------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
 ; Name                                                                                   ; Type ; Mode           ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M10K blocks ; MLABs ; MIF         ; Location                       ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs         ;
 +----------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+-------------+--------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
-; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; Single Clock ; 1024         ; 16           ; 1024         ; 16           ; yes                    ; yes                     ; yes                    ; yes                     ; 16384 ; 1024                        ; 16                          ; 1024                        ; 16                          ; 16384               ; 2           ; 0     ; sin_cos.mif ; M10K_X11_Y4_N0, M10K_X11_Y5_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Unsupported Mode ;
+; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; Single Clock ; 1024         ; 16           ; 1024         ; 16           ; yes                    ; yes                     ; yes                    ; yes                     ; 16384 ; 1024                        ; 16                          ; 1024                        ; 16                          ; 16384               ; 2           ; 0     ; sin_cos.mif ; M10K_X22_Y3_N0, M10K_X22_Y2_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Unsupported Mode ;
 +----------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+-------------+--------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -956,22 +957,22 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 161 / 140,056 ( < 1 % ) ;
-; C12 interconnects            ; 7 / 6,048 ( < 1 % )     ;
-; C2 interconnects             ; 64 / 54,648 ( < 1 % )   ;
-; C4 interconnects             ; 50 / 25,920 ( < 1 % )   ;
+; Block interconnects          ; 134 / 140,056 ( < 1 % ) ;
+; C12 interconnects            ; 0 / 6,048 ( 0 % )       ;
+; C2 interconnects             ; 65 / 54,648 ( < 1 % )   ;
+; C4 interconnects             ; 37 / 25,920 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )          ;
-; Direct links                 ; 18 / 140,056 ( < 1 % )  ;
+; Direct links                 ; 4 / 140,056 ( < 1 % )   ;
 ; Global clocks                ; 1 / 16 ( 6 % )          ;
-; Local interconnects          ; 9 / 36,960 ( < 1 % )    ;
+; Local interconnects          ; 6 / 36,960 ( < 1 % )    ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
-; R14 interconnects            ; 16 / 5,984 ( < 1 % )    ;
-; R14/C12 interconnect drivers ; 19 / 9,504 ( < 1 % )    ;
-; R3 interconnects             ; 70 / 60,192 ( < 1 % )   ;
-; R6 interconnects             ; 104 / 127,072 ( < 1 % ) ;
-; Spine clocks                 ; 1 / 120 ( < 1 % )       ;
+; R14 interconnects            ; 8 / 5,984 ( < 1 % )     ;
+; R14/C12 interconnect drivers ; 8 / 9,504 ( < 1 % )     ;
+; R3 interconnects             ; 98 / 60,192 ( < 1 % )   ;
+; R6 interconnects             ; 61 / 127,072 ( < 1 % )  ;
+; Spine clocks                 ; 2 / 120 ( 2 % )         ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )       ;
 +------------------------------+-------------------------+
 
@@ -1132,7 +1133,7 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; i_clock         ; i_clock              ; 4.8               ;
+; i_clock         ; i_clock              ; 14.4              ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1143,39 +1144,35 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------+-------------------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register ; Destination Register                                                                                        ; Delay Added in ns ;
 +-----------------+-------------------------------------------------------------------------------------------------------------+-------------------+
-; dCos[6]         ; dSinpLUT[6]                                                                                                 ; 0.437             ;
-; dCos[3]         ; dSinpLUT[3]                                                                                                 ; 0.416             ;
-; dSinpLUT[1]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.242             ;
-; dCos[9]         ; dSinpLUT[9]                                                                                                 ; 0.216             ;
-; dCos[7]         ; dSinpLUT[7]                                                                                                 ; 0.200             ;
-; dCos[2]         ; dSinpLUT[2]                                                                                                 ; 0.199             ;
-; dCos[4]         ; dSinpLUT[4]                                                                                                 ; 0.183             ;
-; dSinpLUT[4]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.152             ;
-; dSinpLUT[5]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.152             ;
-; dSinpLUT[7]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.152             ;
-; dSinpLUT[8]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.152             ;
-; dSinpLUT[0]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.145             ;
-; dSinpLUT[2]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.145             ;
-; dSinpLUT[3]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.145             ;
-; dSinpLUT[6]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.145             ;
-; dSinpLUT[9]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.145             ;
-; dCospLUT[0]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.117             ;
-; dCospLUT[3]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.117             ;
-; dCospLUT[4]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.117             ;
-; dCospLUT[8]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.117             ;
-; d[1]            ; dCos[1]                                                                                                     ; 0.114             ;
-; d[3]            ; dCos[3]                                                                                                     ; 0.114             ;
-; d[6]            ; dCos[6]                                                                                                     ; 0.114             ;
-; d[4]            ; dCos[4]                                                                                                     ; 0.110             ;
-; dCospLUT[2]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.092             ;
-; dCospLUT[5]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.092             ;
-; dCospLUT[6]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.092             ;
-; dCospLUT[7]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.092             ;
-; dCospLUT[9]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.092             ;
-; dCospLUT[1]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.071             ;
-; n               ; cosOut[15]~reg0                                                                                             ; 0.013             ;
+; dSinpLUT[2]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.579             ;
+; dSinpLUT[5]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.579             ;
+; dSinpLUT[7]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.579             ;
+; dSinpLUT[9]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.579             ;
+; dSinpLUT[0]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.571             ;
+; dSinpLUT[1]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.571             ;
+; dSinpLUT[3]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.571             ;
+; dSinpLUT[4]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.571             ;
+; dSinpLUT[6]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.571             ;
+; dSinpLUT[8]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.569             ;
+; dCospLUT[2]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.475             ;
+; dCospLUT[5]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.475             ;
+; dCospLUT[6]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.475             ;
+; dCospLUT[8]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.475             ;
+; dCospLUT[1]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.468             ;
+; dCospLUT[4]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.468             ;
+; dCospLUT[7]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.468             ;
+; dCospLUT[3]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.465             ;
+; dCospLUT[9]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.465             ;
+; dCospLUT[0]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.257             ;
+; b1              ; d2                                                                                                          ; 0.136             ;
+; a1              ; c2                                                                                                          ; 0.126             ;
+; c2              ; e3                                                                                                          ; 0.126             ;
+; n0              ; b1                                                                                                          ; 0.120             ;
+; f3              ; cosOut[15]~reg0                                                                                             ; 0.045             ;
+; e3              ; cosOut[15]~reg0                                                                                             ; 0.042             ;
+; m0              ; dSinpLUT[4]                                                                                                 ; 0.034             ;
 +-----------------+-------------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 31 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 27 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1195,7 +1192,7 @@ Info (176045): Design uses memory blocks. Violating setup or hold times of memor
 Critical Warning (169085): No exact pin location assignment(s) for 46 pins of 46 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): i_clock~inputCLKENA0 with 90 fanout uses global clock CLKCTRL_G9
+    Info (11162): i_clock~inputCLKENA0 with 86 fanout uses global clock CLKCTRL_G9
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'sincos.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1208,28 +1205,28 @@ Info (176235): Finished register packing
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:05
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:03
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:05
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X11_Y0 to location X21_Y10
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X22_Y0 to location X32_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.45 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.54 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:08
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Info (144001): Generated suppressed messages file C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/output_files/sincos.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 6588 megabytes
-    Info: Processing ended: Wed Apr 13 14:05:06 2022
-    Info: Elapsed time: 00:00:49
-    Info: Total CPU time (on all processors): 00:01:04
+Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 6495 megabytes
+    Info: Processing ended: Wed Apr 20 19:10:11 2022
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:01:21
 
 
 +----------------------------+

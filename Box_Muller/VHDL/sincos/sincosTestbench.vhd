@@ -16,6 +16,8 @@ port(
 );
 end component;
 
+constant clock_period : time := 40 ns;
+
 signal clk : std_logic := '0';
 signal r : std_logic := '0';
 signal d : std_logic_vector(11 downto 0);
@@ -25,14 +27,29 @@ signal cOut : std_logic_vector(15 downto 0);
 begin 
 	c2: sincos port map(clk,r,d,sOut,cOut);
 	
+	CLK_GEN : process is 
+	begin 
+		wait for clock_period/2;
+		clk <= not clk;
+	end process CLK_GEN;
+	
 	process is
 	begin
 		
-		d <= "011010011101";
-		wait for 20 ns;
-		clk <= '1';
-		wait for 20 ns;
-		clk <= not clk;
+		wait for clock_period*20;
+		d <= "001000000000";
+		
+		wait for clock_period*20;
+		d <= "101000000000";
+		
+		wait for clock_period*20;
+		d <= "001000000000";
+		
+		wait for clock_period*20;
+		d <= "101000000000";
+
+		
+
 	end process;
 	
 end behaviour;

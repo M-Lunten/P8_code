@@ -5,6 +5,7 @@ close all
 clear all
 format longg
 angles = [0:(pi/2)/1023:(pi/2)];
+bang = fi(angles,0,10,9);
 format longg
 sinAngles = sin(angles)
 % Setting for the MIF
@@ -16,6 +17,7 @@ depth = length(data);
 address_type = 'DEC';
 data_type = 'BIN';
 bsin = fi(sinAngles,1,16,15);
+bbsin = bin(bsin);
 
 % Writing to the file
 file = fopen(file_name, 'wt');
