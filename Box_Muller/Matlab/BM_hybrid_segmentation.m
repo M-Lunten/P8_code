@@ -39,11 +39,17 @@ r1(WordLength-1, 4) = r1(WordLength-2, 5)+3*(1-r1(WordLength-2, 5))/L;
 
 plot(U, f, 'LineWidth', 1)
 hold on
-for i = 1:L+1
-    xline(r0(:,i), "color", 'red')
-    xline(r1(:,i), 'color', '#588024')
-end
+%for i = 1:L+1
+%    xline(r0(:,i), "color", 'red')
+%    xline(r1(:,i), 'color', '#588024')
+%end
 hold off
+grid on
+xlabel('U')
+ylabel('f(.)')
+ylim([0, 5]);
+title('The f(.) function evaluated in the interval [0:1]')
+
 
 function [space] = expspace(a, b, steps)
     gf = (b/a)^(1/steps - 1);

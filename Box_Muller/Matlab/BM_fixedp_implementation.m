@@ -56,11 +56,10 @@ y = normpdf(x,0,1);
 load("BM_fp_res_3.mat");
 
 figure(2)
-semilogy(xi_f, yi_f)
+plot(xi_f, yi_f)
 hold on 
 plot(xi, yi)
 plot(x, y)
 xlim([-8, 8])
 legend('Fixed point', 'Floating point', 'Ideal PDF')
 hold off
-

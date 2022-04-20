@@ -78,3 +78,14 @@ plot(U_4_op, me_4_op_tr)
 grid on
 legend('Non-truncated', 'Truncated')
 hold off
+
+
+%% Generation of test data
+f_block_testdata = unique(bin(ufi(U_4, 32, 32)), 'rows');
+
+file_name = 'f_block_testdata.txt';
+file = fopen(file_name, 'wt');
+for i = 1:length(f_block_testdata)
+    fprintf(file, '%s,\n', f_block_testdata(i,:));
+end
+fclose(file);

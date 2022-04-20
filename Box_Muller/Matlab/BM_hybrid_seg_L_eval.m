@@ -46,9 +46,9 @@ selected_coeff = discretize(U_4, segments);
 f_approx_4 = coeffs(selected_coeff, 1).*U_4 + coeffs(selected_coeff, 2);
 
 %% Computation of absolute mean error and maximum error and figures
-me_4 = (f_approx_4-f_4);
-me_8 = (f_approx_8-f_8);
-me_16 = (f_approx_16-f_16);
+me_4 = abs(f_approx_4-f_4);
+me_8 = abs(f_approx_8-f_8);
+me_16 = abs(f_approx_16-f_16);
 
 max_me_4 = max(me_4);
 max_me_8 = max(me_8);
@@ -67,7 +67,7 @@ yline(2^(-11))
 grid on
 xlabel('U_1')
 ylabel('Approximation Error')
-title('Absolute error for different number of subsegments')
+title('1-norm for different number of subsegments')
 legend('L = 4', 'L = 8', 'L = 16')
 hold off
 

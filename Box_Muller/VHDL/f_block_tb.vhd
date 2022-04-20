@@ -2,6 +2,8 @@
 Library ieee; 
 use ieee.std_logic_1164.all;  
 use ieee.numeric_std.all;
+use STD.textio.all;
+use ieee.std_logic_textio.all;
 
 entity f_block_tb is
 end f_block_tb;
@@ -22,6 +24,8 @@ architecture behavior of f_block_tb is
 	signal clk : std_logic := '0';
 	signal res : std_logic_vector(15 downto 0);
 	
+	file file_VECTORS : text;
+	file file_RESULTS : text;
 begin
 	
 	f0 : f_block port map (U => U_in, clk_in => clk, f_res => res);
@@ -33,21 +37,28 @@ begin
 	end process CLK_GEN;
 
 	process is
+	variable v_ILINE     : line;
+    	variable v_OLINE     : line;
+	variable U_value     : std_logic_vector(31 downto 0);
 	begin
-		U_in <= "00011111000111110010011101100110";
-		-- expected result 0001000001101100
-		--10001011000111001001011000010101
-		--0000100011010110
-		--01000111010000110011011101001101
-		--0000110011001101
-		--01101100101011010010111101010001
-		--0000101001111001
-		--11011000010000110011111110100101
-		--0000010010100111
-		wait for clock_period;
-		U_in <= "10001011000111001001011000010101";
-		wait for clock_period;
-		U_in <= "01000111010000110011011101001101";
-		wait for clock_period;
+		file_open(file_VECTORS, "f_block_testdata.txt",  read_mode);
+		file_open(file_RESULTS, "f_block_res.txt", write_mode);
+
+		while not endfile(file_VECTORS) loop
+			readline(file_VECTORS, v_ILINE);
+			read(v_ILINE, U_value);
+			
+			U_in <= U_value;
+
+			wait for 3*clock_period;
+			
+			write(v_OLINE, res, RIGHT, 16);
+			write(v_OLINE, ',', RIGHT, 1);
+			writeline(file_RESULTS, v_OLINE);
+		end loop;
+		file_close(file_VECTORS);
+    		file_close(file_RESULTS);
+		report "Finished";
+		wait;
 	end process;
 end behavior;
