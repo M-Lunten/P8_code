@@ -36,16 +36,16 @@ begin
 	process is
 	begin
 		
-		wait for clock_period*20;
+		wait for clock_period*2;
 		d <= "001000000000";
 		
-		wait for clock_period*20;
+		wait for clock_period*2;
 		d <= "101000000000";
 		
-		wait for clock_period*20;
+		wait for clock_period*2;
 		d <= "001000000000";
 		
-		wait for clock_period*20;
+		wait for clock_period*2;
 		d <= "101000000000";
 
 		

@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;  
 use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 
 entity sincos is 
 port(
@@ -35,15 +36,13 @@ architecture Behavioural of sincos is
 	signal g4 : std_logic;
 	signal h4 : std_logic;
 	signal d : std_logic_vector(9 downto 0) := "0000000000";
-	signal dSin : std_logic_vector(9 downto 0) := "0000000000";
-	signal dCos : std_logic_vector(9 downto 0) := "0000000000";
+	
 	signal dSinpLUT : std_logic_vector(9 downto 0) := "0000000000";
 	signal dCospLUT : std_logic_vector(9 downto 0) := "0000000000";
 	signal dSinOut : std_logic_vector(15 downto 0) := "0000000000000000";
 	signal dCosOut : std_logic_vector(15 downto 0) := "0000000000000000";
 	
-	signal sinPOut : std_logic_vector(15 downto 0);
-	signal cosPOut : std_logic_vector(15 downto 0);
+	
 	
 	
 	
@@ -61,13 +60,13 @@ architecture Behavioural of sincos is
 					d <= data(9 downto 0);
 					
 					if (m0='1') then 
-						dSinpLUT <= not(d);
+						dSinpLUT <= std_logic_vector((1023-unsigned(d)));
 					elsif (m0='0') then 
 						dSinpLUT <= d;
 					end if;
 					
 					if((m0='0') and (n0='0')) or ((m0='0') and (n0='1')) then 
-						dCospLUT <= not(d);
+						dCospLUT <= std_logic_vector((1023-unsigned(d)));
 					else
 						dCosPLUT <= d;
 					end if;

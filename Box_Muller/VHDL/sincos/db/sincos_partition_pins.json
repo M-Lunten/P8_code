@@ -136,15 +136,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "data[10]",
+					"name" : "data[0]",
 					"strict" : false
 				},
 				{
 					"name" : "data[11]",
-					"strict" : false
-				},
-				{
-					"name" : "data[0]",
 					"strict" : false
 				},
 				{
@@ -181,6 +177,10 @@
 				},
 				{
 					"name" : "data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "data[10]",
 					"strict" : false
 				}
 			]

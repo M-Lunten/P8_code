@@ -40,13 +40,13 @@ begin
 		d <= "001000000000";
 		
 		wait for clock_period*20;
-		d <= "011000000000";
-		
-		wait for clock_period*20;
 		d <= "101000000000";
 		
 		wait for clock_period*20;
-		d <= "111000000000";
+		d <= "001000000000";
+		
+		wait for clock_period*20;
+		d <= "101000000000";
 
 		
 
