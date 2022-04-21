@@ -18,10 +18,10 @@ x = [-6:.01:6];
 y = normpdf(x,0,1);
 
 %%
-plot(x, y);
+semilogy(x, y);
 hold on
 plot(xi, fi);
 hold off
 legend('Ideal Gaussian', 'VHDL simulation');
 grid on
-xlim([-4 4])
+xlim([-5 5])
