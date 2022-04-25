@@ -23,23 +23,24 @@ A2 = 0.5 * [1, -1, -1, -1; 1, -1, 1, 1; 1, 1, -1, 1; -1, -1, -1, 1];
 
 for p = 1:num_ite
     for i = 1:R
-        for j = 1:4:L
-            origin = randi([1, L]);
-            stride = stride_options(randi([1, length(stride_options)]));
-            mask = randi([1, L-1]);
-            vector = zeros(4,1);
-            for z = 1:4
-                vector(z) = (origin + stride*(z-1));
-                while vector(z) > L-1
-                    vector(z) = vector(z) - L;
-                end
-                vector(z) = bitxor(vector(z), mask)+1;
+        origin = randi([1, L]);
+        stride = stride_options(randi([1, length(stride_options)]));
+        mask = randi([1, L-1]);
+        vector = zeros(4,1);
+        for z = 1:1024
+            vector(z) = (origin + stride*(z-1));
+            while vector(z) > L-1
+                vector(z) = vector(z) - L;
             end
-            data_vector = oldPool(vector);
+            vector(z) = bitxor(vector(z), mask)+1;
+        end
+        data_vector = oldPool(vector);
+        for j = 1:4:L
+            data = data_vector(j:j+3);
             if j > L/2
-                newPool(j:j+3) = A1*data_vector';
+                newPool(j:j+3) = A1*data';
             else
-                newPool(j:j+3) = A2*data_vector';
+                newPool(j:j+3) = A2*data';
             end
         end
         oldPool = newPool;
