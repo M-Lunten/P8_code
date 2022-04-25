@@ -25,17 +25,17 @@ architecture Behavioural of sincos is
 	);
 	end component;
 
-	signal m0 : std_logic;
-	signal n0 : std_logic;
-	signal a1 : std_logic;
-	signal b1 : std_logic;
-	signal c2 : std_logic;
-	signal d2 : std_logic;
-	signal e3 : std_logic;
-	signal f3 : std_logic;
-	signal g4 : std_logic;
-	signal h4 : std_logic;
-	signal d : std_logic_vector(9 downto 0) := "0000000000";
+	signal m : std_logic;
+	signal n : std_logic;
+	signal ma : std_logic;
+	signal na : std_logic;
+	signal mb : std_logic;
+	signal nb : std_logic;
+	signal mc : std_logic;
+	signal nc : std_logic;
+	signal md : std_logic;
+	signal nd : std_logic;
+	signal dsc : std_logic_vector(9 downto 0) := "0000000000";
 	
 	signal dSinpLUT : std_logic_vector(9 downto 0) := "0000000000";
 	signal dCospLUT : std_logic_vector(9 downto 0) := "0000000000";
@@ -55,39 +55,39 @@ architecture Behavioural of sincos is
 			
 			begin
 				if rising_edge(i_clock) then
-					m0 <= data(11);
-					n0 <= data(10);
-					d <= data(9 downto 0);
+					m <= data(11);
+					n <= data(10);
+					dsc <= data(9 downto 0);
 					
-					if (m0='1') then 
-						dSinpLUT <= std_logic_vector((1023-unsigned(d)));
-					elsif (m0='0') then 
-						dSinpLUT <= d;
+					if (m='1') then 
+						dSinpLUT <= std_logic_vector((1023-unsigned(dsc)));
+					elsif (m='0') then 
+						dSinpLUT <= dsc;
 					end if;
-					
-					if((m0='0') and (n0='0')) or ((m0='0') and (n0='1')) then 
-						dCospLUT <= std_logic_vector((1023-unsigned(d)));
+				
+					if((m='0') and (n='0')) or ((m='0') and (n='1')) then 
+						dCospLUT <= std_logic_vector((1023-unsigned(dsc)));
 					else
-						dCosPLUT <= d;
+						dCosPLUT <= dsc;
 					end if;
 					
 					
-					a1 <= m0;
-					b1 <= n0;
+					ma <= m;
+					na <= n;
 					
-					c2 <= a1;
-					d2 <= b1;
+					mb <= ma;
+					nb <= na;
 					
-					e3 <= c2;
-					f3 <= d2;
+					mc <= mb;
+					nc <= nb;
 					
-					if (f3='1') then 
+					if (nc='1') then 
 						sinOut <= not(dSinOut) + 1;
-					elsif (f3='0') then 
+					elsif (nc='0') then 
 						sinOut <= dsinOut;
 					end if;
 					
-					if((e3='0') and (f3='1')) or ((e3='1') and (f3='0')) then 
+					if((mc='0') and (nc='1')) or ((mc='1') and (nc='0')) then 
 						cosOut <= not(dCosOut) + 1;
 					else
 						cosOut <= dCosOut;
@@ -95,8 +95,8 @@ architecture Behavioural of sincos is
 					
 					
 					
-					g4 <= e3;
-					h4 <= f3;
+					md <= mc;
+					nd <= nc;
 					
 				
 					

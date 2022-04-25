@@ -1,5 +1,5 @@
 Assembler report for sincos
-Thu Apr 21 11:05:53 2022
+Fri Apr 22 13:29:07 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Apr 21 11:05:53 2022 ;
+; Assembler Status      ; Successful - Fri Apr 22 13:29:07 2022 ;
 ; Revision Name         ; sincos                                ;
 ; Top-level Entity Name ; sincos                                ;
 ; Family                ; Cyclone V                             ;
@@ -77,14 +77,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Apr 21 11:05:26 2022
+    Info: Processing started: Fri Apr 22 13:29:03 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off sincos -c sincos
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
-Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Thu Apr 21 11:05:53 2022
-    Info: Elapsed time: 00:00:27
+Info: Quartus Prime Assembler was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4807 megabytes
+    Info: Processing ended: Fri Apr 22 13:29:07 2022
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

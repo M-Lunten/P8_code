@@ -1,5 +1,5 @@
 Fitter report for sincos
-Thu Apr 21 11:05:25 2022
+Fri Apr 22 13:29:01 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Apr 21 11:05:25 2022       ;
+; Fitter Status                   ; Successful - Fri Apr 22 13:29:01 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; sincos                                      ;
 ; Top-level Entity Name           ; sincos                                      ;
@@ -159,7 +159,7 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.4%      ;
-;     Processor 3            ;   0.3%      ;
+;     Processor 3            ;   0.4%      ;
 ;     Processor 4            ;   0.3%      ;
 ;     Processor 5            ;   0.3%      ;
 ;     Processor 6            ;   0.3%      ;
@@ -173,7 +173,7 @@ refer to the applicable agreement for further details.
 +----------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------+------------------+-----------------------+
 ; i_clock~inputCLKENA0 ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                       ;                  ;                       ;
 ; dSinpLUT[3]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; dSinpLUT[3]~DUPLICATE ;                  ;                       ;
-; f3                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; f3~DUPLICATE          ;                  ;                       ;
+; nc                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; nc~DUPLICATE          ;                  ;                       ;
 +----------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------+------------------+-----------------------+
 
 
@@ -890,38 +890,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+---------------------------------------------------+
-; Pad To Core Delay Chain Fanout                    ;
-+---------------------+-------------------+---------+
-; Source Pin / Fanout ; Pad To Core Index ; Setting ;
-+---------------------+-------------------+---------+
-; reset               ;                   ;         ;
-; i_clock             ;                   ;         ;
-; data[0]             ;                   ;         ;
-;      - d[0]~feeder  ; 1                 ; 0       ;
-; data[11]            ;                   ;         ;
-;      - m0           ; 0                 ; 0       ;
-; data[1]             ;                   ;         ;
-;      - d[1]~feeder  ; 1                 ; 0       ;
-; data[2]             ;                   ;         ;
-;      - d[2]~feeder  ; 0                 ; 0       ;
-; data[3]             ;                   ;         ;
-;      - d[3]~feeder  ; 0                 ; 0       ;
-; data[4]             ;                   ;         ;
-;      - d[4]~feeder  ; 1                 ; 0       ;
-; data[5]             ;                   ;         ;
-;      - d[5]         ; 0                 ; 0       ;
-; data[6]             ;                   ;         ;
-;      - d[6]~feeder  ; 1                 ; 0       ;
-; data[7]             ;                   ;         ;
-;      - d[7]         ; 1                 ; 0       ;
-; data[8]             ;                   ;         ;
-;      - d[8]~feeder  ; 1                 ; 0       ;
-; data[9]             ;                   ;         ;
-;      - d[9]~feeder  ; 1                 ; 0       ;
-; data[10]            ;                   ;         ;
-;      - n0~feeder    ; 1                 ; 0       ;
-+---------------------+-------------------+---------+
++----------------------------------------------------+
+; Pad To Core Delay Chain Fanout                     ;
++----------------------+-------------------+---------+
+; Source Pin / Fanout  ; Pad To Core Index ; Setting ;
++----------------------+-------------------+---------+
+; reset                ;                   ;         ;
+; i_clock              ;                   ;         ;
+; data[0]              ;                   ;         ;
+;      - dsc[0]~feeder ; 1                 ; 0       ;
+; data[11]             ;                   ;         ;
+;      - m             ; 0                 ; 0       ;
+; data[1]              ;                   ;         ;
+;      - dsc[1]~feeder ; 1                 ; 0       ;
+; data[2]              ;                   ;         ;
+;      - dsc[2]~feeder ; 0                 ; 0       ;
+; data[3]              ;                   ;         ;
+;      - dsc[3]~feeder ; 0                 ; 0       ;
+; data[4]              ;                   ;         ;
+;      - dsc[4]~feeder ; 1                 ; 0       ;
+; data[5]              ;                   ;         ;
+;      - dsc[5]        ; 0                 ; 0       ;
+; data[6]              ;                   ;         ;
+;      - dsc[6]~feeder ; 1                 ; 0       ;
+; data[7]              ;                   ;         ;
+;      - dsc[7]        ; 1                 ; 0       ;
+; data[8]              ;                   ;         ;
+;      - dsc[8]~feeder ; 1                 ; 0       ;
+; data[9]              ;                   ;         ;
+;      - dsc[9]~feeder ; 1                 ; 0       ;
+; data[10]             ;                   ;         ;
+;      - n~feeder      ; 1                 ; 0       ;
++----------------------+-------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -930,7 +930,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name    ; Location      ; Fan-Out ; Usage      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------+---------------+---------+------------+--------+----------------------+------------------+---------------------------+
 ; i_clock ; PIN_G12       ; 74      ; Clock      ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; m0      ; FF_X13_Y5_N59 ; 22      ; Sync. load ; no     ; --                   ; --               ; --                        ;
+; m       ; FF_X13_Y5_N59 ; 22      ; Sync. load ; no     ; --                   ; --               ; --                        ;
 +---------+---------------+---------+------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1145,12 +1145,12 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------+-------------------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register ; Destination Register                                                                                        ; Delay Added in ns ;
 +-----------------+-------------------------------------------------------------------------------------------------------------+-------------------+
-; d[0]            ; dSinpLUT[0]                                                                                                 ; 0.442             ;
-; d[4]            ; dSinpLUT[4]                                                                                                 ; 0.424             ;
-; d[6]            ; dSinpLUT[6]                                                                                                 ; 0.414             ;
-; d[8]            ; dSinpLUT[8]                                                                                                 ; 0.414             ;
-; d[3]            ; dSinpLUT[3]                                                                                                 ; 0.405             ;
-; d[7]            ; dSinpLUT[7]                                                                                                 ; 0.394             ;
+; dsc[0]          ; dSinpLUT[0]                                                                                                 ; 0.442             ;
+; dsc[4]          ; dSinpLUT[4]                                                                                                 ; 0.424             ;
+; dsc[6]          ; dSinpLUT[6]                                                                                                 ; 0.414             ;
+; dsc[8]          ; dSinpLUT[8]                                                                                                 ; 0.414             ;
+; dsc[3]          ; dSinpLUT[3]                                                                                                 ; 0.405             ;
+; dsc[7]          ; dSinpLUT[7]                                                                                                 ; 0.394             ;
 ; dSinpLUT[1]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.301             ;
 ; dSinpLUT[2]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.301             ;
 ; dSinpLUT[4]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~porta_address_reg0 ; 0.301             ;
@@ -1166,17 +1166,17 @@ This will disable optimization of problematic paths and expose them for further 
 ; dCospLUT[5]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.157             ;
 ; dCospLUT[7]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.157             ;
 ; dCospLUT[9]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.157             ;
-; a1              ; c2                                                                                                          ; 0.111             ;
+; ma              ; mb                                                                                                          ; 0.111             ;
 ; dCospLUT[0]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.108             ;
 ; dCospLUT[2]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.108             ;
 ; dCospLUT[4]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.108             ;
 ; dCospLUT[6]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.108             ;
 ; dCospLUT[8]     ; sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_um04:auto_generated|ram_block1a0~portb_address_reg0 ; 0.108             ;
-; m0              ; a1                                                                                                          ; 0.099             ;
-; n0              ; b1                                                                                                          ; 0.097             ;
-; b1              ; d2                                                                                                          ; 0.097             ;
-; f3              ; cosOut[15]~reg0                                                                                             ; 0.018             ;
-; e3              ; cosOut[15]~reg0                                                                                             ; 0.016             ;
+; m               ; ma                                                                                                          ; 0.099             ;
+; n               ; na                                                                                                          ; 0.097             ;
+; na              ; nb                                                                                                          ; 0.097             ;
+; nc              ; cosOut[15]~reg0                                                                                             ; 0.018             ;
+; mc              ; cosOut[15]~reg0                                                                                             ; 0.016             ;
 +-----------------+-------------------------------------------------------------------------------------------------------------+-------------------+
 Note: This table only shows the top 32 path(s) that have the largest delay added for hold.
 
@@ -1211,28 +1211,28 @@ Info (176235): Finished register packing
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:05
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:05
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:04
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X11_Y0 to location X21_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.48 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.47 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:07
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Info (144001): Generated suppressed messages file C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/sincos/output_files/sincos.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 6591 megabytes
-    Info: Processing ended: Thu Apr 21 11:05:25 2022
-    Info: Elapsed time: 00:00:47
-    Info: Total CPU time (on all processors): 00:01:14
+Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 6493 megabytes
+    Info: Processing ended: Fri Apr 22 13:29:02 2022
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:01:09
 
 
 +----------------------------+

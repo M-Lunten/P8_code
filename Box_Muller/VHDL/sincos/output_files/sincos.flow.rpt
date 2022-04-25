@@ -1,5 +1,5 @@
 Flow report for sincos
-Thu Apr 21 11:06:17 2022
+Fri Apr 22 13:29:14 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Apr 21 11:05:53 2022       ;
+; Flow Status                     ; Successful - Fri Apr 22 13:29:07 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; sincos                                      ;
 ; Top-level Entity Name           ; sincos                                      ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/21/2022 11:04:26 ;
+; Start date & time ; 04/22/2022 13:28:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; sincos              ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 83689965950041.165053186614424         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 83689965950041.165062690205400         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; sincosLUT.cmp                          ; --            ; --          ; --         ;
@@ -94,11 +94,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:27     ; 1.0                     ; 4877 MB             ; 00:00:21                           ;
-; Fitter               ; 00:00:47     ; 1.0                     ; 6591 MB             ; 00:01:13                           ;
-; Assembler            ; 00:00:27     ; 1.0                     ; 4809 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:23     ; 1.1                     ; 5169 MB             ; 00:00:07                           ;
-; Total                ; 00:02:04     ; --                      ; --                  ; 00:01:44                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4870 MB             ; 00:00:25                           ;
+; Fitter               ; 00:00:27     ; 1.0                     ; 6493 MB             ; 00:01:08                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4806 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.1                     ; 5160 MB             ; 00:00:07                           ;
+; Total                ; 00:00:49     ; --                      ; --                  ; 00:01:43                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
