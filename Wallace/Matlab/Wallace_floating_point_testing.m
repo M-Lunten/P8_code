@@ -47,25 +47,54 @@ title('Test of amount of transformation matrices')
 [r_4, lags_4] = xcorr(out_4, 'normalized');
 
 figure(2)
-subplot(2,2,1)
 plot(lags_1, r_1)
 title('1')
+xlabel('Lag')
+ylabel('ACF')
 xlim([-10000, 10000])
-subplot(2,2,2)
+figure()
 plot(lags_2, r_2)
 title('2')
+xlabel('Lag')
+ylabel('ACF')
 xlim([-10000, 10000])
-subplot(2,2,3)
+figure()
 plot(lags_3, r_3)
 title('3')
+xlabel('Lag')
+ylabel('ACF')
 xlim([-10000, 10000])
-subplot(2,2,4)
+figure()
 plot(lags_4, r_4)
 title('4')
+xlabel('Lag')
+ylabel('ACF')
 xlim([-10000, 10000])
 
-%% Pool size testing
+%% Matrix 4 wallace
 rng(10)
+
+% K*L matrix is used
+L = 256;
+K = 4;
+R = 1;
+num_ite = 1000;
+
+% Init pool creation, the sum of squares should be equal to L*K
+init_N = randn(K, L);
+init_N = pool_normalization(init_N);
+
+[out_1, ~] = wallace(init_N, R, num_ite, 1, 0);
+
+[r_1, lags_1] = xcorr(out_1, 'normalized');
+figure(2)
+plot(lags_1, r_1)
+title('1')
+xlabel('Lag')
+ylabel('ACF')
+xlim([-10000, 10000])
+%% Pool size testing
+%rng(10)
 
 % constants
 K = 4;
@@ -127,22 +156,29 @@ title('Test of pool size')
 [r_4, lags_4] = xcorr(out_4, 'normalized');
 
 figure(4)
-subplot(2,2,1)
 plot(lags_1, r_1)
 title('L=256')
-xlim([-10000, 10000])
-subplot(2,2,2)
+xlabel('Lag')
+ylabel('ACF')
+%xlim([-10000, 10000])
+figure()
 plot(lags_2, r_2)
 title('L=512')
-xlim([-10000, 10000])
-subplot(2,2,3)
+xlabel('Lag')
+ylabel('ACF')
+%xlim([-10000, 10000])
+figure()
 plot(lags_3, r_3)
 title('L=1024')
-xlim([-10000, 10000])
-subplot(2,2,4)
+xlabel('Lag')
+ylabel('ACF')
+%xlim([-10000, 10000])
+figure()
+ylabel('ACF')
+xlabel('Lag')
 plot(lags_4, r_4)
 title('L=2048')
-xlim([-10000, 10000])
+%xlim([-10000, 10000])
 
 %% Test of pass amount
 rng(10)
@@ -191,32 +227,39 @@ title('Test of pass effect')
 [r_3, lags_3] = xcorr(out_3, 'normalized');
 [r_4, lags_4] = xcorr(out_4, 'normalized');
 
-figure(6)
-subplot(2,2,1)
+figure()
 plot(lags_1, r_1)
 title('1')
+ylabel('ACF')
+xlabel('Lag')
 xlim([-10000, 10000])
-subplot(2,2,2)
+figure()
 plot(lags_2, r_2)
+ylabel('ACF')
+xlabel('Lag')
 title('2')
-xlim([-1000, 1000])
-subplot(2,2,3)
+xlim([-10000, 10000])
+figure()
 plot(lags_3, r_3)
+ylabel('ACF')
+xlabel('Lag')
 title('3')
 xlim([-10000, 10000])
-subplot(2,2,4)
+figure()
 plot(lags_4, r_4)
+ylabel('ACF')
+xlabel('Lag')
 title('4')
 xlim([-10000, 10000])
 
 %% Test of mask
-rng(10)
+rng(11)
 
 % K*L matrix is used
 L = 256;
 K = 4;
 R = 1;
-num_ite = 1000;
+num_ite = 100;
 
 % Init pool creation, the sum of squares should be equal to L*K
 init_N = randn(K, L);
@@ -246,13 +289,16 @@ title('Test of pass effect')
 [r_1, lags_1] = xcorr(out_1, 'normalized');
 [r_2, lags_2] = xcorr(out_2, 'normalized');
 
-figure(8)
-subplot(2,1,1)
+figure()
 plot(lags_1, r_1)
+ylabel('ACF')
+xlabel('Lag')
 title('No Mask')
 xlim([-10000, 10000])
-subplot(2,1,2)
+figure()
 plot(lags_2, r_2)
+ylabel('ACF')
+xlabel('Lag')
 title('With Mask')
 xlim([-10000, 10000])
 
@@ -295,11 +341,63 @@ title('Test of different matrices setup')
 [r_2, lags_2] = xcorr(out_2, 'normalized');
 
 figure(8)
-subplot(2,1,1)
 plot(lags_1, r_1)
+ylabel('ACF')
+xlabel('Lag')
 title('Wallace')
 xlim([-10000, 10000])
-subplot(2,1,2)
+figure()
 plot(lags_2, r_2)
-title('Dong')
+ylabel('ACF')
+xlabel('Lag')
+title('Dong-U Lee')
+xlim([-10000, 10000])
+
+%% Test of 2 pools vs 1 pool
+rng(10)
+
+% K*L matrix is used
+L = 256;
+K = 4;
+R = 1;
+num_ite = 100;
+
+% Init pool creation, the sum of squares should be equal to L*K
+init_N = randn(K, L);
+init_N = pool_normalization(init_N);
+
+[out_1, ~] = wallace(init_N, R, num_ite, 2, 0);
+[out_2, ~] = wallace_2_pools(init_N, R, num_ite, 2);
+
+[f_1, x_1] = ksdensity(out_1);
+[f_2, x_2] = ksdensity(out_2);
+x = [-6:.01:6];
+y = normpdf(x,0,1);
+
+figure(7)
+plot(x, y)
+hold on
+plot(x_1, f_1)
+plot(x_2, f_2)
+hold off
+grid on
+legend('Ideal Gaussian', '1 pool', '2 pools')
+ylabel('Probability')
+xlabel('x')
+title('Test of 1 collective pool vs 2 separated pools')
+
+[r_1, lags_1] = xcorr(out_1, 'normalized');
+[r_2, lags_2] = xcorr(out_2, 'normalized');
+
+figure(8)
+plot(lags_1, r_1)
+ylabel('ACF')
+xlabel('Lag')
+title('1 pool')
+xlim([-10000, 10000])
+figure()
+plot(lags_2, r_2)
+ylabel('ACF')
+xlabel('Lag')
+title('2 pools')
 xlim([-10000, 10000])

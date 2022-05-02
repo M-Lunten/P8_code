@@ -6,7 +6,7 @@ rng(10)
 L = 256;
 K = 4;
 R = 1;
-num_ite = 100;
+num_ite = 1000;
 
 % Init pool creation, the sum of squares should be equal to L*K
 init_N = randn(K, L);
@@ -24,14 +24,27 @@ x = [-6:.01:6];
 y = normpdf(x,0,1);
 
 figure(1)
-plot(x, y);
+semilogy(x, y);
 hold on
-plot(init_x, init_f);
 plot(w_x, w_f);
 hold off
 grid on
-legend('Ideal Gaussian', 'Initial pool', 'Wallace GRNG')
+xlabel('x')
+ylabel('Probability')
+title('PDF for the wallace algorithm on a log scale')
+legend('Ideal Gaussian', 'Wallace GRNG')
 
+figure(4)
+plot(x, y);
+hold on
+plot(w_x, w_f);
+hold off
+grid on
+xlim([-4, 4])
+xlabel('x')
+ylabel('Probability')
+title('PDF for the wallace algorithm on a linear scale')
+legend('Ideal Gaussian', 'Wallace GRNG')
 %% Sum of squares figure
 [corr_f, corr_x] = ksdensity(soq_corr);
 x_chi = L*K*0.5:0.2:L*K*1.5;
@@ -46,11 +59,15 @@ grid on
 legend('\chi^2 distribution', 'sum of squares');
 xlabel('x')
 ylabel('Probability')
+
+
 %% Autocorrelation figures
 [r, lags] = xcorr(out, 'normalized');
 
 figure(3)
 plot(lags, r)
+title('Autocorrelation for Wallace')
+ylabel('ACF')
 xlabel('Lags')
 
 
