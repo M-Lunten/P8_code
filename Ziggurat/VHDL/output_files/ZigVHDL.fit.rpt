@@ -1,5 +1,5 @@
 Fitter report for ZigVHDL
-Mon May 02 15:33:48 2022
+Tue May 03 15:40:58 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,29 +10,43 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Fitter Summary
   3. Fitter Settings
   4. Parallel Compilation
-  5. Incremental Compilation Preservation Summary
-  6. Incremental Compilation Partition Settings
-  7. Incremental Compilation Placement Preservation
-  8. Pin-Out File
-  9. Fitter Resource Usage Summary
- 10. Fitter Partition Statistics
- 11. Input Pins
- 12. Output Pins
- 13. Dual Purpose and Dedicated Pins
- 14. I/O Bank Usage
- 15. All Package Pins
- 16. I/O Assignment Warnings
- 17. Fitter Resource Utilization by Entity
- 18. Delay Chain Summary
- 19. Pad To Core Delay Chain Fanout
- 20. Routing Usage Summary
- 21. I/O Rules Summary
- 22. I/O Rules Details
- 23. I/O Rules Matrix
- 24. Fitter Device Options
- 25. Operating Settings and Conditions
- 26. Fitter Messages
- 27. Fitter Suppressed Messages
+  5. Fitter Netlist Optimizations
+  6. Incremental Compilation Preservation Summary
+  7. Incremental Compilation Partition Settings
+  8. Incremental Compilation Placement Preservation
+  9. Pin-Out File
+ 10. Fitter Resource Usage Summary
+ 11. Fitter Partition Statistics
+ 12. Input Pins
+ 13. Output Pins
+ 14. Dual Purpose and Dedicated Pins
+ 15. I/O Bank Usage
+ 16. All Package Pins
+ 17. I/O Assignment Warnings
+ 18. Fitter Resource Utilization by Entity
+ 19. Delay Chain Summary
+ 20. Pad To Core Delay Chain Fanout
+ 21. Control Signals
+ 22. Global & Other Fast Signals
+ 23. Fitter RAM Summary
+ 24. |ZigVHDL|zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|ALTSYNCRAM
+ 25. Fitter DSP Block Usage Summary
+ 26. DSP Block Details
+ 27. Routing Usage Summary
+ 28. LAB Logic Elements
+ 29. LAB-wide Signals
+ 30. LAB Signals Sourced
+ 31. LAB Signals Sourced Out
+ 32. LAB Distinct Inputs
+ 33. I/O Rules Summary
+ 34. I/O Rules Details
+ 35. I/O Rules Matrix
+ 36. Fitter Device Options
+ 37. Operating Settings and Conditions
+ 38. Estimated Delay Added for Hold Timing Summary
+ 39. Estimated Delay Added for Hold Timing Details
+ 40. Fitter Messages
+ 41. Fitter Suppressed Messages
 
 
 
@@ -58,21 +72,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon May 02 15:33:48 2022       ;
+; Fitter Status                      ; Successful - Tue May 03 15:40:58 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ZigVHDL                                     ;
 ; Top-level Entity Name              ; ZigVHDL                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 0 / 114,480 ( 0 % )                         ;
-;     Total combinational functions  ; 0 / 114,480 ( 0 % )                         ;
-;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                         ;
-; Total registers                    ; 0                                           ;
+; Total logic elements               ; 152 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 66 / 114,480 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 137 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 137                                         ;
 ; Total pins                         ; 19 / 529 ( 4 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
+; Total memory bits                  ; 4,096 / 3,981,312 ( < 1 % )                 ;
+; Embedded Multiplier 9-bit elements ; 2 / 532 ( < 1 % )                           ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
@@ -145,28 +159,85 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processors 3-6         ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Incremental Compilation Preservation Summary                                                    ;
-+---------------------+-------------------+----------------------------+--------------------------+
-; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
-+---------------------+-------------------+----------------------------+--------------------------+
-; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 49 ) ; 0.00 % ( 0 / 49 )          ; 0.00 % ( 0 / 49 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 49 ) ; 0.00 % ( 0 / 49 )          ; 0.00 % ( 0 / 49 )        ;
-;                     ;                   ;                            ;                          ;
-; Routing (by net)    ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-;     -- Achieved     ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-+---------------------+-------------------+----------------------------+--------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                       ;
++--------------+-----------------+------------------+---------------------+-----------+----------------+----------------------------------------------------------------------------------+------------------+-----------------------+
+; Node         ; Action          ; Operation        ; Reason              ; Node Port ; Node Port Name ; Destination Node                                                                 ; Destination Port ; Destination Port Name ;
++--------------+-----------------+------------------+---------------------+-----------+----------------+----------------------------------------------------------------------------------+------------------+-----------------------+
+; U0_2[0]      ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[1]      ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[2]      ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[3]      ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[4]      ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[5]      ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[6]      ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[7]      ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[8]      ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[9]      ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[10]     ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[11]     ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[12]     ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[13]     ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[14]     ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; U0_2[15]     ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                 ; DATAB            ;                       ;
+; xiplus_1[0]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[0]  ; PORTBDATAOUT     ;                       ;
+; xiplus_1[1]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[1]  ; PORTBDATAOUT     ;                       ;
+; xiplus_1[2]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[2]  ; PORTBDATAOUT     ;                       ;
+; xiplus_1[3]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[3]  ; PORTBDATAOUT     ;                       ;
+; xiplus_1[4]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[4]  ; PORTBDATAOUT     ;                       ;
+; xiplus_1[5]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[5]  ; PORTBDATAOUT     ;                       ;
+; xiplus_1[6]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[6]  ; PORTBDATAOUT     ;                       ;
+; xiplus_1[7]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[7]  ; PORTBDATAOUT     ;                       ;
+; xiplus_1[8]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[8]  ; PORTBDATAOUT     ;                       ;
+; xiplus_1[9]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[9]  ; PORTBDATAOUT     ;                       ;
+; xiplus_1[10] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[10] ; PORTBDATAOUT     ;                       ;
+; xiplus_1[11] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[11] ; PORTBDATAOUT     ;                       ;
+; xiplus_1[12] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[12] ; PORTBDATAOUT     ;                       ;
+; xiplus_1[13] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[13] ; PORTBDATAOUT     ;                       ;
+; xiplus_1[14] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[14] ; PORTBDATAOUT     ;                       ;
+; xiplus_1[15] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|q_b[15] ; PORTBDATAOUT     ;                       ;
+; xu[0]        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[1]        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[2]        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[3]        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[4]        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[5]        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[6]        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[7]        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[8]        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[9]        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[10]       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[11]       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[12]       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[13]       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[14]       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
+; xu[15]       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                  ; DATAOUT          ;                       ;
++--------------+-----------------+------------------+---------------------+-----------+----------------+----------------------------------------------------------------------------------+------------------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                     ;
++---------------------+--------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+--------------------+----------------------------+--------------------------+
+; Placement (by node) ;                    ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 318 ) ; 0.00 % ( 0 / 318 )         ; 0.00 % ( 0 / 318 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 318 ) ; 0.00 % ( 0 / 318 )         ; 0.00 % ( 0 / 318 )       ;
+;                     ;                    ;                            ;                          ;
+; Routing (by net)    ;                    ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+--------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -184,7 +255,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 39 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 308 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -195,126 +266,128 @@ refer to the applicable agreement for further details.
 The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/output_files/ZigVHDL.pin.
 
 
-+---------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                       ;
-+---------------------------------------------+-----------------------+
-; Resource                                    ; Usage                 ;
-+---------------------------------------------+-----------------------+
-; Total logic elements                        ; 0 / 114,480 ( 0 % )   ;
-;     -- Combinational with no register       ; 0                     ;
-;     -- Register only                        ; 0                     ;
-;     -- Combinational with a register        ; 0                     ;
-;                                             ;                       ;
-; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 0                     ;
-;     -- 3 input functions                    ; 0                     ;
-;     -- <=2 input functions                  ; 0                     ;
-;     -- Register only                        ; 0                     ;
-;                                             ;                       ;
-; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 0                     ;
-;     -- arithmetic mode                      ; 0                     ;
-;                                             ;                       ;
-; Total registers*                            ; 0 / 117,053 ( 0 % )   ;
-;     -- Dedicated logic registers            ; 0 / 114,480 ( 0 % )   ;
-;     -- I/O registers                        ; 0 / 2,573 ( 0 % )     ;
-;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 0 / 7,155 ( 0 % )     ;
-; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 19 / 529 ( 4 % )      ;
-;     -- Clock pins                           ; 0 / 7 ( 0 % )         ;
-;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )         ;
-;                                             ;                       ;
-; M9Ks                                        ; 0 / 432 ( 0 % )       ;
-; Total block memory bits                     ; 0 / 3,981,312 ( 0 % ) ;
-; Total block memory implementation bits      ; 0 / 3,981,312 ( 0 % ) ;
-; Embedded Multiplier 9-bit elements          ; 0 / 532 ( 0 % )       ;
-; PLLs                                        ; 0 / 4 ( 0 % )         ;
-; Global signals                              ; 0                     ;
-;     -- Global clocks                        ; 0 / 20 ( 0 % )        ;
-; JTAGs                                       ; 0 / 1 ( 0 % )         ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
-; Oscillator blocks                           ; 0 / 1 ( 0 % )         ;
-; Impedance control blocks                    ; 0 / 4 ( 0 % )         ;
-; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%    ;
-; Peak interconnect usage (total/H/V)         ; 0.0% / 0.0% / 0.0%    ;
-; Maximum fan-out                             ; 1                     ;
-; Highest non-global fan-out                  ; 1                     ;
-; Total fan-out                               ; 24                    ;
-; Average fan-out                             ; 0.50                  ;
-+---------------------------------------------+-----------------------+
++---------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                             ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Total logic elements                        ; 152 / 114,480 ( < 1 % )     ;
+;     -- Combinational with no register       ; 15                          ;
+;     -- Register only                        ; 86                          ;
+;     -- Combinational with a register        ; 51                          ;
+;                                             ;                             ;
+; Logic element usage by number of LUT inputs ;                             ;
+;     -- 4 input functions                    ; 3                           ;
+;     -- 3 input functions                    ; 33                          ;
+;     -- <=2 input functions                  ; 30                          ;
+;     -- Register only                        ; 86                          ;
+;                                             ;                             ;
+; Logic elements by mode                      ;                             ;
+;     -- normal mode                          ; 30                          ;
+;     -- arithmetic mode                      ; 36                          ;
+;                                             ;                             ;
+; Total registers*                            ; 137 / 117,053 ( < 1 % )     ;
+;     -- Dedicated logic registers            ; 137 / 114,480 ( < 1 % )     ;
+;     -- I/O registers                        ; 0 / 2,573 ( 0 % )           ;
+;                                             ;                             ;
+; Total LABs:  partially or completely used   ; 10 / 7,155 ( < 1 % )        ;
+; Virtual pins                                ; 0                           ;
+; I/O pins                                    ; 19 / 529 ( 4 % )            ;
+;     -- Clock pins                           ; 1 / 7 ( 14 % )              ;
+;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )               ;
+;                                             ;                             ;
+; M9Ks                                        ; 1 / 432 ( < 1 % )           ;
+; Total block memory bits                     ; 4,096 / 3,981,312 ( < 1 % ) ;
+; Total block memory implementation bits      ; 9,216 / 3,981,312 ( < 1 % ) ;
+; Embedded Multiplier 9-bit elements          ; 2 / 532 ( < 1 % )           ;
+; PLLs                                        ; 0 / 4 ( 0 % )               ;
+; Global signals                              ; 1                           ;
+;     -- Global clocks                        ; 1 / 20 ( 5 % )              ;
+; JTAGs                                       ; 0 / 1 ( 0 % )               ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )               ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )               ;
+; Oscillator blocks                           ; 0 / 1 ( 0 % )               ;
+; Impedance control blocks                    ; 0 / 4 ( 0 % )               ;
+; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%          ;
+; Peak interconnect usage (total/H/V)         ; 1.3% / 1.9% / 0.5%          ;
+; Maximum fan-out                             ; 140                         ;
+; Highest non-global fan-out                  ; 77                          ;
+; Total fan-out                               ; 682                         ;
+; Average fan-out                             ; 2.17                        ;
++---------------------------------------------+-----------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+---------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                       ;
-+---------------------------------------------+--------------------+--------------------------------+
-; Statistic                                   ; Top                ; hard_block:auto_generated_inst ;
-+---------------------------------------------+--------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low                ; Low                            ;
-;                                             ;                    ;                                ;
-; Total logic elements                        ; 0 / 114480 ( 0 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 0                  ; 0                              ;
-;     -- Register only                        ; 0                  ; 0                              ;
-;     -- Combinational with a register        ; 0                  ; 0                              ;
-;                                             ;                    ;                                ;
-; Logic element usage by number of LUT inputs ;                    ;                                ;
-;     -- 4 input functions                    ; 0                  ; 0                              ;
-;     -- 3 input functions                    ; 0                  ; 0                              ;
-;     -- <=2 input functions                  ; 0                  ; 0                              ;
-;     -- Register only                        ; 0                  ; 0                              ;
-;                                             ;                    ;                                ;
-; Logic elements by mode                      ;                    ;                                ;
-;     -- normal mode                          ; 0                  ; 0                              ;
-;     -- arithmetic mode                      ; 0                  ; 0                              ;
-;                                             ;                    ;                                ;
-; Total registers                             ; 0                  ; 0                              ;
-;     -- Dedicated logic registers            ; 0 / 114480 ( 0 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- I/O registers                        ; 0                  ; 0                              ;
-;                                             ;                    ;                                ;
-; Total LABs:  partially or completely used   ; 0 / 7155 ( 0 % )   ; 0 / 7155 ( 0 % )               ;
-;                                             ;                    ;                                ;
-; Virtual pins                                ; 0                  ; 0                              ;
-; I/O pins                                    ; 19                 ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 0 / 532 ( 0 % )    ; 0 / 532 ( 0 % )                ;
-; Total memory bits                           ; 0                  ; 0                              ;
-; Total RAM block bits                        ; 0                  ; 0                              ;
-;                                             ;                    ;                                ;
-; Connections                                 ;                    ;                                ;
-;     -- Input Connections                    ; 0                  ; 0                              ;
-;     -- Registered Input Connections         ; 0                  ; 0                              ;
-;     -- Output Connections                   ; 0                  ; 0                              ;
-;     -- Registered Output Connections        ; 0                  ; 0                              ;
-;                                             ;                    ;                                ;
-; Internal Connections                        ;                    ;                                ;
-;     -- Total Connections                    ; 19                 ; 5                              ;
-;     -- Registered Connections               ; 0                  ; 0                              ;
-;                                             ;                    ;                                ;
-; External Connections                        ;                    ;                                ;
-;     -- Top                                  ; 0                  ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 0                  ; 0                              ;
-;                                             ;                    ;                                ;
-; Partition Interface                         ;                    ;                                ;
-;     -- Input Ports                          ; 3                  ; 0                              ;
-;     -- Output Ports                         ; 16                 ; 0                              ;
-;     -- Bidir Ports                          ; 0                  ; 0                              ;
-;                                             ;                    ;                                ;
-; Registered Ports                            ;                    ;                                ;
-;     -- Registered Input Ports               ; 0                  ; 0                              ;
-;     -- Registered Output Ports              ; 0                  ; 0                              ;
-;                                             ;                    ;                                ;
-; Port Connectivity                           ;                    ;                                ;
-;     -- Input Ports driven by GND            ; 0                  ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                  ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                  ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                  ; 0                              ;
-;     -- Input Ports with no Source           ; 0                  ; 0                              ;
-;     -- Output Ports with no Source          ; 0                  ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                  ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                  ; 0                              ;
-+---------------------------------------------+--------------------+--------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                           ;
++---------------------------------------------+------------------------+--------------------------------+
+; Statistic                                   ; Top                    ; hard_block:auto_generated_inst ;
++---------------------------------------------+------------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                    ; Low                            ;
+;                                             ;                        ;                                ;
+; Total logic elements                        ; 152 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 15                     ; 0                              ;
+;     -- Register only                        ; 86                     ; 0                              ;
+;     -- Combinational with a register        ; 51                     ; 0                              ;
+;                                             ;                        ;                                ;
+; Logic element usage by number of LUT inputs ;                        ;                                ;
+;     -- 4 input functions                    ; 3                      ; 0                              ;
+;     -- 3 input functions                    ; 33                     ; 0                              ;
+;     -- <=2 input functions                  ; 30                     ; 0                              ;
+;     -- Register only                        ; 86                     ; 0                              ;
+;                                             ;                        ;                                ;
+; Logic elements by mode                      ;                        ;                                ;
+;     -- normal mode                          ; 30                     ; 0                              ;
+;     -- arithmetic mode                      ; 36                     ; 0                              ;
+;                                             ;                        ;                                ;
+; Total registers                             ; 137                    ; 0                              ;
+;     -- Dedicated logic registers            ; 137 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- I/O registers                        ; 0                      ; 0                              ;
+;                                             ;                        ;                                ;
+; Total LABs:  partially or completely used   ; 10 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+;                                             ;                        ;                                ;
+; Virtual pins                                ; 0                      ; 0                              ;
+; I/O pins                                    ; 19                     ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 2 / 532 ( < 1 % )      ; 0 / 532 ( 0 % )                ;
+; Total memory bits                           ; 4096                   ; 0                              ;
+; Total RAM block bits                        ; 9216                   ; 0                              ;
+; M9K                                         ; 1 / 432 ( < 1 % )      ; 0 / 432 ( 0 % )                ;
+; Clock control block                         ; 1 / 24 ( 4 % )         ; 0 / 24 ( 0 % )                 ;
+;                                             ;                        ;                                ;
+; Connections                                 ;                        ;                                ;
+;     -- Input Connections                    ; 0                      ; 0                              ;
+;     -- Registered Input Connections         ; 0                      ; 0                              ;
+;     -- Output Connections                   ; 0                      ; 0                              ;
+;     -- Registered Output Connections        ; 0                      ; 0                              ;
+;                                             ;                        ;                                ;
+; Internal Connections                        ;                        ;                                ;
+;     -- Total Connections                    ; 758                    ; 5                              ;
+;     -- Registered Connections               ; 245                    ; 0                              ;
+;                                             ;                        ;                                ;
+; External Connections                        ;                        ;                                ;
+;     -- Top                                  ; 0                      ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                      ; 0                              ;
+;                                             ;                        ;                                ;
+; Partition Interface                         ;                        ;                                ;
+;     -- Input Ports                          ; 3                      ; 0                              ;
+;     -- Output Ports                         ; 16                     ; 0                              ;
+;     -- Bidir Ports                          ; 0                      ; 0                              ;
+;                                             ;                        ;                                ;
+; Registered Ports                            ;                        ;                                ;
+;     -- Registered Input Ports               ; 0                      ; 0                              ;
+;     -- Registered Output Ports              ; 0                      ; 0                              ;
+;                                             ;                        ;                                ;
+; Port Connectivity                           ;                        ;                                ;
+;     -- Input Ports driven by GND            ; 0                      ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                      ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                      ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                      ; 0                              ;
+;     -- Input Ports with no Source           ; 0                      ; 0                              ;
+;     -- Output Ports with no Source          ; 0                      ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                      ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                      ; 0                              ;
++---------------------------------------------+------------------------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -322,9 +395,9 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; i_clock ; G10   ; 8        ; 20           ; 73           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; reset   ; AG4   ; 3        ; 9            ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; start   ; F7    ; 8        ; 9            ; 73           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; i_clock ; J1    ; 1        ; 0            ; 36           ; 7            ; 140                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; reset   ; V3    ; 2        ; 0            ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; start   ; C16   ; 7        ; 62           ; 73           ; 14           ; 77                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -333,22 +406,22 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; zigout[0]  ; AD14  ; 3        ; 56           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[10] ; AE24  ; 4        ; 100          ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[11] ; V21   ; 5        ; 115          ; 25           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[12] ; B11   ; 8        ; 42           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[13] ; Y7    ; 2        ; 0            ; 11           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[14] ; A8    ; 8        ; 18           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[15] ; AC11  ; 3        ; 49           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[1]  ; AE6   ; 3        ; 1            ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[2]  ; D18   ; 7        ; 85           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[3]  ; D9    ; 8        ; 23           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[4]  ; AG21  ; 4        ; 74           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[5]  ; U2    ; 2        ; 0            ; 30           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[6]  ; G14   ; 8        ; 47           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[7]  ; AF5   ; 3        ; 5            ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[8]  ; AC14  ; 3        ; 56           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[9]  ; M26   ; 6        ; 115          ; 46           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[0]  ; J19   ; 7        ; 72           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[10] ; J17   ; 7        ; 69           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[11] ; H16   ; 7        ; 65           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[12] ; G19   ; 7        ; 69           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[13] ; H17   ; 7        ; 67           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[14] ; D16   ; 7        ; 62           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[15] ; G20   ; 7        ; 74           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[1]  ; G22   ; 7        ; 72           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[2]  ; E17   ; 7        ; 67           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[3]  ; G18   ; 7        ; 69           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[4]  ; G16   ; 7        ; 67           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[5]  ; F17   ; 7        ; 67           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[6]  ; J16   ; 7        ; 65           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[7]  ; H19   ; 7        ; 72           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[8]  ; H21   ; 7        ; 72           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[9]  ; G15   ; 7        ; 65           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -370,27 +443,25 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; M22      ; MSEL2                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; P22      ; MSEL3                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; P28      ; DIFFIO_R23n, nCEO           ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
-; D18      ; DIFFIO_T50p, PADD2          ; Use as regular IO        ; zigout[2]               ; Dual Purpose Pin          ;
-; B11      ; DIFFIO_T25p, DATA3          ; Use as regular IO        ; zigout[12]              ; Dual Purpose Pin          ;
-; D9       ; DIFFIO_T14p, DATA8          ; Use as regular IO        ; zigout[3]               ; Dual Purpose Pin          ;
-; A8       ; DIFFIO_T11n, DATA9          ; Use as regular IO        ; zigout[14]              ; Dual Purpose Pin          ;
+; C16      ; DIFFIO_T36n, PADD9          ; Use as regular IO        ; start                   ; Dual Purpose Pin          ;
+; D16      ; DIFFIO_T36p, PADD10         ; Use as regular IO        ; zigout[14]              ; Dual Purpose Pin          ;
 +----------+-----------------------------+--------------------------+-------------------------+---------------------------+
 
 
-+----------------------------------------------------------+
-; I/O Bank Usage                                           ;
-+----------+----------------+---------------+--------------+
-; I/O Bank ; Usage          ; VCCIO Voltage ; VREF Voltage ;
-+----------+----------------+---------------+--------------+
-; 1        ; 4 / 56 ( 7 % ) ; 2.5V          ; --           ;
-; 2        ; 2 / 63 ( 3 % ) ; 2.5V          ; --           ;
-; 3        ; 6 / 73 ( 8 % ) ; 2.5V          ; --           ;
-; 4        ; 2 / 71 ( 3 % ) ; 2.5V          ; --           ;
-; 5        ; 1 / 65 ( 2 % ) ; 2.5V          ; --           ;
-; 6        ; 2 / 58 ( 3 % ) ; 2.5V          ; --           ;
-; 7        ; 1 / 72 ( 1 % ) ; 2.5V          ; --           ;
-; 8        ; 6 / 71 ( 8 % ) ; 2.5V          ; --           ;
-+----------+----------------+---------------+--------------+
++------------------------------------------------------------+
+; I/O Bank Usage                                             ;
++----------+------------------+---------------+--------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
++----------+------------------+---------------+--------------+
+; 1        ; 5 / 56 ( 9 % )   ; 2.5V          ; --           ;
+; 2        ; 1 / 63 ( 2 % )   ; 2.5V          ; --           ;
+; 3        ; 0 / 73 ( 0 % )   ; 2.5V          ; --           ;
+; 4        ; 0 / 71 ( 0 % )   ; 2.5V          ; --           ;
+; 5        ; 0 / 65 ( 0 % )   ; 2.5V          ; --           ;
+; 6        ; 1 / 58 ( 2 % )   ; 2.5V          ; --           ;
+; 7        ; 17 / 72 ( 24 % ) ; 2.5V          ; --           ;
+; 8        ; 0 / 71 ( 0 % )   ; 2.5V          ; --           ;
++----------+------------------+---------------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -404,7 +475,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; A5       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; A6       ; 504        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A7       ; 501        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A8       ; 517        ; 8        ; zigout[14]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A8       ; 517        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A9       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; A10      ; 491        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A11      ; 487        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -490,10 +561,10 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; AC8      ; 153        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC9      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC10     ; 174        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AC11     ; 185        ; 3        ; zigout[15]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC11     ; 185        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC12     ; 179        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC13     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AC14     ; 195        ; 3        ; zigout[8]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC14     ; 195        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC15     ; 203        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC16     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC17     ; 221        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -521,7 +592,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; AD11     ; 186        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD12     ; 182        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD13     ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; AD14     ; 196        ; 3        ; zigout[0]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD14     ; 196        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD15     ; 204        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD16     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AD17     ; 222        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -541,7 +612,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; AE3      ; 122        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AE4      ; 132        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE5      ; 135        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AE6      ; 129        ; 3        ; zigout[1]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE6      ; 129        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE7      ; 158        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE8      ; 161        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE9      ; 163        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -559,7 +630,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; AE21     ; 238        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE22     ; 251        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE23     ; 261        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AE24     ; 256        ; 4        ; zigout[10]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE24     ; 256        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE25     ; 243        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE26     ; 278        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AE27     ; 284        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -568,7 +639,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; AF2      ; 123        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AF3      ; 138        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF4      ; 131        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF5      ; 136        ; 3        ; zigout[7]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF5      ; 136        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF6      ; 139        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF7      ; 159        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF8      ; 162        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -595,7 +666,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; AG1      ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AG2      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG3      ; 133        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AG4      ; 141        ; 3        ; reset                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG4      ; 141        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG5      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG6      ; 145        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG7      ; 150        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -612,7 +683,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; AG18     ; 217        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG19     ; 219        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG20     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AG21     ; 223        ; 4        ; zigout[4]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG21     ; 223        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG22     ; 227        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG23     ; 229        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG24     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -656,7 +727,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; B8       ; 518        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B10      ; 492        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B11      ; 488        ; 8        ; zigout[12]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B11      ; 488        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B12      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B14      ; 473        ; 8        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -689,7 +760,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; C13      ; 474        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C14      ; 476        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C15      ; 468        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; C16      ; 460        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C16      ; 460        ; 7        ; start                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C17      ; 438        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C18      ; 429        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C19      ; 435        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -710,16 +781,16 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; D6       ; 524        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D7       ; 522        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D8       ; 520        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D9       ; 511        ; 8        ; zigout[3]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D9       ; 511        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D10      ; 496        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D11      ; 509        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D12      ; 479        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D13      ; 475        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D14      ; 477        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D15      ; 469        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D16      ; 461        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; D16      ; 461        ; 7        ; zigout[14]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D17      ; 439        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D18      ; 430        ; 7        ; zigout[2]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D18      ; 430        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D19      ; 436        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D20      ; 432        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D21      ; 419        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -746,7 +817,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; E14      ; 486        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E15      ; 467        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E16      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; E17      ; 456        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; E17      ; 456        ; 7        ; zigout[2]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E18      ; 427        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E19      ; 421        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E20      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -764,7 +835,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; F4       ; 10         ; 1        ; ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; F5       ; 9          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F6       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; F7       ; 531        ; 8        ; start                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F7       ; 531        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F8       ; 527        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F10      ; 512        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -774,7 +845,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; F14      ; 485        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F15      ; 466        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F16      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; F17      ; 455        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; F17      ; 455        ; 7        ; zigout[5]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F18      ; 428        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F19      ; 420        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F20      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -795,19 +866,19 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; G7       ; 530        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G8       ; 528        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G9       ; 525        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; G10      ; 513        ; 8        ; i_clock                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G10      ; 513        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G11      ; 506        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G12      ; 503        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; G13      ; 493        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; G14      ; 484        ; 8        ; zigout[6]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; G15      ; 457        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; G16      ; 453        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; G14      ; 484        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; G15      ; 457        ; 7        ; zigout[9]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G16      ; 453        ; 7        ; zigout[4]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G17      ; 437        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; G18      ; 452        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; G19      ; 451        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; G20      ; 444        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; G18      ; 452        ; 7        ; zigout[3]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G19      ; 451        ; 7        ; zigout[12]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G20      ; 444        ; 7        ; zigout[15]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G21      ; 445        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; G22      ; 449        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; G22      ; 449        ; 7        ; zigout[1]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G23      ; 398        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G24      ; 397        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G25      ; 393        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -829,12 +900,12 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; H13      ; 494        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H14      ; 480        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H15      ; 464        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; H16      ; 459        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; H17      ; 454        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; H16      ; 459        ; 7        ; zigout[11]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; H17      ; 454        ; 7        ; zigout[13]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H18      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; H19      ; 446        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; H19      ; 446        ; 7        ; zigout[7]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H20      ;            ;          ; GNDA2                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; H21      ; 448        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; H21      ; 448        ; 7        ; zigout[8]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H22      ; 399        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H23      ; 391        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H24      ; 390        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -842,7 +913,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; H26      ; 376        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H27      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H28      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; J1       ; 64         ; 1        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; J1       ; 64         ; 1        ; i_clock                                                   ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J3       ; 23         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J4       ; 22         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -857,10 +928,10 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; J13      ; 489        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; J14      ; 481        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; J15      ; 465        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; J16      ; 458        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; J17      ; 450        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; J16      ; 458        ; 7        ; zigout[6]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; J17      ; 450        ; 7        ; zigout[10]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J18      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; J19      ; 447        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; J19      ; 447        ; 7        ; zigout[0]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J20      ;            ;          ; VCCD_PLL2                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J21      ;            ; --       ; VCCA2                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; J22      ; 394        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -951,7 +1022,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; M23      ; 344        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M24      ; 347        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M25      ; 356        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; M26      ; 355        ; 6        ; zigout[9]                                                 ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M26      ; 355        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M27      ; 354        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M28      ; 353        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N1       ;            ; 1        ; VCCIO1                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -1067,7 +1138,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; T27      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T28      ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; U1       ; 80         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; U2       ; 79         ; 2        ; zigout[5]                                                 ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U2       ; 79         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U3       ; 71         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U4       ; 72         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U5       ; 90         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1096,7 +1167,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; U28      ; 317        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; V1       ; 84         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; V2       ; 83         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; V3       ; 82         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; V3       ; 82         ; 2        ; reset                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; V4       ; 81         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; V5       ; 108        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; V6       ; 107        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1114,7 +1185,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; V18      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V19      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; V20      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; V21      ; 311        ; 5        ; zigout[11]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; V21      ; 311        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; V22      ; 312        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; V23      ; 309        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; V24      ; 308        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1156,7 +1227,7 @@ The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Ziggura
 ; Y4       ; 91         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y5       ; 114        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y6       ; 113        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; Y7       ; 117        ; 2        ; zigout[13]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y7       ; 117        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y8       ;            ; --       ; VCCA1                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; Y9       ;            ;          ; VCCD_PLL1                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; Y10      ; 140        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -1187,9 +1258,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------+-------------------------------+
 ; Pin Name   ; Reason                        ;
 +------------+-------------------------------+
-; i_clock    ; Incomplete set of assignments ;
 ; reset      ; Incomplete set of assignments ;
-; start      ; Incomplete set of assignments ;
 ; zigout[0]  ; Incomplete set of assignments ;
 ; zigout[1]  ; Incomplete set of assignments ;
 ; zigout[2]  ; Incomplete set of assignments ;
@@ -1206,9 +1275,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; zigout[13] ; Incomplete set of assignments ;
 ; zigout[14] ; Incomplete set of assignments ;
 ; zigout[15] ; Incomplete set of assignments ;
-; i_clock    ; Missing location assignment   ;
+; i_clock    ; Incomplete set of assignments ;
+; start      ; Incomplete set of assignments ;
 ; reset      ; Missing location assignment   ;
-; start      ; Missing location assignment   ;
 ; zigout[0]  ; Missing location assignment   ;
 ; zigout[1]  ; Missing location assignment   ;
 ; zigout[2]  ; Missing location assignment   ;
@@ -1225,16 +1294,25 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; zigout[13] ; Missing location assignment   ;
 ; zigout[14] ; Missing location assignment   ;
 ; zigout[15] ; Missing location assignment   ;
+; i_clock    ; Missing location assignment   ;
+; start      ; Missing location assignment   ;
 +------------+-------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
-; |ZigVHDL                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 19   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ZigVHDL            ; ZigVHDL     ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                          ;
++-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                               ; Entity Name     ; Library Name ;
++-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+-----------------+--------------+
+; |ZigVHDL                                  ; 152 (103)   ; 137 (104)                 ; 0 (0)         ; 4096        ; 1    ; 2            ; 0       ; 1         ; 19   ; 0            ; 15 (0)       ; 86 (68)           ; 51 (35)          ; |ZigVHDL                                                                          ; ZigVHDL         ; work         ;
+;    |LFSR_33:c1|                           ; 33 (33)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 18 (18)           ; 15 (15)          ; |ZigVHDL|LFSR_33:c1                                                               ; LFSR_33         ; work         ;
+;    |d2Gen:c6|                             ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 1 (1)            ; |ZigVHDL|d2Gen:c6                                                                 ; d2Gen           ; work         ;
+;    |lpm_mult:Mult0|                       ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 2            ; 0       ; 1         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ZigVHDL|lpm_mult:Mult0                                                           ; lpm_mult        ; work         ;
+;       |mult_36t:auto_generated|           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 2            ; 0       ; 1         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ZigVHDL|lpm_mult:Mult0|mult_36t:auto_generated                                   ; mult_36t        ; work         ;
+;    |zigLUT:c3|                            ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ZigVHDL|zigLUT:c3                                                                ; zigLUT          ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ZigVHDL|zigLUT:c3|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;          |altsyncram_ujt3:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ZigVHDL|zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated ; altsyncram_ujt3 ; work         ;
++-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1243,9 +1321,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 ; Name       ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
 +------------+----------+---------------+---------------+-----------------------+-----+------+
-; i_clock    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; reset      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; start      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; zigout[0]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; zigout[1]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; zigout[2]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
@@ -1262,34 +1338,356 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; zigout[13] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; zigout[14] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; zigout[15] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; i_clock    ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; start      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+---------------------------------------------------+
-; Pad To Core Delay Chain Fanout                    ;
-+---------------------+-------------------+---------+
-; Source Pin / Fanout ; Pad To Core Index ; Setting ;
-+---------------------+-------------------+---------+
-; i_clock             ;                   ;         ;
-; reset               ;                   ;         ;
-; start               ;                   ;         ;
-+---------------------+-------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                                             ;
++----------------------------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                                          ; Pad To Core Index ; Setting ;
++----------------------------------------------------------------------------------------------+-------------------+---------+
+; reset                                                                                        ;                   ;         ;
+; i_clock                                                                                      ;                   ;         ;
+; start                                                                                        ;                   ;         ;
+;      - valid                                                                                 ; 0                 ; 6       ;
+;      - U1_6[15]                                                                              ; 0                 ; 6       ;
+;      - iplus[1]                                                                              ; 0                 ; 6       ;
+;      - iplus[2]                                                                              ; 0                 ; 6       ;
+;      - iplus[3]                                                                              ; 0                 ; 6       ;
+;      - iplus[4]                                                                              ; 0                 ; 6       ;
+;      - iplus[5]                                                                              ; 0                 ; 6       ;
+;      - iplus[6]                                                                              ; 0                 ; 6       ;
+;      - iplus[7]                                                                              ; 0                 ; 6       ;
+;      - zigout[0]~18                                                                          ; 0                 ; 6       ;
+;      - U1_2[0]                                                                               ; 0                 ; 6       ;
+;      - U1_2[1]                                                                               ; 0                 ; 6       ;
+;      - U1_2[3]                                                                               ; 0                 ; 6       ;
+;      - U1_2[4]                                                                               ; 0                 ; 6       ;
+;      - U1_2[7]                                                                               ; 0                 ; 6       ;
+;      - U1_2[2]                                                                               ; 0                 ; 6       ;
+;      - U1_2[5]                                                                               ; 0                 ; 6       ;
+;      - U1_2[6]                                                                               ; 0                 ; 6       ;
+;      - out1stage[0]~0                                                                        ; 0                 ; 6       ;
+;      - U1_5[15]                                                                              ; 0                 ; 6       ;
+;      - U1_1[0]                                                                               ; 0                 ; 6       ;
+;      - U1_1[1]                                                                               ; 0                 ; 6       ;
+;      - U1_1[3]                                                                               ; 0                 ; 6       ;
+;      - U1_1[4]                                                                               ; 0                 ; 6       ;
+;      - U1_1[7]                                                                               ; 0                 ; 6       ;
+;      - U1_1[2]                                                                               ; 0                 ; 6       ;
+;      - U1_1[5]                                                                               ; 0                 ; 6       ;
+;      - U1_1[6]                                                                               ; 0                 ; 6       ;
+;      - U1_4[15]                                                                              ; 0                 ; 6       ;
+;      - U1[0]                                                                                 ; 0                 ; 6       ;
+;      - U1[1]                                                                                 ; 0                 ; 6       ;
+;      - U1[2]                                                                                 ; 0                 ; 6       ;
+;      - U1[3]                                                                                 ; 0                 ; 6       ;
+;      - U1[4]                                                                                 ; 0                 ; 6       ;
+;      - U1[5]                                                                                 ; 0                 ; 6       ;
+;      - U1[6]                                                                                 ; 0                 ; 6       ;
+;      - U1[7]                                                                                 ; 0                 ; 6       ;
+;      - iplus[0]                                                                              ; 0                 ; 6       ;
+;      - U1_3[15]                                                                              ; 0                 ; 6       ;
+;      - U1_2[15]                                                                              ; 0                 ; 6       ;
+;      - U0_1[0]                                                                               ; 0                 ; 6       ;
+;      - U0_1[1]                                                                               ; 0                 ; 6       ;
+;      - U0_1[2]                                                                               ; 0                 ; 6       ;
+;      - U0_1[3]                                                                               ; 0                 ; 6       ;
+;      - U0_1[4]                                                                               ; 0                 ; 6       ;
+;      - U0_1[5]                                                                               ; 0                 ; 6       ;
+;      - U0_1[6]                                                                               ; 0                 ; 6       ;
+;      - U0_1[7]                                                                               ; 0                 ; 6       ;
+;      - U0_1[8]                                                                               ; 0                 ; 6       ;
+;      - U0_1[9]                                                                               ; 0                 ; 6       ;
+;      - U0_1[10]                                                                              ; 0                 ; 6       ;
+;      - U0_1[11]                                                                              ; 0                 ; 6       ;
+;      - U0_1[12]                                                                              ; 0                 ; 6       ;
+;      - U0_1[13]                                                                              ; 0                 ; 6       ;
+;      - U0_1[14]                                                                              ; 0                 ; 6       ;
+;      - U0_1[15]                                                                              ; 0                 ; 6       ;
+;      - U1_1[15]                                                                              ; 0                 ; 6       ;
+;      - U0[0]                                                                                 ; 0                 ; 6       ;
+;      - U0[1]                                                                                 ; 0                 ; 6       ;
+;      - U0[2]                                                                                 ; 0                 ; 6       ;
+;      - U0[3]                                                                                 ; 0                 ; 6       ;
+;      - U0[4]                                                                                 ; 0                 ; 6       ;
+;      - U0[5]                                                                                 ; 0                 ; 6       ;
+;      - U0[6]                                                                                 ; 0                 ; 6       ;
+;      - U0[7]                                                                                 ; 0                 ; 6       ;
+;      - U0[8]                                                                                 ; 0                 ; 6       ;
+;      - U0[9]                                                                                 ; 0                 ; 6       ;
+;      - U0[10]                                                                                ; 0                 ; 6       ;
+;      - U0[11]                                                                                ; 0                 ; 6       ;
+;      - U0[12]                                                                                ; 0                 ; 6       ;
+;      - U0[13]                                                                                ; 0                 ; 6       ;
+;      - U0[14]                                                                                ; 0                 ; 6       ;
+;      - U0[15]                                                                                ; 0                 ; 6       ;
+;      - U1[15]                                                                                ; 0                 ; 6       ;
+;      - lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                       ; 0                 ; 6       ;
+;      - lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                      ; 0                 ; 6       ;
+;      - zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|ram_block1a0 ; 0                 ; 6       ;
++----------------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+---------------------------------------------+
-; Routing Usage Summary                       ;
-+-----------------------+---------------------+
-; Routing Resource Type ; Usage               ;
-+-----------------------+---------------------+
-; Block interconnects   ; 0 / 342,891 ( 0 % ) ;
-; C16 interconnects     ; 0 / 10,120 ( 0 % )  ;
-; C4 interconnects      ; 0 / 209,544 ( 0 % ) ;
-; Direct links          ; 0 / 342,891 ( 0 % ) ;
-; Global clocks         ; 0 / 20 ( 0 % )      ;
-; Local interconnects   ; 0 / 119,088 ( 0 % ) ;
-; R24 interconnects     ; 0 / 9,963 ( 0 % )   ;
-; R4 interconnects      ; 0 / 289,782 ( 0 % ) ;
-+-----------------------+---------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                             ;
++----------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name           ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; i_clock        ; PIN_J1             ; 140     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; out1stage[0]~0 ; LCCOMB_X68_Y71_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; start          ; PIN_C16            ; 77      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; zigout[0]~18   ; LCCOMB_X68_Y71_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
++----------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                               ;
++---------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name    ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; i_clock ; PIN_J1   ; 140     ; 2                                    ; Global Clock         ; GCLK2            ; --                        ;
++---------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
++-------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------------------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
+; Name                                                                                ; Type ; Mode           ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF              ; Location       ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
++-------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------------------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
+; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; Single Clock ; 256          ; 16           ; 256          ; 16           ; yes                    ; no                      ; yes                    ; yes                     ; 4096 ; 256                         ; 16                          ; 256                         ; 16                          ; 4096                ; 1    ; Ziggurat_LUT.mif ; M9K_X64_Y71_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
++-------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------------------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
+Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
+
+
+RAM content values are presented in the following format: (Binary) (Octal) (Decimal) (Hexadecimal) 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |ZigVHDL|zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|ALTSYNCRAM                                                                                                                                                                     ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;   Addr   ;              +0              ;              +1              ;              +2              ;              +3              ;              +4              ;              +5              ;              +6              ;              +7              ;
++----------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
+;0;(1110100111011110) (164736) (59870) (E9DE)    ;(1110100111011110) (164736) (59870) (E9DE)   ;(1101110011000001) (156301) (56513) (DCC1)   ;(1101010001111111) (152177) (54399) (D47F)   ;(1100111001011111) (147137) (52831) (CE5F)   ;(1100100101110111) (144567) (51575) (C977)   ;(1100010101011000) (142530) (50520) (C558)   ;(1100000111001000) (140710) (49608) (C1C8)   ;
+;8;(1011111010100001) (137241) (48801) (BEA1)    ;(1011101111001101) (135715) (48077) (BBCD)   ;(1011100100111001) (134471) (47417) (B939)   ;(1011011011011011) (133333) (46811) (B6DB)   ;(1011010010101010) (132252) (46250) (B4AA)   ;(1011001010011110) (131236) (45726) (B29E)   ;(1011000010110011) (130263) (45235) (B0B3)   ;(1010111011100100) (127344) (44772) (AEE4)   ;
+;16;(1010110100101110) (126456) (44334) (AD2E)    ;(1010101110001110) (125616) (43918) (AB8E)   ;(1010101000000001) (125001) (43521) (AA01)   ;(1010100010000101) (124205) (43141) (A885)   ;(1010011100011001) (123431) (42777) (A719)   ;(1010010110111100) (122674) (42428) (A5BC)   ;(1010010001101011) (122153) (42091) (A46B)   ;(1010001100100110) (121446) (41766) (A326)   ;
+;24;(1010000111101101) (120755) (41453) (A1ED)    ;(1010000010111101) (120275) (41149) (A0BD)   ;(1001111110010111) (117627) (40855) (9F97)   ;(1001111001111001) (117171) (40569) (9E79)   ;(1001110101100100) (116544) (40292) (9D64)   ;(1001110001010110) (116126) (40022) (9C56)   ;(1001101101001111) (115517) (39759) (9B4F)   ;(1001101001001110) (115116) (39502) (9A4E)   ;
+;32;(1001100101010100) (114524) (39252) (9954)    ;(1001100001011111) (114137) (39007) (985F)   ;(1001011101110000) (113560) (38768) (9770)   ;(1001011010000111) (113207) (38535) (9687)   ;(1001010110100010) (112642) (38306) (95A2)   ;(1001010011000001) (112301) (38081) (94C1)   ;(1001001111100110) (111746) (37862) (93E6)   ;(1001001100001110) (111416) (37646) (930E)   ;
+;40;(1001001000111010) (111072) (37434) (923A)    ;(1001000101101010) (110552) (37226) (916A)   ;(1001000010011110) (110236) (37022) (909E)   ;(1000111111010101) (107725) (36821) (8FD5)   ;(1000111100001111) (107417) (36623) (8F0F)   ;(1000111001001101) (107115) (36429) (8E4D)   ;(1000110110001101) (106615) (36237) (8D8D)   ;(1000110011010001) (106321) (36049) (8CD1)   ;
+;48;(1000110000010111) (106027) (35863) (8C17)    ;(1000101101100000) (105540) (35680) (8B60)   ;(1000101010101011) (105253) (35499) (8AAB)   ;(1000100111111001) (104771) (35321) (89F9)   ;(1000100101001001) (104511) (35145) (8949)   ;(1000100010011011) (104233) (34971) (889B)   ;(1000011111110000) (103760) (34800) (87F0)   ;(1000011101000111) (103507) (34631) (8747)   ;
+;56;(1000011010011111) (103237) (34463) (869F)    ;(1000010111111010) (102772) (34298) (85FA)   ;(1000010101010110) (102526) (34134) (8556)   ;(1000010010110101) (102265) (33973) (84B5)   ;(1000010000010101) (102025) (33813) (8415)   ;(1000001101110111) (101567) (33655) (8377)   ;(1000001011011010) (101332) (33498) (82DA)   ;(1000001000111111) (101077) (33343) (823F)   ;
+;64;(1000000110100101) (100645) (33189) (81A5)    ;(1000000100001101) (100415) (33037) (810D)   ;(1000000001110111) (100167) (32887) (8077)   ;(0111111111100001) (77741) (32737) (7FE1)   ;(0111111101001110) (77516) (32590) (7F4E)   ;(0111111010111011) (77273) (32443) (7EBB)   ;(0111111000101010) (77052) (32298) (7E2A)   ;(0111110110011001) (76631) (32153) (7D99)   ;
+;72;(0111110100001011) (76413) (32011) (7D0B)    ;(0111110001111101) (76175) (31869) (7C7D)   ;(0111101111110000) (75760) (31728) (7BF0)   ;(0111101101100101) (75545) (31589) (7B65)   ;(0111101011011010) (75332) (31450) (7ADA)   ;(0111101001010001) (75121) (31313) (7A51)   ;(0111100111001000) (74710) (31176) (79C8)   ;(0111100101000000) (74500) (31040) (7940)   ;
+;80;(0111100010111010) (74272) (30906) (78BA)    ;(0111100000110100) (74064) (30772) (7834)   ;(0111011110101111) (73657) (30639) (77AF)   ;(0111011100101011) (73453) (30507) (772B)   ;(0111011010101000) (73250) (30376) (76A8)   ;(0111011000100110) (73046) (30246) (7626)   ;(0111010110100100) (72644) (30116) (75A4)   ;(0111010100100011) (72443) (29987) (7523)   ;
+;88;(0111010010100011) (72243) (29859) (74A3)    ;(0111010000100100) (72044) (29732) (7424)   ;(0111001110100101) (71645) (29605) (73A5)   ;(0111001100101000) (71450) (29480) (7328)   ;(0111001010101010) (71252) (29354) (72AA)   ;(0111001000101110) (71056) (29230) (722E)   ;(0111000110110010) (70662) (29106) (71B2)   ;(0111000100110110) (70466) (28982) (7136)   ;
+;96;(0111000010111011) (70273) (28859) (70BB)    ;(0111000001000001) (70101) (28737) (7041)   ;(0110111111000111) (67707) (28615) (6FC7)   ;(0110111101001110) (67516) (28494) (6F4E)   ;(0110111011010110) (67326) (28374) (6ED6)   ;(0110111001011110) (67136) (28254) (6E5E)   ;(0110110111100110) (66746) (28134) (6DE6)   ;(0110110101101111) (66557) (28015) (6D6F)   ;
+;104;(0110110011111000) (66370) (27896) (6CF8)    ;(0110110010000010) (66202) (27778) (6C82)   ;(0110110000001100) (66014) (27660) (6C0C)   ;(0110101110010111) (65627) (27543) (6B97)   ;(0110101100100010) (65442) (27426) (6B22)   ;(0110101010101101) (65255) (27309) (6AAD)   ;(0110101000111001) (65071) (27193) (6A39)   ;(0110100111000101) (64705) (27077) (69C5)   ;
+;112;(0110100101010010) (64522) (26962) (6952)    ;(0110100011011111) (64337) (26847) (68DF)   ;(0110100001101100) (64154) (26732) (686C)   ;(0110011111111010) (63772) (26618) (67FA)   ;(0110011110001000) (63610) (26504) (6788)   ;(0110011100010110) (63426) (26390) (6716)   ;(0110011010100100) (63244) (26276) (66A4)   ;(0110011000110011) (63063) (26163) (6633)   ;
+;120;(0110010111000010) (62702) (26050) (65C2)    ;(0110010101010010) (62522) (25938) (6552)   ;(0110010011100001) (62341) (25825) (64E1)   ;(0110010001110001) (62161) (25713) (6471)   ;(0110010000000001) (62001) (25601) (6401)   ;(0110001110010001) (61621) (25489) (6391)   ;(0110001100100010) (61442) (25378) (6322)   ;(0110001010110010) (61262) (25266) (62B2)   ;
+;128;(0110001001000011) (61103) (25155) (6243)    ;(0110000111010100) (60724) (25044) (61D4)   ;(0110000101100101) (60545) (24933) (6165)   ;(0110000011110111) (60367) (24823) (60F7)   ;(0110000010001000) (60210) (24712) (6088)   ;(0110000000011010) (60032) (24602) (601A)   ;(0101111110101011) (57653) (24491) (5FAB)   ;(0101111100111101) (57475) (24381) (5F3D)   ;
+;136;(0101111011001111) (57317) (24271) (5ECF)    ;(0101111001100001) (57141) (24161) (5E61)   ;(0101110111110011) (56763) (24051) (5DF3)   ;(0101110110000110) (56606) (23942) (5D86)   ;(0101110100011000) (56430) (23832) (5D18)   ;(0101110010101010) (56252) (23722) (5CAA)   ;(0101110000111101) (56075) (23613) (5C3D)   ;(0101101111001111) (55717) (23503) (5BCF)   ;
+;144;(0101101101100010) (55542) (23394) (5B62)    ;(0101101011110100) (55364) (23284) (5AF4)   ;(0101101010000111) (55207) (23175) (5A87)   ;(0101101000011001) (55031) (23065) (5A19)   ;(0101100110101100) (54654) (22956) (59AC)   ;(0101100100111110) (54476) (22846) (593E)   ;(0101100011010000) (54320) (22736) (58D0)   ;(0101100001100011) (54143) (22627) (5863)   ;
+;152;(0101011111110101) (53765) (22517) (57F5)    ;(0101011110001000) (53610) (22408) (5788)   ;(0101011100011010) (53432) (22298) (571A)   ;(0101011010101100) (53254) (22188) (56AC)   ;(0101011000111110) (53076) (22078) (563E)   ;(0101010111010000) (52720) (21968) (55D0)   ;(0101010101100010) (52542) (21858) (5562)   ;(0101010011110100) (52364) (21748) (54F4)   ;
+;160;(0101010010000101) (52205) (21637) (5485)    ;(0101010000010111) (52027) (21527) (5417)   ;(0101001110101000) (51650) (21416) (53A8)   ;(0101001100111001) (51471) (21305) (5339)   ;(0101001011001010) (51312) (21194) (52CA)   ;(0101001001011011) (51133) (21083) (525B)   ;(0101000111101011) (50753) (20971) (51EB)   ;(0101000101111100) (50574) (20860) (517C)   ;
+;168;(0101000100001100) (50414) (20748) (510C)    ;(0101000010011100) (50234) (20636) (509C)   ;(0101000000101100) (50054) (20524) (502C)   ;(0100111110111011) (47673) (20411) (4FBB)   ;(0100111101001010) (47512) (20298) (4F4A)   ;(0100111011011001) (47331) (20185) (4ED9)   ;(0100111001100111) (47147) (20071) (4E67)   ;(0100110111110110) (46766) (19958) (4DF6)   ;
+;176;(0100110110000100) (46604) (19844) (4D84)    ;(0100110100010001) (46421) (19729) (4D11)   ;(0100110010011110) (46236) (19614) (4C9E)   ;(0100110000101011) (46053) (19499) (4C2B)   ;(0100101110110111) (45667) (19383) (4BB7)   ;(0100101101000011) (45503) (19267) (4B43)   ;(0100101011001111) (45317) (19151) (4ACF)   ;(0100101001011010) (45132) (19034) (4A5A)   ;
+;184;(0100100111100101) (44745) (18917) (49E5)    ;(0100100101101111) (44557) (18799) (496F)   ;(0100100011111000) (44370) (18680) (48F8)   ;(0100100010000010) (44202) (18562) (4882)   ;(0100100000001010) (44012) (18442) (480A)   ;(0100011110010010) (43622) (18322) (4792)   ;(0100011100011010) (43432) (18202) (471A)   ;(0100011010100000) (43240) (18080) (46A0)   ;
+;192;(0100011000100111) (43047) (17959) (4627)    ;(0100010110101100) (42654) (17836) (45AC)   ;(0100010100110001) (42461) (17713) (4531)   ;(0100010010110101) (42265) (17589) (44B5)   ;(0100010000111001) (42071) (17465) (4439)   ;(0100001110111011) (41673) (17339) (43BB)   ;(0100001100111101) (41475) (17213) (433D)   ;(0100001010111110) (41276) (17086) (42BE)   ;
+;200;(0100001000111110) (41076) (16958) (423E)    ;(0100000110111101) (40675) (16829) (41BD)   ;(0100000100111100) (40474) (16700) (413C)   ;(0100000010111001) (40271) (16569) (40B9)   ;(0100000000110101) (40065) (16437) (4035)   ;(0011111110110001) (37661) (16305) (3FB1)   ;(0011111100101011) (37453) (16171) (3F2B)   ;(0011111010100100) (37244) (16036) (3EA4)   ;
+;208;(0011111000011100) (37034) (15900) (3E1C)    ;(0011110110010010) (36622) (15762) (3D92)   ;(0011110100001000) (36410) (15624) (3D08)   ;(0011110001111100) (36174) (15484) (3C7C)   ;(0011101111101110) (35756) (15342) (3BEE)   ;(0011101101100000) (35540) (15200) (3B60)   ;(0011101011001111) (35317) (15055) (3ACF)   ;(0011101000111101) (35075) (14909) (3A3D)   ;
+;216;(0011100110101010) (34652) (14762) (39AA)    ;(0011100100010100) (34424) (14612) (3914)   ;(0011100001111101) (34175) (14461) (387D)   ;(0011011111100100) (33744) (14308) (37E4)   ;(0011011101001000) (33510) (14152) (3748)   ;(0011011010101011) (33253) (13995) (36AB)   ;(0011011000001011) (33013) (13835) (360B)   ;(0011010101101001) (32551) (13673) (3569)   ;
+;224;(0011010011000101) (32305) (13509) (34C5)    ;(0011010000011110) (32036) (13342) (341E)   ;(0011001101110100) (31564) (13172) (3374)   ;(0011001011000111) (31307) (12999) (32C7)   ;(0011001000010110) (31026) (12822) (3216)   ;(0011000101100011) (30543) (12643) (3163)   ;(0011000010101100) (30254) (12460) (30AC)   ;(0010111111110001) (27761) (12273) (2FF1)   ;
+;232;(0010111100110001) (27461) (12081) (2F31)    ;(0010111001101110) (27156) (11886) (2E6E)   ;(0010110110100101) (26645) (11685) (2DA5)   ;(0010110011011000) (26330) (11480) (2CD8)   ;(0010110000000100) (26004) (11268) (2C04)   ;(0010101100101011) (25453) (11051) (2B2B)   ;(0010101001001011) (25113) (10827) (2A4B)   ;(0010100101100011) (24543) (10595) (2963)   ;
+;240;(0010100001110100) (24164) (10356) (2874)    ;(0010011101111011) (23573) (10107) (277B)   ;(0010011001111000) (23170) (9848) (2678)   ;(0010010101101010) (22552) (9578) (256A)   ;(0010010001001111) (22117) (9295) (244F)   ;(0010001100100101) (21445) (8997) (2325)   ;(0010000111101010) (20752) (8682) (21EA)   ;(0010000010011010) (20232) (8346) (209A)   ;
+;248;(0001111100110010) (17462) (7986) (1F32)    ;(0001110110101100) (16654) (7596) (1DAC)   ;(0001110000000000) (16000) (7168) (1C00)   ;(0001101000100011) (15043) (6691) (1A23)   ;(0001100000000010) (14002) (6146) (1802)   ;(0001010101111101) (12575) (5501) (157D)   ;(0001001001010001) (11121) (4689) (1251)   ;(0000110111000111) (6707) (3527) (DC7)   ;
+
+
++-----------------------------------------------------------------------------------------------+
+; Fitter DSP Block Usage Summary                                                                ;
++---------------------------------------+-------------+---------------------+-------------------+
+; Statistic                             ; Number Used ; Available per Block ; Maximum Available ;
++---------------------------------------+-------------+---------------------+-------------------+
+; Simple Multipliers (9-bit)            ; 0           ; 2                   ; 532               ;
+; Simple Multipliers (18-bit)           ; 1           ; 1                   ; 266               ;
+; Embedded Multiplier Blocks            ; 1           ; --                  ; 266               ;
+; Embedded Multiplier 9-bit elements    ; 2           ; 2                   ; 532               ;
+; Signed Embedded Multipliers           ; 1           ; --                  ; --                ;
+; Unsigned Embedded Multipliers         ; 0           ; --                  ; --                ;
+; Mixed Sign Embedded Multipliers       ; 0           ; --                  ; --                ;
+; Variable Sign Embedded Multipliers    ; 0           ; --                  ; --                ;
+; Dedicated Input Shift Register Chains ; 0           ; --                  ; --                ;
++---------------------------------------+-------------+---------------------+-------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; DSP Block Details                                                                                                                                                                                                                                  ;
++-----------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
+; Name                                                ; Mode                       ; Location           ; Sign Representation ; Has Input Shift Register Chain ; Data A Input Register ; Data B Input Register ; Pipeline Register ; Output Register ;
++-----------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
+; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2     ; Simple Multiplier (18-bit) ; DSPOUT_X71_Y71_N2  ;                     ; No                             ;                       ;                       ;                   ; yes             ;
+;    lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1 ;                            ; DSPMULT_X71_Y71_N0 ; Signed              ;                                ; no                    ; yes                   ; no                ;                 ;
++-----------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
+
+
++-------------------------------------------------+
+; Routing Usage Summary                           ;
++-----------------------+-------------------------+
+; Routing Resource Type ; Usage                   ;
++-----------------------+-------------------------+
+; Block interconnects   ; 175 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 1 / 10,120 ( < 1 % )    ;
+; C4 interconnects      ; 36 / 209,544 ( < 1 % )  ;
+; Direct links          ; 30 / 342,891 ( < 1 % )  ;
+; Global clocks         ; 1 / 20 ( 5 % )          ;
+; Local interconnects   ; 69 / 119,088 ( < 1 % )  ;
+; R24 interconnects     ; 1 / 9,963 ( < 1 % )     ;
+; R4 interconnects      ; 147 / 289,782 ( < 1 % ) ;
++-----------------------+-------------------------+
+
+
++----------------------------------------------------------------------------+
+; LAB Logic Elements                                                         ;
++---------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 15.20) ; Number of LABs  (Total = 10) ;
++---------------------------------------------+------------------------------+
+; 1                                           ; 0                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 1                            ;
+; 16                                          ; 7                            ;
++---------------------------------------------+------------------------------+
+
+
++-------------------------------------------------------------------+
+; LAB-wide Signals                                                  ;
++------------------------------------+------------------------------+
+; LAB-wide Signals  (Average = 1.90) ; Number of LABs  (Total = 10) ;
++------------------------------------+------------------------------+
+; 1 Clock                            ; 10                           ;
+; 1 Clock enable                     ; 9                            ;
++------------------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB Signals Sourced                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Signals Sourced  (Average = 24.70) ; Number of LABs  (Total = 10) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 1                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 0                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 0                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 1                            ;
+; 27                                           ; 2                            ;
+; 28                                           ; 2                            ;
+; 29                                           ; 2                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 1                            ;
++----------------------------------------------+------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++-------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 9.30) ; Number of LABs  (Total = 10) ;
++-------------------------------------------------+------------------------------+
+; 0                                               ; 0                            ;
+; 1                                               ; 0                            ;
+; 2                                               ; 1                            ;
+; 3                                               ; 0                            ;
+; 4                                               ; 1                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 0                            ;
+; 8                                               ; 2                            ;
+; 9                                               ; 1                            ;
+; 10                                              ; 0                            ;
+; 11                                              ; 0                            ;
+; 12                                              ; 0                            ;
+; 13                                              ; 0                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 0                            ;
+; 16                                              ; 1                            ;
+; 17                                              ; 1                            ;
+; 18                                              ; 1                            ;
++-------------------------------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 11.50) ; Number of LABs  (Total = 10) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 2                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 0                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 0                            ;
+; 33                                           ; 0                            ;
+; 34                                           ; 1                            ;
++----------------------------------------------+------------------------------+
 
 
 +------------------------------------------+
@@ -1353,9 +1751,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; Total Inapplicable ; 19           ; 19           ; 19           ; 19           ; 19           ; 0         ; 19           ; 19           ; 0         ; 0         ; 19           ; 3            ; 19           ; 19           ; 16           ; 19           ; 3            ; 16           ; 19           ; 19           ; 19           ; 3            ; 19           ; 19           ; 19           ; 19           ; 19           ; 0         ; 19           ; 19           ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; i_clock            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; reset              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; start              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; zigout[0]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; zigout[1]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; zigout[2]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1372,6 +1768,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; zigout[13]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; zigout[14]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; zigout[15]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; i_clock            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; start              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -1411,6 +1809,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
++------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary              ;
++-----------------+----------------------+-------------------+
+; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
++-----------------+----------------------+-------------------+
+Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
+This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                  ;
++-----------------+----------------------------------------------------------------------------------------------------------+-------------------+
+; Source Register ; Destination Register                                                                                     ; Delay Added in ns ;
++-----------------+----------------------------------------------------------------------------------------------------------+-------------------+
+; iplus[0]        ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|ram_block1a0~portb_address_reg0 ; 0.240             ;
+; U1[0]           ; zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|ram_block1a0~porta_address_reg0 ; 0.239             ;
++-----------------+----------------------------------------------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 2 path(s) that have the largest delay added for hold.
+
+
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
@@ -1419,6 +1837,8 @@ Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors
 Info (119006): Selected device EP4CE115F29C7 for design "ZigVHDL"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
+Warning (18550): Found RAM instances implemented as ROM because the write logic is disabled. One instance is listed below as an example.
+    Info (119043): Atom "zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|ram_block1a15" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
@@ -1438,23 +1858,26 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_DATA0~ is reserved at location N7
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location P28
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Critical Warning (169085): No exact pin location assignment(s) for 19 pins of 19 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ZigVHDL.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info (176353): Automatically promoted node i_clock~input (placed in PIN J1 (CLK1, DIFFCLK_0n)) File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 8
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
 Info (176233): Starting register packing
 Info (176235): Finished register packing
-    Extra Info (176219): No registers were packed into other blocks
+    Extra Info (176218): Packed 16 registers into blocks of type Block RAM
+    Extra Info (176218): Packed 16 registers into blocks of type Embedded multiplier block
+    Extra Info (176218): Packed 16 registers into blocks of type Embedded multiplier output
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 19 (unused VREF, 2.5V VCCIO, 3 input, 16 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 18 (unused VREF, 2.5V VCCIO, 2 input, 16 output, 0 bidirectional)
         Info (176212): I/O standards used: 2.5 V.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  52 pins available
+        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 5 total pin(s) used --  51 pins available
         Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  63 pins available
         Info (176213): I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  73 pins available
         Info (176213): I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  71 pins available
@@ -1468,26 +1891,25 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:08
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y24 to location X10_Y36
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X58_Y61 to location X68_Y73
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-    Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.02 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/output_files/ZigVHDL.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5824 megabytes
-    Info: Processing ended: Mon May 02 15:33:48 2022
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Peak virtual memory: 5944 megabytes
+    Info: Processing ended: Tue May 03 15:40:58 2022
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +----------------------------+
