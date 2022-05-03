@@ -71,8 +71,10 @@ end
 function [coeff] = chi2corr_2(sample, num_of_samples)
 x = sample;
 N = num_of_samples;
-constant = sfi(sqrt(2*N-1), 16, 8);
-coeff = sfi((x + constant)^2, 16, 3);
-coeff = sfi(coeff/2, 16, 4);
-coeff = sfi(sqrt(coeff/N), 16, 14);
+constant = ufi(45.243784103454470, 16, 10);
+coeff_tmp = ufi((x + constant), 16, 10);
+coeff_tmp = ufi(coeff_tmp^2, 16, 4);
+coeff_tmp = ufi(coeff_tmp/2, 16, 5);
+coeff_tmp = ufi((coeff_tmp/N), 16, 15);
+coeff = ufi(sqrt(coeff_tmp), 16, 15);
 end
