@@ -1,7 +1,7 @@
-function [outputArg1,outputArg2] = LFSR_VHDL_GEN(n,Seed,skips)
+function [] = LFSR_VHDL_GEN(n,Seed,skips)
 % Function that generates the LFSR VHDL code and the Test Bench.
 
-FB = readcell('LFSR Feedback Table.xlsx');% import table of Feedback for 3- to 168-bit LFSR
+load('FeedBackCoefs.mat');% import table of Feedback for 3- to 168-bit LFSR
 
 Seedint = int2bit(uint64(Seed),n);
 coef = str2num(cell2mat(FB(n-2,2)));% coefficients for n-bit LFSR
@@ -32,8 +32,6 @@ file_name = strcat('LFSR_',num2str(n));
 mkdir('VHDL/',file_name);
 dirName = strcat('VHDL/',file_name);
 fid1 = fopen(fullfile(dirName,append(file_name,'.vhd')),'wt');
-fid2 = fopen(fullfile(dirName,append(file_name,'.qpf')),'wt');
-fclose(fid2);
 fprintf(fid1,'--Linear Feedback Shift Register with %d skip-ahead.\n',skips);
 % VHDL Port Setup
 fprintf(fid1,'Library ieee;\nUse ieee.std_logic_1164.all;\n');
