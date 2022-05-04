@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ZigVHDL
-Tue May 03 15:40:21 2022
+Wed May 04 14:08:50 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -26,11 +26,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  18. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
  19. altsyncram Parameter Settings by Entity Instance
  20. lpm_mult Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "d5Gen:c7"
- 22. Port Connectivity Checks: "LFSR_33:c1"
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+ 21. Port Connectivity Checks: "d4Gen:c5"
+ 22. Port Connectivity Checks: "zigLUT:c3"
+ 23. Port Connectivity Checks: "LFSR_33:c1"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -56,15 +57,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 03 15:40:21 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 04 14:08:50 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ZigVHDL                                     ;
 ; Top-level Entity Name              ; ZigVHDL                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 209                                         ;
+; Total logic elements               ; 224                                         ;
 ;     Total combinational functions  ; 66                                          ;
-;     Dedicated logic registers      ; 185                                         ;
-; Total registers                    ; 185                                         ;
+;     Dedicated logic registers      ; 202                                         ;
+; Total registers                    ; 202                                         ;
 ; Total pins                         ; 19                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
@@ -214,7 +215,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 209           ;
+; Estimated Total logic elements              ; 224           ;
 ;                                             ;               ;
 ; Total combinational functions               ; 66            ;
 ; Logic element usage by number of LUT inputs ;               ;
@@ -226,8 +227,8 @@ refer to the applicable agreement for further details.
 ;     -- normal mode                          ; 30            ;
 ;     -- arithmetic mode                      ; 36            ;
 ;                                             ;               ;
-; Total registers                             ; 185           ;
-;     -- Dedicated logic registers            ; 185           ;
+; Total registers                             ; 202           ;
+;     -- Dedicated logic registers            ; 202           ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
 ; I/O pins                                    ; 19            ;
@@ -236,9 +237,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 2             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; i_clock~input ;
-; Maximum fan-out                             ; 201           ;
-; Total fan-out                               ; 1041          ;
-; Average fan-out                             ; 3.39          ;
+; Maximum fan-out                             ; 218           ;
+; Total fan-out                               ; 1092          ;
+; Average fan-out                             ; 3.37          ;
 +---------------------------------------------+---------------+
 
 
@@ -247,8 +248,9 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
-; |ZigVHDL                                  ; 66 (35)             ; 185 (152)                 ; 4096        ; 2            ; 0       ; 1         ; 19   ; 0            ; |ZigVHDL                                                                          ; ZigVHDL         ; work         ;
+; |ZigVHDL                                  ; 66 (32)             ; 202 (169)                 ; 4096        ; 2            ; 0       ; 1         ; 19   ; 0            ; |ZigVHDL                                                                          ; ZigVHDL         ; work         ;
 ;    |LFSR_33:c1|                           ; 15 (15)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|LFSR_33:c1                                                               ; LFSR_33         ; work         ;
+;    |d1Gen:c2|                             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d1Gen:c2                                                                 ; d1Gen           ; work         ;
 ;    |d2Gen:c6|                             ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d2Gen:c6                                                                 ; d2Gen           ; work         ;
 ;    |lpm_mult:Mult0|                       ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0                                                           ; lpm_mult        ; work         ;
 ;       |mult_36t:auto_generated|           ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0|mult_36t:auto_generated                                   ; mult_36t        ; work         ;
@@ -295,73 +297,51 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------+--------------+---------+--------------+--------------+--------------------+-----------------+
 
 
-+--------------------------------------------------------------+
-; Registers Removed During Synthesis                           ;
-+----------------------------------------+---------------------+
-; Register name                          ; Reason for Removal  ;
-+----------------------------------------+---------------------+
-; i_2[7]                                 ; Merged with U1_2[7] ;
-; i_2[2]                                 ; Merged with U1_2[2] ;
-; i_2[1]                                 ; Merged with U1_2[1] ;
-; i_2[0]                                 ; Merged with U1_2[0] ;
-; i_1[7]                                 ; Merged with U1_1[7] ;
-; i_1[6]                                 ; Merged with U1_1[6] ;
-; i_1[2]                                 ; Merged with U1_1[2] ;
-; i_1[1]                                 ; Merged with U1_1[1] ;
-; i_1[0]                                 ; Merged with U1_1[0] ;
-; i[0]                                   ; Merged with U1[0]   ;
-; i[1]                                   ; Merged with U1[1]   ;
-; i[2]                                   ; Merged with U1[2]   ;
-; i[3]                                   ; Merged with U1[3]   ;
-; i[7]                                   ; Merged with U1[7]   ;
-; i_2[6]                                 ; Merged with U1_2[6] ;
-; i[6]                                   ; Merged with U1[6]   ;
-; i[5]                                   ; Merged with U1[5]   ;
-; i_1[5]                                 ; Merged with U1_1[5] ;
-; i_1[4]                                 ; Merged with U1_1[4] ;
-; i_2[5]                                 ; Merged with U1_2[5] ;
-; i_2[4]                                 ; Merged with U1_2[4] ;
-; i[4]                                   ; Merged with U1[4]   ;
-; i_1[3]                                 ; Merged with U1_1[3] ;
-; i_2[3]                                 ; Merged with U1_2[3] ;
-; U1_2[14]                               ; Lost fanout         ;
-; U1_1[14]                               ; Lost fanout         ;
-; U1[14]                                 ; Lost fanout         ;
-; U1_2[13]                               ; Lost fanout         ;
-; U1_1[13]                               ; Lost fanout         ;
-; U1[13]                                 ; Lost fanout         ;
-; U1_2[12]                               ; Lost fanout         ;
-; U1_1[12]                               ; Lost fanout         ;
-; U1[12]                                 ; Lost fanout         ;
-; U1_2[11]                               ; Lost fanout         ;
-; U1_1[11]                               ; Lost fanout         ;
-; U1[11]                                 ; Lost fanout         ;
-; U1_2[10]                               ; Lost fanout         ;
-; U1_1[10]                               ; Lost fanout         ;
-; U1[10]                                 ; Lost fanout         ;
-; U1_2[9]                                ; Lost fanout         ;
-; U1_1[9]                                ; Lost fanout         ;
-; U1[9]                                  ; Lost fanout         ;
-; U1_2[8]                                ; Lost fanout         ;
-; U1_1[8]                                ; Lost fanout         ;
-; U1[8]                                  ; Lost fanout         ;
-; Total Number of Removed Registers = 45 ;                     ;
-+----------------------------------------+---------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; Y[0..15]                               ; Stuck at GND due to stuck port data_in ;
+; fx[0..15]                              ; Stuck at GND due to stuck port data_in ;
+; i_2[7]                                 ; Merged with U1_2[7]                    ;
+; i_2[2]                                 ; Merged with U1_2[2]                    ;
+; i_2[1]                                 ; Merged with U1_2[1]                    ;
+; i_2[0]                                 ; Merged with U1_2[0]                    ;
+; i_1[7]                                 ; Merged with U1_1[7]                    ;
+; i_1[6]                                 ; Merged with U1_1[6]                    ;
+; i_1[2]                                 ; Merged with U1_1[2]                    ;
+; i_1[1]                                 ; Merged with U1_1[1]                    ;
+; i_1[0]                                 ; Merged with U1_1[0]                    ;
+; i[7]                                   ; Merged with U1[7]                      ;
+; i[6]                                   ; Merged with U1[6]                      ;
+; i[2]                                   ; Merged with U1[2]                      ;
+; i[1]                                   ; Merged with U1[1]                      ;
+; i[0]                                   ; Merged with U1[0]                      ;
+; i_2[6]                                 ; Merged with U1_2[6]                    ;
+; i[5]                                   ; Merged with U1[5]                      ;
+; i[4]                                   ; Merged with U1[4]                      ;
+; i_1[5]                                 ; Merged with U1_1[5]                    ;
+; i_1[4]                                 ; Merged with U1_1[4]                    ;
+; i_2[5]                                 ; Merged with U1_2[5]                    ;
+; i_2[4]                                 ; Merged with U1_2[4]                    ;
+; i[3]                                   ; Merged with U1[3]                      ;
+; i_1[3]                                 ; Merged with U1_1[3]                    ;
+; i_2[3]                                 ; Merged with U1_2[3]                    ;
+; D4_1                                   ; Stuck at GND due to stuck port data_in ;
+; D3_1                                   ; Lost fanout                            ;
+; Total Number of Removed Registers = 58 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                 ;
-+---------------+--------------------+----------------------------------------+
-; Register name ; Reason for Removal ; Registers Removed due to This Register ;
-+---------------+--------------------+----------------------------------------+
-; U1_2[14]      ; Lost Fanouts       ; U1_1[14], U1[14]                       ;
-; U1_2[13]      ; Lost Fanouts       ; U1_1[13], U1[13]                       ;
-; U1_2[12]      ; Lost Fanouts       ; U1_1[12], U1[12]                       ;
-; U1_2[11]      ; Lost Fanouts       ; U1_1[11], U1[11]                       ;
-; U1_2[10]      ; Lost Fanouts       ; U1_1[10], U1[10]                       ;
-; U1_2[9]       ; Lost Fanouts       ; U1_1[9], U1[9]                         ;
-; U1_2[8]       ; Lost Fanouts       ; U1_1[8], U1[8]                         ;
-+---------------+--------------------+----------------------------------------+
++------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                        ;
++---------------+---------------------------+----------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------+---------------------------+----------------------------------------+
+; Y[15]         ; Stuck at GND              ; D3_1                                   ;
+;               ; due to stuck port data_in ;                                        ;
++---------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -369,12 +349,12 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 185   ;
+; Total registers                              ; 202   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 152   ;
+; Number of registers using Clock Enable       ; 169   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -545,13 +525,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------+
-; Port Connectivity Checks: "d5Gen:c7"   ;
+; Port Connectivity Checks: "d4Gen:c5"   ;
 +------+-------+----------+--------------+
 ; Port ; Type  ; Severity ; Details      ;
 +------+-------+----------+--------------+
-; yin  ; Input ; Info     ; Stuck at GND ;
-; fxin ; Input ; Info     ; Stuck at GND ;
+; ain  ; Input ; Info     ; Stuck at GND ;
 +------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "zigLUT:c3"    ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; data_a ; Input ; Info     ; Stuck at GND ;
+; data_b ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -569,8 +558,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 19                          ;
-; cycloneiii_ff         ; 185                         ;
-;     ENA               ; 152                         ;
+; cycloneiii_ff         ; 202                         ;
+;     ENA               ; 169                         ;
 ;     plain             ; 33                          ;
 ; cycloneiii_lcell_comb ; 66                          ;
 ;     arith             ; 36                          ;
@@ -587,7 +576,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.50                        ;
-; Average LUT depth     ; 1.11                        ;
+; Average LUT depth     ; 0.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -606,7 +595,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 03 15:39:54 2022
+    Info: Processing started: Wed May 04 14:08:22 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ZigVHDL -c ZigVHDL
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -635,20 +624,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file d5gen.v
     Info (12022): Found design unit 1: d5Gen-Behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 15
     Info (12023): Found entity 1: d5Gen File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 6
 Info (12127): Elaborating entity "ZigVHDL" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(100): used implicit default value for signal "da" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 100
-Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(101): used implicit default value for signal "db" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 101
-Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(103): used implicit default value for signal "ea" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 103
-Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(104): used implicit default value for signal "eb" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 104
-Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(106): used implicit default value for signal "A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 106
-Warning (10543): VHDL Variable Declaration warning at ZigVHDL.vhd(141): used default initial value for variable "GRAD" because variable was never assigned a value or an initial value expression. Use of default initial value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 141
-Warning (10543): VHDL Variable Declaration warning at ZigVHDL.vhd(144): used default initial value for variable "YmaxMinus1" because variable was never assigned a value or an initial value expression. Use of default initial value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 144
-Warning (10543): VHDL Variable Declaration warning at ZigVHDL.vhd(145): used default initial value for variable "YmYmminus1" because variable was never assigned a value or an initial value expression. Use of default initial value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 145
-Warning (10873): Using initial value X (don't care) for net "fx" at ZigVHDL.vhd(107) File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 107
-Warning (10873): Using initial value X (don't care) for net "Y" at ZigVHDL.vhd(109) File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 109
-Info (12128): Elaborating entity "LFSR_33" for hierarchy "LFSR_33:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 129
-Info (12128): Elaborating entity "d1Gen" for hierarchy "d1Gen:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 130
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(85): object "U0_2" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 85
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(93): object "U1_6" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 93
+Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(101): used explicit default value for signal "da" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 101
+Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(102): used explicit default value for signal "db" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 102
+Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(104): used implicit default value for signal "ea" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 104
+Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(105): used implicit default value for signal "eb" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 105
+Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(107): used explicit default value for signal "A" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 107
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(149): used initial value expression for variable "GRAD" because variable was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 149
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(152): used initial value expression for variable "YmaxMinus1" because variable was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 152
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(153): used initial value expression for variable "YmYmminus1" because variable was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 153
+Info (12128): Elaborating entity "LFSR_33" for hierarchy "LFSR_33:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 137
+Info (12128): Elaborating entity "d1Gen" for hierarchy "d1Gen:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 138
 Warning (10492): VHDL Process Statement warning at d1Gen.vhd(22): signal "Iin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd Line: 22
-Info (12128): Elaborating entity "zigLUT" for hierarchy "zigLUT:c3" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 131
+Info (12128): Elaborating entity "zigLUT" for hierarchy "zigLUT:c3" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 139
 Info (12128): Elaborating entity "altsyncram" for hierarchy "zigLUT:c3|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 67
 Info (12130): Elaborated megafunction instantiation "zigLUT:c3|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 67
 Info (12133): Instantiated megafunction "zigLUT:c3|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 67
@@ -705,21 +694,21 @@ Info (12133): Instantiated megafunction "zigLUT:c3|altsyncram:altsyncram_compone
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ujt3.tdf
     Info (12023): Found entity 1: altsyncram_ujt3 File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/altsyncram_ujt3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_ujt3" for hierarchy "zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "d3Gen" for hierarchy "d3Gen:c4" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 132
+Info (12128): Elaborating entity "d3Gen" for hierarchy "d3Gen:c4" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 140
 Warning (10492): VHDL Process Statement warning at d3Gen.vhd(22): signal "Iin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd Line: 22
-Info (12128): Elaborating entity "d4Gen" for hierarchy "d4Gen:c5" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 133
+Info (12128): Elaborating entity "d4Gen" for hierarchy "d4Gen:c5" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 141
 Warning (10492): VHDL Process Statement warning at d4Gen.vhd(23): signal "U1in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd Line: 23
 Warning (10492): VHDL Process Statement warning at d4Gen.vhd(23): signal "Ain" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd Line: 23
-Info (12128): Elaborating entity "d2Gen" for hierarchy "d2Gen:c6" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 134
+Info (12128): Elaborating entity "d2Gen" for hierarchy "d2Gen:c6" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 142
 Warning (10492): VHDL Process Statement warning at d2Gen.vhd(23): signal "Xuin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd Line: 23
 Warning (10492): VHDL Process Statement warning at d2Gen.vhd(23): signal "Xiplusin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd Line: 23
-Info (12128): Elaborating entity "d5Gen" for hierarchy "d5Gen:c7" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 135
+Info (12128): Elaborating entity "d5Gen" for hierarchy "d5Gen:c7" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 143
 Warning (10492): VHDL Process Statement warning at d5Gen.vhd(23): signal "Yin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 23
 Warning (10492): VHDL Process Statement warning at d5Gen.vhd(23): signal "Fxin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 23
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 173
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 173
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 173
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 181
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 181
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 181
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "16"
     Info (12134): Parameter "LPM_WIDTHP" = "32"
@@ -732,21 +721,21 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following para
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_36t.tdf
     Info (12023): Found entity 1: mult_36t File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/mult_36t.tdf Line: 28
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 21 registers lost all their fanouts during netlist optimizations.
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 9
-Info (21057): Implemented 246 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 261 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 209 logic cells
+    Info (21061): Implemented 224 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4816 megabytes
-    Info: Processing ended: Tue May 03 15:40:21 2022
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Wed May 04 14:08:50 2022
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:22
 
 

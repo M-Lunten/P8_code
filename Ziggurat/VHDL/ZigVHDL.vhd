@@ -80,39 +80,42 @@ end component;
 
 	
 	signal genU : std_logic_vector(32 downto 0);
-	signal U0 : std_logic_vector(15 downto 0);
-	signal U0_1 : std_logic_vector(15 downto 0);
-	signal U0_2 : std_logic_vector(15 downto 0);
+	signal U0 : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal U0_1 : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal U0_2 : std_logic_vector(15 downto 0) := "0000000000000000";
 	
-	signal U1 : std_logic_vector(15 downto 0);
-	signal U1_1 : std_logic_vector(15 downto 0);
-	signal U1_2 : std_logic_vector(15 downto 0);
-	signal U1_3 : std_logic_vector(15 downto 0);
-	signal U1_4 : std_logic_vector(15 downto 0);
-	signal U1_5 : std_logic_vector(15 downto 0);
-	signal U1_6 : std_logic_vector(15 downto 0);
+	signal U1 : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal U1_1 : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal U1_2 : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal U1_3 : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal U1_4 : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal U1_5 : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal U1_6 : std_logic_vector(15 downto 0) := "0000000000000000";
 	
 	signal i : std_logic_vector(7 downto 0) := "00000000";
-	signal i_1 : std_logic_vector(7 downto 0);
-	signal i_2 : std_logic_vector(7 downto 0);
+	signal i_1 : std_logic_vector(7 downto 0) := "00000000";
+	signal i_2 : std_logic_vector(7 downto 0) := "00000000";
+	
 	signal iplus : std_logic_vector(7 downto 0) := "00000000";
 	
-	signal da : std_logic_vector(15 downto 0);
-	signal db : std_logic_vector(15 downto 0);
+	signal da : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal db : std_logic_vector(15 downto 0) := "0000000000000000";
 	
 	signal ea : std_logic;
 	signal eb : std_logic;
 	
-	signal A : std_logic_vector(15 downto 0);
-	signal fx : std_logic_vector(15 downto 0);
+	signal A : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal fx : std_logic_vector(15 downto 0) := "0000000000000000";
 	
-	signal Y : std_logic_vector(15 downto 0);
+	signal Y : std_logic_vector(15 downto 0) := "0000000000000000";
 	
-	signal xi : std_logic_vector(15 downto 0);
-	signal xiplus : std_logic_vector(15 downto 0);
-	signal xiplus_1 : std_logic_vector(15 downto 0);
+	signal xi : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal xiplus : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal xiplus_1 : std_logic_vector(15 downto 0) := "0000000000000000";
 	
-	signal xu : std_logic_vector(15 downto 0);
+	signal xu : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal xu_1 : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal xu_2 : std_logic_vector(15 downto 0) := "0000000000000000";
 	
 	signal D1 : std_logic;
 	signal D2 : std_logic;
@@ -120,7 +123,12 @@ end component;
 	signal D4 : std_logic;
 	signal D5 : std_logic;
 	
-	signal out1stage : std_logic_vector(15 downto 0);
+	signal D1_1 : std_logic;
+	signal D2_1 : std_logic;
+	signal D3_1 : std_logic;
+	signal D4_1 : std_logic;
+	
+	signal out1stage : std_logic_vector(15 downto 0) := "0000000000000000";
 	
 	
 	signal valid : std_logic;
@@ -135,14 +143,14 @@ end component;
 		c7: d5Gen port map(i_clock,Y,fx,D5);
 		
 		process(i_clock,start) is 
-		variable Yv : signed(31 downto 0);
-		variable xuV : signed(31 downto 0);
-		variable fxv : signed(47 downto 0);
-		variable GRAD : signed(15 downto 0);
-		variable Yint : signed(15 downto 0);
-		variable Ymax : signed(15 downto 0);
-		variable YmaxMinus1 : signed(15 downto 0);
-		variable YmYmminus1 : signed(15 downto 0);
+		variable Yv : signed(31 downto 0) := "00000000000000000000000000000000";
+		variable xuV : signed(31 downto 0) := "00000000000000000000000000000000";
+		variable fxv : signed(79 downto 0):= "00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+		variable GRAD : signed(15 downto 0) := "0000000000000000";
+		variable Yint : signed(15 downto 0) := "0000000000000000";
+		variable Ymax : signed(15 downto 0) := "0000000000000000";
+		variable YmaxMinus1 : signed(15 downto 0) := "0000000000000000";
+		variable YmYmminus1 : signed(15 downto 0) := "0000000000000000";
 			begin
 				if rising_edge(i_clock) then
 					if (start='1') then 
@@ -170,26 +178,34 @@ end component;
 					Yv := (YmYmminus1 * signed(U1_2)) + YmaxMinus1;
 					Y <= std_logic_vector(Yv(31 downto 16));
 					
-					xuv := signed(xi)*signed(U0_2);
+					xuv := signed(xi)*signed(U0_1);
 					xu <= std_logic_vector(xuv(31 downto 16));
 					
-					fxv := (xuv*GRAD) + YmaxMinus1;
-					fx <= std_logic_vector(fxv(47 downto 32));
+					fxv := (xuv*xuv*GRAD) + YmaxMinus1;
+					fx <= std_logic_vector(fxv(79 downto 64));
 					
-					if((D1='1') and (D2='1')) then 
-						out1stage <= xu;
+					D1_1 <= D1;
+					D2_1 <= D2;
+					D3_1 <= D3;
+					D4_1 <= D4;
+					
+					xu_1 <= xu;
+					xu_2 <= xu_1;
+					
+					if((D1_1='1') and (D2_1='1')) then 
+						out1stage <= xu_2;
 						valid <= '1';
-					elsif ((D1='0') and (D3='1') and (D4 = '1')) then
-						out1stage <= xu;
+					elsif ((D1_1='0') and (D3_1='1') and (D4_1 = '1')) then
+						out1stage <= xu_2;
 						valid <= '1';
-					elsif ((D1='0') and (D3='0') and (D5 = '1')) then	
-						out1stage <= xu;
+					elsif ((D1_1='0') and (D3_1='0') and (D5 = '1')) then	
+						out1stage <= xu_2;
 						valid <= '1';
 					else 
 						valid <= '0';
 					end if;
 					
-					if(U1_6(15)='1') and (valid = '1') then
+					if(U1_5(15)='1') and (valid = '1') then
 						zigout <= not(out1stage) +1;
 					elsif (valid = '1') then
 						zigout <= out1stage;
