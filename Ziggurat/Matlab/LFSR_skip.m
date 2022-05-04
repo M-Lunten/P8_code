@@ -1,4 +1,4 @@
-function [samples,A] = LFSR_skip(sampleN,n,Seed,skips)
+function [samples,binVal,A] = LFSR_skip(sampleN,n,Seed,skips)
 
 load('FeedBackCoefs.mat')% import table of Feedback for 3- to 168-bit LFSR
 
@@ -29,6 +29,7 @@ for i = 1:n
     K(i) = length(find(A(i,:) == 1));
 end
 % LFSR system
+binVal = zeros(sampleN,n);
 samples = zeros(sampleN,1);
 for N = 1:sampleN
     for i = 1:n
@@ -45,6 +46,7 @@ for N = 1:sampleN
     end
     Seedint = temp;
     % Flip so LSB becomes MSB and vice versa and convert to integer
+    binVal(N,:) = fliplr(Seedint)';
     samples(N) = bit2int(fliplr(Seedint)',n);
 end
 end

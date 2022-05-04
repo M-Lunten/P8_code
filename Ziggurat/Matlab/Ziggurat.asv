@@ -2,11 +2,10 @@ clc
 clear all
 close all
 %%
-syms x1 ap1
+syms x1
 const = 1/sqrt(2*pi);
 %const = 1;
 Gaussfunc(x1) = const*exp(-x1.^2/2);
-tay(ap1) = -0.1995*ap1^2+0.3989;
 efficiency = zeros(1,1);
 %%
 N = 2^8; %Number of boxes
@@ -121,8 +120,7 @@ fprintf('Mean of x: %d\nVariance of x: %d\n',mean(x),var(x))
 figure()
 plot(z(:,1),z(:,2),'.r')
 title('PDF with Ziggurat rectangles')
-xlim([-0.3 0.3])
-ylim([0.38 0.4])
+xlim([-4 4])
 grid on
 hold on
 rectangle('Position',[0 0 z(1,1) z(1,2)],'FaceColor',[1 0 0])
@@ -132,8 +130,7 @@ for i = 1:N-1
 end
 fplot(Gaussfunc(x1),'--',LineWidth=0.8)
 plot(z_p(:,1),z_p(:,2),'.r')
-line([0 xi(256)],[yi(256) yi(255)])
-fplot(tay(ap1),LineWidth=0.8)
+line([0 xi(256)],[])
 if plotAcc == 1
     plot(p(:,1),p(:,2),'.');
 end
@@ -143,7 +140,7 @@ end
 % Plot color
 M = (z(1,1):0.001:4);
 fill([M,4,z(1,1)],[Gaussfunc(M),0,0],'r')
-%ksdensity(x); %Plot generated dist
+ksdensity(x); %Plot generated dist
 
 figure()
 subplot(2,1,1)
