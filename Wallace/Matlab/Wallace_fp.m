@@ -28,10 +28,59 @@ x = [-6:.01:6];
 y = normpdf(x,0,1);
 
 figure(1)
+plot(x, y);
+hold on
+plot(w_x, w_f);
+plot(w_x_fp, w_f_fp);
+xlim([-4, 4])
+hold off
+title('PDF comparison between fixed/floating point on linear scale')
+xlabel('x')
+ylabel('Probability')
+grid on
+legend('Ideal Gaussian', 'Floating Point', 'Fixed Point')
+
+figure(2)
 semilogy(x, y);
 hold on
 plot(w_x, w_f);
 plot(w_x_fp, w_f_fp);
 hold off
+title('PDF comparison between fixed/floating point on log scale')
+xlabel('x')
+ylabel('Probability')
 grid on
 legend('Ideal Gaussian', 'Floating Point', 'Fixed Point')
+
+%% Sum of squares figure
+[corr_f_fp, corr_x_fp] = ksdensity(soq_corr_fp);
+[corr_f, corr_x] = ksdensity(soq_corr);
+x_chi = L*K*0.5:0.2:L*K*1.5;
+y_chi = chi2pdf(x_chi,L*K);
+
+figure(2)
+plot(x_chi, y_chi)
+hold on
+plot(corr_x, corr_f)
+plot(corr_x_fp, corr_f_fp)
+hold off
+grid on
+legend('\chi^2 distribution', 'SOQ floating point', 'SOQ fixed point');
+title('Sum of Squares for floating/fixed point')
+xlabel('x')
+ylabel('Probability')
+
+%% Autocorrelation figures
+[r_fp, lags_fp] = xcorr(out_fp, 'normalized');
+[r, lags] = xcorr(out, 'normalized');
+
+figure(3)
+plot(lags, r)
+title('Autocorrelation for floating point Wallace')
+ylabel('ACF')
+xlabel('Lags')
+figure(4)
+plot(lags_fp, r_fp)
+title('Autocorrelation for fixed point Wallace')
+ylabel('ACF')
+xlabel('Lags')

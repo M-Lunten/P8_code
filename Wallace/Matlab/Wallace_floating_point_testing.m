@@ -360,7 +360,7 @@ rng(10)
 L = 256;
 K = 4;
 R = 1;
-num_ite = 100;
+num_ite = 1000;
 
 % Init pool creation, the sum of squares should be equal to L*K
 init_N = randn(K, L);
@@ -394,10 +394,10 @@ plot(lags_1, r_1)
 ylabel('ACF')
 xlabel('Lag')
 title('1 pool')
-xlim([-10000, 10000])
+%xlim([-10000, 10000])
 figure()
 plot(lags_2, r_2)
 ylabel('ACF')
 xlabel('Lag')
 title('2 pools')
-xlim([-10000, 10000])
+%xlim([-10000, 10000])
