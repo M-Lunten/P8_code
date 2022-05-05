@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Wallace_speed
-Thu May 05 16:30:32 2022
+Thu May 05 23:09:59 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -20,24 +20,23 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  12. General Register Statistics
  13. Inverted Register Statistics
  14. Registers Packed Into Inferred Megafunctions
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for RAM_1:RAM_1_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated
- 17. Source assignments for RAM_2:RAM_1_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated
- 18. Source assignments for RAM_1:RAM_2_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated
- 19. Source assignments for RAM_2:RAM_2_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated
- 20. Source assignments for altshift_taps:addr_D1_rtl_0|shift_taps_e6m:auto_generated|altsyncram_7l31:altsyncram4
- 21. Parameter Settings for User Entity Instance: RAM_1:RAM_1_1|altsyncram:altsyncram_component
- 22. Parameter Settings for User Entity Instance: RAM_2:RAM_1_2|altsyncram:altsyncram_component
- 23. Parameter Settings for User Entity Instance: RAM_1:RAM_2_1|altsyncram:altsyncram_component
- 24. Parameter Settings for User Entity Instance: RAM_2:RAM_2_2|altsyncram:altsyncram_component
- 25. Parameter Settings for Inferred Entity Instance: altshift_taps:addr_D1_rtl_0
- 26. altsyncram Parameter Settings by Entity Instance
- 27. altshift_taps Parameter Settings by Entity Instance
- 28. Port Connectivity Checks: "control_path:cp|LFSR_3:LFSR"
- 29. Port Connectivity Checks: "control_path:cp"
- 30. Post-Synthesis Netlist Statistics for Top Partition
- 31. Elapsed Time Per Partition
- 32. Analysis & Synthesis Messages
+ 15. Source assignments for RAM_1:RAM_1_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated
+ 16. Source assignments for RAM_2:RAM_1_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated
+ 17. Source assignments for RAM_1:RAM_2_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated
+ 18. Source assignments for RAM_2:RAM_2_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated
+ 19. Source assignments for altshift_taps:addr_D1_rtl_0|shift_taps_f6m:auto_generated|altsyncram_2e81:altsyncram2
+ 20. Parameter Settings for User Entity Instance: RAM_1:RAM_1_1|altsyncram:altsyncram_component
+ 21. Parameter Settings for User Entity Instance: RAM_2:RAM_1_2|altsyncram:altsyncram_component
+ 22. Parameter Settings for User Entity Instance: RAM_1:RAM_2_1|altsyncram:altsyncram_component
+ 23. Parameter Settings for User Entity Instance: RAM_2:RAM_2_2|altsyncram:altsyncram_component
+ 24. Parameter Settings for Inferred Entity Instance: altshift_taps:addr_D1_rtl_0
+ 25. altsyncram Parameter Settings by Entity Instance
+ 26. altshift_taps Parameter Settings by Entity Instance
+ 27. Port Connectivity Checks: "control_path:cp|LFSR_3:LFSR"
+ 28. Port Connectivity Checks: "control_path:cp"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
 
 
 
@@ -63,18 +62,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 05 16:30:32 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 05 23:09:59 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Wallace_speed                               ;
 ; Top-level Entity Name              ; Wallace_speed                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 701                                         ;
-;     Total combinational functions  ; 456                                         ;
-;     Dedicated logic registers      ; 471                                         ;
-; Total registers                    ; 471                                         ;
+; Total logic elements               ; 708                                         ;
+;     Total combinational functions  ; 471                                         ;
+;     Dedicated logic registers      ; 474                                         ;
+; Total registers                    ; 474                                         ;
 ; Total pins                         ; 67                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 32,876                                      ;
+; Total memory bits                  ; 32,840                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -171,7 +170,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -179,47 +178,45 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; LFSR_52.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd            ;         ;
-; LFSR_3.vhd                       ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd             ;         ;
-; control_path.vhd                 ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd       ;         ;
-; Wallace_speed.vhd                ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd      ;         ;
-; RAM_1.vhd                        ; yes             ; User Wizard-Generated File             ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd              ;         ;
-; RAM_2.vhd                        ; yes             ; User Wizard-Generated File             ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd              ;         ;
-; addr_gen.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd           ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_tat3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/altsyncram_tat3.tdf ;         ;
-; pool_1.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/pool_1.mif             ;         ;
-; db/altsyncram_uat3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/altsyncram_uat3.tdf ;         ;
-; pool_2.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/pool_2.mif             ;         ;
-; altshift_taps.tdf                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift_taps.tdf     ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_counter.inc       ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_compare.inc       ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_constant.inc      ;         ;
-; db/shift_taps_e6m.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/shift_taps_e6m.tdf  ;         ;
-; db/altsyncram_7l31.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/altsyncram_7l31.tdf ;         ;
-; db/add_sub_24e.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/add_sub_24e.tdf     ;         ;
-; db/cntr_6pf.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/cntr_6pf.tdf        ;         ;
-; db/cmpr_ogc.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/cmpr_ogc.tdf        ;         ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------+---------+
+; LFSR_52.vhd                      ; yes             ; User VHDL File                         ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd                   ;         ;
+; LFSR_3.vhd                       ; yes             ; User VHDL File                         ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd                    ;         ;
+; control_path.vhd                 ; yes             ; User VHDL File                         ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd              ;         ;
+; Wallace_speed.vhd                ; yes             ; User VHDL File                         ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd             ;         ;
+; RAM_1.vhd                        ; yes             ; User Wizard-Generated File             ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd                     ;         ;
+; RAM_2.vhd                        ; yes             ; User Wizard-Generated File             ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd                     ;         ;
+; addr_gen.vhd                     ; yes             ; User VHDL File                         ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd                  ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_tat3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/db/altsyncram_tat3.tdf        ;         ;
+; pool_1.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/pool_1.mif                    ;         ;
+; db/altsyncram_uat3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/db/altsyncram_uat3.tdf        ;         ;
+; pool_2.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/pool_2.mif                    ;         ;
+; altshift_taps.tdf                ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/altshift_taps.tdf     ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_counter.inc       ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_compare.inc       ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_constant.inc      ;         ;
+; db/shift_taps_f6m.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/db/shift_taps_f6m.tdf         ;         ;
+; db/altsyncram_2e81.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/db/altsyncram_2e81.tdf        ;         ;
+; db/cntr_4pf.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/db/cntr_4pf.tdf               ;         ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -227,31 +224,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 701       ;
+; Estimated Total logic elements              ; 708       ;
 ;                                             ;           ;
-; Total combinational functions               ; 456       ;
+; Total combinational functions               ; 471       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 77        ;
-;     -- 3 input functions                    ; 203       ;
-;     -- <=2 input functions                  ; 176       ;
+;     -- 4 input functions                    ; 80        ;
+;     -- 3 input functions                    ; 206       ;
+;     -- <=2 input functions                  ; 185       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 326       ;
-;     -- arithmetic mode                      ; 130       ;
+;     -- normal mode                          ; 343       ;
+;     -- arithmetic mode                      ; 128       ;
 ;                                             ;           ;
-; Total registers                             ; 471       ;
-;     -- Dedicated logic registers            ; 471       ;
+; Total registers                             ; 474       ;
+;     -- Dedicated logic registers            ; 474       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 67        ;
-; Total memory bits                           ; 32876     ;
+; Total memory bits                           ; 32840     ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 520       ;
-; Total fan-out                               ; 3956      ;
-; Average fan-out                             ; 3.41      ;
+; Maximum fan-out                             ; 523       ;
+; Total fan-out                               ; 3888      ;
+; Average fan-out                             ; 3.30      ;
 +---------------------------------------------+-----------+
 
 
@@ -260,8 +257,8 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |Wallace_speed                            ; 456 (328)           ; 471 (352)                 ; 32876       ; 0            ; 0       ; 0         ; 67   ; 0            ; |Wallace_speed                                                                                       ; Wallace_speed   ; work         ;
-;    |LFSR_52:LFSR|                         ; 30 (30)             ; 52 (52)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|LFSR_52:LFSR                                                                          ; LFSR_52         ; work         ;
+; |Wallace_speed                            ; 471 (328)           ; 474 (352)                 ; 32840       ; 0            ; 0       ; 0         ; 67   ; 0            ; |Wallace_speed                                                                                       ; Wallace_speed   ; work         ;
+;    |LFSR_52:LFSR|                         ; 38 (38)             ; 52 (52)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|LFSR_52:LFSR                                                                          ; LFSR_52         ; work         ;
 ;    |RAM_1:RAM_1_1|                        ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|RAM_1:RAM_1_1                                                                         ; RAM_1           ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|RAM_1:RAM_1_1|altsyncram:altsyncram_component                                         ; altsyncram      ; work         ;
 ;          |altsyncram_tat3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|RAM_1:RAM_1_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated          ; altsyncram_tat3 ; work         ;
@@ -274,13 +271,13 @@ refer to the applicable agreement for further details.
 ;    |RAM_2:RAM_2_2|                        ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|RAM_2:RAM_2_2                                                                         ; RAM_2           ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|RAM_2:RAM_2_2|altsyncram:altsyncram_component                                         ; altsyncram      ; work         ;
 ;          |altsyncram_uat3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|RAM_2:RAM_2_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated          ; altsyncram_uat3 ; work         ;
-;    |addr_gen:ADDR_GEN_1|                  ; 40 (40)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|addr_gen:ADDR_GEN_1                                                                   ; addr_gen        ; work         ;
-;    |addr_gen:ADDR_GEN_2|                  ; 36 (36)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|addr_gen:ADDR_GEN_2                                                                   ; addr_gen        ; work         ;
-;    |altshift_taps:addr_D1_rtl_0|          ; 7 (0)               ; 4 (0)                     ; 108         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|altshift_taps:addr_D1_rtl_0                                                           ; altshift_taps   ; work         ;
-;       |shift_taps_e6m:auto_generated|     ; 7 (2)               ; 4 (2)                     ; 108         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|altshift_taps:addr_D1_rtl_0|shift_taps_e6m:auto_generated                             ; shift_taps_e6m  ; work         ;
-;          |altsyncram_7l31:altsyncram4|    ; 0 (0)               ; 0 (0)                     ; 108         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|altshift_taps:addr_D1_rtl_0|shift_taps_e6m:auto_generated|altsyncram_7l31:altsyncram4 ; altsyncram_7l31 ; work         ;
-;          |cntr_6pf:cntr1|                 ; 5 (5)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|altshift_taps:addr_D1_rtl_0|shift_taps_e6m:auto_generated|cntr_6pf:cntr1              ; cntr_6pf        ; work         ;
-;    |control_path:cp|                      ; 15 (12)             ; 11 (8)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|control_path:cp                                                                       ; control_path    ; work         ;
+;    |addr_gen:ADDR_GEN_1|                  ; 38 (38)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|addr_gen:ADDR_GEN_1                                                                   ; addr_gen        ; work         ;
+;    |addr_gen:ADDR_GEN_2|                  ; 48 (48)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|addr_gen:ADDR_GEN_2                                                                   ; addr_gen        ; work         ;
+;    |altshift_taps:addr_D1_rtl_0|          ; 1 (0)               ; 1 (0)                     ; 72          ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|altshift_taps:addr_D1_rtl_0                                                           ; altshift_taps   ; work         ;
+;       |shift_taps_f6m:auto_generated|     ; 1 (0)               ; 1 (0)                     ; 72          ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|altshift_taps:addr_D1_rtl_0|shift_taps_f6m:auto_generated                             ; shift_taps_f6m  ; work         ;
+;          |altsyncram_2e81:altsyncram2|    ; 0 (0)               ; 0 (0)                     ; 72          ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|altshift_taps:addr_D1_rtl_0|shift_taps_f6m:auto_generated|altsyncram_2e81:altsyncram2 ; altsyncram_2e81 ; work         ;
+;          |cntr_4pf:cntr1|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|altshift_taps:addr_D1_rtl_0|shift_taps_f6m:auto_generated|cntr_4pf:cntr1              ; cntr_4pf        ; work         ;
+;    |control_path:cp|                      ; 18 (15)             ; 17 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|control_path:cp                                                                       ; control_path    ; work         ;
 ;       |LFSR_3:LFSR|                       ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|control_path:cp|LFSR_3:LFSR                                                           ; LFSR_3          ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -295,7 +292,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; RAM_1:RAM_2_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated|ALTSYNCRAM          ; AUTO ; True Dual Port   ; 512          ; 16           ; 512          ; 16           ; 8192 ; pool_1.mif ;
 ; RAM_2:RAM_1_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated|ALTSYNCRAM          ; AUTO ; True Dual Port   ; 512          ; 16           ; 512          ; 16           ; 8192 ; pool_2.mif ;
 ; RAM_2:RAM_2_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated|ALTSYNCRAM          ; AUTO ; True Dual Port   ; 512          ; 16           ; 512          ; 16           ; 8192 ; pool_2.mif ;
-; altshift_taps:addr_D1_rtl_0|shift_taps_e6m:auto_generated|altsyncram_7l31:altsyncram4|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 3            ; 36           ; 3            ; 36           ; 108  ; None       ;
+; altshift_taps:addr_D1_rtl_0|shift_taps_f6m:auto_generated|altsyncram_2e81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 2            ; 36           ; 2            ; 36           ; 72   ; None       ;
 +--------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------------+
 
 
@@ -311,14 +308,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------------+-----------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                  ;
-+----------------------------------------------------+------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal    ; Free of Timing Hazards ;
-+----------------------------------------------------+------------------------+------------------------+
-; control_path:cp|one_bit_count                      ; control_path:cp|Equal1 ; yes                    ;
-; Number of user-specified and inferred latches = 1  ;                        ;                        ;
-+----------------------------------------------------+------------------------+------------------------+
++----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                      ;
++----------------------------------------------------+----------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal        ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------------+------------------------+
+; control_path:cp|WE_1                               ; control_path:cp|start_tmp6 ; yes                    ;
+; control_path:cp|WE_2                               ; control_path:cp|start_tmp6 ; yes                    ;
+; control_path:cp|one_bit_count                      ; control_path:cp|Equal1     ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                            ;                        ;
++----------------------------------------------------+----------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -338,12 +337,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 471   ;
+; Total registers                              ; 474   ;
 ; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -354,14 +353,47 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Inverted Register                             ; Fan out ;
 +-----------------------------------------------+---------+
 ; control_path:cp|LFSR_3:LFSR|shift_register[1] ; 2       ;
+; addr_gen:ADDR_GEN_2|m_saved[0]                ; 3       ;
+; addr_gen:ADDR_GEN_2|o_saved[0]                ; 4       ;
+; addr_gen:ADDR_GEN_2|m_saved[3]                ; 3       ;
+; addr_gen:ADDR_GEN_2|o_saved[3]                ; 4       ;
+; addr_gen:ADDR_GEN_2|m_saved[5]                ; 3       ;
+; addr_gen:ADDR_GEN_2|o_saved[5]                ; 4       ;
+; addr_gen:ADDR_GEN_2|m_saved[8]                ; 3       ;
+; addr_gen:ADDR_GEN_2|o_saved[8]                ; 4       ;
+; LFSR_52:LFSR|shift_register[26]               ; 6       ;
+; LFSR_52:LFSR|shift_register[30]               ; 6       ;
+; addr_gen:ADDR_GEN_2|s_saved[4]                ; 1       ;
+; addr_gen:ADDR_GEN_2|s_saved[5]                ; 1       ;
+; addr_gen:ADDR_GEN_1|m_saved[0]                ; 3       ;
+; addr_gen:ADDR_GEN_1|o_saved[0]                ; 4       ;
+; addr_gen:ADDR_GEN_1|m_saved[3]                ; 3       ;
+; addr_gen:ADDR_GEN_1|o_saved[3]                ; 4       ;
+; addr_gen:ADDR_GEN_1|m_saved[5]                ; 3       ;
+; addr_gen:ADDR_GEN_1|o_saved[5]                ; 4       ;
+; addr_gen:ADDR_GEN_1|m_saved[8]                ; 3       ;
+; addr_gen:ADDR_GEN_1|o_saved[8]                ; 4       ;
 ; LFSR_52:LFSR|shift_register[0]                ; 5       ;
 ; LFSR_52:LFSR|shift_register[3]                ; 5       ;
+; addr_gen:ADDR_GEN_1|s_saved[4]                ; 1       ;
 ; LFSR_52:LFSR|shift_register[5]                ; 5       ;
+; addr_gen:ADDR_GEN_1|s_saved[5]                ; 1       ;
 ; LFSR_52:LFSR|shift_register[8]                ; 5       ;
+; LFSR_52:LFSR|shift_register[35]               ; 3       ;
+; LFSR_52:LFSR|shift_register[37]               ; 3       ;
+; LFSR_52:LFSR|shift_register[38]               ; 3       ;
+; LFSR_52:LFSR|shift_register[39]               ; 3       ;
+; LFSR_52:LFSR|shift_register[41]               ; 3       ;
+; LFSR_52:LFSR|shift_register[44]               ; 3       ;
+; LFSR_52:LFSR|shift_register[46]               ; 3       ;
 ; LFSR_52:LFSR|shift_register[9]                ; 2       ;
+; LFSR_52:LFSR|shift_register[49]               ; 2       ;
 ; LFSR_52:LFSR|shift_register[10]               ; 2       ;
 ; LFSR_52:LFSR|shift_register[13]               ; 2       ;
-; Total number of inverted registers = 8        ;         ;
+; LFSR_52:LFSR|shift_register[17]               ; 2       ;
+; LFSR_52:LFSR|shift_register[21]               ; 2       ;
+; LFSR_52:LFSR|shift_register[22]               ; 2       ;
+; Total number of inverted registers = 41       ;         ;
 +-----------------------------------------------+---------+
 
 
@@ -370,19 +402,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+---------------+-------------+
 ; Register Name  ; Megafunction  ; Type        ;
 +----------------+---------------+-------------+
+; addr_D4[0..35] ; addr_D1_rtl_0 ; SHIFT_TAPS  ;
 ; addr_D3[0..35] ; addr_D1_rtl_0 ; SHIFT_TAPS  ;
 ; addr_D2[0..35] ; addr_D1_rtl_0 ; SHIFT_TAPS  ;
 ; addr_D1[0..35] ; addr_D1_rtl_0 ; SHIFT_TAPS  ;
 +----------------+---------------+-------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Wallace_speed|control_path:cp|i_count[7] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -422,7 +446,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +--------------------------------------------------------------------------------------------------------------+
-; Source assignments for altshift_taps:addr_D1_rtl_0|shift_taps_e6m:auto_generated|altsyncram_7l31:altsyncram4 ;
+; Source assignments for altshift_taps:addr_D1_rtl_0|shift_taps_f6m:auto_generated|altsyncram_2e81:altsyncram2 ;
 +---------------------------------+--------------------+------+------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                             ;
 +---------------------------------+--------------------+------+------------------------------------------------+
@@ -681,10 +705,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+----------------+--------------------------------------------+
 ; WIDTH_BYTEENA  ; 1              ; Untyped                                    ;
 ; NUMBER_OF_TAPS ; 1              ; Untyped                                    ;
-; TAP_DISTANCE   ; 3              ; Untyped                                    ;
+; TAP_DISTANCE   ; 4              ; Untyped                                    ;
 ; WIDTH          ; 36             ; Untyped                                    ;
 ; POWER_UP_STATE ; CLEARED        ; Untyped                                    ;
-; CBXI_PARAMETER ; shift_taps_e6m ; Untyped                                    ;
+; CBXI_PARAMETER ; shift_taps_f6m ; Untyped                                    ;
 +----------------+----------------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -750,7 +774,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Number of entity instances ; 1                           ;
 ; Entity Instance            ; altshift_taps:addr_D1_rtl_0 ;
 ;     -- NUMBER_OF_TAPS      ; 1                           ;
-;     -- TAP_DISTANCE        ; 3                           ;
+;     -- TAP_DISTANCE        ; 4                           ;
 ;     -- WIDTH               ; 36                          ;
 +----------------------------+-----------------------------+
 
@@ -779,23 +803,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 67                          ;
-; cycloneiii_ff         ; 471                         ;
+; cycloneiii_ff         ; 474                         ;
+;     ENA               ; 6                           ;
 ;     SCLR              ; 8                           ;
-;     plain             ; 463                         ;
-; cycloneiii_lcell_comb ; 456                         ;
-;     arith             ; 130                         ;
-;         2 data inputs ; 11                          ;
-;         3 data inputs ; 119                         ;
-;     normal            ; 326                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 16                          ;
-;         2 data inputs ; 148                         ;
-;         3 data inputs ; 84                          ;
-;         4 data inputs ; 77                          ;
+;     plain             ; 460                         ;
+; cycloneiii_lcell_comb ; 471                         ;
+;     arith             ; 128                         ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 120                         ;
+;     normal            ; 343                         ;
+;         1 data inputs ; 28                          ;
+;         2 data inputs ; 149                         ;
+;         3 data inputs ; 86                          ;
+;         4 data inputs ; 80                          ;
 ; cycloneiii_ram_block  ; 100                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.60                        ;
-; Average LUT depth     ; 1.86                        ;
+; Average LUT depth     ; 1.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -814,84 +838,50 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 05 16:30:02 2022
+    Info: Processing started: Thu May 05 23:09:44 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Wallace_speed -c Wallace_speed
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_52.vhd
-    Info (12022): Found design unit 1: LFSR_52-Behavioral File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd Line: 11
-    Info (12023): Found entity 1: LFSR_52 File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd Line: 4
+    Info (12022): Found design unit 1: LFSR_52-Behavioral File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd Line: 11
+    Info (12023): Found entity 1: LFSR_52 File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_3.vhd
-    Info (12022): Found design unit 1: LFSR_3-Behavioral File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd Line: 11
-    Info (12023): Found entity 1: LFSR_3 File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd Line: 4
+    Info (12022): Found design unit 1: LFSR_3-Behavioral File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd Line: 11
+    Info (12023): Found entity 1: LFSR_3 File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file control_path.vhd
-    Info (12022): Found design unit 1: control_path-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 16
-    Info (12023): Found entity 1: control_path File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 6
+    Info (12022): Found design unit 1: control_path-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 17
+    Info (12023): Found entity 1: control_path File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file wallace_speed.vhd
-    Info (12022): Found design unit 1: Wallace_speed-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 18
-    Info (12023): Found entity 1: Wallace_speed File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 6
+    Info (12022): Found design unit 1: Wallace_speed-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 18
+    Info (12023): Found entity 1: Wallace_speed File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ram_1.vhd
-    Info (12022): Found design unit 1: ram_1-SYN File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd Line: 58
-    Info (12023): Found entity 1: RAM_1 File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd Line: 42
+    Info (12022): Found design unit 1: ram_1-SYN File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd Line: 58
+    Info (12023): Found entity 1: RAM_1 File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file ram_2.vhd
-    Info (12022): Found design unit 1: ram_2-SYN File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd Line: 58
-    Info (12023): Found entity 1: RAM_2 File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd Line: 42
+    Info (12022): Found design unit 1: ram_2-SYN File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd Line: 58
+    Info (12023): Found entity 1: RAM_2 File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file addr_gen.vhd
-    Info (12022): Found design unit 1: addr_gen-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd Line: 16
-    Info (12023): Found entity 1: addr_gen File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd Line: 6
+    Info (12022): Found design unit 1: addr_gen-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd Line: 16
+    Info (12023): Found entity 1: addr_gen File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd Line: 6
 Info (12127): Elaborating entity "Wallace_speed" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Wallace_speed.vhd(77): object "MUX_5" assigned a value but never read File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 77
-Warning (10036): Verilog HDL or VHDL warning at Wallace_speed.vhd(92): object "addr_D4" assigned a value but never read File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 92
-Warning (10036): Verilog HDL or VHDL warning at Wallace_speed.vhd(96): object "t" assigned a value but never read File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 96
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(126): signal "addr_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 126
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(127): signal "addr_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 127
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(128): signal "addr_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 128
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(129): signal "addr_D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 129
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(130): signal "addr_D3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 130
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(131): signal "addr_D3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 131
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(132): signal "addr_D3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 132
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(133): signal "addr_D3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 133
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(135): signal "addr_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(136): signal "addr_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 136
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(137): signal "addr_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 137
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(138): signal "addr_D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 138
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(139): signal "addr_D3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 139
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(140): signal "addr_D3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 140
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(141): signal "addr_D3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 141
-Warning (10492): VHDL Process Statement warning at Wallace_speed.vhd(142): signal "addr_D3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 142
-Info (12128): Elaborating entity "control_path" for hierarchy "control_path:cp" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 100
-Warning (10492): VHDL Process Statement warning at control_path.vhd(52): signal "one_bit_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 52
-Warning (10631): VHDL Process Statement warning at control_path.vhd(49): inferring latch(es) for signal or variable "one_bit_count", which holds its previous value in one or more paths through the process File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 49
-Warning (10492): VHDL Process Statement warning at control_path.vhd(61): signal "start_tmp1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 61
-Warning (10492): VHDL Process Statement warning at control_path.vhd(62): signal "start_tmp2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 62
-Warning (10492): VHDL Process Statement warning at control_path.vhd(63): signal "start_tmp3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 63
-Warning (10492): VHDL Process Statement warning at control_path.vhd(64): signal "start_tmp4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 64
-Warning (10492): VHDL Process Statement warning at control_path.vhd(65): signal "start_tmp5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 65
-Warning (10631): VHDL Process Statement warning at control_path.vhd(56): inferring latch(es) for signal or variable "start_tmp1", which holds its previous value in one or more paths through the process File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 56
-Warning (10631): VHDL Process Statement warning at control_path.vhd(56): inferring latch(es) for signal or variable "start_tmp2", which holds its previous value in one or more paths through the process File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 56
-Warning (10631): VHDL Process Statement warning at control_path.vhd(56): inferring latch(es) for signal or variable "start_tmp3", which holds its previous value in one or more paths through the process File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 56
-Warning (10631): VHDL Process Statement warning at control_path.vhd(56): inferring latch(es) for signal or variable "start_tmp4", which holds its previous value in one or more paths through the process File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 56
-Warning (10631): VHDL Process Statement warning at control_path.vhd(56): inferring latch(es) for signal or variable "start_tmp5", which holds its previous value in one or more paths through the process File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 56
-Warning (10631): VHDL Process Statement warning at control_path.vhd(56): inferring latch(es) for signal or variable "start_tmp6", which holds its previous value in one or more paths through the process File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 56
-Warning (10492): VHDL Process Statement warning at control_path.vhd(83): signal "one_bit_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 83
-Warning (10492): VHDL Process Statement warning at control_path.vhd(84): signal "one_bit_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 84
-Warning (10631): VHDL Process Statement warning at control_path.vhd(70): inferring latch(es) for signal or variable "WE_1", which holds its previous value in one or more paths through the process File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 70
-Warning (10631): VHDL Process Statement warning at control_path.vhd(70): inferring latch(es) for signal or variable "WE_2", which holds its previous value in one or more paths through the process File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 70
-Info (10041): Inferred latch for "WE_2" at control_path.vhd(70) File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 70
-Info (10041): Inferred latch for "WE_1" at control_path.vhd(70) File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 70
-Info (10041): Inferred latch for "start_tmp6" at control_path.vhd(56) File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 56
-Info (10041): Inferred latch for "start_tmp5" at control_path.vhd(56) File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 56
-Info (10041): Inferred latch for "start_tmp4" at control_path.vhd(56) File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 56
-Info (10041): Inferred latch for "start_tmp3" at control_path.vhd(56) File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 56
-Info (10041): Inferred latch for "start_tmp2" at control_path.vhd(56) File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 56
-Info (10041): Inferred latch for "start_tmp1" at control_path.vhd(56) File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 56
-Info (10041): Inferred latch for "one_bit_count" at control_path.vhd(49) File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 49
-Info (12128): Elaborating entity "LFSR_3" for hierarchy "control_path:cp|LFSR_3:LFSR" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 33
-Info (12128): Elaborating entity "LFSR_52" for hierarchy "LFSR_52:LFSR" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 101
-Info (12128): Elaborating entity "RAM_1" for hierarchy "RAM_1:RAM_1_1" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 104
-Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM_1:RAM_1_1|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd Line: 67
-Info (12130): Elaborated megafunction instantiation "RAM_1:RAM_1_1|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd Line: 67
-Info (12133): Instantiated megafunction "RAM_1:RAM_1_1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd Line: 67
+Warning (10036): Verilog HDL or VHDL warning at Wallace_speed.vhd(77): object "MUX_5" assigned a value but never read File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 77
+Warning (10036): Verilog HDL or VHDL warning at Wallace_speed.vhd(96): object "t" assigned a value but never read File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 96
+Info (12128): Elaborating entity "control_path" for hierarchy "control_path:cp" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at control_path.vhd(53): signal "one_bit_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 53
+Warning (10631): VHDL Process Statement warning at control_path.vhd(50): inferring latch(es) for signal or variable "one_bit_count", which holds its previous value in one or more paths through the process File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 50
+Warning (10492): VHDL Process Statement warning at control_path.vhd(86): signal "one_bit_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at control_path.vhd(87): signal "one_bit_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 87
+Warning (10631): VHDL Process Statement warning at control_path.vhd(73): inferring latch(es) for signal or variable "WE_1", which holds its previous value in one or more paths through the process File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 73
+Warning (10631): VHDL Process Statement warning at control_path.vhd(73): inferring latch(es) for signal or variable "WE_2", which holds its previous value in one or more paths through the process File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 73
+Info (10041): Inferred latch for "WE_2" at control_path.vhd(73) File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 73
+Info (10041): Inferred latch for "WE_1" at control_path.vhd(73) File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 73
+Info (10041): Inferred latch for "one_bit_count" at control_path.vhd(50) File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 50
+Info (12128): Elaborating entity "LFSR_3" for hierarchy "control_path:cp|LFSR_3:LFSR" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 34
+Info (12128): Elaborating entity "LFSR_52" for hierarchy "LFSR_52:LFSR" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 101
+Info (12128): Elaborating entity "RAM_1" for hierarchy "RAM_1:RAM_1_1" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 104
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM_1:RAM_1_1|altsyncram:altsyncram_component" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd Line: 67
+Info (12130): Elaborated megafunction instantiation "RAM_1:RAM_1_1|altsyncram:altsyncram_component" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd Line: 67
+Info (12133): Instantiated megafunction "RAM_1:RAM_1_1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd Line: 67
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
@@ -943,12 +933,12 @@ Info (12133): Instantiated megafunction "RAM_1:RAM_1_1|altsyncram:altsyncram_com
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tat3.tdf
-    Info (12023): Found entity 1: altsyncram_tat3 File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/altsyncram_tat3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_tat3" for hierarchy "RAM_1:RAM_1_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "RAM_2" for hierarchy "RAM_2:RAM_1_2" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 105
-Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM_2:RAM_1_2|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd Line: 67
-Info (12130): Elaborated megafunction instantiation "RAM_2:RAM_1_2|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd Line: 67
-Info (12133): Instantiated megafunction "RAM_2:RAM_1_2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd Line: 67
+    Info (12023): Found entity 1: altsyncram_tat3 File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/db/altsyncram_tat3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_tat3" for hierarchy "RAM_1:RAM_1_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated" File: d:/programs/quartusprimelite/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "RAM_2" for hierarchy "RAM_2:RAM_1_2" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 105
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM_2:RAM_1_2|altsyncram:altsyncram_component" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd Line: 67
+Info (12130): Elaborated megafunction instantiation "RAM_2:RAM_1_2|altsyncram:altsyncram_component" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd Line: 67
+Info (12133): Instantiated megafunction "RAM_2:RAM_1_2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd Line: 67
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
@@ -1000,52 +990,38 @@ Info (12133): Instantiated megafunction "RAM_2:RAM_1_2|altsyncram:altsyncram_com
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_uat3.tdf
-    Info (12023): Found entity 1: altsyncram_uat3 File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/altsyncram_uat3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_uat3" for hierarchy "RAM_2:RAM_1_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "addr_gen" for hierarchy "addr_gen:ADDR_GEN_1" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 110
-Warning (10036): Verilog HDL or VHDL warning at addr_gen.vhd(23): object "s_2times" assigned a value but never read File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at addr_gen.vhd(36): signal "s_saved" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd Line: 36
-Warning (10492): VHDL Process Statement warning at addr_gen.vhd(36): signal "o_saved" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd Line: 36
-Warning (10492): VHDL Process Statement warning at addr_gen.vhd(37): signal "o_saved" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd Line: 37
-Warning (10492): VHDL Process Statement warning at addr_gen.vhd(37): signal "m_saved" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd Line: 37
-Warning (10492): VHDL Process Statement warning at addr_gen.vhd(38): signal "mask" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd Line: 38
-Warning (10492): VHDL Process Statement warning at addr_gen.vhd(38): signal "sPLUSo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd Line: 38
-Warning (14026): LATCH primitive "control_path:cp|WE_1" is permanently enabled File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 11
-Warning (14026): LATCH primitive "control_path:cp|WE_2" is permanently enabled File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd Line: 11
+    Info (12023): Found entity 1: altsyncram_uat3 File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/db/altsyncram_uat3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_uat3" for hierarchy "RAM_2:RAM_1_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated" File: d:/programs/quartusprimelite/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "addr_gen" for hierarchy "addr_gen:ADDR_GEN_1" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 110
+Warning (10036): Verilog HDL or VHDL warning at addr_gen.vhd(25): object "s_2times" assigned a value but never read File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd Line: 25
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "addr_D1_rtl_0"
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
-        Info (286033): Parameter TAP_DISTANCE set to 3
+        Info (286033): Parameter TAP_DISTANCE set to 4
         Info (286033): Parameter WIDTH set to 36
 Info (12130): Elaborated megafunction instantiation "altshift_taps:addr_D1_rtl_0"
 Info (12133): Instantiated megafunction "altshift_taps:addr_D1_rtl_0" with the following parameter:
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
-    Info (12134): Parameter "TAP_DISTANCE" = "3"
+    Info (12134): Parameter "TAP_DISTANCE" = "4"
     Info (12134): Parameter "WIDTH" = "36"
-Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_e6m.tdf
-    Info (12023): Found entity 1: shift_taps_e6m File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/shift_taps_e6m.tdf Line: 28
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7l31.tdf
-    Info (12023): Found entity 1: altsyncram_7l31 File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/altsyncram_7l31.tdf Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_24e.tdf
-    Info (12023): Found entity 1: add_sub_24e File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/add_sub_24e.tdf Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_6pf.tdf
-    Info (12023): Found entity 1: cntr_6pf File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/cntr_6pf.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ogc.tdf
-    Info (12023): Found entity 1: cmpr_ogc File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/cmpr_ogc.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_f6m.tdf
+    Info (12023): Found entity 1: shift_taps_f6m File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/db/shift_taps_f6m.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2e81.tdf
+    Info (12023): Found entity 1: altsyncram_2e81 File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/db/altsyncram_2e81.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_4pf.tdf
+    Info (12023): Found entity 1: cntr_4pf File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/db/cntr_4pf.tdf Line: 25
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "start" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 9
-Info (21057): Implemented 932 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 939 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 765 logic cells
+    Info (21061): Implemented 772 logic cells
     Info (21064): Implemented 100 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 48 warnings
-    Info: Peak virtual memory: 4816 megabytes
-    Info: Processing ended: Thu May 05 16:30:32 2022
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Thu May 05 23:09:59 2022
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:26
 
 

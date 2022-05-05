@@ -120,26 +120,26 @@ begin
 	end if;
 	end process;
 	
-	addr_in : process(WE_1)
+	addr_in : process(WE_1, addr_A, addr_B, addr_C, addr_D, addr_D4)
 	begin
 	if WE_1 = '0' then
 		addr_ram_1_A <= addr_A;
 		addr_ram_1_B <= addr_B;
 		addr_ram_1_C <= addr_C;
 		addr_ram_1_D <= addr_D;
-		addr_ram_2_A <= addr_D3(35 downto 27);
-		addr_ram_2_B <= addr_D3(26 downto 18);
-		addr_ram_2_C <= addr_D3(17 downto 9);
-		addr_ram_2_D <= addr_D3(8 downto 0);
+		addr_ram_2_A <= addr_D4(35 downto 27);
+		addr_ram_2_B <= addr_D4(26 downto 18);
+		addr_ram_2_C <= addr_D4(17 downto 9);
+		addr_ram_2_D <= addr_D4(8 downto 0);
 	else 
 		addr_ram_2_A <= addr_A;
 		addr_ram_2_B <= addr_B;
 		addr_ram_2_C <= addr_C;
 		addr_ram_2_D <= addr_D;
-		addr_ram_1_A <= addr_D3(35 downto 27);
-		addr_ram_1_B <= addr_D3(26 downto 18);
-		addr_ram_1_C <= addr_D3(17 downto 9);
-		addr_ram_1_D <= addr_D3(8 downto 0);
+		addr_ram_1_A <= addr_D4(35 downto 27);
+		addr_ram_1_B <= addr_D4(26 downto 18);
+		addr_ram_1_C <= addr_D4(17 downto 9);
+		addr_ram_1_D <= addr_D4(8 downto 0);
 	end if;
 	end process;
 
@@ -178,7 +178,7 @@ begin
 		p1 <= std_logic_vector(p1_res);
 		p2 <= std_logic_vector(p2_res);
 		sum := signed(p1) + signed(p2);
-		t_res := sum(15) & '0' & sum(14 downto 1);
+		t_res := shift_right(sum); --sum(15) & '0' & sum(14 downto 1);
 		t <= std_logic_vector(t_res);
 		if MUX_4 = '0' then
 			res_1 := signed(x_D2(63 downto 48)) - signed(t_res);
@@ -200,6 +200,7 @@ begin
 			x4 <= std_logic_vector(res_4);
 		end if;
 	end if;
+
 	ram_1_datain_A <= std_logic_vector(res_1);
 	ram_2_datain_A <= std_logic_vector(res_1);
 	ram_1_datain_B <= std_logic_vector(res_2);

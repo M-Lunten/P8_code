@@ -120,7 +120,7 @@ begin
 	end if;
 	end process;
 	
-	addr_in : process(WE_1)
+	addr_in : process(WE_1, addr_A, addr_B, addr_C, addr_D, addr_D4)
 	begin
 	if WE_1 = '0' then
 		addr_ram_1_A <= addr_A;
@@ -178,28 +178,25 @@ begin
 		p1 <= std_logic_vector(p1_res);
 		p2 <= std_logic_vector(p2_res);
 		sum := signed(p1) + signed(p2);
-		t_res := sum(15) & '0' & sum(14 downto 1);
+		t_res := shift_right(sum, 1); --sum(15) & '0' & sum(14 downto 1);
 		t <= std_logic_vector(t_res);
 		if MUX_4 = '0' then
 			res_1 := signed(x_D2(63 downto 48)) - signed(t_res);
 			res_2 := signed(t_res) - signed(x_D2(47 downto 32));
 			res_3 := signed(t_res) - signed(x_D2(31 downto 16));
 			res_4 := signed(t_res) - signed(x_D2(15 downto 0));
-			x1 <= std_logic_vector(res_1);
-			x2 <= std_logic_vector(res_2);
-			x3 <= std_logic_vector(res_3);
-			x4 <= std_logic_vector(res_4);
 		else 
 			res_1 := signed(t_res) - signed(x_D2(63 downto 48));
 			res_2 := signed(x_D2(47 downto 32)) - signed(t_res);
 			res_3 := signed(x_D2(31 downto 16)) - signed(t_res);
 			res_4 := signed(x_D2(15 downto 0)) - signed(t_res);
-			x1 <= std_logic_vector(res_1);
-			x2 <= std_logic_vector(res_2);
-			x3 <= std_logic_vector(res_3);
-			x4 <= std_logic_vector(res_4);
 		end if;
+		x1 <= std_logic_vector(res_1);
+		x2 <= std_logic_vector(res_2);
+		x3 <= std_logic_vector(res_3);
+		x4 <= std_logic_vector(res_4);
 	end if;
+
 	ram_1_datain_A <= std_logic_vector(res_1);
 	ram_2_datain_A <= std_logic_vector(res_1);
 	ram_1_datain_B <= std_logic_vector(res_2);

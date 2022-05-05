@@ -14,7 +14,9 @@ entity addr_gen is
 end addr_gen;
 
 architecture behavior of addr_gen is
-	signal o_saved, s_saved, m_saved : std_logic_vector(8 downto 0);
+	signal o_saved : std_logic_vector(8 downto 0) := "100101001";
+	signal s_saved : std_logic_vector(8 downto 0) := "000110001";
+	signal m_saved : std_logic_vector(8 downto 0) := "100101001";
 	signal sPLUSo : unsigned(8 downto 0);
 
 begin
