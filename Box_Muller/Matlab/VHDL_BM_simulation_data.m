@@ -1,5 +1,5 @@
 % Testbench results from Box Muller VHDL simulation
-fileID = fopen('Box_Muller\VHDL\Testbenches\output_results.txt', 'r');
+fileID = fopen('output_results.txt', 'r');
 A = fscanf(fileID, '%s');
 fclose(fileID);
 

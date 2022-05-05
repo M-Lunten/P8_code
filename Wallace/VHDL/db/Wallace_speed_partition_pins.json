@@ -1,0 +1,273 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "x1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[14]",
+					"strict" : false
+				},
+				{
+					"name" : "x1[15]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[12]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[13]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[14]",
+					"strict" : false
+				},
+				{
+					"name" : "x2[15]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[7]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[8]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[9]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[10]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[11]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[12]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[13]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[14]",
+					"strict" : false
+				},
+				{
+					"name" : "x3[15]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[7]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[8]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[9]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[10]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[11]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[12]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[13]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[14]",
+					"strict" : false
+				},
+				{
+					"name" : "x4[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
