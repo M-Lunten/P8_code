@@ -1,4 +1,4 @@
-C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd {1 {vcom -work wallace_s -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd
+C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -7,7 +7,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity addr_gen
 -- Compiling architecture behavior of addr_gen
 
-} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd {1 {vcom -work wallace_s -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd
+} {} {}} C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -16,25 +16,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity RAM_1
 -- Compiling architecture SYN of ram_1
 
-} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd {1 {vcom -work wallace_s -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity Wallace_speed
--- Compiling architecture behavior of Wallace_speed
-
-} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd {1 {vcom -work wallace_s -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package altera_mf_components
--- Compiling entity RAM_2
--- Compiling architecture SYN of ram_2
-
-} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd {1 {vcom -work wallace_s -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd
+} {} {}} C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -42,7 +24,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity LFSR_52
 -- Compiling architecture Behavioral of LFSR_52
 
-} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd {1 {vcom -work wallace_s -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd
+} {} {}} C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -51,12 +33,40 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity control_path
 -- Compiling architecture behavior of control_path
 
-} {} {}} C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd {1 {vcom -work wallace_s -2002 -explicit -stats=none C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd
+} {} {}} C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity LFSR_3
 -- Compiling architecture Behavioral of LFSR_3
+
+} {} {}} C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity RAM_2
+-- Compiling architecture SYN of ram_2
+
+} {} {}} C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Wallace_speed
+-- Compiling architecture behavior of Wallace_speed
+
+} {} {}} C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity Wallace_speed_tb
+-- Compiling architecture behavior of Wallace_speed_tb
 
 } {} {}}

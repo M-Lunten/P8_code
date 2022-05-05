@@ -25,7 +25,7 @@ begin
 	if rising_edge(clk) then
 		s_saved <= stride & '1';
 		m_saved <= mask;
-		if MUX_ctrl = '0' then
+		if MUX_ctrl = '1' then
 			o_saved <= origin;
 		else
 			s_2times := s_saved & '0';
@@ -33,8 +33,8 @@ begin
 			o_saved <= std_logic_vector(o_next(8 downto 0));
 		end if;	
 	end if;
+	end process;
 	sPLUSo <= unsigned(s_saved) + unsigned(o_saved);
 	addr_1 <= o_saved XOR m_saved;
 	addr_2 <= mask XOR std_logic_vector(sPLUSo(8 downto 0));
-	end process;
 end behavior;

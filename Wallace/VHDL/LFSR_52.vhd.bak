@@ -9,7 +9,7 @@ entity LFSR_52 is
 end LFSR_52;
 
 architecture Behavioral of LFSR_52 is
-	signal shift_register : std_logic_vector(51 downto 0) := "0010010100101110100001000100011000100010011100101001";
+	signal shift_register : std_logic_vector(51 downto 0) := "0000000000000000000000000000000000000010011100101001";
 begin
 
 -- ShiftRegister

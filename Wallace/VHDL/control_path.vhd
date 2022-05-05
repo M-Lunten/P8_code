@@ -9,7 +9,8 @@ entity control_path is
 		reset: in std_logic;
 		clk: in std_logic;
 		LFSR_en, WE_1, WE_2 : out std_logic := '0';
-		MUX_4, MUX_5, MUX_6 : out std_logic
+		MUX_4, MUX_5 : out std_logic;
+		MUX_6 : out std_logic := '1'
 	);
 end control_path;
 
@@ -40,7 +41,7 @@ begin
 	if falling_edge(clk) then
 		if reset = '1' then
 			i_count <= "00000000";
-		elsif start_tmp2 = '1' then
+		elsif start_tmp1 = '1' then
 			i_count <= i_count + 1;
 		end if;
 	end if;
@@ -53,16 +54,18 @@ begin
 	end if;
 	end process;
 
-	starting: process(start, reset)
+	starting: process(start, reset, clk)
 	begin
-	if start = '1' then
-		if reset = '0' then
-			start_tmp1 <= start;
-			start_tmp2 <= start_tmp1;
-			start_tmp3 <= start_tmp2;
-			start_tmp4 <= start_tmp3;
-			start_tmp5 <= start_tmp4;
-			start_tmp6 <= start_tmp5;
+	if falling_edge(clk) then
+		if start = '1' then
+			if reset = '0' then
+				start_tmp1 <= start;
+				start_tmp2 <= start_tmp1;
+				start_tmp3 <= start_tmp2;
+				start_tmp4 <= start_tmp3;
+				start_tmp5 <= start_tmp4;
+				start_tmp6 <= start_tmp5;
+			end if;
 		end if;
 	end if;
 	end process;

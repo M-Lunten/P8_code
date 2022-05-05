@@ -9,24 +9,29 @@ entity control_path is
 		reset: in std_logic;
 		clk: in std_logic;
 		LFSR_en, WE_1, WE_2 : out std_logic := '0';
-		MUX_4, MUX_5, MUX_6 : out std_logic
+		MUX_4, MUX_5 : out std_logic;
+		MUX_6 : out std_logic := '1';
 	);
 end control_path;
 
 architecture behavior of control_path is
+	signal inv_clk : std_logic;
 	signal i_count : unsigned(7 downto 0) := "00000000";
 	signal one_bit_count : std_logic := '0';
 	signal start_tmp1, start_tmp2, start_tmp3, start_tmp4, start_tmp5, start_tmp6 : std_logic := '0';
 	signal LFSR_out : std_logic_vector(2 downto 0);
+	
 	component LFSR_3 is 
 	port (
 		CLK: in std_logic;
 		OUTPUT: out std_logic_vector(2 downto 0)
 	);
 	end component;
+	
 begin
-	--control path
-	LFSR: LFSR_3 port map (CLK => (not clk), OUTPUT => LFSR_out);
+	--control path	
+	inv_clk <= not clk;
+	LFSR: LFSR_3 port map (inv_clk, LFSR_out);
 
 	MUX_4 <= LFSR_out(0);
 	MUX_5 <= not LFSR_out(0);
@@ -36,7 +41,7 @@ begin
 	if falling_edge(clk) then
 		if reset = '1' then
 			i_count <= "00000000";
-		elsif start_tmp2 = '1' then
+		elsif start_tmp1 = '1' then
 			i_count <= i_count + 1;
 		end if;
 	end if;
@@ -49,16 +54,18 @@ begin
 	end if;
 	end process;
 
-	starting: process(start, reset)
+	starting: process(start, reset, clk)
 	begin
-	if start = '1' then
-		if reset = '0' then
-			start_tmp1 <= start;
-			start_tmp2 <= start_tmp1;
-			start_tmp3 <= start_tmp2;
-			start_tmp4 <= start_tmp3;
-			start_tmp5 <= start_tmp4;
-			start_tmp6 <= start_tmp5;
+	if falling_edge(clk) then
+		if start = '1' then
+			if reset = '0' then
+				start_tmp1 <= start;
+				start_tmp2 <= start_tmp1;
+				start_tmp3 <= start_tmp2;
+				start_tmp4 <= start_tmp3;
+				start_tmp5 <= start_tmp4;
+				start_tmp6 <= start_tmp5;
+			end if;
 		end if;
 	end if;
 	end process;

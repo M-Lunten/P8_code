@@ -9,36 +9,36 @@ z2
 cModel Technology
 dC:/Users/Morten/Documents/GitHub/Reconfigurable_Miniproject
 Eaddr_gen
-Z0 w1651753917
+Z0 w1651775735
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z4 dC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL
-Z5 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd
-Z6 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd
+Z4 dC:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL
+Z5 8C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd
+Z6 FC:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd
 l0
 L6
-VUS^JdczK>]7V]LiQM?JLN2
+VLc22OYl>ATM3;HeIMHN`M0
 !s100 VM<TZ5G>97[;C2BeJf2H;3
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1651754290
+Z8 !s110 1651776411
 !i10b 1
-Z9 !s108 1651754290.000000
-Z10 !s90 -reportprogress|300|-work|wallace_s|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd|
-Z11 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd|
+Z9 !s108 1651776411.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd|
+Z11 !s107 C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/addr_gen.vhd|
 !i113 1
-Z12 o-work wallace_s -2002 -explicit
+Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
 Abehavior
 R1
 R2
 R3
-DEx4 work 8 addr_gen 0 22 US^JdczK>]7V]LiQM?JLN2
+DEx4 work 8 addr_gen 0 22 Lc22OYl>ATM3;HeIMHN`M0
 l20
 L16
-VzYmMASYYE@a<9;9jib@KU1
-!s100 Zhohh>^Q>QfOZ4eG:6KF21
+VSm4@?bTAW`zCb_n7^ogFD1
+!s100 So_>0l>0H>O4fNXRj_4^Q2
 R7
 32
 R8
@@ -50,24 +50,24 @@ R11
 R12
 R13
 Econtrol_path
-Z14 w1651744275
+Z14 w1651776410
 R1
 R2
 R3
 R4
-Z15 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd
-Z16 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd
+Z15 8C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd
+Z16 FC:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd
 l0
 L6
-VohRP3zQ9]ggP3aT0@KKh_3
-!s100 4A:MIMXB==9fI9^==b_8F0
+VX;3Kz5CITi@bTZn@zdZTh0
+!s100 z2zS1dF@7OHmO@:?i2R;;3
 R7
 32
-Z17 !s110 1651745709
+R8
 !i10b 1
-Z18 !s108 1651745709.000000
-Z19 !s90 -reportprogress|300|-work|wallace_s|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd|
-Z20 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd|
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd|
+Z18 !s107 C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/control_path.vhd|
 !i113 1
 R12
 R13
@@ -75,118 +75,118 @@ Abehavior
 R1
 R2
 R3
-DEx4 work 12 control_path 0 22 ohRP3zQ9]ggP3aT0@KKh_3
-l30
-L16
-VTXI2FRAR2P2hTaQBjPMVQ1
-!s100 QO;d^1DNn=X:E:azl2V6Q0
+DEx4 work 12 control_path 0 22 X;3Kz5CITi@bTZn@zdZTh0
+l31
+L17
+VQ6RR>K4[7mj1ejcT^U7:^3
+!s100 Q8WL?6I:YVj@zJ?PSgdII0
 R7
 32
-R17
+R8
 !i10b 1
+R9
+R17
 R18
-R19
-R20
 !i113 1
 R12
 R13
 Elfsr_3
-Z21 w1651743010
+Z19 w1651773801
 R2
 R3
 R4
-Z22 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd
-Z23 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd
+Z20 8C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd
+Z21 FC:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd
 l0
 L4
-VcamLZkZQz^`3M`giHoNgD3
+V_ACN1IQNRGVLPMOd3D1mJ0
 !s100 YU9MaV<AIb_>57mCAbzU70
 R7
 32
-R17
+R8
 !i10b 1
-R18
-Z24 !s90 -reportprogress|300|-work|wallace_s|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd|
-Z25 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd|
+R9
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd|
+Z23 !s107 C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_3.vhd|
 !i113 1
 R12
 R13
 Abehavioral
 R2
 R3
-DEx4 work 6 lfsr_3 0 22 camLZkZQz^`3M`giHoNgD3
+DEx4 work 6 lfsr_3 0 22 _ACN1IQNRGVLPMOd3D1mJ0
 l13
 L11
-Vd1E4Pz=mUJcKPa`SHdbcB2
+Vg96L8E@9SJZGQLiUT8<JN3
 !s100 jnTM7I;[jYT4DXRmAl3Ak3
 R7
 32
-R17
+R8
 !i10b 1
-R18
-R24
-R25
+R9
+R22
+R23
 !i113 1
 R12
 R13
 Elfsr_52
-Z26 w1651743103
+Z24 w1651778537
 R2
 R3
 R4
-Z27 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd
-Z28 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd
+Z25 8C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd
+Z26 FC:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd
 l0
 L4
-VP?4VNS?j`7RWY5n<Sz<W`0
+VzUJRL6JflZ`a8iYh3CR2C3
 !s100 o`kShX?SIgXD@>g<0`=zf2
 R7
 32
-R17
+Z27 !s110 1651778544
 !i10b 1
-R18
-Z29 !s90 -reportprogress|300|-work|wallace_s|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd|
-Z30 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd|
+Z28 !s108 1651778544.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd|
+Z30 !s107 C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/LFSR_52.vhd|
 !i113 1
 R12
 R13
 Abehavioral
 R2
 R3
-DEx4 work 7 lfsr_52 0 22 P?4VNS?j`7RWY5n<Sz<W`0
+Z31 DEx4 work 7 lfsr_52 0 22 zUJRL6JflZ`a8iYh3CR2C3
 l13
 L11
-VUmh0=oJlKS@3TO`=>1kE`1
-!s100 h<?lA:=T^E;eXP=HUkfW83
+V7jk?H9Ao>;2b7alHoj`M80
+!s100 zNGzkh1lT=A<8:z@_95K=1
 R7
 32
-R17
+R27
 !i10b 1
-R18
+R28
 R29
 R30
 !i113 1
 R12
 R13
 Eram_1
-Z31 w1651745255
+R19
 Z32 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
 R2
 R3
 R4
-Z33 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd
-Z34 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd
+Z33 8C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd
+Z34 FC:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd
 l0
 L42
-VA6DD`6[Gm?_k;@RgAB`gD3
+V@d@17N27YTTlLgaQVT?ia0
 !s100 16^lC:gLij2GfBNg9YnOZ3
 R7
 32
-R17
+R8
 !i10b 1
-R18
-Z35 !s90 -reportprogress|300|-work|wallace_s|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd|
-Z36 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd|
+R9
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd|
+Z36 !s107 C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_1.vhd|
 !i113 1
 R12
 R13
@@ -194,40 +194,40 @@ Asyn
 R32
 R2
 R3
-DEx4 work 5 ram_1 0 22 A6DD`6[Gm?_k;@RgAB`gD3
+DEx4 work 5 ram_1 0 22 @d@17N27YTTlLgaQVT?ia0
 l63
 L58
-V^[^YKT6;dzHeQ2PZfIJ_W1
+VkV>6MZ3b:Y1b`@`^5<a;E2
 !s100 5>K0]4NeX::RHL9SNaHFj2
 R7
 32
-R17
+R8
 !i10b 1
-R18
+R9
 R35
 R36
 !i113 1
 R12
 R13
 Eram_2
-Z37 w1651745364
+R19
 R32
 R2
 R3
 R4
-Z38 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd
-Z39 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd
+Z37 8C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd
+Z38 FC:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd
 l0
 L42
-VeY:_hFJI7DWVNJO[a?4b12
+VYN]m_0?^fML@bIH32gQLE2
 !s100 88C2E[i]fo225OP1]NVNL3
 R7
 32
-R17
+Z39 !s110 1651776412
 !i10b 1
-R18
-Z40 !s90 -reportprogress|300|-work|wallace_s|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd|
-Z41 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd|
+R9
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd|
+Z41 !s107 C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/RAM_2.vhd|
 !i113 1
 R12
 R13
@@ -235,40 +235,40 @@ Asyn
 R32
 R2
 R3
-DEx4 work 5 ram_2 0 22 eY:_hFJI7DWVNJO[a?4b12
+DEx4 work 5 ram_2 0 22 YN]m_0?^fML@bIH32gQLE2
 l63
 L58
-V7h9K^nbzh98fCkOdeR?AO2
+V>gT8JFXXmAB3aH9`:=aDT1
 !s100 gneMMkV42l6M6zRXScEIN3
 R7
 32
-R17
+R39
 !i10b 1
-R18
+R9
 R40
 R41
 !i113 1
 R12
 R13
 Ewallace_speed
-Z42 w1651761612
+R19
 R1
 R2
 R3
 R4
-Z43 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd
-Z44 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd
+Z42 8C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd
+Z43 FC:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd
 l0
 L6
-VhzUC5DKoL3VVCT@Nk4;cJ1
+VP_>QWPQ[aS<FieaJ=BMcU1
 !s100 FeUSdXfU3k;bo02CT2YcC1
 R7
 32
-Z45 !s110 1651761640
+R39
 !i10b 1
-Z46 !s108 1651761640.000000
-Z47 !s90 -reportprogress|300|-work|wallace_s|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd|
-Z48 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd|
+Z44 !s108 1651776412.000000
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd|
+Z46 !s107 C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd|
 !i113 1
 R12
 R13
@@ -276,18 +276,61 @@ Abehavior
 R1
 R2
 R3
-Z49 DEx4 work 13 wallace_speed 0 22 hzUC5DKoL3VVCT@Nk4;cJ1
+DEx4 work 13 wallace_speed 0 22 P_>QWPQ[aS<FieaJ=BMcU1
 l98
 L18
-V<GN2nATXTbl?N6@mNLd?a1
+VYdKA:X4H3A:86D<SJPKLK0
 !s100 8IUzVSH>CO^1`HFbl;GXC1
 R7
 32
-R45
+R39
 !i10b 1
+R44
+R45
 R46
-R47
+!i113 1
+R12
+R13
+Ewallace_speed_tb
+Z47 w1651774465
+Z48 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R1
+R2
+R3
+R4
+Z49 8C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed_tb.vhd
+Z50 FC:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed_tb.vhd
+l0
+L7
+V:A9BmVQ>lESHl5ia<EQCh1
+!s100 RPHCHGHm1f>k>le>M^^]60
+R7
+32
+R39
+!i10b 1
+R44
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed_tb.vhd|
+Z52 !s107 C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed_tb.vhd|
+!i113 1
+R12
+R13
+Abehavior
 R48
+R1
+R2
+R3
+DEx4 work 16 wallace_speed_tb 0 22 :A9BmVQ>lESHl5ia<EQCh1
+l36
+L10
+VDV[m8Og`ma?mKAzdXm?9N1
+!s100 bmh`mUh>T=<DJai[RoWO91
+R7
+32
+R39
+!i10b 1
+R44
+R51
+R52
 !i113 1
 R12
 R13
