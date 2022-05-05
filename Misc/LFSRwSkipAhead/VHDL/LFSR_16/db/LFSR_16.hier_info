@@ -1,0 +1,35 @@
+|LFSR_16
+CLK => shift_register[0].CLK
+CLK => shift_register[1].CLK
+CLK => shift_register[2].CLK
+CLK => shift_register[3].CLK
+CLK => shift_register[4].CLK
+CLK => shift_register[5].CLK
+CLK => shift_register[6].CLK
+CLK => shift_register[7].CLK
+CLK => shift_register[8].CLK
+CLK => shift_register[9].CLK
+CLK => shift_register[10].CLK
+CLK => shift_register[11].CLK
+CLK => shift_register[12].CLK
+CLK => shift_register[13].CLK
+CLK => shift_register[14].CLK
+CLK => shift_register[15].CLK
+OUTPUT[0] << shift_register[0].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] << shift_register[1].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] << shift_register[2].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] << shift_register[3].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[4] << shift_register[4].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[5] << shift_register[5].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[6] << shift_register[6].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[7] << shift_register[7].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[8] << shift_register[8].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[9] << shift_register[9].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[10] << shift_register[10].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[11] << shift_register[11].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[12] << shift_register[12].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[13] << shift_register[13].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[14] << shift_register[14].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[15] << shift_register[15].DB_MAX_OUTPUT_PORT_TYPE
+
+

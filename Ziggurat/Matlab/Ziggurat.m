@@ -35,7 +35,7 @@ yi = z(:,2);
 
 %%
 %rng(1);
-samples = 1000000;
+samples = 5000;
 reject1 = 0;
 reject2 = 0;
 reject3 = 0;
