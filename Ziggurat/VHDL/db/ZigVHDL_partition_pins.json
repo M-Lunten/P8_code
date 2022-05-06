@@ -68,6 +68,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "isVal",
+					"strict" : false
+				},
+				{
 					"name" : "i_clock",
 					"strict" : false
 				},

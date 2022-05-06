@@ -3,12 +3,14 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
+
 entity ZigVHDL is 
 port(
 	i_clock : in std_logic;
 	reset : in std_logic;
 	start : in std_logic;
-	zigout : out std_logic_vector(15 downto 0)
+	zigout : out std_logic_vector(15 downto 0);
+	isVal : out std_logic
 	);
 end ZigVHDL;
 
@@ -105,7 +107,7 @@ end component;
 	signal ea : std_logic;
 	signal eb : std_logic;
 	
-	signal A : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal A : std_logic_vector(15 downto 0) := "0000000000001111";
 	signal fx : std_logic_vector(15 downto 0) := "0000000000000000";
 	
 	signal Y : std_logic_vector(15 downto 0) := "0000000000000000";
@@ -129,7 +131,7 @@ end component;
 	signal D3_1 : std_logic;
 	signal D4_1 : std_logic;
 	
-	signal out1stage : std_logic_vector(15 downto 0) := "0000000000000000";
+	
 	
 	
 	signal valid : std_logic;
@@ -143,15 +145,30 @@ end component;
 		c6: d2Gen port map(i_clock,xu,xiplus_1,D2);
 		c7: d5Gen port map(i_clock,Y,fx,D5);
 		
+
+		isVal <= valid;
 		process(i_clock,start) is 
-		variable Yv : signed(31 downto 0) := "00000000000000000000000000000000";
-		variable xuV : signed(31 downto 0) := "00000000000000000000000000000000";
-		variable fxv : signed(79 downto 0):= "00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-		variable GRAD : signed(15 downto 0) := "0000000000000000";
-		variable Yint : signed(15 downto 0) := "0000000000000000";
-		variable Ymax : signed(15 downto 0) := "0000000000000000";
-		variable YmaxMinus1 : signed(15 downto 0) := "0000000000000000";
-		variable YmYmminus1 : signed(15 downto 0) := "0000000000000000";
+		
+		variable YvS1 : signed(31 downto 0) := "00000000000000000000000000000000";
+		variable YvS2 : signed(15 downto 0);
+		variable YvS3 : signed(15 downto 0);
+		
+		variable xuVS1 : signed(31 downto 0) := "00000000000000000000000000000000";
+		variable xuVS2 : signed(15 downto 0);
+		
+		variable fxvS1 : signed(31 downto 0);
+		variable fxvS2 : signed(15 downto 0);
+		variable fxvS3 : signed(31 downto 0);
+		variable fxvS4 : signed(15 downto 0);
+		variable fxvS5 : signed(15 downto 0);
+		
+		variable GRAD : signed(15 downto 0) := "1111100110011110";
+		variable Yint : signed(15 downto 0) := "0000110011000100";
+		variable Ymax : signed(15 downto 0) := "0000110011000100";
+		variable YmaxMinus1 : signed(15 downto 0) := "0000110001111001";
+		variable YmYmminus1 : signed(15 downto 0) := "0000000001001011";
+
+			
 			begin
 				if rising_edge(i_clock) then
 					if (start='1') then 
@@ -159,30 +176,39 @@ end component;
 					U0 <= genU(15 downto 0);
 					U1 <= genU(31 downto 16);
 					i <= genU(23 downto 16);
-					iplus <= genU(23 downto 16) + '1';
+					iplus <= std_logic_vector(unsigned(genU(23 downto 16) + 1));
+					
+					
 					
 					xiplus_1 <= xiplus;
 					
-					U0_1 <= U0;
+					U0_1 <= std_logic_vector(shift_right(unsigned(U0),3)(15 downto 0));
 					U0_2 <= U0_1;
 					
-					U1_1 <= U1;
+					U1_1 <= std_logic_vector(shift_right(unsigned(U1),3)(15 downto 0));
 					U1_2 <= U1_1;
 					U1_3 <= U1_2;
-					
 					
 					
 					i_1 <= i;
 					i_2 <= i_1;
 					
-					Yv := (YmYmminus1 * signed(U1_2)) + YmaxMinus1;
-					Y <= std_logic_vector(Yv(31 downto 16));
+					YvS1 := (YmYmminus1 * signed(U1_2));--3by13 x 3by13 -> 6by26
+					YvS2 := signed(shift_right(YvS1,16)(15 downto 0));
 					
-					xuv := signed(xi)*signed(U0_1);
-					xu <= std_logic_vector(xuv(31 downto 16));
+					YvS3 := YvS2  + YmaxMinus1;--3by13 + 3by13
+					Y <= std_logic_vector(YvS3);
 					
-					fxv := (xuv*xuv*GRAD) + YmaxMinus1;
-					fx <= std_logic_vector(fxv(79 downto 64));
+					xuvS1 := signed(xi)*signed(U0_1); -- 3by13 x 3by13 -> 6by26
+					xuvS2 := signed(shift_right(xuvS1,16)(15 downto 0));
+					xu <= std_logic_vector(xuvS2);
+					
+					fxvS1 := (xuvS2*xuvS2); -- 3by13 x 3by13 -> 6by26
+					fxvS2 := signed(shift_right(fxvS1,16)(15 downto 0));
+					fxvS3 := fxvS2*GRAD; -- 3by13 x 3by 13 -> 6by26
+					fxvS4 := signed(shift_right(fxvS3,16)(15 downto 0));
+					fxvS5 := fxvS4 + YmaxMinus1; -- 3by13 + 3by13
+					fx <= std_logic_vector(fxvS5);
 					
 					D1_1 <= D1;
 					D2_1 <= D2;
@@ -192,24 +218,24 @@ end component;
 					xu_1 <= xu;
 					
 					
-					if((D1_1='1') and (D2_1='1')) then 
-						if(U1_3(15)='1') then
+					if((D1_1='1') and (D2_1='1') and (D3_1='0') and (D4_1='0') and (D5='0')) then 
+						if(U1(15)='1') then
 							zigout <= not(xu_1) + 1;
 						else
 							zigout <= xu_1;
 						end if;
 						valid <= '1';
 						
-					elsif ((D1_1='0') and (D3_1='1') and (D4_1 = '1')) then
-						if(U1_3(15)='1') then
+					elsif ((D1_1='0') and (D2_1='0') and (D3_1='1') and (D4_1 = '1') and (D5='0')) then
+						if(U1(15)='1') then
 							zigout <= not(xu_1) + 1;
 						else
 							zigout <= xu_1;
 						end if;
 						valid <= '1';
 						
-					elsif ((D1_1='0') and (D3_1='0') and (D5 = '1')) then	
-						if(U1_3(15)='1') then
+					elsif ((D1_1='0') and (D2_1='0') and (D3_1='0') and (D4_1 = '0') and (D5='1')) then	
+						if(U1(15)='1') then
 							zigout <= not(xu_1) + 1;
 						else
 							zigout <= xu_1;
@@ -231,6 +257,6 @@ end component;
 					end if;
 			
 		end process;
-	
+		
 
 end architecture;

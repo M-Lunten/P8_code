@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "OUTPUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[16]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[17]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[18]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[19]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[20]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[21]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[22]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[23]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[24]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[25]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[26]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[27]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[28]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[29]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[30]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[31]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[32]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

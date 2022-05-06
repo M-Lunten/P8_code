@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ZigVHDL
-Wed May 04 16:35:23 2022
+Fri May 06 14:38:38 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -20,18 +20,20 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  12. Removed Registers Triggering Further Register Optimizations
  13. General Register Statistics
  14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated
- 17. Parameter Settings for User Entity Instance: zigLUT:c3|altsyncram:altsyncram_component
- 18. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 19. altsyncram Parameter Settings by Entity Instance
- 20. lpm_mult Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "d4Gen:c5"
- 22. Port Connectivity Checks: "zigLUT:c3"
- 23. Port Connectivity Checks: "LFSR_33:c1"
- 24. Post-Synthesis Netlist Statistics for Top Partition
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
+ 15. Source assignments for zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated
+ 16. Parameter Settings for User Entity Instance: zigLUT:c3|altsyncram:altsyncram_component
+ 17. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
+ 18. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult2
+ 19. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult3
+ 20. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. lpm_mult Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "d4Gen:c5"
+ 24. Port Connectivity Checks: "zigLUT:c3"
+ 25. Port Connectivity Checks: "LFSR_33:c1"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -57,19 +59,19 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 04 16:35:23 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 06 14:38:38 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ZigVHDL                                     ;
 ; Top-level Entity Name              ; ZigVHDL                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 187                                         ;
-;     Total combinational functions  ; 63                                          ;
-;     Dedicated logic registers      ; 167                                         ;
-; Total registers                    ; 167                                         ;
-; Total pins                         ; 19                                          ;
+; Total logic elements               ; 372                                         ;
+;     Total combinational functions  ; 221                                         ;
+;     Dedicated logic registers      ; 204                                         ;
+; Total registers                    ; 204                                         ;
+; Total pins                         ; 20                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
-; Embedded Multiplier 9-bit elements ; 2                                           ;
+; Embedded Multiplier 9-bit elements ; 4                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
@@ -177,37 +179,58 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; LFSR_33.vhd                      ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd            ;         ;
-; ZigVHDL.vhd                      ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd            ;         ;
-; d1Gen.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd              ;         ;
-; zigLUT.vhd                       ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd             ;         ;
-; d3Gen.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd              ;         ;
-; d4Gen.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd              ;         ;
-; d2Gen.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd              ;         ;
-; d5Gen.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd              ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_ujt3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/altsyncram_ujt3.tdf ;         ;
-; ziggurat_lut.mif                 ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ziggurat_lut.mif       ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
-; multcore.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc          ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc          ;         ;
-; altshift.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc          ;         ;
-; db/mult_36t.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/mult_36t.tdf        ;         ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+----------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+----------------------------------+--------------------------------------------------------------------------------+---------+
+; Ziggurat_LUT.mif                 ; yes             ; User Memory Initialization File  ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/Ziggurat_LUT.mif         ;         ;
+; LFSR_33.vhd                      ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd              ;         ;
+; ZigVHDL.vhd                      ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd              ;         ;
+; d1Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd                ;         ;
+; zigLUT.vhd                       ; yes             ; User Wizard-Generated File       ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd               ;         ;
+; d3Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd                ;         ;
+; d4Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd                ;         ;
+; d2Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd                ;         ;
+; d5Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd                ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_ujt3.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/altsyncram_ujt3.tdf   ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; multcore.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; db/mult_v5t.tdf                  ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/mult_v5t.tdf          ;         ;
+; db/mult_56t.tdf                  ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/mult_56t.tdf          ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf            ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/csa_add.inc             ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muleabz.inc             ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mul_lfrg.inc            ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mul_boothc.inc          ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_ded_mult.inc        ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc      ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/dffpipe.inc             ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf            ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_m9h.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_m9h.tdf       ;         ;
+; db/add_sub_bkh.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_bkh.tdf       ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.tdf            ;         ;
+; db/add_sub_ckh.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_ckh.tdf       ;         ;
+; db/add_sub_i9h.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_i9h.tdf       ;         ;
+; db/add_sub_gkh.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_gkh.tdf       ;         ;
++----------------------------------+-----------------+----------------------------------+--------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------+
@@ -215,49 +238,72 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 187           ;
+; Estimated Total logic elements              ; 372           ;
 ;                                             ;               ;
-; Total combinational functions               ; 63            ;
+; Total combinational functions               ; 221           ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 3             ;
-;     -- 3 input functions                    ; 32            ;
-;     -- <=2 input functions                  ; 28            ;
+;     -- 4 input functions                    ; 75            ;
+;     -- 3 input functions                    ; 75            ;
+;     -- <=2 input functions                  ; 71            ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 27            ;
-;     -- arithmetic mode                      ; 36            ;
+;     -- normal mode                          ; 125           ;
+;     -- arithmetic mode                      ; 96            ;
 ;                                             ;               ;
-; Total registers                             ; 167           ;
-;     -- Dedicated logic registers            ; 167           ;
+; Total registers                             ; 204           ;
+;     -- Dedicated logic registers            ; 204           ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
-; I/O pins                                    ; 19            ;
+; I/O pins                                    ; 20            ;
 ; Total memory bits                           ; 4096          ;
 ;                                             ;               ;
-; Embedded Multiplier 9-bit elements          ; 2             ;
+; Embedded Multiplier 9-bit elements          ; 4             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; i_clock~input ;
-; Maximum fan-out                             ; 183           ;
-; Total fan-out                               ; 980           ;
-; Average fan-out                             ; 3.43          ;
+; Maximum fan-out                             ; 220           ;
+; Total fan-out                               ; 1487          ;
+; Average fan-out                             ; 3.07          ;
 +---------------------------------------------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                       ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Entity Name     ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
-; |ZigVHDL                                  ; 63 (29)             ; 167 (134)                 ; 4096        ; 2            ; 0       ; 1         ; 19   ; 0            ; |ZigVHDL                                                                          ; ZigVHDL         ; work         ;
-;    |LFSR_33:c1|                           ; 15 (15)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|LFSR_33:c1                                                               ; LFSR_33         ; work         ;
-;    |d1Gen:c2|                             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d1Gen:c2                                                                 ; d1Gen           ; work         ;
-;    |d2Gen:c6|                             ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d2Gen:c6                                                                 ; d2Gen           ; work         ;
-;    |lpm_mult:Mult0|                       ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0                                                           ; lpm_mult        ; work         ;
-;       |mult_36t:auto_generated|           ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0|mult_36t:auto_generated                                   ; mult_36t        ; work         ;
-;    |zigLUT:c3|                            ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|zigLUT:c3                                                                ; zigLUT          ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|zigLUT:c3|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;          |altsyncram_ujt3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated ; altsyncram_ujt3 ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                          ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Entity Name     ; Library Name ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |ZigVHDL                                       ; 221 (41)            ; 204 (171)                 ; 4096        ; 4            ; 0       ; 2         ; 20   ; 0            ; |ZigVHDL                                                                                                                        ; ZigVHDL         ; work         ;
+;    |LFSR_33:c1|                                ; 15 (15)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|LFSR_33:c1                                                                                                             ; LFSR_33         ; work         ;
+;    |d1Gen:c2|                                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d1Gen:c2                                                                                                               ; d1Gen           ; work         ;
+;    |d2Gen:c6|                                  ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d2Gen:c6                                                                                                               ; d2Gen           ; work         ;
+;    |d3Gen:c4|                                  ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d3Gen:c4                                                                                                               ; d3Gen           ; work         ;
+;    |d4Gen:c5|                                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d4Gen:c5                                                                                                               ; d4Gen           ; work         ;
+;    |d5Gen:c7|                                  ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d5Gen:c7                                                                                                               ; d5Gen           ; work         ;
+;    |lpm_mult:Mult0|                            ; 62 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0                                                                                                         ; lpm_mult        ; work         ;
+;       |multcore:mult_core|                     ; 62 (28)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core                                                                                      ; multcore        ; work         ;
+;          |mpar_add:padder|                     ; 34 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add        ; work         ;
+;             |lpm_add_sub:adder[0]|             ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub     ; work         ;
+;                |add_sub_i9h:auto_generated|    ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_i9h:auto_generated                      ; add_sub_i9h     ; work         ;
+;             |lpm_add_sub:adder[1]|             ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                 ; lpm_add_sub     ; work         ;
+;                |add_sub_ckh:auto_generated|    ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_ckh:auto_generated                      ; add_sub_ckh     ; work         ;
+;             |mpar_add:sub_par_add|             ; 14 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add        ; work         ;
+;                |lpm_add_sub:adder[0]|          ; 14 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub     ; work         ;
+;                   |add_sub_gkh:auto_generated| ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_gkh:auto_generated ; add_sub_gkh     ; work         ;
+;    |lpm_mult:Mult1|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult1                                                                                                         ; lpm_mult        ; work         ;
+;       |mult_v5t:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult1|mult_v5t:auto_generated                                                                                 ; mult_v5t        ; work         ;
+;    |lpm_mult:Mult2|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult2                                                                                                         ; lpm_mult        ; work         ;
+;       |mult_56t:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult2|mult_56t:auto_generated                                                                                 ; mult_56t        ; work         ;
+;    |lpm_mult:Mult3|                            ; 66 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult3                                                                                                         ; lpm_mult        ; work         ;
+;       |multcore:mult_core|                     ; 66 (36)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult3|multcore:mult_core                                                                                      ; multcore        ; work         ;
+;          |mpar_add:padder|                     ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add        ; work         ;
+;             |lpm_add_sub:adder[0]|             ; 15 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub     ; work         ;
+;                |add_sub_m9h:auto_generated|    ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_m9h:auto_generated                      ; add_sub_m9h     ; work         ;
+;             |mpar_add:sub_par_add|             ; 15 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add        ; work         ;
+;                |lpm_add_sub:adder[0]|          ; 15 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub     ; work         ;
+;                   |add_sub_bkh:auto_generated| ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_bkh:auto_generated ; add_sub_bkh     ; work         ;
+;    |zigLUT:c3|                                 ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|zigLUT:c3                                                                                                              ; zigLUT          ; work         ;
+;       |altsyncram:altsyncram_component|        ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|zigLUT:c3|altsyncram:altsyncram_component                                                                              ; altsyncram      ; work         ;
+;          |altsyncram_ujt3:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated                                               ; altsyncram_ujt3 ; work         ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -276,10 +322,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                             ; Number Used ;
 +---------------------------------------+-------------+
 ; Simple Multipliers (9-bit)            ; 0           ;
-; Simple Multipliers (18-bit)           ; 1           ;
+; Simple Multipliers (18-bit)           ; 2           ;
 ; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 2           ;
-; Signed Embedded Multipliers           ; 1           ;
+; Embedded Multiplier 9-bit elements    ; 4           ;
+; Signed Embedded Multipliers           ; 2           ;
 ; Unsigned Embedded Multipliers         ; 0           ;
 ; Mixed Sign Embedded Multipliers       ; 0           ;
 ; Variable Sign Embedded Multipliers    ; 0           ;
@@ -302,46 +348,46 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
-; Y[0..15]                               ; Stuck at GND due to stuck port data_in ;
-; fx[0..15]                              ; Stuck at GND due to stuck port data_in ;
-; i_2[7]                                 ; Merged with U1_2[7]                    ;
-; i_2[2]                                 ; Merged with U1_2[2]                    ;
-; i_2[1]                                 ; Merged with U1_2[1]                    ;
-; i_2[0]                                 ; Merged with U1_2[0]                    ;
-; i_1[7]                                 ; Merged with U1_1[7]                    ;
-; i_1[6]                                 ; Merged with U1_1[6]                    ;
-; i_1[2]                                 ; Merged with U1_1[2]                    ;
-; i_1[1]                                 ; Merged with U1_1[1]                    ;
-; i[1]                                   ; Merged with U1[1]                      ;
-; i[2]                                   ; Merged with U1[2]                      ;
+; U0_1[13..15]                           ; Stuck at GND due to stuck port data_in ;
+; U1_1[13..15]                           ; Stuck at GND due to stuck port data_in ;
+; U1_2[13..15]                           ; Stuck at GND due to stuck port data_in ;
+; U1_3[15]                               ; Stuck at GND due to stuck port data_in ;
+; Y[14,15]                               ; Merged with Y[13]                      ;
+; fx[14,15]                              ; Merged with fx[13]                     ;
+; i_2[7]                                 ; Merged with U1_2[4]                    ;
+; i_1[7]                                 ; Merged with U1_1[4]                    ;
+; i_1[6]                                 ; Merged with U1_1[3]                    ;
 ; i[3]                                   ; Merged with U1[3]                      ;
 ; i[7]                                   ; Merged with U1[7]                      ;
-; i_2[6]                                 ; Merged with U1_2[6]                    ;
-; i[0]                                   ; Merged with U1[0]                      ;
-; i_1[0]                                 ; Merged with U1_1[0]                    ;
+; i_2[6]                                 ; Merged with U1_2[3]                    ;
 ; i[6]                                   ; Merged with U1[6]                      ;
 ; i[5]                                   ; Merged with U1[5]                      ;
-; i_1[5]                                 ; Merged with U1_1[5]                    ;
-; i_1[4]                                 ; Merged with U1_1[4]                    ;
-; i_2[5]                                 ; Merged with U1_2[5]                    ;
-; i_2[4]                                 ; Merged with U1_2[4]                    ;
+; i_1[5]                                 ; Merged with U1_1[2]                    ;
+; i_1[4]                                 ; Merged with U1_1[1]                    ;
+; i_2[5]                                 ; Merged with U1_2[2]                    ;
+; i_2[4]                                 ; Merged with U1_2[1]                    ;
 ; i[4]                                   ; Merged with U1[4]                      ;
-; i_1[3]                                 ; Merged with U1_1[3]                    ;
-; i_2[3]                                 ; Merged with U1_2[3]                    ;
-; D4_1                                   ; Stuck at GND due to stuck port data_in ;
-; D3_1                                   ; Lost fanout                            ;
-; Total Number of Removed Registers = 58 ;                                        ;
+; i_1[3]                                 ; Merged with U1_1[0]                    ;
+; i_2[3]                                 ; Merged with U1_2[0]                    ;
+; Y[8,9,12,13]                           ; Stuck at GND due to stuck port data_in ;
+; xu_1[14,15]                            ; Merged with xu_1[13]                   ;
+; xu[14,15]                              ; Merged with xu[13]                     ;
+; Total Number of Removed Registers = 37 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                        ;
-+---------------+---------------------------+----------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
-+---------------+---------------------------+----------------------------------------+
-; Y[15]         ; Stuck at GND              ; D3_1                                   ;
-;               ; due to stuck port data_in ;                                        ;
-+---------------+---------------------------+----------------------------------------+
++------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                              ;
++---------------+---------------------------+----------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register       ;
++---------------+---------------------------+----------------------------------------------+
+; U1_1[15]      ; Stuck at GND              ; U1_2[15], U1_3[15], Y[13], Y[12], Y[9], Y[8] ;
+;               ; due to stuck port data_in ;                                              ;
+; U1_1[14]      ; Stuck at GND              ; U1_2[14]                                     ;
+;               ; due to stuck port data_in ;                                              ;
+; U1_1[13]      ; Stuck at GND              ; U1_2[13]                                     ;
+;               ; due to stuck port data_in ;                                              ;
++---------------+---------------------------+----------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -349,12 +395,12 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 167   ;
+; Total registers                              ; 204   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 134   ;
+; Number of registers using Clock Enable       ; 171   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -365,18 +411,9 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; LFSR_33:c1|shift_register[3]           ; 2       ;
-; LFSR_33:c1|shift_register[2]           ; 2       ;
+; LFSR_33:c1|shift_register[2]           ; 1       ;
 ; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |ZigVHDL|zigout[0]~reg0    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -450,7 +487,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                     ;
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1                     ;
 +------------------------------------------------+--------------+---------------------+
 ; Parameter Name                                 ; Value        ; Type                ;
 +------------------------------------------------+--------------+---------------------+
@@ -459,9 +496,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
 ; LPM_WIDTHA                                     ; 16           ; Untyped             ;
-; LPM_WIDTHB                                     ; 16           ; Untyped             ;
-; LPM_WIDTHP                                     ; 32           ; Untyped             ;
-; LPM_WIDTHR                                     ; 32           ; Untyped             ;
+; LPM_WIDTHB                                     ; 14           ; Untyped             ;
+; LPM_WIDTHP                                     ; 30           ; Untyped             ;
+; LPM_WIDTHR                                     ; 30           ; Untyped             ;
 ; LPM_WIDTHS                                     ; 1            ; Untyped             ;
 ; LPM_REPRESENTATION                             ; SIGNED       ; Untyped             ;
 ; LPM_PIPELINE                                   ; 0            ; Untyped             ;
@@ -476,7 +513,112 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_36t     ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_v5t     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult2                     ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 14           ; Untyped             ;
+; LPM_WIDTHB                                     ; 14           ; Untyped             ;
+; LPM_WIDTHP                                     ; 28           ; Untyped             ;
+; LPM_WIDTHR                                     ; 28           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_56t     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult3                     ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 12           ; Untyped             ;
+; LPM_WIDTHB                                     ; 12           ; Untyped             ;
+; LPM_WIDTHP                                     ; 24           ; Untyped             ;
+; LPM_WIDTHR                                     ; 24           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                     ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 8            ; Untyped             ;
+; LPM_WIDTHB                                     ; 14           ; Untyped             ;
+; LPM_WIDTHP                                     ; 22           ; Untyped             ;
+; LPM_WIDTHR                                     ; 22           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; YES          ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
 ; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
 ; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
@@ -509,13 +651,46 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+----------------+
 ; Name                                  ; Value          ;
 +---------------------------------------+----------------+
-; Number of entity instances            ; 1              ;
-; Entity Instance                       ; lpm_mult:Mult0 ;
+; Number of entity instances            ; 4              ;
+; Entity Instance                       ; lpm_mult:Mult1 ;
 ;     -- LPM_WIDTHA                     ; 16             ;
-;     -- LPM_WIDTHB                     ; 16             ;
-;     -- LPM_WIDTHP                     ; 32             ;
+;     -- LPM_WIDTHB                     ; 14             ;
+;     -- LPM_WIDTHP                     ; 30             ;
 ;     -- LPM_REPRESENTATION             ; SIGNED         ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO             ;
+;     -- INPUT_B_IS_CONSTANT            ; NO             ;
+;     -- USE_EAB                        ; OFF            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
+; Entity Instance                       ; lpm_mult:Mult2 ;
+;     -- LPM_WIDTHA                     ; 14             ;
+;     -- LPM_WIDTHB                     ; 14             ;
+;     -- LPM_WIDTHP                     ; 28             ;
+;     -- LPM_REPRESENTATION             ; SIGNED         ;
+;     -- INPUT_A_IS_CONSTANT            ; NO             ;
+;     -- INPUT_B_IS_CONSTANT            ; NO             ;
+;     -- USE_EAB                        ; OFF            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
+; Entity Instance                       ; lpm_mult:Mult3 ;
+;     -- LPM_WIDTHA                     ; 12             ;
+;     -- LPM_WIDTHB                     ; 12             ;
+;     -- LPM_WIDTHP                     ; 24             ;
+;     -- LPM_REPRESENTATION             ; SIGNED         ;
+;     -- INPUT_A_IS_CONSTANT            ; NO             ;
+;     -- INPUT_B_IS_CONSTANT            ; YES            ;
+;     -- USE_EAB                        ; OFF            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
+; Entity Instance                       ; lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 8              ;
+;     -- LPM_WIDTHB                     ; 14             ;
+;     -- LPM_WIDTHP                     ; 22             ;
+;     -- LPM_REPRESENTATION             ; SIGNED         ;
+;     -- INPUT_A_IS_CONSTANT            ; YES            ;
 ;     -- INPUT_B_IS_CONSTANT            ; NO             ;
 ;     -- USE_EAB                        ; OFF            ;
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
@@ -524,13 +699,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+----------------+
 
 
-+----------------------------------------+
-; Port Connectivity Checks: "d4Gen:c5"   ;
-+------+-------+----------+--------------+
-; Port ; Type  ; Severity ; Details      ;
-+------+-------+----------+--------------+
-; ain  ; Input ; Info     ; Stuck at GND ;
-+------+-------+----------+--------------+
++----------------------------------------------+
+; Port Connectivity Checks: "d4Gen:c5"         ;
++------------+-------+----------+--------------+
+; Port       ; Type  ; Severity ; Details      ;
++------------+-------+----------+--------------+
+; ain[3..0]  ; Input ; Info     ; Stuck at VCC ;
+; ain[15..4] ; Input ; Info     ; Stuck at GND ;
++------------+-------+----------+--------------+
 
 
 +------------------------------------------+
@@ -543,13 +719,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "LFSR_33:c1"                                                                               ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; output[32] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR_33:c1"                                                                                 ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; output[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; output[32]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -557,26 +734,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 19                          ;
-; cycloneiii_ff         ; 167                         ;
-;     ENA               ; 134                         ;
+; boundary_port         ; 20                          ;
+; cycloneiii_ff         ; 204                         ;
+;     ENA               ; 171                         ;
 ;     plain             ; 33                          ;
-; cycloneiii_lcell_comb ; 63                          ;
-;     arith             ; 36                          ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 31                          ;
-;     normal            ; 27                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 16                          ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 3                           ;
-; cycloneiii_mac_mult   ; 1                           ;
-; cycloneiii_mac_out    ; 1                           ;
+; cycloneiii_lcell_comb ; 221                         ;
+;     arith             ; 96                          ;
+;         2 data inputs ; 36                          ;
+;         3 data inputs ; 60                          ;
+;     normal            ; 125                         ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 75                          ;
+; cycloneiii_mac_mult   ; 2                           ;
+; cycloneiii_mac_out    ; 2                           ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.50                        ;
-; Average LUT depth     ; 0.96                        ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 3.41                        ;
 +-----------------------+-----------------------------+
 
 
@@ -585,7 +762,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -595,7 +772,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 04 16:34:56 2022
+    Info: Processing started: Fri May 06 14:38:10 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ZigVHDL -c ZigVHDL
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -603,8 +780,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file lfsr_33
     Info (12022): Found design unit 1: LFSR_33-Behavioral File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd Line: 11
     Info (12023): Found entity 1: LFSR_33 File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file zigvhdl.vhd
-    Info (12022): Found design unit 1: ZigVHDL-Behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 15
-    Info (12023): Found entity 1: ZigVHDL File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 6
+    Info (12022): Found design unit 1: ZigVHDL-Behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 17
+    Info (12023): Found entity 1: ZigVHDL File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file d1gen.vhd
     Info (12022): Found design unit 1: d1Gen-Behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd Line: 14
     Info (12023): Found entity 1: d1Gen File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd Line: 6
@@ -623,21 +800,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file d2gen.v
 Info (12021): Found 2 design units, including 1 entities, in source file d5gen.vhd
     Info (12022): Found design unit 1: d5Gen-Behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 15
     Info (12023): Found entity 1: d5Gen File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file ziggurat_tb.vhd
+    Info (12022): Found design unit 1: ziggurat_tb-behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd Line: 11
+    Info (12023): Found entity 1: ziggurat_tb File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd Line: 8
 Info (12127): Elaborating entity "ZigVHDL" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(85): object "U0_2" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 85
-Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(102): used explicit default value for signal "da" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 102
-Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(103): used explicit default value for signal "db" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 103
-Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(105): used implicit default value for signal "ea" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 105
-Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(106): used implicit default value for signal "eb" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 106
-Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(108): used explicit default value for signal "A" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 108
-Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(135): object "valid" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 135
-Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(150): used initial value expression for variable "GRAD" because variable was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 150
-Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(153): used initial value expression for variable "YmaxMinus1" because variable was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 153
-Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(154): used initial value expression for variable "YmYmminus1" because variable was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 154
-Info (12128): Elaborating entity "LFSR_33" for hierarchy "LFSR_33:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 138
-Info (12128): Elaborating entity "d1Gen" for hierarchy "d1Gen:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 139
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(87): object "U0_2" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 87
+Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(104): used explicit default value for signal "da" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 104
+Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(105): used explicit default value for signal "db" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 105
+Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(107): used implicit default value for signal "ea" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 107
+Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(108): used implicit default value for signal "eb" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 108
+Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(110): used explicit default value for signal "A" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 110
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(165): used initial value expression for variable "GRAD" because variable was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 165
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(168): used initial value expression for variable "YmaxMinus1" because variable was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 168
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(169): used initial value expression for variable "YmYmminus1" because variable was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 169
+Info (12128): Elaborating entity "LFSR_33" for hierarchy "LFSR_33:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 140
+Info (12128): Elaborating entity "d1Gen" for hierarchy "d1Gen:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 141
 Warning (10492): VHDL Process Statement warning at d1Gen.vhd(22): signal "Iin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd Line: 22
-Info (12128): Elaborating entity "zigLUT" for hierarchy "zigLUT:c3" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 140
+Info (12128): Elaborating entity "zigLUT" for hierarchy "zigLUT:c3" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 142
 Info (12128): Elaborating entity "altsyncram" for hierarchy "zigLUT:c3|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 67
 Info (12130): Elaborated megafunction instantiation "zigLUT:c3|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 67
 Info (12133): Instantiated megafunction "zigLUT:c3|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 67
@@ -694,48 +873,108 @@ Info (12133): Instantiated megafunction "zigLUT:c3|altsyncram:altsyncram_compone
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ujt3.tdf
     Info (12023): Found entity 1: altsyncram_ujt3 File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/altsyncram_ujt3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_ujt3" for hierarchy "zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "d3Gen" for hierarchy "d3Gen:c4" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 141
+Info (12128): Elaborating entity "d3Gen" for hierarchy "d3Gen:c4" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 143
 Warning (10492): VHDL Process Statement warning at d3Gen.vhd(22): signal "Iin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd Line: 22
-Info (12128): Elaborating entity "d4Gen" for hierarchy "d4Gen:c5" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 142
+Info (12128): Elaborating entity "d4Gen" for hierarchy "d4Gen:c5" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 144
 Warning (10492): VHDL Process Statement warning at d4Gen.vhd(23): signal "U1in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd Line: 23
 Warning (10492): VHDL Process Statement warning at d4Gen.vhd(23): signal "Ain" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd Line: 23
-Info (12128): Elaborating entity "d2Gen" for hierarchy "d2Gen:c6" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 143
+Info (12128): Elaborating entity "d2Gen" for hierarchy "d2Gen:c6" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 145
 Warning (10492): VHDL Process Statement warning at d2Gen.vhd(23): signal "Xuin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd Line: 23
 Warning (10492): VHDL Process Statement warning at d2Gen.vhd(23): signal "Xiplusin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd Line: 23
-Info (12128): Elaborating entity "d5Gen" for hierarchy "d5Gen:c7" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 144
+Info (12128): Elaborating entity "d5Gen" for hierarchy "d5Gen:c7" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 146
 Warning (10492): VHDL Process Statement warning at d5Gen.vhd(23): signal "Yin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 23
 Warning (10492): VHDL Process Statement warning at d5Gen.vhd(23): signal "Fxin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 23
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 181
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 181
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 181
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 202
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 206
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult3" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 208
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 196
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 202
+Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 202
     Info (12134): Parameter "LPM_WIDTHA" = "16"
-    Info (12134): Parameter "LPM_WIDTHB" = "16"
-    Info (12134): Parameter "LPM_WIDTHP" = "32"
-    Info (12134): Parameter "LPM_WIDTHR" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "14"
+    Info (12134): Parameter "LPM_WIDTHP" = "30"
+    Info (12134): Parameter "LPM_WIDTHR" = "30"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
     Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_36t.tdf
-    Info (12023): Found entity 1: mult_36t File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/mult_36t.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_v5t.tdf
+    Info (12023): Found entity 1: mult_v5t File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/mult_v5t.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 206
+Info (12133): Instantiated megafunction "lpm_mult:Mult2" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 206
+    Info (12134): Parameter "LPM_WIDTHA" = "14"
+    Info (12134): Parameter "LPM_WIDTHB" = "14"
+    Info (12134): Parameter "LPM_WIDTHP" = "28"
+    Info (12134): Parameter "LPM_WIDTHR" = "28"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_56t.tdf
+    Info (12023): Found entity 1: mult_56t File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/mult_56t.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult3" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 208
+Info (12133): Instantiated megafunction "lpm_mult:Mult3" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 208
+    Info (12134): Parameter "LPM_WIDTHA" = "12"
+    Info (12134): Parameter "LPM_WIDTHB" = "12"
+    Info (12134): Parameter "LPM_WIDTHP" = "24"
+    Info (12134): Parameter "LPM_WIDTHR" = "24"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult3" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult3" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult3" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_m9h.tdf
+    Info (12023): Found entity 1: add_sub_m9h File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_m9h.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lpm_mult:Mult3" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult3" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_bkh.tdf
+    Info (12023): Found entity 1: add_sub_bkh File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_bkh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult3" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 196
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 196
+    Info (12134): Parameter "LPM_WIDTHA" = "8"
+    Info (12134): Parameter "LPM_WIDTHB" = "14"
+    Info (12134): Parameter "LPM_WIDTHP" = "22"
+    Info (12134): Parameter "LPM_WIDTHR" = "22"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ckh.tdf
+    Info (12023): Found entity 1: add_sub_ckh File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_ckh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_i9h.tdf
+    Info (12023): Found entity 1: add_sub_i9h File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_i9h.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_gkh.tdf
+    Info (12023): Found entity 1: add_sub_gkh File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_gkh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 9
-Info (21057): Implemented 224 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 10
+Info (21057): Implemented 412 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 187 logic cells
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 372 logic cells
     Info (21064): Implemented 16 RAM segments
-    Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Wed May 04 16:35:23 2022
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:21
+    Info (21062): Implemented 4 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4835 megabytes
+    Info: Processing ended: Fri May 06 14:38:38 2022
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:23
 
 
