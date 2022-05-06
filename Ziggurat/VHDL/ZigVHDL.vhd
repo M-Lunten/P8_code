@@ -96,6 +96,7 @@ end component;
 	signal i_1 : std_logic_vector(7 downto 0) := "00000000";
 	signal i_2 : std_logic_vector(7 downto 0) := "00000000";
 	
+	
 	signal iplus : std_logic_vector(7 downto 0) := "00000000";
 	
 	signal da : std_logic_vector(15 downto 0) := "0000000000000000";
@@ -168,9 +169,8 @@ end component;
 					U1_1 <= U1;
 					U1_2 <= U1_1;
 					U1_3 <= U1_2;
-					U1_4 <= U1_3;
-					U1_5 <= U1_4;
-					U1_6 <= U1_5;
+					
+					
 					
 					i_1 <= i;
 					i_2 <= i_1;
@@ -190,26 +190,37 @@ end component;
 					D4_1 <= D4;
 					
 					xu_1 <= xu;
-					xu_2 <= xu_1;
+					
 					
 					if((D1_1='1') and (D2_1='1')) then 
-						out1stage <= xu_2;
+						if(U1_3(15)='1') then
+							zigout <= not(xu_1) + 1;
+						else
+							zigout <= xu_1;
+						end if;
 						valid <= '1';
+						
 					elsif ((D1_1='0') and (D3_1='1') and (D4_1 = '1')) then
-						out1stage <= xu_2;
+						if(U1_3(15)='1') then
+							zigout <= not(xu_1) + 1;
+						else
+							zigout <= xu_1;
+						end if;
 						valid <= '1';
+						
 					elsif ((D1_1='0') and (D3_1='0') and (D5 = '1')) then	
-						out1stage <= xu_2;
+						if(U1_3(15)='1') then
+							zigout <= not(xu_1) + 1;
+						else
+							zigout <= xu_1;
+						end if;
 						valid <= '1';
+						
 					else 
+						
 						valid <= '0';
 					end if;
 					
-					if(U1_5(15)='1') and (valid = '1') then
-						zigout <= not(out1stage) +1;
-					elsif (valid = '1') then
-						zigout <= out1stage;
-					end if;
 					
 					
 					
