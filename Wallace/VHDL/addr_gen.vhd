@@ -38,5 +38,5 @@ begin
 	end process;
 	sPLUSo <= unsigned(s_saved) + unsigned(o_saved);
 	addr_1 <= o_saved XOR m_saved;
-	addr_2 <= mask XOR std_logic_vector(sPLUSo(8 downto 0));
+	addr_2 <= m_saved XOR std_logic_vector(sPLUSo(8 downto 0));
 end behavior;

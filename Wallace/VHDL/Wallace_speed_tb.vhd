@@ -49,7 +49,7 @@ begin
 		start <= '1';
 		wait for 6*clock_period;
 		
-		for i in 0 to 10000 loop
+		for i in 0 to 100000 loop
 			write(out_line, res1, right, 16);
 			write(out_line, ',', right, 1);
 			write(out_line, res2, right, 16);

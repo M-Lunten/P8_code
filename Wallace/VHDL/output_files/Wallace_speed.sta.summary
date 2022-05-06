@@ -3,75 +3,75 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -6.179
-TNS   : -1411.867
+Slack : -5.000
+TNS   : -1044.581
 
 Type  : Slow 1200mV 85C Model Setup 'control_path:cp|start_tmp6'
-Slack : -4.101
-TNS   : -7.448
+Slack : -2.727
+TNS   : -5.396
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.429
+Slack : 0.427
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'control_path:cp|start_tmp6'
-Slack : 2.104
+Slack : 1.542
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -781.749
+TNS   : -718.784
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'control_path:cp|start_tmp6'
-Slack : 0.472
+Slack : 0.449
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -5.586
-TNS   : -1240.036
+Slack : -4.483
+TNS   : -911.847
 
 Type  : Slow 1200mV 0C Model Setup 'control_path:cp|start_tmp6'
-Slack : -3.819
-TNS   : -6.935
+Slack : -2.519
+TNS   : -5.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.374
+Slack : 0.387
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'control_path:cp|start_tmp6'
-Slack : 2.059
+Slack : 1.525
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -778.977
+TNS   : -716.012
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'control_path:cp|start_tmp6'
-Slack : 0.437
+Slack : 0.465
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -2.757
-TNS   : -471.827
+Slack : -2.457
+TNS   : -341.798
 
 Type  : Fast 1200mV 0C Model Setup 'control_path:cp|start_tmp6'
-Slack : -1.768
-TNS   : -3.120
+Slack : -1.048
+TNS   : -2.061
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.186
+Slack : 0.185
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'control_path:cp|start_tmp6'
-Slack : 1.185
+Slack : 0.898
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -579.531
+TNS   : -529.736
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'control_path:cp|start_tmp6'
-Slack : 0.401
+Slack : 0.411
 TNS   : 0.000
 
 ------------------------------------------------------------

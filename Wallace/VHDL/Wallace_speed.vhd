@@ -73,6 +73,21 @@ architecture behavior of Wallace_speed is
 	);
 	end component;
 
+	component transformation is
+	port (
+		clk: in std_logic;
+		Tctrl: in std_logic;
+		x1: in std_logic_vector(15 downto 0);
+		x2: in std_logic_vector(15 downto 0);
+		x3: in std_logic_vector(15 downto 0);
+		x4: in std_logic_vector(15 downto 0);
+		x1_res: out std_logic_vector(15 downto 0);
+		x2_res: out std_logic_vector(15 downto 0);
+		x3_res: out std_logic_vector(15 downto 0);
+		x4_res: out std_logic_vector(15 downto 0)
+	);
+	end component;
+	
 	signal LFSR_en, WE_1, WE_2 : std_logic := '0';
 	signal MUX_4, MUX_5, MUX_6 : std_logic;
 	signal LFSR_ctrl : std_logic;
@@ -91,9 +106,8 @@ architecture behavior of Wallace_speed is
 	--Delay signals for muxs
 	signal addr_D1, addr_D2, addr_D3, addr_D4 : std_logic_vector(35 downto 0);
 	signal data_A, data_B, data_C, data_D : std_logic_vector(15 downto 0);
-	--Signals for transformation stage
-	signal x_D1, x_D2 : std_logic_vector(63 downto 0);
-	signal p1, p2, t : std_logic_vector(15 downto 0);
+	--Transformation stage signals
+	signal res_1, res_2, res_3, res_4 : std_logic_vector(15 downto 0);
 	
 begin
 	--Data path 
@@ -109,7 +123,10 @@ begin
 	--Address generators
 	ADDR_GEN_1 : addr_gen port map (clk, MUX_6, LFSR_out(8 downto 0), LFSR_out(17 downto 9), LFSR_out(25 downto 18), addr_A, addr_B);
 	ADDR_GEN_2 : addr_gen port map (clk, MUX_6, LFSR_out(34 downto 26), LFSR_out(43 downto 35), LFSR_out(51 downto 44), addr_C, addr_D);
-
+	--Transformation stage
+	tstage : transformation port map (clk, MUX_4, data_A, data_B, data_C, data_D, res_1, res_2, res_3, res_4);
+	
+	
 	delay_addr : process(clk)
 	begin
 	if rising_edge(clk) then
@@ -159,44 +176,17 @@ begin
 		end if;
 	end if;
 	end process;
-	
-	trans_data_delay : process(clk)
+
+	save_res : process(clk)
 	begin
 	if rising_edge(clk) then
-		x_D1 <= data_A & data_B & data_C & data_D;
-		x_D2 <= x_D1;
+		x1 <= res_1;
+		x2 <= res_2;
+		x3 <= res_3;
+		x4 <= res_4;
 	end if;
 	end process;
-
-	transformation : process(clk)
-	variable p1_res, p2_res, sum, t_res : signed(15 downto 0);
-	variable res_1, res_2, res_3, res_4 : signed(15 downto 0);
-	begin
-	if rising_edge(clk) then
-		p1_res := signed(data_A) + signed(data_B);
-		p2_res := signed(data_C) + signed(data_D);
-		p1 <= std_logic_vector(p1_res);
-		p2 <= std_logic_vector(p2_res);
-		sum := signed(p1) + signed(p2);
-		t_res := shift_right(sum, 1); --sum(15) & '0' & sum(14 downto 1);
-		t <= std_logic_vector(t_res);
-		if MUX_4 = '0' then
-			res_1 := signed(x_D2(63 downto 48)) - signed(t_res);
-			res_2 := signed(t_res) - signed(x_D2(47 downto 32));
-			res_3 := signed(t_res) - signed(x_D2(31 downto 16));
-			res_4 := signed(t_res) - signed(x_D2(15 downto 0));
-		else 
-			res_1 := signed(t_res) - signed(x_D2(63 downto 48));
-			res_2 := signed(x_D2(47 downto 32)) - signed(t_res);
-			res_3 := signed(x_D2(31 downto 16)) - signed(t_res);
-			res_4 := signed(x_D2(15 downto 0)) - signed(t_res);
-		end if;
-		x1 <= std_logic_vector(res_1);
-		x2 <= std_logic_vector(res_2);
-		x3 <= std_logic_vector(res_3);
-		x4 <= std_logic_vector(res_4);
-	end if;
-
+	
 	ram_1_datain_A <= std_logic_vector(res_1);
 	ram_2_datain_A <= std_logic_vector(res_1);
 	ram_1_datain_B <= std_logic_vector(res_2);
@@ -205,5 +195,5 @@ begin
 	ram_2_datain_C <= std_logic_vector(res_3);
 	ram_1_datain_D <= std_logic_vector(res_4);
 	ram_2_datain_D <= std_logic_vector(res_4);
-	end process;
+
 end behavior;
