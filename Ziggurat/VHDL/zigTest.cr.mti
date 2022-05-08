@@ -1,13 +1,11 @@
-C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd
+C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Loading package NUMERIC_STD
--- Compiling entity d5Gen
--- Compiling architecture Behavioural of d5Gen
+-- Loading package altera_mf_components
+-- Compiling entity zigLUT
+-- Compiling architecture SYN of ziglut
 
 } {} {}} C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -20,22 +18,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity d1Gen
 -- Compiling architecture Behavioural of d1Gen
 
-} {} {}} C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd
+} {} {}} C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package altera_mf_components
--- Compiling entity zigLUT
--- Compiling architecture SYN of ziglut
-
-} {} {}} C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity LFSR_33
--- Compiling architecture Behavioral of LFSR_33
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity d5Gen
+-- Compiling architecture Behavioural of d5Gen
 
 } {} {}} C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -47,6 +39,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NUMERIC_STD
 -- Compiling entity d2Gen
 -- Compiling architecture Behavioural of d2Gen
+
+} {} {}} C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity LFSR_33
+-- Compiling architecture Behavioral of LFSR_33
 
 } {} {}} C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016

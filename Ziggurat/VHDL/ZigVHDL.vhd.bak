@@ -182,10 +182,10 @@ end component;
 					
 					xiplus_1 <= xiplus;
 					
-					U0_1 <= U0;
+					U0_1 <= std_logic_vector(shift_right(unsigned(U0),2)(15 downto 0));
 					U0_2 <= U0_1;
 					
-					U1_1 <= U1;
+					U1_1 <= std_logic_vector(shift_right(unsigned(U1),2)(15 downto 0));
 					U1_2 <= U1_1;
 					U1_3 <= U1_2;
 					
@@ -218,24 +218,24 @@ end component;
 					xu_1 <= xu;
 					
 					
-					if((D1_1='1') and (D2_1='1')) then 
-						if(U1_3(15)='1') then
+					if((D1_1='1') and (D2_1='1') and (D3_1='0') and (D4_1='0') and (D5='0')) then 
+						if(U1(15)='1') then
 							zigout <= not(xu_1) + 1;
 						else
 							zigout <= xu_1;
 						end if;
 						valid <= '1';
 						
-					elsif ((D1_1='0') and (D3_1='1') and (D4_1 = '1')) then
-						if(U1_3(15)='1') then
+					elsif ((D1_1='0') and (D2_1='0') and (D3_1='1') and (D4_1 = '1') and (D5='0')) then
+						if(U1(15)='1') then
 							zigout <= not(xu_1) + 1;
 						else
 							zigout <= xu_1;
 						end if;
 						valid <= '1';
 						
-					elsif ((D1_1='0') and (D3_1='0') and (D5 = '1')) then	
-						if(U1_3(15)='1') then
+					elsif ((D1_1='0') and (D2_1='0') and (D3_1='0') and (D4_1 = '0') and (D5='1')) then	
+						if(U1(15)='1') then
 							zigout <= not(xu_1) + 1;
 						else
 							zigout <= xu_1;
@@ -244,7 +244,7 @@ end component;
 						
 					else 
 						
-						valid <= '1';
+						valid <= '0';
 					end if;
 					
 					
