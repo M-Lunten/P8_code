@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri May 06 14:38:38 2022
+Analysis & Synthesis Status : Successful - Mon May 09 21:25:36 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ZigVHDL
 Top-level Entity Name : ZigVHDL
 Family : Cyclone IV E
-Total logic elements : 372
-    Total combinational functions : 221
-    Dedicated logic registers : 204
-Total registers : 204
+Total logic elements : 475
+    Total combinational functions : 326
+    Dedicated logic registers : 223
+Total registers : 223
 Total pins : 20
 Total virtual pins : 0
 Total memory bits : 4,096

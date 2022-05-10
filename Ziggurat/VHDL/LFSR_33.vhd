@@ -9,7 +9,7 @@ entity LFSR_33 is
 end LFSR_33;
 
 architecture Behavioral of LFSR_33 is
-	signal shift_register : std_logic_vector(32 downto 0) := "000000000000000000000000000001100";
+	signal shift_register : std_logic_vector(32 downto 0) := "000000000000000000000000000000000";
 begin
 
 -- ShiftRegister

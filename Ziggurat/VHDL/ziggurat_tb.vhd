@@ -17,7 +17,6 @@ architecture behavior of ziggurat_tb is
 		start : in std_logic;
 		zigout : out std_logic_vector(15 downto 0);
 		isVal : out std_logic
-		
 	);
 	end component;
 	
@@ -47,7 +46,7 @@ begin
 		file_open(file_RESULTS, "output_results.txt", write_mode);
 		wait for 5*clock_period;
 		
-		for i in 0 to 200000 loop
+		for i in 0 to 100000 loop
 			if(v = '1') then
 				write(out_line, res1, right, 16);
 			

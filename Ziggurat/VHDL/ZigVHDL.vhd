@@ -107,7 +107,13 @@ end component;
 	signal ea : std_logic;
 	signal eb : std_logic;
 	
-	signal A : std_logic_vector(15 downto 0) := "0000000000001111";
+	signal A : std_logic_vector(15 downto 0) := "0000000010000001"; --Q0.16
+	signal A0 : std_logic_vector(15 downto 0) := "0000000001111000"; --Q0.16
+	signal AU : std_logic_vector(15 downto 0) ;--:= "0000000000000000";
+	signal AUS1 : std_logic_vector(31 downto 0);
+	signal AUS2 : std_logic_vector(15 downto 0);
+	
+	
 	signal fx : std_logic_vector(15 downto 0) := "0000000000000000";
 	
 	signal Y : std_logic_vector(15 downto 0) := "0000000000000000";
@@ -119,6 +125,7 @@ end component;
 	signal xu : std_logic_vector(15 downto 0) := "0000000000000000";
 	signal xu_1 : std_logic_vector(15 downto 0) := "0000000000000000";
 	signal xu_2 : std_logic_vector(15 downto 0) := "0000000000000000";
+	
 	
 	signal D1 : std_logic;
 	signal D2 : std_logic;
@@ -133,130 +140,130 @@ end component;
 	
 	
 	
-	
+
 	signal valid : std_logic;
 	
 	begin
 		c1: LFSR_33 port map(i_clock,genU);
-		c2: d1Gen port map(i_clock,i_2,D1);
-		c3: zigLUT port map(i,iplus,i_clock,da,db,ea,eb,xi,xiplus);
-		c4: d3Gen port map(i_clock,i_2,D3);
-		c5: d4Gen port map(i_clock,U1_2,A,D4);
-		c6: d2Gen port map(i_clock,xu,xiplus_1,D2);
+		c2: zigLUT port map(i,iplus,i_clock,da,db,ea,eb,xi,xiplus);
+		c3: d1Gen port map(i_clock,i_2,D1);
+		c4: d2Gen port map(i_clock,xu,xiplus_1,D2);
+		c5: d3Gen port map(i_clock,i_2,D3);
+		c6: d4Gen port map(i_clock,AU,A0,D4);
 		c7: d5Gen port map(i_clock,Y,fx,D5);
 		
 
 		isVal <= valid;
 		process(i_clock,start) is 
 		
-		variable YvS1 : signed(31 downto 0) := "00000000000000000000000000000000";
-		variable YvS2 : signed(15 downto 0);
-		variable YvS3 : signed(15 downto 0);
+		variable YvS1 : unsigned(31 downto 0) := "00000000000000000000000000000000";
+		variable YvS2 : unsigned(15 downto 0);
+		variable YvS3 : unsigned(15 downto 0);
 		
-		variable xuVS1 : signed(31 downto 0) := "00000000000000000000000000000000";
-		variable xuVS2 : signed(15 downto 0);
+		variable xuVS1 : unsigned(31 downto 0) := "00000000000000000000000000000000";
+		variable xuVS2 : unsigned(15 downto 0);
 		
-		variable fxvS1 : signed(31 downto 0);
-		variable fxvS2 : signed(15 downto 0);
+		variable fxvS1 : unsigned(31 downto 0);
+		variable fxvS2 : unsigned(15 downto 0);
 		variable fxvS3 : signed(31 downto 0);
 		variable fxvS4 : signed(15 downto 0);
 		variable fxvS5 : signed(15 downto 0);
 		
-		variable GRAD : signed(15 downto 0) := "1111100110011110";
-		variable Yint : signed(15 downto 0) := "0000110011000100";
-		variable Ymax : signed(15 downto 0) := "0000110011000100";
-		variable YmaxMinus1 : signed(15 downto 0) := "0000110001111001";
-		variable YmYmminus1 : signed(15 downto 0) := "0000000001001011";
-
+		variable GRAD : signed(15 downto 0) := "1110011001110111"; -- Q1.15
+		variable Yint : signed(15 downto 0) := "0110011000011110"; -- Q0.16
+		variable Ymax : unsigned(15 downto 0) := "0110011000011110"; -- Q0.16
+		variable YmaxMinus1 : signed(15 downto 0) := "0110001111001010"; -- Q0.16
+		variable YmYmminus1 : unsigned(15 downto 0) := "0000001001010100"; -- Q0.16
+		
+		variable AUS1 : unsigned(31 downto 0) ;--:= "00000000000000000000000000000000";
+		variable AUS2 : unsigned(15 downto 0) ;--:= "0000000000000000";
+		variable A : unsigned(15 downto 0) := "0000000010000001"; --Q0.16
 			
 			begin
 				if rising_edge(i_clock) then
 					if (start='1') then 
+						U0 <= genU(15 downto 0);
+						U1 <= genU(31 downto 16);
+						i <= genU(23 downto 16);
+						iplus <= std_logic_vector(unsigned(genU(23 downto 16) + 1));
+						
+						
+						
+						xiplus_1 <= xiplus;
+						
+						--U0_1 <= std_logic_vector(shift_right(unsigned(U0),3)(15 downto 0));
+						U0_1 <= U0;
+						U0_2 <= U0_1;
+						
+						--U1_1 <= std_logic_vector(shift_right(unsigned(U1),3)(15 downto 0));
+						U1_1 <= U1;
+						U1_2 <= U1_1;
+						U1_3 <= U1_2;
+						
+						
+						i_1 <= i;
+						i_2 <= i_1;
+-------------------------------------
+						AUS1 := A * unsigned(U1_2); -- Q0.16 * Q0.16 -> Q0.32
+						AUS2 := shift_right(AUS1,16)(15 downto 0); --Q0.32>>16 -> Q0.16
+						AU <= std_logic_vector(AUS2);
+-------------------------------------
+						YvS1 := (YmYmminus1 * unsigned(U1_2));--Q0.16 x Q0.16 -> Q0.32
+						YvS2 := shift_right(YvS1,16)(15 downto 0);
+						
+						YvS3 := Ymax - YvS2;-- Q0.16 - Q0.16
+						Y <= std_logic_vector(YvS3);
+						
+						xuvS1 := unsigned(xi)*unsigned(U0_1); -- Q3.13 x Q0.16 -> Q3.29
+						xuvS2 := unsigned(shift_right(xuvS1,16)(15 downto 0)); -- Q3.13
+						xu <= std_logic_vector(xuvS2);
+						
+						fxvS1 := (xuvS2*xuvS2); -- Q3.13 x Q3.13 -> 3.26
+						fxvS2 := unsigned(shift_right(fxvS1,13)(15 downto 0)); -- Q3.13
+						fxvS3 := signed(fxvS2)*signed(GRAD); -- Q3.13 x Q1.15 -> Q3.28
+						fxvS4 := signed(shift_right(fxvS3,15)(15 downto 0)); -- Q3.13
+						fxvS5 := fxvS4 + signed(shift_right(YmaxMinus1,3)(15 downto 0)); -- Q3.13 + Q0.16
+						fx <= std_logic_vector(fxvS5);
+						
 					
-					U0 <= genU(15 downto 0);
-					U1 <= genU(31 downto 16);
-					i <= genU(23 downto 16);
-					iplus <= std_logic_vector(unsigned(genU(23 downto 16) + 1));
-					
-					
-					
-					xiplus_1 <= xiplus;
-					
-					U0_1 <= std_logic_vector(shift_right(unsigned(U0),3)(15 downto 0));
-					U0_2 <= U0_1;
-					
-					U1_1 <= std_logic_vector(shift_right(unsigned(U1),3)(15 downto 0));
-					U1_2 <= U1_1;
-					U1_3 <= U1_2;
-					
-					
-					i_1 <= i;
-					i_2 <= i_1;
-					
-					YvS1 := (YmYmminus1 * signed(U1_2));--3by13 x 3by13 -> 6by26
-					YvS2 := signed(shift_right(YvS1,16)(15 downto 0));
-					
-					YvS3 := YvS2  + YmaxMinus1;--3by13 + 3by13
-					Y <= std_logic_vector(YvS3);
-					
-					xuvS1 := signed(xi)*signed(U0_1); -- 3by13 x 3by13 -> 6by26
-					xuvS2 := signed(shift_right(xuvS1,16)(15 downto 0));
-					xu <= std_logic_vector(xuvS2);
-					
-					fxvS1 := (xuvS2*xuvS2); -- 3by13 x 3by13 -> 6by26
-					fxvS2 := signed(shift_right(fxvS1,16)(15 downto 0));
-					fxvS3 := fxvS2*GRAD; -- 3by13 x 3by 13 -> 6by26
-					fxvS4 := signed(shift_right(fxvS3,16)(15 downto 0));
-					fxvS5 := fxvS4 + YmaxMinus1; -- 3by13 + 3by13
-					fx <= std_logic_vector(fxvS5);
-					
-					D1_1 <= D1;
-					D2_1 <= D2;
-					D3_1 <= D3;
-					D4_1 <= D4;
-					
-					xu_1 <= xu;
-					
-					
-					if((D1_1='1') and (D2_1='1') and (D3_1='0') and (D4_1='0') and (D5='0')) then 
-						if(U1(15)='1') then
-							zigout <= not(xu_1) + 1;
-						else
-							zigout <= xu_1;
+						D1_1 <= D1;
+						D2_1 <= D2;
+						D3_1 <= D3;
+						D4_1 <= D4;
+						
+						xu_1 <= xu;
+						
+						
+						if((D1_1='1') and (D2_1='1') and (D3_1='0') and (D4_1='0') and (D5='0')) then 
+							if(U1(15)='1') then
+								zigout <= not(xu_1) + 1;
+							else
+								zigout <= xu_1;
+							end if;
+							valid <= '1';
+							
+						elsif ((D1_1='0') and (D2_1='0') and (D3_1='1') and (D4_1 = '1') and (D5='0')) then
+							if(U1(15)='1') then
+								zigout <= not(xu_1) + 1;
+							else
+								zigout <= xu_1;
+							end if;
+							valid <= '1';
+							
+						elsif ((D1_1='0') and (D2_1='0') and (D3_1='0') and (D4_1 = '0') and (D5='1')) then	
+							if(U1(15)='1') then
+								zigout <= not(xu_1) + 1;
+							else
+								zigout <= xu_1;
+							end if;
+							valid <= '1';
+							
+						else 
+							
+							valid <= '0';
 						end if;
-						valid <= '1';
-						
-					elsif ((D1_1='0') and (D2_1='0') and (D3_1='1') and (D4_1 = '1') and (D5='0')) then
-						if(U1(15)='1') then
-							zigout <= not(xu_1) + 1;
-						else
-							zigout <= xu_1;
-						end if;
-						valid <= '1';
-						
-					elsif ((D1_1='0') and (D2_1='0') and (D3_1='0') and (D4_1 = '0') and (D5='1')) then	
-						if(U1(15)='1') then
-							zigout <= not(xu_1) + 1;
-						else
-							zigout <= xu_1;
-						end if;
-						valid <= '1';
-						
-					else 
-						
-						valid <= '0';
 					end if;
-					
-					
-					
-					
-					
-					
-					
-					end if;
-					end if;
+				end if;
 			
 		end process;
-		
-
 end architecture;

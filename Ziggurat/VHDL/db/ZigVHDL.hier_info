@@ -85,6 +85,22 @@ i_clock => Y[12].CLK
 i_clock => Y[13].CLK
 i_clock => Y[14].CLK
 i_clock => Y[15].CLK
+i_clock => AU[0].CLK
+i_clock => AU[1].CLK
+i_clock => AU[2].CLK
+i_clock => AU[3].CLK
+i_clock => AU[4].CLK
+i_clock => AU[5].CLK
+i_clock => AU[6].CLK
+i_clock => AU[7].CLK
+i_clock => AU[8].CLK
+i_clock => AU[9].CLK
+i_clock => AU[10].CLK
+i_clock => AU[11].CLK
+i_clock => AU[12].CLK
+i_clock => AU[13].CLK
+i_clock => AU[14].CLK
+i_clock => AU[15].CLK
 i_clock => i_2[0].CLK
 i_clock => i_2[1].CLK
 i_clock => i_2[2].CLK
@@ -101,7 +117,6 @@ i_clock => i_1[4].CLK
 i_clock => i_1[5].CLK
 i_clock => i_1[6].CLK
 i_clock => i_1[7].CLK
-i_clock => U1_3[15].CLK
 i_clock => U1_2[0].CLK
 i_clock => U1_2[1].CLK
 i_clock => U1_2[2].CLK
@@ -182,6 +197,9 @@ i_clock => i[4].CLK
 i_clock => i[5].CLK
 i_clock => i[6].CLK
 i_clock => i[7].CLK
+i_clock => U1[0].CLK
+i_clock => U1[1].CLK
+i_clock => U1[2].CLK
 i_clock => U1[3].CLK
 i_clock => U1[4].CLK
 i_clock => U1[5].CLK
@@ -195,6 +213,9 @@ i_clock => U1[12].CLK
 i_clock => U1[13].CLK
 i_clock => U1[14].CLK
 i_clock => U1[15].CLK
+i_clock => U0[0].CLK
+i_clock => U0[1].CLK
+i_clock => U0[2].CLK
 i_clock => U0[3].CLK
 i_clock => U0[4].CLK
 i_clock => U0[5].CLK
@@ -208,13 +229,29 @@ i_clock => U0[12].CLK
 i_clock => U0[13].CLK
 i_clock => U0[14].CLK
 i_clock => U0[15].CLK
-i_clock => d1Gen:c2.clk
-i_clock => zigLUT:c3.clock
-i_clock => d3Gen:c4.clk
-i_clock => d4Gen:c5.clk
-i_clock => d2Gen:c6.clk
+i_clock => zigLUT:c2.clock
+i_clock => d1Gen:c3.clk
+i_clock => d2Gen:c4.clk
+i_clock => d3Gen:c5.clk
+i_clock => d4Gen:c6.clk
 i_clock => d5Gen:c7.clk
 reset => ~NO_FANOUT~
+start => U1[7].ENA
+start => U1[6].ENA
+start => U1[5].ENA
+start => U1[4].ENA
+start => U1[3].ENA
+start => U1[2].ENA
+start => U1[1].ENA
+start => U1[0].ENA
+start => i[7].ENA
+start => i[6].ENA
+start => i[5].ENA
+start => i[4].ENA
+start => i[3].ENA
+start => i[2].ENA
+start => i[1].ENA
+start => i[0].ENA
 start => iplus[7].ENA
 start => iplus[6].ENA
 start => iplus[5].ENA
@@ -287,7 +324,6 @@ start => U1_2[3].ENA
 start => U1_2[2].ENA
 start => U1_2[1].ENA
 start => U1_2[0].ENA
-start => U1_3[15].ENA
 start => i_1[7].ENA
 start => i_1[6].ENA
 start => i_1[5].ENA
@@ -304,6 +340,22 @@ start => i_2[3].ENA
 start => i_2[2].ENA
 start => i_2[1].ENA
 start => i_2[0].ENA
+start => AU[15].ENA
+start => AU[14].ENA
+start => AU[13].ENA
+start => AU[12].ENA
+start => AU[11].ENA
+start => AU[10].ENA
+start => AU[9].ENA
+start => AU[8].ENA
+start => AU[7].ENA
+start => AU[6].ENA
+start => AU[5].ENA
+start => AU[4].ENA
+start => AU[3].ENA
+start => AU[2].ENA
+start => AU[1].ENA
+start => AU[0].ENA
 start => Y[15].ENA
 start => Y[14].ENA
 start => Y[13].ENA
@@ -389,19 +441,6 @@ start => zigout[2]~reg0.ENA
 start => zigout[1]~reg0.ENA
 start => zigout[0]~reg0.ENA
 start => valid.ENA
-start => i[0].ENA
-start => i[1].ENA
-start => i[2].ENA
-start => i[3].ENA
-start => i[4].ENA
-start => i[5].ENA
-start => i[6].ENA
-start => i[7].ENA
-start => U1[3].ENA
-start => U1[4].ENA
-start => U1[5].ENA
-start => U1[6].ENA
-start => U1[7].ENA
 start => U1[8].ENA
 start => U1[9].ENA
 start => U1[10].ENA
@@ -410,6 +449,9 @@ start => U1[12].ENA
 start => U1[13].ENA
 start => U1[14].ENA
 start => U1[15].ENA
+start => U0[0].ENA
+start => U0[1].ENA
+start => U0[2].ENA
 start => U0[3].ENA
 start => U0[4].ENA
 start => U0[5].ENA
@@ -511,28 +553,7 @@ OUTPUT[31] <= shift_register[31].DB_MAX_OUTPUT_PORT_TYPE
 OUTPUT[32] <= shift_register[32].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ZigVHDL|d1Gen:c2
-clk => ~NO_FANOUT~
-Iin[0] => LessThan0.IN16
-Iin[0] => LessThan1.IN16
-Iin[1] => LessThan0.IN15
-Iin[1] => LessThan1.IN15
-Iin[2] => LessThan0.IN14
-Iin[2] => LessThan1.IN14
-Iin[3] => LessThan0.IN13
-Iin[3] => LessThan1.IN13
-Iin[4] => LessThan0.IN12
-Iin[4] => LessThan1.IN12
-Iin[5] => LessThan0.IN11
-Iin[5] => LessThan1.IN11
-Iin[6] => LessThan0.IN10
-Iin[6] => LessThan1.IN10
-Iin[7] => LessThan0.IN9
-Iin[7] => LessThan1.IN9
-D1out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|ZigVHDL|zigLUT:c3
+|ZigVHDL|zigLUT:c2
 address_a[0] => altsyncram:altsyncram_component.address_a[0]
 address_a[1] => altsyncram:altsyncram_component.address_a[1]
 address_a[2] => altsyncram:altsyncram_component.address_a[2]
@@ -618,7 +639,7 @@ q_b[14] <= altsyncram:altsyncram_component.q_b[14]
 q_b[15] <= altsyncram:altsyncram_component.q_b[15]
 
 
-|ZigVHDL|zigLUT:c3|altsyncram:altsyncram_component
+|ZigVHDL|zigLUT:c2|altsyncram:altsyncram_component
 wren_a => altsyncram_ujt3:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => altsyncram_ujt3:auto_generated.wren_b
@@ -720,7 +741,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|ZigVHDL|zigLUT:c3|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated
+|ZigVHDL|zigLUT:c2|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -1091,57 +1112,28 @@ wren_b => ram_block1a14.PORTBWE
 wren_b => ram_block1a15.PORTBWE
 
 
-|ZigVHDL|d3Gen:c4
+|ZigVHDL|d1Gen:c3
 clk => ~NO_FANOUT~
-Iin[0] => Equal0.IN17
-Iin[1] => Equal0.IN16
-Iin[2] => Equal0.IN15
-Iin[3] => Equal0.IN14
-Iin[4] => Equal0.IN13
-Iin[5] => Equal0.IN12
-Iin[6] => Equal0.IN11
-Iin[7] => Equal0.IN10
-D3out <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+Iin[0] => LessThan0.IN16
+Iin[0] => LessThan1.IN16
+Iin[1] => LessThan0.IN15
+Iin[1] => LessThan1.IN15
+Iin[2] => LessThan0.IN14
+Iin[2] => LessThan1.IN14
+Iin[3] => LessThan0.IN13
+Iin[3] => LessThan1.IN13
+Iin[4] => LessThan0.IN12
+Iin[4] => LessThan1.IN12
+Iin[5] => LessThan0.IN11
+Iin[5] => LessThan1.IN11
+Iin[6] => LessThan0.IN10
+Iin[6] => LessThan1.IN10
+Iin[7] => LessThan0.IN9
+Iin[7] => LessThan1.IN9
+D1out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ZigVHDL|d4Gen:c5
-clk => ~NO_FANOUT~
-U1in[0] => LessThan0.IN16
-U1in[1] => LessThan0.IN15
-U1in[2] => LessThan0.IN14
-U1in[3] => LessThan0.IN13
-U1in[4] => LessThan0.IN12
-U1in[5] => LessThan0.IN11
-U1in[6] => LessThan0.IN10
-U1in[7] => LessThan0.IN9
-U1in[8] => LessThan0.IN8
-U1in[9] => LessThan0.IN7
-U1in[10] => LessThan0.IN6
-U1in[11] => LessThan0.IN5
-U1in[12] => LessThan0.IN4
-U1in[13] => LessThan0.IN3
-U1in[14] => LessThan0.IN2
-U1in[15] => LessThan0.IN1
-Ain[0] => LessThan0.IN32
-Ain[1] => LessThan0.IN31
-Ain[2] => LessThan0.IN30
-Ain[3] => LessThan0.IN29
-Ain[4] => LessThan0.IN28
-Ain[5] => LessThan0.IN27
-Ain[6] => LessThan0.IN26
-Ain[7] => LessThan0.IN25
-Ain[8] => LessThan0.IN24
-Ain[9] => LessThan0.IN23
-Ain[10] => LessThan0.IN22
-Ain[11] => LessThan0.IN21
-Ain[12] => LessThan0.IN20
-Ain[13] => LessThan0.IN19
-Ain[14] => LessThan0.IN18
-Ain[15] => LessThan0.IN17
-D4out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|ZigVHDL|d2Gen:c6
+|ZigVHDL|d2Gen:c4
 clk => ~NO_FANOUT~
 Xuin[0] => LessThan0.IN16
 Xuin[1] => LessThan0.IN15
@@ -1176,6 +1168,56 @@ Xiplusin[13] => LessThan0.IN19
 Xiplusin[14] => LessThan0.IN18
 Xiplusin[15] => LessThan0.IN17
 D2out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ZigVHDL|d3Gen:c5
+clk => ~NO_FANOUT~
+Iin[0] => Equal0.IN17
+Iin[1] => Equal0.IN16
+Iin[2] => Equal0.IN15
+Iin[3] => Equal0.IN14
+Iin[4] => Equal0.IN13
+Iin[5] => Equal0.IN12
+Iin[6] => Equal0.IN11
+Iin[7] => Equal0.IN10
+D3out <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ZigVHDL|d4Gen:c6
+clk => ~NO_FANOUT~
+U1in[0] => LessThan0.IN16
+U1in[1] => LessThan0.IN15
+U1in[2] => LessThan0.IN14
+U1in[3] => LessThan0.IN13
+U1in[4] => LessThan0.IN12
+U1in[5] => LessThan0.IN11
+U1in[6] => LessThan0.IN10
+U1in[7] => LessThan0.IN9
+U1in[8] => LessThan0.IN8
+U1in[9] => LessThan0.IN7
+U1in[10] => LessThan0.IN6
+U1in[11] => LessThan0.IN5
+U1in[12] => LessThan0.IN4
+U1in[13] => LessThan0.IN3
+U1in[14] => LessThan0.IN2
+U1in[15] => LessThan0.IN1
+Ain[0] => LessThan0.IN32
+Ain[1] => LessThan0.IN31
+Ain[2] => LessThan0.IN30
+Ain[3] => LessThan0.IN29
+Ain[4] => LessThan0.IN28
+Ain[5] => LessThan0.IN27
+Ain[6] => LessThan0.IN26
+Ain[7] => LessThan0.IN25
+Ain[8] => LessThan0.IN24
+Ain[9] => LessThan0.IN23
+Ain[10] => LessThan0.IN22
+Ain[11] => LessThan0.IN21
+Ain[12] => LessThan0.IN20
+Ain[13] => LessThan0.IN19
+Ain[14] => LessThan0.IN18
+Ain[15] => LessThan0.IN17
+D4out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ZigVHDL|d5Gen:c7

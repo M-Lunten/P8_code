@@ -9,26 +9,26 @@ z2
 cModel Technology
 dC:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/testbenches2
 Ed1gen
-Z0 w1651497169
+Z0 w1652102234
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z6 dC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL
-Z7 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd
-Z8 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd
+Z6 dC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL
+Z7 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d1Gen.vhd
+Z8 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d1Gen.vhd
 l0
 L6
 Vfo4PKe:T<QIebIQT0dNng1
 !s100 479O@S4czd[H]bX]=@IY_2
 Z9 OV;C;10.5b;63
 32
-Z10 !s110 1651999804
+Z10 !s110 1652119591
 !i10b 1
-Z11 !s108 1651999804.000000
-Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd|
-Z13 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd|
+Z11 !s108 1652119591.000000
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d1Gen.vhd|
+Z13 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d1Gen.vhd|
 !i113 1
 Z14 o-work work -2002 -explicit
 Z15 tExplicit 1 CvgOpt 0
@@ -54,15 +54,15 @@ R13
 R14
 R15
 Ed2gen
-Z16 w1651576387
+R0
 R1
 R2
 R3
 R4
 R5
 R6
-Z17 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd
-Z18 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd
+Z16 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d2Gen.vhd
+Z17 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d2Gen.vhd
 l0
 L6
 VAN<kd32lBSWe2o?`Uc`XA2
@@ -72,8 +72,8 @@ R9
 R10
 !i10b 1
 R11
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd|
-Z20 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd|
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d2Gen.vhd|
+Z19 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d2Gen.vhd|
 !i113 1
 R14
 R15
@@ -93,21 +93,21 @@ R9
 R10
 !i10b 1
 R11
+R18
 R19
-R20
 !i113 1
 R14
 R15
 Ed3gen
-Z21 w1651567952
+Z20 w1651670885
 R1
 R2
 R3
 R4
 R5
 R6
-Z22 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd
-Z23 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd
+Z21 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d3Gen.vhd
+Z22 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d3Gen.vhd
 l0
 L6
 VYLAn:DTDinoniB6o4Z2aA3
@@ -117,8 +117,8 @@ R9
 R10
 !i10b 1
 R11
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd|
-Z25 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd|
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d3Gen.vhd|
+Z24 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d3Gen.vhd|
 !i113 1
 R14
 R15
@@ -138,21 +138,21 @@ R9
 R10
 !i10b 1
 R11
+R23
 R24
-R25
 !i113 1
 R14
 R15
 Ed4gen
-Z26 w1651575498
+R0
 R1
 R2
 R3
 R4
 R5
 R6
-Z27 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd
-Z28 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd
+Z25 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d4Gen.vhd
+Z26 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d4Gen.vhd
 l0
 L6
 Vf2hXWMdRejF2ZX:alm9J41
@@ -162,8 +162,8 @@ R9
 R10
 !i10b 1
 R11
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd|
-Z30 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd|
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d4Gen.vhd|
+Z28 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d4Gen.vhd|
 !i113 1
 R14
 R15
@@ -183,21 +183,21 @@ R9
 R10
 !i10b 1
 R11
-R29
-R30
+R27
+R28
 !i113 1
 R14
 R15
 Ed5gen
-Z31 w1651576999
+R0
 R1
 R2
 R3
 R4
 R5
 R6
-Z32 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd
-Z33 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd
+Z29 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd
+Z30 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd
 l0
 L6
 VRGi<FgTHi58h6PSnaE8fI2
@@ -207,8 +207,8 @@ R9
 R10
 !i10b 1
 R11
-Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd|
-Z35 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd|
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd|
+Z32 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd|
 !i113 1
 R14
 R15
@@ -218,127 +218,127 @@ R2
 R3
 R4
 R5
-DEx4 work 5 d5gen 0 22 RGi<FgTHi58h6PSnaE8fI2
+Z33 DEx4 work 5 d5gen 0 22 RGi<FgTHi58h6PSnaE8fI2
 l19
 L15
-VaKYJ0V?gdK^YoQh]z`:O00
-!s100 ?dld9K=b`cK2jcHfjMkbR2
+Z34 VaKYJ0V?gdK^YoQh]z`:O00
+Z35 !s100 ?dld9K=b`cK2jcHfjMkbR2
 R9
 32
 R10
 !i10b 1
 R11
-R34
-R35
+R31
+R32
 !i113 1
 R14
 R15
 Elfsr_33
-Z36 w1651481735
+Z36 w1652106774
 R4
 R5
 R6
-Z37 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd
-Z38 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd
+Z37 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd
+Z38 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd
 l0
 L4
 Vhz9]2ZZjJ6gEQ83BGaG330
 !s100 :d@<RIGR0kkWUbch?E^7E0
 R9
 32
-R10
+Z39 !s110 1652119590
 !i10b 1
-R11
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd|
-Z40 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd|
+Z40 !s108 1652119590.000000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd|
+Z42 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd|
 !i113 1
 R14
 R15
 Abehavioral
 R4
 R5
-Z41 DEx4 work 7 lfsr_33 0 22 hz9]2ZZjJ6gEQ83BGaG330
+DEx4 work 7 lfsr_33 0 22 hz9]2ZZjJ6gEQ83BGaG330
 l13
 L11
-Z42 VU:S_O9:FH19T27aE3[Ejg0
-Z43 !s100 ZaT=EX>[YI[X7Jm9SbS_E3
+V[S7_ROHNZeMgZ_JWOM3Vh2
+!s100 SjBABH8elPO<OS?U7[JVg2
 R9
 32
-R10
-!i10b 1
-R11
 R39
+!i10b 1
 R40
+R41
+R42
 !i113 1
 R14
 R15
 Eziggurat_tb
-Z44 w1651999252
-Z45 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z43 w1652107048
+Z44 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R1
 R4
 R5
 R6
-Z46 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd
-Z47 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd
+Z45 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd
+Z46 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd
 l0
 L8
 VO?EIGgMZ<Q`cge1lIcQTm2
 !s100 Rj:nZooOoEGU?kUP3=4``0
 R9
 32
-Z48 !s110 1651999803
+R39
 !i10b 1
-Z49 !s108 1651999803.000000
-Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd|
-Z51 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd|
+R40
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd|
+Z48 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd|
 !i113 1
 R14
 R15
 Abehavior
-R45
+R44
 R1
 R4
 R5
 DEx4 work 11 ziggurat_tb 0 22 O?EIGgMZ<Q`cge1lIcQTm2
-l34
+l33
 L11
-VM3mmFcMC]CR?mZHDma[Ml1
-!s100 RFQe]boC=D=5AX^UkMNWE2
+Vl^ie9ESTC?J3z>LCFdi1D1
+!s100 P`mNiYA4DjTY3L`@lIj=z1
 R9
 32
-R48
+R39
 !i10b 1
-R49
-R50
-R51
+R40
+R47
+R48
 !i113 1
 R14
 R15
 Eziglut
-Z52 w1651579730
-Z53 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+R20
+Z49 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
 R4
 R5
 R6
-Z54 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd
-Z55 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd
+Z50 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd
+Z51 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd
 l0
 L42
 VRQL1PM`V3[<X^a::bool63
 !s100 bV?TfS:4Y9fAW:L[gG`7_3
 R9
 32
-R10
+R39
 !i10b 1
-R49
-Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd|
-Z57 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd|
+R40
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd|
+Z53 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd|
 !i113 1
 R14
 R15
 Asyn
-R53
+R49
 R4
 R5
 DEx4 work 6 ziglut 0 22 RQL1PM`V3[<X^a::bool63
@@ -348,35 +348,35 @@ V8EkP4:06_75zfY]QoXf6f2
 !s100 54?VjG_UO9m2l54>PD9eT1
 R9
 32
-R10
+R39
 !i10b 1
-R49
-R56
-R57
+R40
+R52
+R53
 !i113 1
 R14
 R15
 Ezigvhdl
-Z58 w1651999800
+Z54 w1652119580
 R1
 R2
 R3
 R4
 R5
 R6
-Z59 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd
-Z60 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd
+Z55 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd
+Z56 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd
 l0
 L7
 VQAP6a`iVbJU9;GdDmWj[@0
 !s100 SLF0g`2Rka_oPfBzX=BjY1
 R9
 32
-R48
+R39
 !i10b 1
-R49
-Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd|
-Z62 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd|
+R40
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd|
+Z58 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd|
 !i113 1
 R14
 R15
@@ -387,17 +387,17 @@ R3
 R4
 R5
 DEx4 work 7 zigvhdl 0 22 QAP6a`iVbJU9;GdDmWj[@0
-l139
+l141
 L17
-V`f9Zoi;HHA5^=LBTel3Qm3
-!s100 hf0l`?gO^mHX<TKz^BL>k1
+Ve7<@@;8AR7GN[aGamdS^e1
+!s100 B=3zI0G7]VbX9JU]RFioA2
 R9
 32
-R48
+R39
 !i10b 1
-R49
-R61
-R62
+R40
+R57
+R58
 !i113 1
 R14
 R15
