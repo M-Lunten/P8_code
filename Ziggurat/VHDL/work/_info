@@ -24,9 +24,9 @@ Vfo4PKe:T<QIebIQT0dNng1
 !s100 479O@S4czd[H]bX]=@IY_2
 Z9 OV;C;10.5b;63
 32
-Z10 !s110 1652119591
+Z10 !s110 1652193511
 !i10b 1
-Z11 !s108 1652119591.000000
+Z11 !s108 1652193511.000000
 Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d1Gen.vhd|
 Z13 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d1Gen.vhd|
 !i113 1
@@ -189,15 +189,15 @@ R28
 R14
 R15
 Ed5gen
-R0
+Z29 w1652193503
 R1
 R2
 R3
 R4
 R5
 R6
-Z29 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd
-Z30 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd
+Z30 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd
+Z31 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd
 l0
 L6
 VRGi<FgTHi58h6PSnaE8fI2
@@ -207,8 +207,8 @@ R9
 R10
 !i10b 1
 R11
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd|
-Z32 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd|
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd|
+Z33 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd|
 !i113 1
 R14
 R15
@@ -218,39 +218,39 @@ R2
 R3
 R4
 R5
-Z33 DEx4 work 5 d5gen 0 22 RGi<FgTHi58h6PSnaE8fI2
+Z34 DEx4 work 5 d5gen 0 22 RGi<FgTHi58h6PSnaE8fI2
 l19
 L15
-Z34 VaKYJ0V?gdK^YoQh]z`:O00
-Z35 !s100 ?dld9K=b`cK2jcHfjMkbR2
+Vh07A5A>[EU^;G:id5]@eD2
+!s100 ZNGzX23ASi9YTdb7e9<_@3
 R9
 32
 R10
 !i10b 1
 R11
-R31
 R32
+R33
 !i113 1
 R14
 R15
 Elfsr_33
-Z36 w1652106774
+Z35 w1652188123
 R4
 R5
 R6
-Z37 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd
-Z38 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd
+Z36 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd
+Z37 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd
 l0
 L4
 Vhz9]2ZZjJ6gEQ83BGaG330
 !s100 :d@<RIGR0kkWUbch?E^7E0
 R9
 32
-Z39 !s110 1652119590
+Z38 !s110 1652193510
 !i10b 1
-Z40 !s108 1652119590.000000
-Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd|
-Z42 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd|
+Z39 !s108 1652193510.000000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd|
+Z41 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd|
 !i113 1
 R14
 R15
@@ -264,81 +264,81 @@ V[S7_ROHNZeMgZ_JWOM3Vh2
 !s100 SjBABH8elPO<OS?U7[JVg2
 R9
 32
-R39
+R38
 !i10b 1
+R39
 R40
 R41
-R42
 !i113 1
 R14
 R15
 Eziggurat_tb
-Z43 w1652107048
-Z44 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z42 w1652193500
+Z43 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R1
 R4
 R5
 R6
-Z45 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd
-Z46 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd
+Z44 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd
+Z45 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd
 l0
 L8
 VO?EIGgMZ<Q`cge1lIcQTm2
 !s100 Rj:nZooOoEGU?kUP3=4``0
 R9
 32
-R39
+R10
 !i10b 1
-R40
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd|
-Z48 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd|
+R39
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd|
+Z47 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd|
 !i113 1
 R14
 R15
 Abehavior
-R44
+R43
 R1
 R4
 R5
 DEx4 work 11 ziggurat_tb 0 22 O?EIGgMZ<Q`cge1lIcQTm2
 l33
 L11
-Vl^ie9ESTC?J3z>LCFdi1D1
-!s100 P`mNiYA4DjTY3L`@lIj=z1
+VR:36E;aUUfQ>iE>dREzUX1
+!s100 iY;AMNQQg8A@^35=`<DjE1
 R9
 32
-R39
+R10
 !i10b 1
-R40
+R39
+R46
 R47
-R48
 !i113 1
 R14
 R15
 Eziglut
 R20
-Z49 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+Z48 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
 R4
 R5
 R6
-Z50 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd
-Z51 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd
+Z49 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd
+Z50 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd
 l0
 L42
 VRQL1PM`V3[<X^a::bool63
 !s100 bV?TfS:4Y9fAW:L[gG`7_3
 R9
 32
-R39
+R10
 !i10b 1
-R40
-Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd|
-Z53 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd|
+R11
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd|
+Z52 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd|
 !i113 1
 R14
 R15
 Asyn
-R49
+R48
 R4
 R5
 DEx4 work 6 ziglut 0 22 RQL1PM`V3[<X^a::bool63
@@ -348,35 +348,35 @@ V8EkP4:06_75zfY]QoXf6f2
 !s100 54?VjG_UO9m2l54>PD9eT1
 R9
 32
-R39
+R10
 !i10b 1
-R40
+R11
+R51
 R52
-R53
 !i113 1
 R14
 R15
 Ezigvhdl
-Z54 w1652119580
+Z53 w1652192168
 R1
 R2
 R3
 R4
 R5
 R6
-Z55 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd
-Z56 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd
+Z54 8C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd
+Z55 FC:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd
 l0
 L7
 VQAP6a`iVbJU9;GdDmWj[@0
 !s100 SLF0g`2Rka_oPfBzX=BjY1
 R9
 32
-R39
+R10
 !i10b 1
-R40
-Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd|
-Z58 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd|
+R11
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd|
+Z57 !s107 C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd|
 !i113 1
 R14
 R15
@@ -387,17 +387,17 @@ R3
 R4
 R5
 DEx4 work 7 zigvhdl 0 22 QAP6a`iVbJU9;GdDmWj[@0
-l141
+l146
 L17
-Ve7<@@;8AR7GN[aGamdS^e1
-!s100 B=3zI0G7]VbX9JU]RFioA2
+V[jnog70X:We;j2giPcC_40
+!s100 Eb:U2K>oX4hMFFVB4?9fT1
 R9
 32
-R39
+R10
 !i10b 1
-R40
+R11
+R56
 R57
-R58
 !i113 1
 R14
 R15

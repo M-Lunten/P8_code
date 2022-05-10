@@ -18,7 +18,10 @@ x1 = [z(1,1); z(1:end-1,1)];
 y = sfi(z(:,2),16,16);
 y1 = z(:,2);
 %% Ziggurat Algorithm
-samples = 100000;
+v_res = readmatrix('..\VHDL\validate_results.csv')';
+acc = zeros(3,length(v_res)-1);
+acc(3,:) = v_res(2:end);
+samples = length(v_res)-1;
 out = [];
 S = 0;
 %rng(1);
@@ -44,6 +47,8 @@ U1 = bit2int(B0(:,[33-31:33-16])',16)'./2^16;
 iVHDSim = bit2int(B0(:,[33-(16+K-1):33-16])',K)';
 i = bit2int(B0(:,[33-(16+K-1):33-16])',K)'+1;
 
+acc(1,:) = iVHDSim;
+
 %%
 for n = 1:samples
     if B0(n,31) == 1
@@ -57,6 +62,7 @@ for n = 1:samples
         D1 = D1+1;
         if X < x(i(n)+1)
             out(end+1) = sfi(X*S,16,13);
+            acc(2,n) = 1;
             D2(1,1) = D2(1,1)+1;    
         %elseif y(i(n))-(U1(n)*(y(i(n))-y(i(n)-1))) < const*exp(-X1^2/2)
             %out(end+1) = sfi(X*S,16,13);
@@ -70,6 +76,7 @@ for n = 1:samples
         if U1(n)*area < S0area
         %if U1(n) < area
             out(end+1) = sfi(X*S,16,13);
+            acc(2,n) = 1;
             D4(1,1) = D4(1,1) + 1;
         else
             D4(1,2) = D4(1,2) + 1;
@@ -78,6 +85,7 @@ for n = 1:samples
         D7 = D7 + 1;
         if y(i(n))-(U1(n)*(y(i(n))-y(i(n)-1))) < sfi(-0.1995,16,15)*X^2 + sfi(0.3989,16,15)
             out(end+1) = sfi(X*S,16,13);
+            acc(2,n) = 1;
             D5(1,1) = D5(1,1) + 1;
         else
             D5(1,2) = D5(1,2) + 1;

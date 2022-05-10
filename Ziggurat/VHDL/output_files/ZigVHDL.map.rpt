@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ZigVHDL
-Mon May 09 21:25:36 2022
+Tue May 10 16:50:29 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -58,15 +58,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 09 21:25:36 2022       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 10 16:50:29 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ZigVHDL                                     ;
 ; Top-level Entity Name              ; ZigVHDL                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 475                                         ;
-;     Total combinational functions  ; 326                                         ;
-;     Dedicated logic registers      ; 223                                         ;
-; Total registers                    ; 223                                         ;
+; Total logic elements               ; 473                                         ;
+;     Total combinational functions  ; 319                                         ;
+;     Dedicated logic registers      ; 232                                         ;
+; Total registers                    ; 232                                         ;
 ; Total pins                         ; 20                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
@@ -177,7 +177,10 @@ refer to the applicable agreement for further details.
 ;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
-;     Processors 5-8         ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -239,20 +242,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 475           ;
+; Estimated Total logic elements              ; 473           ;
 ;                                             ;               ;
-; Total combinational functions               ; 326           ;
+; Total combinational functions               ; 319           ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 100           ;
-;     -- 3 input functions                    ; 138           ;
-;     -- <=2 input functions                  ; 88            ;
+;     -- 4 input functions                    ; 103           ;
+;     -- 3 input functions                    ; 136           ;
+;     -- <=2 input functions                  ; 80            ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 147           ;
-;     -- arithmetic mode                      ; 179           ;
+;     -- normal mode                          ; 148           ;
+;     -- arithmetic mode                      ; 171           ;
 ;                                             ;               ;
-; Total registers                             ; 223           ;
-;     -- Dedicated logic registers            ; 223           ;
+; Total registers                             ; 232           ;
+;     -- Dedicated logic registers            ; 232           ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
 ; I/O pins                                    ; 20            ;
@@ -261,8 +264,8 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 4             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; i_clock~input ;
-; Maximum fan-out                             ; 239           ;
-; Total fan-out                               ; 1798          ;
+; Maximum fan-out                             ; 248           ;
+; Total fan-out                               ; 1804          ;
 ; Average fan-out                             ; 2.95          ;
 +---------------------------------------------+---------------+
 
@@ -272,13 +275,13 @@ refer to the applicable agreement for further details.
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Entity Name     ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |ZigVHDL                                       ; 326 (75)            ; 223 (190)                 ; 4096        ; 4            ; 0       ; 2         ; 20   ; 0            ; |ZigVHDL                                                                                                                        ; ZigVHDL         ; work         ;
+; |ZigVHDL                                       ; 319 (69)            ; 232 (199)                 ; 4096        ; 4            ; 0       ; 2         ; 20   ; 0            ; |ZigVHDL                                                                                                                        ; ZigVHDL         ; work         ;
 ;    |LFSR_33:c1|                                ; 13 (13)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|LFSR_33:c1                                                                                                             ; LFSR_33         ; work         ;
 ;    |d1Gen:c3|                                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d1Gen:c3                                                                                                               ; d1Gen           ; work         ;
 ;    |d2Gen:c4|                                  ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d2Gen:c4                                                                                                               ; d2Gen           ; work         ;
 ;    |d3Gen:c5|                                  ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d3Gen:c5                                                                                                               ; d3Gen           ; work         ;
-;    |d4Gen:c6|                                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d4Gen:c6                                                                                                               ; d4Gen           ; work         ;
-;    |d5Gen:c7|                                  ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d5Gen:c7                                                                                                               ; d5Gen           ; work         ;
+;    |d4Gen:c6|                                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d4Gen:c6                                                                                                               ; d4Gen           ; work         ;
+;    |d5Gen:c7|                                  ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|d5Gen:c7                                                                                                               ; d5Gen           ; work         ;
 ;    |lpm_mult:Mult0|                            ; 82 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0                                                                                                         ; lpm_mult        ; work         ;
 ;       |multcore:mult_core|                     ; 82 (42)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core                                                                                      ; multcore        ; work         ;
 ;          |mpar_add:padder|                     ; 40 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add        ; work         ;
@@ -351,7 +354,6 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
-; AU[8..15]                              ; Stuck at GND due to stuck port data_in ;
 ; Y[11,12,15]                            ; Stuck at GND due to stuck port data_in ;
 ; Y[14]                                  ; Merged with Y[13]                      ;
 ; i_2[7]                                 ; Merged with U1_2[7]                    ;
@@ -379,7 +381,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; i_1[3]                                 ; Merged with U1_1[3]                    ;
 ; i_2[3]                                 ; Merged with U1_2[3]                    ;
 ; AU[0..2]                               ; Lost fanout                            ;
-; Total Number of Removed Registers = 39 ;                                        ;
+; Total Number of Removed Registers = 31 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -388,12 +390,12 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 223   ;
+; Total registers                              ; 232   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 190   ;
+; Number of registers using Clock Enable       ; 186   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -726,25 +728,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 20                          ;
-; cycloneiii_ff         ; 223                         ;
-;     ENA               ; 190                         ;
-;     plain             ; 33                          ;
-; cycloneiii_lcell_comb ; 326                         ;
-;     arith             ; 179                         ;
-;         2 data inputs ; 50                          ;
-;         3 data inputs ; 129                         ;
-;     normal            ; 147                         ;
-;         0 data inputs ; 3                           ;
+; cycloneiii_ff         ; 232                         ;
+;     ENA               ; 186                         ;
+;     plain             ; 46                          ;
+; cycloneiii_lcell_comb ; 319                         ;
+;     arith             ; 171                         ;
+;         2 data inputs ; 43                          ;
+;         3 data inputs ; 128                         ;
+;     normal            ; 148                         ;
+;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 31                          ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 100                         ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 103                         ;
 ; cycloneiii_mac_mult   ; 2                           ;
 ; cycloneiii_mac_out    ; 2                           ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.60                        ;
-; Average LUT depth     ; 3.37                        ;
+; Average LUT depth     ; 3.33                        ;
 +-----------------------+-----------------------------+
 
 
@@ -753,7 +755,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -763,7 +765,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 09 21:25:07 2022
+    Info: Processing started: Tue May 10 16:50:13 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ZigVHDL -c ZigVHDL
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -796,17 +798,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file ziggura
     Info (12023): Found entity 1: ziggurat_tb File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd Line: 8
 Info (12127): Elaborating entity "ZigVHDL" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(87): object "U0_2" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 87
-Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(92): object "U1_3" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 92
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(99): object "i_4" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 99
 Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(104): used explicit default value for signal "da" because signal was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 104
 Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(105): used explicit default value for signal "db" because signal was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 105
 Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(107): used implicit default value for signal "ea" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 107
 Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(108): used implicit default value for signal "eb" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 108
 Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(111): used explicit default value for signal "A0" because signal was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 111
-Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(172): used initial value expression for variable "GRAD" because variable was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 172
-Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(174): used initial value expression for variable "Ymax" because variable was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 174
-Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(175): used initial value expression for variable "YmaxMinus1" because variable was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 175
-Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(176): used initial value expression for variable "YmYmminus1" because variable was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 176
-Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(180): used initial value expression for variable "A" because variable was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 180
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(134): object "D5_1" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 134
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(136): object "D1_2" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 136
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(137): object "D2_2" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 137
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(138): object "D3_2" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 138
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(139): object "D4_2" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 139
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(188): used initial value expression for variable "GRAD" because variable was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 188
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(190): used initial value expression for variable "Ymax" because variable was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 190
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(191): used initial value expression for variable "YmaxMinus1" because variable was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 191
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(192): used initial value expression for variable "YmYmminus1" because variable was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 192
 Info (12128): Elaborating entity "LFSR_33" for hierarchy "LFSR_33:c1" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 147
 Info (12128): Elaborating entity "zigLUT" for hierarchy "zigLUT:c2" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 148
 Info (12128): Elaborating entity "altsyncram" for hierarchy "zigLUT:c2|altsyncram:altsyncram_component" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 67
@@ -879,12 +885,12 @@ Info (12128): Elaborating entity "d5Gen" for hierarchy "d5Gen:c7" File: C:/Users
 Warning (10492): VHDL Process Statement warning at d5Gen.vhd(23): signal "Yin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 23
 Warning (10492): VHDL Process Statement warning at d5Gen.vhd(23): signal "Fxin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 23
 Info (278001): Inferred 4 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 217
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult2" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 221
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult3" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 223
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 211
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 217
-Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter: File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 217
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 233
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult2" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 237
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult3" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 239
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 223
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 233
+Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter: File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 233
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "16"
     Info (12134): Parameter "LPM_WIDTHP" = "32"
@@ -896,8 +902,8 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following para
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
     Info (12023): Found entity 1: mult_7dt File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/mult_7dt.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult2" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 221
-Info (12133): Instantiated megafunction "lpm_mult:Mult2" with the following parameter: File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 221
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult2" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 237
+Info (12133): Instantiated megafunction "lpm_mult:Mult2" with the following parameter: File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 237
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "16"
     Info (12134): Parameter "LPM_WIDTHP" = "32"
@@ -907,8 +913,8 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult2" with the following para
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult3" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 223
-Info (12133): Instantiated megafunction "lpm_mult:Mult3" with the following parameter: File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 223
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult3" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 239
+Info (12133): Instantiated megafunction "lpm_mult:Mult3" with the following parameter: File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 239
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "14"
     Info (12134): Parameter "LPM_WIDTHP" = "30"
@@ -931,8 +937,8 @@ Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|multcore:mul
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ekh.tdf
     Info (12023): Found entity 1: add_sub_ekh File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/add_sub_ekh.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult3" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 211
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 211
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 223
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 223
     Info (12134): Parameter "LPM_WIDTHA" = "10"
     Info (12134): Parameter "LPM_WIDTHB" = "16"
     Info (12134): Parameter "LPM_WIDTHP" = "26"
@@ -958,16 +964,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 10
-Info (21057): Implemented 515 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 513 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 475 logic cells
+    Info (21061): Implemented 473 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21062): Implemented 4 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
     Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Mon May 09 21:25:36 2022
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:54
+    Info: Processing ended: Tue May 10 16:50:29 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:29
 
 

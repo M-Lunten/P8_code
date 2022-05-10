@@ -63,4 +63,6 @@ set_global_assignment -name VHDL_FILE d2Gen.vhd
 set_global_assignment -name VHDL_FILE d5Gen.vhd
 set_global_assignment -name VHDL_FILE ziggurat_tb.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name SMART_RECOMPILE OFF
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

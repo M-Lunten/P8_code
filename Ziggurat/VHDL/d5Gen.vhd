@@ -20,7 +20,7 @@ architecture Behavioural of d5Gen is
 		process(clk)
 			begin
 			
-			if (Yin<Fxin) then
+			if (Yin < Fxin) then
 				D5out <= '1';
 			else
 				D5out <= '0';

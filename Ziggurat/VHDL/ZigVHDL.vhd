@@ -86,17 +86,17 @@ end component;
 	signal U0_1 : std_logic_vector(15 downto 0) := "0000000000000000";
 	signal U0_2 : std_logic_vector(15 downto 0) := "0000000000000000";
 	
-	signal U1 : std_logic_vector(15 downto 0) := "0000000000000000";
-	signal U1_1 : std_logic_vector(15 downto 0) := "0000000000000000";
-	signal U1_2 : std_logic_vector(15 downto 0) := "0000000000000000";
-	signal U1_3 : std_logic_vector(15 downto 0) := "0000000000000000";
-	signal U1_4 : std_logic_vector(15 downto 0) := "0000000000000000";
-	signal U1_5 : std_logic_vector(15 downto 0) := "0000000000000000";
-	signal U1_6 : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal U1 : std_logic_vector(15 downto 0);
+	signal U1_1 : std_logic_vector(15 downto 0);
+	signal U1_2 : std_logic_vector(15 downto 0);
+	signal U1_3 : std_logic_vector(15 downto 0);
+	signal U1_4 : std_logic_vector(15 downto 0);
+	signal U1_5 : std_logic_vector(15 downto 0);
+	signal U1_6 : std_logic_vector(15 downto 0);
 	
 	signal i : std_logic_vector(7 downto 0) := "00000000";
 	signal i_1 : std_logic_vector(7 downto 0) := "00000000";
-	signal i_2 : std_logic_vector(7 downto 0) := "00000000";
+	signal i_2,i_3,i_4 : std_logic_vector(7 downto 0) := "00000000";
 	
 	
 	signal iplus : std_logic_vector(7 downto 0) := "00000000";
@@ -107,38 +107,38 @@ end component;
 	signal ea : std_logic;
 	signal eb : std_logic;
 	
-	signal A : std_logic_vector(15 downto 0) := "0000000010000001"; --Q0.16
-	signal A0 : std_logic_vector(15 downto 0) := "0000000001111000"; --Q0.16
-	signal AU : std_logic_vector(15 downto 0) ;--:= "0000000000000000";
-	signal AUS1 : std_logic_vector(31 downto 0);
-	signal AUS2 : std_logic_vector(15 downto 0);
+	--signal A : 			std_logic_vector(15 downto 0) := "0000000010000001"; --Q0.16
+	signal A0 : 		std_logic_vector(15 downto 0) := "0000000001111000"; --Q0.16
+	signal AU : 		std_logic_vector(15 downto 0) ;--:= "0000000000000000";
+	signal AUS1 : 		std_logic_vector(31 downto 0);
+	signal AUS2 : 		std_logic_vector(15 downto 0);
 	
 	
-	signal fx : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal fx : 		std_logic_vector(15 downto 0) := "0000000000000000";
 	
-	signal Y : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal Y : 			std_logic_vector(15 downto 0) := "0000000000000000";
 	
-	signal xi : std_logic_vector(15 downto 0) := "0000000000000000";
-	signal xiplus : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal xi : 		std_logic_vector(15 downto 0) := "0000000000000000";
+	signal xiplus : 	std_logic_vector(15 downto 0) := "0000000000000000";
 	signal xiplus_1 : std_logic_vector(15 downto 0) := "0000000000000000";
 	
-	signal xu : std_logic_vector(15 downto 0) := "0000000000000000";
-	signal xu_1 : std_logic_vector(15 downto 0) := "0000000000000000";
-	signal xu_2 : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal xu : 		std_logic_vector(15 downto 0) := "0000000000000000";
+	signal xu_1 : 		std_logic_vector(15 downto 0) := "0000000000000000";
+	signal xu_2 : 		std_logic_vector(15 downto 0) := "0000000000000000";
 	
 	
 	signal D1 : std_logic;
 	signal D2 : std_logic;
 	signal D3 : std_logic;
 	signal D4 : std_logic;
-	signal D5 : std_logic;
+	signal D5, D5_1 : std_logic;
 	
-	signal D1_1 : std_logic;
-	signal D2_1 : std_logic;
-	signal D3_1 : std_logic;
-	signal D4_1 : std_logic;
+	signal D1_1,D1_2 : std_logic;
+	signal D2_1,D2_2 : std_logic;
+	signal D3_1,D3_2 : std_logic;
+	signal D4_1,D4_2 : std_logic;
 	
-	
+	constant area: std_logic_vector(15 downto 0) := "0000000010000001";
 	
 
 	signal valid : std_logic;
@@ -154,6 +154,22 @@ end component;
 		
 
 		isVal <= valid;
+		
+		
+		process(i_clock)
+		variable AUS1 : unsigned(31 downto 0) ;--:= "00000000000000000000000000000000";
+		variable AUS2 : unsigned(15 downto 0) ;--:= "0000000000000000";
+		--variable area : unsigned(15 downto 0) := "0000000010000001"; --Q0.16
+		begin
+			if rising_edge(i_clock) then
+				AUS1 := unsigned(area) * unsigned(U1_2); -- Q0.16 * Q0.16 -> Q0.32
+				--AUS2 := shift_right(AUS1,16)(15 downto 0); --Q0.32>>16 -> Q0.16
+				AU <= std_logic_vector(AUS1(15 downto 0));
+			end if;
+		end process;
+		
+		
+		
 		process(i_clock,start) is 
 		
 		variable YvS1 : unsigned(31 downto 0) := "00000000000000000000000000000000";
@@ -175,9 +191,7 @@ end component;
 		variable YmaxMinus1 : signed(15 downto 0) := "0110001111001010"; -- Q0.16
 		variable YmYmminus1 : unsigned(15 downto 0) := "0000001001010100"; -- Q0.16
 		
-		variable AUS1 : unsigned(31 downto 0) ;--:= "00000000000000000000000000000000";
-		variable AUS2 : unsigned(15 downto 0) ;--:= "0000000000000000";
-		variable A : unsigned(15 downto 0) := "0000000010000001"; --Q0.16
+		
 			
 			begin
 				if rising_edge(i_clock) then
@@ -203,22 +217,24 @@ end component;
 						
 						i_1 <= i;
 						i_2 <= i_1;
--------------------------------------
-						AUS1 := A * unsigned(U1_2); -- Q0.16 * Q0.16 -> Q0.32
-						AUS2 := shift_right(AUS1,16)(15 downto 0); --Q0.32>>16 -> Q0.16
-						AU <= std_logic_vector(AUS2);
--------------------------------------
+						i_3 <= i_2;
+						i_4 <= i_3;
+
 						YvS1 := (YmYmminus1 * unsigned(U1_2));--Q0.16 x Q0.16 -> Q0.32
 						YvS2 := shift_right(YvS1,16)(15 downto 0);
 						
 						YvS3 := Ymax - YvS2;-- Q0.16 - Q0.16
 						Y <= std_logic_vector(YvS3);
 						
+-------------------------------------
+	
+-------------------------------------
+
 						xuvS1 := unsigned(xi)*unsigned(U0_1); -- Q3.13 x Q0.16 -> Q3.29
 						xuvS2 := unsigned(shift_right(xuvS1,16)(15 downto 0)); -- Q3.13
 						xu <= std_logic_vector(xuvS2);
 						
-						fxvS1 := (xuvS2*xuvS2); -- Q3.13 x Q3.13 -> 3.26
+						fxvS1 := (xuvS2*xuvS2); -- Q3.13 x Q3.13 -> 6.26
 						fxvS2 := unsigned(shift_right(fxvS1,13)(15 downto 0)); -- Q3.13
 						fxvS3 := signed(fxvS2)*signed(GRAD); -- Q3.13 x Q1.15 -> Q3.28
 						fxvS4 := signed(shift_right(fxvS3,15)(15 downto 0)); -- Q3.13
@@ -227,31 +243,37 @@ end component;
 						
 					
 						D1_1 <= D1;
+						D1_2 <= D1_1;
 						D2_1 <= D2;
+						D2_2 <= D2_1;
 						D3_1 <= D3;
+						D3_2 <= D3_1;
 						D4_1 <= D4;
+						D4_2 <= D4_1;
+						D5_1 <= D5;
+						
 						
 						xu_1 <= xu;
 						
 						
-						if((D1_1='1') and (D2_1='1') and (D3_1='0') and (D4_1='0') and (D5='0')) then 
-							if(U1(15)='1') then
+						if((D1_1='1') and (D2_1='1')) then 
+							if(U1_3(15)='1') then
 								zigout <= not(xu_1) + 1;
 							else
 								zigout <= xu_1;
 							end if;
 							valid <= '1';
 							
-						elsif ((D1_1='0') and (D2_1='0') and (D3_1='1') and (D4_1 = '1') and (D5='0')) then
-							if(U1(15)='1') then
+						elsif ((D3_1='1') and (D4_1 = '1')) then
+							if(U1_3(15)='1') then
 								zigout <= not(xu_1) + 1;
 							else
 								zigout <= xu_1;
 							end if;
 							valid <= '1';
 							
-						elsif ((D1_1='0') and (D2_1='0') and (D3_1='0') and (D4_1 = '0') and (D5='1')) then	
-							if(U1(15)='1') then
+						elsif ((D1_1='0') and (D3_1='0') and (D5='1')) then	
+							if(U1_3(15)='1') then
 								zigout <= not(xu_1) + 1;
 							else
 								zigout <= xu_1;

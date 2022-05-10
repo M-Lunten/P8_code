@@ -20,7 +20,7 @@ architecture behavior of ziggurat_tb is
 	);
 	end component;
 	
-	file file_RESULTS : text;
+	file file_RESULTS,v_res : text;
 
 	constant clock_period : time := 40 ns;
 
@@ -41,15 +41,18 @@ begin
 	
 	
 	RES_GEN : process is 
-	variable out_line : line;
+	variable out_line,v_line : line;
 	begin
 		file_open(file_RESULTS, "output_results.txt", write_mode);
+		file_open(v_res,"validate_results.csv",write_mode);
 		wait for 5*clock_period;
 		
-		for i in 0 to 100000 loop
+		for i in 0 to 1000 loop
+		write(v_line,v,right,1);
+		write(v_line, ',', right, 1);
+		writeline(v_res,v_line);
 			if(v = '1') then
 				write(out_line, res1, right, 16);
-			
 				write(out_line, ',', right, 1);
 				writeline(file_RESULTS, out_line);
 			end if;

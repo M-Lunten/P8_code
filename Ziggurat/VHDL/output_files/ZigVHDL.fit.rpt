@@ -1,5 +1,5 @@
 Fitter report for ZigVHDL
-Mon May 09 21:26:21 2022
+Tue May 10 16:50:49 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -72,17 +72,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon May 09 21:26:21 2022       ;
+; Fitter Status                      ; Successful - Tue May 10 16:50:49 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ZigVHDL                                     ;
 ; Top-level Entity Name              ; ZigVHDL                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 415 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 327 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 191 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 191                                         ;
+; Total logic elements               ; 428 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 320 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 200 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 200                                         ;
 ; Total pins                         ; 20 / 529 ( 4 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096 / 3,981,312 ( < 1 % )                 ;
@@ -165,7 +165,12 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.3%      ;
-;     Processors 3-8         ;   0.3%      ;
+;     Processor 3            ;   0.3%      ;
+;     Processor 4            ;   0.3%      ;
+;     Processor 5            ;   0.3%      ;
+;     Processor 6            ;   0.3%      ;
+;     Processor 7            ;   0.3%      ;
+;     Processor 8            ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -215,8 +220,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 620 ) ; 0.00 % ( 0 / 620 )         ; 0.00 % ( 0 / 620 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 620 ) ; 0.00 % ( 0 / 620 )         ; 0.00 % ( 0 / 620 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 622 ) ; 0.00 % ( 0 / 622 )         ; 0.00 % ( 0 / 622 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 622 ) ; 0.00 % ( 0 / 622 )         ; 0.00 % ( 0 / 622 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -239,7 +244,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 610 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 612 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -255,26 +260,26 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Total logic elements                        ; 415 / 114,480 ( < 1 % )     ;
-;     -- Combinational with no register       ; 224                         ;
-;     -- Register only                        ; 88                          ;
-;     -- Combinational with a register        ; 103                         ;
+; Total logic elements                        ; 428 / 114,480 ( < 1 % )     ;
+;     -- Combinational with no register       ; 228                         ;
+;     -- Register only                        ; 108                         ;
+;     -- Combinational with a register        ; 92                          ;
 ;                                             ;                             ;
 ; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 100                         ;
-;     -- 3 input functions                    ; 138                         ;
-;     -- <=2 input functions                  ; 89                          ;
-;     -- Register only                        ; 88                          ;
+;     -- 4 input functions                    ; 103                         ;
+;     -- 3 input functions                    ; 136                         ;
+;     -- <=2 input functions                  ; 81                          ;
+;     -- Register only                        ; 108                         ;
 ;                                             ;                             ;
 ; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 148                         ;
-;     -- arithmetic mode                      ; 179                         ;
+;     -- normal mode                          ; 149                         ;
+;     -- arithmetic mode                      ; 171                         ;
 ;                                             ;                             ;
-; Total registers*                            ; 191 / 117,053 ( < 1 % )     ;
-;     -- Dedicated logic registers            ; 191 / 114,480 ( < 1 % )     ;
+; Total registers*                            ; 200 / 117,053 ( < 1 % )     ;
+;     -- Dedicated logic registers            ; 200 / 114,480 ( < 1 % )     ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )           ;
 ;                                             ;                             ;
-; Total LABs:  partially or completely used   ; 30 / 7,155 ( < 1 % )        ;
+; Total LABs:  partially or completely used   ; 31 / 7,155 ( < 1 % )        ;
 ; Virtual pins                                ; 0                           ;
 ; I/O pins                                    ; 20 / 529 ( 4 % )            ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )              ;
@@ -293,11 +298,11 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )               ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )               ;
 ; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%          ;
-; Peak interconnect usage (total/H/V)         ; 3.4% / 2.5% / 4.7%          ;
+; Peak interconnect usage (total/H/V)         ; 4.3% / 4.1% / 4.7%          ;
 ; Maximum fan-out                             ; 242                         ;
-; Highest non-global fan-out                  ; 145                         ;
-; Total fan-out                               ; 1489                        ;
-; Average fan-out                             ; 2.34                        ;
+; Highest non-global fan-out                  ; 141                         ;
+; Total fan-out                               ; 1510                        ;
+; Average fan-out                             ; 2.31                        ;
 +---------------------------------------------+-----------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -310,26 +315,26 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 415 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 224                    ; 0                              ;
-;     -- Register only                        ; 88                     ; 0                              ;
-;     -- Combinational with a register        ; 103                    ; 0                              ;
+; Total logic elements                        ; 428 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 228                    ; 0                              ;
+;     -- Register only                        ; 108                    ; 0                              ;
+;     -- Combinational with a register        ; 92                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 100                    ; 0                              ;
-;     -- 3 input functions                    ; 138                    ; 0                              ;
-;     -- <=2 input functions                  ; 89                     ; 0                              ;
-;     -- Register only                        ; 88                     ; 0                              ;
+;     -- 4 input functions                    ; 103                    ; 0                              ;
+;     -- 3 input functions                    ; 136                    ; 0                              ;
+;     -- <=2 input functions                  ; 81                     ; 0                              ;
+;     -- Register only                        ; 108                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 148                    ; 0                              ;
-;     -- arithmetic mode                      ; 179                    ; 0                              ;
+;     -- normal mode                          ; 149                    ; 0                              ;
+;     -- arithmetic mode                      ; 171                    ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total registers                             ; 191                    ; 0                              ;
-;     -- Dedicated logic registers            ; 191 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 200                    ; 0                              ;
+;     -- Dedicated logic registers            ; 200 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 30 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 31 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 20                     ; 0                              ;
@@ -346,8 +351,8 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 1808                   ; 5                              ;
-;     -- Registered Connections               ; 490                    ; 0                              ;
+;     -- Total Connections                    ; 1829                   ; 5                              ;
+;     -- Registered Connections               ; 497                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 0                      ; 0                              ;
@@ -379,9 +384,9 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; i_clock ; J1    ; 1        ; 0            ; 36           ; 7            ; 193                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; i_clock ; J1    ; 1        ; 0            ; 36           ; 7            ; 202                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; reset   ; AF2   ; 2        ; 0            ; 6            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; start   ; AC17  ; 4        ; 74           ; 0            ; 21           ; 145                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; start   ; G21   ; 7        ; 74           ; 73           ; 21           ; 141                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -390,23 +395,23 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; isVal      ; AC18  ; 4        ; 87           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[0]  ; AD17  ; 4        ; 74           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[10] ; AF18  ; 4        ; 79           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[11] ; AE20  ; 4        ; 85           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[12] ; AE21  ; 4        ; 85           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[13] ; AF24  ; 4        ; 83           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[14] ; AH22  ; 4        ; 79           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[15] ; AG23  ; 4        ; 81           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[1]  ; AH23  ; 4        ; 81           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[2]  ; AG21  ; 4        ; 74           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[3]  ; AE19  ; 4        ; 83           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[4]  ; AF25  ; 4        ; 83           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[5]  ; AE18  ; 4        ; 79           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[6]  ; AF20  ; 4        ; 85           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[7]  ; AF19  ; 4        ; 83           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[8]  ; AG22  ; 4        ; 79           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; zigout[9]  ; AH21  ; 4        ; 74           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; isVal      ; G20   ; 7        ; 74           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[0]  ; G16   ; 7        ; 67           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[10] ; H16   ; 7        ; 65           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[11] ; J16   ; 7        ; 65           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[12] ; G22   ; 7        ; 72           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[13] ; G18   ; 7        ; 69           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[14] ; J17   ; 7        ; 69           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[15] ; H21   ; 7        ; 72           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[1]  ; H19   ; 7        ; 72           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[2]  ; J19   ; 7        ; 72           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[3]  ; E17   ; 7        ; 67           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[4]  ; H17   ; 7        ; 67           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[5]  ; F17   ; 7        ; 67           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[6]  ; C16   ; 7        ; 62           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[7]  ; D16   ; 7        ; 62           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[8]  ; G15   ; 7        ; 65           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; zigout[9]  ; G19   ; 7        ; 69           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -428,6 +433,8 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; M22      ; MSEL2                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; P22      ; MSEL3                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; P28      ; DIFFIO_R23n, nCEO           ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
+; C16      ; DIFFIO_T36n, PADD9          ; Use as regular IO        ; zigout[6]               ; Dual Purpose Pin          ;
+; D16      ; DIFFIO_T36p, PADD10         ; Use as regular IO        ; zigout[7]               ; Dual Purpose Pin          ;
 +----------+-----------------------------+--------------------------+-------------------------+---------------------------+
 
 
@@ -439,10 +446,10 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; 1        ; 5 / 56 ( 9 % )   ; 2.5V          ; --           ;
 ; 2        ; 1 / 63 ( 2 % )   ; 2.5V          ; --           ;
 ; 3        ; 0 / 73 ( 0 % )   ; 2.5V          ; --           ;
-; 4        ; 18 / 71 ( 25 % ) ; 2.5V          ; --           ;
+; 4        ; 0 / 71 ( 0 % )   ; 2.5V          ; --           ;
 ; 5        ; 0 / 65 ( 0 % )   ; 2.5V          ; --           ;
 ; 6        ; 1 / 58 ( 2 % )   ; 2.5V          ; --           ;
-; 7        ; 0 / 72 ( 0 % )   ; 2.5V          ; --           ;
+; 7        ; 18 / 72 ( 25 % ) ; 2.5V          ; --           ;
 ; 8        ; 0 / 71 ( 0 % )   ; 2.5V          ; --           ;
 +----------+------------------+---------------+--------------+
 
@@ -550,8 +557,8 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; AC14     ; 195        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC15     ; 203        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC16     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AC17     ; 221        ; 4        ; start                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AC18     ; 240        ; 4        ; isVal                                                     ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC17     ; 221        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AC18     ; 240        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AC19     ; 247        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC20     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC21     ; 258        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -578,7 +585,7 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; AD14     ; 196        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD15     ; 204        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD16     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; AD17     ; 222        ; 4        ; zigout[0]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD17     ; 222        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD18     ; 237        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD19     ; 248        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD20     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -607,10 +614,10 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; AE15     ; 205        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE16     ; 209        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE17     ; 215        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AE18     ; 225        ; 4        ; zigout[5]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AE19     ; 231        ; 4        ; zigout[3]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AE20     ; 235        ; 4        ; zigout[11]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AE21     ; 238        ; 4        ; zigout[12]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE18     ; 225        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AE19     ; 231        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AE20     ; 235        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AE21     ; 238        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE22     ; 251        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE23     ; 261        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE24     ; 256        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -635,14 +642,14 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; AF15     ; 206        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF16     ; 210        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF17     ; 216        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF18     ; 226        ; 4        ; zigout[10]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AF19     ; 232        ; 4        ; zigout[7]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AF20     ; 236        ; 4        ; zigout[6]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF18     ; 226        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AF19     ; 232        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AF20     ; 236        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF21     ; 239        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF22     ; 252        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF23     ; 262        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF24     ; 233        ; 4        ; zigout[13]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AF25     ; 234        ; 4        ; zigout[4]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF24     ; 233        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AF25     ; 234        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF26     ; 244        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF27     ; 277        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AF28     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -666,9 +673,9 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; AG18     ; 217        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG19     ; 219        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG20     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AG21     ; 223        ; 4        ; zigout[2]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AG22     ; 227        ; 4        ; zigout[8]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AG23     ; 229        ; 4        ; zigout[15]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG21     ; 223        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AG22     ; 227        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AG23     ; 229        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG24     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG25     ; 245        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG26     ; 270        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -693,9 +700,9 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; AH18     ; 218        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH19     ; 220        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH20     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; AH21     ; 224        ; 4        ; zigout[9]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AH22     ; 228        ; 4        ; zigout[14]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AH23     ; 230        ; 4        ; zigout[1]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AH21     ; 224        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AH22     ; 228        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AH23     ; 230        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH24     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AH25     ; 246        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH26     ; 271        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -743,7 +750,7 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; C13      ; 474        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C14      ; 476        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C15      ; 468        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; C16      ; 460        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C16      ; 460        ; 7        ; zigout[6]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C17      ; 438        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C18      ; 429        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C19      ; 435        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -771,7 +778,7 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; D13      ; 475        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D14      ; 477        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D15      ; 469        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D16      ; 461        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; D16      ; 461        ; 7        ; zigout[7]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D17      ; 439        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D18      ; 430        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D19      ; 436        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -800,7 +807,7 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; E14      ; 486        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E15      ; 467        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E16      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; E17      ; 456        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; E17      ; 456        ; 7        ; zigout[3]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E18      ; 427        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E19      ; 421        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E20      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -828,7 +835,7 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; F14      ; 485        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F15      ; 466        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F16      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; F17      ; 455        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; F17      ; 455        ; 7        ; zigout[5]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F18      ; 428        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F19      ; 420        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F20      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -854,14 +861,14 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; G12      ; 503        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; G13      ; 493        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G14      ; 484        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; G15      ; 457        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; G16      ; 453        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; G15      ; 457        ; 7        ; zigout[8]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G16      ; 453        ; 7        ; zigout[0]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G17      ; 437        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; G18      ; 452        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; G19      ; 451        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; G20      ; 444        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; G21      ; 445        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; G22      ; 449        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; G18      ; 452        ; 7        ; zigout[13]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G19      ; 451        ; 7        ; zigout[9]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G20      ; 444        ; 7        ; isVal                                                     ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G21      ; 445        ; 7        ; start                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G22      ; 449        ; 7        ; zigout[12]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G23      ; 398        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G24      ; 397        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G25      ; 393        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -883,12 +890,12 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; H13      ; 494        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H14      ; 480        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H15      ; 464        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; H16      ; 459        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; H17      ; 454        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; H16      ; 459        ; 7        ; zigout[10]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; H17      ; 454        ; 7        ; zigout[4]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H18      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; H19      ; 446        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; H19      ; 446        ; 7        ; zigout[1]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H20      ;            ;          ; GNDA2                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; H21      ; 448        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; H21      ; 448        ; 7        ; zigout[15]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H22      ; 399        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H23      ; 391        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H24      ; 390        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -911,10 +918,10 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ou
 ; J13      ; 489        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; J14      ; 481        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; J15      ; 465        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; J16      ; 458        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; J17      ; 450        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; J16      ; 458        ; 7        ; zigout[11]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; J17      ; 450        ; 7        ; zigout[14]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J18      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; J19      ; 447        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; J19      ; 447        ; 7        ; zigout[2]                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J20      ;            ;          ; VCCD_PLL2                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J21      ;            ; --       ; VCCA2                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; J22      ; 394        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -1289,18 +1296,18 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                     ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                             ; Entity Name     ; Library Name ;
 +------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |ZigVHDL                                       ; 415 (155)   ; 191 (158)                 ; 0 (0)         ; 4096        ; 1    ; 4            ; 0       ; 2         ; 20   ; 0            ; 224 (14)     ; 88 (72)           ; 103 (62)         ; |ZigVHDL                                                                                                                        ; ZigVHDL         ; work         ;
-;    |LFSR_33:c1|                                ; 33 (33)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 17 (17)          ; |ZigVHDL|LFSR_33:c1                                                                                                             ; LFSR_33         ; work         ;
+; |ZigVHDL                                       ; 428 (167)   ; 200 (167)                 ; 0 (0)         ; 4096        ; 1    ; 4            ; 0       ; 2         ; 20   ; 0            ; 228 (6)      ; 108 (87)          ; 92 (64)          ; |ZigVHDL                                                                                                                        ; ZigVHDL         ; work         ;
+;    |LFSR_33:c1|                                ; 34 (34)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 21 (21)           ; 13 (13)          ; |ZigVHDL|LFSR_33:c1                                                                                                             ; LFSR_33         ; work         ;
 ;    |d1Gen:c3|                                  ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |ZigVHDL|d1Gen:c3                                                                                                               ; d1Gen           ; work         ;
-;    |d2Gen:c4|                                  ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 8 (8)            ; |ZigVHDL|d2Gen:c4                                                                                                               ; d2Gen           ; work         ;
-;    |d3Gen:c5|                                  ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; |ZigVHDL|d3Gen:c5                                                                                                               ; d3Gen           ; work         ;
-;    |d4Gen:c6|                                  ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |ZigVHDL|d4Gen:c6                                                                                                               ; d4Gen           ; work         ;
-;    |d5Gen:c7|                                  ; 14 (14)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 12 (12)          ; |ZigVHDL|d5Gen:c7                                                                                                               ; d5Gen           ; work         ;
-;    |lpm_mult:Mult0|                            ; 82 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 77 (0)       ; 0 (0)             ; 5 (0)            ; |ZigVHDL|lpm_mult:Mult0                                                                                                         ; lpm_mult        ; work         ;
-;       |multcore:mult_core|                     ; 82 (42)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 77 (38)      ; 0 (0)             ; 5 (4)            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core                                                                                      ; multcore        ; work         ;
-;          |mpar_add:padder|                     ; 40 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 39 (0)       ; 0 (0)             ; 1 (0)            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add        ; work         ;
-;             |lpm_add_sub:adder[0]|             ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 1 (0)            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub     ; work         ;
-;                |add_sub_ngh:auto_generated|    ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 1 (1)            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_ngh:auto_generated                      ; add_sub_ngh     ; work         ;
+;    |d2Gen:c4|                                  ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 3 (3)            ; |ZigVHDL|d2Gen:c4                                                                                                               ; d2Gen           ; work         ;
+;    |d3Gen:c5|                                  ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (2)            ; |ZigVHDL|d3Gen:c5                                                                                                               ; d3Gen           ; work         ;
+;    |d4Gen:c6|                                  ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 2 (2)            ; |ZigVHDL|d4Gen:c6                                                                                                               ; d4Gen           ; work         ;
+;    |d5Gen:c7|                                  ; 11 (11)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; |ZigVHDL|d5Gen:c7                                                                                                               ; d5Gen           ; work         ;
+;    |lpm_mult:Mult0|                            ; 82 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 75 (0)       ; 0 (0)             ; 7 (0)            ; |ZigVHDL|lpm_mult:Mult0                                                                                                         ; lpm_mult        ; work         ;
+;       |multcore:mult_core|                     ; 82 (42)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 75 (35)      ; 0 (0)             ; 7 (7)            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core                                                                                      ; multcore        ; work         ;
+;          |mpar_add:padder|                     ; 40 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 40 (0)       ; 0 (0)             ; 0 (0)            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add        ; work         ;
+;             |lpm_add_sub:adder[0]|             ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 0 (0)            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub     ; work         ;
+;                |add_sub_ngh:auto_generated|    ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_ngh:auto_generated                      ; add_sub_ngh     ; work         ;
 ;             |lpm_add_sub:adder[1]|             ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 0 (0)            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                 ; lpm_add_sub     ; work         ;
 ;                |add_sub_ngh:auto_generated|    ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_ngh:auto_generated                      ; add_sub_ngh     ; work         ;
 ;             |mpar_add:sub_par_add|             ; 16 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 0 (0)            ; |ZigVHDL|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add        ; work         ;
@@ -1363,19 +1370,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; reset                                                                                        ;                   ;         ;
 ; i_clock                                                                                      ;                   ;         ;
 ; start                                                                                        ;                   ;         ;
+;      - U1_3[15]                                                                              ; 0                 ; 6       ;
 ;      - xu_1[0]                                                                               ; 0                 ; 6       ;
 ;      - valid                                                                                 ; 0                 ; 6       ;
-;      - U1[15]                                                                                ; 0                 ; 6       ;
 ;      - fx[11]                                                                                ; 0                 ; 6       ;
 ;      - fx[12]                                                                                ; 0                 ; 6       ;
 ;      - fx[13]                                                                                ; 0                 ; 6       ;
 ;      - fx[14]                                                                                ; 0                 ; 6       ;
 ;      - fx[15]                                                                                ; 0                 ; 6       ;
-;      - AU[3]                                                                                 ; 0                 ; 6       ;
-;      - AU[4]                                                                                 ; 0                 ; 6       ;
-;      - AU[5]                                                                                 ; 0                 ; 6       ;
-;      - AU[6]                                                                                 ; 0                 ; 6       ;
-;      - AU[7]                                                                                 ; 0                 ; 6       ;
 ;      - Y[10]                                                                                 ; 0                 ; 6       ;
 ;      - fx[10]                                                                                ; 0                 ; 6       ;
 ;      - Y[9]                                                                                  ; 0                 ; 6       ;
@@ -1406,10 +1408,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Y[0]                                                                                  ; 0                 ; 6       ;
 ;      - fx[0]                                                                                 ; 0                 ; 6       ;
 ;      - D1_1                                                                                  ; 0                 ; 6       ;
-;      - D2_1                                                                                  ; 0                 ; 6       ;
 ;      - D3_1                                                                                  ; 0                 ; 6       ;
-;      - D4_1                                                                                  ; 0                 ; 6       ;
 ;      - Y[13]                                                                                 ; 0                 ; 6       ;
+;      - D4_1                                                                                  ; 0                 ; 6       ;
+;      - D2_1                                                                                  ; 0                 ; 6       ;
+;      - zigout[0]~19                                                                          ; 0                 ; 6       ;
 ;      - xu_1[1]                                                                               ; 0                 ; 6       ;
 ;      - xu_1[2]                                                                               ; 0                 ; 6       ;
 ;      - xu_1[3]                                                                               ; 0                 ; 6       ;
@@ -1425,6 +1428,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - xu_1[13]                                                                              ; 0                 ; 6       ;
 ;      - xu_1[14]                                                                              ; 0                 ; 6       ;
 ;      - xu_1[15]                                                                              ; 0                 ; 6       ;
+;      - U1_2[15]                                                                              ; 0                 ; 6       ;
 ;      - xu[0]                                                                                 ; 0                 ; 6       ;
 ;      - U1_2[7]                                                                               ; 0                 ; 6       ;
 ;      - U1_2[6]                                                                               ; 0                 ; 6       ;
@@ -1434,6 +1438,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - U1_2[5]                                                                               ; 0                 ; 6       ;
 ;      - U1_2[2]                                                                               ; 0                 ; 6       ;
 ;      - U1_2[1]                                                                               ; 0                 ; 6       ;
+;      - U1_2[14]                                                                              ; 0                 ; 6       ;
+;      - U1_2[13]                                                                              ; 0                 ; 6       ;
+;      - U1_2[12]                                                                              ; 0                 ; 6       ;
+;      - U1_2[10]                                                                              ; 0                 ; 6       ;
+;      - U1_2[11]                                                                              ; 0                 ; 6       ;
+;      - U1_2[9]                                                                               ; 0                 ; 6       ;
+;      - U1_2[8]                                                                               ; 0                 ; 6       ;
 ;      - xu[15]                                                                                ; 0                 ; 6       ;
 ;      - xu[14]                                                                                ; 0                 ; 6       ;
 ;      - xu[13]                                                                                ; 0                 ; 6       ;
@@ -1449,14 +1460,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - xu[3]                                                                                 ; 0                 ; 6       ;
 ;      - xu[2]                                                                                 ; 0                 ; 6       ;
 ;      - xu[1]                                                                                 ; 0                 ; 6       ;
-;      - U1_2[14]                                                                              ; 0                 ; 6       ;
-;      - U1_2[15]                                                                              ; 0                 ; 6       ;
-;      - U1_2[13]                                                                              ; 0                 ; 6       ;
-;      - U1_2[12]                                                                              ; 0                 ; 6       ;
-;      - U1_2[10]                                                                              ; 0                 ; 6       ;
-;      - U1_2[11]                                                                              ; 0                 ; 6       ;
-;      - U1_2[9]                                                                               ; 0                 ; 6       ;
-;      - U1_2[8]                                                                               ; 0                 ; 6       ;
+;      - U1_1[15]                                                                              ; 0                 ; 6       ;
 ;      - U1_1[7]                                                                               ; 0                 ; 6       ;
 ;      - U1_1[6]                                                                               ; 0                 ; 6       ;
 ;      - U1_1[4]                                                                               ; 0                 ; 6       ;
@@ -1466,13 +1470,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - U1_1[2]                                                                               ; 0                 ; 6       ;
 ;      - U1_1[1]                                                                               ; 0                 ; 6       ;
 ;      - U1_1[14]                                                                              ; 0                 ; 6       ;
-;      - U1_1[15]                                                                              ; 0                 ; 6       ;
 ;      - U1_1[13]                                                                              ; 0                 ; 6       ;
 ;      - U1_1[12]                                                                              ; 0                 ; 6       ;
 ;      - U1_1[10]                                                                              ; 0                 ; 6       ;
 ;      - U1_1[11]                                                                              ; 0                 ; 6       ;
 ;      - U1_1[9]                                                                               ; 0                 ; 6       ;
 ;      - U1_1[8]                                                                               ; 0                 ; 6       ;
+;      - U1[15]                                                                                ; 0                 ; 6       ;
 ;      - U1[7]                                                                                 ; 0                 ; 6       ;
 ;      - U1[6]                                                                                 ; 0                 ; 6       ;
 ;      - U1[4]                                                                                 ; 0                 ; 6       ;
@@ -1481,7 +1485,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - U1[5]                                                                                 ; 0                 ; 6       ;
 ;      - U1[2]                                                                                 ; 0                 ; 6       ;
 ;      - U1[1]                                                                                 ; 0                 ; 6       ;
-;      - iplus[0]                                                                              ; 0                 ; 6       ;
 ;      - U1[14]                                                                                ; 0                 ; 6       ;
 ;      - U1[13]                                                                                ; 0                 ; 6       ;
 ;      - U1[12]                                                                                ; 0                 ; 6       ;
@@ -1489,6 +1492,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - U1[11]                                                                                ; 0                 ; 6       ;
 ;      - U1[9]                                                                                 ; 0                 ; 6       ;
 ;      - U1[8]                                                                                 ; 0                 ; 6       ;
+;      - iplus[0]                                                                              ; 0                 ; 6       ;
 ;      - U0[0]                                                                                 ; 0                 ; 6       ;
 ;      - U0[1]                                                                                 ; 0                 ; 6       ;
 ;      - U0[2]                                                                                 ; 0                 ; 6       ;
@@ -1505,7 +1509,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - U0[13]                                                                                ; 0                 ; 6       ;
 ;      - U0[14]                                                                                ; 0                 ; 6       ;
 ;      - U0[15]                                                                                ; 0                 ; 6       ;
-;      - zigout[0]~52                                                                          ; 0                 ; 6       ;
 ;      - lpm_mult:Mult1|mult_7dt:auto_generated|mac_mult1                                      ; 0                 ; 6       ;
 ;      - zigLUT:c2|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 +----------------------------------------------------------------------------------------------+-------------------+---------+
@@ -1516,9 +1519,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name         ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; i_clock      ; PIN_J1             ; 193     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; start        ; PIN_AC17           ; 145     ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; zigout[0]~52 ; LCCOMB_X80_Y20_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; i_clock      ; PIN_J1             ; 202     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; start        ; PIN_G21            ; 141     ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; zigout[0]~19 ; LCCOMB_X74_Y61_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +--------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1527,7 +1530,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name    ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; i_clock ; PIN_J1   ; 193     ; 16                                   ; Global Clock         ; GCLK2            ; --                        ;
+; i_clock ; PIN_J1   ; 202     ; 16                                   ; Global Clock         ; GCLK2            ; --                        ;
 +---------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1536,7 +1539,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------------------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 ; Name                                                                                ; Type ; Mode           ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF              ; Location       ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
 +-------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------------------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; zigLUT:c2|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; Single Clock ; 256          ; 16           ; 256          ; 16           ; yes                    ; no                      ; yes                    ; yes                     ; 4096 ; 256                         ; 16                          ; 256                         ; 16                          ; 4096                ; 1    ; Ziggurat_LUT.mif ; M9K_X78_Y24_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; zigLUT:c2|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; Single Clock ; 256          ; 16           ; 256          ; 16           ; yes                    ; no                      ; yes                    ; yes                     ; 4096 ; 256                         ; 16                          ; 256                         ; 16                          ; 4096                ; 1    ; Ziggurat_LUT.mif ; M9K_X78_Y53_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 +-------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------------------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1603,10 +1606,10 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 ; Name                                                ; Mode                       ; Location           ; Sign Representation ; Has Input Shift Register Chain ; Data A Input Register ; Data B Input Register ; Pipeline Register ; Output Register ;
 +-----------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
-; lpm_mult:Mult2|mult_7dt:auto_generated|mac_out2     ; Simple Multiplier (18-bit) ; DSPOUT_X71_Y22_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lpm_mult:Mult2|mult_7dt:auto_generated|mac_mult1 ;                            ; DSPMULT_X71_Y22_N0 ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
-; lpm_mult:Mult1|mult_7dt:auto_generated|mac_out2     ; Simple Multiplier (18-bit) ; DSPOUT_X71_Y24_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lpm_mult:Mult1|mult_7dt:auto_generated|mac_mult1 ;                            ; DSPMULT_X71_Y24_N0 ; Unsigned            ;                                ; no                    ; yes                   ; no                ;                 ;
+; lpm_mult:Mult2|mult_7dt:auto_generated|mac_out2     ; Simple Multiplier (18-bit) ; DSPOUT_X71_Y56_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lpm_mult:Mult2|mult_7dt:auto_generated|mac_mult1 ;                            ; DSPMULT_X71_Y56_N0 ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
+; lpm_mult:Mult1|mult_7dt:auto_generated|mac_out2     ; Simple Multiplier (18-bit) ; DSPOUT_X71_Y53_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lpm_mult:Mult1|mult_7dt:auto_generated|mac_mult1 ;                            ; DSPMULT_X71_Y53_N0 ; Unsigned            ;                                ; no                    ; yes                   ; no                ;                 ;
 +-----------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 
 
@@ -1615,45 +1618,45 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 515 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 13 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 275 / 209,544 ( < 1 % ) ;
-; Direct links          ; 85 / 342,891 ( < 1 % )  ;
+; Block interconnects   ; 510 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 9 / 10,120 ( < 1 % )    ;
+; C4 interconnects      ; 279 / 209,544 ( < 1 % ) ;
+; Direct links          ; 98 / 342,891 ( < 1 % )  ;
 ; Global clocks         ; 1 / 20 ( 5 % )          ;
-; Local interconnects   ; 111 / 119,088 ( < 1 % ) ;
-; R24 interconnects     ; 7 / 9,963 ( < 1 % )     ;
-; R4 interconnects      ; 291 / 289,782 ( < 1 % ) ;
+; Local interconnects   ; 125 / 119,088 ( < 1 % ) ;
+; R24 interconnects     ; 0 / 9,963 ( 0 % )       ;
+; R4 interconnects      ; 312 / 289,782 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.83) ; Number of LABs  (Total = 30) ;
+; Number of Logic Elements  (Average = 13.81) ; Number of LABs  (Total = 31) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 1                            ;
-; 2                                           ; 1                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 0                            ;
 ; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 0                            ;
+; 9                                           ; 1                            ;
 ; 10                                          ; 2                            ;
-; 11                                          ; 1                            ;
+; 11                                          ; 0                            ;
 ; 12                                          ; 1                            ;
-; 13                                          ; 2                            ;
-; 14                                          ; 3                            ;
-; 15                                          ; 3                            ;
-; 16                                          ; 16                           ;
+; 13                                          ; 4                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 1                            ;
+; 16                                          ; 19                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.17) ; Number of LABs  (Total = 30) ;
+; LAB-wide Signals  (Average = 1.13) ; Number of LABs  (Total = 31) ;
 +------------------------------------+------------------------------+
 ; 1 Clock                            ; 18                           ;
 ; 1 Clock enable                     ; 17                           ;
@@ -1663,102 +1666,101 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 17.40) ; Number of LABs  (Total = 30) ;
+; Number of Signals Sourced  (Average = 17.77) ; Number of LABs  (Total = 31) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 2                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
+; 1                                            ; 2                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
+; 7                                            ; 0                            ;
 ; 8                                            ; 1                            ;
-; 9                                            ; 1                            ;
+; 9                                            ; 0                            ;
 ; 10                                           ; 1                            ;
-; 11                                           ; 1                            ;
+; 11                                           ; 0                            ;
 ; 12                                           ; 2                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 1                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 3                            ;
 ; 15                                           ; 1                            ;
 ; 16                                           ; 4                            ;
 ; 17                                           ; 1                            ;
 ; 18                                           ; 1                            ;
 ; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
-; 21                                           ; 1                            ;
+; 21                                           ; 0                            ;
 ; 22                                           ; 1                            ;
 ; 23                                           ; 0                            ;
 ; 24                                           ; 1                            ;
-; 25                                           ; 0                            ;
+; 25                                           ; 2                            ;
 ; 26                                           ; 1                            ;
-; 27                                           ; 2                            ;
+; 27                                           ; 0                            ;
 ; 28                                           ; 3                            ;
 ; 29                                           ; 0                            ;
-; 30                                           ; 0                            ;
-; 31                                           ; 0                            ;
+; 30                                           ; 1                            ;
+; 31                                           ; 1                            ;
 ; 32                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                         ;
-+--------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 10.00) ; Number of LABs  (Total = 30) ;
-+--------------------------------------------------+------------------------------+
-; 0                                                ; 0                            ;
-; 1                                                ; 3                            ;
-; 2                                                ; 0                            ;
-; 3                                                ; 0                            ;
-; 4                                                ; 1                            ;
-; 5                                                ; 1                            ;
-; 6                                                ; 0                            ;
-; 7                                                ; 1                            ;
-; 8                                                ; 2                            ;
-; 9                                                ; 4                            ;
-; 10                                               ; 4                            ;
-; 11                                               ; 3                            ;
-; 12                                               ; 2                            ;
-; 13                                               ; 2                            ;
-; 14                                               ; 3                            ;
-; 15                                               ; 1                            ;
-; 16                                               ; 2                            ;
-; 17                                               ; 1                            ;
-+--------------------------------------------------+------------------------------+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++-------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 9.94) ; Number of LABs  (Total = 31) ;
++-------------------------------------------------+------------------------------+
+; 0                                               ; 0                            ;
+; 1                                               ; 3                            ;
+; 2                                               ; 0                            ;
+; 3                                               ; 0                            ;
+; 4                                               ; 2                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 0                            ;
+; 8                                               ; 1                            ;
+; 9                                               ; 4                            ;
+; 10                                              ; 3                            ;
+; 11                                              ; 3                            ;
+; 12                                              ; 2                            ;
+; 13                                              ; 2                            ;
+; 14                                              ; 1                            ;
+; 15                                              ; 2                            ;
+; 16                                              ; 5                            ;
++-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 13.87) ; Number of LABs  (Total = 30) ;
+; Number of Distinct Inputs  (Average = 13.55) ; Number of LABs  (Total = 31) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 2                            ;
-; 4                                            ; 1                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 2                            ;
 ; 5                                            ; 1                            ;
-; 6                                            ; 4                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 3                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 2                            ;
+; 6                                            ; 3                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 1                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 2                            ;
+; 12                                           ; 2                            ;
+; 13                                           ; 3                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 1                            ;
 ; 17                                           ; 1                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 1                            ;
+; 18                                           ; 3                            ;
+; 19                                           ; 3                            ;
 ; 20                                           ; 0                            ;
 ; 21                                           ; 0                            ;
-; 22                                           ; 2                            ;
-; 23                                           ; 2                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 1                            ;
 ; 24                                           ; 1                            ;
 ; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
+; 26                                           ; 1                            ;
 ; 27                                           ; 1                            ;
 ; 28                                           ; 0                            ;
 ; 29                                           ; 0                            ;
@@ -1766,8 +1768,7 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 ; 31                                           ; 0                            ;
 ; 32                                           ; 0                            ;
 ; 33                                           ; 0                            ;
-; 34                                           ; 0                            ;
-; 35                                           ; 1                            ;
+; 34                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1900,16 +1901,15 @@ Note: For more information on problematic transfers, consider running the Fitter
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                   ;
-+-----------------+-----------------------------------------------------------------------------------------------------------+-------------------+
-; Source Register ; Destination Register                                                                                      ; Delay Added in ns ;
-+-----------------+-----------------------------------------------------------------------------------------------------------+-------------------+
-; iplus[0]        ; zigLUT:c2|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|ram_block1a15~portb_address_reg0 ; 0.242             ;
-; U1[0]           ; zigLUT:c2|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|ram_block1a15~porta_address_reg0 ; 0.238             ;
-; U1[6]           ; zigLUT:c2|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated|ram_block1a15~porta_address_reg0 ; 0.223             ;
-+-----------------+-----------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 3 path(s) that have the largest delay added for hold.
++--------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                            ;
++-------------------------------+----------------------+-------------------+
+; Source Register               ; Destination Register ; Delay Added in ns ;
++-------------------------------+----------------------+-------------------+
+; LFSR_33:c1|shift_register[23] ; iplus[7]             ; 0.030             ;
+; LFSR_33:c1|shift_register[16] ; iplus[0]             ; 0.010             ;
++-------------------------------+----------------------+-------------------+
+Note: This table only shows the top 2 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1967,31 +1967,31 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  57 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  71 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:20
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:08
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X69_Y12 to location X80_Y23
+    Info (170196): Router estimated peak interconnect usage is 4% of the available device resources in the region that extends from location X69_Y49 to location X80_Y60
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.76 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.37 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/output_files/ZigVHDL.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 6071 megabytes
-    Info: Processing ended: Mon May 09 21:26:22 2022
-    Info: Elapsed time: 00:00:44
-    Info: Total CPU time (on all processors): 00:01:03
+    Info: Peak virtual memory: 6009 megabytes
+    Info: Processing ended: Tue May 10 16:50:49 2022
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:30
 
 
 +----------------------------+
