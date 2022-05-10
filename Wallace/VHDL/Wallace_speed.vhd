@@ -8,6 +8,7 @@ entity Wallace_speed is
 		clk: in std_logic;
 		start: in std_logic;
 		reset: in std_logic;
+		valid: out std_logic;
 		x1: out std_logic_vector(15 downto 0);
 		x2: out std_logic_vector(15 downto 0);
 		x3: out std_logic_vector(15 downto 0);
@@ -21,6 +22,7 @@ architecture behavior of Wallace_speed is
 		start: in std_logic;
 		reset: in std_logic;
 		clk: in std_logic;
+		i: out std_logic_vector(7 downto 0);
 		LFSR_en, WE_1, WE_2 : out std_logic := '0';
 		MUX_4, MUX_5, MUX_6 : out std_logic
 	);
@@ -88,10 +90,21 @@ architecture behavior of Wallace_speed is
 	);
 	end component;
 	
+	component chi_corr is
+	port (
+		clk: in std_logic;
+		ctrl_sig: in std_logic_vector(7 downto 0);
+		x1: in std_logic_vector(15 downto 0);
+		G: out std_logic_vector(15 downto 0)
+	);
+	end component;
+	
+	--Control path signals
 	signal LFSR_en, WE_1, WE_2 : std_logic := '0';
 	signal MUX_4, MUX_5, MUX_6 : std_logic;
 	signal LFSR_ctrl : std_logic;
 	signal LFSR_out : std_logic_vector(51 downto 0);
+	signal i : std_logic_vector(7 downto 0);
 	--RAM signals
 	--RAM pair 1
 	signal addr_ram_1_A, addr_ram_1_B, addr_ram_1_C, addr_ram_1_D : std_logic_vector(8 downto 0);
@@ -108,10 +121,14 @@ architecture behavior of Wallace_speed is
 	signal data_A, data_B, data_C, data_D : std_logic_vector(15 downto 0);
 	--Transformation stage signals
 	signal res_1, res_2, res_3, res_4 : std_logic_vector(15 downto 0);
+	--Chi squared correction stage signals
+	signal res_1_corr, res_2_corr, res_3_corr, res_4_corr : std_logic_vector(15 downto 0);
+	signal G_factor : std_logic_vector(15 downto 0);
+	signal valid_check : std_logic;
 	
 begin
 	--Data path 
-	cp : control_path port map (start, reset, clk, LFSR_en, WE_1, WE_2, MUX_4, MUX_5, MUX_6); 
+	cp : control_path port map (start, reset, clk, i, LFSR_en, WE_1, WE_2, MUX_4, MUX_5, MUX_6); 
 	LFSR : LFSR_52 port map (LFSR_ctrl, LFSR_out);
 	LFSR_ctrl <= LFSR_en AND clk;
 	--RAM pair 1	
@@ -125,7 +142,8 @@ begin
 	ADDR_GEN_2 : addr_gen port map (clk, MUX_6, LFSR_out(34 downto 26), LFSR_out(43 downto 35), LFSR_out(51 downto 44), addr_C, addr_D);
 	--Transformation stage
 	tstage : transformation port map (clk, MUX_4, data_A, data_B, data_C, data_D, res_1, res_2, res_3, res_4);
-	
+	--Chi squared correction stage
+	chistage : chi_corr port map (clk, i, res_1_corr, G_factor);
 	
 	delay_addr : process(clk)
 	begin
@@ -180,12 +198,40 @@ begin
 	save_res : process(clk)
 	begin
 	if rising_edge(clk) then
-		x1 <= res_1;
-		x2 <= res_2;
-		x3 <= res_3;
-		x4 <= res_4;
+		res_1_corr <= res_1;
+		res_2_corr <= res_2;
+		res_3_corr <= res_3;
+		res_4_corr <= res_4;
 	end if;
 	end process;
+	
+	correction : process(clk)
+	variable corr_1_res : signed(31 downto 0);
+	variable corr_2_res : signed(31 downto 0);
+	variable corr_3_res : signed(31 downto 0);
+	variable corr_4_res : signed(31 downto 0);
+	begin
+	if rising_edge(clk) then
+		corr_1_res := signed(res_1_corr) * signed(G_factor); --Q(5, 11) * Q(2, 14) = Q(7, 25)
+		corr_2_res := signed(res_2_corr) * signed(G_factor);
+		corr_3_res := signed(res_3_corr) * signed(G_factor);
+		corr_4_res := signed(res_4_corr) * signed(G_factor);
+		x1 <= std_logic_vector(corr_1_res(31) & corr_1_res(28 downto 14));
+		x2 <= std_logic_vector(corr_2_res(31) & corr_2_res(28 downto 14));
+		x3 <= std_logic_vector(corr_3_res(31) & corr_3_res(28 downto 14));
+		x4 <= std_logic_vector(corr_4_res(31) & corr_4_res(28 downto 14));
+	end if;
+	end process;
+	
+	valid_ctrl : process(i)
+	begin
+	if i = "11111111" then
+		valid_check <= '0';
+	else
+		valid_check <= '1';
+	end if;
+	end process;
+	valid <= valid_check;
 	
 	ram_1_datain_A <= std_logic_vector(res_1);
 	ram_2_datain_A <= std_logic_vector(res_1);

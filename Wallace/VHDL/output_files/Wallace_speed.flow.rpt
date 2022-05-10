@@ -1,5 +1,5 @@
 Flow report for Wallace_speed
-Fri May 06 14:04:39 2022
+Tue May 10 23:12:56 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,21 +40,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri May 06 14:04:17 2022       ;
+; Flow Status                        ; Successful - Tue May 10 23:12:52 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Wallace_speed                               ;
 ; Top-level Entity Name              ; Wallace_speed                               ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 586 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 524 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 425 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 425                                         ;
-; Total pins                         ; 67 / 529 ( 13 % )                           ;
+; Total logic elements               ; 707 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 625 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 407 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 407                                         ;
+; Total pins                         ; 68 / 529 ( 13 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 32,840 / 3,981,312 ( < 1 % )                ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 8 / 532 ( 2 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/06/2022 14:02:42 ;
+; Start date & time ; 05/10/2022 23:12:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Wallace_speed       ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589205.165183856203268         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 10995770589205.165221713212584         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; RAM_1.cmp                              ; --            ; --          ; --         ;
@@ -95,11 +95,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:37     ; 1.0                     ; 4832 MB             ; 00:00:41                           ;
-; Fitter               ; 00:00:48     ; 1.0                     ; 5785 MB             ; 00:00:45                           ;
-; Assembler            ; 00:00:24     ; 1.0                     ; 4682 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:20     ; 1.1                     ; 4850 MB             ; 00:00:04                           ;
-; Total                ; 00:02:09     ; --                      ; --                  ; 00:01:35                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4819 MB             ; 00:00:25                           ;
+; Fitter               ; 00:00:21     ; 1.0                     ; 5697 MB             ; 00:00:33                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4681 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.2                     ; 4845 MB             ; 00:00:03                           ;
+; Total                ; 00:00:42     ; --                      ; --                  ; 00:01:05                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

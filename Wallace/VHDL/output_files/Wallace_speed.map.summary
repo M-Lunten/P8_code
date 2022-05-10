@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Fri May 06 14:03:02 2022
+Analysis & Synthesis Status : Successful - Tue May 10 23:12:25 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Wallace_speed
 Top-level Entity Name : Wallace_speed
 Family : Cyclone IV E
-Total logic elements : 696
-    Total combinational functions : 523
-    Dedicated logic registers : 425
-Total registers : 425
-Total pins : 67
+Total logic elements : 879
+    Total combinational functions : 624
+    Dedicated logic registers : 535
+Total registers : 535
+Total pins : 68
 Total virtual pins : 0
 Total memory bits : 32,840
-Embedded Multiplier 9-bit elements : 0
+Embedded Multiplier 9-bit elements : 8
 Total PLLs : 0

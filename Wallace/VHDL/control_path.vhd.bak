@@ -10,7 +10,7 @@ entity control_path is
 		clk: in std_logic;
 		LFSR_en, WE_1, WE_2 : out std_logic := '0';
 		MUX_4, MUX_5 : out std_logic;
-		MUX_6 : out std_logic := '1';
+		MUX_6 : out std_logic := '1'
 	);
 end control_path;
 
@@ -72,7 +72,7 @@ begin
 	
 	control: process(i_count, start_tmp6)
 	begin
-	if i_count = "11111110" then
+	if i_count = "11111101" then
 		LFSR_en <= '1';
 	else 
 		LFSR_en <= '0';

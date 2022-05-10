@@ -7,8 +7,9 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Wallace_speed -c Wallace_speed --vector_source="C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Waveform.vwf" --testbench_file="C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Wallace_speed -c Wallace_speed --vector_source="C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Waveform3.vwf" --testbench_file="C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/simulation/qsim/Waveform3.vwf.vht"
 
+Warning (292006): Can't contact license server "13333@Altera.srv.aau.dk" -- this server will be ignored.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
@@ -25,12 +26,9 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Thu May 05 14:36:41 2022
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Wallace_speed -c Wallace_speed --vector_source=C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Waveform.vwf --testbench_file=C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/simulation/qsim/Waveform.vwf.vht
+    Info: Processing started: Tue May 10 22:45:11 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Wallace_speed -c Wallace_speed --vector_source=C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Waveform3.vwf --testbench_file=C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/simulation/qsim/Waveform3.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-
-
-    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
@@ -38,6 +36,7 @@ Completed successfully.
 
 quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/simulation/qsim/" Wallace_speed -c Wallace_speed
 
+Warning (292006): Can't contact license server "13333@Altera.srv.aau.dk" -- this server will be ignored.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
@@ -54,14 +53,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Thu May 05 14:37:00 2022
+    Info: Processing started: Tue May 10 22:45:12 2022
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/simulation/qsim/ Wallace_speed -c Wallace_speed
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Wallace_speed.vho in folder "C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/simulation/qsim//" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4641 megabytes
-    Info: Processing ended: Thu May 05 14:37:18 2022
-    Info: Elapsed time: 00:00:18
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4637 megabytes
+    Info: Processing ended: Tue May 10 22:45:13 2022
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -78,19 +77,15 @@ c:/intelfpga_lite/18.1/modelsim_ase/win32aloem//vsim -c -do Wallace_speed.do
 
 Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
-
 # 10.5b
-
 
 # do Wallace_speed.do
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:37:20 on May 05,2022
+# Start time: 22:45:14 on May 10,2022
 # vcom -work work Wallace_speed.vho 
-
 # -- Loading package STANDARD
-
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
@@ -99,64 +94,63 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package cycloneive_components
 # -- Compiling entity hard_block
 # -- Compiling architecture structure of hard_block
-
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
-# -- Compiling entity addr_gen
-# -- Compiling architecture structure of addr_gen
-# End time: 14:37:21 on May 05,2022, Elapsed time: 0:00:01
+# -- Compiling entity chi_corr
+# -- Compiling architecture structure of chi_corr
+# End time: 22:45:14 on May 10,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:37:21 on May 05,2022
-# vcom -work work Waveform.vwf.vht 
+# Start time: 22:45:14 on May 10,2022
+# vcom -work work Waveform3.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity addr_gen_vhd_vec_tst
-# -- Compiling architecture addr_gen_arch of addr_gen_vhd_vec_tst
-# End time: 14:37:21 on May 05,2022, Elapsed time: 0:00:00
+# -- Compiling entity chi_corr_vhd_vec_tst
+# -- Compiling architecture chi_corr_arch of chi_corr_vhd_vec_tst
+# End time: 22:45:14 on May 10,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.addr_gen_vhd_vec_tst 
-# Start time: 14:37:21 on May 05,2022
+# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.chi_corr_vhd_vec_tst 
+# Start time: 22:45:14 on May 10,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.addr_gen_vhd_vec_tst(addr_gen_arch)
+# Loading work.chi_corr_vhd_vec_tst(chi_corr_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading altera.dffeas_pack
 # Loading altera.altera_primitives_components
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
-# Loading work.addr_gen(structure)
+# Loading work.chi_corr(structure)
 # Loading work.hard_block(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
 # Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
 # Loading cycloneive.cycloneive_ena_reg(behave)
-# Loading altera.dffeas(vital_dffeas)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
-# ** Warning: Design size of 12276 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 21767 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
 
-# End time: 14:37:22 on May 05,2022, Elapsed time: 0:00:01
+# End time: 22:45:14 on May 10,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Waveform.vwf...
+Reading C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Waveform3.vwf...
 
 Reading C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/simulation/qsim/Wallace_speed.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/simulation/qsim/Wallace_speed_20220505143722.sim.vwf
+Writing the resulting VWF to C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/simulation/qsim/Wallace_speed_20220510224515.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "valid",
+					"strict" : false
+				},
+				{
 					"name" : "x1[0]",
 					"strict" : false
 				},
@@ -264,11 +268,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "start",
+					"name" : "reset",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "start",
 					"strict" : false
 				}
 			]

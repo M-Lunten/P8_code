@@ -14,6 +14,7 @@ architecture behavior of Wallace_speed_tb is
 		clk: in std_logic;
 		start: in std_logic;
 		reset: in std_logic;
+		valid: out std_logic;
 		x1: out std_logic_vector(15 downto 0);
 		x2: out std_logic_vector(15 downto 0);
 		x3: out std_logic_vector(15 downto 0);
@@ -28,13 +29,14 @@ architecture behavior of Wallace_speed_tb is
 	signal clk : std_logic := '0';
 	signal start : std_logic := '0';
 	signal reset : std_logic := '0';
+	signal valid : std_logic;
 	signal res1 : std_logic_vector(15 downto 0);
 	signal res2 : std_logic_vector(15 downto 0);
 	signal res3 : std_logic_vector(15 downto 0);
 	signal res4 : std_logic_vector(15 downto 0);
 	
 begin
-	WA: Wallace_speed port map(clk, start, reset, res1, res2, res3, res4);	
+	WA: Wallace_speed port map(clk, start, reset, valid, res1, res2, res3, res4);	
 
 	CLK_GEN : process is 
 	begin 

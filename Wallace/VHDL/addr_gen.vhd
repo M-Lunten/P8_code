@@ -22,7 +22,6 @@ architecture behavior of addr_gen is
 begin
 	process(clk)
 	variable o_next : unsigned(8 downto 0);
-	variable s_2times : std_logic_vector(9 downto 0);
 	begin
 	if rising_edge(clk) then
 		s_saved <= stride & '1';
@@ -30,8 +29,7 @@ begin
 		if MUX_ctrl = '1' then
 			o_saved <= origin;
 		else
-			s_2times := s_saved & '0';
-			o_next := unsigned(o_saved) + unsigned(s_saved(8 downto 0));
+			o_next := unsigned(o_saved) + unsigned(s_saved(7 downto 0) & '0');
 			o_saved <= std_logic_vector(o_next(8 downto 0));
 		end if;	
 	end if;
