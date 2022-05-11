@@ -3,75 +3,111 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -6.780
-TNS   : -1725.965
+Slack : -4.784
+TNS   : -1362.389
+
+Type  : Slow 1200mV 85C Model Setup 'chi_corr:chistage|clk_div'
+Slack : -4.010
+TNS   : -163.600
 
 Type  : Slow 1200mV 85C Model Setup 'control_path:cp|start_tmp6'
-Slack : -4.039
-TNS   : -7.182
+Slack : -3.157
+TNS   : -6.182
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.381
+Slack : 0.399
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'chi_corr:chistage|clk_div'
+Slack : 0.590
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'control_path:cp|start_tmp6'
-Slack : 1.345
+Slack : 1.625
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -1067.654
+TNS   : -849.104
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'chi_corr:chistage|clk_div'
+Slack : -1.285
+TNS   : -78.385
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'control_path:cp|start_tmp6'
-Slack : 0.456
+Slack : 0.451
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -6.054
-TNS   : -1514.681
+Slack : -4.355
+TNS   : -1191.134
+
+Type  : Slow 1200mV 0C Model Setup 'chi_corr:chistage|clk_div'
+Slack : -3.476
+TNS   : -146.719
 
 Type  : Slow 1200mV 0C Model Setup 'control_path:cp|start_tmp6'
-Slack : -3.758
-TNS   : -6.675
+Slack : -2.929
+TNS   : -5.756
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.350
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'chi_corr:chistage|clk_div'
+Slack : 0.580
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'control_path:cp|start_tmp6'
-Slack : 1.350
+Slack : 1.603
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -1064.882
+TNS   : -846.332
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'chi_corr:chistage|clk_div'
+Slack : -1.285
+TNS   : -78.385
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'control_path:cp|start_tmp6'
-Slack : 0.459
+Slack : 0.463
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -2.872
-TNS   : -617.077
+Slack : -2.406
+TNS   : -478.735
+
+Type  : Fast 1200mV 0C Model Setup 'chi_corr:chistage|clk_div'
+Slack : -1.453
+TNS   : -66.417
 
 Type  : Fast 1200mV 0C Model Setup 'control_path:cp|start_tmp6'
-Slack : -1.770
-TNS   : -3.015
+Slack : -1.247
+TNS   : -2.436
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.147
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'chi_corr:chistage|clk_div'
+Slack : 0.275
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'control_path:cp|start_tmp6'
-Slack : 0.805
+Slack : 0.973
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -646.530
+TNS   : -552.111
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'chi_corr:chistage|clk_div'
+Slack : -1.000
+TNS   : -61.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'control_path:cp|start_tmp6'
-Slack : 0.411
+Slack : 0.423
 TNS   : 0.000
 
 ------------------------------------------------------------

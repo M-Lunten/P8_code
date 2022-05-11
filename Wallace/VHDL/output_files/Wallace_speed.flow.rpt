@@ -1,5 +1,5 @@
 Flow report for Wallace_speed
-Tue May 10 23:12:56 2022
+Wed May 11 09:41:26 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue May 10 23:12:52 2022       ;
+; Flow Status                        ; Successful - Wed May 11 09:40:59 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Wallace_speed                               ;
 ; Top-level Entity Name              ; Wallace_speed                               ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 707 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 625 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 407 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 407                                         ;
+; Total logic elements               ; 705 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 627 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 438 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 438                                         ;
 ; Total pins                         ; 68 / 529 ( 13 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 32,840 / 3,981,312 ( < 1 % )                ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/10/2022 23:12:12 ;
+; Start date & time ; 05/11/2022 09:39:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Wallace_speed       ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589205.165221713212584         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 10995770589205.165225474606928         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; RAM_1.cmp                              ; --            ; --          ; --         ;
@@ -95,11 +95,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4819 MB             ; 00:00:25                           ;
-; Fitter               ; 00:00:21     ; 1.0                     ; 5697 MB             ; 00:00:33                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4681 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.2                     ; 4845 MB             ; 00:00:03                           ;
-; Total                ; 00:00:42     ; --                      ; --                  ; 00:01:05                           ;
+; Analysis & Synthesis ; 00:00:42     ; 1.0                     ; 4841 MB             ; 00:00:43                           ;
+; Fitter               ; 00:00:56     ; 1.0                     ; 5786 MB             ; 00:00:50                           ;
+; Assembler            ; 00:00:32     ; 1.0                     ; 4692 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:26     ; 1.1                     ; 4851 MB             ; 00:00:05                           ;
+; Total                ; 00:02:36     ; --                      ; --                  ; 00:01:43                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

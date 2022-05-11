@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Wallace_speed
-Tue May 10 23:12:25 2022
+Wed May 11 09:39:28 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -18,32 +18,33 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  10. Analysis & Synthesis IP Cores Summary
  11. User-Specified and Inferred Latches
  12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Registers Packed Into Inferred Megafunctions
- 16. Source assignments for RAM_1:RAM_1_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated
- 17. Source assignments for RAM_2:RAM_1_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated
- 18. Source assignments for RAM_1:RAM_2_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated
- 19. Source assignments for RAM_2:RAM_2_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated
- 20. Source assignments for altshift_taps:addr_D1_rtl_0|shift_taps_f6m:auto_generated|altsyncram_2e81:altsyncram2
- 21. Parameter Settings for User Entity Instance: RAM_1:RAM_1_1|altsyncram:altsyncram_component
- 22. Parameter Settings for User Entity Instance: RAM_2:RAM_1_2|altsyncram:altsyncram_component
- 23. Parameter Settings for User Entity Instance: RAM_1:RAM_2_1|altsyncram:altsyncram_component
- 24. Parameter Settings for User Entity Instance: RAM_2:RAM_2_2|altsyncram:altsyncram_component
- 25. Parameter Settings for Inferred Entity Instance: altshift_taps:addr_D1_rtl_0
- 26. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 27. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
- 28. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult2
- 29. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult3
- 30. Parameter Settings for Inferred Entity Instance: chi_corr:chistage|lpm_mult:Mult0
- 31. altsyncram Parameter Settings by Entity Instance
- 32. altshift_taps Parameter Settings by Entity Instance
- 33. lpm_mult Parameter Settings by Entity Instance
- 34. Port Connectivity Checks: "control_path:cp|LFSR_3:LFSR"
- 35. Port Connectivity Checks: "control_path:cp"
- 36. Post-Synthesis Netlist Statistics for Top Partition
- 37. Elapsed Time Per Partition
- 38. Analysis & Synthesis Messages
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Registers Packed Into Inferred Megafunctions
+ 17. Source assignments for RAM_1:RAM_1_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated
+ 18. Source assignments for RAM_2:RAM_1_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated
+ 19. Source assignments for RAM_1:RAM_2_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated
+ 20. Source assignments for RAM_2:RAM_2_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated
+ 21. Source assignments for altshift_taps:addr_D1_rtl_0|shift_taps_f6m:auto_generated|altsyncram_2e81:altsyncram2
+ 22. Parameter Settings for User Entity Instance: RAM_1:RAM_1_1|altsyncram:altsyncram_component
+ 23. Parameter Settings for User Entity Instance: RAM_2:RAM_1_2|altsyncram:altsyncram_component
+ 24. Parameter Settings for User Entity Instance: RAM_1:RAM_2_1|altsyncram:altsyncram_component
+ 25. Parameter Settings for User Entity Instance: RAM_2:RAM_2_2|altsyncram:altsyncram_component
+ 26. Parameter Settings for Inferred Entity Instance: altshift_taps:addr_D1_rtl_0
+ 27. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 28. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
+ 29. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult2
+ 30. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult3
+ 31. Parameter Settings for Inferred Entity Instance: chi_corr:chistage|lpm_mult:Mult0
+ 32. altsyncram Parameter Settings by Entity Instance
+ 33. altshift_taps Parameter Settings by Entity Instance
+ 34. lpm_mult Parameter Settings by Entity Instance
+ 35. Port Connectivity Checks: "control_path:cp|LFSR_3:LFSR"
+ 36. Port Connectivity Checks: "control_path:cp"
+ 37. Post-Synthesis Netlist Statistics for Top Partition
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
 
 
 
@@ -69,15 +70,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 10 23:12:25 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 11 09:39:28 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Wallace_speed                               ;
 ; Top-level Entity Name              ; Wallace_speed                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 879                                         ;
-;     Total combinational functions  ; 624                                         ;
-;     Dedicated logic registers      ; 535                                         ;
-; Total registers                    ; 535                                         ;
+; Total logic elements               ; 895                                         ;
+;     Total combinational functions  ; 626                                         ;
+;     Dedicated logic registers      ; 551                                         ;
+; Total registers                    ; 551                                         ;
 ; Total pins                         ; 68                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 32,840                                      ;
@@ -256,20 +257,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 879       ;
+; Estimated Total logic elements              ; 895       ;
 ;                                             ;           ;
-; Total combinational functions               ; 624       ;
+; Total combinational functions               ; 626       ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 103       ;
 ;     -- 3 input functions                    ; 373       ;
-;     -- <=2 input functions                  ; 148       ;
+;     -- <=2 input functions                  ; 150       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 432       ;
+;     -- normal mode                          ; 434       ;
 ;     -- arithmetic mode                      ; 192       ;
 ;                                             ;           ;
-; Total registers                             ; 535       ;
-;     -- Dedicated logic registers            ; 535       ;
+; Total registers                             ; 551       ;
+;     -- Dedicated logic registers            ; 551       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 68        ;
@@ -278,9 +279,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 8         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 584       ;
-; Total fan-out                               ; 4669      ;
-; Average fan-out                             ; 3.33      ;
+; Maximum fan-out                             ; 539       ;
+; Total fan-out                               ; 4718      ;
+; Average fan-out                             ; 3.32      ;
 +---------------------------------------------+-----------+
 
 
@@ -289,7 +290,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name     ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |Wallace_speed                                 ; 624 (141)           ; 535 (192)                 ; 32840       ; 8            ; 0       ; 4         ; 68   ; 0            ; |Wallace_speed                                                                                                                     ; Wallace_speed   ; work         ;
+; |Wallace_speed                                 ; 626 (141)           ; 551 (192)                 ; 32840       ; 8            ; 0       ; 4         ; 68   ; 0            ; |Wallace_speed                                                                                                                     ; Wallace_speed   ; work         ;
 ;    |LFSR_52:LFSR|                              ; 38 (38)             ; 52 (52)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|LFSR_52:LFSR                                                                                                        ; LFSR_52         ; work         ;
 ;    |RAM_1:RAM_1_1|                             ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|RAM_1:RAM_1_1                                                                                                       ; RAM_1           ; work         ;
 ;       |altsyncram:altsyncram_component|        ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|RAM_1:RAM_1_1|altsyncram:altsyncram_component                                                                       ; altsyncram      ; work         ;
@@ -309,7 +310,7 @@ refer to the applicable agreement for further details.
 ;       |shift_taps_f6m:auto_generated|          ; 1 (0)               ; 1 (0)                     ; 72          ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|altshift_taps:addr_D1_rtl_0|shift_taps_f6m:auto_generated                                                           ; shift_taps_f6m  ; work         ;
 ;          |altsyncram_2e81:altsyncram2|         ; 0 (0)               ; 0 (0)                     ; 72          ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|altshift_taps:addr_D1_rtl_0|shift_taps_f6m:auto_generated|altsyncram_2e81:altsyncram2                               ; altsyncram_2e81 ; work         ;
 ;          |cntr_4pf:cntr1|                      ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|altshift_taps:addr_D1_rtl_0|shift_taps_f6m:auto_generated|cntr_4pf:cntr1                                            ; cntr_4pf        ; work         ;
-;    |chi_corr:chistage|                         ; 93 (31)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|chi_corr:chistage                                                                                                   ; chi_corr        ; work         ;
+;    |chi_corr:chistage|                         ; 95 (33)             ; 62 (62)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|chi_corr:chistage                                                                                                   ; chi_corr        ; work         ;
 ;       |lpm_mult:Mult0|                         ; 62 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|chi_corr:chistage|lpm_mult:Mult0                                                                                    ; lpm_mult        ; work         ;
 ;          |multcore:mult_core|                  ; 62 (38)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|chi_corr:chistage|lpm_mult:Mult0|multcore:mult_core                                                                 ; multcore        ; work         ;
 ;             |mpar_add:padder|                  ; 24 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Wallace_speed|chi_corr:chistage|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                 ; mpar_add        ; work         ;
@@ -396,9 +397,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; chi_corr:chistage|mult_res[15]        ; Stuck at GND due to stuck port data_in  ;
 ; addr_gen:ADDR_GEN_2|s_saved[0]        ; Stuck at VCC due to stuck port data_in  ;
 ; addr_gen:ADDR_GEN_1|s_saved[0]        ; Stuck at VCC due to stuck port data_in  ;
+; chi_corr:chistage|G[15]               ; Stuck at GND due to stuck port data_in  ;
 ; transformation:tstage|t[14]           ; Merged with transformation:tstage|t[15] ;
-; Total Number of Removed Registers = 4 ;                                         ;
+; Total Number of Removed Registers = 5 ;                                         ;
 +---------------------------------------+-----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                         ;
++--------------------------------+---------------------------+----------------------------------------+
+; Register name                  ; Reason for Removal        ; Registers Removed due to This Register ;
++--------------------------------+---------------------------+----------------------------------------+
+; chi_corr:chistage|mult_res[15] ; Stuck at GND              ; chi_corr:chistage|G[15]                ;
+;                                ; due to stuck port data_in ;                                        ;
++--------------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -406,12 +418,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 535   ;
+; Total registers                              ; 551   ;
 ; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 23    ;
+; Number of registers using Clock Enable       ; 38    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -421,6 +433,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------------+---------+
 ; Inverted Register                             ; Fan out ;
 +-----------------------------------------------+---------+
+; chi_corr:chistage|G[14]                       ; 4       ;
 ; control_path:cp|LFSR_3:LFSR|shift_register[1] ; 2       ;
 ; addr_gen:ADDR_GEN_1|m_saved[0]                ; 5       ;
 ; addr_gen:ADDR_GEN_1|o_saved[0]                ; 6       ;
@@ -462,7 +475,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; LFSR_52:LFSR|shift_register[44]               ; 3       ;
 ; LFSR_52:LFSR|shift_register[46]               ; 3       ;
 ; LFSR_52:LFSR|shift_register[49]               ; 2       ;
-; Total number of inverted registers = 41       ;         ;
+; Total number of inverted registers = 42       ;         ;
 +-----------------------------------------------+---------+
 
 
@@ -1111,16 +1124,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 68                          ;
-; cycloneiii_ff         ; 535                         ;
-;     ENA               ; 23                          ;
+; cycloneiii_ff         ; 551                         ;
+;     ENA               ; 38                          ;
 ;     SCLR              ; 8                           ;
-;     plain             ; 504                         ;
-; cycloneiii_lcell_comb ; 625                         ;
+;     plain             ; 505                         ;
+; cycloneiii_lcell_comb ; 627                         ;
 ;     arith             ; 192                         ;
 ;         2 data inputs ; 35                          ;
 ;         3 data inputs ; 157                         ;
-;     normal            ; 433                         ;
-;         1 data inputs ; 36                          ;
+;     normal            ; 435                         ;
+;         1 data inputs ; 38                          ;
 ;         2 data inputs ; 78                          ;
 ;         3 data inputs ; 216                         ;
 ;         4 data inputs ; 103                         ;
@@ -1129,7 +1142,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ram_block  ; 100                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.90                        ;
-; Average LUT depth     ; 1.66                        ;
+; Average LUT depth     ; 1.65                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1138,7 +1151,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1148,7 +1161,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 10 23:12:11 2022
+    Info: Processing started: Wed May 11 09:38:45 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Wallace_speed -c Wallace_speed
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1321,7 +1334,7 @@ Info (278001): Inferred 5 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 216
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult2" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 217
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult3" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 218
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "chi_corr:chistage|Mult0" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/chi_corr.vhd Line: 33
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "chi_corr:chistage|Mult0" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/chi_corr.vhd Line: 42
 Info (12130): Elaborated megafunction instantiation "altshift_taps:addr_D1_rtl_0"
 Info (12133): Instantiated megafunction "altshift_taps:addr_D1_rtl_0" with the following parameter:
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
@@ -1346,8 +1359,8 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following para
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_36t.tdf
     Info (12023): Found entity 1: mult_36t File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/db/mult_36t.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/chi_corr.vhd Line: 33
-Info (12133): Instantiated megafunction "chi_corr:chistage|lpm_mult:Mult0" with the following parameter: File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/chi_corr.vhd Line: 33
+Info (12130): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/chi_corr.vhd Line: 42
+Info (12133): Instantiated megafunction "chi_corr:chistage|lpm_mult:Mult0" with the following parameter: File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/chi_corr.vhd Line: 42
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "11"
     Info (12134): Parameter "LPM_WIDTHP" = "27"
@@ -1370,16 +1383,16 @@ Info (12131): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1119 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1135 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 65 output pins
-    Info (21061): Implemented 943 logic cells
+    Info (21061): Implemented 959 logic cells
     Info (21064): Implemented 100 RAM segments
     Info (21062): Implemented 8 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Tue May 10 23:12:25 2022
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:26
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4841 megabytes
+    Info: Processing ended: Wed May 11 09:39:28 2022
+    Info: Elapsed time: 00:00:43
+    Info: Total CPU time (on all processors): 00:00:44
 
 
