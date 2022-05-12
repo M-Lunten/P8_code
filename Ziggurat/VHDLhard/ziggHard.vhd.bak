@@ -1,0 +1,12 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ziggHard is
+port(
+	clk,start: in std_logic;
+	ziggout : out std_logic_vector(15 downto 0);
+	
+end ziggout;
+
+
+	

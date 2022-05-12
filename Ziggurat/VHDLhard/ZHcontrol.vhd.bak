@@ -1,0 +1,66 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity ZHcontrol is 
+	port(
+	iclock : in std_logic;
+	start,reset : in std_logic;
+	D1ctrl : in std_logic;
+	D2ctrl : in std_logic;
+	D3ctrl : in std_logic;
+	D4ctrl : in std_logic;
+	D5ctrl : in std_logic;
+	
+	mux1_3 : out std_logic_vector(1 downto 0);
+	mux4_6 : out std_logic_vector(1 downto 0);
+	mux7_9 : out std_logic_vector(1 downto 0);
+	mux10_12 : out std_logic_vector(1 downto 0);
+	mux13_15 : out std_logic_vector(1 downto 0);
+	mux16_17 : out std_logic_vector(1 downto 0);
+	mux18_19 : out std_logic_vector(1 downto 0);
+	mux20_21 : out std_logic_vector(1 downto 0);
+	mux22_23 : out std_logic_vector(1 downto 0)
+	);
+end ZHcontrol;
+
+architecture behavioural of ZHcontrol is 
+	
+	signal State : std_logic_vector(3 downto 0);
+	
+	component qCounter is
+	port(
+		iclock : in std_logic;
+		start : in std_logic;
+		reset : in std_logic;
+		D1qc : in std_logic;
+		D2qc : in std_logic;
+		D3qc : in std_logic;
+		D4qc : in std_logic;
+		D5qc : in std_logic;
+		S : out std_logic_vector(3 downto 0)
+	);
+end component;
+
+begin 
+	Q: qCounter port map(iclock,start,reset,D1ctrl,D2ctrl,D3ctrl,D4ctrl,D5ctrl,State);
+	
+	process(iclock)
+	begin 
+		if falling_edge(iclock) then 
+			case State is 
+				when "0000" =>
+				when "0001" =>
+					mux16_17 <= "01"; --xi assign
+					mux18_19 <= "01";-- u1
+					mux20_21 <= "01";-- i
+					mux7_9 <= "01"; -- xi+1 calc and assign
+				when "0010" =>
+					mux16_17 <= "01"; --xi 
+					mux18_19 <= "01";-- u1
+					mux20_21 <= "01";-- i
+					mux22_23 <= "01"; --U1A
+					mux
+end architecture
+	
+	

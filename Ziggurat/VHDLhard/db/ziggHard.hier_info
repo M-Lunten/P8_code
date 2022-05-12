@@ -1,0 +1,21 @@
+|ziggHard
+clk => ~NO_FANOUT~
+start => ~NO_FANOUT~
+ziggout[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+ziggout[1] <= ziggout[1].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[2] <= ziggout[2].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[3] <= ziggout[3].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[4] <= ziggout[4].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[5] <= ziggout[5].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[6] <= ziggout[6].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[7] <= ziggout[7].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[8] <= ziggout[8].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[9] <= ziggout[9].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[10] <= ziggout[10].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[11] <= ziggout[11].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[12] <= ziggout[12].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[13] <= ziggout[13].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[14] <= ziggout[14].DB_MAX_OUTPUT_PORT_TYPE
+ziggout[15] <= ziggout[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
