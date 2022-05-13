@@ -18,6 +18,7 @@ x = (-6:.01:6);
 y = normpdf(x,0,1);
 
 %%
+figure(1)
 semilogy(x, y);
 hold on
 plot(xi, fi);
@@ -29,7 +30,7 @@ xlabel('x')
 ylabel('Probability')
 title('Log scale PDF for a VHDL simulation of Wallace')
 
-figure()
+figure(2)
 plot(x, y);
 hold on
 plot(xi, fi);
@@ -41,7 +42,7 @@ title('Linear scale PDF for a VHDL simulation of Wallace')
 xlabel('x')
 ylabel('Probability')
 
-%% 
+
 array = zeros(floor(length(data1)/1024), 1);
 for i=1:floor(length(data1)/1024)
     elements = data1(1+(1024*(i-1)):1024+(1024*(i-1)), 1);
@@ -54,7 +55,7 @@ K = 4;
 x_chi = L*K*0.5:0.2:L*K*1.5;
 y_chi = chi2pdf(x_chi,L*K);
 
-figure(2)
+figure(3)
 plot(x_chi, y_chi)
 hold on
 plot(corr_x, corr_f)
@@ -63,3 +64,4 @@ grid on
 legend('\chi^2 distribution', 'sum of squares');
 xlabel('x')
 ylabel('Probability')
+title('Sum of squares for VHDL simulation')

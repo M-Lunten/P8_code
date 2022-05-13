@@ -50,7 +50,7 @@ for p = 1:num_ite
     % Sum of squares correction
     corr_pool = sfi(oldPool*G(p), 16, 11);
     soq(p) = sum(sum(corr_pool.^2));
-    G(p+1) = chi2corr_2(corr_pool(end), L*K);
+    G(p+1) = chi2corr_3(corr_pool(end), L*K);
     outPool(((p-1)*(L*K-1))+1:((p-1)*(L*K-1))+(L*K-1), 1) = corr_pool(1:end-1);
 end
 end
@@ -77,4 +77,15 @@ coeff_tmp = ufi(coeff_tmp^2, 16, 4);
 coeff_tmp = ufi(coeff_tmp/2, 16, 5);
 coeff_tmp = ufi((coeff_tmp/N), 16, 15);
 coeff = ufi(sqrt(coeff_tmp), 16, 15);
+end
+
+function [coeff] = chi2corr_3(sample, num_of_samples)
+x = sample;
+N = num_of_samples;
+c_1 = ufi(45.243784103454470, 16, 10);
+c_2 = ufi(sqrt(1/2048), 16, 16);
+coeff = x+c_1;
+coeff = ufi(coeff, 16, 10);
+coeff = coeff*c_2;
+coeff = sfi(coeff, 16, 14);
 end

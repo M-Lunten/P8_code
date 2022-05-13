@@ -8,6 +8,7 @@ entity control_path is
 		start: in std_logic;
 		reset: in std_logic;
 		clk: in std_logic;
+		i: out std_logic_vector(7 downto 0);
 		LFSR_en, WE_1, WE_2 : out std_logic := '0';
 		MUX_4, MUX_5 : out std_logic;
 		MUX_6 : out std_logic := '1'
@@ -35,7 +36,8 @@ begin
 
 	MUX_4 <= LFSR_out(0);
 	MUX_5 <= not LFSR_out(0);
-
+	i <= std_logic_vector(i_count);
+	
 	i_counter: process(clk)
 	begin
 	if falling_edge(clk) then
@@ -77,7 +79,7 @@ begin
 	else 
 		LFSR_en <= '0';
 	end if;
-	if i_count = "11111111" then
+	if i_count = "11111110" then
 		MUX_6 <= '1';
 	else
 		MUX_6 <= '0';

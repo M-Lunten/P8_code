@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Wallace_speed
-Wed May 11 09:39:28 2022
+Fri May 13 19:59:23 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -70,7 +70,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 11 09:39:28 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 13 19:59:23 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Wallace_speed                               ;
 ; Top-level Entity Name              ; Wallace_speed                               ;
@@ -1151,7 +1151,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -1161,7 +1161,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 11 09:38:45 2022
+    Info: Processing started: Fri May 13 19:58:47 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Wallace_speed -c Wallace_speed
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1322,7 +1322,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_uat3" for hierarchy "RAM_2:RAM_1_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "addr_gen" for hierarchy "addr_gen:ADDR_GEN_1" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 141
 Info (12128): Elaborating entity "transformation" for hierarchy "transformation:tstage" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 144
-Warning (10492): VHDL Process Statement warning at transformation.vhd(60): signal "Tctrl" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/transformation.vhd Line: 60
+Warning (10492): VHDL Process Statement warning at transformation.vhd(61): signal "Tctrl" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/transformation.vhd Line: 61
 Info (12128): Elaborating entity "chi_corr" for hierarchy "chi_corr:chistage" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL/Wallace_speed.vhd Line: 146
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "addr_D1_rtl_0"
@@ -1389,10 +1389,10 @@ Info (21057): Implemented 1135 device resources after synthesis - the final reso
     Info (21061): Implemented 959 logic cells
     Info (21064): Implemented 100 RAM segments
     Info (21062): Implemented 8 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4841 megabytes
-    Info: Processing ended: Wed May 11 09:39:28 2022
-    Info: Elapsed time: 00:00:43
-    Info: Total CPU time (on all processors): 00:00:44
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Fri May 13 19:59:23 2022
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:01:01
 
 

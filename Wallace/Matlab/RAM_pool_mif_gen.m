@@ -1,15 +1,30 @@
 % Memory initialization file (MIF) for wallace init pool
 % coefficients
 clear all
+rng(50)
 n_pool = 2;
 pool_size = 512;
 WordLength = 16;
+
+dataPool = randn(1024, 1);
+dataPool = pool_normalization(dataPool);
+
+[fi, xi] = ksdensity(dataPool);    
+x = [-6:.01:6];
+y = normpdf(x,0,1);
+plot(x, y);
+hold on
+plot(xi, fi);
+hold off
+legend('Ideal Gaussian', 'VHDL simulation');
+grid on
+xlim([-5 5])
 
 % Setting for the MIF
 file_name = 'pool_1.mif';
 bit_width = 16;
 fraction_length = 11;
-data = randn(512, 1);
+data = dataPool(1:512, 1);
 depth = length(data);
 address_type = 'DEC';
 data_type = 'BIN';
@@ -38,7 +53,7 @@ fclose(file);
 file_name = 'pool_2.mif';
 bit_width = 16;
 fraction_length = 11;
-data = randn(512, 1);
+data = dataPool(513:1024, 1);
 depth = length(data);
 address_type = 'DEC';
 data_type = 'BIN';

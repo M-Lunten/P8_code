@@ -23,6 +23,7 @@ architecture behavior of transformation is
 	signal x_D2_A, x_D2_B, x_D2_C, x_D2_D : std_logic_vector(15 downto 0);
 	signal p1, p2, t : std_logic_vector(15 downto 0);
 	signal t_A_1, t_A_2, t_B_1, t_B_2, t_C_1, t_C_2, t_D_1, t_D_2 : std_logic_vector(15 downto 0);
+	signal t_A_1_D, t_A_2_D, t_B_1_D, t_B_2_D, t_C_1_D, t_C_2_D, t_D_1_D, t_D_2_D : std_logic_vector(15 downto 0);
 begin
 
 	data_d: process(clk)
@@ -55,7 +56,7 @@ begin
 	end if;
 	end process;
 	
-	res_calc : process(t, x_D2_A, x_D2_B, x_D2_C, x_D2_D)
+	trans_slct : process(t, x_D2_A, x_D2_B, x_D2_C, x_D2_D)
 	begin
 	if Tctrl = '0' then
 		t_A_1 <= x_D2_A;
@@ -77,8 +78,28 @@ begin
 		t_D_2 <= t;
 	end if;
 	end process;
+	
+	--trans_delay : process(clk)
+	--begin
+	--if rising_edge(clk) then
+	--	t_A_1_D <= t_A_1;
+	--	t_A_2_D <= t_A_2;
+	--	t_B_1_D <= t_B_1;
+	--	t_B_2_D <= t_B_2;
+	--	t_C_1_D <= t_C_1;
+	--	t_C_2_D <= t_C_2;
+	--	t_D_1_D <= t_D_1;
+	--	t_D_2_D <= t_D_2;
+	--end if;
+	--end process;
+	
+	--x1_res <= std_logic_vector(signed(t_A_1_D) - signed(t_A_2_D));
+	--x2_res <= std_logic_vector(signed(t_B_1_D) - signed(t_B_2_D));
+	--x3_res <= std_logic_vector(signed(t_C_1_D) - signed(t_C_2_D));
+	--x4_res <= std_logic_vector(signed(t_D_1_D) - signed(t_D_2_D));
+	
 	x1_res <= std_logic_vector(signed(t_A_1) - signed(t_A_2));
 	x2_res <= std_logic_vector(signed(t_B_1) - signed(t_B_2));
 	x3_res <= std_logic_vector(signed(t_C_1) - signed(t_C_2));
-	x4_res <= std_logic_vector(signed(t_D_1) - signed(t_D_2));
+	x4_res <= std_logic_vector(signed(t_D_1) - signed(t_D_2));	
 end behavior;

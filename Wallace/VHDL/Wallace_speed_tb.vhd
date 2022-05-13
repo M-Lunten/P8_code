@@ -52,16 +52,27 @@ begin
 		wait for 6*clock_period;
 		
 		for i in 0 to 100000 loop
-			write(out_line, res1, right, 16);
-			write(out_line, ',', right, 1);
-			write(out_line, res2, right, 16);
-			write(out_line, ',', right, 1);
-			write(out_line, res3, right, 16);
-			write(out_line, ',', right, 1);
-			write(out_line, res4, right, 16);
-			write(out_line, ',', right, 1);
-			writeline(file_RESULTS, out_line);
-			wait for clock_period;			
+			if valid = '1' then
+				write(out_line, res1, right, 16);
+				write(out_line, ',', right, 1);
+				write(out_line, res2, right, 16);
+				write(out_line, ',', right, 1);
+				write(out_line, res3, right, 16);
+				write(out_line, ',', right, 1);
+				write(out_line, res4, right, 16);
+				write(out_line, ',', right, 1);
+				writeline(file_RESULTS, out_line);
+				wait for clock_period;	
+			else
+				write(out_line, res2, right, 16);
+				write(out_line, ',', right, 1);
+				write(out_line, res3, right, 16);
+				write(out_line, ',', right, 1);
+				write(out_line, res4, right, 16);
+				write(out_line, ',', right, 1);
+				writeline(file_RESULTS, out_line);
+				wait for clock_period;	
+			end if;		
 		end loop;
 		file_close(file_RESULTS);
 		report "Finished";
