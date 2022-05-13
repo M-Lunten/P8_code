@@ -16,9 +16,9 @@ begin
 
 	variable outTemp : std_logic_vector(15 downto 0);
 	begin
-		if sel = "01" then
+		if ctrl = "01" then
 			outTemp := Ain;
-		elsif sel = "10" then
+		elsif ctrl = "10" then
 			outTemp := YmmYin;
 		end if;
 		output <= outTemp;

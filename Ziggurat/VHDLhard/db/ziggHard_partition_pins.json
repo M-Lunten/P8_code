@@ -2,7 +2,84 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "ziggoutH[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ziggoutH[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

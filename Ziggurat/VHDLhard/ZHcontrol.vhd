@@ -22,9 +22,9 @@ entity ZHcontrol is
 	mux18_19 : out std_logic_vector(1 downto 0);
 	mux20_21 : out std_logic_vector(1 downto 0);
 	mux22_23 : out std_logic_vector(1 downto 0);
-	mux24 : out std_logic;
+	mux_24 : out std_logic;
 	
-	V1en,V2en,V3en,V4en,U0en,Xuen,Xiplusen : out std_logic
+	V1en,V2en,V3en,V4en,U0en,Xuen,Xiplusen,D1en,D2en,D3en,D4en,D5en : out std_logic
 	);
 end ZHcontrol;
 
@@ -97,7 +97,7 @@ begin
 					mux22_23 <= "01"; --U1A maintained
 					mux18_19 <= "01";-- u1 maintained
 					
-					mux24 <= NC;
+					mux_24 <= NC;
 					
 				when "0101" =>--5
 					mux18_19 <= "01";-- u1 maintained
@@ -111,7 +111,7 @@ begin
 					mux16_17 <= "10"; --write to out
 					mux18_19 <= "01";-- u1 maintained
 					
-					mux24 <= NC;
+					mux_24 <= NC;
 					
 				when "0111" =>--7
 					V3en <= '1'; --write to V3
@@ -155,7 +155,8 @@ begin
 					V1en <= '1'; --write to V1	
 					mux16_17 <= "10"; --write to out
 					
-					mux24 <= NC;
+					mux_24 <= NC;
+				when others => 
 					
 			end case;
 		end if;

@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu May 12 16:30:10 2022
+Analysis & Synthesis Status : Successful - Fri May 13 17:10:28 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ziggHard
 Top-level Entity Name : ziggHard
 Family : Cyclone IV E
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 18
+Total logic elements : 651
+    Total combinational functions : 614
+    Dedicated logic registers : 133
+Total registers : 133
+Total pins : 19
 Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
+Total memory bits : 4,096
+Embedded Multiplier 9-bit elements : 2
 Total PLLs : 0

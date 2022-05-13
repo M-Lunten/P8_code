@@ -1,0 +1,27 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Mux24 is
+port(
+	outin: in std_logic_vector(15 downto 0);
+	output: out std_logic_vector(15 downto 0);
+	ctrl: in std_logic
+	);
+end Mux24;
+
+architecture bhv of Mux24 is
+begin
+	process(ctrl,outin)
+
+	variable outTemp : std_logic_vector(15 downto 0);
+	begin
+		if ctrl = '1' then
+			outTemp := not(outin) + 1;
+		elsif ctrl = '0' then
+			outTemp := outin;
+		
+		end if;
+		output <= outTemp;
+	end process;
+end bhv;
