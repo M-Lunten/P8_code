@@ -2,15 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity Mux7 is
+entity mux7 is
 port(
 	iin,ys1in,fxs1in: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
 	ctrl: in std_logic_vector(1 downto 0)
 	);
-end Mux7;
+end mux7;
 
-architecture bhv of Mux7 is
+architecture bhv of mux7 is
 signal inter : signed(15 downto 0);
 begin
 

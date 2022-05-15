@@ -14,7 +14,7 @@ end V4;
 
 architecture behavioural of V4 is 
 
-component Mux22 is
+component mux22 is
 port(
 	U1Ain,xusqin: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
@@ -22,7 +22,7 @@ port(
 	);
 end component;
 
-component Mux23 is
+component mux23 is
 port(
 	U1Aout,xusqout: out std_logic_vector(15 downto 0);
 	regin: in std_logic_vector(15 downto 0);
@@ -39,7 +39,7 @@ signal regout : std_logic_vector(15 downto 0);
 
 
 begin
-	c1: Mux22 port map(U1AinV,xusqinV,muxout,muxctrl);
+	c1: mux22 port map(U1AinV,xusqinV,muxout,muxctrl);
 	c2: mux23 port map(U1AoutV,xusqoutV,regout,muxctrl);
 	
 	

@@ -13,7 +13,7 @@ end comp1;
 
 architecture behavioural of comp1 is 
 
-component Mux10 is
+component mux10 is
 port(
 	iin,U1Ain: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
@@ -21,7 +21,7 @@ port(
 	);
 end component;
 
-component Mux11 is
+component mux11 is
 port(
 	zeroin,A0in: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
@@ -29,7 +29,7 @@ port(
 	);
 end component;
 
-component Mux12 is
+component mux12 is
 port(
 	comp1in: in std_logic;
 	D3out,D4out: out std_logic;

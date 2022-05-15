@@ -21,7 +21,7 @@ port(
 	);
 end component;
 
-component Mux2 is
+component mux2 is
 port(
 	U1in: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
@@ -29,7 +29,7 @@ port(
 	);
 end component;
 
-component Mux3 is
+component mux3 is
 port(
 	mult1in: in std_logic_vector(15 downto 0);
 	U1Aout,YS1out: out std_logic_vector(15 downto 0);
@@ -39,7 +39,7 @@ end component;
 
 signal mux1out : std_logic_vector(15 downto 0);
 signal mux2out : std_logic_vector(15 downto 0);
-
+signal multoutS1 : signed(31 downto 0);
 signal multout : std_logic_vector(15 downto 0);
 
 begin
@@ -47,16 +47,14 @@ begin
 	c2: mux2 port map(U1in,mux2out,muxctrl);
 	c3: mux3 port map(multout,U1Aout,YS1out,muxctrl);
 	
-	process(iclock)
-	variable multoutS1 : signed(31 downto 0);
-	begin
-		if rising_edge(iclock) then 
-		multoutS1 := signed(mux1out) * signed(mux2out);
+	
+	
+	
+		multoutS1 <= signed(mux1out) * signed(mux2out);
 		
 		multout <= std_logic_vector(multoutS1(31 downto 16));
 		
-		end if;
-	end process;
+		
 
 
 end architecture;

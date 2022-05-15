@@ -14,7 +14,7 @@ end V1;
 
 architecture behavioural of V1 is 
 
-component Mux16 is
+component mux16 is
 port(
 	xiin,outin,yin: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
@@ -22,7 +22,7 @@ port(
 	);
 end component;
 
-component Mux17 is
+component mux17 is
 port(
 	xiout,outout,yout: out std_logic_vector(15 downto 0);
 	regin: in std_logic_vector(15 downto 0);
@@ -36,7 +36,7 @@ signal muxout : std_logic_vector(15 downto 0);
 signal regout : std_logic_vector(15 downto 0);
 
 begin
-	c1: Mux16 port map(xiinV,outinV,yinV,muxout,muxctrl);
+	c1: mux16 port map(xiinV,outinV,yinV,muxout,muxctrl);
 	c2: mux17 port map(xioutV,outoutV,youtV,regout,muxctrl);
 	
 	

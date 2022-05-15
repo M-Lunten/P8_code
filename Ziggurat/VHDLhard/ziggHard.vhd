@@ -4,7 +4,8 @@ use ieee.std_logic_1164.all;
 entity ziggHard is
 port(
 	clk,start,reset: in std_logic;
-	ziggoutH : out std_logic_vector(15 downto 0)
+	ziggoutH : out std_logic_vector(15 downto 0);
+	isVal : out std_logic
 	);
 end ziggHard;
 
@@ -53,7 +54,9 @@ component ZHcontrol is
 	mux20_21 : out std_logic_vector(1 downto 0);
 	mux22_23 : out std_logic_vector(1 downto 0);
 	mux_24 : out std_logic;
+	isVal : out std_logic;
 	
+
 	V1en,V2en,V3en,V4en,U0en,Xuen,Xiplusen,D1en,D2en,D3en,D4en,D5en : out std_logic
 	);
 end component;
@@ -61,13 +64,13 @@ end component;
 signal zigghardOut : std_logic_vector(15 downto 0);
 
 signal mux1_3,mux4_6,mux7_9,mux10_12,mux13_15,mux16_17,mux18_19,mux20_21,mux22_23 : std_logic_vector(1 downto 0);
-signal mux_24 : std_logic;
+signal mux_24,valSig : std_logic;
 signal V1en,V2en,V3en,V4en,U0en,Xuen,Xiplusen,D1en,D2en,D3en,D4en,D5en,NC,D1_C,D2_C,D3_C,D4_C,D5_C : std_logic;
 
 begin
 
 c1 : ZHdata port map(clk,mux1_3,mux4_6,mux7_9,mux10_12,mux13_15,mux16_17,mux18_19,mux20_21,mux22_23,mux_24,V1en,V2en,V3en,V4en,U0en,Xuen,Xiplusen,D1en,D2en,D3en,D4en,D5en,zigghardOut,D1_C,D2_C,D3_C,D4_C,D5_C,NC);
-c2 : ZHcontrol port map(clk,start,reset,D1_C,D2_C,D3_C,D4_C,D5_C,NC,mux1_3,mux4_6,mux7_9,mux10_12,mux13_15,mux16_17,mux18_19,mux20_21,mux22_23,mux_24,V1en,V2en,V3en,V4en,U0en,Xuen,Xiplusen,D1en,D2en,D3en,D4en,D5en);
+c2 : ZHcontrol port map(clk,start,reset,D1_C,D2_C,D3_C,D4_C,D5_C,NC,mux1_3,mux4_6,mux7_9,mux10_12,mux13_15,mux16_17,mux18_19,mux20_21,mux22_23,mux_24,valSig,V1en,V2en,V3en,V4en,U0en,Xuen,Xiplusen,D1en,D2en,D3en,D4en,D5en);
 
 mux1_3 <= mux1_3;
 mux4_6 <= mux4_6;
@@ -102,6 +105,7 @@ D4_C <= D4_C;
 D5_C <= D5_C;
 
 ziggoutH <= zigghardOut;
+isVal <= valSig;
 
 
 

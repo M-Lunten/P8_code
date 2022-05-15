@@ -2,15 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity Mux14 is
+entity mux14 is
 port(
 	twofivefivein,xiplusin,fxin: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
 	ctrl: in std_logic_vector(1 downto 0)
 	);
-end Mux14;
+end mux14;
 
-architecture bhv of Mux14 is
+architecture bhv of mux14 is
 begin
 	process(ctrl,twofivefivein,xiplusin,fxin)
 

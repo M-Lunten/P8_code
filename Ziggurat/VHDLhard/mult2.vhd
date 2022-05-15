@@ -13,7 +13,7 @@ end mult2;
 
 architecture behavioural of mult2 is 
 
-component Mux4 is
+component mux4 is
 port(
 	Xiin,xusqin,Xuin: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
@@ -21,7 +21,7 @@ port(
 	);
 end component;
 
-component Mux5 is
+component mux5 is
 port(
 	U0in,GRADin,Xuin: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
@@ -29,7 +29,7 @@ port(
 	);
 end component;
 
-component Mux6 is
+component mux6 is
 port(
 	mult2in: in std_logic_vector(15 downto 0);
 	xuout,fxs1out,xusqout: out std_logic_vector(15 downto 0);
@@ -39,7 +39,7 @@ end component;
 
 signal mux1out : std_logic_vector(15 downto 0);
 signal mux2out : std_logic_vector(15 downto 0);
-
+signal multoutS1 : signed(31 downto 0);
 signal multout : std_logic_vector(15 downto 0);
 
 begin
@@ -47,16 +47,12 @@ begin
 	c2: mux5 port map(U0in,GRADin,Xuin,mux2out,muxctrl);
 	c3: mux6 port map(multout,xuout,fxs1out,xusqout,muxctrl);
 	
-	process(iclock)
-	variable multoutS1 : signed(31 downto 0);
-	begin
-		if rising_edge(iclock) then 
-		multoutS1 := signed(mux1out) * signed(mux2out);
+	
+	
+		multoutS1 <= signed(mux1out) * signed(mux2out);
 		
 		multout <= std_logic_vector(multoutS1(31 downto 16));
 		
-		end if;
-	end process;
 
 
 end architecture;

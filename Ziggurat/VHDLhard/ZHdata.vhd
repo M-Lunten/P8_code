@@ -156,27 +156,27 @@ signal regout : std_logic_vector(15 downto 0);
 
 signal xiplus : std_logic_vector(15 downto 0);
 
-signal A : std_logic_vector(15 downto 0);
+signal A : std_logic_vector(15 downto 0):= "0000000010000001";
 
-signal YmmYmminus1 : std_logic_vector(15 downto 0);
+signal YmmYmminus1 : std_logic_vector(15 downto 0):= "0000001001010100";
 
 signal xu : std_logic_vector(15 downto 0);
 
 signal U0 : std_logic_vector(15 downto 0);
 
-signal GRAD : std_logic_vector(15 downto 0);
+signal GRAD : std_logic_vector(15 downto 0):= "1110011001110111";
 
-signal one : std_logic_vector(15 downto 0);
+signal one : std_logic_vector(15 downto 0):= "0000000000000001";
 
-signal ymax : std_logic_vector(15 downto 0);
+signal ymax : std_logic_vector(15 downto 0):= "0110011000011110";
 
-signal yint : std_logic_vector(15 downto 0);
+signal yint : std_logic_vector(15 downto 0):= "0110011000011110";
 
 signal zero : std_logic_vector(15 downto 0);
 
-signal A0 : std_logic_vector(15 downto 0);
+signal A0 : std_logic_vector(15 downto 0):= "0000000001111000";
 
-signal twofivefive : std_logic_vector(15 downto 0);
+signal twofivefive : std_logic_vector(15 downto 0):= "0000000011111111";
 
 signal iinV,iplus : std_logic_vector(15 downto 0);
 

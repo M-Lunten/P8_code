@@ -19,12 +19,13 @@ entity ZHcontrol is
 	mux10_12 : out std_logic_vector(1 downto 0);
 	mux13_15 : out std_logic_vector(1 downto 0);
 	mux16_17 : out std_logic_vector(1 downto 0);
-	mux18_19 : out std_logic_vector(1 downto 0);
-	mux20_21 : out std_logic_vector(1 downto 0);
+	mux18_19 : out std_logic_vector(1 downto 0) := "00";
+	mux20_21 : out std_logic_vector(1 downto 0) := "00";
 	mux22_23 : out std_logic_vector(1 downto 0);
 	mux_24 : out std_logic;
+	isVal : out std_logic;
 	
-	V1en,V2en,V3en,V4en,U0en,Xuen,Xiplusen,D1en,D2en,D3en,D4en,D5en : out std_logic
+	V1en,V2en,V3en,V4en,U0en,Xuen,Xiplusen,D1en,D2en,D3en,D4en,D5en : out std_logic := '0'
 	);
 end ZHcontrol;
 
@@ -32,6 +33,7 @@ architecture behavioural of ZHcontrol is
 	
 	signal State : std_logic_vector(3 downto 0);
 	signal NC : std_logic;
+	
 	
 	component qCounter is
 	port(
@@ -50,28 +52,28 @@ end component;
 begin 
 	Q: qCounter port map(iclock,start,reset,D1ctrl,D2ctrl,D3ctrl,D4ctrl,D5ctrl,State);
 	
+	
+	
+	
+	
 	process(iclock)
 	begin 
 		if falling_edge(iclock) then 
 			case State is 
-				when "0000" =>
+				
 				when "0001" => --1
-					V1en <= '1'; --write to V1
-					V2en <= '1'; --write to V2
-					V3en <= '1'; --write to V3
-					U0en <= '1'; --write to U0
-					Xiplusen <= '1'; --write to Xiplus
+					
 					
 					mux16_17 <= "01"; --xi assign
 					mux18_19 <= "01";-- u1 assign
 					mux20_21 <= "01";-- i assign
 					mux7_9 <= "01"; -- xi+1 calc and assign
-					
+					isVal <= '0';
 					NC <= NCTRL;
 				
 				when "0010" => --2
-					V4en <= '1'; --write to V4
-					Xuen <= '1'; --write to Xu
+					
+					
 				
 					mux16_17 <= "01"; --xi used
 					mux18_19 <= "01";-- u1 used
@@ -82,6 +84,7 @@ begin
 					mux4_6 <= "01"; -- calculating xu
 					mux10_12 <= "01"; -- calculating D3
 					mux13_15 <= "01"; -- calculating D1
+					isVal <= '0';
 					
 				when "0011" =>--3
 					mux18_19 <= "01";-- u1 used
@@ -89,10 +92,11 @@ begin
 					
 					mux13_15 <= "10"; -- calculating D2
 					mux18_19 <= "01";-- u1 used
+					isVal <= '0';
 					
 				when "0100" =>--4
-					V1en <= '1'; --write to V1
 					
+					isVal <= '1';
 					mux16_17 <= "10"; --write to out
 					mux22_23 <= "01"; --U1A maintained
 					mux18_19 <= "01";-- u1 maintained
@@ -102,21 +106,20 @@ begin
 				when "0101" =>--5
 					mux18_19 <= "01";-- u1 maintained
 					mux22_23 <= "01"; --U1A used
-					
+					isVal <= '0';
 					mux10_12 <= "10"; -- calculating D4
 					
 				when "0110" =>--6
-					V1en <= '1'; --write to V1
 					
+					isVal <= '1';
 					mux16_17 <= "10"; --write to out
 					mux18_19 <= "01";-- u1 maintained
 					
 					mux_24 <= NC;
 					
 				when "0111" =>--7
-					V3en <= '1'; --write to V3
-					V4en <= '1'; --write to V4
 					
+					isVal <= '0';
 					mux18_19 <= "01";-- u1 used
 					mux20_21 <= "10"; -- ys1 assigned
 					mux22_23 <= "10"; -- xusq assigned
@@ -125,9 +128,9 @@ begin
 					mux4_6 <= "11"; -- xusq calculated
 					
 				when "1000" =>--8
-					V1en <= '1'; --write to V1
-					V2en <= '1'; --write to V2
 					
+					
+					isVal <= '0';
 					mux16_17 <= "11"; -- Y assigned
 					mux18_19 <= "10"; -- fxs1 assigned
 					mux20_21 <= "10"; -- ys1 maintained
@@ -137,8 +140,8 @@ begin
 					mux7_9 <= "10"; -- y calculated
 					
 				when "1001" =>--9
-					V3en <= '1'; --write to V3
 					
+					isVal <= '0';
 					mux16_17 <= "11"; -- Y maintained
 					mux18_19 <= "10"; -- fxs1 used
 					mux20_21 <= "11"; -- fx assigned
@@ -148,17 +151,83 @@ begin
 				when "1010" =>--10
 					mux16_17 <= "11"; -- Y maintained
 					mux20_21 <= "11"; -- fx maintained
-					
+					isVal <= '0';
 					mux13_15 <= "11"; -- calculating D5
 					
 				when "1011" =>--11
-					V1en <= '1'; --write to V1	
+					
 					mux16_17 <= "10"; --write to out
+					isVal <= '1';
 					
 					mux_24 <= NC;
 				when others => 
 					
 			end case;
+			
+			if State = "0001" or State = "0100" or State = "0110" or State = "1000" or State = "1011" then
+				V1en <= '1';
+			else 
+				V1en <= '0';
+			end if;
+			
+			if State = "0001" or State = "1000" then 
+				V2en <= '1';
+			else 
+				V2en <= '0';
+			end if;
+			
+			if State = "0001" or State = "0111" or State = "1001" then 
+				V3en <= '1';
+			else 
+				V3en <= '0';
+			end if;
+			
+			if State = "0010" or State = "0111" then 
+				V4en <= '1';
+			else 
+				V4en <= '0';
+			end if;
+			
+			if State = "0001" then 
+				U0en <= '1';
+				xiplusen <= '1';
+			else 
+				U0en <= '0';
+				xiplusen <= '0';
+			end if;
+			
+			if State = "0010" then 
+				D1en <= '1';
+				D3en <= '1';
+				xuen <= '1';
+			else 
+				D1en <= '0';
+				D3en <= '0';
+				xuen <= '0';
+			end if;
+			
+			if State = "0011" then 
+				D2en <= '1';
+			else 
+				D2en <= '0';
+			end if;
+			
+			if State = "0101" then 
+				D4en <= '1';
+			else 
+				D4en <= '0';
+			end if;
+			
+			if State = "1010" then 
+				D5en <= '1';
+			else 
+				D5en <= '0';
+			end if;
+			
+			
+			
+			
+			
 		end if;
 	end process;
 end architecture;

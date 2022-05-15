@@ -13,7 +13,7 @@ end add1;
 
 architecture behavioural of add1 is 
 
-component Mux7 is
+component mux7 is
 port(
 	iin,ys1in,fxs1in: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
@@ -21,7 +21,7 @@ port(
 	);
 end component;
 
-component Mux8 is
+component mux8 is
 port(
 	onein,ymaxin,yintin: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
@@ -29,7 +29,7 @@ port(
 	);
 end component;
 
-component Mux9 is
+component mux9 is
 port(
 	addin: in std_logic_vector(15 downto 0);
 	iplusout,yout,fxout: out std_logic_vector(15 downto 0);
@@ -39,7 +39,7 @@ end component;
 
 signal mux1out : std_logic_vector(15 downto 0);
 signal mux2out : std_logic_vector(15 downto 0);
-
+signal addoutS1 : signed(15 downto 0);
 signal addout : std_logic_vector(15 downto 0);
 
 begin
@@ -47,15 +47,15 @@ begin
 	c2: mux8 port map(onein,ymaxin,yintin,mux2out,muxctrl);
 	c3: mux9 port map(addout,iplusout,yout,fxout,muxctrl);
 	
-	process(iclock)
-	variable addoutS1 : signed(15 downto 0);
-	begin
-		if rising_edge(iclock) then 
-		addoutS1 := signed(mux1out) + signed(mux2out);
-		addout <= std_logic_vector(addoutS1(15 downto 0));
+	
+	
+	
 		
-		end if;
-	end process;
+	addoutS1 <= signed(mux1out) + signed(mux2out);
+	addout <= std_logic_vector(addoutS1(15 downto 0));
+		
+		
+	
 
 
 end architecture;

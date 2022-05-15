@@ -14,7 +14,7 @@ end V2;
 
 architecture behavioural of V2 is 
 
-component Mux18 is
+component mux18 is
 port(
 	U1in,fxs1in: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
@@ -22,7 +22,7 @@ port(
 	);
 end component;
 
-component Mux19 is
+component mux19 is
 port(
 	U1out,fxs1out: out std_logic_vector(15 downto 0);
 	regin: in std_logic_vector(15 downto 0);
@@ -36,7 +36,7 @@ signal muxout : std_logic_vector(15 downto 0);
 signal regout : std_logic_vector(15 downto 0);
 
 begin
-	c1: Mux18 port map(U1inV,fxs1inV,muxout,muxctrl);
+	c1: mux18 port map(U1inV,fxs1inV,muxout,muxctrl);
 	c2: mux19 port map(U1outV,fxs1outV,regout,muxctrl);
 	
 	

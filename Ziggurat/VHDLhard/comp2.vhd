@@ -13,7 +13,7 @@ end comp2;
 
 architecture behavioural of comp2 is 
 
-component Mux13 is
+component mux13 is
 port(
 	iin,xuin,yin: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
@@ -21,7 +21,7 @@ port(
 	);
 end component;
 
-component Mux14 is
+component mux14 is
 port(
 	twofivefivein,xiplusin,fxin: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
@@ -29,7 +29,7 @@ port(
 	);
 end component;
 
-component Mux15 is
+component mux15 is
 port(
 	comp2in: in std_logic;
 	D1out,D2out,D5out: out std_logic;

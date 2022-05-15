@@ -14,7 +14,7 @@ end V3;
 
 architecture behavioural of V3 is 
 
-component Mux20 is
+component mux20 is
 port(
 	iin,ys1in,fxin: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
@@ -22,7 +22,7 @@ port(
 	);
 end component;
 
-component Mux21 is
+component mux21 is
 port(
 	iout,ys1out,fxout: out std_logic_vector(15 downto 0);
 	regin: in std_logic_vector(15 downto 0);
@@ -37,7 +37,7 @@ signal muxout : std_logic_vector(15 downto 0);
 signal regout : std_logic_vector(15 downto 0);
 
 begin
-	c1: Mux20 port map(iinV,ys1inV,fxinV,muxout,muxctrl);
+	c1: mux20 port map(iinV,ys1inV,fxinV,muxout,muxctrl);
 	c2: mux21 port map(ioutV,ys1outV,fxoutV,regout,muxctrl);
 	
 	
