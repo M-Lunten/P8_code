@@ -22,9 +22,9 @@ VZhl]g>9VJ4=g1mb@`WX?[3
 !s100 g9476kao@CamJ=T8b]QJe3
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1652622319
+Z8 !s110 1652624448
 !i10b 1
-Z9 !s108 1652622319.000000
+Z9 !s108 1652624448.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/add1.vhd|
 Z11 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/add1.vhd|
 !i113 1
@@ -104,11 +104,11 @@ VJ0NQJg@dBA>RlPFNbmnfU3
 !s100 `Wbh;?GaHC2Jh3;ldP8?P1
 R7
 32
-Z21 !s110 1652622320
+R8
 !i10b 1
 R9
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/comp2.vhd|
-Z23 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/comp2.vhd|
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/comp2.vhd|
+Z22 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/comp2.vhd|
 !i113 1
 R12
 R13
@@ -123,32 +123,32 @@ V`^<hnZfXG[3F1iNb5fSa60
 !s100 D?8?Qaoln[XjO_KOf[Aca0
 R7
 32
-R21
+R8
 !i10b 1
 R9
+R21
 R22
-R23
 !i113 1
 R12
 R13
 Elfsr_33
-Z24 w1652366834
+Z23 w1652366834
 R2
 R3
 R4
-Z25 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/LFSR_33.vhd
-Z26 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/LFSR_33.vhd
+Z24 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/LFSR_33.vhd
+Z25 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/LFSR_33.vhd
 l0
 L4
 Vhz9]2ZZjJ6gEQ83BGaG330
 !s100 :d@<RIGR0kkWUbch?E^7E0
 R7
 32
-R21
+R8
 !i10b 1
-Z27 !s108 1652622320.000000
-Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/LFSR_33.vhd|
-Z29 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/LFSR_33.vhd|
+R9
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/LFSR_33.vhd|
+Z27 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/LFSR_33.vhd|
 !i113 1
 R12
 R13
@@ -162,11 +162,11 @@ V[S7_ROHNZeMgZ_JWOM3Vh2
 !s100 SjBABH8elPO<OS?U7[JVg2
 R7
 32
-R21
+R8
 !i10b 1
+R9
+R26
 R27
-R28
-R29
 !i113 1
 R12
 R13
@@ -176,19 +176,19 @@ R1
 R2
 R3
 R4
-Z30 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult1.vhd
-Z31 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult1.vhd
+Z28 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult1.vhd
+Z29 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult1.vhd
 l0
 L5
 Vhl>iC5UIDHoYXaZC<76LX2
 !s100 L5dd@LaFNc`><W:KRn_S23
 R7
 32
-R21
+R8
 !i10b 1
-R27
-Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult1.vhd|
-Z33 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult1.vhd|
+R9
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult1.vhd|
+Z31 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult1.vhd|
 !i113 1
 R12
 R13
@@ -203,11 +203,11 @@ VE33HPe<^6gHlbf6=TnIge2
 !s100 6;c^Kb_gmd@=OnzYTYX=B2
 R7
 32
-R21
+R8
 !i10b 1
-R27
-R32
-R33
+R9
+R30
+R31
 !i113 1
 R12
 R13
@@ -217,19 +217,19 @@ R1
 R2
 R3
 R4
-Z34 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd
-Z35 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd
+Z32 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd
+Z33 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd
 l0
 L5
 VUZ0C>P^QObfi60@aVMKOW3
 !s100 E:V4Ic:Mcf6GMEl_3FVNO1
 R7
 32
-R21
+R8
 !i10b 1
-R27
-Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd|
-Z37 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd|
+R9
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd|
+Z35 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd|
 !i113 1
 R12
 R13
@@ -244,33 +244,33 @@ VE]kXTKNbUBm:?MomB?4eB2
 !s100 O2;HjdBLWh]Ha[If`5XbH2
 R7
 32
-R21
+R8
 !i10b 1
-R27
-R36
-R37
+R9
+R34
+R35
 !i113 1
 R12
 R13
 Emux1
-Z38 w1652428611
+Z36 w1652428611
 R1
 R2
 R3
 R4
-Z39 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/Mux1.vhd
-Z40 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/Mux1.vhd
+Z37 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/Mux1.vhd
+Z38 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/Mux1.vhd
 l0
 L5
 VR@2jTY1oM?meM<fPTm>XM2
 !s100 af>IgESnYn4G6hU=;Ln3J2
 R7
 32
-R21
+R8
 !i10b 1
-R27
-Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/Mux1.vhd|
-Z42 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/Mux1.vhd|
+R9
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/Mux1.vhd|
+Z40 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/Mux1.vhd|
 !i113 1
 R12
 R13
@@ -285,11 +285,11 @@ VIZT`?[=I2H6Fj^9AFJ_j01
 !s100 U4IkVBY@mL2BhJNcYlK_F1
 R7
 32
-R21
+R8
 !i10b 1
-R27
-R41
-R42
+R9
+R39
+R40
 !i113 1
 R12
 R13
@@ -299,17 +299,17 @@ R1
 R2
 R3
 R4
-Z43 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux10.vhd
-Z44 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux10.vhd
+Z41 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux10.vhd
+Z42 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux10.vhd
 l0
 L5
 Vd`2Ym28GBA:MVYO:3g>iO0
 !s100 W:zlm0W3agT2Sa2N5^F0j0
 R7
 32
-R21
+Z43 !s110 1652624449
 !i10b 1
-R27
+Z44 !s108 1652624449.000000
 Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux10.vhd|
 Z46 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux10.vhd|
 !i113 1
@@ -326,9 +326,9 @@ VU;W^7Lk=CXl]d>o_UKgUl1
 !s100 ]gdX5Y9>SN=C@<GF:N`?70
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 R45
 R46
 !i113 1
@@ -348,11 +348,11 @@ V0=L11JQEiP;D3<2bET3K:3
 !s100 kA]Q5@dT0Fe`_Ih3WXLcZ0
 R7
 32
-Z49 !s110 1652622321
+R43
 !i10b 1
-R27
-Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux11.vhd|
-Z51 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux11.vhd|
+R44
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux11.vhd|
+Z50 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux11.vhd|
 !i113 1
 R12
 R13
@@ -367,11 +367,11 @@ V<>3GH=3Vb<F0]TQXEaac:2
 !s100 ^:9V?BP1L4hSE8ghEW9]X3
 R7
 32
-R49
+R43
 !i10b 1
-R27
+R44
+R49
 R50
-R51
 !i113 1
 R12
 R13
@@ -381,19 +381,19 @@ R1
 R2
 R3
 R4
-Z52 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux12.vhd
-Z53 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux12.vhd
+Z51 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux12.vhd
+Z52 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux12.vhd
 l0
 L5
 Vb4^oZ<Mf0ghPS>fPkN5]N1
 !s100 =`^ZgI1U38=Czd2k?eK:a0
 R7
 32
-R49
+R43
 !i10b 1
-Z54 !s108 1652622321.000000
-Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux12.vhd|
-Z56 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux12.vhd|
+R44
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux12.vhd|
+Z54 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux12.vhd|
 !i113 1
 R12
 R13
@@ -408,11 +408,11 @@ VjF5[Q;726oPXkmZKbW5KW3
 !s100 i;fdULPP6NR1H5nV=7lij0
 R7
 32
-R49
+R43
 !i10b 1
+R44
+R53
 R54
-R55
-R56
 !i113 1
 R12
 R13
@@ -422,19 +422,19 @@ R1
 R2
 R3
 R4
-Z57 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux13.vhd
-Z58 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux13.vhd
+Z55 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux13.vhd
+Z56 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux13.vhd
 l0
 L5
 V?MFJh^`^5S4DCV=KcDcFe3
 !s100 WV:;8N?c`j6`bjR:TZ<PT3
 R7
 32
-R49
+R43
 !i10b 1
-R54
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux13.vhd|
-Z60 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux13.vhd|
+R44
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux13.vhd|
+Z58 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux13.vhd|
 !i113 1
 R12
 R13
@@ -449,11 +449,11 @@ VDAgV9VkCRAOAGjgfjTP_21
 !s100 [^OZD@7FTWFAlVZhlP3Sg3
 R7
 32
-R49
+R43
 !i10b 1
-R54
-R59
-R60
+R44
+R57
+R58
 !i113 1
 R12
 R13
@@ -463,19 +463,19 @@ R1
 R2
 R3
 R4
-Z61 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux14.vhd
-Z62 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux14.vhd
+Z59 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux14.vhd
+Z60 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux14.vhd
 l0
 L5
 VKl@zCG1A2>MPG>6oXOnBE1
 !s100 OU=R9XjgQSN?6?F=ehDFn3
 R7
 32
-R49
+R43
 !i10b 1
-R54
-Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux14.vhd|
-Z64 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux14.vhd|
+R44
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux14.vhd|
+Z62 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux14.vhd|
 !i113 1
 R12
 R13
@@ -490,11 +490,11 @@ VZYVJl=FHgb9TE7BeK;;`k3
 !s100 Rfj3RHD>[9Ic<<;@SLQ9U2
 R7
 32
-R49
+R43
 !i10b 1
-R54
-R63
-R64
+R44
+R61
+R62
 !i113 1
 R12
 R13
@@ -504,19 +504,19 @@ R1
 R2
 R3
 R4
-Z65 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd
-Z66 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd
+Z63 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd
+Z64 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd
 l0
 L5
 Vf:MnMm1B_S4<ECE=?jhND1
 !s100 D?FhHkUBEJ_bTzmPnIfZn3
 R7
 32
-R49
+R43
 !i10b 1
-R54
-Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd|
-Z68 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd|
+R44
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd|
+Z66 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd|
 !i113 1
 R12
 R13
@@ -531,11 +531,11 @@ VNo_[74:Poz3BaYjHQHDJ20
 !s100 Al5QzjAjBH4YO?N;m?CCE3
 R7
 32
-R49
+R43
 !i10b 1
-R54
-R67
-R68
+R44
+R65
+R66
 !i113 1
 R12
 R13
@@ -545,19 +545,19 @@ R1
 R2
 R3
 R4
-Z69 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux16.vhd
-Z70 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux16.vhd
+Z67 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux16.vhd
+Z68 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux16.vhd
 l0
 L5
 VX:ZNn4i32i2XaRUSa0JIF2
 !s100 4QgUJ]GnF^WJ@LSciDT:o2
 R7
 32
-R49
+R43
 !i10b 1
-R54
-Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux16.vhd|
-Z72 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux16.vhd|
+R44
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux16.vhd|
+Z70 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux16.vhd|
 !i113 1
 R12
 R13
@@ -572,11 +572,11 @@ VGLkjdB;jhRV]QgPbEPUT^0
 !s100 d=l:FOeol7KTfKR;K8]M30
 R7
 32
-R49
+R43
 !i10b 1
-R54
-R71
-R72
+R44
+R69
+R70
 !i113 1
 R12
 R13
@@ -586,17 +586,17 @@ R1
 R2
 R3
 R4
-Z73 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux17.vhd
-Z74 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux17.vhd
+Z71 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux17.vhd
+Z72 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux17.vhd
 l0
 L5
 VCZ3J?]?<687YkZ6b7B1T80
 !s100 ES1ng2gC7aB=>0madcAH@0
 R7
 32
-R49
+Z73 !s110 1652624450
 !i10b 1
-R54
+Z74 !s108 1652624450.000000
 Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux17.vhd|
 Z76 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux17.vhd|
 !i113 1
@@ -613,9 +613,9 @@ VCSPjJ3f0KfKIQb`igOidF1
 !s100 Mi`_4?D]C0WH:g=j:Z[1H0
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 R75
 R76
 !i113 1
@@ -635,9 +635,9 @@ VGEbKC11jTn:^1^XIf9LW@3
 !s100 5;=gRAaDQHzbaR]>6K8[02
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux18.vhd|
 Z80 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux18.vhd|
 !i113 1
@@ -654,9 +654,9 @@ Vb5V=AT8YB_ETE]oHO718Y0
 !s100 oa3]QE<MYPX4]zdc204?k0
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 R79
 R80
 !i113 1
@@ -676,9 +676,9 @@ VF1@dzcI3BAmOh76N7Gm[H0
 !s100 ^m<4VnIlJEK;9mjXS=c0n2
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux19.vhd|
 Z84 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux19.vhd|
 !i113 1
@@ -695,9 +695,9 @@ VjOgElKMW<IQD:GQo;HK@Y3
 !s100 56kY`54H6MOz`UfK8h0EC3
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 R83
 R84
 !i113 1
@@ -717,9 +717,9 @@ V:0CmjBa;3[S33H@zWOdnM3
 !s100 BPi7cZLXTecbSPoCWCz^m1
 R7
 32
-R21
+R8
 !i10b 1
-R27
+R9
 Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux2.vhd|
 Z88 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux2.vhd|
 !i113 1
@@ -736,9 +736,9 @@ VZi]TIdWB4EiARmf0eQ]Cc2
 !s100 >=?=8NIWYD>OgEg@G>1S;1
 R7
 32
-R21
+R8
 !i10b 1
-R27
+R9
 R87
 R88
 !i113 1
@@ -758,9 +758,9 @@ V7Z_cmRE;_cV?R4PIbK3k10
 !s100 8zPabFmnPe6NGn4QSkR0N2
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux20.vhd|
 Z92 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux20.vhd|
 !i113 1
@@ -777,9 +777,9 @@ V1nJ]bYCBV6Y;CI=16oSG>1
 !s100 b5kgGcPERD[ogSlEK@Ufm2
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 R91
 R92
 !i113 1
@@ -799,9 +799,9 @@ VJUdB2dJmoCD09dgJ>NooS0
 !s100 [:>ni`80FN>ZKC]I4eE9b3
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux21.vhd|
 Z96 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux21.vhd|
 !i113 1
@@ -818,9 +818,9 @@ V]a09f9fMJ`LYZd<=mR2mk3
 !s100 aka>9II?hJh@blNz@fjc[2
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 R95
 R96
 !i113 1
@@ -840,9 +840,9 @@ V[Z[U@K2^62HZjc5mQ^1EB0
 !s100 `^Lb9;]V;Oib2HhQT`<SV1
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux22.vhd|
 Z100 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux22.vhd|
 !i113 1
@@ -859,9 +859,9 @@ VgCTANn5ZnLiZ;HHbmaVC=2
 !s100 MagTUEhQ?`fzE9fB;`H[]1
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 R99
 R100
 !i113 1
@@ -881,9 +881,9 @@ VNg>9FbV712all;jeHBW^B3
 !s100 2WE2o[4^J3c5OfQi8mb>F0
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 Z103 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux23.vhd|
 Z104 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux23.vhd|
 !i113 1
@@ -900,9 +900,9 @@ VJ<<FnXEdZ7]XiY6RY7hf41
 !s100 [[>FF?N4?:3PW;;AnPeM>2
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 R103
 R104
 !i113 1
@@ -922,9 +922,9 @@ V5c^H1CgRcg3bXfMk>JTEL1
 !s100 cWU>Nk:DU>Fm6Dm^inik`1
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 Z107 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux24.vhd|
 Z108 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux24.vhd|
 !i113 1
@@ -941,9 +941,9 @@ V53cK>IU34l2iL_lmZS`nc3
 !s100 HR=7=mJ?A1I`aOKOibBLc1
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 R107
 R108
 !i113 1
@@ -963,9 +963,9 @@ V;RNY=0HTAJlV==GBSEnK90
 !s100 RR?amUl`YXUO1cCBC_9dP3
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 Z111 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux3.vhd|
 Z112 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux3.vhd|
 !i113 1
@@ -982,9 +982,9 @@ V0[X22nlLCNYd>S5i6gC:h0
 !s100 TzWdJ3TB1>_VjO6@zIBL]1
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 R111
 R112
 !i113 1
@@ -1004,9 +1004,9 @@ VCDj_5>H2IXgWVD@Q1EAAM3
 !s100 J=R_;?]LjnYHH:Bg17>bM0
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux4.vhd|
 Z116 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux4.vhd|
 !i113 1
@@ -1023,9 +1023,9 @@ V1lZ5<ADRaElbIgNfhC;X<0
 !s100 <LSKBF?_BRd:QkkY]Y[Kl0
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 R115
 R116
 !i113 1
@@ -1045,9 +1045,9 @@ Ve_J[MdKTmaPcmaPh7^hWo0
 !s100 88CIKC<IBBVYBAP1o7QIN1
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 Z119 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux5.vhd|
 Z120 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux5.vhd|
 !i113 1
@@ -1064,9 +1064,9 @@ VO_]CQQziPDC5WKdQJRhaN2
 !s100 O3TAz6azlK6k;]8_@Hf[Q0
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 R119
 R120
 !i113 1
@@ -1086,9 +1086,9 @@ VhTHKfJC;@6CLYb_<n79d40
 !s100 mAK6lVa0f>5f6;QhVJMPn3
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 Z123 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux6.vhd|
 Z124 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux6.vhd|
 !i113 1
@@ -1105,9 +1105,9 @@ V05>4K`<n[m6JD]GF@zFV^3
 !s100 @NCB<zYDSGCTEAHDM629`0
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 R123
 R124
 !i113 1
@@ -1127,9 +1127,9 @@ Vd;X?aMHM7Khz[[64IhkX@2
 !s100 K<^KQ:j=6dcSURN?<_M0U0
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 Z127 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd|
 Z128 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd|
 !i113 1
@@ -1146,9 +1146,9 @@ Vk6n7K_eS2?Tz<NBG3PaO30
 !s100 EocHRjDjnY^M=>gGgN^:R3
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 R127
 R128
 !i113 1
@@ -1168,9 +1168,9 @@ VUnHFo:b^;E7a9D^C>kdIH0
 !s100 >FeHYOUM>mHP43SROi]<I2
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 Z131 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux8.vhd|
 Z132 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux8.vhd|
 !i113 1
@@ -1187,9 +1187,9 @@ VUOf:18CT9fE^z^5eBk33N2
 !s100 D2em0mV>4N[PoNz>Bd;ZC2
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 R131
 R132
 !i113 1
@@ -1209,9 +1209,9 @@ VaIJnJeVj6Y<2V6]@j0oi=1
 !s100 CL<Sb_KLYbLl5CJ3]lbof0
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 Z135 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux9.vhd|
 Z136 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux9.vhd|
 !i113 1
@@ -1228,9 +1228,9 @@ V;[]k:;lBFZ=CXcgO0RG8S1
 !s100 8<WR:KjkSiN_0CIVoKijf3
 R7
 32
-R21
+R43
 !i10b 1
-R27
+R44
 R135
 R136
 !i113 1
@@ -1250,9 +1250,9 @@ VOddEjHAnk6`Z9hggVY=7d0
 !s100 [<B66X^eV52A4i`aK]8R=0
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 Z140 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/qCounter.vhd|
 Z141 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/qCounter.vhd|
 !i113 1
@@ -1269,9 +1269,9 @@ VimQ6GTfSVzU:J:zaazD_C1
 !s100 c=jD=W0djKR`kC[XoCXac3
 R7
 32
-R49
+R73
 !i10b 1
-R54
+R74
 R140
 R141
 !i113 1
@@ -1291,11 +1291,11 @@ Vfc2GUYlH5UbCAOiP^[UZ]3
 !s100 ^TC0QYd?Bd?C0@9GlzoVb3
 R7
 32
-Z144 !s110 1652622322
+R73
 !i10b 1
-Z145 !s108 1652622322.000000
-Z146 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V1.vhd|
-Z147 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V1.vhd|
+R74
+Z144 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V1.vhd|
+Z145 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V1.vhd|
 !i113 1
 R12
 R13
@@ -1310,11 +1310,11 @@ VGDclM73b;PMIIPB1XHFRd2
 !s100 7Tb7A5<PozlEI_d82PBd]0
 R7
 32
-R144
+R73
 !i10b 1
+R74
+R144
 R145
-R146
-R147
 !i113 1
 R12
 R13
@@ -1324,19 +1324,19 @@ R1
 R2
 R3
 R4
-Z148 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V2.vhd
-Z149 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V2.vhd
+Z146 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V2.vhd
+Z147 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V2.vhd
 l0
 L5
 VQN^a]DKHl>UWbgj[W[K6i1
 !s100 <D[1?2N3j>SKPcB9n64EW3
 R7
 32
-R144
+R73
 !i10b 1
-R145
-Z150 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V2.vhd|
-Z151 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V2.vhd|
+R74
+Z148 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V2.vhd|
+Z149 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V2.vhd|
 !i113 1
 R12
 R13
@@ -1351,11 +1351,11 @@ V=R<>Kd6licY=COYcDHXQ_0
 !s100 H3Kegm`Rmb1_<fAYafP=<1
 R7
 32
-R144
+R73
 !i10b 1
-R145
-R150
-R151
+R74
+R148
+R149
 !i113 1
 R12
 R13
@@ -1365,19 +1365,19 @@ R1
 R2
 R3
 R4
-Z152 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V3.vhd
-Z153 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V3.vhd
+Z150 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V3.vhd
+Z151 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V3.vhd
 l0
 L5
 Vo@GdmA<D6Nj8`ojzNhdek0
 !s100 KFnCNa7XfnfC57iD@?:Sg2
 R7
 32
-R144
+R73
 !i10b 1
-R145
-Z154 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V3.vhd|
-Z155 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V3.vhd|
+R74
+Z152 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V3.vhd|
+Z153 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V3.vhd|
 !i113 1
 R12
 R13
@@ -1392,31 +1392,31 @@ VGc:E@PTA5C@iM5YXS:aDe0
 !s100 eoeYCVg7Y[[?=A^[IAB==0
 R7
 32
-R144
+R73
 !i10b 1
-R145
-R154
-R155
+R74
+R152
+R153
 !i113 1
 R12
 R13
 Ev4
-Z156 w1652621696
+Z154 w1652621696
 R1
 R2
 R3
 R4
-Z157 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V4.vhd
-Z158 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V4.vhd
+Z155 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V4.vhd
+Z156 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V4.vhd
 l0
 L5
 VGcf@YLJXdaR@jYRhN1alU0
 !s100 3L]Mae[4L`?AfEH5gZ<fo3
 R7
 32
-R144
+Z157 !s110 1652624454
 !i10b 1
-R145
+Z158 !s108 1652624453.000000
 Z159 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V4.vhd|
 Z160 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V4.vhd|
 !i113 1
@@ -1433,33 +1433,33 @@ VlEJhLO@]RkE0l9=ORO51F2
 !s100 nhmLQ0>GVNoF^G[[P39GL2
 R7
 32
-R144
+R157
 !i10b 1
-R145
+R158
 R159
 R160
 !i113 1
 R12
 R13
 Ezhcontrol
-Z161 w1652622289
+Z161 w1652624431
 R1
 R2
 R3
 R4
-Z162 8C:\Users\fivan\Documents\GitHub\P8_code\Ziggurat\VHDLhard\ZHcontrol.vhd
-Z163 FC:\Users\fivan\Documents\GitHub\P8_code\Ziggurat\VHDLhard\ZHcontrol.vhd
+Z162 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd
+Z163 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd
 l0
 L5
-VSCZ7gc9HI?Y343?53j4JG2
-!s100 2_?boZlV7M0Z@CX45:1aF2
+V344ZnPZTcW^XVMkRZT_O]2
+!s100 0DIjbOgHTg4UMnZ[QHNkZ0
 R7
 32
-R144
+R157
 !i10b 1
-R145
-Z164 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\fivan\Documents\GitHub\P8_code\Ziggurat\VHDLhard\ZHcontrol.vhd|
-Z165 !s107 C:\Users\fivan\Documents\GitHub\P8_code\Ziggurat\VHDLhard\ZHcontrol.vhd|
+Z164 !s108 1652624454.000000
+Z165 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd|
+Z166 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd|
 !i113 1
 R12
 R13
@@ -1467,40 +1467,40 @@ Abehavioural
 R1
 R2
 R3
-DEx4 work 9 zhcontrol 0 22 SCZ7gc9HI?Y343?53j4JG2
-l52
-L32
-VX5V[Oo<N1<o5>>@mlHM<P1
-!s100 kZ2:G2h5oJXa6jmQR?jM40
+DEx4 work 9 zhcontrol 0 22 344ZnPZTcW^XVMkRZT_O]2
+l54
+L33
+V?8eMZe:@`_cSQYm9VOf1<2
+!s100 S:G9:5nV^_ZiB253FEWDN1
 R7
 32
-R144
+R157
 !i10b 1
-R145
 R164
 R165
+R166
 !i113 1
 R12
 R13
 Ezhdata
-Z166 w1652619311
+Z167 w1652619311
 R1
 R2
 R3
 R4
-Z167 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd
-Z168 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd
+Z168 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd
+Z169 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd
 l0
 L5
 V:b;3=dfF8X;5PmSA_Uz9l2
 !s100 @HfzRH<2JoGTAf5Wf]H6I3
 R7
 32
-R144
+R157
 !i10b 1
-R145
-Z169 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd|
-Z170 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd|
+R164
+Z170 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd|
+Z171 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd|
 !i113 1
 R12
 R13
@@ -1515,32 +1515,32 @@ VVlX7Fao@@naJ92U@:_??h0
 !s100 =;F:i`HVLBRB9ZYOo:?FQ3
 R7
 32
-R144
+R157
 !i10b 1
-R145
-R169
+R164
 R170
+R171
 !i113 1
 R12
 R13
 Ezigghard
-Z171 w1652610510
+Z172 w1652610510
 R2
 R3
 R4
-Z172 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd
-Z173 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd
+Z173 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd
+Z174 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd
 l0
 L4
 V_d><[`9F52S6gPZL>6W>;3
 !s100 BM[03=@PZ4hBbSUQ=BU4:1
 R7
 32
-R144
+R157
 !i10b 1
-R145
-Z174 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd|
-Z175 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd|
+R164
+Z175 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd|
+Z176 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd|
 !i113 1
 R12
 R13
@@ -1554,65 +1554,65 @@ V>zR=^;FINfPAJ>U3CVZ3H0
 !s100 <NS?dL[NCGaVHiId]h5]22
 R7
 32
-R144
+R157
 !i10b 1
-R145
-R174
+R164
 R175
+R176
 !i113 1
 R12
 R13
 Ezigghard_tb
-Z176 w1652613964
-Z177 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z177 w1652613964
+Z178 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R1
 R2
 R3
 R4
-Z178 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zigghard_tb.vhd
-Z179 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zigghard_tb.vhd
+Z179 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zigghard_tb.vhd
+Z180 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zigghard_tb.vhd
 l0
 L8
 VZ_GSW4`:1eDUaXgfGUjoO1
 !s100 GVzfmY?`iGK;Q^]m@=TII3
 R7
 32
-R144
+R157
 !i10b 1
-R145
-Z180 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zigghard_tb.vhd|
-Z181 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zigghard_tb.vhd|
+R164
+Z181 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zigghard_tb.vhd|
+Z182 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zigghard_tb.vhd|
 !i113 1
 R12
 R13
 Abehavior
-R177
+R178
 R1
 R2
 R3
-Z182 DEx4 work 11 zigghard_tb 0 22 Z_GSW4`:1eDUaXgfGUjoO1
+Z183 DEx4 work 11 zigghard_tb 0 22 Z_GSW4`:1eDUaXgfGUjoO1
 l31
 L11
-Z183 V>3U_z]BdkBTmMSQlj2L:X3
-Z184 !s100 K7=d:=0kk3>>=BCahJ[5I1
+Z184 V>3U_z]BdkBTmMSQlj2L:X3
+Z185 !s100 K7=d:=0kk3>>=BCahJ[5I1
 R7
 32
-R144
+R157
 !i10b 1
-R145
-R180
+R164
 R181
+R182
 !i113 1
 R12
 R13
 Ezighardlut
-Z185 w1652443755
-Z186 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+Z186 w1652443755
+Z187 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
 R2
 R3
 R4
-Z187 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zighardLUT.vhd
-Z188 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zighardLUT.vhd
+Z188 8C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zighardLUT.vhd
+Z189 FC:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zighardLUT.vhd
 l0
 L42
 Vn7ke6fd;N?f4aH;<ZEAlj3
@@ -1622,13 +1622,13 @@ R7
 R8
 !i10b 1
 R9
-Z189 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zighardLUT.vhd|
-Z190 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zighardLUT.vhd|
+Z190 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zighardLUT.vhd|
+Z191 !s107 C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zighardLUT.vhd|
 !i113 1
 R12
 R13
 Asyn
-R186
+R187
 R2
 R3
 DEx4 work 10 zighardlut 0 22 n7ke6fd;N?f4aH;<ZEAlj3
@@ -1641,8 +1641,8 @@ R7
 R8
 !i10b 1
 R9
-R189
 R190
+R191
 !i113 1
 R12
 R13
