@@ -1,0 +1,19 @@
+{
+	"title" : "Timing Analyzer||Slow 1200mV 0C Model||Slow 1200mV 0C Model Fmax Summary",
+	"data" : {
+		"data" : [
+			{
+				"0" : "107.62 MHz",
+				"1" : "107.62 MHz",
+				"2" : "clk",
+				"3" : ""
+			},
+			{
+				"0" : "191.72 MHz",
+				"1" : "191.72 MHz",
+				"2" : "chi_corr:chistage|clk_div",
+				"3" : ""
+			}
+		]
+	}
+}

@@ -1,0 +1,39 @@
+Quartus Prime Archive log --	C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed_tmp_archive.qarlog
+
+Archive:	C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed_tmp_archive.qar
+Date:		Sat May 14 13:55:42 2022
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_3.vhd
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_52.vhd
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.cmp
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.qip
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.cmp
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.qip
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.qpf
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.qsf
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Waveform.vwf
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Waveform1.vwf
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Waveform2.vwf
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Waveform3.vwf
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/addr_gen.vhd
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/pool_1.mif
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/pool_2.mif
+C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/transformation.vhd
+c:/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 22 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sat May 14 13:55:44 2022
+Source archive file:	C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed_tmp_archive.qar
+Archive was extracted into	C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/
+		 - successfully.

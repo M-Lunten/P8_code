@@ -1,0 +1,418 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Morten/Documents/GitHub/Reconfigurable_Miniproject
+Eaddr_gen
+Z0 w1652083808
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime
+Z5 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/addr_gen.vhd
+Z6 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/addr_gen.vhd
+l0
+L6
+VLc22OYl>ATM3;HeIMHN`M0
+!s100 VM<TZ5G>97[;C2BeJf2H;3
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1652542739
+!i10b 1
+Z9 !s108 1652542739.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/addr_gen.vhd|
+Z11 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/addr_gen.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavior
+R1
+R2
+R3
+DEx4 work 8 addr_gen 0 22 Lc22OYl>ATM3;HeIMHN`M0
+l22
+L16
+V:O>bJ=^g_Z1N_SoK=Fh2T2
+!s100 eC_lTO9DzhCmm<c<La8Re2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Echi_corr
+Z14 w1652540139
+R1
+R2
+R3
+R4
+Z15 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd
+Z16 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd
+l0
+L6
+V?fzC3;Cc[4Hg3GEm^g;:R2
+!s100 BlJFoXcH`KBeBGRgliY>b3
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd|
+Z18 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 8 chi_corr 0 22 ?fzC3;Cc[4Hg3GEm^g;:R2
+l22
+L15
+VC^m;31V5B:[3>74J=24Xb2
+!s100 GNERJMUIoBBM2<1PIih3L1
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Econtrol_path
+Z19 w1652541180
+R1
+R2
+R3
+R4
+Z20 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd
+Z21 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd
+l0
+L6
+Vb;Z04KKjNl=b[@:OZJ<zV1
+!s100 dJ0Nb7:^QALTohNmjX[571
+R7
+32
+Z22 !s110 1652542740
+!i10b 1
+R9
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd|
+Z24 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 12 control_path 0 22 b;Z04KKjNl=b[@:OZJ<zV1
+l32
+L18
+VO;20VdOHHN@nTk9L_ad]Z1
+!s100 `LG<HA:O4C;JaIned_Q?21
+R7
+32
+R22
+!i10b 1
+R9
+R23
+R24
+!i113 1
+R12
+R13
+Elfsr_3
+Z25 w1651743010
+R2
+R3
+R4
+Z26 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_3.vhd
+Z27 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_3.vhd
+l0
+L4
+V_ACN1IQNRGVLPMOd3D1mJ0
+!s100 YU9MaV<AIb_>57mCAbzU70
+R7
+32
+R22
+!i10b 1
+Z28 !s108 1652542740.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_3.vhd|
+Z30 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_3.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 6 lfsr_3 0 22 _ACN1IQNRGVLPMOd3D1mJ0
+l13
+L11
+Vg96L8E@9SJZGQLiUT8<JN3
+!s100 jnTM7I;[jYT4DXRmAl3Ak3
+R7
+32
+R22
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R12
+R13
+Elfsr_52
+Z31 w1651822033
+R2
+R3
+R4
+Z32 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_52.vhd
+Z33 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_52.vhd
+l0
+L4
+VzUJRL6JflZ`a8iYh3CR2C3
+!s100 o`kShX?SIgXD@>g<0`=zf2
+R7
+32
+R22
+!i10b 1
+R28
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_52.vhd|
+Z35 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_52.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 7 lfsr_52 0 22 zUJRL6JflZ`a8iYh3CR2C3
+l13
+L11
+V7jk?H9Ao>;2b7alHoj`M80
+!s100 zNGzkh1lT=A<8:z@_95K=1
+R7
+32
+R22
+!i10b 1
+R28
+R34
+R35
+!i113 1
+R12
+R13
+Eram_1
+Z36 w1651745255
+Z37 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+R2
+R3
+R4
+Z38 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd
+Z39 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd
+l0
+L42
+V@d@17N27YTTlLgaQVT?ia0
+!s100 16^lC:gLij2GfBNg9YnOZ3
+R7
+32
+R22
+!i10b 1
+R28
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd|
+Z41 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd|
+!i113 1
+R12
+R13
+Asyn
+R37
+R2
+R3
+DEx4 work 5 ram_1 0 22 @d@17N27YTTlLgaQVT?ia0
+l63
+L58
+VkV>6MZ3b:Y1b`@`^5<a;E2
+!s100 5>K0]4NeX::RHL9SNaHFj2
+R7
+32
+R22
+!i10b 1
+R28
+R40
+R41
+!i113 1
+R12
+R13
+Eram_2
+Z42 w1651745364
+R37
+R2
+R3
+R4
+Z43 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd
+Z44 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd
+l0
+L42
+VYN]m_0?^fML@bIH32gQLE2
+!s100 88C2E[i]fo225OP1]NVNL3
+R7
+32
+R22
+!i10b 1
+R28
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd|
+Z46 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd|
+!i113 1
+R12
+R13
+Asyn
+R37
+R2
+R3
+DEx4 work 5 ram_2 0 22 YN]m_0?^fML@bIH32gQLE2
+l63
+L58
+V>gT8JFXXmAB3aH9`:=aDT1
+!s100 gneMMkV42l6M6zRXScEIN3
+R7
+32
+R22
+!i10b 1
+R28
+R45
+R46
+!i113 1
+R12
+R13
+Etransformation
+Z47 w1652538022
+R1
+R2
+R3
+R4
+Z48 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/transformation.vhd
+Z49 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/transformation.vhd
+l0
+L6
+V5_zIT?004<dQegW``OgDf2
+!s100 <J]<RWU=m_2J8Y26[ZUUj0
+R7
+32
+R22
+!i10b 1
+R28
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/transformation.vhd|
+Z51 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/transformation.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 14 transformation 0 22 5_zIT?004<dQegW``OgDf2
+l27
+L21
+Vlh<[lWb1<`MmPZi_iUY7N3
+!s100 1[Pk^i`iP3@EfcOOSWo_Z3
+R7
+32
+R22
+!i10b 1
+R28
+R50
+R51
+!i113 1
+R12
+R13
+Ewallace_speed
+Z52 w1652541941
+R1
+R2
+R3
+R4
+Z53 8C:\Users\Morten\Documents\GitHub\P8_code\Wallace\VHDL_ExecTime\Wallace_speed.vhd
+Z54 FC:\Users\Morten\Documents\GitHub\P8_code\Wallace\VHDL_ExecTime\Wallace_speed.vhd
+l0
+L6
+V`HD9>4U03dRjYE0kBCFD22
+!s100 Xenn4YFQQPo[:iHB?gRC;3
+R7
+32
+R22
+!i10b 1
+R28
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Morten\Documents\GitHub\P8_code\Wallace\VHDL_ExecTime\Wallace_speed.vhd|
+Z56 !s107 C:\Users\Morten\Documents\GitHub\P8_code\Wallace\VHDL_ExecTime\Wallace_speed.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 13 wallace_speed 0 22 `HD9>4U03dRjYE0kBCFD22
+l127
+L19
+V4[R3WgkbKilbN>o]naDzl2
+!s100 OV`?@NZ58:6=YjNTWl?2m3
+R7
+32
+R22
+!i10b 1
+R28
+R55
+R56
+!i113 1
+R12
+R13
+Ewallace_speed_tb
+Z57 w1652488960
+Z58 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R1
+R2
+R3
+R4
+Z59 8C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed_tb.vhd
+Z60 FC:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed_tb.vhd
+l0
+L7
+V:A9BmVQ>lESHl5ia<EQCh1
+!s100 RPHCHGHm1f>k>le>M^^]60
+R7
+32
+R22
+!i10b 1
+R28
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed_tb.vhd|
+Z62 !s107 C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed_tb.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R58
+R1
+R2
+R3
+Z63 DEx4 work 16 wallace_speed_tb 0 22 :A9BmVQ>lESHl5ia<EQCh1
+l38
+L10
+Z64 VK_e;_[?@M8oYi[ca]ggEj2
+Z65 !s100 [c=Onk_;>S_5cNfLc>kX63
+R7
+32
+R22
+!i10b 1
+R28
+R61
+R62
+!i113 1
+R12
+R13

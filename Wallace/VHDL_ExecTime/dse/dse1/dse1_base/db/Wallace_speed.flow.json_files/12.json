@@ -1,0 +1,17 @@
+{
+	"title" : "Timing Analyzer||Slow 1200mV 85C Model||Slow 1200mV 85C Model Setup Summary",
+	"data" : {
+		"data" : [
+			{
+				"0" : "clk",
+				"1" : "-6.357",
+				"2" : "-1396.851"
+			},
+			{
+				"0" : "chi_corr:chistage|clk_div",
+				"1" : "-4.822",
+				"2" : "-91.881"
+			}
+		]
+	}
+}

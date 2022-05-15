@@ -1,0 +1,39 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Worker Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Info: Your use of Intel Corporation's design tools, logic functions 
+Info: and other software and tools, and its AMPP partner logic 
+Info: functions, and any output files from any of the foregoing 
+Info: (including device programming or simulation files), and any 
+Info: associated documentation or information are expressly subject 
+Info: to the terms and conditions of the Intel Program License 
+Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+Info: the Intel FPGA IP License Agreement, or other applicable license
+Info: agreement, including, without limitation, that your use is for
+Info: the sole purpose of programming logic devices manufactured by
+Info: Intel and sold by Intel or its authorized distributors.  Please
+Info: refer to the applicable agreement for further details.
+Info: *******************************************************************
+Info: Registering self with server http://localhost:64221/api/v1.0/broker/server/
+Info: Successfully registered with server.
+Info: Starting compilation quartus_sh --ipc_json --flow compile Wallace_speed.qsf
+Info: Sent timestamps successfully
+Info: Preparing to compile Wallace_speed ...
+Info: Downloading Wallace_speed.qar.sha256 ...
+Info: Finished download.
+Info: Verified dse/dse1/dse1_base\Wallace_speed.qar.sha256 exists.
+Info: Downloading Wallace_speed.qar ...
+Info: Finished download.
+Info: Verified dse/dse1/dse1_base\Wallace_speed.qar exists.
+Info: Download successful. Checksum matched expected value.
+Info: Running quartus_sh --restore -output dse/dse1/dse1_base dse/dse1/dse1_base\Wallace_speed.qar
+Info: Downloading dse1_base.qsf ...
+Info: Finished download.
+Info: Verified C:\Users\Morten\Documents\GitHub\P8_code\Wallace\VHDL_ExecTime\dse/dse1/dse1_base\Wallace_speed.qsf exists.
+Info: Downloading dse1_base.qpf ...
+Info: Finished download.
+Info: Verified dse/dse1/dse1_base\Wallace_speed.qpf exists.
+Info: Sent timestamps successfully
+Info: Sent timestamps successfully
+Info: Compilation finished. 196 msgs
+Info: Processing keep results option: all
+Info: Sent timestamps successfully

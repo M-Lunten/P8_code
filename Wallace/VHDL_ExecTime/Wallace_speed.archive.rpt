@@ -1,0 +1,99 @@
+Archive Project report for Wallace_speed
+Sat May 14 17:36:36 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Sat May 14 17:36:36 2022 ;
+; Revision Name          ; Wallace_speed                         ;
+; Top-level Entity Name  ; Wallace_speed                         ;
+; Family                 ; Cyclone IV E                          ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Warning (292006): Can't contact license server "13333@Altera.srv.aau.dk" -- this server will be ignored.
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:\\Users\\Morten\\Documents\\GitHub\\P8_code\\Wallace\\VHDL_ExecTime\\dse\\dse1\\Wallace_speed.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'Wallace_speed.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/18.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4825 megabytes
+    Info: Processing ended: Sat May 14 17:36:36 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++--------------------------------------------------------------+
+; Files Archived                                               ;
++--------------------------------------------------------------+
+; File Name                                                    ;
++--------------------------------------------------------------+
+; addr_gen.vhd                                                 ;
+; c:/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf ;
+; chi_corr.vhd                                                 ;
+; control_path.vhd                                             ;
+; LFSR_3.vhd                                                   ;
+; LFSR_52.vhd                                                  ;
+; pool_1.mif                                                   ;
+; pool_2.mif                                                   ;
+; RAM_1.cmp                                                    ;
+; RAM_1.qip                                                    ;
+; RAM_1.vhd                                                    ;
+; RAM_2.cmp                                                    ;
+; RAM_2.qip                                                    ;
+; RAM_2.vhd                                                    ;
+; transformation.vhd                                           ;
+; Wallace_speed.dse                                            ;
+; Wallace_speed.qpf                                            ;
+; Wallace_speed.qsf                                            ;
+; Wallace_speed.vhd                                            ;
+; Waveform.vwf                                                 ;
+; Waveform1.vwf                                                ;
+; Waveform2.vwf                                                ;
+; Waveform3.vwf                                                ;
++--------------------------------------------------------------+
+
+

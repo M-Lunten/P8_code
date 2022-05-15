@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -6.357
+TNS   : -1396.851
+
+Type  : Slow 1200mV 85C Model Setup 'chi_corr:chistage|clk_div'
+Slack : -4.822
+TNS   : -91.881
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'chi_corr:chistage|clk_div'
+Slack : 0.589
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -782.627
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'chi_corr:chistage|clk_div'
+Slack : -1.285
+TNS   : -59.110
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -5.738
+TNS   : -1232.720
+
+Type  : Slow 1200mV 0C Model Setup 'chi_corr:chistage|clk_div'
+Slack : -4.216
+TNS   : -78.987
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.396
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'chi_corr:chistage|clk_div'
+Slack : 0.548
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -781.571
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'chi_corr:chistage|clk_div'
+Slack : -1.285
+TNS   : -59.110
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -2.703
+TNS   : -545.384
+
+Type  : Fast 1200mV 0C Model Setup 'chi_corr:chistage|clk_div'
+Slack : -1.854
+TNS   : -29.167
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'chi_corr:chistage|clk_div'
+Slack : 0.261
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -536.183
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'chi_corr:chistage|clk_div'
+Slack : -1.000
+TNS   : -46.000
+
+------------------------------------------------------------

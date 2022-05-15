@@ -1,0 +1,17 @@
+{
+	"title" : "Timing Analyzer||Fast 1200mV 0C Model||Fast 1200mV 0C Model Setup Summary",
+	"data" : {
+		"data" : [
+			{
+				"0" : "clk",
+				"1" : "-2.703",
+				"2" : "-545.384"
+			},
+			{
+				"0" : "chi_corr:chistage|clk_div",
+				"1" : "-1.854",
+				"2" : "-29.167"
+			}
+		]
+	}
+}

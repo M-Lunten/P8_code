@@ -1,0 +1,91 @@
+Restore Archived Project report for Wallace_speed
+Sat May 14 13:55:44 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Sat May 14 13:55:44 2022 ;
+; Revision Name                   ; Wallace_speed                         ;
+; Top-level Entity Name           ; Wallace_speed                         ;
+; Family                          ; Cyclone IV E                          ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Warning (292006): Can't contact license server "13333@Altera.srv.aau.dk" -- this server will be ignored.
+Info: Successfully restored 'C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed_tmp_archive.qar' into the 'C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2' directory
+Info: Generated report 'Wallace_speed.restore.rpt'
+
+
++-------------------------+
+; Files Restored          ;
++-------------------------+
+; File Name               ;
++-------------------------+
+; qar_info.json           ;
+; LFSR_3.vhd              ;
+; LFSR_52.vhd             ;
+; RAM_1.cmp               ;
+; RAM_1.qip               ;
+; RAM_1.vhd               ;
+; RAM_2.cmp               ;
+; RAM_2.qip               ;
+; RAM_2.vhd               ;
+; Wallace_speed.qpf       ;
+; Wallace_speed.qsf       ;
+; Wallace_speed.vhd       ;
+; Waveform.vwf            ;
+; Waveform1.vwf           ;
+; Waveform2.vwf           ;
+; Waveform3.vwf           ;
+; addr_gen.vhd            ;
+; chi_corr.vhd            ;
+; control_path.vhd        ;
+; pool_1.mif              ;
+; pool_2.mif              ;
+; transformation.vhd      ;
+; assignment_defaults.qdf ;
++-------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

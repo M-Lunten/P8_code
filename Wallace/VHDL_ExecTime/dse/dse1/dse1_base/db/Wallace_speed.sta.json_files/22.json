@@ -1,0 +1,17 @@
+{
+	"title" : "Timing Analyzer||Fast 1200mV 0C Model||Fast 1200mV 0C Model Hold Summary",
+	"data" : {
+		"data" : [
+			{
+				"0" : "clk",
+				"1" : "0.187",
+				"2" : "0.000"
+			},
+			{
+				"0" : "chi_corr:chistage|clk_div",
+				"1" : "0.261",
+				"2" : "0.000"
+			}
+		]
+	}
+}
