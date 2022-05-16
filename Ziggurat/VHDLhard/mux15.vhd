@@ -22,7 +22,10 @@ begin
 			D2out <= comp2in;
 		elsif ctrl = "11" then
 			D5out <= comp2in;
-		
+		else
+			D1out <= '0';
+			D2out <= '0';
+			D5out <= '0';
 		end if;
 		--output <= outTemp;
 	end process;

@@ -22,6 +22,10 @@ begin
 			yout <= addin;
 		elsif ctrl = "11" then
 			fxout <= addin;
+		else
+			iplusout <= "0000000000000000";
+			yout <= "0000000000000000";
+			fxout <= "0000000000000000";
 		end if;
 		--output <= outTemp;
 	end process;

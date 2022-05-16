@@ -24,7 +24,9 @@ entity ZHcontrol is
 	mux22_23 : out std_logic_vector(1 downto 0);
 	mux_24 : out std_logic;
 	isVal : out std_logic;
+	StateOut : out std_logic_vector(3 downto 0);
 	V1en : out std_logic;
+	
 	
 	V2en,V3en,V4en,U0en,Xuen,Xiplusen,D1en,D2en,D3en,D4en,D5en : out std_logic
 	);
@@ -57,15 +59,15 @@ begin
 	
 	
 	
-	
+	StateOut <= State;
 	process(iclock)
 	begin 
 		if falling_edge(iclock) then 
 			case State is 
-				
+				when "0000" =>
 				when "0001" => --1
 					
-					V1en <= '1';
+					
 					mux16_17 <= "01"; --xi assign
 					mux18_19 <= "01";-- u1 assign
 					mux20_21 <= "01";-- i assign

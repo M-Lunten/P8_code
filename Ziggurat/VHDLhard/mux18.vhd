@@ -20,7 +20,8 @@ begin
 			outTemp := U1in;
 		elsif ctrl = "10" then
 			outTemp := fxs1in;
-		
+		else
+			outTemp := "0000000000000000";
 		end if;
 		output <= outTemp;
 	end process;

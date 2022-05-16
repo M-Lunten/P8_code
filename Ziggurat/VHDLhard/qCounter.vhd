@@ -37,7 +37,7 @@ begin
 						if D1qc = '1' then
 							Si <= "0011";
 						elsif D1qc = '0' then
-							Si <= "1000";
+							Si <= "0111";
 						end if;
 					end if;
 				when "0011" =>

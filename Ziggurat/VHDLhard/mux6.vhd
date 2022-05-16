@@ -22,6 +22,10 @@ begin
 			fxs1out <= mult2in;
 		elsif ctrl = "11" then
 			xusqout <= mult2in;
+		else
+			xuout <= "0000000000000000";
+			fxs1out <= "0000000000000000";
+			xusqout <= "0000000000000000";
 		end if;
 		--output <= outTemp;
 	end process;

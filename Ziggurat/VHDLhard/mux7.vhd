@@ -26,6 +26,8 @@ begin
 			output <= std_logic_vector(not(inter) + "0000000000000001");
 		elsif ctrl = "11" then
 			output <= fxs1in;
+		else
+			outTemp := "0000000000000000";
 		end if;
 		
 	end process;

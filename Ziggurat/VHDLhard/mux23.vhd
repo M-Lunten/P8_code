@@ -20,6 +20,10 @@ begin
 			U1Aout <= regin;
 		elsif ctrl = "10" then
 			xusqout <= regin;
+		else
+			U1Aout <= "0000000000000000";
+			xusqout <= "0000000000000000";
+			
 		end if;
 		
 	end process;

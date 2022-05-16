@@ -20,7 +20,9 @@ begin
 			D3out <= comp1in;
 		elsif ctrl = "10" then
 			D4out <= comp1in;
-		
+		else
+			D3out <= '0';
+			D4out <= '0';
 		end if;
 		--output <= outTemp;
 	end process;

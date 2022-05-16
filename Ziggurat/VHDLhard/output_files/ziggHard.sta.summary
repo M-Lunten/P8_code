@@ -2,328 +2,148 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'ZHcontrol:c2|mux1_3[0]'
-Slack : -9.536
-TNS   : -102.910
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -7.725
+TNS   : -725.235
 
 Type  : Slow 1200mV 85C Model Setup 'ZHcontrol:c2|mux7_9[0]'
-Slack : -8.750
-TNS   : -251.170
+Slack : -4.401
+TNS   : -60.941
 
-Type  : Slow 1200mV 85C Model Setup 'ZHcontrol:c2|mux4_6[0]'
-Slack : -6.493
-TNS   : -313.070
-
-Type  : Slow 1200mV 85C Model Setup 'ZHcontrol:c2|mux16_17[0]'
-Slack : -6.209
-TNS   : -113.561
-
-Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -6.151
-TNS   : -271.793
-
-Type  : Slow 1200mV 85C Model Setup 'ZHcontrol:c2|mux13_15[0]'
-Slack : -5.299
-TNS   : -144.647
-
-Type  : Slow 1200mV 85C Model Setup 'ZHcontrol:c2|mux20_21[0]'
-Slack : -3.601
-TNS   : -107.585
-
-Type  : Slow 1200mV 85C Model Setup 'ZHcontrol:c2|mux18_19[0]'
-Slack : -1.614
-TNS   : -34.027
+Type  : Slow 1200mV 85C Model Setup 'ZHcontrol:c2|mux13_15[1]'
+Slack : -4.279
+TNS   : -4.279
 
 Type  : Slow 1200mV 85C Model Setup 'ZHcontrol:c2|mux10_12[0]'
-Slack : -1.141
-TNS   : -1.754
+Slack : -4.080
+TNS   : -4.080
 
-Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux18_19[0]'
-Slack : -0.902
-TNS   : -3.602
-
-Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux16_17[0]'
-Slack : -0.879
-TNS   : -3.037
-
-Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.157
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.352
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux20_21[0]'
-Slack : 0.218
+Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux7_9[0]'
+Slack : 0.587
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux10_12[0]'
-Slack : 0.262
+Slack : 3.686
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux13_15[0]'
-Slack : 0.307
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.403
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux4_6[0]'
-Slack : 0.487
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux1_3[0]'
-Slack : 1.102
+Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux13_15[1]'
+Slack : 3.686
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -149.982
+TNS   : -272.740
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ZHcontrol:c2|mux18_19[0]'
-Slack : 0.351
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ZHcontrol:c2|mux1_3[0]'
-Slack : 0.389
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ZHcontrol:c2|mux13_15[1]'
+Slack : 0.421
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.396
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ZHcontrol:c2|mux13_15[0]'
-Slack : 0.398
+Slack : 0.429
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ZHcontrol:c2|mux10_12[0]'
-Slack : 0.399
+Slack : 0.486
 TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ZHcontrol:c2|mux16_17[0]'
-Slack : 0.413
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ZHcontrol:c2|mux20_21[0]'
-Slack : 0.423
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ZHcontrol:c2|mux4_6[0]'
-Slack : 0.431
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux1_3[0]'
-Slack : -8.598
-TNS   : -92.798
-
-Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux7_9[0]'
-Slack : -8.062
-TNS   : -227.684
-
-Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux4_6[0]'
-Slack : -5.857
-TNS   : -282.409
-
-Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux16_17[0]'
-Slack : -5.805
-TNS   : -108.050
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -5.540
-TNS   : -237.674
+Slack : -6.978
+TNS   : -653.235
 
-Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux13_15[0]'
-Slack : -4.901
-TNS   : -133.440
+Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux7_9[0]'
+Slack : -4.210
+TNS   : -57.201
 
-Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux20_21[0]'
-Slack : -3.302
-TNS   : -101.839
-
-Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux18_19[0]'
-Slack : -1.349
-TNS   : -30.567
+Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux13_15[1]'
+Slack : -3.824
+TNS   : -3.824
 
 Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux10_12[0]'
-Slack : -0.959
-TNS   : -1.550
-
-Type  : Slow 1200mV 0C Model Hold 'ZHcontrol:c2|mux18_19[0]'
-Slack : -0.688
-TNS   : -2.749
-
-Type  : Slow 1200mV 0C Model Hold 'ZHcontrol:c2|mux16_17[0]'
-Slack : -0.667
-TNS   : -1.638
+Slack : -3.653
+TNS   : -3.653
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.257
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'ZHcontrol:c2|mux20_21[0]'
-Slack : 0.296
+Slack : 0.318
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.310
+Slack : 0.546
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'ZHcontrol:c2|mux13_15[0]'
-Slack : 0.327
+Type  : Slow 1200mV 0C Model Hold 'ZHcontrol:c2|mux13_15[1]'
+Slack : 3.372
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'ZHcontrol:c2|mux10_12[0]'
-Slack : 0.385
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'ZHcontrol:c2|mux4_6[0]'
-Slack : 0.553
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'ZHcontrol:c2|mux1_3[0]'
-Slack : 1.035
+Slack : 3.412
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -149.806
+TNS   : -271.860
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.321
+Slack : 0.304
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux20_21[0]'
-Slack : 0.383
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux4_6[0]'
-Slack : 0.383
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux16_17[0]'
-Slack : 0.391
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux13_15[0]'
-Slack : 0.409
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux18_19[0]'
-Slack : 0.459
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux1_3[0]'
-Slack : 0.465
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux13_15[1]'
+Slack : 0.429
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux10_12[0]'
-Slack : 0.471
+Slack : 0.482
 TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux1_3[0]'
-Slack : -4.837
-TNS   : -52.038
-
-Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux7_9[0]'
-Slack : -4.276
-TNS   : -104.969
-
-Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux4_6[0]'
-Slack : -3.043
-TNS   : -130.769
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -2.893
-TNS   : -106.722
+Slack : -3.970
+TNS   : -347.918
 
-Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux16_17[0]'
-Slack : -2.521
-TNS   : -35.426
+Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux13_15[1]'
+Slack : -2.341
+TNS   : -2.341
 
-Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux13_15[0]'
-Slack : -2.240
-TNS   : -54.453
-
-Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux20_21[0]'
-Slack : -1.394
-TNS   : -30.343
-
-Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux18_19[0]'
-Slack : -0.533
-TNS   : -8.003
+Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux7_9[0]'
+Slack : -1.949
+TNS   : -25.604
 
 Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux10_12[0]'
-Slack : -0.184
-TNS   : -0.184
-
-Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux18_19[0]'
-Slack : -0.382
-TNS   : -1.524
-
-Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux16_17[0]'
-Slack : -0.316
-TNS   : -1.293
-
-Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.044
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux13_15[0]'
-Slack : 0.103
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux20_21[0]'
-Slack : 0.104
-TNS   : 0.000
+Slack : -1.879
+TNS   : -1.879
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
 Slack : 0.178
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux7_9[0]'
+Slack : 0.309
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux13_15[1]'
+Slack : 1.889
+TNS   : 0.000
+
 Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux10_12[0]'
-Slack : 0.215
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux4_6[0]'
-Slack : 0.299
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux1_3[0]'
-Slack : 0.415
+Slack : 2.162
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -120.560
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux13_15[0]'
-Slack : 0.230
-TNS   : 0.000
+TNS   : -205.209
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.237
+Slack : 0.311
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux20_21[0]'
-Slack : 0.244
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux18_19[0]'
-Slack : 0.255
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux16_17[0]'
-Slack : 0.256
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux4_6[0]'
-Slack : 0.288
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux1_3[0]'
-Slack : 0.308
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux13_15[1]'
+Slack : 0.459
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux10_12[0]'
-Slack : 0.310
+Slack : 0.495
 TNS   : 0.000
 
 ------------------------------------------------------------

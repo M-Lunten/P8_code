@@ -21,7 +21,9 @@ begin
 		elsif ctrl = "10" then
 			outTemp := outin;
 		elsif ctrl = "11" then
-			outTemp := yin;	
+			outTemp := yin;
+		else
+			outTemp := "0000000000000000";	
 		end if;
 		output <= outTemp;
 	end process;

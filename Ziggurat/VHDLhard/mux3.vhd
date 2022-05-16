@@ -20,6 +20,9 @@ begin
 			U1Aout <= mult1in;
 		elsif ctrl = "10" then
 			YS1out <= mult1in;
+		else
+			U1Aout <= "0000000000000000";
+			YS1out <= "0000000000000000";
 		end if;
 		--output <= outTemp;
 	end process;

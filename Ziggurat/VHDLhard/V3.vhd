@@ -8,7 +8,7 @@ port(
 	muxctrl : in std_logic_vector(1 downto 0);
 	V3ctrl : in std_logic;
 	iinV,ys1inV,fxinV : in std_logic_vector(15 downto 0);
-	ioutV,ys1outV,fxoutV: out std_logic_vector(15 downto 0)
+	i_ys1_fxoutV: out std_logic_vector(15 downto 0)
 	);
 end V3;
 
@@ -22,13 +22,13 @@ port(
 	);
 end component;
 
-component mux21 is
-port(
-	iout,ys1out,fxout: out std_logic_vector(15 downto 0);
-	regin: in std_logic_vector(15 downto 0);
-	ctrl: in std_logic_vector(1 downto 0)
-	);
-end component;
+--component mux21 is
+--port(
+--	iout,ys1out,fxout: out std_logic_vector(15 downto 0);
+--	regin: in std_logic_vector(15 downto 0);
+--	ctrl: in std_logic_vector(1 downto 0)
+--	);
+--end component;
 
 
 signal muxout : std_logic_vector(15 downto 0);
@@ -38,7 +38,7 @@ signal regout : std_logic_vector(15 downto 0);
 
 begin
 	c1: mux20 port map(iinV,ys1inV,fxinV,muxout,muxctrl);
-	c2: mux21 port map(ioutV,ys1outV,fxoutV,regout,muxctrl);
+	--c2: mux21 port map(ioutV,ys1outV,fxoutV,regout,muxctrl);
 	
 	
 	process(iclock)
@@ -46,7 +46,7 @@ begin
 	begin
 		if rising_edge(iclock) then 
 			if V3ctrl = '1' then 
-				regout <= muxout;
+				i_ys1_fxoutV <= muxout;
 			end if;
 		
 		end if;

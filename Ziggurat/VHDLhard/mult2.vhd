@@ -7,7 +7,7 @@ port(
 	iclock : in std_logic;
 	muxctrl : in std_logic_vector(1 downto 0);
 	xiin,xusqin,Xuin,U0in,GRADin : in std_logic_vector(15 downto 0);
-	xuout,fxs1out,xusqout: out std_logic_vector(15 downto 0)
+	xu_fxs1_xusqout: out std_logic_vector(15 downto 0)
 	);
 end mult2;
 
@@ -29,30 +29,36 @@ port(
 	);
 end component;
 
-component mux6 is
-port(
-	mult2in: in std_logic_vector(15 downto 0);
-	xuout,fxs1out,xusqout: out std_logic_vector(15 downto 0);
-	ctrl: in std_logic_vector(1 downto 0)
-	);
-end component;
+--component mux6 is
+--port(
+--	mult2in: in std_logic_vector(15 downto 0);
+--	xuout,fxs1out,xusqout: out std_logic_vector(15 downto 0);
+--	ctrl: in std_logic_vector(1 downto 0)
+--	);
+--end component;
 
 signal mux1out : std_logic_vector(15 downto 0);
 signal mux2out : std_logic_vector(15 downto 0);
-signal multoutS1 : signed(31 downto 0);
+
 signal multout : std_logic_vector(15 downto 0);
 
 begin
 	c1: mux4 port map(xiin,xusqin,Xuin,mux1out,muxctrl);
 	c2: mux5 port map(U0in,GRADin,Xuin,mux2out,muxctrl);
-	c3: mux6 port map(multout,xuout,fxs1out,xusqout,muxctrl);
+	--c3: mux6 port map(multout,xuout,fxs1out,xusqout,muxctrl);
+	process(iclock)
+	variable multoutS1 : signed(31 downto 0);
 	
-	
-	
-		multoutS1 <= signed(mux1out) * signed(mux2out);
+	begin
+		if muxctrl = "01" or muxctrl = "11" then
+			multoutS1 := signed(unsigned(mux1out) * unsigned(mux2out));
+		else
+		multoutS1 := signed(mux1out) * signed(mux2out);
+		end if;
 		
-		multout <= std_logic_vector(multoutS1(31 downto 16));
-		
+		xu_fxs1_xusqout <= std_logic_vector(multoutS1(31 downto 16));
 
+	end process;
+		
 
 end architecture;

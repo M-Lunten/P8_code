@@ -22,6 +22,10 @@ begin
 			ys1out <= regin;
 		elsif ctrl = "11" then
 			fxout <= regin;
+		else
+			iout <= "0000000000000000";
+			ys1out <= "0000000000000000";
+			fxout <= "0000000000000000";
 		end if;
 		
 	end process;

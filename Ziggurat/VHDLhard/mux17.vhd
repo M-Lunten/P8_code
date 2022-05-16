@@ -22,6 +22,10 @@ begin
 			outout <= regin;
 		elsif ctrl = "11" then
 			yout <= regin;
+		else
+			xiout <= "0000000000000000";
+			outout <= "0000000000000000";
+			yout <= "0000000000000000";
 		end if;
 		
 	end process;

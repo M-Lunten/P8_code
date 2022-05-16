@@ -22,6 +22,8 @@ begin
 			outTemp := xiplusin;
 		elsif ctrl = "11" then
 			outTemp := fxin;
+		else
+			outTemp := "0000000000000000";
 		end if;
 		output <= outTemp;
 	end process;

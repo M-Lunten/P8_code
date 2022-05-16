@@ -22,6 +22,8 @@ begin
 			outTemp := xuin;
 		elsif ctrl = "11" then
 			outTemp := yin;
+		else
+			outTemp := "0000000000000000";
 		end if;
 		output <= outTemp;
 	end process;
