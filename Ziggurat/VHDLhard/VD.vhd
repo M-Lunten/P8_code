@@ -14,15 +14,15 @@ end VD;
 architecture behavioural of VD is 
 
 begin
-	process(iclock)
+	process(Dctrl)
 
 	begin
-		if rising_edge(iclock) then 
+	
 			if Dctrl = '1' then 
 				DoutV <= DinV;
 			end if;
 		
-		end if;
+		
 	end process;
 
 

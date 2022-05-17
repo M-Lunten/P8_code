@@ -7,7 +7,7 @@ port(
 	iclock : in std_logic;
 	muxctrl : in std_logic_vector(1 downto 0);
 	iin,xuin,yin,twofivefivein,xiplusin,fxin : in std_logic_vector(15 downto 0);
-	D1out,D2out,D5out: out std_logic
+	D1_D2_D5out: out std_logic
 	);
 end comp2;
 
@@ -29,13 +29,13 @@ port(
 	);
 end component;
 
-component mux15 is
-port(
-	comp2in: in std_logic;
-	D1out,D2out,D5out: out std_logic;
-	ctrl: in std_logic_vector(1 downto 0)
-	);
-end component;
+--component mux15 is
+--port(
+--	comp2in: in std_logic;
+--	D1out,D2out,D5out: out std_logic;
+--	ctrl: in std_logic_vector(1 downto 0)
+--	);
+--end component;
 
 signal mux1out : std_logic_vector(15 downto 0);
 signal mux2out : std_logic_vector(15 downto 0);
@@ -45,16 +45,24 @@ signal compout : std_logic;
 begin
 	c1: mux13 port map(iin,xuin,yin,mux1out,muxctrl);
 	c2: mux14 port map(twofivefivein,xiplusin,fxin,mux2out,muxctrl);
-	c3: mux15 port map(compout,D1out,D2out,D5out,muxctrl);
+	--c3: mux15 port map(compout,D1out,D2out,D5out,muxctrl);
 	
 	process(iclock)
 	variable compoutS1 : signed(15 downto 0);
 	begin
 		if rising_edge(iclock) then 
-				if mux1out < mux2out then 
-					compout <= '1';
+			if muxctrl = "01" then 
+				if (unsigned(mux1out) < 255) then 
+					D1_D2_D5out <= '1';
 				else 
-					compout <= '0';
+					D1_D2_D5out <= '0';
+				end if;
+			else
+				if (mux1out < mux2out) then 
+					D1_D2_D5out <= '1';
+				else 
+					D1_D2_D5out <= '0';
+				end if;
 				end if;
 		end if;
 	end process;

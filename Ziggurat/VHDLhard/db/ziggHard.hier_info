@@ -19,15 +19,36 @@ ziggoutH[12] << ZHdata:c1.ziggout[12]
 ziggoutH[13] << ZHdata:c1.ziggout[13]
 ziggoutH[14] << ZHdata:c1.ziggout[14]
 ziggoutH[15] << ZHdata:c1.ziggout[15]
-isVal << ZHcontrol:c2.isVal
+isVal << ZHcontrol:c2.ziggen
+isOut[0] << ZHcontrol:c2.isOut[0]
+isOut[1] << ZHcontrol:c2.isOut[1]
+isOut[2] << ZHcontrol:c2.isOut[2]
+isOut[3] << ZHcontrol:c2.isOut[3]
+isOut[4] << ZHcontrol:c2.isOut[4]
+isOut[5] << ZHcontrol:c2.isOut[5]
+isOut[6] << ZHcontrol:c2.isOut[6]
+isOut[7] << ZHcontrol:c2.isOut[7]
+isOut[8] << ZHcontrol:c2.isOut[8]
+isOut[9] << ZHcontrol:c2.isOut[9]
+isOut[10] << ZHcontrol:c2.isOut[10]
+isOut[11] << ZHcontrol:c2.isOut[11]
+isOut[12] << ZHcontrol:c2.isOut[12]
+isOut[13] << ZHcontrol:c2.isOut[13]
+isOut[14] << ZHcontrol:c2.isOut[14]
+isOut[15] << ZHcontrol:c2.isOut[15]
+isOut[16] << ZHcontrol:c2.isOut[16]
+isOut[17] << ZHcontrol:c2.isOut[17]
+isOut[18] << ZHcontrol:c2.isOut[18]
+isOut[19] << ZHcontrol:c2.isOut[19]
+isOut[20] << ZHcontrol:c2.isOut[20]
 
 
 |ziggHard|ZHdata:c1
+iclock => LFSRctrl.IN0
 iclock => V1:c1.iclock
 iclock => V2:c2.iclock
 iclock => V3:c3.iclock
 iclock => V4:c4.iclock
-iclock => LFSR_33:c5.CLK
 iclock => zighardLUT:c6.clock
 iclock => mult1:c7.iclock
 iclock => mult2:c8.iclock
@@ -35,11 +56,6 @@ iclock => add1:c9.iclock
 iclock => comp1:c10.iclock
 iclock => comp2:c11.iclock
 iclock => Vxu:c13.iclock
-iclock => VD:cd1.iclock
-iclock => VD:cd2.iclock
-iclock => VD:cd3.iclock
-iclock => VD:cd4.iclock
-iclock => VD:cd5.iclock
 iclock => Vxu:cxiplus.iclock
 iclock => Vxu:cU0.iclock
 mux1_3[0] => mult1:c7.muxctrl[0]
@@ -60,7 +76,11 @@ mux20_21[0] => V3:c3.muxctrl[0]
 mux20_21[1] => V3:c3.muxctrl[1]
 mux22_23[0] => V4:c4.muxctrl[0]
 mux22_23[1] => V4:c4.muxctrl[1]
-mux_24 => Mux24:c12.ctrl
+mux_24 => ~NO_FANOUT~
+state[0] => LFSRctrl.IN1
+state[1] => LFSRctrl.IN1
+state[2] => LFSRctrl.IN1
+state[3] => LFSRctrl.IN1
 V1en => V1:c1.V1ctrl
 V2en => V2:c2.V2ctrl
 V3en => V3:c3.V3ctrl
@@ -68,11 +88,12 @@ V4en => V4:c4.V4ctrl
 U0en => Vxu:cU0.xuctrl
 Xuen => Vxu:c13.xuctrl
 Xiplusen => Vxu:cxiplus.xuctrl
-D1en => VD:cd1.Dctrl
-D2en => VD:cd2.Dctrl
-D3en => VD:cd3.Dctrl
-D4en => VD:cd4.Dctrl
-D5en => VD:cd5.Dctrl
+D1en => ~NO_FANOUT~
+D2en => ~NO_FANOUT~
+D3en => ~NO_FANOUT~
+D4en => ~NO_FANOUT~
+D5en => ~NO_FANOUT~
+ziggen => ~NO_FANOUT~
 ziggout[0] <= Mux24:c12.output[0]
 ziggout[1] <= Mux24:c12.output[1]
 ziggout[2] <= Mux24:c12.output[2]
@@ -89,12 +110,12 @@ ziggout[12] <= Mux24:c12.output[12]
 ziggout[13] <= Mux24:c12.output[13]
 ziggout[14] <= Mux24:c12.output[14]
 ziggout[15] <= Mux24:c12.output[15]
-D1_C <= VD:cd1.DoutV
-D2_C <= VD:cd2.DoutV
-D3_C <= VD:cd3.DoutV
-D4_C <= VD:cd4.DoutV
-D5_C <= VD:cd5.DoutV
-NC <= LFSR_33:c5.OUTPUT[32]
+D1_C <= comp2:c11.D1_D2_D5out
+D2_C <= comp2:c11.D1_D2_D5out
+D3_C <= comp1:c10.D3_D4out
+D4_C <= comp1:c10.D3_D4out
+D5_C <= comp2:c11.D1_D2_D5out
+NC <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ziggHard|ZHdata:c1|V1:c1
@@ -759,6 +780,7 @@ CLK => shift_register[29].CLK
 CLK => shift_register[30].CLK
 CLK => shift_register[31].CLK
 CLK => shift_register[32].CLK
+CLK => clk2.CLK
 OUTPUT[0] <= shift_register[0].DB_MAX_OUTPUT_PORT_TYPE
 OUTPUT[1] <= shift_register[1].DB_MAX_OUTPUT_PORT_TYPE
 OUTPUT[2] <= shift_register[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -2072,13 +2094,13 @@ ctrl[1] => Equal2.IN0
 
 
 |ziggHard|ZHdata:c1|comp1:c10
-iclock => compout.CLK
+iclock => D3_D4out~reg0.CLK
 muxctrl[0] => mux10:c1.ctrl[0]
 muxctrl[0] => mux11:c2.ctrl[0]
-muxctrl[0] => mux12:c3.ctrl[0]
+muxctrl[0] => Equal0.IN1
 muxctrl[1] => mux10:c1.ctrl[1]
 muxctrl[1] => mux11:c2.ctrl[1]
-muxctrl[1] => mux12:c3.ctrl[1]
+muxctrl[1] => Equal0.IN0
 iin[0] => mux10:c1.iin[0]
 iin[1] => mux10:c1.iin[1]
 iin[2] => mux10:c1.iin[2]
@@ -2143,8 +2165,7 @@ A0in[12] => mux11:c2.A0in[12]
 A0in[13] => mux11:c2.A0in[13]
 A0in[14] => mux11:c2.A0in[14]
 A0in[15] => mux11:c2.A0in[15]
-D3out <= mux12:c3.D3out
-D4out <= mux12:c3.D4out
+D3_D4out <= D3_D4out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ziggHard|ZHdata:c1|comp1:c10|mux10:c1
@@ -2257,25 +2278,14 @@ ctrl[1] => Equal0.IN0
 ctrl[1] => Equal1.IN1
 
 
-|ziggHard|ZHdata:c1|comp1:c10|mux12:c3
-comp1in => D4out.DATAB
-comp1in => D3out.DATAB
-D3out <= D3out$latch.DB_MAX_OUTPUT_PORT_TYPE
-D4out <= D4out$latch.DB_MAX_OUTPUT_PORT_TYPE
-ctrl[0] => Equal0.IN1
-ctrl[0] => Equal1.IN0
-ctrl[1] => Equal0.IN0
-ctrl[1] => Equal1.IN1
-
-
 |ziggHard|ZHdata:c1|comp2:c11
-iclock => compout.CLK
+iclock => D1_D2_D5out~reg0.CLK
 muxctrl[0] => mux13:c1.ctrl[0]
 muxctrl[0] => mux14:c2.ctrl[0]
-muxctrl[0] => mux15:c3.ctrl[0]
+muxctrl[0] => Equal0.IN1
 muxctrl[1] => mux13:c1.ctrl[1]
 muxctrl[1] => mux14:c2.ctrl[1]
-muxctrl[1] => mux15:c3.ctrl[1]
+muxctrl[1] => Equal0.IN0
 iin[0] => mux13:c1.iin[0]
 iin[1] => mux13:c1.iin[1]
 iin[2] => mux13:c1.iin[2]
@@ -2372,9 +2382,7 @@ fxin[12] => mux14:c2.fxin[12]
 fxin[13] => mux14:c2.fxin[13]
 fxin[14] => mux14:c2.fxin[14]
 fxin[15] => mux14:c2.fxin[15]
-D1out <= mux15:c3.D1out
-D2out <= mux15:c3.D2out
-D5out <= mux15:c3.D5out
+D1_D2_D5out <= D1_D2_D5out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ziggHard|ZHdata:c1|comp2:c11|mux13:c1
@@ -2523,21 +2531,6 @@ ctrl[1] => Equal1.IN1
 ctrl[1] => Equal2.IN0
 
 
-|ziggHard|ZHdata:c1|comp2:c11|mux15:c3
-comp2in => D5out.DATAB
-comp2in => D2out.DATAB
-comp2in => D1out.DATAB
-D1out <= D1out$latch.DB_MAX_OUTPUT_PORT_TYPE
-D2out <= D2out$latch.DB_MAX_OUTPUT_PORT_TYPE
-D5out <= D5out$latch.DB_MAX_OUTPUT_PORT_TYPE
-ctrl[0] => Equal0.IN1
-ctrl[0] => Equal1.IN0
-ctrl[0] => Equal2.IN1
-ctrl[1] => Equal0.IN0
-ctrl[1] => Equal1.IN1
-ctrl[1] => Equal2.IN0
-
-
 |ziggHard|ZHdata:c1|mux24:c12
 outin[0] => output.DATAA
 outin[0] => Add0.IN32
@@ -2670,41 +2663,6 @@ xuoutV[12] <= xuoutV[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 xuoutV[13] <= xuoutV[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 xuoutV[14] <= xuoutV[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 xuoutV[15] <= xuoutV[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|ziggHard|ZHdata:c1|VD:cd1
-iclock => DoutV~reg0.CLK
-Dctrl => DoutV~reg0.ENA
-DinV => DoutV~reg0.DATAIN
-DoutV <= DoutV~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|ziggHard|ZHdata:c1|VD:cd2
-iclock => DoutV~reg0.CLK
-Dctrl => DoutV~reg0.ENA
-DinV => DoutV~reg0.DATAIN
-DoutV <= DoutV~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|ziggHard|ZHdata:c1|VD:cd3
-iclock => DoutV~reg0.CLK
-Dctrl => DoutV~reg0.ENA
-DinV => DoutV~reg0.DATAIN
-DoutV <= DoutV~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|ziggHard|ZHdata:c1|VD:cd4
-iclock => DoutV~reg0.CLK
-Dctrl => DoutV~reg0.ENA
-DinV => DoutV~reg0.DATAIN
-DoutV <= DoutV~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|ziggHard|ZHdata:c1|VD:cd5
-iclock => DoutV~reg0.CLK
-Dctrl => DoutV~reg0.ENA
-DinV => DoutV~reg0.DATAIN
-DoutV <= DoutV~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ziggHard|ZHdata:c1|Vxu:cxiplus
@@ -2843,6 +2801,28 @@ xuoutV[15] <= xuoutV[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 |ziggHard|ZHcontrol:c2
 iclock => qCounter:Q.iclock
+iclock => isOut[0]~reg0.CLK
+iclock => isOut[1]~reg0.CLK
+iclock => isOut[2]~reg0.CLK
+iclock => isOut[3]~reg0.CLK
+iclock => isOut[4]~reg0.CLK
+iclock => isOut[5]~reg0.CLK
+iclock => isOut[6]~reg0.CLK
+iclock => isOut[7]~reg0.CLK
+iclock => isOut[8]~reg0.CLK
+iclock => isOut[9]~reg0.CLK
+iclock => isOut[10]~reg0.CLK
+iclock => isOut[11]~reg0.CLK
+iclock => isOut[12]~reg0.CLK
+iclock => isOut[13]~reg0.CLK
+iclock => isOut[14]~reg0.CLK
+iclock => isOut[15]~reg0.CLK
+iclock => isOut[16]~reg0.CLK
+iclock => isOut[17]~reg0.CLK
+iclock => isOut[18]~reg0.CLK
+iclock => isOut[19]~reg0.CLK
+iclock => isOut[20]~reg0.CLK
+iclock => ziggen~reg0.CLK
 iclock => D5en~reg0.CLK
 iclock => D4en~reg0.CLK
 iclock => D2en~reg0.CLK
@@ -2855,7 +2835,6 @@ iclock => V4en~reg0.CLK
 iclock => V3en~reg0.CLK
 iclock => V2en~reg0.CLK
 iclock => V1en~reg0.CLK
-iclock => mux_24~reg0.CLK
 iclock => mux13_15[0]~reg0.CLK
 iclock => mux13_15[1]~reg0.CLK
 iclock => mux10_12[0]~reg0.CLK
@@ -2866,7 +2845,6 @@ iclock => mux1_3[0]~reg0.CLK
 iclock => mux1_3[1]~reg0.CLK
 iclock => mux22_23[0]~reg0.CLK
 iclock => mux22_23[1]~reg0.CLK
-iclock => NC.CLK
 iclock => isVal~reg0.CLK
 iclock => mux7_9[0]~reg0.CLK
 iclock => mux7_9[1]~reg0.CLK
@@ -2876,14 +2854,36 @@ iclock => mux18_19[0]~reg0.CLK
 iclock => mux18_19[1]~reg0.CLK
 iclock => mux16_17[0]~reg0.CLK
 iclock => mux16_17[1]~reg0.CLK
+iclock => isouttemp[0].CLK
+iclock => isouttemp[1].CLK
+iclock => isouttemp[2].CLK
+iclock => isouttemp[3].CLK
+iclock => isouttemp[4].CLK
+iclock => isouttemp[5].CLK
+iclock => isouttemp[6].CLK
+iclock => isouttemp[7].CLK
+iclock => isouttemp[8].CLK
+iclock => isouttemp[9].CLK
+iclock => isouttemp[10].CLK
+iclock => isouttemp[11].CLK
+iclock => isouttemp[12].CLK
+iclock => isouttemp[13].CLK
+iclock => isouttemp[14].CLK
+iclock => isouttemp[15].CLK
+iclock => isouttemp[16].CLK
+iclock => isouttemp[17].CLK
+iclock => isouttemp[18].CLK
+iclock => isouttemp[19].CLK
+iclock => isouttemp[20].CLK
 start => qCounter:Q.start
 reset => qCounter:Q.reset
 D1ctrl => qCounter:Q.D1qc
+D2ctrl => Mux8.IN4
 D2ctrl => qCounter:Q.D2qc
 D3ctrl => qCounter:Q.D3qc
 D4ctrl => qCounter:Q.D4qc
 D5ctrl => qCounter:Q.D5qc
-NCTRL => Mux9.IN0
+NCTRL => ~NO_FANOUT~
 mux1_3[0] <= mux1_3[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 mux1_3[1] <= mux1_3[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 mux4_6[0] <= mux4_6[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -2902,8 +2902,33 @@ mux20_21[0] <= mux20_21[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 mux20_21[1] <= mux20_21[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 mux22_23[0] <= mux22_23[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 mux22_23[1] <= mux22_23[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-mux_24 <= mux_24~reg0.DB_MAX_OUTPUT_PORT_TYPE
+mux_24 <= comb.DB_MAX_OUTPUT_PORT_TYPE
 isVal <= isVal~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[0] <= isOut[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[1] <= isOut[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[2] <= isOut[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[3] <= isOut[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[4] <= isOut[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[5] <= isOut[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[6] <= isOut[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[7] <= isOut[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[8] <= isOut[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[9] <= isOut[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[10] <= isOut[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[11] <= isOut[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[12] <= isOut[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[13] <= isOut[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[14] <= isOut[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[15] <= isOut[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[16] <= isOut[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[17] <= isOut[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[18] <= isOut[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[19] <= isOut[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isOut[20] <= isOut[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+StateOut[0] <= qCounter:Q.S[0]
+StateOut[1] <= qCounter:Q.S[1]
+StateOut[2] <= qCounter:Q.S[2]
+StateOut[3] <= qCounter:Q.S[3]
 V1en <= V1en~reg0.DB_MAX_OUTPUT_PORT_TYPE
 V2en <= V2en~reg0.DB_MAX_OUTPUT_PORT_TYPE
 V3en <= V3en~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -2916,6 +2941,7 @@ D2en <= D2en~reg0.DB_MAX_OUTPUT_PORT_TYPE
 D3en <= D3en~reg0.DB_MAX_OUTPUT_PORT_TYPE
 D4en <= D4en~reg0.DB_MAX_OUTPUT_PORT_TYPE
 D5en <= D5en~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ziggen <= ziggen~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ziggHard|ZHcontrol:c2|qCounter:Q
@@ -2923,7 +2949,9 @@ iclock => Si[0].CLK
 iclock => Si[1].CLK
 iclock => Si[2].CLK
 iclock => Si[3].CLK
-start => Mux3.IN11
+iclock => clk2.CLK
+start => Mux0.IN12
+start => Mux1.IN12
 reset => Si.OUTPUTSELECT
 reset => Si.OUTPUTSELECT
 reset => Si.OUTPUTSELECT
@@ -2942,7 +2970,7 @@ D2qc => Si.OUTPUTSELECT
 D2qc => Si.OUTPUTSELECT
 D2qc => Si.OUTPUTSELECT
 D3qc => Si.OUTPUTSELECT
-D3qc => Mux2.IN5
+D3qc => Mux2.IN6
 D4qc => Si.OUTPUTSELECT
 D4qc => Si.OUTPUTSELECT
 D4qc => Si.OUTPUTSELECT

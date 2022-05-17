@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ziggHard
-Mon May 16 16:29:26 2022
+Tue May 17 15:59:41 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -19,24 +19,26 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  11. User-Specified and Inferred Latches
  12. Registers Removed During Synthesis
  13. General Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for ZHdata:c1|zighardLUT:c6|altsyncram:altsyncram_component|altsyncram_s1u3:auto_generated
- 16. Parameter Settings for User Entity Instance: ZHdata:c1|zighardLUT:c6|altsyncram:altsyncram_component
- 17. Parameter Settings for Inferred Entity Instance: ZHdata:c1|mult2:c8|lpm_mult:Mult1
- 18. Parameter Settings for Inferred Entity Instance: ZHdata:c1|mult2:c8|lpm_mult:Mult0
- 19. Parameter Settings for Inferred Entity Instance: ZHdata:c1|mult1:c7|lpm_mult:Mult0
- 20. altsyncram Parameter Settings by Entity Instance
- 21. lpm_mult Parameter Settings by Entity Instance
- 22. Port Connectivity Checks: "ZHdata:c1|comp2:c11"
- 23. Port Connectivity Checks: "ZHdata:c1|comp1:c10"
- 24. Port Connectivity Checks: "ZHdata:c1|add1:c9"
- 25. Port Connectivity Checks: "ZHdata:c1|mult2:c8"
- 26. Port Connectivity Checks: "ZHdata:c1|mult1:c7"
- 27. Port Connectivity Checks: "ZHdata:c1|zighardLUT:c6"
- 28. Port Connectivity Checks: "ZHdata:c1|V3:c3"
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for ZHdata:c1|zighardLUT:c6|altsyncram:altsyncram_component|altsyncram_s1u3:auto_generated
+ 17. Parameter Settings for User Entity Instance: ZHdata:c1|zighardLUT:c6|altsyncram:altsyncram_component
+ 18. Parameter Settings for Inferred Entity Instance: ZHdata:c1|mult2:c8|lpm_mult:Mult1
+ 19. Parameter Settings for Inferred Entity Instance: ZHdata:c1|mult2:c8|lpm_mult:Mult0
+ 20. Parameter Settings for Inferred Entity Instance: ZHdata:c1|mult1:c7|lpm_mult:Mult0
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. lpm_mult Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "ZHcontrol:c2"
+ 24. Port Connectivity Checks: "ZHdata:c1|comp2:c11"
+ 25. Port Connectivity Checks: "ZHdata:c1|comp1:c10"
+ 26. Port Connectivity Checks: "ZHdata:c1|add1:c9"
+ 27. Port Connectivity Checks: "ZHdata:c1|mult2:c8"
+ 28. Port Connectivity Checks: "ZHdata:c1|mult1:c7"
+ 29. Port Connectivity Checks: "ZHdata:c1|zighardLUT:c6"
+ 30. Port Connectivity Checks: "ZHdata:c1|V3:c3"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -62,16 +64,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 16 16:29:26 2022       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 17 15:59:41 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ziggHard                                    ;
 ; Top-level Entity Name              ; ziggHard                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 413                                         ;
-;     Total combinational functions  ; 359                                         ;
-;     Dedicated logic registers      ; 184                                         ;
-; Total registers                    ; 184                                         ;
-; Total pins                         ; 20                                          ;
+; Total logic elements               ; 441                                         ;
+;     Total combinational functions  ; 376                                         ;
+;     Dedicated logic registers      ; 194                                         ;
+; Total registers                    ; 194                                         ;
+; Total pins                         ; 41                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
 ; Embedded Multiplier 9-bit elements ; 6                                           ;
@@ -203,10 +205,8 @@ refer to the applicable agreement for further details.
 ; mux8.vhd                         ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux8.vhd               ;         ;
 ; mux10.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux10.vhd              ;         ;
 ; mux11.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux11.vhd              ;         ;
-; mux12.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux12.vhd              ;         ;
 ; mux13.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux13.vhd              ;         ;
 ; mux14.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux14.vhd              ;         ;
-; mux15.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd              ;         ;
 ; mult1.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult1.vhd              ;         ;
 ; mult2.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd              ;         ;
 ; comp1.vhd                        ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/comp1.vhd              ;         ;
@@ -224,7 +224,6 @@ refer to the applicable agreement for further details.
 ; LFSR_33.vhd                      ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/LFSR_33.vhd            ;         ;
 ; zighardLUT.vhd                   ; yes             ; User Wizard-Generated File             ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zighardLUT.vhd         ;         ;
 ; Vxu.vhd                          ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/Vxu.vhd                ;         ;
-; VD.vhd                           ; yes             ; User VHDL File                         ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/VD.vhd                 ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf            ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc     ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc               ;         ;
@@ -252,31 +251,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 413       ;
+; Estimated Total logic elements              ; 441       ;
 ;                                             ;           ;
-; Total combinational functions               ; 359       ;
+; Total combinational functions               ; 376       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 181       ;
-;     -- 3 input functions                    ; 122       ;
-;     -- <=2 input functions                  ; 56        ;
+;     -- 4 input functions                    ; 180       ;
+;     -- 3 input functions                    ; 117       ;
+;     -- <=2 input functions                  ; 79        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 299       ;
-;     -- arithmetic mode                      ; 60        ;
+;     -- normal mode                          ; 296       ;
+;     -- arithmetic mode                      ; 80        ;
 ;                                             ;           ;
-; Total registers                             ; 184       ;
-;     -- Dedicated logic registers            ; 184       ;
+; Total registers                             ; 194       ;
+;     -- Dedicated logic registers            ; 194       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 20        ;
+; I/O pins                                    ; 41        ;
 ; Total memory bits                           ; 4096      ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 6         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 200       ;
-; Total fan-out                               ; 2176      ;
-; Average fan-out                             ; 3.60      ;
+; Maximum fan-out                             ; 177       ;
+; Total fan-out                               ; 2284      ;
+; Average fan-out                             ; 3.39      ;
 +---------------------------------------------+-----------+
 
 
@@ -285,39 +284,32 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                              ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |ziggHard                                    ; 359 (1)             ; 184 (0)                   ; 4096        ; 6            ; 0       ; 3         ; 20   ; 0            ; |ziggHard                                                                                        ; ziggHard        ; work         ;
-;    |ZHcontrol:c2|                            ; 58 (37)             ; 32 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHcontrol:c2                                                                           ; ZHcontrol       ; work         ;
-;       |qCounter:Q|                           ; 21 (21)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHcontrol:c2|qCounter:Q                                                                ; qCounter        ; work         ;
-;    |ZHdata:c1|                               ; 300 (0)             ; 152 (0)                   ; 4096        ; 6            ; 0       ; 3         ; 0    ; 0            ; |ziggHard|ZHdata:c1                                                                              ; ZHdata          ; work         ;
-;       |LFSR_33:c5|                           ; 13 (13)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|LFSR_33:c5                                                                   ; LFSR_33         ; work         ;
-;       |V1:c1|                                ; 17 (17)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|V1:c1                                                                        ; V1              ; work         ;
+; |ziggHard                                    ; 376 (1)             ; 194 (0)                   ; 4096        ; 6            ; 0       ; 3         ; 41   ; 0            ; |ziggHard                                                                                        ; ziggHard        ; work         ;
+;    |ZHcontrol:c2|                            ; 73 (46)             ; 46 (41)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHcontrol:c2                                                                           ; ZHcontrol       ; work         ;
+;       |qCounter:Q|                           ; 27 (27)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHcontrol:c2|qCounter:Q                                                                ; qCounter        ; work         ;
+;    |ZHdata:c1|                               ; 302 (2)             ; 148 (0)                   ; 4096        ; 6            ; 0       ; 3         ; 0    ; 0            ; |ziggHard|ZHdata:c1                                                                              ; ZHdata          ; work         ;
+;       |LFSR_33:c5|                           ; 14 (14)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|LFSR_33:c5                                                                   ; LFSR_33         ; work         ;
+;       |V1:c1|                                ; 16 (0)              ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|V1:c1                                                                        ; V1              ; work         ;
+;          |mux16:c1|                          ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|V1:c1|mux16:c1                                                               ; mux16           ; work         ;
 ;       |V2:c2|                                ; 17 (0)              ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|V2:c2                                                                        ; V2              ; work         ;
 ;          |mux18:c1|                          ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|V2:c2|mux18:c1                                                               ; mux18           ; work         ;
 ;       |V3:c3|                                ; 17 (9)              ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|V3:c3                                                                        ; V3              ; work         ;
 ;          |mux20:c1|                          ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|V3:c3|mux20:c1                                                               ; mux20           ; work         ;
-;       |V4:c4|                                ; 17 (0)              ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|V4:c4                                                                        ; V4              ; work         ;
-;          |mux22:c1|                          ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|V4:c4|mux22:c1                                                               ; mux22           ; work         ;
-;       |VD:cd1|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|VD:cd1                                                                       ; VD              ; work         ;
-;       |VD:cd2|                               ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|VD:cd2                                                                       ; VD              ; work         ;
-;       |VD:cd3|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|VD:cd3                                                                       ; VD              ; work         ;
-;       |VD:cd4|                               ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|VD:cd4                                                                       ; VD              ; work         ;
-;       |VD:cd5|                               ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|VD:cd5                                                                       ; VD              ; work         ;
+;       |V4:c4|                                ; 16 (10)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|V4:c4                                                                        ; V4              ; work         ;
+;          |mux22:c1|                          ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|V4:c4|mux22:c1                                                               ; mux22           ; work         ;
 ;       |Vxu:c13|                              ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|Vxu:c13                                                                      ; Vxu             ; work         ;
 ;       |Vxu:cU0|                              ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|Vxu:cU0                                                                      ; Vxu             ; work         ;
 ;       |Vxu:cxiplus|                          ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|Vxu:cxiplus                                                                  ; Vxu             ; work         ;
 ;       |add1:c9|                              ; 74 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|add1:c9                                                                      ; add1            ; work         ;
-;          |mux7:c1|                           ; 57 (57)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|add1:c9|mux7:c1                                                              ; mux7            ; work         ;
-;          |mux8:c2|                           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|add1:c9|mux8:c2                                                              ; mux8            ; work         ;
-;       |comp1:c10|                            ; 11 (10)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|comp1:c10                                                                    ; comp1           ; work         ;
-;          |mux12:c3|                          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|comp1:c10|mux12:c3                                                           ; mux12           ; work         ;
-;       |comp2:c11|                            ; 50 (16)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|comp2:c11                                                                    ; comp2           ; work         ;
-;          |mux13:c1|                          ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|comp2:c11|mux13:c1                                                           ; mux13           ; work         ;
-;          |mux14:c2|                          ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|comp2:c11|mux14:c2                                                           ; mux14           ; work         ;
-;          |mux15:c3|                          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|comp2:c11|mux15:c3                                                           ; mux15           ; work         ;
+;          |mux7:c1|                           ; 58 (58)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|add1:c9|mux7:c1                                                              ; mux7            ; work         ;
+;       |comp1:c10|                            ; 10 (10)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|comp1:c10                                                                    ; comp1           ; work         ;
+;       |comp2:c11|                            ; 65 (25)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|comp2:c11                                                                    ; comp2           ; work         ;
+;          |mux13:c1|                          ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|comp2:c11|mux13:c1                                                           ; mux13           ; work         ;
+;          |mux14:c2|                          ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ziggHard|ZHdata:c1|comp2:c11|mux14:c2                                                           ; mux14           ; work         ;
 ;       |mult1:c7|                             ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ziggHard|ZHdata:c1|mult1:c7                                                                     ; mult1           ; work         ;
 ;          |lpm_mult:Mult0|                    ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ziggHard|ZHdata:c1|mult1:c7|lpm_mult:Mult0                                                      ; lpm_mult        ; work         ;
 ;             |mult_4dt:auto_generated|        ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ziggHard|ZHdata:c1|mult1:c7|lpm_mult:Mult0|mult_4dt:auto_generated                              ; mult_4dt        ; work         ;
-;       |mult2:c8|                             ; 64 (16)             ; 0 (0)                     ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |ziggHard|ZHdata:c1|mult2:c8                                                                     ; mult2           ; work         ;
+;       |mult2:c8|                             ; 54 (6)              ; 0 (0)                     ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |ziggHard|ZHdata:c1|mult2:c8                                                                     ; mult2           ; work         ;
 ;          |lpm_mult:Mult0|                    ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ziggHard|ZHdata:c1|mult2:c8|lpm_mult:Mult0                                                      ; lpm_mult        ; work         ;
 ;             |mult_7dt:auto_generated|        ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ziggHard|ZHdata:c1|mult2:c8|lpm_mult:Mult0|mult_7dt:auto_generated                              ; mult_7dt        ; work         ;
 ;          |lpm_mult:Mult1|                    ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ziggHard|ZHdata:c1|mult2:c8|lpm_mult:Mult1                                                      ; lpm_mult        ; work         ;
@@ -389,25 +381,45 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; ZHdata:c1|add1:c9|mux7:c1|output[13]                ; ZHdata:c1|add1:c9|mux7:c1|output[15] ; yes                    ;
 ; ZHdata:c1|add1:c9|mux7:c1|output[14]                ; ZHdata:c1|add1:c9|mux7:c1|output[15] ; yes                    ;
 ; ZHdata:c1|add1:c9|mux7:c1|output[15]                ; ZHdata:c1|add1:c9|mux7:c1|output[15] ; yes                    ;
-; ZHdata:c1|comp2:c11|mux15:c3|D1out                  ; ZHcontrol:c2|mux13_15[1]             ; yes                    ;
-; ZHdata:c1|comp1:c10|mux12:c3|D3out                  ; ZHcontrol:c2|mux10_12[0]             ; yes                    ;
-; Number of user-specified and inferred latches = 18  ;                                      ;                        ;
+; Number of user-specified and inferred latches = 16  ;                                      ;                        ;
 +-----------------------------------------------------+--------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                           ;
-+---------------------------------------+--------------------------------------+
-; Register name                         ; Reason for Removal                   ;
-+---------------------------------------+--------------------------------------+
-; ZHcontrol:c2|Xiplusen                 ; Merged with ZHcontrol:c2|U0en        ;
-; ZHcontrol:c2|Xuen                     ; Merged with ZHcontrol:c2|D1en        ;
-; ZHcontrol:c2|D3en                     ; Merged with ZHcontrol:c2|D1en        ;
-; ZHcontrol:c2|mux1_3[1]                ; Merged with ZHcontrol:c2|mux1_3[0]   ;
-; ZHcontrol:c2|mux10_12[1]              ; Merged with ZHcontrol:c2|mux10_12[0] ;
-; Total Number of Removed Registers = 5 ;                                      ;
-+---------------------------------------+--------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; ZHcontrol:c2|isouttemp[7]              ; Merged with ZHcontrol:c2|isOut[7]      ;
+; ZHcontrol:c2|isouttemp[6]              ; Merged with ZHcontrol:c2|isOut[6]      ;
+; ZHcontrol:c2|isouttemp[5]              ; Merged with ZHcontrol:c2|isOut[5]      ;
+; ZHcontrol:c2|isouttemp[4]              ; Merged with ZHcontrol:c2|isOut[4]      ;
+; ZHcontrol:c2|isouttemp[3]              ; Merged with ZHcontrol:c2|isOut[3]      ;
+; ZHcontrol:c2|isouttemp[2]              ; Merged with ZHcontrol:c2|isOut[2]      ;
+; ZHcontrol:c2|isouttemp[1]              ; Merged with ZHcontrol:c2|isOut[1]      ;
+; ZHcontrol:c2|isouttemp[0]              ; Merged with ZHcontrol:c2|isOut[0]      ;
+; ZHcontrol:c2|isouttemp[8]              ; Merged with ZHcontrol:c2|isOut[8]      ;
+; ZHcontrol:c2|isouttemp[9]              ; Merged with ZHcontrol:c2|isOut[9]      ;
+; ZHcontrol:c2|isouttemp[10]             ; Merged with ZHcontrol:c2|isOut[10]     ;
+; ZHcontrol:c2|isouttemp[11]             ; Merged with ZHcontrol:c2|isOut[11]     ;
+; ZHcontrol:c2|isouttemp[12]             ; Merged with ZHcontrol:c2|isOut[12]     ;
+; ZHcontrol:c2|isouttemp[13]             ; Merged with ZHcontrol:c2|isOut[13]     ;
+; ZHcontrol:c2|isouttemp[14]             ; Merged with ZHcontrol:c2|isOut[14]     ;
+; ZHcontrol:c2|isouttemp[15]             ; Merged with ZHcontrol:c2|isOut[15]     ;
+; ZHcontrol:c2|isouttemp[16]             ; Merged with ZHcontrol:c2|isOut[16]     ;
+; ZHcontrol:c2|isouttemp[17]             ; Merged with ZHcontrol:c2|isOut[17]     ;
+; ZHcontrol:c2|isouttemp[18]             ; Merged with ZHcontrol:c2|isOut[18]     ;
+; ZHcontrol:c2|isouttemp[19]             ; Merged with ZHcontrol:c2|isOut[19]     ;
+; ZHcontrol:c2|isouttemp[20]             ; Merged with ZHcontrol:c2|isOut[20]     ;
+; ZHcontrol:c2|U0en                      ; Merged with ZHcontrol:c2|Xiplusen      ;
+; ZHcontrol:c2|mux22_23[0]               ; Merged with ZHcontrol:c2|mux1_3[0]     ;
+; ZHcontrol:c2|mux22_23[1]               ; Merged with ZHcontrol:c2|mux1_3[1]     ;
+; ZHcontrol:c2|mux16_17[0]               ; Stuck at VCC due to stuck port data_in ;
+; ZHcontrol:c2|mux1_3[1]                 ; Merged with ZHcontrol:c2|mux1_3[0]     ;
+; ZHcontrol:c2|mux10_12[1]               ; Merged with ZHcontrol:c2|mux10_12[0]   ;
+; Total Number of Removed Registers = 27 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -415,14 +427,24 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 184   ;
-; Number of registers using Synchronous Clear  ; 27    ;
-; Number of registers using Synchronous Load   ; 27    ;
+; Total registers                              ; 194   ;
+; Number of registers using Synchronous Clear  ; 9     ;
+; Number of registers using Synchronous Load   ; 19    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 126   ;
+; Number of registers using Clock Enable       ; 180   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; ZHdata:c1|LFSR_33:c5|clk2              ; 34      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -430,27 +452,26 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |ziggHard|ZHdata:c1|V1:c1|xi_out_youtV[4]         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |ziggHard|ZHdata:c1|V1:c1|xi_out_youtV[12]        ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |ziggHard|ZHdata:c1|V3:c3|i_ys1_fxoutV[9]         ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |ziggHard|ZHdata:c1|V3:c3|i_ys1_fxoutV[6]         ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |ziggHard|ZHdata:c1|V4:c4|U1A_xusqoutV[0]         ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |ziggHard|ZHdata:c1|V2:c2|U1_fxs1outV[14]         ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |ziggHard|ZHdata:c1|V3:c3|i_ys1_fxoutV[4]         ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |ziggHard|ZHdata:c1|V4:c4|U1A_xusqoutV[6]         ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |ziggHard|ZHdata:c1|V2:c2|U1_fxs1outV[12]         ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; Yes        ; |ziggHard|ZHcontrol:c2|mux18_19[1]                ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 6 LEs                ; 14 LEs                 ; Yes        ; |ziggHard|ZHcontrol:c2|mux16_17[0]                ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 6 LEs                ; 14 LEs                 ; Yes        ; |ziggHard|ZHcontrol:c2|mux20_21[1]                ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |ziggHard|ZHcontrol:c2|mux20_21[0]                ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |ziggHard|ZHcontrol:c2|mux7_9[0]                  ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |ziggHard|ZHcontrol:c2|mux22_23[1]                ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; Yes        ; |ziggHard|ZHcontrol:c2|mux16_17[0]                ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |ziggHard|ZHcontrol:c2|mux13_15[0]                ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; Yes        ; |ziggHard|ZHcontrol:c2|mux10_12[1]                ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |ziggHard|ZHcontrol:c2|mux4_6[1]                  ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; Yes        ; |ziggHard|ZHcontrol:c2|mux10_12[0]                ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |ziggHard|ZHcontrol:c2|mux4_6[0]                  ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; Yes        ; |ziggHard|ZHcontrol:c2|mux1_3[0]                  ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|mult2:c8|mux5:c2|output[7]    ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|mult2:c8|mux4:c1|output[15]   ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|comp2:c11|mux14:c2|output[12] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|comp2:c11|mux13:c1|output[5]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|add1:c9|mux7:c1|output[12]    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|add1:c9|mux7:c1|output[5]     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|comp1:c10|mux10:c1|output[15] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|mult2:c8|mux5:c2|output[6]    ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|mult2:c8|mux4:c1|output[14]   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|comp2:c11|mux13:c1|output[3]  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|comp2:c11|mux14:c2|output[8]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|add1:c9|mux7:c1|output[15]    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|add1:c9|mux7:c1|output[0]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ziggHard|ZHdata:c1|comp1:c10|mux10:c1|output[14] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
@@ -691,29 +712,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+-----------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ZHdata:c1|comp2:c11"                                                                                ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                 ; Type   ; Severity ; Details                                                                             ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; twofivefivein[7..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; twofivefivein[15..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; d2out                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; d5out                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ZHcontrol:c2"                                                                        ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; isval ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ZHdata:c1|comp1:c10"                                                                       ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; zeroin      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a0in[6..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; a0in[15..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a0in[2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; d4out       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "ZHdata:c1|comp2:c11"        ;
++----------------------+-------+----------+--------------+
+; Port                 ; Type  ; Severity ; Details      ;
++----------------------+-------+----------+--------------+
+; twofivefivein[7..0]  ; Input ; Info     ; Stuck at VCC ;
+; twofivefivein[15..8] ; Input ; Info     ; Stuck at GND ;
++----------------------+-------+----------+--------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "ZHdata:c1|comp1:c10" ;
++-------------+-------+----------+----------------+
+; Port        ; Type  ; Severity ; Details        ;
++-------------+-------+----------+----------------+
+; zeroin      ; Input ; Info     ; Stuck at GND   ;
+; a0in[6..3]  ; Input ; Info     ; Stuck at VCC   ;
+; a0in[15..7] ; Input ; Info     ; Stuck at GND   ;
+; a0in[2..0]  ; Input ; Info     ; Stuck at GND   ;
++-------------+-------+----------+----------------+
 
 
 +--------------------------------------------------+
@@ -801,29 +828,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 20                          ;
-; cycloneiii_ff         ; 184                         ;
-;     ENA               ; 98                          ;
-;     ENA SCLR          ; 1                           ;
-;     ENA SCLR SLD      ; 26                          ;
-;     ENA SLD           ; 1                           ;
-;     plain             ; 58                          ;
-; cycloneiii_lcell_comb ; 359                         ;
-;     arith             ; 60                          ;
-;         2 data inputs ; 21                          ;
+; boundary_port         ; 41                          ;
+; cycloneiii_ff         ; 194                         ;
+;     ENA               ; 162                         ;
+;     ENA SCLR SLD      ; 8                           ;
+;     ENA SLD           ; 10                          ;
+;     SCLR SLD          ; 1                           ;
+;     plain             ; 13                          ;
+; cycloneiii_lcell_comb ; 376                         ;
+;     arith             ; 80                          ;
+;         2 data inputs ; 41                          ;
 ;         3 data inputs ; 39                          ;
-;     normal            ; 299                         ;
+;     normal            ; 296                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 29                          ;
-;         3 data inputs ; 83                          ;
-;         4 data inputs ; 181                         ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 78                          ;
+;         4 data inputs ; 180                         ;
 ; cycloneiii_mac_mult   ; 3                           ;
 ; cycloneiii_mac_out    ; 3                           ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.50                        ;
-; Average LUT depth     ; 2.16                        ;
+; Average LUT depth     ; 2.32                        ;
 +-----------------------+-----------------------------+
 
 
@@ -842,24 +869,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 16 16:28:58 2022
+    Info: Processing started: Tue May 17 15:59:12 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ziggHard -c ziggHard
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file qcounter.vhd
-    Info (12022): Found design unit 1: qCounter-behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/qCounter.vhd Line: 19
+    Info (12022): Found design unit 1: qCounter-behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/qCounter.vhd Line: 21
     Info (12023): Found entity 1: qCounter File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/qCounter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file zigghard.vhd
-    Info (12022): Found design unit 1: ziggHard-behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd Line: 12
+    Info (12022): Found design unit 1: ziggHard-behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd Line: 13
     Info (12023): Found entity 1: ziggHard File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file zhcontrol.vhd
-    Info (12022): Found design unit 1: ZHcontrol-behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 33
+    Info (12022): Found design unit 1: ZHcontrol-behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 36
     Info (12023): Found entity 1: ZHcontrol File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux1.vhd
     Info (12022): Found design unit 1: Mux1-bhv File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/Mux1.vhd Line: 13
     Info (12023): Found entity 1: Mux1 File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/Mux1.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file zhdata.vhd
-    Info (12022): Found design unit 1: ZHdata-behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 27
+    Info (12022): Found design unit 1: ZHdata-behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 28
     Info (12023): Found entity 1: ZHdata File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux2.vhd
     Info (12022): Found design unit 1: mux2-bhv File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux2.vhd Line: 13
@@ -974,31 +1001,33 @@ Info (12021): Found 2 design units, including 1 entities, in source file vd.vhd
     Info (12022): Found design unit 1: VD-behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/VD.vhd Line: 14
     Info (12023): Found entity 1: VD File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/VD.vhd Line: 5
 Info (12127): Elaborating entity "ziggHard" for the top level hierarchy
-Info (12128): Elaborating entity "ZHdata" for hierarchy "ZHdata:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd Line: 72
-Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(166): used explicit default value for signal "da" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 166
-Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(167): used explicit default value for signal "db" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 167
-Warning (10541): VHDL Signal Declaration warning at ZHdata.vhd(168): used implicit default value for signal "ea" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 168
-Warning (10541): VHDL Signal Declaration warning at ZHdata.vhd(168): used implicit default value for signal "eb" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 168
-Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(177): used explicit default value for signal "A" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 177
-Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(179): used explicit default value for signal "YmmYmminus1" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 179
-Warning (10541): VHDL Signal Declaration warning at ZHdata.vhd(181): used implicit default value for signal "xu" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 181
-Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(185): used explicit default value for signal "GRAD" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 185
-Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(187): used explicit default value for signal "one" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 187
-Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(189): used explicit default value for signal "ymax" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 189
-Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(191): used explicit default value for signal "yint" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 191
-Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(193): used explicit default value for signal "zero" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 193
-Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(195): used explicit default value for signal "A0" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 195
-Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(197): used explicit default value for signal "twofivefive" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 197
-Info (12128): Elaborating entity "V1" for hierarchy "ZHdata:c1|V1:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 211
+Warning (10036): Verilog HDL or VHDL warning at ziggHard.vhd(70): object "valSig" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd Line: 70
+Info (12128): Elaborating entity "ZHdata" for hierarchy "ZHdata:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd Line: 77
+Warning (10541): VHDL Signal Declaration warning at ZHdata.vhd(24): used implicit default value for signal "NC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 24
+Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(167): used explicit default value for signal "da" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 167
+Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(168): used explicit default value for signal "db" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 168
+Warning (10541): VHDL Signal Declaration warning at ZHdata.vhd(169): used implicit default value for signal "ea" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 169
+Warning (10541): VHDL Signal Declaration warning at ZHdata.vhd(169): used implicit default value for signal "eb" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 169
+Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(178): used explicit default value for signal "A" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 178
+Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(180): used explicit default value for signal "YmmYmminus1" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 180
+Warning (10541): VHDL Signal Declaration warning at ZHdata.vhd(182): used implicit default value for signal "xu" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 182
+Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(186): used explicit default value for signal "GRAD" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 186
+Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(188): used explicit default value for signal "one" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 188
+Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(190): used explicit default value for signal "ymax" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 190
+Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(192): used explicit default value for signal "yint" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 192
+Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(194): used explicit default value for signal "zero" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 194
+Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(196): used explicit default value for signal "A0" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 196
+Warning (10540): VHDL Signal Declaration warning at ZHdata.vhd(198): used explicit default value for signal "twofivefive" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 198
+Info (12128): Elaborating entity "V1" for hierarchy "ZHdata:c1|V1:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 215
 Info (12128): Elaborating entity "mux16" for hierarchy "ZHdata:c1|V1:c1|mux16:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V1.vhd Line: 36
-Info (12128): Elaborating entity "V2" for hierarchy "ZHdata:c1|V2:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 212
+Info (12128): Elaborating entity "V2" for hierarchy "ZHdata:c1|V2:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 216
 Info (12128): Elaborating entity "mux18" for hierarchy "ZHdata:c1|V2:c2|mux18:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V2.vhd Line: 39
-Info (12128): Elaborating entity "V3" for hierarchy "ZHdata:c1|V3:c3" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 213
+Info (12128): Elaborating entity "V3" for hierarchy "ZHdata:c1|V3:c3" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 217
 Info (12128): Elaborating entity "mux20" for hierarchy "ZHdata:c1|V3:c3|mux20:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V3.vhd Line: 40
-Info (12128): Elaborating entity "V4" for hierarchy "ZHdata:c1|V4:c4" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 214
+Info (12128): Elaborating entity "V4" for hierarchy "ZHdata:c1|V4:c4" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 218
 Info (12128): Elaborating entity "mux22" for hierarchy "ZHdata:c1|V4:c4|mux22:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/V4.vhd Line: 42
-Info (12128): Elaborating entity "LFSR_33" for hierarchy "ZHdata:c1|LFSR_33:c5" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 215
-Info (12128): Elaborating entity "zighardLUT" for hierarchy "ZHdata:c1|zighardLUT:c6" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 216
+Info (12128): Elaborating entity "LFSR_33" for hierarchy "ZHdata:c1|LFSR_33:c5" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 219
+Info (12128): Elaborating entity "zighardLUT" for hierarchy "ZHdata:c1|zighardLUT:c6" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 220
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ZHdata:c1|zighardLUT:c6|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zighardLUT.vhd Line: 67
 Info (12130): Elaborated megafunction instantiation "ZHdata:c1|zighardLUT:c6|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zighardLUT.vhd Line: 67
 Info (12133): Instantiated megafunction "ZHdata:c1|zighardLUT:c6|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/zighardLUT.vhd Line: 67
@@ -1055,12 +1084,12 @@ Info (12133): Instantiated megafunction "ZHdata:c1|zighardLUT:c6|altsyncram:alts
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_s1u3.tdf
     Info (12023): Found entity 1: altsyncram_s1u3 File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/db/altsyncram_s1u3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_s1u3" for hierarchy "ZHdata:c1|zighardLUT:c6|altsyncram:altsyncram_component|altsyncram_s1u3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "mult1" for hierarchy "ZHdata:c1|mult1:c7" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 217
+Info (12128): Elaborating entity "mult1" for hierarchy "ZHdata:c1|mult1:c7" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 221
 Warning (10492): VHDL Process Statement warning at mult1.vhd(56): signal "mux1out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult1.vhd Line: 56
 Warning (10492): VHDL Process Statement warning at mult1.vhd(56): signal "mux2out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult1.vhd Line: 56
 Info (12128): Elaborating entity "Mux1" for hierarchy "ZHdata:c1|mult1:c7|Mux1:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult1.vhd Line: 46
 Info (12128): Elaborating entity "mux2" for hierarchy "ZHdata:c1|mult1:c7|mux2:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult1.vhd Line: 47
-Info (12128): Elaborating entity "mult2" for hierarchy "ZHdata:c1|mult2:c8" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 218
+Info (12128): Elaborating entity "mult2" for hierarchy "ZHdata:c1|mult2:c8" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 222
 Warning (10492): VHDL Process Statement warning at mult2.vhd(53): signal "muxctrl" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd Line: 53
 Warning (10492): VHDL Process Statement warning at mult2.vhd(54): signal "mux1out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd Line: 54
 Warning (10492): VHDL Process Statement warning at mult2.vhd(54): signal "mux2out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd Line: 54
@@ -1068,7 +1097,7 @@ Warning (10492): VHDL Process Statement warning at mult2.vhd(56): signal "mux1ou
 Warning (10492): VHDL Process Statement warning at mult2.vhd(56): signal "mux2out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd Line: 56
 Info (12128): Elaborating entity "mux4" for hierarchy "ZHdata:c1|mult2:c8|mux4:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd Line: 46
 Info (12128): Elaborating entity "mux5" for hierarchy "ZHdata:c1|mult2:c8|mux5:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd Line: 47
-Info (12128): Elaborating entity "add1" for hierarchy "ZHdata:c1|add1:c9" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 219
+Info (12128): Elaborating entity "add1" for hierarchy "ZHdata:c1|add1:c9" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 223
 Info (12128): Elaborating entity "mux7" for hierarchy "ZHdata:c1|add1:c9|mux7:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/add1.vhd Line: 46
 Warning (10036): Verilog HDL or VHDL warning at mux7.vhd(21): object "outTemp" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 21
 Warning (10492): VHDL Process Statement warning at mux7.vhd(26): signal "inter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 26
@@ -1090,32 +1119,21 @@ Info (10041): Inferred latch for "output[13]" at mux7.vhd(19) File: C:/Users/fiv
 Info (10041): Inferred latch for "output[14]" at mux7.vhd(19) File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
 Info (10041): Inferred latch for "output[15]" at mux7.vhd(19) File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
 Info (12128): Elaborating entity "mux8" for hierarchy "ZHdata:c1|add1:c9|mux8:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/add1.vhd Line: 47
-Info (12128): Elaborating entity "comp1" for hierarchy "ZHdata:c1|comp1:c10" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 220
+Info (12128): Elaborating entity "comp1" for hierarchy "ZHdata:c1|comp1:c10" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 224
 Info (12128): Elaborating entity "mux10" for hierarchy "ZHdata:c1|comp1:c10|mux10:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/comp1.vhd Line: 47
 Info (12128): Elaborating entity "mux11" for hierarchy "ZHdata:c1|comp1:c10|mux11:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/comp1.vhd Line: 48
-Info (12128): Elaborating entity "mux12" for hierarchy "ZHdata:c1|comp1:c10|mux12:c3" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/comp1.vhd Line: 49
-Warning (10631): VHDL Process Statement warning at mux12.vhd(15): inferring latch(es) for signal or variable "D3out", which holds its previous value in one or more paths through the process File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux12.vhd Line: 15
-Warning (10631): VHDL Process Statement warning at mux12.vhd(15): inferring latch(es) for signal or variable "D4out", which holds its previous value in one or more paths through the process File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux12.vhd Line: 15
-Info (10041): Inferred latch for "D4out" at mux12.vhd(15) File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux12.vhd Line: 15
-Info (10041): Inferred latch for "D3out" at mux12.vhd(15) File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux12.vhd Line: 15
-Info (12128): Elaborating entity "comp2" for hierarchy "ZHdata:c1|comp2:c11" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 221
+Info (12128): Elaborating entity "comp2" for hierarchy "ZHdata:c1|comp2:c11" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 225
 Info (12128): Elaborating entity "mux13" for hierarchy "ZHdata:c1|comp2:c11|mux13:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/comp2.vhd Line: 46
 Info (12128): Elaborating entity "mux14" for hierarchy "ZHdata:c1|comp2:c11|mux14:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/comp2.vhd Line: 47
-Info (12128): Elaborating entity "mux15" for hierarchy "ZHdata:c1|comp2:c11|mux15:c3" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/comp2.vhd Line: 48
-Warning (10631): VHDL Process Statement warning at mux15.vhd(15): inferring latch(es) for signal or variable "D1out", which holds its previous value in one or more paths through the process File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd Line: 15
-Warning (10631): VHDL Process Statement warning at mux15.vhd(15): inferring latch(es) for signal or variable "D2out", which holds its previous value in one or more paths through the process File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd Line: 15
-Warning (10631): VHDL Process Statement warning at mux15.vhd(15): inferring latch(es) for signal or variable "D5out", which holds its previous value in one or more paths through the process File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd Line: 15
-Info (10041): Inferred latch for "D5out" at mux15.vhd(15) File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd Line: 15
-Info (10041): Inferred latch for "D2out" at mux15.vhd(15) File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd Line: 15
-Info (10041): Inferred latch for "D1out" at mux15.vhd(15) File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux15.vhd Line: 15
-Info (12128): Elaborating entity "mux24" for hierarchy "ZHdata:c1|mux24:c12" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 222
+Info (12128): Elaborating entity "mux24" for hierarchy "ZHdata:c1|mux24:c12" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 226
 Warning (10492): VHDL Process Statement warning at mux24.vhd(23): signal "inter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux24.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at mux24.vhd(25): signal "inter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux24.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at mux24.vhd(26): signal "inter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux24.vhd Line: 26
 Warning (10631): VHDL Process Statement warning at mux24.vhd(18): inferring latch(es) for signal or variable "output", which holds its previous value in one or more paths through the process File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux24.vhd Line: 18
-Info (12128): Elaborating entity "Vxu" for hierarchy "ZHdata:c1|Vxu:c13" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 223
-Info (12128): Elaborating entity "VD" for hierarchy "ZHdata:c1|VD:cd1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 224
-Info (12128): Elaborating entity "ZHcontrol" for hierarchy "ZHcontrol:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd Line: 73
-Info (12128): Elaborating entity "qCounter" for hierarchy "ZHcontrol:c2|qCounter:Q" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 55
+Info (12128): Elaborating entity "Vxu" for hierarchy "ZHdata:c1|Vxu:c13" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHdata.vhd Line: 227
+Info (12128): Elaborating entity "ZHcontrol" for hierarchy "ZHcontrol:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ziggHard.vhd Line: 78
+Warning (10541): VHDL Signal Declaration warning at ZHcontrol.vhd(25): used implicit default value for signal "mux_24" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 25
+Warning (10036): Verilog HDL or VHDL warning at ZHcontrol.vhd(39): object "NC" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 39
+Info (12128): Elaborating entity "qCounter" for hierarchy "ZHcontrol:c2|qCounter:Q" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 58
 Info (278001): Inferred 3 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ZHdata:c1|mult2:c8|Mult1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd Line: 56
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ZHdata:c1|mult2:c8|Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mult2.vhd Line: 54
@@ -1160,50 +1178,50 @@ Info (12133): Instantiated megafunction "ZHdata:c1|mult1:c7|lpm_mult:Mult0" with
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_4dt.tdf
     Info (12023): Found entity 1: mult_4dt File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/db/mult_4dt.tdf Line: 28
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[0] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[1] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[2] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[3] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[4] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[5] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[6] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[7] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[8] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[9] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[10] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[11] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[12] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[13] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[14] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Warning (13012): Latch ZHdata:c1|add1:c9|mux7:c1|output[15] has unsafe behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/mux7.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ZHcontrol:c2|mux7_9[0] File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDLhard/ZHcontrol.vhd Line: 70
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 478 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 525 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 436 logic cells
+    Info (21059): Implemented 38 output pins
+    Info (21061): Implemented 462 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
-    Info: Peak virtual memory: 4829 megabytes
-    Info: Processing ended: Mon May 16 16:29:26 2022
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:21
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 4832 megabytes
+    Info: Processing ended: Tue May 17 15:59:41 2022
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:24
 
 

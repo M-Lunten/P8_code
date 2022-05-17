@@ -18,7 +18,7 @@ port(
 	mux_24 : in std_logic;
 	state : in std_logic_vector(3 downto 0);
 	
-	V1en,V2en,V3en,V4en,U0en,Xuen,Xiplusen,D1en,D2en,D3en,D4en,D5en : in std_logic;
+	V1en,V2en,V3en,V4en,U0en,Xuen,Xiplusen,D1en,D2en,D3en,D4en,D5en,ziggen : in std_logic;
 	
 	ziggout : out std_logic_vector(15 downto 0);
 	D1_C,D2_C,D3_C,D4_C,D5_C,NC : out std_logic
@@ -125,7 +125,7 @@ port(
 	iclock : in std_logic;
 	muxctrl : in std_logic_vector(1 downto 0);
 	iin,U1Ain,zeroin,A0in : in std_logic_vector(15 downto 0);
-	D3out,D4out: out std_logic
+	D3_D4out: out std_logic
 	);
 end component;
 
@@ -134,12 +134,13 @@ port(
 	iclock : in std_logic;
 	muxctrl : in std_logic_vector(1 downto 0);
 	iin,xuin,yin,twofivefivein,xiplusin,fxin : in std_logic_vector(15 downto 0);
-	D1out,D2out,D5out: out std_logic
+	D1_D2_D5out: out std_logic
 	);
 end component;
 
 component Mux24 is
 port(
+	iclock : in std_logic;
 	outin: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
 	ctrl: in std_logic
@@ -199,9 +200,9 @@ signal twofivefive : std_logic_vector(15 downto 0):= "0000000011111111";
 
 signal iinV : std_logic_vector(15 downto 0);
 
-signal D1,D2,D3,D4,D5,comp1out,comp2out : std_logic;
+signal D1,D2,D3,D4,D5,comp1out,comp2out : std_logic := '0';
 
-signal V1out,V2out,V3out,V4out,mult1out,mult2out,addout,U1inV,xiinV,xuoutV,xiplusoutV,U0out : std_logic_vector(15 downto 0);
+signal V1out,V2out,V3out,V4out,mult1out,mult2out,addout,U1inV,xiinV,xuoutV,xiplusoutV,U0out,ziggoutS,mux24out : std_logic_vector(15 downto 0);
 
 signal itemp : unsigned(15 downto 0);
 
@@ -209,7 +210,7 @@ signal mux_24S : std_logic;
 
 signal LFSRctrl : std_logic;
 
-
+signal test : std_logic_vector(15 downto 0);
 begin
 
 	c1: V1 port map(iclock,mux16_17,V1en,xiinV,xuoutV,addout,V1out);
@@ -223,15 +224,16 @@ begin
 	c9: add1 port map(iclock,mux7_9,iinV,V3out,V2out,one,ymax,yint,addout);
 	c10: comp1 port map(iclock,mux10_12,V3out,V4out,zero,A0,comp1out);
 	c11: comp2 port map(iclock,mux13_15,V3out,xu,V1out,twofivefive,xiplusoutV,V3out,comp2out);
-	c12: mux24 port map(V1out,ziggout,mux_24S);
+	c12: mux24 port map(iclock,xuoutV,ziggout,mux_24S);
 	c13: Vxu port map(iclock,xuen,mult2out,xuoutV);
-	cd1: VD port map(iclock,D1en,comp2out,D1);
-	cd2: VD port map(iclock,D2en,comp2out,D2);
-	cd3: VD port map(iclock,D3en,comp1out,D3);
-	cd4: VD port map(iclock,D4en,comp1out,D4);
-	cd5: VD port map(iclock,D5en,comp2out,D5);
+--	cd1: VD port map(iclock,D1en,comp2out,D1);
+--	cd2: VD port map(iclock,D2en,comp2out,D2);
+--	cd3: VD port map(iclock,D3en,comp1out,D3);
+--	cd4: VD port map(iclock,D4en,comp1out,D4);
+--	cd5: VD port map(iclock,D5en,comp2out,D5);
 	cxiplus: Vxu port map(iclock,xiplusen,xiplus,xiplusoutV);
 	cU0: Vxu port map(iclock,U0en,U0in,U0out);
+	--cOut: Vxu port map(iclock,ziggen,xuoutV,ziggoutS);
 	U1inV <= uGen(31 downto 16);
 	U0in <= uGen(15 downto 0);
 	--YS1inV <= YS1inV;
@@ -249,24 +251,24 @@ begin
 	--outoutV <= outoutV;
 	itemp <= shift_right(unsigned(uGen(23 downto 8)),8);
 	iinV <= std_logic_vector(itemp);
-	LFSRctrl <= iclock and not(state(3)) and not(state(2)) and state(1) and not(state(0));
+	LFSRctrl <= iclock and state(3) and state(2) and not(state(1)) and not(state(0));
 	
 	--U1AinV <= U1AinV;
 	--xusqinV <= xusqinV;
 	--xiinV <= xiinV;
 	--U1outV <= U1outV;
-	D1_C <= D1;
-	D2_C <= D2;
-	D3_C <= D3;
-	D4_C <= D4;
-	D5_C <= D5;
-	mux_24S <= mux_24;
+	D1_C <= comp2out;
+	D2_C <= comp2out;
+	D3_C <= comp1out;
+	D4_C <= comp1out;
+	D5_C <= comp2out;
+	
 	--xuinV <= xuinV;
 	--xuoutV <= xuoutV;
-	NC <= uGen(32);
+	--NC <= uGen(32);
+	mux_24S <= uGen(32);
 	
-	
-	
+	--ziggout <= xuoutV;
 	
 
 

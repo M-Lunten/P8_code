@@ -3,147 +3,75 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -7.725
-TNS   : -725.235
+Slack : -7.749
+TNS   : -838.247
 
 Type  : Slow 1200mV 85C Model Setup 'ZHcontrol:c2|mux7_9[0]'
-Slack : -4.401
-TNS   : -60.941
-
-Type  : Slow 1200mV 85C Model Setup 'ZHcontrol:c2|mux13_15[1]'
-Slack : -4.279
-TNS   : -4.279
-
-Type  : Slow 1200mV 85C Model Setup 'ZHcontrol:c2|mux10_12[0]'
-Slack : -4.080
-TNS   : -4.080
-
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.352
-TNS   : 0.000
+Slack : -5.961
+TNS   : -81.084
 
 Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.587
+Slack : 0.169
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux10_12[0]'
-Slack : 3.686
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux13_15[1]'
-Slack : 3.686
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.404
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -272.740
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ZHcontrol:c2|mux13_15[1]'
-Slack : 0.421
-TNS   : 0.000
+TNS   : -285.590
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.429
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ZHcontrol:c2|mux10_12[0]'
-Slack : 0.486
+Slack : 0.410
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -6.978
-TNS   : -653.235
+Slack : -6.933
+TNS   : -757.532
 
 Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux7_9[0]'
-Slack : -4.210
-TNS   : -57.201
-
-Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux13_15[1]'
-Slack : -3.824
-TNS   : -3.824
-
-Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux10_12[0]'
-Slack : -3.653
-TNS   : -3.653
-
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.318
-TNS   : 0.000
+Slack : -5.555
+TNS   : -75.286
 
 Type  : Slow 1200mV 0C Model Hold 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.546
+Slack : 0.181
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'ZHcontrol:c2|mux13_15[1]'
-Slack : 3.372
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'ZHcontrol:c2|mux10_12[0]'
-Slack : 3.412
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.355
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -271.860
+TNS   : -284.710
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.304
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux13_15[1]'
-Slack : 0.429
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux10_12[0]'
-Slack : 0.482
+Slack : 0.437
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -3.970
-TNS   : -347.918
-
-Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux13_15[1]'
-Slack : -2.341
-TNS   : -2.341
+Slack : -3.956
+TNS   : -378.281
 
 Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux7_9[0]'
-Slack : -1.949
-TNS   : -25.604
-
-Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux10_12[0]'
-Slack : -1.879
-TNS   : -1.879
-
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.178
-TNS   : 0.000
+Slack : -2.686
+TNS   : -35.401
 
 Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.309
+Slack : 0.014
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux13_15[1]'
-Slack : 1.889
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux10_12[0]'
-Slack : 2.162
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.180
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -205.209
+TNS   : -216.730
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.311
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux13_15[1]'
-Slack : 0.459
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux10_12[0]'
-Slack : 0.495
+Slack : 0.283
 TNS   : 0.000
 
 ------------------------------------------------------------

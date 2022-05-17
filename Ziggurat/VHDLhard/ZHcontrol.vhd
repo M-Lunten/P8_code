@@ -24,11 +24,12 @@ entity ZHcontrol is
 	mux22_23 : out std_logic_vector(1 downto 0);
 	mux_24 : out std_logic;
 	isVal : out std_logic;
+	isOut : out std_logic_vector(20 downto 0);
 	StateOut : out std_logic_vector(3 downto 0);
 	V1en : out std_logic;
 	
 	
-	V2en,V3en,V4en,U0en,Xuen,Xiplusen,D1en,D2en,D3en,D4en,D5en : out std_logic
+	V2en,V3en,V4en,U0en,Xuen,Xiplusen,D1en,D2en,D3en,D4en,D5en,ziggen : out std_logic
 	);
 end ZHcontrol;
 
@@ -61,7 +62,11 @@ begin
 	
 	StateOut <= State;
 	process(iclock)
+	variable outcount : unsigned(20 downto 0) := "000000000000000000000";
+	variable isouttemp : unsigned(20 downto 0) := "000000000000000000000";
+	
 	begin 
+	outcount := isouttemp;
 		if falling_edge(iclock) then 
 			case State is 
 				when "0000" =>
@@ -79,9 +84,9 @@ begin
 					
 					
 				
-					mux16_17 <= "01"; --xi used
-					mux18_19 <= "01";-- u1 used
-					mux20_21 <= "01";-- i used
+					--mux16_17 <= "01"; --xi used
+					--mux18_19 <= "01";-- u1 used
+					--mux20_21 <= "01";-- i used
 					mux22_23 <= "01"; --U1A assigned
 					
 					mux1_3 <= "01"; -- calculating U1A
@@ -91,8 +96,10 @@ begin
 					isVal <= '0';
 					
 				when "0011" =>--3
-					mux18_19 <= "01";-- u1 used
-					mux22_23 <= "01"; --U1A maintained
+					--mux18_19 <= "01";-- u1 used
+					--mux22_23 <= "01"; --U1A maintained
+					
+					--mux10_12 <= "00";
 					
 					mux13_15 <= "10"; -- calculating D2
 					mux18_19 <= "01";-- u1 used
@@ -100,31 +107,31 @@ begin
 					
 				when "0100" =>--4
 					
-					isVal <= '1';
-					mux16_17 <= "10"; --write to out
-					mux22_23 <= "01"; --U1A maintained
-					mux18_19 <= "01";-- u1 maintained
+					isVal <= '1' and D2ctrl;
+					--mux16_17 <= "10"; --write to out
+					--mux22_23 <= "01"; --U1A maintained
+					--mux18_19 <= "01";-- u1 maintained
 					
-					mux_24 <= NC;
+					--mux_24 <= NC;
 					
 				when "0101" =>--5
-					mux18_19 <= "01";-- u1 maintained
-					mux22_23 <= "01"; --U1A used
+					--mux18_19 <= "01";-- u1 maintained
+					--mux22_23 <= "01"; --U1A used
 					isVal <= '0';
 					mux10_12 <= "10"; -- calculating D4
 					
 				when "0110" =>--6
 					
-					isVal <= '1';
-					mux16_17 <= "10"; --write to out
-					mux18_19 <= "01";-- u1 maintained
+					--isVal <= '1' and D4ctrl;
+					--mux16_17 <= "10"; --write to out
+					--mux18_19 <= "01";-- u1 maintained
 					
-					mux_24 <= NC;
+					--mux_24 <= NC;
 					
 				when "0111" =>--7
 					
-					isVal <= '0';
-					mux18_19 <= "01";-- u1 used
+					--isVal <= '0';
+					--mux18_19 <= "01";-- u1 used
 					mux20_21 <= "10"; -- ys1 assigned
 					mux22_23 <= "10"; -- xusq assigned
 					
@@ -134,19 +141,19 @@ begin
 				when "1000" =>--8
 					
 					
-					isVal <= '0';
+					--isVal <= '0';
 					mux16_17 <= "11"; -- Y assigned
 					mux18_19 <= "10"; -- fxs1 assigned
-					mux20_21 <= "10"; -- ys1 maintained
-					mux22_23 <= "10"; -- xusq maintained
+					--mux20_21 <= "10"; -- ys1 maintained
+					--mux22_23 <= "10"; -- xusq maintained
 					
 					mux4_6 <= "10"; -- fxs1 calculated
 					mux7_9 <= "10"; -- y calculated
 					
 				when "1001" =>--9
 					
-					isVal <= '0';
-					mux16_17 <= "11"; -- Y maintained
+					--isVal <= '0';
+					--mux16_17 <= "11"; -- Y maintained
 					mux18_19 <= "10"; -- fxs1 used
 					mux20_21 <= "11"; -- fx assigned
 					
@@ -155,15 +162,15 @@ begin
 				when "1010" =>--10
 					mux16_17 <= "11"; -- Y maintained
 					mux20_21 <= "11"; -- fx maintained
-					isVal <= '0';
+					--isVal <= '0';
 					mux13_15 <= "11"; -- calculating D5
 					
 				when "1011" =>--11
 					
-					mux16_17 <= "10"; --write to out
-					isVal <= '1';
+					--mux16_17 <= "10"; --write to out
+					--isVal <= '1' and D5ctrl;
 					
-					mux_24 <= NC;
+					--mux_24 <= NC;
 				when others => 
 					
 			end case;
@@ -228,6 +235,21 @@ begin
 				D5en <= '0';
 			end if;
 			
+			if State = "0100" then  
+				ziggen <= '1';
+				isouttemp := outcount + 1;
+				isOut <= std_logic_vector(isouttemp);
+			elsif State = "0110" then
+				ziggen <= '1';
+				isouttemp := outcount + 1;
+				isOut <= std_logic_vector(isouttemp);
+			elsif State = "1011" then
+				ziggen <= '1';
+				isouttemp := outcount + 1;
+				isOut <= std_logic_vector(isouttemp);
+			else
+				ziggen <= '0';
+			end if;
 			
 			
 			

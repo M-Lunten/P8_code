@@ -72,6 +72,90 @@
 					"strict" : false
 				},
 				{
+					"name" : "isOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[16]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[17]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[18]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[19]",
+					"strict" : false
+				},
+				{
+					"name" : "isOut[20]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
