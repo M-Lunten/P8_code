@@ -1,5 +1,5 @@
 Fitter report for Wallace_speed
-Sat May 14 18:18:00 2022
+Sun May 15 17:12:49 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sat May 14 18:18:00 2022       ;
+; Fitter Status                      ; Successful - Sun May 15 17:12:49 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Wallace_speed                               ;
 ; Top-level Entity Name              ; Wallace_speed_V2                            ;
@@ -159,7 +159,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.03        ;
@@ -167,8 +167,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.4%      ;
-;     Processor 3            ;   0.8%      ;
+;     Processor 2            ;   1.6%      ;
+;     Processor 3            ;   0.7%      ;
 ;     Processor 4            ;   0.7%      ;
 +----------------------------+-------------+
 
@@ -331,7 +331,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/output_files/Wallace_speed.pin.
+The pin-out file can be found in C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/output_files/Wallace_speed.pin.
 
 
 +----------------------------------------------------------------------------+
@@ -2458,25 +2458,25 @@ Info (176045): Design uses memory blocks. Violating setup or hold times of memor
 Critical Warning (169085): No exact pin location assignment(s) for 68 pins of 68 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Wallace_speed.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 21
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 21
     Warning (332126): Node "cp|one_bit_count~0|combout"
     Warning (332126): Node "cp|one_bit_count~0|datab"
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN J1 (CLK1, DIFFCLK_0n)) File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/Wallace_speed_V2.vhd Line: 8
+Info (176353): Automatically promoted node clk~input (placed in PIN J1 (CLK1, DIFFCLK_0n)) File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/Wallace_speed_V2.vhd Line: 8
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node control_path:cp|i_count[0] File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
-        Info (176357): Destination node control_path:cp|i_count[1] File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
-        Info (176357): Destination node control_path:cp|i_count[2] File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
-        Info (176357): Destination node control_path:cp|i_count[3] File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
-        Info (176357): Destination node control_path:cp|i_count[4] File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
-        Info (176357): Destination node control_path:cp|i_count[5] File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
-        Info (176357): Destination node control_path:cp|i_count[6] File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
-        Info (176357): Destination node control_path:cp|i_count[7] File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
-        Info (176357): Destination node LFSR_ctrl File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/Wallace_speed_V2.vhd Line: 105
-Info (176353): Automatically promoted node LFSR_ctrl  File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/Wallace_speed_V2.vhd Line: 105
+        Info (176357): Destination node control_path:cp|i_count[0] File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
+        Info (176357): Destination node control_path:cp|i_count[1] File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
+        Info (176357): Destination node control_path:cp|i_count[2] File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
+        Info (176357): Destination node control_path:cp|i_count[3] File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
+        Info (176357): Destination node control_path:cp|i_count[4] File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
+        Info (176357): Destination node control_path:cp|i_count[5] File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
+        Info (176357): Destination node control_path:cp|i_count[6] File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
+        Info (176357): Destination node control_path:cp|i_count[7] File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 43
+        Info (176357): Destination node LFSR_ctrl File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/Wallace_speed_V2.vhd Line: 105
+Info (176353): Automatically promoted node LFSR_ctrl  File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/Wallace_speed_V2.vhd Line: 105
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -2507,24 +2507,24 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 7% of the available device resources in the region that extends from location X46_Y37 to location X57_Y48
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
-Info (11888): Total time spent on timing analysis during the Fitter is 0.92 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (11888): Total time spent on timing analysis during the Fitter is 0.76 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
-Info (144001): Generated suppressed messages file C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/output_files/Wallace_speed.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 5690 megabytes
-    Info: Processing ended: Sat May 14 18:18:00 2022
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:41
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (144001): Generated suppressed messages file C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/output_files/Wallace_speed.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 5693 megabytes
+    Info: Processing ended: Sun May 15 17:12:50 2022
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:29
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/output_files/Wallace_speed.fit.smsg.
+The suppressed messages can be found in C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/output_files/Wallace_speed.fit.smsg.
 
 

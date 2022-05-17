@@ -1,5 +1,5 @@
 Timing Analyzer report for Wallace_speed
-Sat May 14 18:18:16 2022
+Sun May 15 17:12:58 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -95,17 +95,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.14        ;
+; Average used               ; 1.16        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   6.8%      ;
-;     Processor 3            ;   3.7%      ;
-;     Processor 4            ;   3.3%      ;
+;     Processor 2            ;   7.2%      ;
+;     Processor 3            ;   4.5%      ;
+;     Processor 4            ;   3.8%      ;
 +----------------------------+-------------+
 
 
@@ -832,10 +832,10 @@ No paths to report.
 ; 0.190 ; transformation:tstage|x_D1_D[4]               ; transformation:tstage|x_D2_D[4]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.315      ;
 ; 0.190 ; transformation:tstage|x_D1_A[2]               ; transformation:tstage|x_D2_A[2]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.315      ;
 ; 0.190 ; transformation:tstage|x_D1_A[12]              ; transformation:tstage|x_D2_A[12]                                                                             ; clk          ; clk         ; 0.000        ; 0.041      ; 0.315      ;
+; 0.191 ; LFSR_52:LFSR|shift_register[25]               ; LFSR_52:LFSR|shift_register[48]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.317      ;
 ; 0.191 ; transformation:tstage|x_D1_C[6]               ; transformation:tstage|x_D2_C[6]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.316      ;
 ; 0.191 ; transformation:tstage|x_D1_A[3]               ; transformation:tstage|x_D2_A[3]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.316      ;
 ; 0.191 ; transformation:tstage|x_D1_D[0]               ; transformation:tstage|x_D2_D[0]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.316      ;
-; 0.191 ; LFSR_52:LFSR|shift_register[25]               ; LFSR_52:LFSR|shift_register[48]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.317      ;
 ; 0.192 ; LFSR_52:LFSR|shift_register[2]                ; LFSR_52:LFSR|shift_register[25]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.318      ;
 ; 0.194 ; LFSR_52:LFSR|shift_register[21]               ; LFSR_52:LFSR|shift_register[44]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.320      ;
 ; 0.194 ; LFSR_52:LFSR|shift_register[4]                ; LFSR_52:LFSR|shift_register[27]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.320      ;
@@ -850,13 +850,13 @@ No paths to report.
 ; 0.257 ; transformation:tstage|x_D2_A[9]               ; transformation:tstage|t_A_1_D[9]                                                                             ; clk          ; clk         ; 0.000        ; 0.041      ; 0.382      ;
 ; 0.258 ; transformation:tstage|x_D1_C[2]               ; transformation:tstage|x_D2_C[2]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.383      ;
 ; 0.260 ; transformation:tstage|x_D1_A[8]               ; transformation:tstage|x_D2_A[8]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.386      ;
+; 0.261 ; LFSR_52:LFSR|shift_register[33]               ; LFSR_52:LFSR|shift_register[7]                                                                               ; clk          ; clk         ; 0.000        ; 0.043      ; 0.388      ;
 ; 0.261 ; transformation:tstage|x_D1_C[12]              ; transformation:tstage|x_D2_C[12]                                                                             ; clk          ; clk         ; 0.000        ; 0.042      ; 0.387      ;
 ; 0.261 ; transformation:tstage|x_D1_C[8]               ; transformation:tstage|x_D2_C[8]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.387      ;
 ; 0.261 ; transformation:tstage|x_D1_D[2]               ; transformation:tstage|x_D2_D[2]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.386      ;
 ; 0.261 ; transformation:tstage|x_D1_D[5]               ; transformation:tstage|x_D2_D[5]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.387      ;
 ; 0.261 ; transformation:tstage|x_D1_B[12]              ; transformation:tstage|x_D2_B[12]                                                                             ; clk          ; clk         ; 0.000        ; 0.041      ; 0.386      ;
 ; 0.261 ; transformation:tstage|x_D1_B[13]              ; transformation:tstage|x_D2_B[13]                                                                             ; clk          ; clk         ; 0.000        ; 0.042      ; 0.387      ;
-; 0.261 ; LFSR_52:LFSR|shift_register[33]               ; LFSR_52:LFSR|shift_register[7]                                                                               ; clk          ; clk         ; 0.000        ; 0.043      ; 0.388      ;
 ; 0.262 ; transformation:tstage|x_D1_C[5]               ; transformation:tstage|x_D2_C[5]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.387      ;
 ; 0.262 ; transformation:tstage|x_D1_C[4]               ; transformation:tstage|x_D2_C[4]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.388      ;
 ; 0.262 ; transformation:tstage|x_D1_D[11]              ; transformation:tstage|x_D2_D[11]                                                                             ; clk          ; clk         ; 0.000        ; 0.041      ; 0.387      ;
@@ -874,24 +874,24 @@ No paths to report.
 ; 0.263 ; transformation:tstage|x_D1_B[2]               ; transformation:tstage|x_D2_B[2]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.388      ;
 ; 0.263 ; transformation:tstage|x_D1_B[6]               ; transformation:tstage|x_D2_B[6]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.388      ;
 ; 0.263 ; transformation:tstage|x_D1_B[11]              ; transformation:tstage|x_D2_B[11]                                                                             ; clk          ; clk         ; 0.000        ; 0.041      ; 0.388      ;
+; 0.264 ; LFSR_52:LFSR|shift_register[48]               ; LFSR_52:LFSR|shift_register[22]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.390      ;
+; 0.264 ; LFSR_52:LFSR|shift_register[11]               ; LFSR_52:LFSR|shift_register[34]                                                                              ; clk          ; clk         ; 0.000        ; 0.043      ; 0.391      ;
 ; 0.264 ; transformation:tstage|x_D1_C[3]               ; transformation:tstage|x_D2_C[3]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.389      ;
 ; 0.264 ; transformation:tstage|x_D1_D[6]               ; transformation:tstage|x_D2_D[6]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.389      ;
 ; 0.264 ; transformation:tstage|x_D1_D[14]              ; transformation:tstage|x_D2_D[14]                                                                             ; clk          ; clk         ; 0.000        ; 0.041      ; 0.389      ;
 ; 0.264 ; transformation:tstage|x_D1_A[9]               ; transformation:tstage|x_D2_A[9]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.389      ;
 ; 0.264 ; transformation:tstage|x_D1_B[3]               ; transformation:tstage|x_D2_B[3]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.389      ;
-; 0.264 ; LFSR_52:LFSR|shift_register[48]               ; LFSR_52:LFSR|shift_register[22]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.390      ;
-; 0.264 ; LFSR_52:LFSR|shift_register[11]               ; LFSR_52:LFSR|shift_register[34]                                                                              ; clk          ; clk         ; 0.000        ; 0.043      ; 0.391      ;
+; 0.265 ; LFSR_52:LFSR|shift_register[43]               ; LFSR_52:LFSR|shift_register[14]                                                                              ; clk          ; clk         ; 0.000        ; 0.043      ; 0.392      ;
 ; 0.265 ; transformation:tstage|x_D2_D[2]               ; transformation:tstage|t_D_1_D[2]                                                                             ; clk          ; clk         ; 0.000        ; 0.040      ; 0.389      ;
 ; 0.265 ; transformation:tstage|x_D1_D[3]               ; transformation:tstage|x_D2_D[3]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.390      ;
-; 0.265 ; LFSR_52:LFSR|shift_register[43]               ; LFSR_52:LFSR|shift_register[14]                                                                              ; clk          ; clk         ; 0.000        ; 0.043      ; 0.392      ;
 ; 0.267 ; transformation:tstage|x_D1_D[7]               ; transformation:tstage|x_D2_D[7]                                                                              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.392      ;
 ; 0.268 ; transformation:tstage|x_D1_A[10]              ; transformation:tstage|x_D2_A[10]                                                                             ; clk          ; clk         ; 0.000        ; 0.041      ; 0.393      ;
-; 0.269 ; transformation:tstage|x_D2_D[12]              ; transformation:tstage|t_D_2_D[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.041      ; 0.394      ;
 ; 0.269 ; LFSR_52:LFSR|shift_register[32]               ; LFSR_52:LFSR|shift_register[3]                                                                               ; clk          ; clk         ; 0.000        ; 0.043      ; 0.396      ;
+; 0.269 ; transformation:tstage|x_D2_D[12]              ; transformation:tstage|t_D_2_D[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.041      ; 0.394      ;
 ; 0.270 ; transformation:tstage|x_D2_D[0]               ; transformation:tstage|t_D_2_D[0]                                                                             ; clk          ; clk         ; 0.000        ; 0.041      ; 0.395      ;
-; 0.271 ; transformation:tstage|x_D2_A[7]               ; transformation:tstage|t_A_1_D[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.042      ; 0.397      ;
 ; 0.271 ; LFSR_52:LFSR|shift_register[16]               ; LFSR_52:LFSR|shift_register[39]                                                                              ; clk          ; clk         ; 0.000        ; 0.043      ; 0.398      ;
 ; 0.271 ; LFSR_52:LFSR|shift_register[8]                ; LFSR_52:LFSR|shift_register[31]                                                                              ; clk          ; clk         ; 0.000        ; 0.043      ; 0.398      ;
+; 0.271 ; transformation:tstage|x_D2_A[7]               ; transformation:tstage|t_A_1_D[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.042      ; 0.397      ;
 ; 0.272 ; data_B[5]                                     ; transformation:tstage|x_D1_B[5]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.398      ;
 ; 0.274 ; LFSR_52:LFSR|shift_register[26]               ; LFSR_52:LFSR|shift_register[49]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.400      ;
 ; 0.277 ; LFSR_52:LFSR|shift_register[27]               ; LFSR_52:LFSR|shift_register[50]                                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.403      ;
@@ -1480,7 +1480,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat May 14 18:18:10 2022
+    Info: Processing started: Sun May 15 17:12:55 2022
 Info: Command: quartus_sta Wallace_speed_V2 -c Wallace_speed
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1491,7 +1491,7 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'Wal
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clk clk
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 21
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime_V2/control_path.vhd Line: 21
     Warning (332126): Node "cp|one_bit_count~0|combout"
     Warning (332126): Node "cp|one_bit_count~0|datab"
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -1554,10 +1554,10 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000            -707.227 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4848 megabytes
-    Info: Processing ended: Sat May 14 18:18:15 2022
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Sun May 15 17:12:58 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
