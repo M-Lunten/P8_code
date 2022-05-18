@@ -26,6 +26,7 @@ entity ZHcontrol is
 	isVal : out std_logic;
 	isOut : out std_logic_vector(20 downto 0);
 	StateOut : out std_logic_vector(3 downto 0);
+	iterOut : out std_logic_vector(20 downto 0);
 	V1en : out std_logic;
 	
 	
@@ -61,9 +62,13 @@ begin
 	
 	
 	StateOut <= State;
+	
 	process(iclock)
 	variable outcount : unsigned(20 downto 0) := "000000000000000000000";
 	variable isouttemp : unsigned(20 downto 0) := "000000000000000000000";
+	
+	variable itercount : unsigned(20 downto 0) := "000000000000000000000";
+	variable itertemp : unsigned(20 downto 0) := "000000000000000000000";
 	
 	begin 
 	outcount := isouttemp;
@@ -77,7 +82,7 @@ begin
 					mux18_19 <= "01";-- u1 assign
 					mux20_21 <= "01";-- i assign
 					mux7_9 <= "01"; -- xi+1 calc and assign
-					isVal <= '0';
+					--isVal <= '0';
 					NC <= NCTRL;
 				
 				when "0010" => --2
@@ -93,7 +98,8 @@ begin
 					mux4_6 <= "01"; -- calculating xu
 					mux10_12 <= "01"; -- calculating D3
 					mux13_15 <= "01"; -- calculating D1
-					isVal <= '0';
+					--isVal <= '0';
+					iterOut <= std_logic_vector(itercount);
 					
 				when "0011" =>--3
 					--mux18_19 <= "01";-- u1 used
@@ -103,11 +109,11 @@ begin
 					
 					mux13_15 <= "10"; -- calculating D2
 					mux18_19 <= "01";-- u1 used
-					isVal <= '0';
+					--isVal <= '0';
 					
 				when "0100" =>--4
 					
-					isVal <= '1' and D2ctrl;
+					--isVal <= '1' and D2ctrl;
 					--mux16_17 <= "10"; --write to out
 					--mux22_23 <= "01"; --U1A maintained
 					--mux18_19 <= "01";-- u1 maintained
@@ -117,7 +123,7 @@ begin
 				when "0101" =>--5
 					--mux18_19 <= "01";-- u1 maintained
 					--mux22_23 <= "01"; --U1A used
-					isVal <= '0';
+					--isVal <= '0';
 					mux10_12 <= "10"; -- calculating D4
 					
 				when "0110" =>--6
@@ -202,6 +208,8 @@ begin
 			if State = "0001" then 
 				U0en <= '1';
 				xiplusen <= '1';
+				
+				itertemp := itercount;
 			else 
 				U0en <= '0';
 				xiplusen <= '0';
@@ -211,6 +219,7 @@ begin
 				D1en <= '1';
 				D3en <= '1';
 				xuen <= '1';
+				itercount := itertemp + 1;
 			else 
 				D1en <= '0';
 				D3en <= '0';
@@ -235,15 +244,15 @@ begin
 				D5en <= '0';
 			end if;
 			
-			if State = "0100" then  
+			if State = "0100" and D2ctrl = '1' then  
 				ziggen <= '1';
 				isouttemp := outcount + 1;
 				isOut <= std_logic_vector(isouttemp);
-			elsif State = "0110" then
+			elsif State = "0110" and D4ctrl = '1' then
 				ziggen <= '1';
 				isouttemp := outcount + 1;
 				isOut <= std_logic_vector(isouttemp);
-			elsif State = "1011" then
+			elsif State = "1011" and D5ctrl = '1' then
 				ziggen <= '1';
 				isouttemp := outcount + 1;
 				isOut <= std_logic_vector(isouttemp);

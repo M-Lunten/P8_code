@@ -11,19 +11,21 @@ port(
 end mux7;
 
 architecture bhv of mux7 is
-signal inter : signed(15 downto 0);
+
 begin
 
 	
-	inter<=signed(ys1in);
+	
 	process(ctrl,iin,ys1in,fxs1in)
-
+	variable inter : unsigned(15 downto 0);
+	
 	variable outTemp : std_logic_vector(15 downto 0);
 	begin
+		inter := unsigned(ys1in);
 		if ctrl = "01" then
 			output <= iin;
 		elsif ctrl = "10" then
-			output <= std_logic_vector(not(inter) + "0000000000000001");
+			output <= std_logic_vector(not(inter) + 1);
 		elsif ctrl = "11" then
 			output <= fxs1in;
 		else
