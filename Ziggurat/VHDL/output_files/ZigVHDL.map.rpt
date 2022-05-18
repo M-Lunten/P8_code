@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ZigVHDL
-Tue May 10 16:50:29 2022
+Wed May 18 14:39:43 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 10 16:50:29 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 18 14:39:43 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ZigVHDL                                     ;
 ; Top-level Entity Name              ; ZigVHDL                                     ;
@@ -166,11 +166,11 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
@@ -179,8 +179,6 @@ refer to the applicable agreement for further details.
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -189,15 +187,15 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+----------------------------------+--------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                   ; Library ;
 +----------------------------------+-----------------+----------------------------------+--------------------------------------------------------------------------------+---------+
-; Ziggurat_LUT.mif                 ; yes             ; User Memory Initialization File  ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/Ziggurat_LUT.mif                  ;         ;
-; LFSR_33.vhd                      ; yes             ; User VHDL File                   ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd                       ;         ;
-; ZigVHDL.vhd                      ; yes             ; User VHDL File                   ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd                       ;         ;
-; d1Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d1Gen.vhd                         ;         ;
-; zigLUT.vhd                       ; yes             ; User Wizard-Generated File       ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd                        ;         ;
-; d3Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d3Gen.vhd                         ;         ;
-; d4Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d4Gen.vhd                         ;         ;
-; d2Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d2Gen.vhd                         ;         ;
-; d5Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd                         ;         ;
+; Ziggurat_LUT.mif                 ; yes             ; User Memory Initialization File  ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/Ziggurat_LUT.mif         ;         ;
+; LFSR_33.vhd                      ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd              ;         ;
+; ZigVHDL.vhd                      ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd              ;         ;
+; d1Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd                ;         ;
+; zigLUT.vhd                       ; yes             ; User Wizard-Generated File       ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd               ;         ;
+; d3Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd                ;         ;
+; d4Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd                ;         ;
+; d2Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd                ;         ;
+; d5Gen.vhd                        ; yes             ; User VHDL File                   ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd                ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
@@ -207,13 +205,13 @@ refer to the applicable agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
 ; altram.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc              ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
-; db/altsyncram_ujt3.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/altsyncram_ujt3.tdf            ;         ;
+; db/altsyncram_ujt3.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/altsyncram_ujt3.tdf   ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc            ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction      ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/mult_7dt.tdf                   ;         ;
+; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/mult_7dt.tdf          ;         ;
 ; multcore.tdf                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf            ;         ;
 ; csa_add.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/csa_add.inc             ;         ;
 ; mpar_add.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
@@ -228,12 +226,12 @@ refer to the applicable agreement for further details.
 ; addcore.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/addcore.inc             ;         ;
 ; look_add.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/look_add.inc            ;         ;
 ; alt_stratix_add_sub.inc          ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
-; db/add_sub_ikh.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/add_sub_ikh.tdf                ;         ;
-; db/add_sub_o9h.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/add_sub_o9h.tdf                ;         ;
-; db/add_sub_ekh.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/add_sub_ekh.tdf                ;         ;
+; db/add_sub_ikh.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_ikh.tdf       ;         ;
+; db/add_sub_o9h.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_o9h.tdf       ;         ;
+; db/add_sub_ekh.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_ekh.tdf       ;         ;
 ; altshift.tdf                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.tdf            ;         ;
-; db/add_sub_ngh.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/add_sub_ngh.tdf                ;         ;
-; db/add_sub_rgh.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/add_sub_rgh.tdf                ;         ;
+; db/add_sub_ngh.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_ngh.tdf       ;         ;
+; db/add_sub_rgh.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_rgh.tdf       ;         ;
 +----------------------------------+-----------------+----------------------------------+--------------------------------------------------------------------------------+---------+
 
 
@@ -765,59 +763,59 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 10 16:50:13 2022
+    Info: Processing started: Wed May 18 14:39:13 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ZigVHDL -c ZigVHDL
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_33.vhd
-    Info (12022): Found design unit 1: LFSR_33-Behavioral File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd Line: 11
-    Info (12023): Found entity 1: LFSR_33 File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/LFSR_33.vhd Line: 4
+    Info (12022): Found design unit 1: LFSR_33-Behavioral File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd Line: 11
+    Info (12023): Found entity 1: LFSR_33 File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/LFSR_33.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file zigvhdl.vhd
-    Info (12022): Found design unit 1: ZigVHDL-Behavioural File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 17
-    Info (12023): Found entity 1: ZigVHDL File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 7
+    Info (12022): Found design unit 1: ZigVHDL-Behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 17
+    Info (12023): Found entity 1: ZigVHDL File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file d1gen.vhd
-    Info (12022): Found design unit 1: d1Gen-Behavioural File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d1Gen.vhd Line: 14
-    Info (12023): Found entity 1: d1Gen File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d1Gen.vhd Line: 6
+    Info (12022): Found design unit 1: d1Gen-Behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd Line: 14
+    Info (12023): Found entity 1: d1Gen File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ziglut.vhd
-    Info (12022): Found design unit 1: ziglut-SYN File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 58
-    Info (12023): Found entity 1: zigLUT File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 42
+    Info (12022): Found design unit 1: ziglut-SYN File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 58
+    Info (12023): Found entity 1: zigLUT File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file d3gen.vhd
-    Info (12022): Found design unit 1: d3Gen-Behavioural File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d3Gen.vhd Line: 14
-    Info (12023): Found entity 1: d3Gen File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d3Gen.vhd Line: 6
+    Info (12022): Found design unit 1: d3Gen-Behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd Line: 14
+    Info (12023): Found entity 1: d3Gen File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file d4gen.vhd
-    Info (12022): Found design unit 1: d4Gen-Behavioural File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d4Gen.vhd Line: 15
-    Info (12023): Found entity 1: d4Gen File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d4Gen.vhd Line: 6
+    Info (12022): Found design unit 1: d4Gen-Behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd Line: 15
+    Info (12023): Found entity 1: d4Gen File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file d2gen.vhd
-    Info (12022): Found design unit 1: d2Gen-Behavioural File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d2Gen.vhd Line: 15
-    Info (12023): Found entity 1: d2Gen File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d2Gen.vhd Line: 6
+    Info (12022): Found design unit 1: d2Gen-Behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd Line: 15
+    Info (12023): Found entity 1: d2Gen File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file d5gen.vhd
-    Info (12022): Found design unit 1: d5Gen-Behavioural File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 15
-    Info (12023): Found entity 1: d5Gen File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 6
+    Info (12022): Found design unit 1: d5Gen-Behavioural File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 15
+    Info (12023): Found entity 1: d5Gen File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ziggurat_tb.vhd
-    Info (12022): Found design unit 1: ziggurat_tb-behavior File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd Line: 11
-    Info (12023): Found entity 1: ziggurat_tb File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd Line: 8
+    Info (12022): Found design unit 1: ziggurat_tb-behavior File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd Line: 11
+    Info (12023): Found entity 1: ziggurat_tb File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ziggurat_tb.vhd Line: 8
 Info (12127): Elaborating entity "ZigVHDL" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(87): object "U0_2" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 87
-Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(99): object "i_4" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 99
-Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(104): used explicit default value for signal "da" because signal was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 104
-Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(105): used explicit default value for signal "db" because signal was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 105
-Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(107): used implicit default value for signal "ea" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 107
-Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(108): used implicit default value for signal "eb" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 108
-Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(111): used explicit default value for signal "A0" because signal was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 111
-Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(134): object "D5_1" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 134
-Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(136): object "D1_2" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 136
-Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(137): object "D2_2" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 137
-Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(138): object "D3_2" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 138
-Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(139): object "D4_2" assigned a value but never read File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 139
-Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(188): used initial value expression for variable "GRAD" because variable was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 188
-Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(190): used initial value expression for variable "Ymax" because variable was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 190
-Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(191): used initial value expression for variable "YmaxMinus1" because variable was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 191
-Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(192): used initial value expression for variable "YmYmminus1" because variable was never assigned a value File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 192
-Info (12128): Elaborating entity "LFSR_33" for hierarchy "LFSR_33:c1" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 147
-Info (12128): Elaborating entity "zigLUT" for hierarchy "zigLUT:c2" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 148
-Info (12128): Elaborating entity "altsyncram" for hierarchy "zigLUT:c2|altsyncram:altsyncram_component" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 67
-Info (12130): Elaborated megafunction instantiation "zigLUT:c2|altsyncram:altsyncram_component" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 67
-Info (12133): Instantiated megafunction "zigLUT:c2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 67
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(87): object "U0_2" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 87
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(99): object "i_4" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 99
+Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(104): used explicit default value for signal "da" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 104
+Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(105): used explicit default value for signal "db" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 105
+Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(107): used implicit default value for signal "ea" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 107
+Warning (10541): VHDL Signal Declaration warning at ZigVHDL.vhd(108): used implicit default value for signal "eb" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 108
+Warning (10540): VHDL Signal Declaration warning at ZigVHDL.vhd(111): used explicit default value for signal "A0" because signal was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 111
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(134): object "D5_1" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 134
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(136): object "D1_2" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 136
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(137): object "D2_2" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 137
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(138): object "D3_2" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 138
+Warning (10036): Verilog HDL or VHDL warning at ZigVHDL.vhd(139): object "D4_2" assigned a value but never read File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 139
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(188): used initial value expression for variable "GRAD" because variable was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 188
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(190): used initial value expression for variable "Ymax" because variable was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 190
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(191): used initial value expression for variable "YmaxMinus1" because variable was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 191
+Warning (10542): VHDL Variable Declaration warning at ZigVHDL.vhd(192): used initial value expression for variable "YmYmminus1" because variable was never assigned a value File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 192
+Info (12128): Elaborating entity "LFSR_33" for hierarchy "LFSR_33:c1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 147
+Info (12128): Elaborating entity "zigLUT" for hierarchy "zigLUT:c2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 148
+Info (12128): Elaborating entity "altsyncram" for hierarchy "zigLUT:c2|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 67
+Info (12130): Elaborated megafunction instantiation "zigLUT:c2|altsyncram:altsyncram_component" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 67
+Info (12133): Instantiated megafunction "zigLUT:c2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/zigLUT.vhd Line: 67
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
@@ -869,28 +867,28 @@ Info (12133): Instantiated megafunction "zigLUT:c2|altsyncram:altsyncram_compone
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ujt3.tdf
-    Info (12023): Found entity 1: altsyncram_ujt3 File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/altsyncram_ujt3.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_ujt3 File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/altsyncram_ujt3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_ujt3" for hierarchy "zigLUT:c2|altsyncram:altsyncram_component|altsyncram_ujt3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "d1Gen" for hierarchy "d1Gen:c3" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 149
-Warning (10492): VHDL Process Statement warning at d1Gen.vhd(22): signal "Iin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d1Gen.vhd Line: 22
-Info (12128): Elaborating entity "d2Gen" for hierarchy "d2Gen:c4" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 150
-Warning (10492): VHDL Process Statement warning at d2Gen.vhd(23): signal "Xuin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d2Gen.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at d2Gen.vhd(23): signal "Xiplusin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d2Gen.vhd Line: 23
-Info (12128): Elaborating entity "d3Gen" for hierarchy "d3Gen:c5" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at d3Gen.vhd(22): signal "Iin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d3Gen.vhd Line: 22
-Info (12128): Elaborating entity "d4Gen" for hierarchy "d4Gen:c6" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 152
-Warning (10492): VHDL Process Statement warning at d4Gen.vhd(23): signal "U1in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d4Gen.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at d4Gen.vhd(23): signal "Ain" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d4Gen.vhd Line: 23
-Info (12128): Elaborating entity "d5Gen" for hierarchy "d5Gen:c7" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 153
-Warning (10492): VHDL Process Statement warning at d5Gen.vhd(23): signal "Yin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at d5Gen.vhd(23): signal "Fxin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 23
+Info (12128): Elaborating entity "d1Gen" for hierarchy "d1Gen:c3" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 149
+Warning (10492): VHDL Process Statement warning at d1Gen.vhd(22): signal "Iin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d1Gen.vhd Line: 22
+Info (12128): Elaborating entity "d2Gen" for hierarchy "d2Gen:c4" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at d2Gen.vhd(23): signal "Xuin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at d2Gen.vhd(23): signal "Xiplusin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d2Gen.vhd Line: 23
+Info (12128): Elaborating entity "d3Gen" for hierarchy "d3Gen:c5" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at d3Gen.vhd(22): signal "Iin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d3Gen.vhd Line: 22
+Info (12128): Elaborating entity "d4Gen" for hierarchy "d4Gen:c6" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 152
+Warning (10492): VHDL Process Statement warning at d4Gen.vhd(23): signal "U1in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at d4Gen.vhd(23): signal "Ain" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d4Gen.vhd Line: 23
+Info (12128): Elaborating entity "d5Gen" for hierarchy "d5Gen:c7" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 153
+Warning (10492): VHDL Process Statement warning at d5Gen.vhd(23): signal "Yin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at d5Gen.vhd(23): signal "Fxin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/d5Gen.vhd Line: 23
 Info (278001): Inferred 4 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 233
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult2" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 237
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult3" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 239
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 223
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 233
-Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter: File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 233
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 233
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 237
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult3" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 239
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 223
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 233
+Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 233
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "16"
     Info (12134): Parameter "LPM_WIDTHP" = "32"
@@ -901,9 +899,9 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following para
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
-    Info (12023): Found entity 1: mult_7dt File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/mult_7dt.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult2" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 237
-Info (12133): Instantiated megafunction "lpm_mult:Mult2" with the following parameter: File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 237
+    Info (12023): Found entity 1: mult_7dt File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/mult_7dt.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult2" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 237
+Info (12133): Instantiated megafunction "lpm_mult:Mult2" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 237
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "16"
     Info (12134): Parameter "LPM_WIDTHP" = "32"
@@ -913,8 +911,8 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult2" with the following para
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult3" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 239
-Info (12133): Instantiated megafunction "lpm_mult:Mult3" with the following parameter: File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 239
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult3" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 239
+Info (12133): Instantiated megafunction "lpm_mult:Mult3" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 239
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "14"
     Info (12134): Parameter "LPM_WIDTHP" = "30"
@@ -928,17 +926,17 @@ Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|multcore:mul
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult3" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "lpm_mult:Mult3" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ikh.tdf
-    Info (12023): Found entity 1: add_sub_ikh File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/add_sub_ikh.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_ikh File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_ikh.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult3" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_o9h.tdf
-    Info (12023): Found entity 1: add_sub_o9h File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/add_sub_o9h.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_o9h File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_o9h.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lpm_mult:Mult3" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult3" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ekh.tdf
-    Info (12023): Found entity 1: add_sub_ekh File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/add_sub_ekh.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_ekh File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_ekh.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult3|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult3" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 223
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 223
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 223
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 223
     Info (12134): Parameter "LPM_WIDTHA" = "10"
     Info (12134): Parameter "LPM_WIDTHB" = "16"
     Info (12134): Parameter "LPM_WIDTHP" = "26"
@@ -952,18 +950,18 @@ Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mul
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ngh.tdf
-    Info (12023): Found entity 1: add_sub_ngh File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/add_sub_ngh.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_ngh File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_ngh.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_rgh.tdf
-    Info (12023): Found entity 1: add_sub_rgh File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/db/add_sub_rgh.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_rgh File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/db/add_sub_rgh.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/razze/Desktop/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 10
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/fivan/Documents/GitHub/P8_code/Ziggurat/VHDL/ZigVHDL.vhd Line: 10
 Info (21057): Implemented 513 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 17 output pins
@@ -971,9 +969,9 @@ Info (21057): Implemented 513 device resources after synthesis - the final resou
     Info (21064): Implemented 16 RAM segments
     Info (21062): Implemented 4 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Tue May 10 16:50:29 2022
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Peak virtual memory: 4831 megabytes
+    Info: Processing ended: Wed May 18 14:39:43 2022
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:23
 
 

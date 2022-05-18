@@ -1,5 +1,5 @@
 Flow report for ZigVHDL
-Tue May 10 16:50:58 2022
+Wed May 18 14:41:05 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue May 10 16:50:54 2022       ;
+; Flow Status                        ; Successful - Wed May 18 14:40:45 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ZigVHDL                                     ;
 ; Top-level Entity Name              ; ZigVHDL                                     ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/10/2022 16:50:14 ;
+; Start date & time ; 05/18/2022 14:39:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ZigVHDL             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 123818830093198.165219421406324        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 83689965950041.165287757020668         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; zigLUT.cmp                             ; --            ; --          ; --         ;
@@ -94,11 +94,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4851 MB             ; 00:00:28                           ;
-; Fitter               ; 00:00:19     ; 1.0                     ; 6009 MB             ; 00:00:30                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4677 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.4                     ; 4887 MB             ; 00:00:03                           ;
-; Total                ; 00:00:41     ; --                      ; --                  ; 00:01:04                           ;
+; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 4831 MB             ; 00:00:23                           ;
+; Fitter               ; 00:00:34     ; 1.0                     ; 5863 MB             ; 00:00:29                           ;
+; Assembler            ; 00:00:26     ; 1.0                     ; 4682 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:19     ; 1.4                     ; 4872 MB             ; 00:00:02                           ;
+; Total                ; 00:01:48     ; --                      ; --                  ; 00:00:57                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,10 +107,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-0L6PILB1  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-0L6PILB1  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-0L6PILB1  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-0L6PILB1  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

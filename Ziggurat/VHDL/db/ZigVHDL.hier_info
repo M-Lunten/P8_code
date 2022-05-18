@@ -451,23 +451,23 @@ start => U0[12].ENA
 start => U0[13].ENA
 start => U0[14].ENA
 start => U0[15].ENA
-zigout[0] <= zigout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[1] <= zigout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[2] <= zigout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[3] <= zigout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[4] <= zigout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[5] <= zigout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[6] <= zigout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[7] <= zigout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[8] <= zigout[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[9] <= zigout[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[10] <= zigout[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[11] <= zigout[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[12] <= zigout[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[13] <= zigout[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[14] <= zigout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-zigout[15] <= zigout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-isVal <= valid.DB_MAX_OUTPUT_PORT_TYPE
+zigout[0] << zigout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[1] << zigout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[2] << zigout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[3] << zigout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[4] << zigout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[5] << zigout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[6] << zigout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[7] << zigout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[8] << zigout[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[9] << zigout[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[10] << zigout[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[11] << zigout[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[12] << zigout[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[13] << zigout[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[14] << zigout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zigout[15] << zigout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+isVal << valid.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ZigVHDL|LFSR_33:c1

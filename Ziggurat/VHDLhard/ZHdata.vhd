@@ -176,9 +176,9 @@ signal uGen : std_logic_vector(32 downto 0);
 
 signal xiplus : std_logic_vector(15 downto 0);
 
-signal A : std_logic_vector(15 downto 0):= "0000000010000001";
+signal A : std_logic_vector(15 downto 0):= "0000000001000000";
 
-signal YmmYmminus1 : std_logic_vector(15 downto 0):= "0000001001010100";
+signal YmmYmminus1 : std_logic_vector(15 downto 0):= "0000000100101010";
 
 signal xu : std_logic_vector(15 downto 0);
 
@@ -188,13 +188,13 @@ signal GRAD : std_logic_vector(15 downto 0):= "1110011001110111";
 
 signal one : std_logic_vector(15 downto 0):= "0000000000000001";
 
-signal ymax : std_logic_vector(15 downto 0):= "0110011000011110";
+signal ymax : std_logic_vector(15 downto 0):= "0011001100001111";
 
-signal yint : std_logic_vector(15 downto 0):= "0110011000011110";
+signal yint : std_logic_vector(15 downto 0):= "0011001100001111";
 
 signal zero : std_logic_vector(15 downto 0):= "0000000000000000";
 
-signal A0 : std_logic_vector(15 downto 0):= "0000000001111000";
+signal A0 : std_logic_vector(15 downto 0):= "0000000000111100";
 
 signal twofivefive : std_logic_vector(15 downto 0):= "0000000011111111";
 
@@ -234,8 +234,8 @@ begin
 	cxiplus: Vxu port map(iclock,xiplusen,xiplus,xiplusoutV);
 	cU0: Vxu port map(iclock,U0en,U0in,U0out);
 	--cOut: Vxu port map(iclock,ziggen,xuoutV,ziggoutS);
-	U1inV <= uGen(31 downto 16);
-	U0in <= uGen(15 downto 0);
+	U1inV <= std_logic_vector(shift_right (unsigned(uGen(31 downto 16)),1)(15 downto 0));
+	U0in <= std_logic_vector(shift_right(unsigned(uGen(15 downto 0)),1)(15 downto 0));
 	--YS1inV <= YS1inV;
 	--xioutV <= xioutV;
 	--xusqoutV <= xusqoutV;

@@ -50,12 +50,12 @@ begin
 	
 	
 	process(iclock)
-	variable multoutS1 : unsigned(31 downto 0);
+	variable multoutS1 : signed(31 downto 0);
 	
 	begin
-		multoutS1 := unsigned(mux1out) * unsigned(mux2out);
+		multoutS1 := signed(mux1out) * signed(mux2out);
 		
-		U1A_YS1out <= std_logic_vector(multoutS1(31 downto 16));
+		U1A_YS1out <= std_logic_vector(multoutS1(29 downto 14));
 	end process;	
 		
 

@@ -51,7 +51,7 @@ begin
 		file_open(v_res,"validate_results.csv",write_mode);
 		wait for 20*clock_period;
 		
-		for i in 0 to 1000000 loop
+		for i in 0 to 500000 loop
 		write(v_line,v,right,1);
 		write(v_line, ',', right, 1);
 		writeline(v_res,v_line);

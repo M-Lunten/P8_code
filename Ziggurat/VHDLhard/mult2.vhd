@@ -51,14 +51,14 @@ begin
 	
 	begin
 		if muxctrl = "01" then
-			multoutS1 := signed(unsigned(mux1out) * unsigned(mux2out));
-			xu_fxs1_xusqout <= std_logic_vector(multoutS1(31 downto 16));
-		elsif muxctrl = "11" then
-			multoutS1 := signed(unsigned(mux1out) * unsigned(mux2out));
-			xu_fxs1_xusqout <= std_logic_vector(multoutS1(28 downto 13));
-		else
 			multoutS1 := signed(mux1out) * signed(mux2out);
 			xu_fxs1_xusqout <= std_logic_vector(multoutS1(30 downto 15));
+		elsif muxctrl = "11" then
+			multoutS1 := signed(mux1out) * signed(mux2out);
+			xu_fxs1_xusqout <= std_logic_vector(multoutS1(30 downto 15));
+		else
+			multoutS1 := signed(mux1out) * signed(mux2out);
+			xu_fxs1_xusqout <= std_logic_vector(multoutS1(29 downto 14));
 		end if;
 		
 		
