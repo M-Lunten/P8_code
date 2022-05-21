@@ -1,0 +1,40 @@
+|cwControlPath
+clkIn => ~NO_FANOUT~
+startIn => ~NO_FANOUT~
+muxControl[0] <= muxControl[0].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[1] <= muxControl[1].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[2] <= muxControl[2].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[3] <= muxControl[3].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[4] <= muxControl[4].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[5] <= muxControl[5].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[6] <= muxControl[6].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[7] <= muxControl[7].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[8] <= muxControl[8].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[9] <= muxControl[9].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[10] <= muxControl[10].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[11] <= muxControl[11].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[12] <= muxControl[12].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[13] <= muxControl[13].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[14] <= muxControl[14].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[15] <= muxControl[15].DB_MAX_OUTPUT_PORT_TYPE
+muxControl[16] <= muxControl[16].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+registerControl[1] <= registerControl[1].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[2] <= registerControl[2].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[3] <= registerControl[3].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[4] <= registerControl[4].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[5] <= registerControl[5].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[6] <= registerControl[6].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[7] <= registerControl[7].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[8] <= registerControl[8].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[9] <= registerControl[9].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[10] <= registerControl[10].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[11] <= registerControl[11].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[12] <= registerControl[12].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[13] <= registerControl[13].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[14] <= registerControl[14].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[15] <= registerControl[15].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[16] <= registerControl[16].DB_MAX_OUTPUT_PORT_TYPE
+registerControl[17] <= registerControl[17].DB_MAX_OUTPUT_PORT_TYPE
+
+
