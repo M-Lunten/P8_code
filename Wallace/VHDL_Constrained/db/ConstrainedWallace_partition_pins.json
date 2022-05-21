@@ -2,7 +2,144 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "ramEnable",
+					"strict" : false
+				},
+				{
+					"name" : "aluSub",
+					"strict" : false
+				},
+				{
+					"name" : "muxControl[1]",
+					"strict" : false
+				},
+				{
+					"name" : "muxControl[2]",
+					"strict" : false
+				},
+				{
+					"name" : "muxControl[3]",
+					"strict" : false
+				},
+				{
+					"name" : "muxControl[4]",
+					"strict" : false
+				},
+				{
+					"name" : "muxControl[5]",
+					"strict" : false
+				},
+				{
+					"name" : "muxControl[6]",
+					"strict" : false
+				},
+				{
+					"name" : "muxControl[8]",
+					"strict" : false
+				},
+				{
+					"name" : "muxControl[9]",
+					"strict" : false
+				},
+				{
+					"name" : "muxControl[10]",
+					"strict" : false
+				},
+				{
+					"name" : "muxControl[11]",
+					"strict" : false
+				},
+				{
+					"name" : "muxControl[12]",
+					"strict" : false
+				},
+				{
+					"name" : "muxControl[13]",
+					"strict" : false
+				},
+				{
+					"name" : "muxControl[15]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[0]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[1]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[2]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[3]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[4]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[5]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[6]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[7]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[8]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[9]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[10]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[11]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[12]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[13]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[14]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[15]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[16]",
+					"strict" : false
+				},
+				{
+					"name" : "regControl[17]",
+					"strict" : false
+				},
+				{
+					"name" : "clkIn",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
