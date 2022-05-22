@@ -118,112 +118,10 @@ begin
 	CP1: cwControlPath port map (clkIn => clk, startIn => start, validNum => valid, ramEnable => ramEN, aluSub => aluState, lfsrEnable => lfsrEN, muxControl => muxctrl, regControl => regctrl);
 	RAM1: wcRAM port map (address_a => addrA, address_b => addrB, clock => clk, data_a => ALU1Out, data_b => ALU2Out, wren_a => aEN, wren_b => bEN, q_a => outA, q_b => outB);
 	
-	process (clk)
 	
+	process (muxCtrl)
 	begin
-	
-		output <= grnNum;
 		
-	-- XOR
-		xor1 <= addOut xor M; -- Wrong?
-		xor2 <= addOut xor M;
-	
-	-- Adders
-		addOut <= std_logic_vector(signed(addA) + signed(addB));
-		
-		if (aluState = '0') then -- sub or add
-			ALU1Out <= std_logic_vector(signed(ALU1A) + signed(ALU1B));
-			ALU2Out <= std_logic_vector(signed(ALU2A) + signed(ALU2B));
-		else
-			ALU1Out <= std_logic_vector(signed(ALU1A) - signed(ALU1B));
-			ALU2Out <= std_logic_vector(signed(ALU2A) - signed(ALU2B));
-		end if;
-		
-		
-	-- Multiplier
-		
-		
-	
-	
-		if rising_edge(clk) then			
-			
-			
-		-- Register writes
-			
---			if (regctrl(0) = '1') then
---				M <= ;
---			end if;
---			
---			if (regctrl(1) = '1') then
---				S <= ;
---			end if;
-			
-			if (regctrl(2) = '1') then
-				O1 <= m3o;
-			end if;
-			
-			if (regctrl(3) = '1') then
-				O2 <= addOut;
-			end if;
-			
-			if (regctrl(4) = '1') then
-				TPO <= m2o;
-			end if;
-			
-			if (regctrl(5) = '1') then
-				PA <=m5o ;
-			end if;
-			
---			if (regctrl(6) = '1') then
---				A1 <= ;
---			end if;
---			
---			if (regctrl(7) = '1') then
---				A2 <= ;
---			end if;
---			
---			if (regctrl(8) = '1') then
---				A4 <= ;
---			end if;
-				
-			if (regctrl(9) = '1') then
-				X1 <= Xh1;
-			end if;
-			
-			if (regctrl(10) = '1') then
-				X2 <= Xh2;
-			end if;
-			
-			if (regctrl(11) = '1') then
-				X3 <= Xh1;
-			end if;
-			
-			if (regctrl(12) = '1') then
-				X4 <= Xh2;
-			end if;
-			
-			if (regctrl(13) = '1') then
-				Xh1 <= outA;
-			end if;
-			
-			if (regctrl(14) = '1') then
-				Xh2 <= outB;
-			end if;
-			
-			if (regctrl(15) = '1') then
-				chi <= ALU2Out;
-			end if;
-			
-			if (regctrl(16) = '1') then
-				G <= mult1Out;
-			end if;
-			
---			if (regctrl(17) = '1') then
---				Leaky1
---			end if;
-			
-			
-			
 		-- Mux control
 		
 			if (muxCtrl(0) = '0') then -- mux 1
@@ -305,6 +203,118 @@ begin
 			else
 				mult2A <= Leaky3 ;
 			end if;
+	end process;
+	
+	
+	
+		
+	
+	
+	process (clk)
+	
+	begin
+	
+		
+	-- XOR
+		xor1 <= addOut xor M; -- Wrong?
+		xor2 <= addOut xor M;
+	
+	-- Adders
+		addOut <= std_logic_vector(signed(addA) + signed(addB));
+		
+		if (aluState = '0') then -- sub or add
+			ALU1Out <= std_logic_vector(signed(ALU1A) + signed(ALU1B));
+			ALU2Out <= std_logic_vector(signed(ALU2A) + signed(ALU2B));
+		else
+			ALU1Out <= std_logic_vector(signed(ALU1A) - signed(ALU1B));
+			ALU2Out <= std_logic_vector(signed(ALU2A) - signed(ALU2B));
+		end if;
+		
+		
+	-- Multiplier
+		
+		
+	
+	
+		if rising_edge(clk) then			
+			
+			output <= grnNum;
+			
+		-- Register writes
+			
+--			if (regctrl(0) = '1') then
+--				M <= ;
+--			end if;
+--			
+--			if (regctrl(1) = '1') then
+--				S <= ;
+--			end if;
+			
+			if (regctrl(2) = '1') then
+				O1 <= m3o;
+			end if;
+			
+			if (regctrl(3) = '1') then
+				O2 <= addOut;
+			end if;
+			
+			if (regctrl(4) = '1') then
+				TPO <= m2o;
+			end if;
+			
+			if (regctrl(5) = '1') then
+				PA <=m5o ;
+			end if;
+			
+--			if (regctrl(6) = '1') then
+--				A1 <= ;
+--			end if;
+--			
+--			if (regctrl(7) = '1') then
+--				A2 <= ;
+--			end if;
+--			
+--			if (regctrl(8) = '1') then
+--				A4 <= ;
+--			end if;
+				
+			if (regctrl(9) = '1') then
+				X1 <= Xh1;
+			end if;
+			
+			if (regctrl(10) = '1') then
+				X2 <= Xh2;
+			end if;
+			
+			if (regctrl(11) = '1') then
+				X3 <= Xh1;
+			end if;
+			
+			if (regctrl(12) = '1') then
+				X4 <= Xh2;
+			end if;
+			
+			if (regctrl(13) = '1') then
+				Xh1 <= outA;
+			end if;
+			
+			if (regctrl(14) = '1') then
+				Xh2 <= outB;
+			end if;
+			
+			if (regctrl(15) = '1') then
+				chi <= ALU2Out;
+			end if;
+			
+			if (regctrl(16) = '1') then
+				G <= mult1Out;
+			end if;
+			
+--			if (regctrl(17) = '1') then
+--				Leaky1
+--			end if;
+			
+			
 		
 		end if;
 	end process;

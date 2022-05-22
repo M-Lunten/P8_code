@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ConstrainedWallace
-Sun May 22 17:03:01 2022
+Sun May 22 17:07:55 2022
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun May 22 17:03:01 2022           ;
+; Analysis & Synthesis Status ; Failed - Sun May 22 17:07:55 2022           ;
 ; Quartus Prime Version       ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name               ; ConstrainedWallace                          ;
 ; Top-level Entity Name       ; ConstrainedWallace                          ;
@@ -171,7 +171,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sun May 22 17:02:50 2022
+    Info: Processing started: Sun May 22 17:07:45 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ConstrainedWallace -c ConstrainedWallace
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_29.vhd
@@ -254,7 +254,7 @@ Info (12133): Instantiated megafunction "wcRAM:RAM1|altsyncram:altsyncram_compon
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK0"
-    Info (12134): Parameter "init_file" = "wcRAMfile.mif"
+    Info (12134): Parameter "init_file" = "./work/wcRAMfile.mif"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "1024"
@@ -284,46 +284,46 @@ Info (12133): Instantiated megafunction "wcRAM:RAM1|altsyncram:altsyncram_compon
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_a314.tdf
-    Info (12023): Found entity 1: altsyncram_a314 File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_a314" for hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_a314:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Error (14000): WYSIWYG RAM primitive "ram_block1a0" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 40
-Error (14000): WYSIWYG RAM primitive "ram_block1a0" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 40
-Error (14000): WYSIWYG RAM primitive "ram_block1a1" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 75
-Error (14000): WYSIWYG RAM primitive "ram_block1a1" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 75
-Error (14000): WYSIWYG RAM primitive "ram_block1a2" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 110
-Error (14000): WYSIWYG RAM primitive "ram_block1a2" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 110
-Error (14000): WYSIWYG RAM primitive "ram_block1a3" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 145
-Error (14000): WYSIWYG RAM primitive "ram_block1a3" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 145
-Error (14000): WYSIWYG RAM primitive "ram_block1a4" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 180
-Error (14000): WYSIWYG RAM primitive "ram_block1a4" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 180
-Error (14000): WYSIWYG RAM primitive "ram_block1a5" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 215
-Error (14000): WYSIWYG RAM primitive "ram_block1a5" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 215
-Error (14000): WYSIWYG RAM primitive "ram_block1a6" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 250
-Error (14000): WYSIWYG RAM primitive "ram_block1a6" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 250
-Error (14000): WYSIWYG RAM primitive "ram_block1a7" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 285
-Error (14000): WYSIWYG RAM primitive "ram_block1a7" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 285
-Error (14000): WYSIWYG RAM primitive "ram_block1a8" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 320
-Error (14000): WYSIWYG RAM primitive "ram_block1a8" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 320
-Error (14000): WYSIWYG RAM primitive "ram_block1a9" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 355
-Error (14000): WYSIWYG RAM primitive "ram_block1a9" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 355
-Error (14000): WYSIWYG RAM primitive "ram_block1a10" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 390
-Error (14000): WYSIWYG RAM primitive "ram_block1a10" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 390
-Error (14000): WYSIWYG RAM primitive "ram_block1a11" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 425
-Error (14000): WYSIWYG RAM primitive "ram_block1a11" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 425
-Error (14000): WYSIWYG RAM primitive "ram_block1a12" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 460
-Error (14000): WYSIWYG RAM primitive "ram_block1a12" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 460
-Error (14000): WYSIWYG RAM primitive "ram_block1a13" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 495
-Error (14000): WYSIWYG RAM primitive "ram_block1a13" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 495
-Error (14000): WYSIWYG RAM primitive "ram_block1a14" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 530
-Error (14000): WYSIWYG RAM primitive "ram_block1a14" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 530
-Error (14000): WYSIWYG RAM primitive "ram_block1a15" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 565
-Error (14000): WYSIWYG RAM primitive "ram_block1a15" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 565
-Error (12152): Can't elaborate user hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_a314:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pl14.tdf
+    Info (12023): Found entity 1: altsyncram_pl14 File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_pl14" for hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_pl14:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Error (14000): WYSIWYG RAM primitive "ram_block1a0" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 40
+Error (14000): WYSIWYG RAM primitive "ram_block1a0" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 40
+Error (14000): WYSIWYG RAM primitive "ram_block1a1" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 75
+Error (14000): WYSIWYG RAM primitive "ram_block1a1" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 75
+Error (14000): WYSIWYG RAM primitive "ram_block1a2" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 110
+Error (14000): WYSIWYG RAM primitive "ram_block1a2" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 110
+Error (14000): WYSIWYG RAM primitive "ram_block1a3" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 145
+Error (14000): WYSIWYG RAM primitive "ram_block1a3" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 145
+Error (14000): WYSIWYG RAM primitive "ram_block1a4" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 180
+Error (14000): WYSIWYG RAM primitive "ram_block1a4" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 180
+Error (14000): WYSIWYG RAM primitive "ram_block1a5" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 215
+Error (14000): WYSIWYG RAM primitive "ram_block1a5" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 215
+Error (14000): WYSIWYG RAM primitive "ram_block1a6" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 250
+Error (14000): WYSIWYG RAM primitive "ram_block1a6" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 250
+Error (14000): WYSIWYG RAM primitive "ram_block1a7" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 285
+Error (14000): WYSIWYG RAM primitive "ram_block1a7" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 285
+Error (14000): WYSIWYG RAM primitive "ram_block1a8" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 320
+Error (14000): WYSIWYG RAM primitive "ram_block1a8" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 320
+Error (14000): WYSIWYG RAM primitive "ram_block1a9" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 355
+Error (14000): WYSIWYG RAM primitive "ram_block1a9" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 355
+Error (14000): WYSIWYG RAM primitive "ram_block1a10" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 390
+Error (14000): WYSIWYG RAM primitive "ram_block1a10" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 390
+Error (14000): WYSIWYG RAM primitive "ram_block1a11" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 425
+Error (14000): WYSIWYG RAM primitive "ram_block1a11" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 425
+Error (14000): WYSIWYG RAM primitive "ram_block1a12" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 460
+Error (14000): WYSIWYG RAM primitive "ram_block1a12" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 460
+Error (14000): WYSIWYG RAM primitive "ram_block1a13" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 495
+Error (14000): WYSIWYG RAM primitive "ram_block1a13" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 495
+Error (14000): WYSIWYG RAM primitive "ram_block1a14" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 530
+Error (14000): WYSIWYG RAM primitive "ram_block1a14" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 530
+Error (14000): WYSIWYG RAM primitive "ram_block1a15" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 565
+Error (14000): WYSIWYG RAM primitive "ram_block1a15" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 565
+Error (12152): Can't elaborate user hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_pl14:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 33 errors, 36 warnings
     Error: Peak virtual memory: 4847 megabytes
-    Error: Processing ended: Sun May 22 17:03:01 2022
-    Error: Elapsed time: 00:00:11
+    Error: Processing ended: Sun May 22 17:07:55 2022
+    Error: Elapsed time: 00:00:10
     Error: Total CPU time (on all processors): 00:00:21
 
 
