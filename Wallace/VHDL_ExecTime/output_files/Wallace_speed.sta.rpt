@@ -1,5 +1,5 @@
 Timing Analyzer report for Wallace_speed
-Sat May 14 18:15:13 2022
+Tue May 17 17:44:11 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -95,17 +95,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.18        ;
+; Average used               ; 1.15        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   8.4%      ;
-;     Processor 3            ;   4.9%      ;
-;     Processor 4            ;   4.3%      ;
+;     Processor 2            ;   7.1%      ;
+;     Processor 3            ;   4.2%      ;
+;     Processor 4            ;   3.5%      ;
 +----------------------------+-------------+
 
 
@@ -1480,7 +1480,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat May 14 18:15:10 2022
+    Info: Processing started: Tue May 17 17:44:08 2022
 Info: Command: quartus_sta Wallace_speed -c Wallace_speed
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1491,7 +1491,7 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'Wal
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clk clk
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 21
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 21
     Warning (332126): Node "cp|one_bit_count~0|combout"
     Warning (332126): Node "cp|one_bit_count~0|datab"
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -1554,9 +1554,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000            -568.288 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4847 megabytes
-    Info: Processing ended: Sat May 14 18:15:13 2022
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Tue May 17 17:44:11 2022
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

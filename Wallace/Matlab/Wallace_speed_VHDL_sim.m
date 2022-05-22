@@ -1,5 +1,6 @@
 % Data processing from VHDL simulation of Wallace speed VHDL
-fileID = fopen('output_results.txt', 'r');
+clear all
+fileID = fopen('output_results_V1.txt', 'r');
 A = fscanf(fileID, '%s');
 fclose(fileID);
 
@@ -11,17 +12,30 @@ for i = 1:length(data)-1
     data1(i) = bin2num(q, data{i});
 end
     
+fileID = fopen('output_results_V2.txt', 'r');
+A = fscanf(fileID, '%s');
+fclose(fileID);
+
+data = strsplit(A, ',');
+
+q = quantizer([16, 11]);
+data2 = zeros(length(data)-1, 1);
+for i = 1:length(data)-1
+    data2(i) = bin2num(q, data{i});
+end
 %data1 = data1.*2^(-11);
 
+%%
 [fi, xi] = ksdensity(data1);    
+[fi2, xi2] = ksdensity(data2);    
 x = (-6:.01:6);
 y = normpdf(x,0,1);
 
-%%
 figure(1)
 semilogy(x, y);
 hold on
-plot(xi, fi);
+%plot(xi, fi);
+plot(xi2, fi2);
 hold off
 legend('Ideal Gaussian', 'VHDL simulation');
 grid on
@@ -33,7 +47,8 @@ title('Log scale PDF for a VHDL simulation of Wallace')
 figure(2)
 plot(x, y);
 hold on
-plot(xi, fi);
+%plot(xi, fi);
+plot(xi2, fi2);
 hold off
 legend('Ideal Gaussian', 'VHDL simulation');
 grid on

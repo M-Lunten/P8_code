@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Wallace_speed
-Sat May 14 18:14:40 2022
+Tue May 17 17:43:31 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 14 18:14:40 2022       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 17 17:43:31 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Wallace_speed                               ;
 ; Top-level Entity Name              ; Wallace_speed                               ;
@@ -174,7 +174,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -188,57 +188,57 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                          ; Library ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
-; LFSR_52.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_52.vhd            ;         ;
-; LFSR_3.vhd                       ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_3.vhd             ;         ;
-; control_path.vhd                 ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd       ;         ;
-; Wallace_speed.vhd                ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd      ;         ;
-; RAM_1.vhd                        ; yes             ; User Wizard-Generated File             ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd              ;         ;
-; RAM_2.vhd                        ; yes             ; User Wizard-Generated File             ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd              ;         ;
-; addr_gen.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/addr_gen.vhd           ;         ;
-; transformation.vhd               ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/transformation.vhd     ;         ;
-; chi_corr.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd           ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                 ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc          ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                    ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                 ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                 ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                  ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                     ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                     ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                   ;         ;
-; db/altsyncram_tat3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/altsyncram_tat3.tdf ;         ;
-; pool_1.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/pool_1.mif             ;         ;
-; db/altsyncram_uat3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/altsyncram_uat3.tdf ;         ;
-; pool_2.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/pool_2.mif             ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf                   ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc                ;         ;
-; multcore.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc                   ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc                   ;         ;
-; altshift.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc                   ;         ;
-; db/mult_36t.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/mult_36t.tdf        ;         ;
-; multcore.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf                   ;         ;
-; csa_add.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/csa_add.inc                    ;         ;
-; mpar_add.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.inc                   ;         ;
-; muleabz.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muleabz.inc                    ;         ;
-; mul_lfrg.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mul_lfrg.inc                   ;         ;
-; mul_boothc.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mul_boothc.inc                 ;         ;
-; alt_ded_mult.inc                 ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_ded_mult.inc               ;         ;
-; alt_ded_mult_y.inc               ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc             ;         ;
-; dffpipe.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/dffpipe.inc                    ;         ;
-; mpar_add.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf                   ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                ;         ;
-; addcore.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/addcore.inc                    ;         ;
-; look_add.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/look_add.inc                   ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc        ;         ;
-; db/add_sub_ogh.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/add_sub_ogh.tdf     ;         ;
-; db/add_sub_sgh.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/add_sub_sgh.tdf     ;         ;
-; altshift.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.tdf                   ;         ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
+; LFSR_52.vhd                      ; yes             ; User VHDL File                         ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_52.vhd            ;         ;
+; LFSR_3.vhd                       ; yes             ; User VHDL File                         ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_3.vhd             ;         ;
+; control_path.vhd                 ; yes             ; User VHDL File                         ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd       ;         ;
+; Wallace_speed.vhd                ; yes             ; User VHDL File                         ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd      ;         ;
+; RAM_1.vhd                        ; yes             ; User Wizard-Generated File             ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd              ;         ;
+; RAM_2.vhd                        ; yes             ; User Wizard-Generated File             ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd              ;         ;
+; addr_gen.vhd                     ; yes             ; User VHDL File                         ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/addr_gen.vhd           ;         ;
+; transformation.vhd               ; yes             ; User VHDL File                         ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/transformation.vhd     ;         ;
+; chi_corr.vhd                     ; yes             ; User VHDL File                         ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd           ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_tat3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/altsyncram_tat3.tdf ;         ;
+; pool_1.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/pool_1.mif             ;         ;
+; db/altsyncram_uat3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/altsyncram_uat3.tdf ;         ;
+; pool_2.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/pool_2.mif             ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; multcore.inc                     ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/multcore.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; db/mult_36t.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/mult_36t.tdf        ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/multcore.tdf            ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/csa_add.inc             ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/muleabz.inc             ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/mul_lfrg.inc            ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/mul_boothc.inc          ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/alt_ded_mult.inc        ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/alt_ded_mult_y.inc      ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/dffpipe.inc             ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/mpar_add.tdf            ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_ogh.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/add_sub_ogh.tdf     ;         ;
+; db/add_sub_sgh.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/add_sub_sgh.tdf     ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                           ; d:/programs/quartusprimelite/quartus/libraries/megafunctions/altshift.tdf            ;         ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -1084,7 +1084,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -1094,51 +1094,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat May 14 18:14:22 2022
+    Info: Processing started: Tue May 17 17:43:04 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Wallace_speed -c Wallace_speed
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_52.vhd
-    Info (12022): Found design unit 1: LFSR_52-Behavioral File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_52.vhd Line: 11
-    Info (12023): Found entity 1: LFSR_52 File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_52.vhd Line: 4
+    Info (12022): Found design unit 1: LFSR_52-Behavioral File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_52.vhd Line: 11
+    Info (12023): Found entity 1: LFSR_52 File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_52.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_3.vhd
-    Info (12022): Found design unit 1: LFSR_3-Behavioral File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_3.vhd Line: 11
-    Info (12023): Found entity 1: LFSR_3 File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_3.vhd Line: 4
+    Info (12022): Found design unit 1: LFSR_3-Behavioral File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_3.vhd Line: 11
+    Info (12023): Found entity 1: LFSR_3 File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/LFSR_3.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file control_path.vhd
-    Info (12022): Found design unit 1: control_path-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 18
-    Info (12023): Found entity 1: control_path File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 6
+    Info (12022): Found design unit 1: control_path-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 18
+    Info (12023): Found entity 1: control_path File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file wallace_speed.vhd
-    Info (12022): Found design unit 1: Wallace_speed-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 19
-    Info (12023): Found entity 1: Wallace_speed File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 6
+    Info (12022): Found design unit 1: Wallace_speed-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 19
+    Info (12023): Found entity 1: Wallace_speed File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ram_1.vhd
-    Info (12022): Found design unit 1: ram_1-SYN File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd Line: 58
-    Info (12023): Found entity 1: RAM_1 File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd Line: 42
+    Info (12022): Found design unit 1: ram_1-SYN File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd Line: 58
+    Info (12023): Found entity 1: RAM_1 File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file ram_2.vhd
-    Info (12022): Found design unit 1: ram_2-SYN File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd Line: 58
-    Info (12023): Found entity 1: RAM_2 File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd Line: 42
+    Info (12022): Found design unit 1: ram_2-SYN File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd Line: 58
+    Info (12023): Found entity 1: RAM_2 File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file addr_gen.vhd
-    Info (12022): Found design unit 1: addr_gen-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/addr_gen.vhd Line: 16
-    Info (12023): Found entity 1: addr_gen File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/addr_gen.vhd Line: 6
+    Info (12022): Found design unit 1: addr_gen-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/addr_gen.vhd Line: 16
+    Info (12023): Found entity 1: addr_gen File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/addr_gen.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file transformation.vhd
-    Info (12022): Found design unit 1: transformation-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/transformation.vhd Line: 21
-    Info (12023): Found entity 1: transformation File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/transformation.vhd Line: 6
+    Info (12022): Found design unit 1: transformation-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/transformation.vhd Line: 21
+    Info (12023): Found entity 1: transformation File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/transformation.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file chi_corr.vhd
-    Info (12022): Found design unit 1: chi_corr-behavior File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd Line: 15
-    Info (12023): Found entity 1: chi_corr File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd Line: 6
+    Info (12022): Found design unit 1: chi_corr-behavior File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd Line: 15
+    Info (12023): Found entity 1: chi_corr File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd Line: 6
 Info (12127): Elaborating entity "Wallace_speed" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Wallace_speed.vhd(104): object "MUX_5" assigned a value but never read File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 104
-Info (12128): Elaborating entity "control_path" for hierarchy "control_path:cp" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 129
-Warning (10492): VHDL Process Statement warning at control_path.vhd(55): signal "one_bit_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 55
-Warning (10631): VHDL Process Statement warning at control_path.vhd(52): inferring latch(es) for signal or variable "one_bit_count", which holds its previous value in one or more paths through the process File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 52
-Warning (10492): VHDL Process Statement warning at control_path.vhd(84): signal "one_bit_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 84
-Warning (10492): VHDL Process Statement warning at control_path.vhd(85): signal "one_bit_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 85
-Info (10041): Inferred latch for "one_bit_count" at control_path.vhd(52) File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 52
-Info (12128): Elaborating entity "LFSR_3" for hierarchy "control_path:cp|LFSR_3:LFSR" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 35
-Info (12128): Elaborating entity "LFSR_52" for hierarchy "LFSR_52:LFSR" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 130
-Info (12128): Elaborating entity "RAM_1" for hierarchy "RAM_1:RAM_1_1" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 133
-Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM_1:RAM_1_1|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd Line: 67
-Info (12130): Elaborated megafunction instantiation "RAM_1:RAM_1_1|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd Line: 67
-Info (12133): Instantiated megafunction "RAM_1:RAM_1_1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd Line: 67
+Warning (10036): Verilog HDL or VHDL warning at Wallace_speed.vhd(104): object "MUX_5" assigned a value but never read File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 104
+Info (12128): Elaborating entity "control_path" for hierarchy "control_path:cp" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 129
+Warning (10492): VHDL Process Statement warning at control_path.vhd(55): signal "one_bit_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at control_path.vhd(52): inferring latch(es) for signal or variable "one_bit_count", which holds its previous value in one or more paths through the process File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 52
+Warning (10492): VHDL Process Statement warning at control_path.vhd(84): signal "one_bit_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at control_path.vhd(85): signal "one_bit_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 85
+Info (10041): Inferred latch for "one_bit_count" at control_path.vhd(52) File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 52
+Info (12128): Elaborating entity "LFSR_3" for hierarchy "control_path:cp|LFSR_3:LFSR" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/control_path.vhd Line: 35
+Info (12128): Elaborating entity "LFSR_52" for hierarchy "LFSR_52:LFSR" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 130
+Info (12128): Elaborating entity "RAM_1" for hierarchy "RAM_1:RAM_1_1" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 133
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM_1:RAM_1_1|altsyncram:altsyncram_component" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd Line: 67
+Info (12130): Elaborated megafunction instantiation "RAM_1:RAM_1_1|altsyncram:altsyncram_component" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd Line: 67
+Info (12133): Instantiated megafunction "RAM_1:RAM_1_1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_1.vhd Line: 67
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
@@ -1190,12 +1190,12 @@ Info (12133): Instantiated megafunction "RAM_1:RAM_1_1|altsyncram:altsyncram_com
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tat3.tdf
-    Info (12023): Found entity 1: altsyncram_tat3 File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/altsyncram_tat3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_tat3" for hierarchy "RAM_1:RAM_1_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "RAM_2" for hierarchy "RAM_2:RAM_1_2" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 134
-Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM_2:RAM_1_2|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd Line: 67
-Info (12130): Elaborated megafunction instantiation "RAM_2:RAM_1_2|altsyncram:altsyncram_component" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd Line: 67
-Info (12133): Instantiated megafunction "RAM_2:RAM_1_2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd Line: 67
+    Info (12023): Found entity 1: altsyncram_tat3 File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/altsyncram_tat3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_tat3" for hierarchy "RAM_1:RAM_1_1|altsyncram:altsyncram_component|altsyncram_tat3:auto_generated" File: d:/programs/quartusprimelite/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "RAM_2" for hierarchy "RAM_2:RAM_1_2" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 134
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM_2:RAM_1_2|altsyncram:altsyncram_component" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd Line: 67
+Info (12130): Elaborated megafunction instantiation "RAM_2:RAM_1_2|altsyncram:altsyncram_component" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd Line: 67
+Info (12133): Instantiated megafunction "RAM_2:RAM_1_2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/RAM_2.vhd Line: 67
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
@@ -1247,20 +1247,20 @@ Info (12133): Instantiated megafunction "RAM_2:RAM_1_2|altsyncram:altsyncram_com
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_uat3.tdf
-    Info (12023): Found entity 1: altsyncram_uat3 File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/altsyncram_uat3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_uat3" for hierarchy "RAM_2:RAM_1_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "addr_gen" for hierarchy "addr_gen:ADDR_GEN_1" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 139
-Info (12128): Elaborating entity "transformation" for hierarchy "transformation:tstage" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 142
-Warning (10492): VHDL Process Statement warning at transformation.vhd(61): signal "Tctrl" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/transformation.vhd Line: 61
-Info (12128): Elaborating entity "chi_corr" for hierarchy "chi_corr:chistage" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 144
+    Info (12023): Found entity 1: altsyncram_uat3 File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/altsyncram_uat3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_uat3" for hierarchy "RAM_2:RAM_1_2|altsyncram:altsyncram_component|altsyncram_uat3:auto_generated" File: d:/programs/quartusprimelite/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "addr_gen" for hierarchy "addr_gen:ADDR_GEN_1" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 139
+Info (12128): Elaborating entity "transformation" for hierarchy "transformation:tstage" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at transformation.vhd(61): signal "Tctrl" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/transformation.vhd Line: 61
+Info (12128): Elaborating entity "chi_corr" for hierarchy "chi_corr:chistage" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 144
 Info (278001): Inferred 5 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 179
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 180
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult2" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 181
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult3" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 182
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "chi_corr:chistage|Mult0" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd Line: 35
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 179
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 179
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 179
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 180
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult2" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 181
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult3" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 182
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "chi_corr:chistage|Mult0" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd Line: 35
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 179
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/Wallace_speed.vhd Line: 179
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "16"
     Info (12134): Parameter "LPM_WIDTHP" = "32"
@@ -1271,9 +1271,9 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following para
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_36t.tdf
-    Info (12023): Found entity 1: mult_36t File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/mult_36t.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd Line: 35
-Info (12133): Instantiated megafunction "chi_corr:chistage|lpm_mult:Mult0" with the following parameter: File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd Line: 35
+    Info (12023): Found entity 1: mult_36t File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/mult_36t.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd Line: 35
+Info (12133): Instantiated megafunction "chi_corr:chistage|lpm_mult:Mult0" with the following parameter: File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/chi_corr.vhd Line: 35
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "11"
     Info (12134): Parameter "LPM_WIDTHP" = "27"
@@ -1283,16 +1283,16 @@ Info (12133): Instantiated megafunction "chi_corr:chistage|lpm_mult:Mult0" with 
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
-Info (12131): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
-Info (12131): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
-Info (12131): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12131): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: d:/programs/quartusprimelite/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: d:/programs/quartusprimelite/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ogh.tdf
-    Info (12023): Found entity 1: add_sub_ogh File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/add_sub_ogh.tdf Line: 22
-Info (12131): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
-Info (12131): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+    Info (12023): Found entity 1: add_sub_ogh File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/add_sub_ogh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: d:/programs/quartusprimelite/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: d:/programs/quartusprimelite/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_sgh.tdf
-    Info (12023): Found entity 1: add_sub_sgh File: C:/Users/Morten/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/add_sub_sgh.tdf Line: 22
-Info (12131): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+    Info (12023): Found entity 1: add_sub_sgh File: C:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_ExecTime/db/add_sub_sgh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "chi_corr:chistage|lpm_mult:Mult0" File: d:/programs/quartusprimelite/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1302,10 +1302,10 @@ Info (21057): Implemented 1024 device resources after synthesis - the final reso
     Info (21061): Implemented 884 logic cells
     Info (21064): Implemented 64 RAM segments
     Info (21062): Implemented 8 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Sat May 14 18:14:40 2022
-    Info: Elapsed time: 00:00:18
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4818 megabytes
+    Info: Processing ended: Tue May 17 17:43:31 2022
+    Info: Elapsed time: 00:00:27
     Info: Total CPU time (on all processors): 00:00:29
 
 

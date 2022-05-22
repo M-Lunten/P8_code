@@ -57,16 +57,16 @@ legend('Ideal Gaussian', 'Floating Point', 'Fixed Point')
 [corr_f, corr_x] = ksdensity(soq_corr);
 x_chi = L*K*0.5:0.2:L*K*1.5;
 y_chi = chi2pdf(x_chi,L*K);
-
+x_diff = corr_x_fp-corr_x;
+y_diff = abs(corr_f_fp-corr_f);
 figure(2)
-plot(x_chi, y_chi)
+plot(corr_x, y_diff)
 hold on
-plot(corr_x, corr_f)
-plot(corr_x_fp, corr_f_fp)
+%plot(corr_x, corr_f)
+%plot(corr_x_fp, corr_f_fp)
 hold off
 grid on
-legend('\chi^2 distribution', 'SOQ floating point', 'SOQ fixed point');
-title('Sum of Squares for floating/fixed point')
+title('Approximation error between floating/fixed point')
 xlabel('x')
 ylabel('Probability')
 
