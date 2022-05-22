@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="56343ad2b4adb237e891"/>
+    <hash md5_digest_80b="bebbacfc33d05cf49bb2"/>
   </project>
   <file_info>
-    <file device="5CGXFC7C7F23C8" path="ConstrainedWallace.sof" usercode="0xFFFFFFFF"/>
+    <file device="EP4CE115F29C7" path="ConstrainedWallace.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>
