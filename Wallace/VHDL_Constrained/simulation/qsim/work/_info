@@ -8,35 +8,186 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/simulation/qsim
+Ealu
+Z1 w1653233642
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+Z8 dC:/Users/morte/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/simulation/qsim
+Z9 8ConstrainedWallace.vho
+Z10 FConstrainedWallace.vho
+l0
+L77
+VfWXRT_P?DgCZ^31k30VEG2
+!s100 W8gnD^hiDGHdL056z7OI?2
+Z11 OV;C;10.5b;63
+32
+Z12 !s110 1653233643
+!i10b 1
+Z13 !s108 1653233643.000000
+Z14 !s90 -work|work|ConstrainedWallace.vho|
+Z15 !s107 ConstrainedWallace.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 3 alu 0 22 fWXRT_P?DgCZ^31k30VEG2
+l261
+L140
+VMDS3@Nj<ORhno^c@dd8Kj2
+!s100 Zm[C_@O90gaCeL^KlF[Ue2
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Ealu_vhd_vec_tst
+Z18 w1653233641
+R5
+R6
+R8
+Z19 8Waveform1.vwf.vht
+Z20 FWaveform1.vwf.vht
+l0
+L31
+VM9g^YfSDOcSm9VVBlhjI60
+!s100 e_jiJ7a9ecH56?Rk3`[>[2
+R11
+32
+R12
+!i10b 1
+R13
+Z21 !s90 -work|work|Waveform1.vwf.vht|
+Z22 !s107 Waveform1.vwf.vht|
+!i113 1
+R16
+R17
+Aalu_arch
+R5
+R6
+Z23 DEx4 work 15 alu_vhd_vec_tst 0 22 M9g^YfSDOcSm9VVBlhjI60
+l50
+L33
+VLT>K?FP_:YMC;?Eb?76=H3
+!s100 :^hR<KjeSlHL<zR97A?G91
+R11
+32
+R12
+!i10b 1
+R13
+R21
+R22
+!i113 1
+R16
+R17
 Ecwcontrolpath
-Z1 w1653142817
-Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 PDz30Zoj;e1JEj1l7dCiT1
-Z3 DPx8 cyclonev 19 cyclonev_components 0 22 O_kVZAFaN7XDl67flUT[n1
-Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ;`SHL]^j4UaADA9ENAN^]0
-Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z6 DPx6 altera 11 dffeas_pack 0 22 Dg`GWTC`^Q8GNSMPeo22;3
-Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z9 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z10 DPx6 altera 28 altera_primitives_components 0 22 _LNC5n6B?5VN@W;M4Dg@k1
+Z24 w1653142817
+Z25 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 PDz30Zoj;e1JEj1l7dCiT1
+Z26 DPx8 cyclonev 19 cyclonev_components 0 22 O_kVZAFaN7XDl67flUT[n1
+Z27 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ;`SHL]^j4UaADA9ENAN^]0
+R2
+Z28 DPx6 altera 11 dffeas_pack 0 22 Dg`GWTC`^Q8GNSMPeo22;3
+R4
+R5
+R6
+Z29 DPx6 altera 28 altera_primitives_components 0 22 _LNC5n6B?5VN@W;M4Dg@k1
 R0
-Z11 8ConstrainedWallace.vho
-Z12 FConstrainedWallace.vho
+R9
+R10
 l0
 L38
 VE[3nJU83j57[U[I0T7lbI2
 !s100 jLUBmf[JJJBY>zAX6LG`V3
-Z13 OV;C;10.5b;63
+R11
 32
-Z14 !s110 1653142818
+Z30 !s110 1653142818
 !i10b 1
-Z15 !s108 1653142818.000000
-Z16 !s90 -work|work|ConstrainedWallace.vho|
-Z17 !s107 ConstrainedWallace.vho|
+Z31 !s108 1653142818.000000
+R14
+R15
 !i113 1
-Z18 o-work work
-Z19 tExplicit 1 CvgOpt 0
+R16
+R17
 Astructure
+R25
+R26
+R27
+R2
+R28
+R4
+R5
+R6
+R29
+DEx4 work 13 cwcontrolpath 0 22 E[3nJU83j57[U[I0T7lbI2
+l146
+L94
+VigFZGHED?`GX@FGlo`QWa3
+!s100 ;Bg6IFP@ebziL=kS<Qh700
+R11
+32
+R30
+!i10b 1
+R31
+R14
+R15
+!i113 1
+R16
+R17
+Ecwcontrolpath_vhd_vec_tst
+Z32 w1653142815
+R5
+R6
+R0
+Z33 8Waveform.vwf.vht
+Z34 FWaveform.vwf.vht
+l0
+L31
+VaL?ABfP@Sb1CFY9X2Z`A[2
+!s100 IE:1^X<h[hPTobmO[]7]^0
+R11
+32
+R30
+!i10b 1
+R31
+Z35 !s90 -work|work|Waveform.vwf.vht|
+Z36 !s107 Waveform.vwf.vht|
+!i113 1
+R16
+R17
+Acwcontrolpath_arch
+R5
+R6
+DEx4 work 25 cwcontrolpath_vhd_vec_tst 0 22 aL?ABfP@Sb1CFY9X2Z`A[2
+l56
+L33
+V;84Bjmm^kZc3e8WM7aU<62
+!s100 9bQaMIXX27N=V1VnWT[CT2
+R11
+32
+R30
+!i10b 1
+R31
+R35
+R36
+!i113 1
+R16
+R17
+Ehard_block
+R1
 R2
 R3
 R4
@@ -46,57 +197,39 @@ R7
 R8
 R9
 R10
-DEx4 work 13 cwcontrolpath 0 22 E[3nJU83j57[U[I0T7lbI2
-l146
-L94
-VigFZGHED?`GX@FGlo`QWa3
-!s100 ;Bg6IFP@ebziL=kS<Qh700
-R13
+l0
+L34
+VOgIg9T_BR7joedFDVM>H13
+!s100 A`ID_i56<Ua56=ZD=[EG=2
+R11
 32
-R14
+R12
 !i10b 1
+R13
+R14
 R15
+!i113 1
 R16
 R17
-!i113 1
-R18
-R19
-Ecwcontrolpath_vhd_vec_tst
-Z20 w1653142815
-R8
-R9
-R0
-Z21 8Waveform.vwf.vht
-Z22 FWaveform.vwf.vht
-l0
-L31
-VaL?ABfP@Sb1CFY9X2Z`A[2
-!s100 IE:1^X<h[hPTobmO[]7]^0
-R13
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
+l64
+L50
+V`^CmQg<48W[ez[JL_5@Yn2
+!s100 2S?JL;LJ@<3:BHXTNcXS]3
+R11
 32
-R14
+R12
 !i10b 1
-R15
-Z23 !s90 -work|work|Waveform.vwf.vht|
-Z24 !s107 Waveform.vwf.vht|
-!i113 1
-R18
-R19
-Acwcontrolpath_arch
-R8
-R9
-DEx4 work 25 cwcontrolpath_vhd_vec_tst 0 22 aL?ABfP@Sb1CFY9X2Z`A[2
-l56
-L33
-V;84Bjmm^kZc3e8WM7aU<62
-!s100 9bQaMIXX27N=V1VnWT[CT2
 R13
-32
 R14
-!i10b 1
 R15
-R23
-R24
 !i113 1
-R18
-R19
+R16
+R17
