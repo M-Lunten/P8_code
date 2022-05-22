@@ -39,6 +39,7 @@ architecture rtl of ConstrainedWallace is
 				 );
 	end component;
 	
+	
 	component wcRAM is
 			port (
 				address_a	: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
@@ -52,6 +53,18 @@ architecture rtl of ConstrainedWallace is
 				q_b			: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 				);
 	end component;
+	
+	
+	component ALU is
+			port (
+				add_sub		: IN STD_LOGIC ;
+				cin			: IN STD_LOGIC ;
+				dataa			: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+				datab			: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+				result		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+				);
+	end component;
+	
 	
 	-- Port maps
 	signal ramEN	 	: std_logic;
@@ -117,6 +130,8 @@ begin
 
 	CP1: cwControlPath port map (clkIn => clk, startIn => start, validNum => valid, ramEnable => ramEN, aluSub => aluState, lfsrEnable => lfsrEN, muxControl => muxctrl, regControl => regctrl);
 	RAM1: wcRAM port map (address_a => addrA, address_b => addrB, clock => clk, data_a => ALU1Out, data_b => ALU2Out, wren_a => aEN, wren_b => bEN, q_a => outA, q_b => outB);
+	ALU1: ALU port map (add_sub => not aluState, cin => alustate, dataa => ALU1A, datab => ALU1B, result=> ALU1Out);
+	ALU2: ALU port map (add_sub => not aluState, cin => alustate, dataa => ALU2A, datab => ALU2B, result=> ALU2Out);
 	
 	
 	process (muxCtrl)
@@ -221,14 +236,6 @@ begin
 	
 	-- Adders
 		addOut <= std_logic_vector(signed(addA) + signed(addB));
-		
-		if (aluState = '0') then -- sub or add
-			ALU1Out <= std_logic_vector(signed(ALU1A) + signed(ALU1B));
-			ALU2Out <= std_logic_vector(signed(ALU2A) + signed(ALU2B));
-		else
-			ALU1Out <= std_logic_vector(signed(ALU1A) - signed(ALU1B));
-			ALU2Out <= std_logic_vector(signed(ALU2A) - signed(ALU2B));
-		end if;
 		
 		
 	-- Multiplier

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ConstrainedWallace
-Sun May 22 17:07:55 2022
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Sun May 22 18:34:36 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -10,8 +10,22 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis IP Cores Summary
-  6. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Source assignments for wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated
+ 13. Parameter Settings for User Entity Instance: wcRAM:RAM1|altsyncram:altsyncram_component
+ 14. Parameter Settings for User Entity Instance: ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component
+ 15. Parameter Settings for User Entity Instance: ALU:ALU2|lpm_add_sub:LPM_ADD_SUB_component
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "cwControlPath:CP1"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -34,110 +48,110 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun May 22 17:07:55 2022           ;
-; Quartus Prime Version       ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
-; Revision Name               ; ConstrainedWallace                          ;
-; Top-level Entity Name       ; ConstrainedWallace                          ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun May 22 18:34:36 2022       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; ConstrainedWallace                          ;
+; Top-level Entity Name              ; ConstrainedWallace                          ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 17                                          ;
+;     Total combinational functions  ; 17                                          ;
+;     Dedicated logic registers      ; 12                                          ;
+; Total registers                    ; 12                                          ;
+; Total pins                         ; 19                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; ConstrainedWallace ; ConstrainedWallace ;
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Maximum processors allowed for parallel compilation                             ; All                ; All                ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; ConstrainedWallace ; ConstrainedWallace ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -149,11 +163,85 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; ConstrainedWallace.vhd           ; yes             ; User VHDL File                         ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd ;         ;
+; cwControlPath.vhd                ; yes             ; User VHDL File                         ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd      ;         ;
+; wcRAM.vhd                        ; yes             ; User Wizard-Generated File             ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd              ;         ;
+; ALU.vhd                          ; yes             ; User Wizard-Generated File             ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd                ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                   ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc            ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                      ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                   ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                   ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                    ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                       ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                       ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                     ;         ;
+; db/altsyncram_9fr3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf ;         ;
+; ./work/wcRAMfile.mif             ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/work/wcRAMfile.mif     ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                  ;         ;
+; addcore.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/addcore.inc                      ;         ;
+; look_add.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/look_add.inc                     ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc                     ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc                     ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc          ;         ;
+; db/add_sub_3sg.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_3sg.tdf     ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 17        ;
+;                                             ;           ;
+; Total combinational functions               ; 17        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 6         ;
+;     -- 3 input functions                    ; 2         ;
+;     -- <=2 input functions                  ; 9         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 10        ;
+;     -- arithmetic mode                      ; 7         ;
+;                                             ;           ;
+; Total registers                             ; 12        ;
+;     -- Dedicated logic registers            ; 12        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 19        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 12        ;
+; Total fan-out                               ; 99        ;
+; Average fan-out                             ; 1.48      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                               ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name        ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------------+--------------+
+; |ConstrainedWallace        ; 17 (0)              ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |ConstrainedWallace                   ; ConstrainedWallace ; work         ;
+;    |cwControlPath:CP1|     ; 17 (17)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|cwControlPath:CP1 ; cwControlPath      ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -161,8 +249,263 @@ refer to the applicable agreement for further details.
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
-; Altera ; RAM: 2-PORT  ; 18.0    ; N/A          ; N/A          ; |ConstrainedWallace|wcRAM:RAM1 ; wcRAM.vhd       ;
+; Altera ; LPM_ADD_SUB  ; 18.1    ; N/A          ; N/A          ; |ConstrainedWallace|ALU:ALU1   ; ALU.vhd         ;
+; Altera ; LPM_ADD_SUB  ; 18.1    ; N/A          ; N/A          ; |ConstrainedWallace|ALU:ALU2   ; ALU.vhd         ;
+; Altera ; RAM: 2-PORT  ; 18.1    ; N/A          ; N/A          ; |ConstrainedWallace|wcRAM:RAM1 ; wcRAM.vhd       ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
+
+
++---------------------------------------------------------------+
+; Registers Removed During Synthesis                            ;
++------------------------------------------+--------------------+
+; Register name                            ; Reason for Removal ;
++------------------------------------------+--------------------+
+; Xh1[0..7]                                ; Lost fanout        ;
+; Xh2[0..15]                               ; Lost fanout        ;
+; Xh1[8..15]                               ; Lost fanout        ;
+; X4[0..15]                                ; Lost fanout        ;
+; X3[0..15]                                ; Lost fanout        ;
+; X2[0..15]                                ; Lost fanout        ;
+; X1[0..15]                                ; Lost fanout        ;
+; PA[0..15]                                ; Lost fanout        ;
+; TPO[0..15]                               ; Lost fanout        ;
+; O2[0..15]                                ; Lost fanout        ;
+; O1[0..15]                                ; Lost fanout        ;
+; cwControlPath:CP1|muxControl[1,2]        ; Lost fanout        ;
+; cwControlPath:CP1|aluSub                 ; Lost fanout        ;
+; cwControlPath:CP1|muxControl[3..13]      ; Lost fanout        ;
+; cwControlPath:CP1|regControl[2..5,9..14] ; Lost fanout        ;
+; Total Number of Removed Registers = 184  ;                    ;
++------------------------------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                            ;
++---------------+--------------------+-------------------------------------------------------------------+
+; Register name ; Reason for Removal ; Registers Removed due to This Register                            ;
++---------------+--------------------+-------------------------------------------------------------------+
+; TPO[0]        ; Lost Fanouts       ; cwControlPath:CP1|muxControl[2], cwControlPath:CP1|muxControl[1], ;
+;               ;                    ; cwControlPath:CP1|regControl[4]                                   ;
+; Xh1[7]        ; Lost Fanouts       ; cwControlPath:CP1|muxControl[7], cwControlPath:CP1|regControl[13] ;
+; O1[0]         ; Lost Fanouts       ; cwControlPath:CP1|muxControl[3], cwControlPath:CP1|regControl[2]  ;
+; Xh1[3]        ; Lost Fanouts       ; cwControlPath:CP1|aluSub                                          ;
+; Xh2[15]       ; Lost Fanouts       ; cwControlPath:CP1|regControl[14]                                  ;
+; X4[0]         ; Lost Fanouts       ; cwControlPath:CP1|regControl[12]                                  ;
+; X3[0]         ; Lost Fanouts       ; cwControlPath:CP1|regControl[11]                                  ;
+; X2[0]         ; Lost Fanouts       ; cwControlPath:CP1|regControl[10]                                  ;
+; X1[0]         ; Lost Fanouts       ; cwControlPath:CP1|regControl[9]                                   ;
+; PA[0]         ; Lost Fanouts       ; cwControlPath:CP1|regControl[5]                                   ;
+; O2[0]         ; Lost Fanouts       ; cwControlPath:CP1|regControl[3]                                   ;
++---------------+--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 12    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Source assignments for wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------+
+; Assignment                      ; Value              ; From ; To                                 ;
++---------------------------------+--------------------+------+------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                  ;
++---------------------------------+--------------------+------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wcRAM:RAM1|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------+
+; Parameter Name                     ; Value                ; Type                        ;
++------------------------------------+----------------------+-----------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                     ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE              ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                     ;
+; OPERATION_MODE                     ; BIDIR_DUAL_PORT      ; Untyped                     ;
+; WIDTH_A                            ; 16                   ; Signed Integer              ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer              ;
+; NUMWORDS_A                         ; 1024                 ; Signed Integer              ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                     ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                     ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WIDTH_B                            ; 16                   ; Signed Integer              ;
+; WIDTHAD_B                          ; 10                   ; Signed Integer              ;
+; NUMWORDS_B                         ; 1024                 ; Signed Integer              ;
+; INDATA_REG_B                       ; CLOCK0               ; Untyped                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK0               ; Untyped                     ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                     ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                     ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                     ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer              ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                     ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer              ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; OLD_DATA             ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; OLD_DATA             ; Untyped                     ;
+; INIT_FILE                          ; ./work/wcRAMfile.mif ; Untyped                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                     ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer              ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                     ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                     ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer              ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_9fr3      ; Untyped                     ;
++------------------------------------+----------------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component ;
++------------------------+--------------+-------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                            ;
++------------------------+--------------+-------------------------------------------------+
+; LPM_WIDTH              ; 16           ; Signed Integer                                  ;
+; LPM_REPRESENTATION     ; SIGNED       ; Untyped                                         ;
+; LPM_DIRECTION          ; DEFAULT      ; Untyped                                         ;
+; ONE_INPUT_IS_CONSTANT  ; NO           ; Untyped                                         ;
+; LPM_PIPELINE           ; 0            ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5            ; Untyped                                         ;
+; REGISTERED_AT_END      ; 0            ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5            ; Untyped                                         ;
+; USE_CS_BUFFERS         ; 1            ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL       ; Untyped                                         ;
+; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                              ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                         ;
+; USE_WYS                ; OFF          ; Untyped                                         ;
+; STYLE                  ; FAST         ; Untyped                                         ;
+; CBXI_PARAMETER         ; add_sub_3sg  ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                  ;
++------------------------+--------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU2|lpm_add_sub:LPM_ADD_SUB_component ;
++------------------------+--------------+-------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                            ;
++------------------------+--------------+-------------------------------------------------+
+; LPM_WIDTH              ; 16           ; Signed Integer                                  ;
+; LPM_REPRESENTATION     ; SIGNED       ; Untyped                                         ;
+; LPM_DIRECTION          ; DEFAULT      ; Untyped                                         ;
+; ONE_INPUT_IS_CONSTANT  ; NO           ; Untyped                                         ;
+; LPM_PIPELINE           ; 0            ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5            ; Untyped                                         ;
+; REGISTERED_AT_END      ; 0            ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5            ; Untyped                                         ;
+; USE_CS_BUFFERS         ; 1            ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL       ; Untyped                                         ;
+; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                              ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                         ;
+; USE_WYS                ; OFF          ; Untyped                                         ;
+; STYLE                  ; FAST         ; Untyped                                         ;
+; CBXI_PARAMETER         ; add_sub_3sg  ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                  ;
++------------------------+--------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                       ;
++-------------------------------------------+--------------------------------------------+
+; Name                                      ; Value                                      ;
++-------------------------------------------+--------------------------------------------+
+; Number of entity instances                ; 1                                          ;
+; Entity Instance                           ; wcRAM:RAM1|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                            ;
+;     -- WIDTH_A                            ; 16                                         ;
+;     -- NUMWORDS_A                         ; 1024                                       ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                               ;
+;     -- WIDTH_B                            ; 16                                         ;
+;     -- NUMWORDS_B                         ; 1024                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                     ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                               ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                       ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                   ;
++-------------------------------------------+--------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cwControlPath:CP1"                                                                                ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; ramenable          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; lfsrenable         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; muxcontrol[15..14] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; muxcontrol[0]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; regcontrol[17..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; regcontrol[8..6]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; regcontrol[1..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 19                          ;
+; cycloneiii_ff         ; 12                          ;
+;     ENA               ; 8                           ;
+;     plain             ; 4                           ;
+; cycloneiii_lcell_comb ; 18                          ;
+;     arith             ; 7                           ;
+;         2 data inputs ; 7                           ;
+;     normal            ; 11                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 6                           ;
+;                       ;                             ;
+; Max LUT depth         ; 4.70                        ;
+; Average LUT depth     ; 3.60                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -170,9 +513,10 @@ refer to the applicable agreement for further details.
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sun May 22 17:07:45 2022
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sun May 22 18:34:22 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ConstrainedWallace -c ConstrainedWallace
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_29.vhd
     Info (12022): Found design unit 1: LFSR_29-Behavioral File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_29.vhd Line: 11
@@ -192,45 +536,115 @@ Info (12021): Found 2 design units, including 1 entities, in source file wcram.v
 Info (12021): Found 2 design units, including 1 entities, in source file cwcontrolpath_tb.vhd
     Info (12022): Found design unit 1: cwControlPath_tb-rtl File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd Line: 8
     Info (12023): Found entity 1: cwControlPath_tb File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-SYN File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 54
+    Info (12023): Found entity 1: ALU File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 42
 Info (12127): Elaborating entity "ConstrainedWallace" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(57): object "ramEN" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 57
-Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(59): object "lfsrEN" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 59
-Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(60): used implicit default value for signal "aEN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 60
-Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(61): used implicit default value for signal "bEN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 61
-Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(64): used implicit default value for signal "addrA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 64
-Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(65): used implicit default value for signal "addrB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 65
-Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(70): used implicit default value for signal "M" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 70
-Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(71): used implicit default value for signal "S" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 71
-Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(85): object "chi" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 85
-Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(86): object "G" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 86
-Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(87): used implicit default value for signal "Leaky1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 87
-Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(89): used implicit default value for signal "Leaky3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 89
-Warning (10540): VHDL Signal Declaration warning at ConstrainedWallace.vhd(90): used explicit default value for signal "C1" because signal was never assigned a value File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 90
-Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(103): used implicit default value for signal "grnNum" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 103
-Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(106): used implicit default value for signal "mult1Out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 106
-Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(107): object "mult2A" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 107
-Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(114): object "xor2" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 114
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(125): signal "grnNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 125
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(128): signal "addOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 128
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(128): signal "M" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 128
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(129): signal "addOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 129
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(129): signal "M" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 129
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(132): signal "addA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 132
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(132): signal "addB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 132
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(134): signal "aluState" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 134
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(135): signal "ALU1A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(135): signal "ALU1B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(136): signal "ALU2A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 136
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(136): signal "ALU2B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 136
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(138): signal "ALU1A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 138
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(138): signal "ALU1B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 138
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(139): signal "ALU2A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 139
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(139): signal "ALU2B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 139
-Warning (10873): Using initial value X (don't care) for net "addA[15..1]" at ConstrainedWallace.vhd(94) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 94
-Info (12128): Elaborating entity "cwControlPath" for hierarchy "cwControlPath:CP1" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 118
+Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(70): object "ramEN" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 70
+Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(72): object "lfsrEN" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 72
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(73): used implicit default value for signal "aEN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 73
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(74): used implicit default value for signal "bEN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 74
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(77): used implicit default value for signal "addrA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 77
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(78): used implicit default value for signal "addrB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 78
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(83): used implicit default value for signal "M" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 83
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(84): used implicit default value for signal "S" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 84
+Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(98): object "chi" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 98
+Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(99): object "G" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 99
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(100): used implicit default value for signal "Leaky1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 100
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(102): used implicit default value for signal "Leaky3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 102
+Warning (10540): VHDL Signal Declaration warning at ConstrainedWallace.vhd(103): used explicit default value for signal "C1" because signal was never assigned a value File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 103
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(116): used implicit default value for signal "grnNum" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 116
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(119): used implicit default value for signal "mult1Out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 119
+Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(120): object "mult2A" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 120
+Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(127): object "xor2" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 127
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(143): signal "S" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 143
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(145): signal "S" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 145
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(149): signal "addOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 149
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(150): signal "ALU1Out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(151): signal "ALU1Out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(158): signal "TPO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 158
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(162): signal "O2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 162
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(164): signal "O1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 164
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(168): signal "xor1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 168
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(170): signal "ALU2Out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 170
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(174): signal "TPO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 174
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(175): signal "X1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 175
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(176): signal "X3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 176
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(181): signal "TPO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 181
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(182): signal "X1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 182
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(183): signal "X3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 183
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(184): signal "PA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 184
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(189): signal "TPO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 189
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(190): signal "X2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 190
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(191): signal "X4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 191
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(192): signal "C1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 192
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(197): signal "TPO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 197
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(198): signal "X2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 198
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(199): signal "X4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 199
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(200): signal "grnNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 200
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(217): signal "Leaky1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 217
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(219): signal "Leaky3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 219
+Warning (10631): VHDL Process Statement warning at ConstrainedWallace.vhd(137): inferring latch(es) for signal or variable "m2O", which holds its previous value in one or more paths through the process File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Warning (10631): VHDL Process Statement warning at ConstrainedWallace.vhd(137): inferring latch(es) for signal or variable "m3O", which holds its previous value in one or more paths through the process File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Warning (10631): VHDL Process Statement warning at ConstrainedWallace.vhd(137): inferring latch(es) for signal or variable "ALU1A", which holds its previous value in one or more paths through the process File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(234): signal "addOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 234
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(234): signal "M" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 234
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(235): signal "addOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 235
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(235): signal "M" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 235
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(238): signal "addA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 238
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(238): signal "addB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 238
+Info (10041): Inferred latch for "ALU1A[0]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[1]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[2]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[3]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[4]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[5]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[6]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[7]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[8]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[9]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[10]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[11]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[12]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[13]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[14]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "ALU1A[15]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[0]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[1]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[2]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[3]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[4]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[5]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[6]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[7]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[8]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[9]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[10]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[11]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[12]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[13]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[14]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m3O[15]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[0]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[1]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[2]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[3]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[4]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[5]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[6]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[7]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[8]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[9]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[10]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[11]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[12]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[13]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[14]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (10041): Inferred latch for "m2O[15]" at ConstrainedWallace.vhd(137) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 137
+Info (12128): Elaborating entity "cwControlPath" for hierarchy "cwControlPath:CP1" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 131
 Warning (10540): VHDL Signal Declaration warning at cwControlPath.vhd(58): used explicit default value for signal "aTrans" because signal was never assigned a value File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 58
 Warning (10036): Verilog HDL or VHDL warning at cwControlPath.vhd(60): object "iDebug" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 60
-Info (12128): Elaborating entity "wcRAM" for hierarchy "wcRAM:RAM1" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 119
+Info (12128): Elaborating entity "wcRAM" for hierarchy "wcRAM:RAM1" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 132
 Info (12128): Elaborating entity "altsyncram" for hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
 Info (12130): Elaborated megafunction instantiation "wcRAM:RAM1|altsyncram:altsyncram_component" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
 Info (12133): Instantiated megafunction "wcRAM:RAM1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
@@ -284,46 +698,68 @@ Info (12133): Instantiated megafunction "wcRAM:RAM1|altsyncram:altsyncram_compon
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pl14.tdf
-    Info (12023): Found entity 1: altsyncram_pl14 File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_pl14" for hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_pl14:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Error (14000): WYSIWYG RAM primitive "ram_block1a0" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 40
-Error (14000): WYSIWYG RAM primitive "ram_block1a0" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 40
-Error (14000): WYSIWYG RAM primitive "ram_block1a1" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 75
-Error (14000): WYSIWYG RAM primitive "ram_block1a1" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 75
-Error (14000): WYSIWYG RAM primitive "ram_block1a2" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 110
-Error (14000): WYSIWYG RAM primitive "ram_block1a2" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 110
-Error (14000): WYSIWYG RAM primitive "ram_block1a3" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 145
-Error (14000): WYSIWYG RAM primitive "ram_block1a3" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 145
-Error (14000): WYSIWYG RAM primitive "ram_block1a4" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 180
-Error (14000): WYSIWYG RAM primitive "ram_block1a4" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 180
-Error (14000): WYSIWYG RAM primitive "ram_block1a5" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 215
-Error (14000): WYSIWYG RAM primitive "ram_block1a5" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 215
-Error (14000): WYSIWYG RAM primitive "ram_block1a6" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 250
-Error (14000): WYSIWYG RAM primitive "ram_block1a6" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 250
-Error (14000): WYSIWYG RAM primitive "ram_block1a7" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 285
-Error (14000): WYSIWYG RAM primitive "ram_block1a7" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 285
-Error (14000): WYSIWYG RAM primitive "ram_block1a8" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 320
-Error (14000): WYSIWYG RAM primitive "ram_block1a8" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 320
-Error (14000): WYSIWYG RAM primitive "ram_block1a9" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 355
-Error (14000): WYSIWYG RAM primitive "ram_block1a9" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 355
-Error (14000): WYSIWYG RAM primitive "ram_block1a10" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 390
-Error (14000): WYSIWYG RAM primitive "ram_block1a10" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 390
-Error (14000): WYSIWYG RAM primitive "ram_block1a11" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 425
-Error (14000): WYSIWYG RAM primitive "ram_block1a11" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 425
-Error (14000): WYSIWYG RAM primitive "ram_block1a12" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 460
-Error (14000): WYSIWYG RAM primitive "ram_block1a12" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 460
-Error (14000): WYSIWYG RAM primitive "ram_block1a13" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 495
-Error (14000): WYSIWYG RAM primitive "ram_block1a13" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 495
-Error (14000): WYSIWYG RAM primitive "ram_block1a14" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 530
-Error (14000): WYSIWYG RAM primitive "ram_block1a14" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 530
-Error (14000): WYSIWYG RAM primitive "ram_block1a15" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 565
-Error (14000): WYSIWYG RAM primitive "ram_block1a15" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_pl14.tdf Line: 565
-Error (12152): Can't elaborate user hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_pl14:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 33 errors, 36 warnings
-    Error: Peak virtual memory: 4847 megabytes
-    Error: Processing ended: Sun May 22 17:07:55 2022
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:21
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9fr3.tdf
+    Info (12023): Found entity 1: altsyncram_9fr3 File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_9fr3" for hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 133
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 80
+Info (12130): Elaborated megafunction instantiation "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 80
+Info (12133): Instantiated megafunction "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component" with the following parameter: File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 80
+    Info (12134): Parameter "lpm_direction" = "UNUSED"
+    Info (12134): Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=YES"
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_ADD_SUB"
+    Info (12134): Parameter "lpm_width" = "16"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_3sg.tdf
+    Info (12023): Found entity 1: add_sub_3sg File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_3sg.tdf Line: 22
+Info (12128): Elaborating entity "add_sub_3sg" for hierarchy "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component|add_sub_3sg:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 118
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[0]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 40
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[1]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 75
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[2]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 110
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[3]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 145
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[4]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 180
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[5]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 215
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[6]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 250
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[7]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 285
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[8]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 320
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[9]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 355
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[10]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 390
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[11]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 425
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[12]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 460
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[13]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 495
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[14]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 530
+        Warning (14320): Synthesized away node "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated|q_a[15]" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 565
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "output[0]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[1]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[2]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[3]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[4]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[5]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[6]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[7]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[8]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[9]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[10]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[11]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[12]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[13]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[14]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+    Warning (13410): Pin "output[15]" is stuck at GND File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 21
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 184 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 25 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 91 warnings
+    Info: Peak virtual memory: 4801 megabytes
+    Info: Processing ended: Sun May 22 18:34:36 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:27
 
 
