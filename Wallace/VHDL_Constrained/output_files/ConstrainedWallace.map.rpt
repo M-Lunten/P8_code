@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ConstrainedWallace
-Sat May 21 18:53:27 2022
+Sun May 22 17:03:01 2022
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -10,7 +10,8 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis IP Cores Summary
+  6. Analysis & Synthesis Messages
 
 
 
@@ -36,10 +37,10 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sat May 21 18:53:27 2022           ;
+; Analysis & Synthesis Status ; Failed - Sun May 22 17:03:01 2022           ;
 ; Quartus Prime Version       ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name               ; ConstrainedWallace                          ;
-; Top-level Entity Name       ; cwControlPath                               ;
+; Top-level Entity Name       ; ConstrainedWallace                          ;
 ; Family                      ; Cyclone V                                   ;
 ; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
 ; Total registers             ; N/A until Partition Merge                   ;
@@ -57,7 +58,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; cwControlPath      ; ConstrainedWallace ;
+; Top-level entity name                                                           ; ConstrainedWallace ; ConstrainedWallace ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Maximum processors allowed for parallel compilation                             ; All                ; All                ;
@@ -155,28 +156,174 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                            ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
+; Altera ; RAM: 2-PORT  ; 18.0    ; N/A          ; N/A          ; |ConstrainedWallace|wcRAM:RAM1 ; wcRAM.vhd       ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sat May 21 18:53:17 2022
+    Info: Processing started: Sun May 22 17:02:50 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ConstrainedWallace -c ConstrainedWallace
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 0 design units, including 0 entities, in source file constrainedwallace.vhd
-Error (10500): VHDL syntax error at cwControlPath.vhd(119) near text "elsif";  expecting ";" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 119
-Info (12021): Found 0 design units, including 0 entities, in source file cwcontrolpath.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file lfsr_29.vhd
+    Info (12022): Found design unit 1: LFSR_29-Behavioral File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_29.vhd Line: 11
+    Info (12023): Found entity 1: LFSR_29 File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_29.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file lfsr_3.vhd
+    Info (12022): Found design unit 1: LFSR_3-Behavioral File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd Line: 11
+    Info (12023): Found entity 1: LFSR_3 File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file constrainedwallace.vhd
+    Info (12022): Found design unit 1: ConstrainedWallace-rtl File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 27
+    Info (12023): Found entity 1: ConstrainedWallace File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 16
+Info (12021): Found 2 design units, including 1 entities, in source file cwcontrolpath.vhd
+    Info (12022): Found design unit 1: cwControlPath-rtl File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 56
+    Info (12023): Found entity 1: cwControlPath File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file wcram.vhd
     Info (12022): Found design unit 1: wcram-SYN File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 58
     Info (12023): Found entity 1: wcRAM File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file cwcontrolpath_tb.vhd
     Info (12022): Found design unit 1: cwControlPath_tb-rtl File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd Line: 8
     Info (12023): Found entity 1: cwControlPath_tb File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd Line: 4
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 0 warnings
-    Error: Peak virtual memory: 4828 megabytes
-    Error: Processing ended: Sat May 21 18:53:27 2022
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:20
+Info (12127): Elaborating entity "ConstrainedWallace" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(57): object "ramEN" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(59): object "lfsrEN" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 59
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(60): used implicit default value for signal "aEN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 60
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(61): used implicit default value for signal "bEN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 61
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(64): used implicit default value for signal "addrA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 64
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(65): used implicit default value for signal "addrB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 65
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(70): used implicit default value for signal "M" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 70
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(71): used implicit default value for signal "S" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 71
+Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(85): object "chi" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 85
+Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(86): object "G" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 86
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(87): used implicit default value for signal "Leaky1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 87
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(89): used implicit default value for signal "Leaky3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 89
+Warning (10540): VHDL Signal Declaration warning at ConstrainedWallace.vhd(90): used explicit default value for signal "C1" because signal was never assigned a value File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 90
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(103): used implicit default value for signal "grnNum" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 103
+Warning (10541): VHDL Signal Declaration warning at ConstrainedWallace.vhd(106): used implicit default value for signal "mult1Out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 106
+Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(107): object "mult2A" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 107
+Warning (10036): Verilog HDL or VHDL warning at ConstrainedWallace.vhd(114): object "xor2" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(125): signal "grnNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 125
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(128): signal "addOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(128): signal "M" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(129): signal "addOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 129
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(129): signal "M" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 129
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(132): signal "addA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(132): signal "addB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(134): signal "aluState" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 134
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(135): signal "ALU1A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(135): signal "ALU1B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(136): signal "ALU2A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 136
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(136): signal "ALU2B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 136
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(138): signal "ALU1A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(138): signal "ALU1B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(139): signal "ALU2A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 139
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(139): signal "ALU2B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 139
+Warning (10873): Using initial value X (don't care) for net "addA[15..1]" at ConstrainedWallace.vhd(94) File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 94
+Info (12128): Elaborating entity "cwControlPath" for hierarchy "cwControlPath:CP1" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 118
+Warning (10540): VHDL Signal Declaration warning at cwControlPath.vhd(58): used explicit default value for signal "aTrans" because signal was never assigned a value File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 58
+Warning (10036): Verilog HDL or VHDL warning at cwControlPath.vhd(60): object "iDebug" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 60
+Info (12128): Elaborating entity "wcRAM" for hierarchy "wcRAM:RAM1" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 119
+Info (12128): Elaborating entity "altsyncram" for hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
+Info (12130): Elaborated megafunction instantiation "wcRAM:RAM1|altsyncram:altsyncram_component" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
+Info (12133): Instantiated megafunction "wcRAM:RAM1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "wcRAMfile.mif"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "numwords_b" = "1024"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "OLD_DATA"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "OLD_DATA"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "OLD_DATA"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_b" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "widthad_b" = "10"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_a314.tdf
+    Info (12023): Found entity 1: altsyncram_a314 File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_a314" for hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_a314:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Error (14000): WYSIWYG RAM primitive "ram_block1a0" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 40
+Error (14000): WYSIWYG RAM primitive "ram_block1a0" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 40
+Error (14000): WYSIWYG RAM primitive "ram_block1a1" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 75
+Error (14000): WYSIWYG RAM primitive "ram_block1a1" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 75
+Error (14000): WYSIWYG RAM primitive "ram_block1a2" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 110
+Error (14000): WYSIWYG RAM primitive "ram_block1a2" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 110
+Error (14000): WYSIWYG RAM primitive "ram_block1a3" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 145
+Error (14000): WYSIWYG RAM primitive "ram_block1a3" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 145
+Error (14000): WYSIWYG RAM primitive "ram_block1a4" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 180
+Error (14000): WYSIWYG RAM primitive "ram_block1a4" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 180
+Error (14000): WYSIWYG RAM primitive "ram_block1a5" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 215
+Error (14000): WYSIWYG RAM primitive "ram_block1a5" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 215
+Error (14000): WYSIWYG RAM primitive "ram_block1a6" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 250
+Error (14000): WYSIWYG RAM primitive "ram_block1a6" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 250
+Error (14000): WYSIWYG RAM primitive "ram_block1a7" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 285
+Error (14000): WYSIWYG RAM primitive "ram_block1a7" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 285
+Error (14000): WYSIWYG RAM primitive "ram_block1a8" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 320
+Error (14000): WYSIWYG RAM primitive "ram_block1a8" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 320
+Error (14000): WYSIWYG RAM primitive "ram_block1a9" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 355
+Error (14000): WYSIWYG RAM primitive "ram_block1a9" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 355
+Error (14000): WYSIWYG RAM primitive "ram_block1a10" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 390
+Error (14000): WYSIWYG RAM primitive "ram_block1a10" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 390
+Error (14000): WYSIWYG RAM primitive "ram_block1a11" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 425
+Error (14000): WYSIWYG RAM primitive "ram_block1a11" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 425
+Error (14000): WYSIWYG RAM primitive "ram_block1a12" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 460
+Error (14000): WYSIWYG RAM primitive "ram_block1a12" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 460
+Error (14000): WYSIWYG RAM primitive "ram_block1a13" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 495
+Error (14000): WYSIWYG RAM primitive "ram_block1a13" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 495
+Error (14000): WYSIWYG RAM primitive "ram_block1a14" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 530
+Error (14000): WYSIWYG RAM primitive "ram_block1a14" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 530
+Error (14000): WYSIWYG RAM primitive "ram_block1a15" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_a_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 565
+Error (14000): WYSIWYG RAM primitive "ram_block1a15" in operation mode "bidir_dual_port" uses an unsupported value for parameter "port_b_read_during_write_mode"  File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_a314.tdf Line: 565
+Error (12152): Can't elaborate user hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_a314:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 33 errors, 36 warnings
+    Error: Peak virtual memory: 4847 megabytes
+    Error: Processing ended: Sun May 22 17:03:01 2022
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:21
 
 

@@ -1,5 +1,5 @@
 Flow report for ConstrainedWallace
-Sat May 21 18:53:27 2022
+Sun May 22 17:03:01 2022
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,10 +40,10 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Flow Failed - Sat May 21 18:53:27 2022      ;
+; Flow Status                 ; Flow Failed - Sun May 22 17:03:01 2022      ;
 ; Quartus Prime Version       ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name               ; ConstrainedWallace                          ;
-; Top-level Entity Name       ; cwControlPath                               ;
+; Top-level Entity Name       ; ConstrainedWallace                          ;
 ; Family                      ; Cyclone V                                   ;
 ; Device                      ; 5CGXFC7C7F23C8                              ;
 ; Timing Models               ; Final                                       ;
@@ -62,27 +62,28 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/21/2022 18:53:18 ;
+; Start date & time ; 05/22/2022 17:02:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ConstrainedWallace  ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                               ;
-+-------------------------------------+----------------------------------------+--------------------+---------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value      ; Entity Name   ; Section Id ;
-+-------------------------------------+----------------------------------------+--------------------+---------------+------------+
-; COMPILER_SIGNATURE_ID               ; 70975890261687.165315199727364         ; --                 ; --            ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                 ; --            ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                 ; --            ; --         ;
-; MISC_FILE                           ; wcRAM.cmp                              ; --                 ; --            ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                 ; cwControlPath ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                 ; cwControlPath ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                 ; cwControlPath ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                 ; --            ; --         ;
-; TOP_LEVEL_ENTITY                    ; cwControlPath                          ; ConstrainedWallace ; --            ; --         ;
-+-------------------------------------+----------------------------------------+--------------------+---------------+------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 70975890261687.165323177023436         ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; wcRAM.cmp                              ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -90,8 +91,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4828 MB             ; 00:00:20                           ;
-; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4847 MB             ; 00:00:21                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

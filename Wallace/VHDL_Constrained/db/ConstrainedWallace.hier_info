@@ -1,4 +1,28 @@
-|cwControlPath
+|ConstrainedWallace
+clk => cwControlPath:CP1.clkIn
+start => cwControlPath:CP1.startIn
+valid <= cwControlPath:CP1.validNum
+output[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output[1].DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= output[2].DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= output[3].DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= output[4].DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= output[5].DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= output[6].DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= output[7].DB_MAX_OUTPUT_PORT_TYPE
+output[8] <= output[8].DB_MAX_OUTPUT_PORT_TYPE
+output[9] <= output[9].DB_MAX_OUTPUT_PORT_TYPE
+output[10] <= output[10].DB_MAX_OUTPUT_PORT_TYPE
+output[11] <= output[11].DB_MAX_OUTPUT_PORT_TYPE
+output[12] <= output[12].DB_MAX_OUTPUT_PORT_TYPE
+output[13] <= output[13].DB_MAX_OUTPUT_PORT_TYPE
+output[14] <= output[14].DB_MAX_OUTPUT_PORT_TYPE
+output[15] <= output[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ConstrainedWallace|cwControlPath:CP1
+clkIn => lfsrEnable~reg0.CLK
+clkIn => validNum~reg0.CLK
 clkIn => aluSub~reg0.CLK
 clkIn => ramEnable~reg0.CLK
 clkIn => muxControl[0]~reg0.CLK
@@ -46,11 +70,15 @@ clkIn => i[4].CLK
 clkIn => i[5].CLK
 clkIn => i[6].CLK
 clkIn => i[7].CLK
+startIn => State.OUTPUTSELECT
+startIn => State.OUTPUTSELECT
+startIn => State.OUTPUTSELECT
 startIn => process_0.IN1
-validNum <= validNum.DB_MAX_OUTPUT_PORT_TYPE
+startIn => process_0.IN1
+validNum <= validNum~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ramEnable <= ramEnable~reg0.DB_MAX_OUTPUT_PORT_TYPE
 aluSub <= aluSub~reg0.DB_MAX_OUTPUT_PORT_TYPE
-lfsrEnable <= comb.DB_MAX_OUTPUT_PORT_TYPE
+lfsrEnable <= lfsrEnable~reg0.DB_MAX_OUTPUT_PORT_TYPE
 muxControl[0] <= muxControl[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 muxControl[1] <= muxControl[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 muxControl[2] <= muxControl[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE

@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Failed - Sat May 21 18:53:27 2022
+Analysis & Synthesis Status : Failed - Sun May 22 17:03:01 2022
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : ConstrainedWallace
-Top-level Entity Name : cwControlPath
+Top-level Entity Name : ConstrainedWallace
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

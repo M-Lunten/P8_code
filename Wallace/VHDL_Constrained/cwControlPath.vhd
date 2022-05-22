@@ -17,7 +17,7 @@ entity cwControlPath is
 	 aluSub  		: out std_logic := '0';
 	 lfsrEnable		: out std_logic := '0';
 	 muxControl		: out std_logic_vector(15 downto 0) := "0000000000000000";
-	 regControl 		: out std_logic_vector(17 downto 0) := "000000000000000000"
+	 regControl 	: out std_logic_vector(17 downto 0) := "000000000000000000"
     );
 	
 end;

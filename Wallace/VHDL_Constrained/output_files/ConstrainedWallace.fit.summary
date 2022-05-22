@@ -1,13 +1,13 @@
-Fitter Status : Successful - Sat May 21 16:13:24 2022
+Fitter Status : Successful - Sun May 22 14:22:52 2022
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : ConstrainedWallace
-Top-level Entity Name : cwControlPath
+Top-level Entity Name : ConstrainedWallace
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 6 / 56,480 ( < 1 % )
-Total registers : 14
-Total pins : 40 / 268 ( 15 % )
+Logic utilization (in ALMs) : 11 / 56,480 ( < 1 % )
+Total registers : 12
+Total pins : 19 / 268 ( 7 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 7,024,640 ( 0 % )
 Total RAM Blocks : 0 / 686 ( 0 % )
