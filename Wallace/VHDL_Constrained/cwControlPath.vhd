@@ -16,7 +16,7 @@ entity cwControlPath is
 	 ramEnable		: out std_logic := '0';
 	 aluSub  		: out std_logic := '0';
 	 lfsrEnable		: out std_logic := '0';
-	 muxControl		: out std_logic_vector(15 downto 0) := "0000000000000000";
+	 muxControl		: out std_logic_vector(16 downto 0) := "00000000000000000";
 	 regControl 	: out std_logic_vector(17 downto 0) := "000000000000000000"
     );
 	
@@ -31,8 +31,8 @@ end;
 -- Mux 7 		- muxControl(8-9)
 -- Mux 8 		- muxControl(10-11)
 -- Mux 9 		- muxControl(12-13)
--- Mux 10 & 11 - muxControl(14)
--- Mux 12  		- muxControl(15)
+-- Mux 10 & 11 - muxControl(14-15)
+-- Mux 12  		- muxControl(16)
 
 -- Reg M			- regControl(0)
 -- Reg S			- regControl(1)
@@ -79,7 +79,7 @@ begin
 				when "001" =>
 					State <= "011";
 					regControl <= "011110000100110111";
-					muxControl <= "0011111100000100";
+					muxControl <= "00011111100000100";
 					ramEnable <= '0';
 					aluSub <= '0';
 					validNum <= '0';
@@ -88,7 +88,7 @@ begin
 				when "010" =>
 					State <= "011";
 					regControl <= "000110000100110111";
-					muxControl <= "0011111100000100";
+					muxControl <= "00011111100000100";
 					ramEnable <= '0';
 					aluSub <= '0';
 					validNum <= '1';
@@ -97,9 +97,9 @@ begin
 					State <= "100";
 					regControl <= "100110011000001000";
 					if (aTrans = '0') then
-						muxControl <= "1101000001000001";  --A1 Transformation
+						muxControl <= "10101000001000001";  --A1 Transformation
 					else
-						muxControl <= "1100010100000001";  --A2 Transformation
+						muxControl <= "10100010100000001";  --A2 Transformation
 					end if;
 					ramEnable <= '0';
 					aluSub <= '1';
@@ -109,9 +109,9 @@ begin
 					State <= "101";
 					regControl <= "100001100000010000";
 					if (aTrans = '0') then
-						muxControl <= "1101001000010001";  --A1 Transformation
+						muxControl <= "10101001000010001";  --A1 Transformation
 					else
-						muxControl <= "1100100010010001";  --A2 Transformation
+						muxControl <= "10100100010010001";  --A2 Transformation
 					end if;
 					ramEnable <= '1';
 					aluSub <= '1';
@@ -120,7 +120,7 @@ begin
 				when "101" =>
 					
 					regControl <= "000000000011110100";
-					muxControl <= "1010011001111010";
+					muxControl <= "10010011001111010";
 					ramEnable <= '1';
 					aluSub <= '0';
 					validNum <= '1';

@@ -2,16 +2,6 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
---- TODO
---
--- RAM
--- chi multiplier
--- Leaky Bucket
--- Mux 3 LFSR
--- LFSR
--- xor1 is wrong?
--- Mux 10 & 11
-------------------------------
 
 entity ConstrainedWallace is
 	port (
@@ -34,7 +24,7 @@ architecture rtl of ConstrainedWallace is
 				 ramEnable		: out std_logic;
 				 aluSub  		: out std_logic;
 				 lfsrEnable		: out std_logic;
-				 muxControl		: out std_logic_vector(15 downto 0);
+				 muxControl		: out std_logic_vector(16 downto 0);
 				 regControl		: out std_logic_vector(17 downto 0)
 				 );
 	end component;
@@ -42,15 +32,15 @@ architecture rtl of ConstrainedWallace is
 	
 	component wcRAM is
 			port (
-				address_a	: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
-				address_b	: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
-				clock			: IN STD_LOGIC  := '1';
-				data_a		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-				data_b		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-				wren_a		: IN STD_LOGIC  := '0';
-				wren_b		: IN STD_LOGIC  := '0';
-				q_a			: OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
-				q_b			: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+				address_a	: in STD_LOGIC_VECTOR (9 DOWNTO 0);
+				address_b	: in STD_LOGIC_VECTOR (9 DOWNTO 0);
+				clock			: in STD_LOGIC  := '1';
+				data_a		: in STD_LOGIC_VECTOR (15 DOWNTO 0);
+				data_b		: in STD_LOGIC_VECTOR (15 DOWNTO 0);
+				wren_a		: in STD_LOGIC  := '0';
+				wren_b		: in STD_LOGIC  := '0';
+				q_a			: out STD_LOGIC_VECTOR (15 DOWNTO 0);
+				q_b			: out STD_LOGIC_VECTOR (15 DOWNTO 0)
 				);
 	end component;
 	
@@ -66,16 +56,35 @@ architecture rtl of ConstrainedWallace is
 	end component;
 	
 	
+	component mux4to1 is
+			port (
+				data0x		: IN STD_LOGIC_VECTOR  (15 DOWNTO 0);
+				data1x		: IN STD_LOGIC_VECTOR  (15 DOWNTO 0);
+				data2x		: IN STD_LOGIC_VECTOR  (15 DOWNTO 0);
+				data3x		: IN STD_LOGIC_VECTOR  (15 DOWNTO 0);
+				sel			: IN STD_LOGIC_VECTOR  (1  DOWNTO 0);
+				result		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+				);
+	end component;
+	
+	
+	component LFSR_29 is
+			 port (
+				CLK: in std_logic;
+				OUTPUT: out std_logic_vector(28 downto 0)
+				);
+	end component;
+	
+	
 	-- Port maps
 	signal ramEN	 	: std_logic;
 	signal aluState 	: std_logic;
 	signal lfsrEN	 	: std_logic;
-	signal aEN			: std_logic;
-	signal bEN			: std_logic;
-	signal muxctrl 	: std_logic_vector(15 downto 0);
+	signal lfsrClk	 	: std_logic;
+	signal muxctrl 	: std_logic_vector(16 downto 0);
 	signal regctrl		: std_logic_vector(17 downto 0);
-	signal addrA		: std_logic_vector(9  downto 0);
-	signal addrB		: std_logic_vector(9  downto 0);
+	signal addrA		: std_logic_vector(9 downto 0);
+	signal addrB		: std_logic_vector(9 downto 0);
 	signal outA			: std_logic_vector(15 downto 0);
 	signal outB			: std_logic_vector(15 downto 0);
 	
@@ -114,49 +123,75 @@ architecture rtl of ConstrainedWallace is
 	signal ALU2B		: std_logic_vector(15 downto 0);
 	signal ALU2Out		: std_logic_vector(15 downto 0);
 	signal grnNum		: std_logic_vector(15 downto 0);
-	signal mult1A		: std_logic_vector(15 downto 0);
-	signal mult1B		: std_logic_vector(15 downto 0);
+	signal mult1Part	: std_logic_vector(31 downto 0);
 	signal mult1Out	: std_logic_vector(15 downto 0);
 	signal mult2A		: std_logic_vector(15 downto 0);
-	signal mult2B		: std_logic_vector(15 downto 0);
-	signal mult2Out	: std_logic_vector(15 downto 0);
+	signal mult2Part	: std_logic_vector(31 downto 0);
 	signal m2O			: std_logic_vector(15 downto 0);
 	signal m3O			: std_logic_vector(15 downto 0);
 	signal m5O			: std_logic_vector(15 downto 0);
 	signal xor1			: std_logic_vector(15 downto 0);
 	signal xor2			: std_logic_vector(15 downto 0);
+	signal lfsrOut		: std_logic_vector(28 downto 0);
+	signal addrAres   : std_logic_vector(15 downto 0);
+	signal addrBres   : std_logic_vector(15 downto 0);
+
 
 begin
 
 	CP1: cwControlPath port map (clkIn => clk, startIn => start, validNum => valid, ramEnable => ramEN, aluSub => aluState, lfsrEnable => lfsrEN, muxControl => muxctrl, regControl => regctrl);
-	RAM1: wcRAM port map (address_a => addrA, address_b => addrB, clock => clk, data_a => ALU1Out, data_b => ALU2Out, wren_a => aEN, wren_b => bEN, q_a => outA, q_b => outB);
+	RAM1: wcRAM port map (address_a => addrA, address_b => addrB, clock => clk, data_a => ALU1Out, data_b => ALU2Out, wren_a => ramEN, wren_b => ramEN, q_a => outA, q_b => outB);
 	ALU1: ALU port map (add_sub => not aluState, cin => alustate, dataa => ALU1A, datab => ALU1B, result=> ALU1Out);
 	ALU2: ALU port map (add_sub => not aluState, cin => alustate, dataa => ALU2A, datab => ALU2B, result=> ALU2Out);
+	mux2: mux4to1 port map (data0x => addOut, data1x => ALU1Out, data2x => std_logic_vector(shift_right(signed(ALU1Out), 1)), data3x => "0000000000000000", sel => muxCtrl(2 downto 1), result => m2o);
+	mux6: mux4to1 port map (data0x => TPO, data1x => X1, data2x => X3, data3x => C1, sel => muxCtrl(7 downto 6), result => ALU1A);
+	mux7: mux4to1 port map (data0x => TPO, data1x => X1, data2x => X3, data3x => PA, sel => muxCtrl(9 downto 8), result => ALU1B);
+	mux8: mux4to1 port map (data0x => TPO, data1x => X2, data2x => X4, data3x => C1, sel => muxCtrl(11 downto 10), result => ALU2A);
+	mux9: mux4to1 port map (data0x => TPO, data1x => X2, data2x => X4, data3x => grnNum, sel => muxCtrl(13 downto 12), result => ALU2B);
+	mux10: mux4to1 port map (data0x => A1, data1x => PA, data2x => xor1, data3x => "0000000000000000", sel => muxCtrl(15 downto 14), result => addrAres);
+	mux11: mux4to1 port map (data0x => A2, data1x => A4, data2x => xor2, data3x => "0000000000000000", sel => muxCtrl(15 downto 14), result => addrBres);
+	LFSR: LFSR_29 port map (CLK => lfsrClk, OUTPUT => lfsrOut);
+	lfsrClk <= lfsrEN and clk;
 	
+	-- Addresses
+	addrA <= addrAres(9 downto 0);
+	addrB <= addrBres(9 downto 0);
+	
+	-- XOR
+	xor1 <= addB xor M;
+	xor2 <= addOut xor M;
+		
+	-- Adders
+	addOut <= std_logic_vector(signed(addA) + signed(addB));
+	
+	-- Multipliers
+	mult1Part <= std_logic_vector(signed(chi) * signed(C2));
+	mult1Out <= mult1Part(31 downto 16);
+	mult2Part <= std_logic_vector(signed(mult2A) * signed(G));
+	grnNum <= mult2Part(31 downto 16);
+	
+	-- Output
+	output <= grnNum;
 	
 	process (muxCtrl)
 	begin
+			
 		
-		-- Mux control
+		-- Single address mux control
 		
 			if (muxCtrl(0) = '0') then -- mux 1
 				addA <= S;
 			else
 				addA <= std_logic_vector(shift_left(signed(S), 1));
 			end if;
-					
-			case muxCtrl(2 downto 1) is -- Mux 2
-				when "00" => m2o <= addOut;
-				when "01" => m2o <= ALU1Out;
-				when "10" => m2o <= std_logic_vector(shift_right(signed(ALU1Out), 1));
-				when others =>
-			end case;
+			
 			
 			if (muxCtrl(3) = '0') then -- mux 3
-				-- LSFR 
+				m3o <= "000000" & lfsrOut(28 downto 19);
 			else
 				m3o <= TPO;
 			end if;
+			
 			
 			if (muxCtrl(4) = '0') then -- mux 4
 				addB <= O2; 
@@ -164,98 +199,37 @@ begin
 				addB <= O1;
 			end if;
 			
+			
 			if (muxCtrl(5) = '0') then -- mux 5
 				m5o <= xor1; 
 			else
 				m5o <= ALU2Out;
 			end if;
 			
-			case muxCtrl(7 downto 6) is -- Mux 6
-				when "00" => ALU1A <= TPO;
-				when "01" => ALU1A <= X1;
-				when "10" => ALU1A <= X3;
-				when others =>
-			end case;
 			
-			case muxCtrl(9 downto 8) is -- Mux 7
-				when "00" => ALU1B <= TPO;
-				when "01" => ALU1B <= X1;
-				when "10" => ALU1B <= X3;
-				when "11" => ALU1B <= PA;
-				when others =>
-			end case;
-			
-			case muxCtrl(11 downto 10) is -- Mux 8
-				when "00" => ALU2A <= TPO;
-				when "01" => ALU2A <= X2;
-				when "10" => ALU2A <= X4;
-				when "11" => ALU2A <= C1;
-				when others =>
-			end case;
-			
-			case muxCtrl(13 downto 12) is -- Mux 9
-				when "00" => ALU2B <= TPO;
-				when "01" => ALU2B <= X2;
-				when "10" => ALU2B <= X4;
-				when "11" => ALU2B <= grnNum;
-				when others =>
-			end case;
-			
---			if (muxCtrl(14) = '0') then -- mux 10
---				addrA <= ; 
---			else
---				addrA <= ;
---			end if;
---			
---			if (muxCtrl(14) = '0') then -- mux 11
---				addrB <= ; 
---			else
---				addrB <= ;
---			end if;
-			
-			if (muxCtrl(15) = '0') then -- mux 12
+			if (muxCtrl(16) = '0') then -- mux 12
 				mult2A <= Leaky1 ; 
 			else
 				mult2A <= Leaky3 ;
 			end if;
 	end process;
 	
-	
-	
 		
-	
 	
 	process (clk)
-	
-	begin
-	
-		
-	-- XOR
-		xor1 <= addOut xor M; -- Wrong?
-		xor2 <= addOut xor M;
-	
-	-- Adders
-		addOut <= std_logic_vector(signed(addA) + signed(addB));
-		
-		
-	-- Multiplier
-		
-		
-	
+	begin	
 	
 		if rising_edge(clk) then			
 			
-			output <= grnNum;
-			
 		-- Register writes
 			
---			if (regctrl(0) = '1') then
---				M <= ;
---			end if;
---			
---			if (regctrl(1) = '1') then
---				S <= ;
---			end if;
+			if (regctrl(0) = '1') then
+				M <= "000000" & lfsrOut(9 downto 0);
+			end if;
+			
+			if (regctrl(1) = '1') then
+				S <= ("000000" & lfsrOut(18 downto 10) & '1');
+			end if;
 			
 			if (regctrl(2) = '1') then
 				O1 <= m3o;
@@ -273,17 +247,17 @@ begin
 				PA <=m5o ;
 			end if;
 			
---			if (regctrl(6) = '1') then
---				A1 <= ;
---			end if;
---			
---			if (regctrl(7) = '1') then
---				A2 <= ;
---			end if;
---			
---			if (regctrl(8) = '1') then
---				A4 <= ;
---			end if;
+			if (regctrl(6) = '1') then
+				A1 <= xor1;
+			end if;
+			
+			if (regctrl(7) = '1') then
+				A2 <= xor2;
+			end if;
+			
+			if (regctrl(8) = '1') then
+				A4 <= xor2;
+			end if;
 				
 			if (regctrl(9) = '1') then
 				X1 <= Xh1;
@@ -317,9 +291,12 @@ begin
 				G <= mult1Out;
 			end if;
 			
---			if (regctrl(17) = '1') then
---				Leaky1
---			end if;
+			if (regctrl(17) = '1') then
+				Leaky1 <= ALU1Out;
+				Leaky2 <= ALU2Out;
+			end if;
+			
+			Leaky3 <= Leaky2;
 			
 			
 		
