@@ -1,13 +1,4 @@
-C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ConstrainedWallace
--- Compiling architecture rtl of ConstrainedWallace
-
-} {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/tb_Output_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/tb_Output_tb.vhd
+C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/tb_Output_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/tb_Output_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -16,6 +7,23 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package std_logic_textio
 -- Compiling entity tb_output_tb
 -- Compiling architecture behavior of tb_output_tb
+
+} {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ConstrainedWallace
+-- Compiling architecture rtl of ConstrainedWallace
+
+} {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace_tb.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ConstrainedWallace_tb
+-- Compiling architecture rtl of ConstrainedWallace_tb
 
 } {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -26,21 +34,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity cwControlPath
 -- Compiling architecture rtl of cwControlPath
 
-} {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace_tb.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none {C:\Users\jonas\Documents\GitHub\P8_code\Wallace\VHDL_Constrained\ConstrainedWallace_tb.vhd}
+} {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity ConstrainedWallace_tb
--- Compiling architecture rtl of ConstrainedWallace_tb
-
-} {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_29.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none {C:\Users\jonas\Documents\GitHub\P8_code\Wallace\VHDL_Constrained\LFSR_29.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity LFSR_29
--- Compiling architecture Behavioral of LFSR_29
+-- Compiling entity cwControlPath_tb
+-- Compiling architecture rtl of cwControlPath_tb
 
 } {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -50,22 +50,21 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity LFSR_3
 -- Compiling architecture Behavioral of LFSR_3
 
-} {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd
+} {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_29.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_29.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity cwControlPath_tb
--- Compiling architecture rtl of cwControlPath_tb
+-- Compiling entity LFSR_29
+-- Compiling architecture Behavioral of LFSR_29
 
-} {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd
+} {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package altera_mf_components
--- Compiling entity wcRAM
--- Compiling architecture SYN of wcram
+-- Compiling entity ALU
+-- Compiling architecture SYN of alu
 
 } {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -76,12 +75,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity mux4to1
 -- Compiling architecture SYN of mux4to1
 
-} {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd
+} {} {}} C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd {1 {vcom -work ConstrainedWallace -2002 -explicit -stats=none C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity ALU
--- Compiling architecture SYN of alu
+-- Loading package altera_mf_components
+-- Compiling entity wcRAM
+-- Compiling architecture SYN of wcram
 
 } {} {}}

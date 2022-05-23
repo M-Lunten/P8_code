@@ -14,7 +14,8 @@ architecture behavior of tb_output_tb is
 			 clk				: in  std_logic;
 			 start			: in  std_logic;
 			 valid			: out std_logic;
-			 output			: out std_logic_vector(15 downto 0)
+			 output			: out std_logic_vector(15 downto 0);
+			 output2			: out std_logic_vector(15 downto 0)
 			 );
 	end component;
 	
@@ -26,9 +27,10 @@ architecture behavior of tb_output_tb is
 	signal startout : std_logic := '0';
 	signal validout : std_logic;
 	signal outout : std_logic_vector(15 downto 0);
+	signal outout2 : std_logic_vector(15 downto 0);
 	
 begin
-	CW: ConstrainedWallace port map(clkout, startout, validout, outout);	
+	CW: ConstrainedWallace port map(clkout, startout, validout, outout, outout2);	
 
 	CLK_GEN : process is 
 	begin 
@@ -45,7 +47,7 @@ begin
 		
 		for i in 0 to 100000 loop
 			if validout = '1' then
-				write(out_line, outout, right, 16);
+				write(out_line, outout2, right, 16);
 				write(out_line, ',', right, 1);
 				writeline(file_RESULTS, out_line);
 				wait for clock_period;	

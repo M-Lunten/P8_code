@@ -8,7 +8,8 @@ entity ConstrainedWallace is
 		 clk				: in  std_logic;
 		 start			: in  std_logic;
 		 valid			: out std_logic := '0';
-		 output			: out std_logic_vector(15 downto 0) := "0000000000000000"
+		 output			: out std_logic_vector(15 downto 0) := "0000000000000000";
+		 output2			: out std_logic_vector(15 downto 0) := "0000000000000000"
 		 );
 		 
 end; 
@@ -229,6 +230,7 @@ begin
 
 		-- Output
 			output <= grnNum;
+			output2 <= mult2A;
 			
 		-- Register writes
 			

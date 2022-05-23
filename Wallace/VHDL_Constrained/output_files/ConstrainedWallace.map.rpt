@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ConstrainedWallace
-Mon May 23 15:39:20 2022
+Mon May 23 16:02:12 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -69,16 +69,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 23 15:39:20 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon May 23 16:02:12 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ConstrainedWallace                          ;
 ; Top-level Entity Name              ; ConstrainedWallace                          ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 686                                         ;
+; Total logic elements               ; 702                                         ;
 ;     Total combinational functions  ; 532                                         ;
-;     Dedicated logic registers      ; 370                                         ;
-; Total registers                    ; 370                                         ;
-; Total pins                         ; 19                                          ;
+;     Dedicated logic registers      ; 386                                         ;
+; Total registers                    ; 386                                         ;
+; Total pins                         ; 35                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 16,384                                      ;
 ; Embedded Multiplier 9-bit elements ; 2                                           ;
@@ -249,7 +249,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 686       ;
+; Estimated Total logic elements              ; 702       ;
 ;                                             ;           ;
 ; Total combinational functions               ; 532       ;
 ; Logic element usage by number of LUT inputs ;           ;
@@ -261,19 +261,19 @@ refer to the applicable agreement for further details.
 ;     -- normal mode                          ; 441       ;
 ;     -- arithmetic mode                      ; 91        ;
 ;                                             ;           ;
-; Total registers                             ; 370       ;
-;     -- Dedicated logic registers            ; 370       ;
+; Total registers                             ; 386       ;
+;     -- Dedicated logic registers            ; 386       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 19        ;
+; I/O pins                                    ; 35        ;
 ; Total memory bits                           ; 16384     ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 2         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 356       ;
-; Total fan-out                               ; 3157      ;
-; Average fan-out                             ; 3.30      ;
+; Maximum fan-out                             ; 372       ;
+; Total fan-out                               ; 3221      ;
+; Average fan-out                             ; 3.20      ;
 +---------------------------------------------+-----------+
 
 
@@ -282,7 +282,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                        ; Entity Name        ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |ConstrainedWallace                            ; 532 (127)           ; 370 (304)                 ; 16384       ; 2            ; 0       ; 1         ; 19   ; 0            ; |ConstrainedWallace                                                                                                                        ; ConstrainedWallace ; work         ;
+; |ConstrainedWallace                            ; 532 (127)           ; 386 (320)                 ; 16384       ; 2            ; 0       ; 1         ; 35   ; 0            ; |ConstrainedWallace                                                                                                                        ; ConstrainedWallace ; work         ;
 ;    |ALU:ALU1|                                  ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU1                                                                                                               ; ALU                ; work         ;
 ;       |lpm_add_sub:LPM_ADD_SUB_component|      ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component                                                                             ; lpm_add_sub        ; work         ;
 ;          |add_sub_3sg:auto_generated|          ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component|add_sub_3sg:auto_generated                                                  ; add_sub_3sg        ; work         ;
@@ -385,17 +385,17 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; G[15]                                  ; Stuck at GND due to stuck port data_in       ;
 ; S[10..15]                              ; Stuck at GND due to stuck port data_in       ;
 ; M[10..15]                              ; Stuck at GND due to stuck port data_in       ;
+; cwControlPath:CP1|regControl[1,15,16]  ; Merged with cwControlPath:CP1|regControl[0]  ;
 ; cwControlPath:CP1|muxControl[15]       ; Merged with cwControlPath:CP1|muxControl[13] ;
 ; cwControlPath:CP1|regControl[5]        ; Merged with cwControlPath:CP1|muxControl[13] ;
-; cwControlPath:CP1|regControl[3,9]      ; Merged with cwControlPath:CP1|regControl[10] ;
 ; cwControlPath:CP1|muxControl[0]        ; Merged with cwControlPath:CP1|aluSub         ;
 ; cwControlPath:CP1|regControl[17]       ; Merged with cwControlPath:CP1|aluSub         ;
+; cwControlPath:CP1|regControl[3,9]      ; Merged with cwControlPath:CP1|regControl[10] ;
 ; cwControlPath:CP1|muxControl[3,5]      ; Merged with cwControlPath:CP1|muxControl[1]  ;
 ; cwControlPath:CP1|regControl[6,7]      ; Merged with cwControlPath:CP1|muxControl[1]  ;
 ; cwControlPath:CP1|ramEnable            ; Merged with cwControlPath:CP1|muxControl[4]  ;
 ; cwControlPath:CP1|regControl[8]        ; Merged with cwControlPath:CP1|muxControl[2]  ;
 ; cwControlPath:CP1|regControl[12]       ; Merged with cwControlPath:CP1|regControl[11] ;
-; cwControlPath:CP1|regControl[1,15,16]  ; Merged with cwControlPath:CP1|regControl[0]  ;
 ; cwControlPath:CP1|regControl[14]       ; Merged with cwControlPath:CP1|regControl[13] ;
 ; Total Number of Removed Registers = 30 ;                                              ;
 +----------------------------------------+----------------------------------------------+
@@ -406,7 +406,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 370   ;
+; Total registers                              ; 386   ;
 ; Number of registers using Synchronous Clear  ; 5     ;
 ; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -421,7 +421,18 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +-------------------------------------------------+---------+
 ; Inverted Register                               ; Fan out ;
 +-------------------------------------------------+---------+
+; G[14]                                           ; 1       ;
 ; cwControlPath:CP1|LFSR_3:LFSR|shift_register[1] ; 8       ;
+; chi[5]                                          ; 10      ;
+; chi[3]                                          ; 9       ;
+; chi[4]                                          ; 9       ;
+; chi[6]                                          ; 9       ;
+; chi[0]                                          ; 7       ;
+; chi[2]                                          ; 8       ;
+; chi[9]                                          ; 10      ;
+; chi[11]                                         ; 9       ;
+; chi[12]                                         ; 9       ;
+; chi[14]                                         ; 9       ;
 ; LFSR_29:LFSR|shift_register[19]                 ; 3       ;
 ; LFSR_29:LFSR|shift_register[0]                  ; 2       ;
 ; LFSR_29:LFSR|shift_register[11]                 ; 2       ;
@@ -435,17 +446,6 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; LFSR_29:LFSR|shift_register[16]                 ; 3       ;
 ; LFSR_29:LFSR|shift_register[26]                 ; 3       ;
 ; LFSR_29:LFSR|shift_register[7]                  ; 2       ;
-; G[14]                                           ; 1       ;
-; chi[5]                                          ; 10      ;
-; chi[3]                                          ; 9       ;
-; chi[4]                                          ; 9       ;
-; chi[6]                                          ; 9       ;
-; chi[0]                                          ; 7       ;
-; chi[2]                                          ; 8       ;
-; chi[9]                                          ; 10      ;
-; chi[11]                                         ; 9       ;
-; chi[12]                                         ; 9       ;
-; chi[14]                                         ; 9       ;
 ; Total number of inverted registers = 25         ;         ;
 +-------------------------------------------------+---------+
 
@@ -920,12 +920,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 19                          ;
-; cycloneiii_ff         ; 370                         ;
+; boundary_port         ; 35                          ;
+; cycloneiii_ff         ; 386                         ;
 ;     ENA               ; 281                         ;
 ;     ENA SCLR          ; 5                           ;
 ;     ENA SLD           ; 16                          ;
-;     plain             ; 68                          ;
+;     plain             ; 84                          ;
 ; cycloneiii_lcell_comb ; 532                         ;
 ;     arith             ; 91                          ;
 ;         2 data inputs ; 26                          ;
@@ -940,7 +940,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.40                        ;
-; Average LUT depth     ; 3.73                        ;
+; Average LUT depth     ; 3.67                        ;
 +-----------------------+-----------------------------+
 
 
@@ -959,7 +959,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 23 15:38:59 2022
+    Info: Processing started: Mon May 23 16:01:49 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ConstrainedWallace -c ConstrainedWallace
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -970,7 +970,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file lfsr_3.
     Info (12022): Found design unit 1: LFSR_3-Behavioral File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd Line: 11
     Info (12023): Found entity 1: LFSR_3 File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file constrainedwallace.vhd
-    Info (12022): Found design unit 1: ConstrainedWallace-rtl File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 17
+    Info (12022): Found design unit 1: ConstrainedWallace-rtl File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 18
     Info (12023): Found entity 1: ConstrainedWallace File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file cwcontrolpath.vhd
     Info (12022): Found design unit 1: cwControlPath-rtl File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 56
@@ -994,12 +994,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file tb_outp
     Info (12022): Found design unit 1: tb_output_tb-behavior File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/tb_Output_tb.vhd Line: 10
     Info (12023): Found entity 1: tb_output_tb File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/tb_Output_tb.vhd Line: 7
 Info (12127): Elaborating entity "ConstrainedWallace" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at ConstrainedWallace.vhd(113): used explicit default value for signal "C1" because signal was never assigned a value File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 113
-Warning (10540): VHDL Signal Declaration warning at ConstrainedWallace.vhd(114): used explicit default value for signal "C2" because signal was never assigned a value File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 114
-Info (12128): Elaborating entity "cwControlPath" for hierarchy "cwControlPath:CP1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 145
+Warning (10540): VHDL Signal Declaration warning at ConstrainedWallace.vhd(114): used explicit default value for signal "C1" because signal was never assigned a value File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 114
+Warning (10540): VHDL Signal Declaration warning at ConstrainedWallace.vhd(115): used explicit default value for signal "C2" because signal was never assigned a value File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(190): signal "S" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 190
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(192): signal "S" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 192
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(204): signal "O2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 204
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(206): signal "O1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 206
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(211): signal "xor1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 211
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(213): signal "ALU2Out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 213
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(218): signal "Leaky1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 218
+Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(220): signal "Leaky3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 220
+Info (12128): Elaborating entity "cwControlPath" for hierarchy "cwControlPath:CP1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 146
 Warning (10036): Verilog HDL or VHDL warning at cwControlPath.vhd(69): object "iDebug" assigned a value but never read File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 69
 Info (12128): Elaborating entity "LFSR_3" for hierarchy "cwControlPath:CP1|LFSR_3:LFSR" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 75
-Info (12128): Elaborating entity "wcRAM" for hierarchy "wcRAM:RAM1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 146
+Info (12128): Elaborating entity "wcRAM" for hierarchy "wcRAM:RAM1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 147
 Info (12128): Elaborating entity "altsyncram" for hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
 Info (12130): Elaborated megafunction instantiation "wcRAM:RAM1|altsyncram:altsyncram_component" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
 Info (12133): Instantiated megafunction "wcRAM:RAM1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
@@ -1056,7 +1064,7 @@ Info (12133): Instantiated megafunction "wcRAM:RAM1|altsyncram:altsyncram_compon
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9fr3.tdf
     Info (12023): Found entity 1: altsyncram_9fr3 File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_9fr3" for hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated" File: c:/intel_fpga/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 147
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 148
 Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 80
 Info (12130): Elaborated megafunction instantiation "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 80
 Info (12133): Instantiated megafunction "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component" with the following parameter: File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 80
@@ -1068,7 +1076,7 @@ Info (12133): Instantiated megafunction "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_compon
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_3sg.tdf
     Info (12023): Found entity 1: add_sub_3sg File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_3sg.tdf Line: 22
 Info (12128): Elaborating entity "add_sub_3sg" for hierarchy "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component|add_sub_3sg:auto_generated" File: c:/intel_fpga/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 118
-Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:mux2" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 149
+Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:mux2" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 150
 Info (12128): Elaborating entity "LPM_MUX" for hierarchy "mux4to1:mux2|LPM_MUX:LPM_MUX_component" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd Line: 137
 Info (12130): Elaborated megafunction instantiation "mux4to1:mux2|LPM_MUX:LPM_MUX_component" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd Line: 137
 Info (12133): Instantiated megafunction "mux4to1:mux2|LPM_MUX:LPM_MUX_component" with the following parameter: File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd Line: 137
@@ -1081,12 +1089,12 @@ Info (12133): Instantiated megafunction "mux4to1:mux2|LPM_MUX:LPM_MUX_component"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_b9e.tdf
     Info (12023): Found entity 1: mux_b9e File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/mux_b9e.tdf Line: 22
 Info (12128): Elaborating entity "mux_b9e" for hierarchy "mux4to1:mux2|LPM_MUX:LPM_MUX_component|mux_b9e:auto_generated" File: c:/intel_fpga/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
-Info (12128): Elaborating entity "LFSR_29" for hierarchy "LFSR_29:LFSR" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 156
+Info (12128): Elaborating entity "LFSR_29" for hierarchy "LFSR_29:LFSR" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 157
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 178
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 176
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 178
-Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter: File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 178
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 179
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 177
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 179
+Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter: File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 179
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "16"
     Info (12134): Parameter "LPM_WIDTHP" = "32"
@@ -1098,8 +1106,8 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following para
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_36t.tdf
     Info (12023): Found entity 1: mult_36t File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/mult_36t.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 176
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 176
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 177
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 177
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "11"
     Info (12134): Parameter "LPM_WIDTHP" = "27"
@@ -1122,16 +1130,16 @@ Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:ext
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 826 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 858 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 789 logic cells
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 805 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4814 megabytes
-    Info: Processing ended: Mon May 23 15:39:21 2022
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:37
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Mon May 23 16:02:12 2022
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:41
 
 
