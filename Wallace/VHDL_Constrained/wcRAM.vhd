@@ -42,11 +42,11 @@ USE altera_mf.altera_mf_components.all;
 ENTITY wcRAM IS
 	PORT
 	(
-		address_a		: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
-		address_b		: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
+		address_a		: IN STD_LOGIC_VECTOR (9 DOWNTO 0) := "0000000000";
+		address_b		: IN STD_LOGIC_VECTOR (9 DOWNTO 0) := "0000000000";
 		clock		: IN STD_LOGIC  := '1';
-		data_a		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		data_b		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+		data_a		: IN STD_LOGIC_VECTOR (15 DOWNTO 0) := "0000000000000000";
+		data_b		: IN STD_LOGIC_VECTOR (15 DOWNTO 0) := "0000000000000000";
 		wren_a		: IN STD_LOGIC  := '0';
 		wren_b		: IN STD_LOGIC  := '0';
 		q_a		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0);

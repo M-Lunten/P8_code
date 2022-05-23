@@ -55,12 +55,27 @@ end;
 
 architecture rtl of cwControlPath is
 
+	component LFSR_3 is
+			 port (
+				CLK: in std_logic;
+				OUTPUT: out std_logic_vector(2 downto 0)
+				);
+	end component;
+	
 	Signal aTrans	: std_logic := '0';
+	Signal lfsrClk	: std_logic := '0';
+	Signal lfsrEN	: std_logic := '0';
 	Signal State 	: std_logic_vector(2 downto 0) := "000";
 	Signal iDebug	: std_logic_vector(7 downto 0) := "00000000";  --Debug signal
+	Signal lfsrOut	: std_logic_vector(2 downto 0);
 
 
 begin
+
+	LFSR: LFSR_3 port map (CLK => lfsrClk, OUTPUT => lfsrOut);
+	lfsrClk <= lfsrEN and clkIn;
+
+	aTrans <= lfsrOut(1);
 	
 	process (clkIn)
 	
@@ -75,23 +90,29 @@ begin
 					if startIn = '1' then
 					state <= "001";
 					end if;
+					lfsrEnable <= '0';
+					lfsrEN <= '0';
 					
 				when "001" =>
 					State <= "011";
 					regControl <= "011110000100110111";
-					muxControl <= "00011111100000100";
+					muxControl <= "01011111100000100";
 					ramEnable <= '0';
 					aluSub <= '0';
 					validNum <= '0';
+					lfsrEnable <= '0';
+					lfsrEN <= '0';
 					
 				
 				when "010" =>
 					State <= "011";
-					regControl <= "000110000100110111";
-					muxControl <= "00011111100000100";
+					regControl <= "000110000100110000";
+					muxControl <= "01011111100000100";
 					ramEnable <= '0';
 					aluSub <= '0';
 					validNum <= '1';
+					lfsrEnable <= '0';
+					lfsrEN <= '0';
 				
 				when "011" =>
 					State <= "100";
@@ -99,39 +120,47 @@ begin
 					if (aTrans = '0') then
 						muxControl <= "10101000001000001";  --A1 Transformation
 					else
-						muxControl <= "10100010100000001";  --A2 Transformation
+						muxControl <= "10000010100000001";  --A2 Transformation
 					end if;
 					ramEnable <= '0';
 					aluSub <= '1';
 					validNum <= '1';
+					lfsrEnable <= '0';
+					lfsrEN <= '0';
 				
 				when "100" =>
 					State <= "101";
 					regControl <= "100001100000010000";
 					if (aTrans = '0') then
-						muxControl <= "10101001000010001";  --A1 Transformation
+						muxControl <= "00101001000010001";  --A1 Transformation
 					else
-						muxControl <= "10100100010010001";  --A2 Transformation
+						muxControl <= "00100100010010001";  --A2 Transformation
 					end if;
 					ramEnable <= '1';
 					aluSub <= '1';
 					validNum <= '1';
+					lfsrEnable <= '0';
+					lfsrEN <= '0';
 				
 				when "101" =>
 					
 					regControl <= "000000000011110100";
-					muxControl <= "10010011001111010";
+					muxControl <= "11010011001111010";
 					ramEnable <= '1';
 					aluSub <= '0';
 					validNum <= '1';
+					lfsrEN <= '1';
 					
 					i := i + 1;
 					if (i = 255) and (startIn = '1') then
 						State <= "001";
+						lfsrEnable <= '0';
 					elsif (i = 255) and (startIn = '0') then
 						State <= "000";
+						lfsrEnable <= '0';
 					else
 						State <= "010";
+						lfsrEnable <= '0';
 					end if;
 					
 					if (i = 255) then

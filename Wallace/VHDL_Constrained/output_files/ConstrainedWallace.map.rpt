@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ConstrainedWallace
-Mon May 23 00:30:21 2022
+Mon May 23 15:39:20 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,9 +40,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  32. Port Connectivity Checks: "mux4to1:mux8"
  33. Port Connectivity Checks: "mux4to1:mux6"
  34. Port Connectivity Checks: "mux4to1:mux2"
- 35. Post-Synthesis Netlist Statistics for Top Partition
- 36. Elapsed Time Per Partition
- 37. Analysis & Synthesis Messages
+ 35. Port Connectivity Checks: "cwControlPath:CP1|LFSR_3:LFSR"
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
 
 
 
@@ -68,15 +69,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 23 00:30:21 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon May 23 15:39:20 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ConstrainedWallace                          ;
 ; Top-level Entity Name              ; ConstrainedWallace                          ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 634                                         ;
-;     Total combinational functions  ; 471                                         ;
-;     Dedicated logic registers      ; 340                                         ;
-; Total registers                    ; 340                                         ;
+; Total logic elements               ; 686                                         ;
+;     Total combinational functions  ; 532                                         ;
+;     Dedicated logic registers      ; 370                                         ;
+; Total registers                    ; 370                                         ;
 ; Total pins                         ; 19                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 16,384                                      ;
@@ -195,51 +196,51 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                            ; Library ;
 +----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------+---------+
-; LFSR_29.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_29.vhd            ;         ;
-; ConstrainedWallace.vhd           ; yes             ; User VHDL File                         ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd ;         ;
-; cwControlPath.vhd                ; yes             ; User VHDL File                         ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd      ;         ;
-; wcRAM.vhd                        ; yes             ; User Wizard-Generated File             ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd              ;         ;
-; ALU.vhd                          ; yes             ; User Wizard-Generated File             ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd                ;         ;
-; mux4to1.vhd                      ; yes             ; User Wizard-Generated File             ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd            ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                   ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc            ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                      ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                   ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                   ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                    ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                       ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                       ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                     ;         ;
-; db/altsyncram_9fr3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf ;         ;
-; work/wcramfile.mif               ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/work/wcramfile.mif     ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                  ;         ;
-; addcore.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/addcore.inc                      ;         ;
-; look_add.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/look_add.inc                     ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc                     ;         ;
-; altshift.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc                     ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc          ;         ;
-; db/add_sub_3sg.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_3sg.tdf     ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf                      ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muxlut.inc                       ;         ;
-; db/mux_b9e.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/mux_b9e.tdf         ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf                     ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc                  ;         ;
-; multcore.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc                     ;         ;
-; db/mult_46t.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/mult_46t.tdf        ;         ;
-; multcore.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf                     ;         ;
-; csa_add.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/csa_add.inc                      ;         ;
-; mpar_add.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.inc                     ;         ;
-; muleabz.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muleabz.inc                      ;         ;
-; mul_lfrg.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mul_lfrg.inc                     ;         ;
-; mul_boothc.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mul_boothc.inc                   ;         ;
-; alt_ded_mult.inc                 ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_ded_mult.inc                 ;         ;
-; alt_ded_mult_y.inc               ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc               ;         ;
-; dffpipe.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/dffpipe.inc                      ;         ;
-; mpar_add.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf                     ;         ;
-; db/add_sub_gkh.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_gkh.tdf     ;         ;
-; db/add_sub_m9h.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_m9h.tdf     ;         ;
-; db/add_sub_bkh.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_bkh.tdf     ;         ;
-; altshift.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.tdf                     ;         ;
+; LFSR_29.vhd                      ; yes             ; User VHDL File                         ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_29.vhd            ;         ;
+; LFSR_3.vhd                       ; yes             ; User VHDL File                         ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd             ;         ;
+; ConstrainedWallace.vhd           ; yes             ; User VHDL File                         ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd ;         ;
+; cwControlPath.vhd                ; yes             ; User VHDL File                         ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd      ;         ;
+; wcRAM.vhd                        ; yes             ; User Wizard-Generated File             ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd              ;         ;
+; ALU.vhd                          ; yes             ; User Wizard-Generated File             ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd                ;         ;
+; mux4to1.vhd                      ; yes             ; User Wizard-Generated File             ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd            ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/altsyncram.tdf                            ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/stratix_ram_block.inc                     ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/lpm_mux.inc                               ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/lpm_decode.inc                            ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/aglobal181.inc                            ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/a_rdenreg.inc                             ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/altrom.inc                                ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/altram.inc                                ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/altdpram.inc                              ;         ;
+; db/altsyncram_9fr3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf ;         ;
+; work/wcramfile.mif               ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/work/wcramfile.mif     ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/lpm_add_sub.tdf                           ;         ;
+; addcore.inc                      ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/addcore.inc                               ;         ;
+; look_add.inc                     ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/look_add.inc                              ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/bypassff.inc                              ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/altshift.inc                              ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                   ;         ;
+; db/add_sub_3sg.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_3sg.tdf     ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/lpm_mux.tdf                               ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/muxlut.inc                                ;         ;
+; db/mux_b9e.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/mux_b9e.tdf         ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/lpm_mult.tdf                              ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/lpm_add_sub.inc                           ;         ;
+; multcore.inc                     ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/multcore.inc                              ;         ;
+; db/mult_36t.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/mult_36t.tdf        ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/multcore.tdf                              ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/csa_add.inc                               ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/mpar_add.inc                              ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/muleabz.inc                               ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/mul_lfrg.inc                              ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/mul_boothc.inc                            ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/alt_ded_mult.inc                          ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/alt_ded_mult_y.inc                        ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/dffpipe.inc                               ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/mpar_add.tdf                              ;         ;
+; db/add_sub_ogh.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_ogh.tdf     ;         ;
+; db/add_sub_sgh.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_sgh.tdf     ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                           ; c:/intel_fpga/quartus/libraries/megafunctions/altshift.tdf                              ;         ;
 +----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
@@ -248,20 +249,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 634       ;
+; Estimated Total logic elements              ; 686       ;
 ;                                             ;           ;
-; Total combinational functions               ; 471       ;
+; Total combinational functions               ; 532       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 168       ;
-;     -- 3 input functions                    ; 184       ;
-;     -- <=2 input functions                  ; 119       ;
+;     -- 4 input functions                    ; 215       ;
+;     -- 3 input functions                    ; 176       ;
+;     -- <=2 input functions                  ; 141       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 377       ;
-;     -- arithmetic mode                      ; 94        ;
+;     -- normal mode                          ; 441       ;
+;     -- arithmetic mode                      ; 91        ;
 ;                                             ;           ;
-; Total registers                             ; 340       ;
-;     -- Dedicated logic registers            ; 340       ;
+; Total registers                             ; 370       ;
+;     -- Dedicated logic registers            ; 370       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 19        ;
@@ -270,60 +271,64 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 2         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 328       ;
-; Total fan-out                               ; 2880      ;
-; Average fan-out                             ; 3.32      ;
+; Maximum fan-out                             ; 356       ;
+; Total fan-out                               ; 3157      ;
+; Average fan-out                             ; 3.30      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Entity Name        ; Library Name ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |ConstrainedWallace                         ; 471 (132)           ; 340 (285)                 ; 16384       ; 2            ; 0       ; 1         ; 19   ; 0            ; |ConstrainedWallace                                                                                                   ; ConstrainedWallace ; work         ;
-;    |ALU:ALU1|                               ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU1                                                                                          ; ALU                ; work         ;
-;       |lpm_add_sub:LPM_ADD_SUB_component|   ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component                                                        ; lpm_add_sub        ; work         ;
-;          |add_sub_3sg:auto_generated|       ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component|add_sub_3sg:auto_generated                             ; add_sub_3sg        ; work         ;
-;    |ALU:ALU2|                               ; 47 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU2                                                                                          ; ALU                ; work         ;
-;       |lpm_add_sub:LPM_ADD_SUB_component|   ; 47 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU2|lpm_add_sub:LPM_ADD_SUB_component                                                        ; lpm_add_sub        ; work         ;
-;          |add_sub_3sg:auto_generated|       ; 47 (47)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU2|lpm_add_sub:LPM_ADD_SUB_component|add_sub_3sg:auto_generated                             ; add_sub_3sg        ; work         ;
-;    |LFSR_29:LFSR|                           ; 21 (21)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|LFSR_29:LFSR                                                                                      ; LFSR_29            ; work         ;
-;    |cwControlPath:CP1|                      ; 27 (27)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|cwControlPath:CP1                                                                                 ; cwControlPath      ; work         ;
-;    |lpm_mult:Mult0|                         ; 63 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0                                                                                    ; lpm_mult           ; work         ;
-;       |multcore:mult_core|                  ; 63 (37)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core                                                                 ; multcore           ; work         ;
-;          |mpar_add:padder|                  ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                 ; mpar_add           ; work         ;
-;             |lpm_add_sub:adder[0]|          ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub        ; work         ;
-;                |add_sub_m9h:auto_generated| ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_m9h:auto_generated ; add_sub_m9h        ; work         ;
-;             |lpm_add_sub:adder[1]|          ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                            ; lpm_add_sub        ; work         ;
-;                |add_sub_gkh:auto_generated| ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_gkh:auto_generated ; add_sub_gkh        ; work         ;
-;    |lpm_mult:Mult1|                         ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult1                                                                                    ; lpm_mult           ; work         ;
-;       |mult_46t:auto_generated|             ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult1|mult_46t:auto_generated                                                            ; mult_46t           ; work         ;
-;    |mux4to1:mux10|                          ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux10                                                                                     ; mux4to1            ; work         ;
-;       |lpm_mux:LPM_MUX_component|           ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux10|lpm_mux:LPM_MUX_component                                                           ; lpm_mux            ; work         ;
-;          |mux_b9e:auto_generated|           ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux10|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                    ; mux_b9e            ; work         ;
-;    |mux4to1:mux11|                          ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux11                                                                                     ; mux4to1            ; work         ;
-;       |lpm_mux:LPM_MUX_component|           ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux11|lpm_mux:LPM_MUX_component                                                           ; lpm_mux            ; work         ;
-;          |mux_b9e:auto_generated|           ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux11|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                    ; mux_b9e            ; work         ;
-;    |mux4to1:mux2|                           ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux2                                                                                      ; mux4to1            ; work         ;
-;       |lpm_mux:LPM_MUX_component|           ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux2|lpm_mux:LPM_MUX_component                                                            ; lpm_mux            ; work         ;
-;          |mux_b9e:auto_generated|           ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux2|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                     ; mux_b9e            ; work         ;
-;    |mux4to1:mux6|                           ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux6                                                                                      ; mux4to1            ; work         ;
-;       |lpm_mux:LPM_MUX_component|           ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux6|lpm_mux:LPM_MUX_component                                                            ; lpm_mux            ; work         ;
-;          |mux_b9e:auto_generated|           ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux6|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                     ; mux_b9e            ; work         ;
-;    |mux4to1:mux7|                           ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux7                                                                                      ; mux4to1            ; work         ;
-;       |lpm_mux:LPM_MUX_component|           ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux7|lpm_mux:LPM_MUX_component                                                            ; lpm_mux            ; work         ;
-;          |mux_b9e:auto_generated|           ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux7|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                     ; mux_b9e            ; work         ;
-;    |mux4to1:mux8|                           ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux8                                                                                      ; mux4to1            ; work         ;
-;       |lpm_mux:LPM_MUX_component|           ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux8|lpm_mux:LPM_MUX_component                                                            ; lpm_mux            ; work         ;
-;          |mux_b9e:auto_generated|           ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux8|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                     ; mux_b9e            ; work         ;
-;    |mux4to1:mux9|                           ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux9                                                                                      ; mux4to1            ; work         ;
-;       |lpm_mux:LPM_MUX_component|           ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux9|lpm_mux:LPM_MUX_component                                                            ; lpm_mux            ; work         ;
-;          |mux_b9e:auto_generated|           ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux9|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                     ; mux_b9e            ; work         ;
-;    |wcRAM:RAM1|                             ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|wcRAM:RAM1                                                                                        ; wcRAM              ; work         ;
-;       |altsyncram:altsyncram_component|     ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|wcRAM:RAM1|altsyncram:altsyncram_component                                                        ; altsyncram         ; work         ;
-;          |altsyncram_9fr3:auto_generated|   ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated                         ; altsyncram_9fr3    ; work         ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                        ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                        ; Entity Name        ; Library Name ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; |ConstrainedWallace                            ; 532 (127)           ; 370 (304)                 ; 16384       ; 2            ; 0       ; 1         ; 19   ; 0            ; |ConstrainedWallace                                                                                                                        ; ConstrainedWallace ; work         ;
+;    |ALU:ALU1|                                  ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU1                                                                                                               ; ALU                ; work         ;
+;       |lpm_add_sub:LPM_ADD_SUB_component|      ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component                                                                             ; lpm_add_sub        ; work         ;
+;          |add_sub_3sg:auto_generated|          ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component|add_sub_3sg:auto_generated                                                  ; add_sub_3sg        ; work         ;
+;    |ALU:ALU2|                                  ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU2                                                                                                               ; ALU                ; work         ;
+;       |lpm_add_sub:LPM_ADD_SUB_component|      ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU2|lpm_add_sub:LPM_ADD_SUB_component                                                                             ; lpm_add_sub        ; work         ;
+;          |add_sub_3sg:auto_generated|          ; 51 (51)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|ALU:ALU2|lpm_add_sub:LPM_ADD_SUB_component|add_sub_3sg:auto_generated                                                  ; add_sub_3sg        ; work         ;
+;    |LFSR_29:LFSR|                              ; 21 (21)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|LFSR_29:LFSR                                                                                                           ; LFSR_29            ; work         ;
+;    |cwControlPath:CP1|                         ; 42 (39)             ; 37 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|cwControlPath:CP1                                                                                                      ; cwControlPath      ; work         ;
+;       |LFSR_3:LFSR|                            ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|cwControlPath:CP1|LFSR_3:LFSR                                                                                          ; LFSR_3             ; work         ;
+;    |lpm_mult:Mult0|                            ; 78 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0                                                                                                         ; lpm_mult           ; work         ;
+;       |multcore:mult_core|                     ; 78 (38)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core                                                                                      ; multcore           ; work         ;
+;          |mpar_add:padder|                     ; 40 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add           ; work         ;
+;             |lpm_add_sub:adder[0]|             ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub        ; work         ;
+;                |add_sub_ogh:auto_generated|    ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_ogh:auto_generated                      ; add_sub_ogh        ; work         ;
+;             |lpm_add_sub:adder[1]|             ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                 ; lpm_add_sub        ; work         ;
+;                |add_sub_ogh:auto_generated|    ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_ogh:auto_generated                      ; add_sub_ogh        ; work         ;
+;             |mpar_add:sub_par_add|             ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add           ; work         ;
+;                |lpm_add_sub:adder[0]|          ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub        ; work         ;
+;                   |add_sub_sgh:auto_generated| ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_sgh:auto_generated ; add_sub_sgh        ; work         ;
+;    |lpm_mult:Mult1|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult1                                                                                                         ; lpm_mult           ; work         ;
+;       |mult_36t:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ConstrainedWallace|lpm_mult:Mult1|mult_36t:auto_generated                                                                                 ; mult_36t           ; work         ;
+;    |mux4to1:mux10|                             ; 20 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux10                                                                                                          ; mux4to1            ; work         ;
+;       |lpm_mux:LPM_MUX_component|              ; 20 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux10|lpm_mux:LPM_MUX_component                                                                                ; lpm_mux            ; work         ;
+;          |mux_b9e:auto_generated|              ; 20 (20)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux10|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                                         ; mux_b9e            ; work         ;
+;    |mux4to1:mux11|                             ; 20 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux11                                                                                                          ; mux4to1            ; work         ;
+;       |lpm_mux:LPM_MUX_component|              ; 20 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux11|lpm_mux:LPM_MUX_component                                                                                ; lpm_mux            ; work         ;
+;          |mux_b9e:auto_generated|              ; 20 (20)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux11|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                                         ; mux_b9e            ; work         ;
+;    |mux4to1:mux2|                              ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux2                                                                                                           ; mux4to1            ; work         ;
+;       |lpm_mux:LPM_MUX_component|              ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux2|lpm_mux:LPM_MUX_component                                                                                 ; lpm_mux            ; work         ;
+;          |mux_b9e:auto_generated|              ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux2|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                                          ; mux_b9e            ; work         ;
+;    |mux4to1:mux6|                              ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux6                                                                                                           ; mux4to1            ; work         ;
+;       |lpm_mux:LPM_MUX_component|              ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux6|lpm_mux:LPM_MUX_component                                                                                 ; lpm_mux            ; work         ;
+;          |mux_b9e:auto_generated|              ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux6|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                                          ; mux_b9e            ; work         ;
+;    |mux4to1:mux7|                              ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux7                                                                                                           ; mux4to1            ; work         ;
+;       |lpm_mux:LPM_MUX_component|              ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux7|lpm_mux:LPM_MUX_component                                                                                 ; lpm_mux            ; work         ;
+;          |mux_b9e:auto_generated|              ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux7|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                                          ; mux_b9e            ; work         ;
+;    |mux4to1:mux8|                              ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux8                                                                                                           ; mux4to1            ; work         ;
+;       |lpm_mux:LPM_MUX_component|              ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux8|lpm_mux:LPM_MUX_component                                                                                 ; lpm_mux            ; work         ;
+;          |mux_b9e:auto_generated|              ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux8|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                                          ; mux_b9e            ; work         ;
+;    |mux4to1:mux9|                              ; 14 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux9                                                                                                           ; mux4to1            ; work         ;
+;       |lpm_mux:LPM_MUX_component|              ; 14 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux9|lpm_mux:LPM_MUX_component                                                                                 ; lpm_mux            ; work         ;
+;          |mux_b9e:auto_generated|              ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|mux4to1:mux9|lpm_mux:LPM_MUX_component|mux_b9e:auto_generated                                                          ; mux_b9e            ; work         ;
+;    |wcRAM:RAM1|                                ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|wcRAM:RAM1                                                                                                             ; wcRAM              ; work         ;
+;       |altsyncram:altsyncram_component|        ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|wcRAM:RAM1|altsyncram:altsyncram_component                                                                             ; altsyncram         ; work         ;
+;          |altsyncram_9fr3:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ConstrainedWallace|wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated                                              ; altsyncram_9fr3    ; work         ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -377,27 +382,22 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------+----------------------------------------------+
 ; Register name                          ; Reason for Removal                           ;
 +----------------------------------------+----------------------------------------------+
-; S[0]                                   ; Stuck at VCC due to stuck port data_in       ;
+; G[15]                                  ; Stuck at GND due to stuck port data_in       ;
 ; S[10..15]                              ; Stuck at GND due to stuck port data_in       ;
 ; M[10..15]                              ; Stuck at GND due to stuck port data_in       ;
-; G[12..15]                              ; Merged with G[11]                            ;
-; cwControlPath:CP1|regControl[16]       ; Merged with cwControlPath:CP1|regControl[15] ;
-; cwControlPath:CP1|muxControl[7]        ; Merged with cwControlPath:CP1|muxControl[15] ;
-; cwControlPath:CP1|muxControl[0,14]     ; Merged with cwControlPath:CP1|aluSub         ;
-; cwControlPath:CP1|regControl[17]       ; Merged with cwControlPath:CP1|aluSub         ;
-; cwControlPath:CP1|muxControl[2,8]      ; Merged with cwControlPath:CP1|muxControl[11] ;
-; cwControlPath:CP1|regControl[0,1,8]    ; Merged with cwControlPath:CP1|muxControl[11] ;
-; cwControlPath:CP1|regControl[4]        ; Merged with cwControlPath:CP1|muxControl[9]  ;
-; cwControlPath:CP1|muxControl[13]       ; Merged with cwControlPath:CP1|muxControl[10] ;
-; cwControlPath:CP1|regControl[2,5]      ; Merged with cwControlPath:CP1|muxControl[10] ;
+; cwControlPath:CP1|muxControl[15]       ; Merged with cwControlPath:CP1|muxControl[13] ;
+; cwControlPath:CP1|regControl[5]        ; Merged with cwControlPath:CP1|muxControl[13] ;
 ; cwControlPath:CP1|regControl[3,9]      ; Merged with cwControlPath:CP1|regControl[10] ;
+; cwControlPath:CP1|muxControl[0]        ; Merged with cwControlPath:CP1|aluSub         ;
+; cwControlPath:CP1|regControl[17]       ; Merged with cwControlPath:CP1|aluSub         ;
 ; cwControlPath:CP1|muxControl[3,5]      ; Merged with cwControlPath:CP1|muxControl[1]  ;
 ; cwControlPath:CP1|regControl[6,7]      ; Merged with cwControlPath:CP1|muxControl[1]  ;
 ; cwControlPath:CP1|ramEnable            ; Merged with cwControlPath:CP1|muxControl[4]  ;
+; cwControlPath:CP1|regControl[8]        ; Merged with cwControlPath:CP1|muxControl[2]  ;
 ; cwControlPath:CP1|regControl[12]       ; Merged with cwControlPath:CP1|regControl[11] ;
+; cwControlPath:CP1|regControl[1,15,16]  ; Merged with cwControlPath:CP1|regControl[0]  ;
 ; cwControlPath:CP1|regControl[14]       ; Merged with cwControlPath:CP1|regControl[13] ;
-; cwControlPath:CP1|muxControl[15]       ; Stuck at GND due to stuck port data_in       ;
-; Total Number of Removed Registers = 41 ;                                              ;
+; Total Number of Removed Registers = 30 ;                                              ;
 +----------------------------------------+----------------------------------------------+
 
 
@@ -406,45 +406,58 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 340   ;
-; Number of registers using Synchronous Clear  ; 2     ;
-; Number of registers using Synchronous Load   ; 13    ;
+; Total registers                              ; 370   ;
+; Number of registers using Synchronous Clear  ; 5     ;
+; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 291   ;
+; Number of registers using Clock Enable       ; 302   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; LFSR_29:LFSR|shift_register[19]         ; 3       ;
-; LFSR_29:LFSR|shift_register[0]          ; 2       ;
-; LFSR_29:LFSR|shift_register[11]         ; 2       ;
-; LFSR_29:LFSR|shift_register[21]         ; 3       ;
-; LFSR_29:LFSR|shift_register[2]          ; 2       ;
-; LFSR_29:LFSR|shift_register[22]         ; 3       ;
-; LFSR_29:LFSR|shift_register[23]         ; 3       ;
-; LFSR_29:LFSR|shift_register[14]         ; 2       ;
-; LFSR_29:LFSR|shift_register[5]          ; 2       ;
-; LFSR_29:LFSR|shift_register[6]          ; 2       ;
-; LFSR_29:LFSR|shift_register[16]         ; 3       ;
-; LFSR_29:LFSR|shift_register[26]         ; 3       ;
-; LFSR_29:LFSR|shift_register[7]          ; 2       ;
-; Total number of inverted registers = 13 ;         ;
-+-----------------------------------------+---------+
++-----------------------------------------------------------+
+; Inverted Register Statistics                              ;
++-------------------------------------------------+---------+
+; Inverted Register                               ; Fan out ;
++-------------------------------------------------+---------+
+; cwControlPath:CP1|LFSR_3:LFSR|shift_register[1] ; 8       ;
+; LFSR_29:LFSR|shift_register[19]                 ; 3       ;
+; LFSR_29:LFSR|shift_register[0]                  ; 2       ;
+; LFSR_29:LFSR|shift_register[11]                 ; 2       ;
+; LFSR_29:LFSR|shift_register[21]                 ; 3       ;
+; LFSR_29:LFSR|shift_register[2]                  ; 2       ;
+; LFSR_29:LFSR|shift_register[22]                 ; 3       ;
+; LFSR_29:LFSR|shift_register[23]                 ; 3       ;
+; LFSR_29:LFSR|shift_register[14]                 ; 2       ;
+; LFSR_29:LFSR|shift_register[5]                  ; 2       ;
+; LFSR_29:LFSR|shift_register[6]                  ; 2       ;
+; LFSR_29:LFSR|shift_register[16]                 ; 3       ;
+; LFSR_29:LFSR|shift_register[26]                 ; 3       ;
+; LFSR_29:LFSR|shift_register[7]                  ; 2       ;
+; G[14]                                           ; 1       ;
+; chi[5]                                          ; 10      ;
+; chi[3]                                          ; 9       ;
+; chi[4]                                          ; 9       ;
+; chi[6]                                          ; 9       ;
+; chi[0]                                          ; 7       ;
+; chi[2]                                          ; 8       ;
+; chi[9]                                          ; 10      ;
+; chi[11]                                         ; 9       ;
+; chi[12]                                         ; 9       ;
+; chi[14]                                         ; 9       ;
+; Total number of inverted registers = 25         ;         ;
++-------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |ConstrainedWallace|cwControlPath:CP1|regControl[13] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |ConstrainedWallace|cwControlPath:CP1|muxControl[6] ;
+; 8:1                ; 13 bits   ; 65 LEs        ; 39 LEs               ; 26 LEs                 ; Yes        ; |ConstrainedWallace|cwControlPath:CP1|regControl[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -716,9 +729,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
 ; LPM_WIDTHA                                     ; 16           ; Untyped             ;
-; LPM_WIDTHB                                     ; 12           ; Untyped             ;
-; LPM_WIDTHP                                     ; 28           ; Untyped             ;
-; LPM_WIDTHR                                     ; 28           ; Untyped             ;
+; LPM_WIDTHB                                     ; 16           ; Untyped             ;
+; LPM_WIDTHP                                     ; 32           ; Untyped             ;
+; LPM_WIDTHR                                     ; 32           ; Untyped             ;
 ; LPM_WIDTHS                                     ; 1            ; Untyped             ;
 ; LPM_REPRESENTATION                             ; SIGNED       ; Untyped             ;
 ; LPM_PIPELINE                                   ; 0            ; Untyped             ;
@@ -733,7 +746,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_46t     ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_36t     ; Untyped             ;
 ; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
 ; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
@@ -751,17 +764,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
 ; LPM_WIDTHA                                     ; 16           ; Untyped             ;
-; LPM_WIDTHB                                     ; 12           ; Untyped             ;
-; LPM_WIDTHP                                     ; 28           ; Untyped             ;
-; LPM_WIDTHR                                     ; 28           ; Untyped             ;
+; LPM_WIDTHB                                     ; 11           ; Untyped             ;
+; LPM_WIDTHP                                     ; 27           ; Untyped             ;
+; LPM_WIDTHR                                     ; 27           ; Untyped             ;
 ; LPM_WIDTHS                                     ; 1            ; Untyped             ;
-; LPM_REPRESENTATION                             ; SIGNED       ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
 ; LPM_PIPELINE                                   ; 0            ; Untyped             ;
 ; LATENCY                                        ; 0            ; Untyped             ;
 ; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
 ; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
 ; USE_EAB                                        ; OFF          ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
 ; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
 ; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
 ; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
@@ -804,8 +817,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Number of entity instances            ; 2              ;
 ; Entity Instance                       ; lpm_mult:Mult1 ;
 ;     -- LPM_WIDTHA                     ; 16             ;
-;     -- LPM_WIDTHB                     ; 12             ;
-;     -- LPM_WIDTHP                     ; 28             ;
+;     -- LPM_WIDTHB                     ; 16             ;
+;     -- LPM_WIDTHP                     ; 32             ;
 ;     -- LPM_REPRESENTATION             ; SIGNED         ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO             ;
 ;     -- INPUT_B_IS_CONSTANT            ; NO             ;
@@ -815,9 +828,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
 ; Entity Instance                       ; lpm_mult:Mult0 ;
 ;     -- LPM_WIDTHA                     ; 16             ;
-;     -- LPM_WIDTHB                     ; 12             ;
-;     -- LPM_WIDTHP                     ; 28             ;
-;     -- LPM_REPRESENTATION             ; SIGNED         ;
+;     -- LPM_WIDTHB                     ; 11             ;
+;     -- LPM_WIDTHP                     ; 27             ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO             ;
 ;     -- INPUT_B_IS_CONSTANT            ; YES            ;
 ;     -- USE_EAB                        ; OFF            ;
@@ -892,33 +905,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+--------------+
 
 
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cwControlPath:CP1|LFSR_3:LFSR"                                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; output[2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; output[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 19                          ;
-; cycloneiii_ff         ; 340                         ;
-;     ENA               ; 276                         ;
-;     ENA SCLR          ; 2                           ;
-;     ENA SLD           ; 13                          ;
-;     plain             ; 49                          ;
-; cycloneiii_lcell_comb ; 471                         ;
-;     arith             ; 94                          ;
-;         2 data inputs ; 21                          ;
-;         3 data inputs ; 73                          ;
-;     normal            ; 377                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 26                          ;
-;         2 data inputs ; 71                          ;
+; cycloneiii_ff         ; 370                         ;
+;     ENA               ; 281                         ;
+;     ENA SCLR          ; 5                           ;
+;     ENA SLD           ; 16                          ;
+;     plain             ; 68                          ;
+; cycloneiii_lcell_comb ; 532                         ;
+;     arith             ; 91                          ;
+;         2 data inputs ; 26                          ;
+;         3 data inputs ; 65                          ;
+;     normal            ; 441                         ;
+;         1 data inputs ; 42                          ;
+;         2 data inputs ; 73                          ;
 ;         3 data inputs ; 111                         ;
-;         4 data inputs ; 168                         ;
+;         4 data inputs ; 215                         ;
 ; cycloneiii_mac_mult   ; 1                           ;
 ; cycloneiii_mac_out    ; 1                           ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.40                        ;
-; Average LUT depth     ; 3.51                        ;
+; Average LUT depth     ; 3.73                        ;
 +-----------------------+-----------------------------+
 
 
@@ -927,7 +949,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -937,54 +959,50 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 23 00:30:05 2022
+    Info: Processing started: Mon May 23 15:38:59 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ConstrainedWallace -c ConstrainedWallace
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_29.vhd
-    Info (12022): Found design unit 1: LFSR_29-Behavioral File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_29.vhd Line: 11
-    Info (12023): Found entity 1: LFSR_29 File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_29.vhd Line: 4
+    Info (12022): Found design unit 1: LFSR_29-Behavioral File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_29.vhd Line: 11
+    Info (12023): Found entity 1: LFSR_29 File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_29.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_3.vhd
-    Info (12022): Found design unit 1: LFSR_3-Behavioral File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd Line: 11
-    Info (12023): Found entity 1: LFSR_3 File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd Line: 4
+    Info (12022): Found design unit 1: LFSR_3-Behavioral File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd Line: 11
+    Info (12023): Found entity 1: LFSR_3 File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file constrainedwallace.vhd
-    Info (12022): Found design unit 1: ConstrainedWallace-rtl File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 17
-    Info (12023): Found entity 1: ConstrainedWallace File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 6
+    Info (12022): Found design unit 1: ConstrainedWallace-rtl File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 17
+    Info (12023): Found entity 1: ConstrainedWallace File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file cwcontrolpath.vhd
-    Info (12022): Found design unit 1: cwControlPath-rtl File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 56
-    Info (12023): Found entity 1: cwControlPath File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 10
+    Info (12022): Found design unit 1: cwControlPath-rtl File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 56
+    Info (12023): Found entity 1: cwControlPath File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file wcram.vhd
-    Info (12022): Found design unit 1: wcram-SYN File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 58
-    Info (12023): Found entity 1: wcRAM File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 42
+    Info (12022): Found design unit 1: wcram-SYN File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 58
+    Info (12023): Found entity 1: wcRAM File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file cwcontrolpath_tb.vhd
-    Info (12022): Found design unit 1: cwControlPath_tb-rtl File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd Line: 8
-    Info (12023): Found entity 1: cwControlPath_tb File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd Line: 4
+    Info (12022): Found design unit 1: cwControlPath_tb-rtl File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd Line: 8
+    Info (12023): Found entity 1: cwControlPath_tb File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: alu-SYN File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 54
-    Info (12023): Found entity 1: ALU File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 42
+    Info (12022): Found design unit 1: alu-SYN File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 54
+    Info (12023): Found entity 1: ALU File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file mux4to1.vhd
-    Info (12022): Found design unit 1: mux4to1-SYN File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd Line: 55
-    Info (12023): Found entity 1: mux4to1 File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd Line: 42
+    Info (12022): Found design unit 1: mux4to1-SYN File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd Line: 55
+    Info (12023): Found entity 1: mux4to1 File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file constrainedwallace_tb.vhd
+    Info (12022): Found design unit 1: ConstrainedWallace_tb-rtl File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace_tb.vhd Line: 8
+    Info (12023): Found entity 1: ConstrainedWallace_tb File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tb_output_tb.vhd
+    Info (12022): Found design unit 1: tb_output_tb-behavior File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/tb_Output_tb.vhd Line: 10
+    Info (12023): Found entity 1: tb_output_tb File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/tb_Output_tb.vhd Line: 7
 Info (12127): Elaborating entity "ConstrainedWallace" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at ConstrainedWallace.vhd(112): used explicit default value for signal "C1" because signal was never assigned a value File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 112
-Warning (10540): VHDL Signal Declaration warning at ConstrainedWallace.vhd(113): used explicit default value for signal "C2" because signal was never assigned a value File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 113
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(183): signal "S" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 183
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(185): signal "S" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 185
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(190): signal "lfsrOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 190
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(192): signal "TPO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 192
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(197): signal "O2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 197
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(199): signal "O1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 199
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(204): signal "xor1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 204
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(206): signal "ALU2Out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 206
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(211): signal "Leaky1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 211
-Warning (10492): VHDL Process Statement warning at ConstrainedWallace.vhd(213): signal "Leaky3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 213
-Info (12128): Elaborating entity "cwControlPath" for hierarchy "cwControlPath:CP1" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 142
-Warning (10540): VHDL Signal Declaration warning at cwControlPath.vhd(58): used explicit default value for signal "aTrans" because signal was never assigned a value File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 58
-Warning (10036): Verilog HDL or VHDL warning at cwControlPath.vhd(60): object "iDebug" assigned a value but never read File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 60
-Info (12128): Elaborating entity "wcRAM" for hierarchy "wcRAM:RAM1" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 143
-Info (12128): Elaborating entity "altsyncram" for hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
-Info (12130): Elaborated megafunction instantiation "wcRAM:RAM1|altsyncram:altsyncram_component" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
-Info (12133): Instantiated megafunction "wcRAM:RAM1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
+Warning (10540): VHDL Signal Declaration warning at ConstrainedWallace.vhd(113): used explicit default value for signal "C1" because signal was never assigned a value File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 113
+Warning (10540): VHDL Signal Declaration warning at ConstrainedWallace.vhd(114): used explicit default value for signal "C2" because signal was never assigned a value File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 114
+Info (12128): Elaborating entity "cwControlPath" for hierarchy "cwControlPath:CP1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 145
+Warning (10036): Verilog HDL or VHDL warning at cwControlPath.vhd(69): object "iDebug" assigned a value but never read File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 69
+Info (12128): Elaborating entity "LFSR_3" for hierarchy "cwControlPath:CP1|LFSR_3:LFSR" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd Line: 75
+Info (12128): Elaborating entity "wcRAM" for hierarchy "wcRAM:RAM1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 146
+Info (12128): Elaborating entity "altsyncram" for hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
+Info (12130): Elaborated megafunction instantiation "wcRAM:RAM1|altsyncram:altsyncram_component" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
+Info (12133): Instantiated megafunction "wcRAM:RAM1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd Line: 67
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
@@ -1036,24 +1054,24 @@ Info (12133): Instantiated megafunction "wcRAM:RAM1|altsyncram:altsyncram_compon
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9fr3.tdf
-    Info (12023): Found entity 1: altsyncram_9fr3 File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_9fr3" for hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 144
-Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 80
-Info (12130): Elaborated megafunction instantiation "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 80
-Info (12133): Instantiated megafunction "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component" with the following parameter: File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 80
+    Info (12023): Found entity 1: altsyncram_9fr3 File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/altsyncram_9fr3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_9fr3" for hierarchy "wcRAM:RAM1|altsyncram:altsyncram_component|altsyncram_9fr3:auto_generated" File: c:/intel_fpga/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 147
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 80
+Info (12130): Elaborated megafunction instantiation "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 80
+Info (12133): Instantiated megafunction "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component" with the following parameter: File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd Line: 80
     Info (12134): Parameter "lpm_direction" = "UNUSED"
     Info (12134): Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=YES"
     Info (12134): Parameter "lpm_representation" = "SIGNED"
     Info (12134): Parameter "lpm_type" = "LPM_ADD_SUB"
     Info (12134): Parameter "lpm_width" = "16"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_3sg.tdf
-    Info (12023): Found entity 1: add_sub_3sg File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_3sg.tdf Line: 22
-Info (12128): Elaborating entity "add_sub_3sg" for hierarchy "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component|add_sub_3sg:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 118
-Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:mux2" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 146
-Info (12128): Elaborating entity "LPM_MUX" for hierarchy "mux4to1:mux2|LPM_MUX:LPM_MUX_component" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd Line: 137
-Info (12130): Elaborated megafunction instantiation "mux4to1:mux2|LPM_MUX:LPM_MUX_component" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd Line: 137
-Info (12133): Instantiated megafunction "mux4to1:mux2|LPM_MUX:LPM_MUX_component" with the following parameter: File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd Line: 137
+    Info (12023): Found entity 1: add_sub_3sg File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_3sg.tdf Line: 22
+Info (12128): Elaborating entity "add_sub_3sg" for hierarchy "ALU:ALU1|lpm_add_sub:LPM_ADD_SUB_component|add_sub_3sg:auto_generated" File: c:/intel_fpga/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 118
+Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:mux2" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 149
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "mux4to1:mux2|LPM_MUX:LPM_MUX_component" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd Line: 137
+Info (12130): Elaborated megafunction instantiation "mux4to1:mux2|LPM_MUX:LPM_MUX_component" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd Line: 137
+Info (12133): Instantiated megafunction "mux4to1:mux2|LPM_MUX:LPM_MUX_component" with the following parameter: File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd Line: 137
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_SIZE" = "4"
     Info (12134): Parameter "LPM_WIDTHS" = "2"
@@ -1061,62 +1079,59 @@ Info (12133): Instantiated megafunction "mux4to1:mux2|LPM_MUX:LPM_MUX_component"
     Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_b9e.tdf
-    Info (12023): Found entity 1: mux_b9e File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/mux_b9e.tdf Line: 22
-Info (12128): Elaborating entity "mux_b9e" for hierarchy "mux4to1:mux2|LPM_MUX:LPM_MUX_component|mux_b9e:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
-Info (12128): Elaborating entity "LFSR_29" for hierarchy "LFSR_29:LFSR" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 153
+    Info (12023): Found entity 1: mux_b9e File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/mux_b9e.tdf Line: 22
+Info (12128): Elaborating entity "mux_b9e" for hierarchy "mux4to1:mux2|LPM_MUX:LPM_MUX_component|mux_b9e:auto_generated" File: c:/intel_fpga/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "LFSR_29" for hierarchy "LFSR_29:LFSR" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 156
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 170
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 168
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 170
-Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter: File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 170
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 178
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 176
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 178
+Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter: File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 178
     Info (12134): Parameter "LPM_WIDTHA" = "16"
-    Info (12134): Parameter "LPM_WIDTHB" = "12"
-    Info (12134): Parameter "LPM_WIDTHP" = "28"
-    Info (12134): Parameter "LPM_WIDTHR" = "28"
+    Info (12134): Parameter "LPM_WIDTHB" = "16"
+    Info (12134): Parameter "LPM_WIDTHP" = "32"
+    Info (12134): Parameter "LPM_WIDTHR" = "32"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
     Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_46t.tdf
-    Info (12023): Found entity 1: mult_46t File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/mult_46t.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 168
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 168
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_36t.tdf
+    Info (12023): Found entity 1: mult_36t File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/mult_36t.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 176
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd Line: 176
     Info (12134): Parameter "LPM_WIDTHA" = "16"
-    Info (12134): Parameter "LPM_WIDTHB" = "12"
-    Info (12134): Parameter "LPM_WIDTHP" = "28"
-    Info (12134): Parameter "LPM_WIDTHR" = "28"
+    Info (12134): Parameter "LPM_WIDTHB" = "11"
+    Info (12134): Parameter "LPM_WIDTHP" = "27"
+    Info (12134): Parameter "LPM_WIDTHR" = "27"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_gkh.tdf
-    Info (12023): Found entity 1: add_sub_gkh File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_gkh.tdf Line: 22
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_m9h.tdf
-    Info (12023): Found entity 1: add_sub_m9h File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_m9h.tdf Line: 22
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_bkh.tdf
-    Info (12023): Found entity 1: add_sub_bkh File: C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_bkh.tdf Line: 22
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intel_fpga/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intel_fpga/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intel_fpga/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ogh.tdf
+    Info (12023): Found entity 1: add_sub_ogh File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_ogh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intel_fpga/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intel_fpga/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_sgh.tdf
+    Info (12023): Found entity 1: add_sub_sgh File: C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/db/add_sub_sgh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intel_fpga/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 747 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 826 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 710 logic cells
+    Info (21061): Implemented 789 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4816 megabytes
-    Info: Processing ended: Mon May 23 00:30:21 2022
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:28
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Mon May 23 15:39:21 2022
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:37
 
 

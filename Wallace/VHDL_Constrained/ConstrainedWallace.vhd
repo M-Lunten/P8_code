@@ -77,81 +77,89 @@ architecture rtl of ConstrainedWallace is
 	
 	
 	-- Port maps
-	signal ramEN	 	: std_logic;
-	signal aluState 	: std_logic;
-	signal lfsrEN	 	: std_logic;
-	signal lfsrClk	 	: std_logic;
-	signal muxctrl 	: std_logic_vector(16 downto 0);
-	signal regctrl		: std_logic_vector(17 downto 0);
-	signal addrA		: std_logic_vector(9 downto 0);
-	signal addrB		: std_logic_vector(9 downto 0);
-	signal outA			: std_logic_vector(15 downto 0);
-	signal outB			: std_logic_vector(15 downto 0);
+	signal ramEN	 	: std_logic := '0';
+	signal aluState 	: std_logic := '0';
+	signal aluAddSub 	: std_logic := '0';
+	signal lfsrEN	 	: std_logic := '0';
+	signal lfsrClk	 	: std_logic := '0';
+	signal muxctrl 	: std_logic_vector(16 downto 0) := "00000000000000000";
+	signal regctrl		: std_logic_vector(17 downto 0) := "000000000000000000";
+	signal addrA		: std_logic_vector(9 downto 0) := "0000000000";
+	signal addrB		: std_logic_vector(9 downto 0) := "0000000000";
+	signal outA			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal outB			: std_logic_vector(15 downto 0) := "0000000000000000";
 	
 	-- Registers
-	signal M				: std_logic_vector(15 downto 0);
-	signal S				: std_logic_vector(15 downto 0);
-	signal O1			: std_logic_vector(15 downto 0);
-	signal O2			: std_logic_vector(15 downto 0);
-	signal TPO			: std_logic_vector(15 downto 0);
-	signal PA			: std_logic_vector(15 downto 0);
-	signal A1			: std_logic_vector(15 downto 0);
-	signal A2			: std_logic_vector(15 downto 0);
-	signal A4			: std_logic_vector(15 downto 0);
-	signal X1			: std_logic_vector(15 downto 0);
-	signal X2			: std_logic_vector(15 downto 0);
-	signal X3			: std_logic_vector(15 downto 0);
-	signal X4			: std_logic_vector(15 downto 0);
-	signal Xh1			: std_logic_vector(15 downto 0);
-	signal Xh2			: std_logic_vector(15 downto 0);
-	signal chi			: std_logic_vector(15 downto 0);
-	signal G				: std_logic_vector(15 downto 0);
-	signal Leaky1		: std_logic_vector(15 downto 0);
-	signal Leaky2		: std_logic_vector(15 downto 0);
-	signal Leaky3		: std_logic_vector(15 downto 0);
+	signal M				: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal S				: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal O1			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal O2			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal TPO			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal PA			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal A1			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal A2			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal A4			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal X1			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal X2			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal X3			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal X4			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal Xh1			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal Xh2			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal chi			: std_logic_vector(15 downto 0) := "0101101001111101";
+	signal G				: std_logic_vector(15 downto 0) := "0100000000000000";
+	signal Leaky1		: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal Leaky2		: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal Leaky3		: std_logic_vector(15 downto 0) := "0000000000000000";
 	signal C1			: std_logic_vector(15 downto 0) := "0101101001111101";
 	signal C2			: std_logic_vector(15 downto 0) := "0000010110101000";
 	
 	-- Connections
-	signal addA			: std_logic_vector(15 downto 0);
-	signal addB			: std_logic_vector(15 downto 0);
-	signal addOut		: std_logic_vector(15 downto 0);
-	signal ALU1A		: std_logic_vector(15 downto 0);
-	signal ALU1B		: std_logic_vector(15 downto 0);
-	signal ALU1Out		: std_logic_vector(15 downto 0);
-	signal ALU2A		: std_logic_vector(15 downto 0);
-	signal ALU2B		: std_logic_vector(15 downto 0);
-	signal ALU2Out		: std_logic_vector(15 downto 0);
-	signal grnNum		: std_logic_vector(15 downto 0);
-	signal mult1Part	: std_logic_vector(31 downto 0);
-	signal mult1Out	: std_logic_vector(15 downto 0);
-	signal mult2A		: std_logic_vector(15 downto 0);
-	signal mult2Part	: std_logic_vector(31 downto 0);
-	signal m2O			: std_logic_vector(15 downto 0);
-	signal m3O			: std_logic_vector(15 downto 0);
-	signal m5O			: std_logic_vector(15 downto 0);
-	signal xor1			: std_logic_vector(15 downto 0);
-	signal xor2			: std_logic_vector(15 downto 0);
-	signal lfsrOut		: std_logic_vector(28 downto 0);
-	signal addrAres   : std_logic_vector(15 downto 0);
-	signal addrBres   : std_logic_vector(15 downto 0);
+	signal addA			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal addB			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal addOut		: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal ALU1A		: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal ALU1B		: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal ALU1Out		: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal ALU1Shift	: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal ALU2A		: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal ALU2B		: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal ALU2Out		: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal grnNum		: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal grnNumEx	: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal mult1Part	: std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+	signal mult1Out	: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal mult2A		: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal mult2Part	: std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+	signal m2O			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal m3O			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal m5O			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal xor1			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal xor2			: std_logic_vector(15 downto 0) := "0000000000000000";
+	signal lfsrOut		: std_logic_vector(28 downto 0) := "00000000000000000000000000000";
+	signal addrAres   : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal addrBres   : std_logic_vector(15 downto 0) := "0000000000000000";
 
 
 begin
 
 	CP1: cwControlPath port map (clkIn => clk, startIn => start, validNum => valid, ramEnable => ramEN, aluSub => aluState, lfsrEnable => lfsrEN, muxControl => muxctrl, regControl => regctrl);
 	RAM1: wcRAM port map (address_a => addrA, address_b => addrB, clock => clk, data_a => ALU1Out, data_b => ALU2Out, wren_a => ramEN, wren_b => ramEN, q_a => outA, q_b => outB);
-	ALU1: ALU port map (add_sub => not aluState, cin => alustate, dataa => ALU1A, datab => ALU1B, result=> ALU1Out);
-	ALU2: ALU port map (add_sub => not aluState, cin => alustate, dataa => ALU2A, datab => ALU2B, result=> ALU2Out);
-	mux2: mux4to1 port map (data0x => addOut, data1x => ALU1Out, data2x => std_logic_vector(shift_right(signed(ALU1Out), 1)), data3x => "0000000000000000", sel => muxCtrl(2 downto 1), result => m2o);
+	ALU1: ALU port map (add_sub => aluAddSub, cin => alustate, dataa => ALU1A, datab => ALU1B, result=> ALU1Out);
+	ALU2: ALU port map (add_sub => aluAddSub, cin => alustate, dataa => ALU2A, datab => ALU2B, result=> ALU2Out);
+	mux2: mux4to1 port map (data0x => addOut, data1x => ALU1Out, data2x => ALU1Shift, data3x => "0000000000000000", sel => muxCtrl(2 downto 1), result => m2o);
 	mux6: mux4to1 port map (data0x => TPO, data1x => X1, data2x => X3, data3x => C1, sel => muxCtrl(7 downto 6), result => ALU1A);
 	mux7: mux4to1 port map (data0x => TPO, data1x => X1, data2x => X3, data3x => PA, sel => muxCtrl(9 downto 8), result => ALU1B);
 	mux8: mux4to1 port map (data0x => TPO, data1x => X2, data2x => X4, data3x => C1, sel => muxCtrl(11 downto 10), result => ALU2A);
-	mux9: mux4to1 port map (data0x => TPO, data1x => X2, data2x => X4, data3x => grnNum, sel => muxCtrl(13 downto 12), result => ALU2B);
+	mux9: mux4to1 port map (data0x => TPO, data1x => X2, data2x => X4, data3x => grnNumEx, sel => muxCtrl(13 downto 12), result => ALU2B);
 	mux10: mux4to1 port map (data0x => A1, data1x => PA, data2x => xor1, data3x => "0000000000000000", sel => muxCtrl(15 downto 14), result => addrAres);
 	mux11: mux4to1 port map (data0x => A2, data1x => A4, data2x => xor2, data3x => "0000000000000000", sel => muxCtrl(15 downto 14), result => addrBres);
 	LFSR: LFSR_29 port map (CLK => lfsrClk, OUTPUT => lfsrOut);
 	lfsrClk <= lfsrEN and clk;
+	
+	grnNumEx <= grnNum(15) & grnNum(15) & grnNum(15 downto 2);
+	
+	aluAddSub <= not aluState;
+	ALU1Shift <= std_logic_vector(shift_right(signed(ALU1Out), 1));
 	
 	-- Addresses
 	addrA <= addrAres(9 downto 0);
@@ -165,15 +173,13 @@ begin
 	addOut <= std_logic_vector(signed(addA) + signed(addB));
 	
 	-- Multipliers
-	mult1Part <= std_logic_vector(signed(chi) * signed(C2));
-	mult1Out <= mult1Part(31 downto 16);
-	mult2Part <= std_logic_vector(signed(mult2A) * signed(G));
-	grnNum <= mult2Part(31 downto 16);
+	mult1Part <= std_logic_vector(unsigned(chi(14 downto 0) & '0') * unsigned(C2)); -- Q(6, 10)*Q(0, 16) = Q(6, 26)
+	mult1Out <= '0' & mult1Part(26 downto 12); -- Q(2,14)
+	mult2Part <= std_logic_vector(signed(mult2A) * signed(G)); -- Q(5, 11)*Q(2, 14) = Q(7, 25)
+	grnNum <= mult2Part(29 downto 14); -- Q(5,11)
 	
-	-- Output
-	output <= grnNum;
 	
-	process (muxCtrl)
+	process (muxCtrl, lfsrOut, TPO)
 	begin
 			
 		
@@ -219,7 +225,10 @@ begin
 	process (clk)
 	begin	
 	
-		if rising_edge(clk) then			
+		if rising_edge(clk) then
+
+		-- Output
+			output <= grnNum;
 			
 		-- Register writes
 			

@@ -9,21 +9,21 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/18.0
 Econstrainedwallace
-Z0 w1653165666
-Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z4 dC:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained
-Z5 8C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd
-Z6 FC:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd
+Z0 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+32
+Z3 !s110 1653165674
+!i10b 1
+Z4 w1653165666
+Z5 dC:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained
+Z6 8C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd
+Z7 FC:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd
 l0
 L5
 V<0:@=dTV9C0JCfcL<QXbc2
 !s100 U;>eNFiZj8KG4:_B:hh742
-Z7 OV;C;10.5b;63
-32
-Z8 !s110 1653165674
-!i10b 1
+Z8 OV;C;10.5b;63
 Z9 !s108 1653165674.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd|
 Z11 !s107 C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd|
@@ -31,18 +31,18 @@ Z11 !s107 C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/Const
 Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
 Artl
+R0
 R1
 R2
-R3
 DEx4 work 18 constrainedwallace 0 22 <0:@=dTV9C0JCfcL<QXbc2
+32
+R3
+!i10b 1
 l66
 L16
 VInh;oFllNHkm[a49k@o@W0
 !s100 BXOflb@?mjzK[0^fj0^3Q3
-R7
-32
 R8
-!i10b 1
 R9
 R10
 R11
@@ -50,21 +50,21 @@ R11
 R12
 R13
 Ecwcontrolpath
-Z14 w1653165433
+R0
 R1
 R2
-R3
-R4
-Z15 8C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd
-Z16 FC:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd
+32
+Z14 !s110 1653165673
+!i10b 1
+Z15 w1653165433
+R5
+Z16 8C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd
+Z17 FC:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd
 l0
 L10
 VJIL04NQAd3`j>^zzNcPbL0
 !s100 [okC4HFYVa]bhK`KZl6ek2
-R7
-32
-Z17 !s110 1653165673
-!i10b 1
+R8
 Z18 !s108 1653165673.000000
 Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd|
 Z20 !s107 C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd|
@@ -72,18 +72,18 @@ Z20 !s107 C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwCon
 R12
 R13
 Artl
+R0
 R1
 R2
-R3
 DEx4 work 13 cwcontrolpath 0 22 JIL04NQAd3`j>^zzNcPbL0
+32
+R14
+!i10b 1
 l63
 L56
 VDS>QZgTadUiNk7PkEY14`2
 !s100 aJOled3A1VVHE`K@8B]2k0
-R7
-32
-R17
-!i10b 1
+R8
 R18
 R19
 R20
@@ -91,20 +91,20 @@ R20
 R12
 R13
 Ecwcontrolpath_tb
-Z21 w1653151375
+R1
 R2
-R3
-R4
+32
+R14
+!i10b 1
+Z21 w1653151375
+R5
 Z22 8C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd
 Z23 FC:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd
 l0
 L4
 V7IKAJLNT^^YM6R^bZd<gc0
 !s100 C:e6c6>17@4lF]bLJMBbe0
-R7
-32
-R17
-!i10b 1
+R8
 R18
 Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd|
 Z25 !s107 C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd|
@@ -112,17 +112,17 @@ Z25 !s107 C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwCon
 R12
 R13
 Artl
+R1
 R2
-R3
 DEx4 work 16 cwcontrolpath_tb 0 22 7IKAJLNT^^YM6R^bZd<gc0
+32
+R14
+!i10b 1
 l35
 L8
 VEE1o1g_o649DgHG]z5Kbk1
 !s100 k1[lH^^O6e6jgLlDDkN:l0
-R7
-32
-R17
-!i10b 1
+R8
 R18
 R24
 R25
@@ -130,21 +130,21 @@ R25
 R12
 R13
 Ewcram
-Z26 w1653127647
-Z27 DPx9 altera_mf 20 altera_mf_components 0 22 7RjT1Xb9^`L[coRHZN<9k2
+Z26 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+R1
 R2
+32
 R3
-R4
+!i10b 1
+Z27 w1653127647
+R5
 Z28 8C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd
 Z29 FC:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd
 l0
 L42
 V8LUf<3gcSN<1@[z[_QW@T1
 !s100 JUMT^nJEKK4R59JLSzL3:3
-R7
-32
 R8
-!i10b 1
 R9
 Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd|
 Z31 !s107 C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd|
@@ -152,18 +152,18 @@ Z31 !s107 C:/Users/Jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM
 R12
 R13
 Asyn
-R27
+R26
+R1
 R2
+DEx4 work 5 wcram 0 22 8LUf<3gcSN<1@[z[_QW@T1
+32
 R3
-Z32 DEx4 work 5 wcram 0 22 8LUf<3gcSN<1@[z[_QW@T1
+!i10b 1
 l63
 L58
-Z33 VW;8bFbek9MSg3ZP1PCPG33
-Z34 !s100 Y4Aghh6jQT0lhd3M15za33
-R7
-32
+VW;8bFbek9MSg3ZP1PCPG33
+!s100 Y4Aghh6jQT0lhd3M15za33
 R8
-!i10b 1
 R9
 R30
 R31

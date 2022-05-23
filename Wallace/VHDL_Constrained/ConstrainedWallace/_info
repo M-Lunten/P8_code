@@ -1,0 +1,412 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained
+Ealu
+Z1 w1653290028
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd
+Z5 FC:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd
+l0
+L42
+VmQB7YQ_B5goK_O[6A]4ez0
+!s100 5Xg;M6:FF1Sa@?=8:OV`G3
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1653314100
+!i10b 1
+Z8 !s108 1653314100.000000
+Z9 !s90 -reportprogress|300|-work|ConstrainedWallace|-2002|-explicit|-stats=none|C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd|
+Z10 !s107 C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ALU.vhd|
+!i113 1
+Z11 o-work ConstrainedWallace -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Asyn
+R2
+R3
+DEx4 work 3 alu 0 22 mQB7YQ_B5goK_O[6A]4ez0
+l77
+L54
+ViOlJUF6J<R3<<QFKF^:FS0
+!s100 K77bQJiC7@Z>HTz>QHV5:2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Econstrainedwallace
+Z13 w1653314086
+Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z15 8C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd
+Z16 FC:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd
+l0
+L6
+VZIj`hc>iMN?>LVo=J6a@=1
+!s100 iEEkaaW?5b7m;1T`<:L^91
+R6
+32
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-work|ConstrainedWallace|-2002|-explicit|-stats=none|C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd|
+Z18 !s107 C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/ConstrainedWallace.vhd|
+!i113 1
+R11
+R12
+Artl
+R14
+R2
+R3
+DEx4 work 18 constrainedwallace 0 22 ZIj`hc>iMN?>LVo=J6a@=1
+l143
+L17
+Vh86fUPg:Z=k1ZT?SCn?kk3
+!s100 ScA]PkeENz_HLH^T]>7EU0
+R6
+32
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Econstrainedwallace_tb
+Z19 w1653295589
+R2
+R3
+R0
+Z20 8C:\Users\jonas\Documents\GitHub\P8_code\Wallace\VHDL_Constrained\ConstrainedWallace_tb.vhd
+Z21 FC:\Users\jonas\Documents\GitHub\P8_code\Wallace\VHDL_Constrained\ConstrainedWallace_tb.vhd
+l0
+L4
+V5=A?gXXS4Q4iX[UTWEm393
+!s100 iGeS46HG00acB;Hd]7cII1
+R6
+32
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-work|ConstrainedWallace|-2002|-explicit|-stats=none|C:\Users\jonas\Documents\GitHub\P8_code\Wallace\VHDL_Constrained\ConstrainedWallace_tb.vhd|
+Z23 !s107 C:\Users\jonas\Documents\GitHub\P8_code\Wallace\VHDL_Constrained\ConstrainedWallace_tb.vhd|
+!i113 1
+R11
+R12
+Artl
+R2
+R3
+DEx4 work 21 constrainedwallace_tb 0 22 5=A?gXXS4Q4iX[UTWEm393
+l27
+L8
+VDe7^bYoIRD<FDZD:8zO]43
+!s100 [b]F7B8Y:nBHQ0j^JQkJb3
+R6
+32
+R7
+!i10b 1
+R8
+R22
+R23
+!i113 1
+R11
+R12
+Ecwcontrolpath
+Z24 w1653310939
+R14
+R2
+R3
+R0
+Z25 8C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd
+Z26 FC:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd
+l0
+L10
+VnAiNnU_9T8:YJNf3J9o^>1
+!s100 =MCMHO:<828BHCS@=;?EZ3
+R6
+32
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-work|ConstrainedWallace|-2002|-explicit|-stats=none|C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd|
+Z28 !s107 C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath.vhd|
+!i113 1
+R11
+R12
+Artl
+R14
+R2
+R3
+DEx4 work 13 cwcontrolpath 0 22 nAiNnU_9T8:YJNf3J9o^>1
+l73
+L56
+V[KJ=dSD=FWF;YWUNb47`b3
+!s100 UlT>9F20T@]X4hdR;;Li22
+R6
+32
+R7
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
+Ecwcontrolpath_tb
+Z29 w1653233088
+R2
+R3
+R0
+Z30 8C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd
+Z31 FC:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd
+l0
+L4
+VKO6>[a:4:Bnk0eaadPSRH1
+!s100 C:e6c6>17@4lF]bLJMBbe0
+R6
+32
+R7
+!i10b 1
+R8
+Z32 !s90 -reportprogress|300|-work|ConstrainedWallace|-2002|-explicit|-stats=none|C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd|
+Z33 !s107 C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/cwControlPath_tb.vhd|
+!i113 1
+R11
+R12
+Artl
+R2
+R3
+DEx4 work 16 cwcontrolpath_tb 0 22 KO6>[a:4:Bnk0eaadPSRH1
+l35
+L8
+V@Q22QLPK0mB<=ONAffz:D3
+!s100 k1[lH^^O6e6jgLlDDkN:l0
+R6
+32
+R7
+!i10b 1
+R8
+R32
+R33
+!i113 1
+R11
+R12
+Elfsr_29
+R29
+R2
+R3
+R0
+Z34 8C:\Users\jonas\Documents\GitHub\P8_code\Wallace\VHDL_Constrained\LFSR_29.vhd
+Z35 FC:\Users\jonas\Documents\GitHub\P8_code\Wallace\VHDL_Constrained\LFSR_29.vhd
+l0
+L4
+V6;Ll67HAX@aIa^[:l7>lO2
+!s100 F``fX<iAk_4LTYS;eX>CN0
+R6
+32
+Z36 !s110 1653314101
+!i10b 1
+Z37 !s108 1653314101.000000
+Z38 !s90 -reportprogress|300|-work|ConstrainedWallace|-2002|-explicit|-stats=none|C:\Users\jonas\Documents\GitHub\P8_code\Wallace\VHDL_Constrained\LFSR_29.vhd|
+Z39 !s107 C:\Users\jonas\Documents\GitHub\P8_code\Wallace\VHDL_Constrained\LFSR_29.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 7 lfsr_29 0 22 6;Ll67HAX@aIa^[:l7>lO2
+l13
+L11
+VT[BSY3QKl8hc:fG:SPPQW2
+!s100 2W<0DZgBSIe4EA0KSHALH1
+R6
+32
+R36
+!i10b 1
+R37
+R38
+R39
+!i113 1
+R11
+R12
+Elfsr_3
+R29
+R2
+R3
+R0
+Z40 8C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd
+Z41 FC:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd
+l0
+L4
+VPBn]bB>ejaS>_NlMaYL5J0
+!s100 YU9MaV<AIb_>57mCAbzU70
+R6
+32
+R7
+!i10b 1
+R8
+Z42 !s90 -reportprogress|300|-work|ConstrainedWallace|-2002|-explicit|-stats=none|C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd|
+Z43 !s107 C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/LFSR_3.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 6 lfsr_3 0 22 PBn]bB>ejaS>_NlMaYL5J0
+l13
+L11
+VQ`1iX_0FTG>m[IHi_NAmM1
+!s100 jnTM7I;[jYT4DXRmAl3Ak3
+R6
+32
+R7
+!i10b 1
+R8
+R42
+R43
+!i113 1
+R11
+R12
+Emux4to1
+R1
+Z44 DPx3 lpm 14 lpm_components 0 22 BZZBj]8LhndN7CkCjD@L`2
+R2
+R3
+R0
+Z45 8C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd
+Z46 FC:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd
+l0
+L42
+VW0P[[o<b<HQAd<XG9;EBa0
+!s100 kR]?fah1<LbU45Kjk]DkK0
+R6
+32
+R36
+!i10b 1
+R37
+Z47 !s90 -reportprogress|300|-work|ConstrainedWallace|-2002|-explicit|-stats=none|C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd|
+Z48 !s107 C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/mux4to1.vhd|
+!i113 1
+R11
+R12
+Asyn
+R44
+R2
+R3
+DEx4 work 7 mux4to1 0 22 W0P[[o<b<HQAd<XG9;EBa0
+l66
+L55
+Vz>J?^d;:[5M<mg_Y`DULX3
+!s100 oGjiITFoLl[QSL222D9dP1
+R6
+32
+R36
+!i10b 1
+R37
+R47
+R48
+!i113 1
+R11
+R12
+Etb_output_tb
+Z49 w1653310160
+Z50 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R14
+R2
+R3
+R0
+Z51 8C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/tb_Output_tb.vhd
+Z52 FC:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/tb_Output_tb.vhd
+l0
+L7
+V2J0Y2Wc@HkS2Da?aZNBO<0
+!s100 KW2eILT>LOb@TXG;h5@V`0
+R6
+32
+R36
+!i10b 1
+R37
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/tb_Output_tb.vhd|
+Z54 !s107 C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/tb_Output_tb.vhd|
+!i113 1
+Z55 o-work work -2002 -explicit
+R12
+Abehavior
+R50
+R14
+R2
+R3
+Z56 DEx4 work 12 tb_output_tb 0 22 2J0Y2Wc@HkS2Da?aZNBO<0
+l30
+L10
+Z57 Vh93[KfSK=MJY>;FG5XlzH2
+Z58 !s100 Sm:M1TH_1RKzjB9b=CO[E2
+R6
+32
+R36
+!i10b 1
+R37
+R53
+R54
+!i113 1
+R55
+R12
+Ewcram
+Z59 w1653307392
+Z60 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+R2
+R3
+R0
+Z61 8C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd
+Z62 FC:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd
+l0
+L42
+V@J@1jNc]Rm16D]`KzJbBV3
+!s100 i4e<REmQQ9bbA;6dZ`KD>0
+R6
+32
+R7
+!i10b 1
+R8
+Z63 !s90 -reportprogress|300|-work|ConstrainedWallace|-2002|-explicit|-stats=none|C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd|
+Z64 !s107 C:/Users/jonas/Documents/GitHub/P8_code/Wallace/VHDL_Constrained/wcRAM.vhd|
+!i113 1
+R11
+R12
+Asyn
+R60
+R2
+R3
+DEx4 work 5 wcram 0 22 @J@1jNc]Rm16D]`KzJbBV3
+l63
+L58
+VSEU@He:LDi;PC0Yn2ee3z2
+!s100 _Hn2NC7o9cFa3SW7PECVO2
+R6
+32
+R7
+!i10b 1
+R8
+R63
+R64
+!i113 1
+R11
+R12
