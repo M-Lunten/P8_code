@@ -1,14 +1,14 @@
-Fitter Status : Successful - Mon May 23 16:02:40 2022
+Fitter Status : Successful - Mon May 23 23:22:51 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ConstrainedWallace
 Top-level Entity Name : ConstrainedWallace
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 584 / 114,480 ( < 1 % )
-    Total combinational functions : 533 / 114,480 ( < 1 % )
-    Dedicated logic registers : 354 / 114,480 ( < 1 % )
-Total registers : 354
+Total logic elements : 587 / 114,480 ( < 1 % )
+    Total combinational functions : 531 / 114,480 ( < 1 % )
+    Dedicated logic registers : 353 / 114,480 ( < 1 % )
+Total registers : 353
 Total pins : 35 / 529 ( 7 % )
 Total virtual pins : 0
 Total memory bits : 16,384 / 3,981,312 ( < 1 % )

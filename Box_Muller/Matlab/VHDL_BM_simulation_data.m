@@ -25,3 +25,18 @@ hold off
 legend('Ideal Gaussian', 'VHDL simulation');
 grid on
 xlim([-5 5])
+title('Log scale PDF for a VHDL simulation of Wallace')
+xlabel('x')
+ylabel('Probability')
+
+figure()
+plot(x, y);
+hold on
+plot(xi, fi);
+hold off
+legend('Ideal Gaussian', 'VHDL simulation');
+grid on
+xlim([-5 5])
+title('Linear scale PDF for a VHDL simulation of Wallace')
+xlabel('x')
+ylabel('Probability')

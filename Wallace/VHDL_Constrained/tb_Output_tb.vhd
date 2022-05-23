@@ -11,11 +11,11 @@ architecture behavior of tb_output_tb is
  
  component ConstrainedWallace is
 			port (
-			 clk				: in  std_logic;
+			 clk			: in  std_logic;
 			 start			: in  std_logic;
 			 valid			: out std_logic;
 			 output			: out std_logic_vector(15 downto 0);
-			 output2			: out std_logic_vector(15 downto 0)
+			 output2		: out std_logic_vector(15 downto 0)
 			 );
 	end component;
 	
@@ -45,9 +45,9 @@ begin
 		startout <= '1';
 		wait for 7*clock_period;
 		
-		for i in 0 to 100000 loop
+		for i in 0 to 200000 loop
 			if validout = '1' then
-				write(out_line, outout2, right, 16);
+				write(out_line, outout, right, 16);
 				write(out_line, ',', right, 1);
 				writeline(file_RESULTS, out_line);
 				wait for clock_period;	

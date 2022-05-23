@@ -90,6 +90,11 @@ begin
 					if startIn = '1' then
 					state <= "001";
 					end if;
+					regControl <= "000000000000000000";
+					muxControl <= "00000000000000000";
+					ramEnable <= '0';
+					aluSub <= '0';
+					validNum <= '0';
 					lfsrEnable <= '0';
 					lfsrEN <= '0';
 					
@@ -118,11 +123,11 @@ begin
 					State <= "100";
 					regControl <= "100110011000001000";
 					if (aTrans = '0') then
-						muxControl <= "10101000001000001";  --A1 Transformation
+						muxControl <= "10001000001010001";  --A1 Transformation
 					else
-						muxControl <= "10000010100000001";  --A2 Transformation
+						muxControl <= "10000010100010001";  --A2 Transformation
 					end if;
-					ramEnable <= '0';
+					ramEnable <= '1';
 					aluSub <= '1';
 					validNum <= '1';
 					lfsrEnable <= '0';
@@ -132,9 +137,9 @@ begin
 					State <= "101";
 					regControl <= "100001100000010000";
 					if (aTrans = '0') then
-						muxControl <= "00101001000010001";  --A1 Transformation
+						muxControl <= "00110001000000001";  --A1 Transformation
 					else
-						muxControl <= "00100100010010001";  --A2 Transformation
+						muxControl <= "00100100010000001";  --A2 Transformation
 					end if;
 					ramEnable <= '1';
 					aluSub <= '1';
@@ -146,7 +151,7 @@ begin
 					
 					regControl <= "000000000011110100";
 					muxControl <= "11010011001111010";
-					ramEnable <= '1';
+					ramEnable <= '0';
 					aluSub <= '0';
 					validNum <= '1';
 					lfsrEN <= '1';
@@ -154,17 +159,13 @@ begin
 					i := i + 1;
 					if (i = 255) and (startIn = '1') then
 						State <= "001";
-						lfsrEnable <= '0';
+						lfsrEnable <= '1';
 					elsif (i = 255) and (startIn = '0') then
 						State <= "000";
 						lfsrEnable <= '0';
 					else
 						State <= "010";
 						lfsrEnable <= '0';
-					end if;
-					
-					if (i = 255) then
-						lfsrEnable <= '1';
 					end if;
 
 				when others => 

@@ -38,7 +38,7 @@ plot(xi, fi);
 hold off
 legend('Ideal Gaussian', 'VHDL simulation');
 grid on
-%xlim([-5 5])
+xlim([-5 5])
 title('Linear scale PDF for a VHDL simulation of Wallace')
 xlabel('x')
 ylabel('Probability')

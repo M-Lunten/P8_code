@@ -1,5 +1,5 @@
 Fitter report for Box_Muller
-Thu May 05 11:24:31 2022
+Sun May 22 21:26:10 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -73,17 +73,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu May 05 11:24:31 2022       ;
+; Fitter Status                      ; Successful - Sun May 22 21:26:10 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Box_Muller                                  ;
 ; Top-level Entity Name              ; Box_Muller                                  ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 561 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 540 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 133 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 133                                         ;
+; Total logic elements               ; 535 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 524 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 117 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 117                                         ;
 ; Total pins                         ; 34 / 529 ( 6 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 24,576 / 3,981,312 ( < 1 % )                ;
@@ -157,21 +157,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
-; Maximum used               ; 8           ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.5%      ;
-;     Processor 3            ;   0.5%      ;
-;     Processor 4            ;   0.5%      ;
-;     Processor 5            ;   0.4%      ;
-;     Processor 6            ;   0.4%      ;
-;     Processor 7            ;   0.4%      ;
-;     Processor 8            ;   0.4%      ;
+;     Processor 3            ;   0.4%      ;
+;     Processor 4            ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -196,54 +192,70 @@ refer to the applicable agreement for further details.
 ; U1[13]~reg0                       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
 ; U1[14]~reg0                       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
 ; U1[15]~reg0                       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
-; f_block:f1|f_res[0]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; U2[0]~reg0                        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[1]~reg0                        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[2]~reg0                        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[3]~reg0                        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[4]~reg0                        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[5]~reg0                        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[6]~reg0                        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[7]~reg0                        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[8]~reg0                        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[9]~reg0                        ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[10]~reg0                       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[11]~reg0                       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[12]~reg0                       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[13]~reg0                       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[14]~reg0                       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; U2[15]~reg0                       ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2             ; DATAOUT          ;                       ;
+; f_block:f1|f_res[0]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[0]               ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[0]~_Duplicate_1                            ; Q                ;                       ;
-; f_block:f1|f_res[0]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[1]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[0]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[1]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[1]               ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[1]~_Duplicate_1                            ; Q                ;                       ;
-; f_block:f1|f_res[1]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[2]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[1]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[2]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[2]               ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[2]~_Duplicate_1                            ; Q                ;                       ;
-; f_block:f1|f_res[2]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[3]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[2]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[3]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[3]               ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[3]~_Duplicate_1                            ; Q                ;                       ;
-; f_block:f1|f_res[3]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[4]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[3]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[4]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[4]               ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[4]~_Duplicate_1                            ; Q                ;                       ;
-; f_block:f1|f_res[4]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[5]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[4]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[5]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[5]               ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[5]~_Duplicate_1                            ; Q                ;                       ;
-; f_block:f1|f_res[5]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[6]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[5]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[6]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[6]               ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[6]~_Duplicate_1                            ; Q                ;                       ;
-; f_block:f1|f_res[6]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[7]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[6]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[7]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[7]               ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[7]~_Duplicate_1                            ; Q                ;                       ;
-; f_block:f1|f_res[7]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[8]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[7]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[8]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[8]               ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[8]~_Duplicate_1                            ; Q                ;                       ;
-; f_block:f1|f_res[8]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[9]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[8]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[9]               ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[9]               ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[9]~_Duplicate_1                            ; Q                ;                       ;
-; f_block:f1|f_res[9]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[10]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[9]~_Duplicate_1  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[10]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[10]              ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[10]~_Duplicate_1                           ; Q                ;                       ;
-; f_block:f1|f_res[10]~_Duplicate_1 ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[11]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[10]~_Duplicate_1 ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[11]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[11]              ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[11]~_Duplicate_1                           ; Q                ;                       ;
-; f_block:f1|f_res[11]~_Duplicate_1 ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[12]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[11]~_Duplicate_1 ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[12]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[12]              ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[12]~_Duplicate_1                           ; Q                ;                       ;
-; f_block:f1|f_res[12]~_Duplicate_1 ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[13]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[12]~_Duplicate_1 ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[13]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[13]              ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[13]~_Duplicate_1                           ; Q                ;                       ;
-; f_block:f1|f_res[13]~_Duplicate_1 ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[14]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[13]~_Duplicate_1 ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[14]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[14]              ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[14]~_Duplicate_1                           ; Q                ;                       ;
-; f_block:f1|f_res[14]~_Duplicate_1 ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
-; f_block:f1|f_res[15]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[14]~_Duplicate_1 ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[15]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|f_res[15]              ; Duplicated      ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|f_res[15]~_Duplicate_1                           ; Q                ;                       ;
-; f_block:f1|f_res[15]~_Duplicate_1 ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
+; f_block:f1|f_res[15]~_Duplicate_1 ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ; DATAA            ;                       ;
 ; f_block:f1|shift1[0]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|lpm_mult:Mult0|mult_66t:auto_generated|mac_mult1 ; DATAB            ;                       ;
 ; f_block:f1|shift1[1]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|lpm_mult:Mult0|mult_66t:auto_generated|mac_mult1 ; DATAB            ;                       ;
 ; f_block:f1|shift1[2]              ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; f_block:f1|lpm_mult:Mult0|mult_66t:auto_generated|mac_mult1 ; DATAB            ;                       ;
@@ -301,8 +313,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 885 ) ; 0.00 % ( 0 / 885 )         ; 0.00 % ( 0 / 885 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 885 ) ; 0.00 % ( 0 / 885 )         ; 0.00 % ( 0 / 885 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 869 ) ; 0.00 % ( 0 / 869 )         ; 0.00 % ( 0 / 869 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 869 ) ; 0.00 % ( 0 / 869 )         ; 0.00 % ( 0 / 869 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -325,7 +337,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 875 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 859 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -333,7 +345,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Box_Muller/VHDL/output_files/Box_Muller.pin.
+The pin-out file can be found in C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.pin.
 
 
 +----------------------------------------------------------------------------+
@@ -341,26 +353,26 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Box_Muller/VHDL/
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Total logic elements                        ; 561 / 114,480 ( < 1 % )      ;
-;     -- Combinational with no register       ; 428                          ;
-;     -- Register only                        ; 21                           ;
-;     -- Combinational with a register        ; 112                          ;
+; Total logic elements                        ; 535 / 114,480 ( < 1 % )      ;
+;     -- Combinational with no register       ; 418                          ;
+;     -- Register only                        ; 11                           ;
+;     -- Combinational with a register        ; 106                          ;
 ;                                             ;                              ;
 ; Logic element usage by number of LUT inputs ;                              ;
 ;     -- 4 input functions                    ; 182                          ;
 ;     -- 3 input functions                    ; 222                          ;
-;     -- <=2 input functions                  ; 136                          ;
-;     -- Register only                        ; 21                           ;
+;     -- <=2 input functions                  ; 120                          ;
+;     -- Register only                        ; 11                           ;
 ;                                             ;                              ;
 ; Logic elements by mode                      ;                              ;
-;     -- normal mode                          ; 396                          ;
+;     -- normal mode                          ; 380                          ;
 ;     -- arithmetic mode                      ; 144                          ;
 ;                                             ;                              ;
-; Total registers*                            ; 133 / 117,053 ( < 1 % )      ;
-;     -- Dedicated logic registers            ; 133 / 114,480 ( < 1 % )      ;
+; Total registers*                            ; 117 / 117,053 ( < 1 % )      ;
+;     -- Dedicated logic registers            ; 117 / 114,480 ( < 1 % )      ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )            ;
 ;                                             ;                              ;
-; Total LABs:  partially or completely used   ; 46 / 7,155 ( < 1 % )         ;
+; Total LABs:  partially or completely used   ; 42 / 7,155 ( < 1 % )         ;
 ; Virtual pins                                ; 0                            ;
 ; I/O pins                                    ; 34 / 529 ( 6 % )             ;
 ;     -- Clock pins                           ; 0 / 7 ( 0 % )                ;
@@ -378,12 +390,12 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Box_Muller/VHDL/
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )                ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )                ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )                ;
-; Average interconnect usage (total/H/V)      ; 0.3% / 0.3% / 0.3%           ;
-; Peak interconnect usage (total/H/V)         ; 8.1% / 9.4% / 6.1%           ;
-; Maximum fan-out                             ; 140                          ;
-; Highest non-global fan-out                  ; 140                          ;
-; Total fan-out                               ; 2167                         ;
-; Average fan-out                             ; 2.79                         ;
+; Average interconnect usage (total/H/V)      ; 0.3% / 0.4% / 0.3%           ;
+; Peak interconnect usage (total/H/V)         ; 7.8% / 8.6% / 6.5%           ;
+; Maximum fan-out                             ; 125                          ;
+; Highest non-global fan-out                  ; 125                          ;
+; Total fan-out                               ; 2114                         ;
+; Average fan-out                             ; 2.86                         ;
 +---------------------------------------------+------------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -396,26 +408,26 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Box_Muller/VHDL/
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 561 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 428                    ; 0                              ;
-;     -- Register only                        ; 21                     ; 0                              ;
-;     -- Combinational with a register        ; 112                    ; 0                              ;
+; Total logic elements                        ; 535 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 418                    ; 0                              ;
+;     -- Register only                        ; 11                     ; 0                              ;
+;     -- Combinational with a register        ; 106                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
 ;     -- 4 input functions                    ; 182                    ; 0                              ;
 ;     -- 3 input functions                    ; 222                    ; 0                              ;
-;     -- <=2 input functions                  ; 136                    ; 0                              ;
-;     -- Register only                        ; 21                     ; 0                              ;
+;     -- <=2 input functions                  ; 120                    ; 0                              ;
+;     -- Register only                        ; 11                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 396                    ; 0                              ;
+;     -- normal mode                          ; 380                    ; 0                              ;
 ;     -- arithmetic mode                      ; 144                    ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total registers                             ; 133                    ; 0                              ;
-;     -- Dedicated logic registers            ; 133 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 117                    ; 0                              ;
+;     -- Dedicated logic registers            ; 117 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 46 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 42 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 34                     ; 0                              ;
@@ -431,7 +443,7 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Box_Muller/VHDL/
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 2312                   ; 5                              ;
+;     -- Total Connections                    ; 2259                   ; 5                              ;
 ;     -- Registered Connections               ; 905                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
@@ -464,7 +476,7 @@ The pin-out file can be found in C:/Users/razze/Desktop/P8_code/Box_Muller/VHDL/
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; gclk   ; M23   ; 6        ; 115          ; 40           ; 7            ; 140                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; gclk   ; M23   ; 6        ; 115          ; 40           ; 7            ; 125                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; greset ; M21   ; 6        ; 115          ; 53           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
@@ -1382,15 +1394,15 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                     ; Entity Name     ; Library Name ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |Box_Muller                                  ; 561 (21)    ; 133 (16)                  ; 0 (0)         ; 24576       ; 3    ; 6            ; 0       ; 3         ; 34   ; 0            ; 428 (5)      ; 21 (4)            ; 112 (12)         ; |Box_Muller                                                                                             ; Box_Muller      ; work         ;
-;    |LFSR_16:LF16|                            ; 10 (10)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 2 (2)             ; 7 (7)            ; |Box_Muller|LFSR_16:LF16                                                                                ; LFSR_16         ; work         ;
-;    |LFSR_33:LF33|                            ; 34 (34)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 32 (32)          ; |Box_Muller|LFSR_33:LF33                                                                                ; LFSR_33         ; work         ;
-;    |f_block:f1|                              ; 459 (199)   ; 38 (38)                   ; 0 (0)         ; 8192        ; 1    ; 2            ; 0       ; 1         ; 0    ; 0            ; 383 (161)    ; 1 (1)             ; 75 (37)          ; |Box_Muller|f_block:f1                                                                                  ; f_block         ; work         ;
-;       |addressing_unit:AU0|                  ; 260 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 222 (0)      ; 0 (0)             ; 38 (0)           ; |Box_Muller|f_block:f1|addressing_unit:AU0                                                              ; addressing_unit ; work         ;
-;          |AU_MUX:mux0|                       ; 100 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 100 (0)      ; 0 (0)             ; 0 (0)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|AU_MUX:mux0                                                  ; AU_MUX          ; work         ;
-;             |lpm_mux:LPM_MUX_component|      ; 100 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 100 (0)      ; 0 (0)             ; 0 (0)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|AU_MUX:mux0|lpm_mux:LPM_MUX_component                        ; lpm_mux         ; work         ;
-;                |mux_g9e:auto_generated|      ; 100 (100)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 100 (100)    ; 0 (0)             ; 0 (0)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|AU_MUX:mux0|lpm_mux:LPM_MUX_component|mux_g9e:auto_generated ; mux_g9e         ; work         ;
-;          |LOD:LOD0|                          ; 160 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 122 (0)      ; 0 (0)             ; 38 (0)           ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0                                                     ; LOD             ; work         ;
+; |Box_Muller                                  ; 535 (1)     ; 117 (0)                   ; 0 (0)         ; 24576       ; 3    ; 6            ; 0       ; 3         ; 34   ; 0            ; 418 (1)      ; 11 (0)            ; 106 (0)          ; |Box_Muller                                                                                             ; Box_Muller      ; work         ;
+;    |LFSR_16:LF16|                            ; 11 (11)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 10 (10)          ; |Box_Muller|LFSR_16:LF16                                                                                ; LFSR_16         ; work         ;
+;    |LFSR_33:LF33|                            ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 30 (30)          ; |Box_Muller|LFSR_33:LF33                                                                                ; LFSR_33         ; work         ;
+;    |f_block:f1|                              ; 459 (199)   ; 38 (38)                   ; 0 (0)         ; 8192        ; 1    ; 2            ; 0       ; 1         ; 0    ; 0            ; 379 (161)    ; 1 (1)             ; 79 (37)          ; |Box_Muller|f_block:f1                                                                                  ; f_block         ; work         ;
+;       |addressing_unit:AU0|                  ; 260 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 218 (0)      ; 0 (0)             ; 42 (0)           ; |Box_Muller|f_block:f1|addressing_unit:AU0                                                              ; addressing_unit ; work         ;
+;          |AU_MUX:mux0|                       ; 100 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 99 (0)       ; 0 (0)             ; 1 (0)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|AU_MUX:mux0                                                  ; AU_MUX          ; work         ;
+;             |lpm_mux:LPM_MUX_component|      ; 100 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 99 (0)       ; 0 (0)             ; 1 (0)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|AU_MUX:mux0|lpm_mux:LPM_MUX_component                        ; lpm_mux         ; work         ;
+;                |mux_g9e:auto_generated|      ; 100 (100)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 99 (99)      ; 0 (0)             ; 1 (1)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|AU_MUX:mux0|lpm_mux:LPM_MUX_component|mux_g9e:auto_generated ; mux_g9e         ; work         ;
+;          |LOD:LOD0|                          ; 160 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 119 (0)      ; 0 (0)             ; 41 (0)           ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0                                                     ; LOD             ; work         ;
 ;             |LOD_2b:\gen_LOD:10:detector|    ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (2)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:10:detector                         ; LOD_2b          ; work         ;
 ;             |LOD_2b:\gen_LOD:12:detector|    ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:12:detector                         ; LOD_2b          ; work         ;
 ;             |LOD_2b:\gen_LOD:13:detector|    ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:13:detector                         ; LOD_2b          ; work         ;
@@ -1401,14 +1413,14 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;             |LOD_2b:\gen_LOD:20:detector|    ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:20:detector                         ; LOD_2b          ; work         ;
 ;             |LOD_2b:\gen_LOD:21:detector|    ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:21:detector                         ; LOD_2b          ; work         ;
 ;             |LOD_2b:\gen_LOD:22:detector|    ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:22:detector                         ; LOD_2b          ; work         ;
-;             |LOD_2b:\gen_LOD:25:detector|    ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:25:detector                         ; LOD_2b          ; work         ;
-;             |LOD_2b:\gen_LOD:26:detector|    ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:26:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:25:detector|    ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:25:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:26:detector|    ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:26:detector                         ; LOD_2b          ; work         ;
 ;             |LOD_2b:\gen_LOD:28:detector|    ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:28:detector                         ; LOD_2b          ; work         ;
-;             |LOD_2b:\gen_LOD:29:detector|    ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:29:detector                         ; LOD_2b          ; work         ;
+;             |LOD_2b:\gen_LOD:29:detector|    ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:29:detector                         ; LOD_2b          ; work         ;
 ;             |LOD_2b:\gen_LOD:4:detector|     ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (2)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:4:detector                          ; LOD_2b          ; work         ;
 ;             |LOD_2b:\gen_LOD:6:detector|     ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:6:detector                          ; LOD_2b          ; work         ;
 ;             |LOD_2b:\gen_LOD:8:detector|     ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|LOD_2b:\gen_LOD:8:detector                          ; LOD_2b          ; work         ;
-;             |ones_counter:oc0|               ; 127 (127)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 109 (109)    ; 0 (0)             ; 18 (18)          ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|ones_counter:oc0                                    ; ones_counter    ; work         ;
+;             |ones_counter:oc0|               ; 127 (127)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 103 (103)    ; 0 (0)             ; 24 (24)          ; |Box_Muller|f_block:f1|addressing_unit:AU0|LOD:LOD0|ones_counter:oc0                                    ; ones_counter    ; work         ;
 ;       |f_a_lut:LUT_a|                        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Box_Muller|f_block:f1|f_a_lut:LUT_a                                                                    ; f_a_lut         ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Box_Muller|f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component                                    ; altsyncram      ; work         ;
 ;             |altsyncram_5ar3:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Box_Muller|f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_5ar3:auto_generated     ; altsyncram_5ar3 ; work         ;
@@ -1421,7 +1433,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;       |mult_36t:auto_generated|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 2            ; 0       ; 1         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Box_Muller|lpm_mult:Mult0|mult_36t:auto_generated                                                      ; mult_36t        ; work         ;
 ;    |lpm_mult:Mult1|                          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 2            ; 0       ; 1         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Box_Muller|lpm_mult:Mult1                                                                              ; lpm_mult        ; work         ;
 ;       |mult_36t:auto_generated|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 2            ; 0       ; 1         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Box_Muller|lpm_mult:Mult1|mult_36t:auto_generated                                                      ; mult_36t        ; work         ;
-;    |sincos:sc|                               ; 78 (78)     ; 38 (38)                   ; 0 (0)         ; 16384       ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 37 (37)      ; 14 (14)           ; 27 (27)          ; |Box_Muller|sincos:sc                                                                                   ; sincos          ; work         ;
+;    |sincos:sc|                               ; 76 (76)     ; 38 (38)                   ; 0 (0)         ; 16384       ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 38 (38)      ; 7 (7)             ; 31 (31)          ; |Box_Muller|sincos:sc                                                                                   ; sincos          ; work         ;
 ;       |sincosLUT:c1|                         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 16384       ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Box_Muller|sincos:sc|sincosLUT:c1                                                                      ; sincosLUT       ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 16384       ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Box_Muller|sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component                                      ; altsyncram      ; work         ;
 ;             |altsyncram_egq3:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 16384       ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Box_Muller|sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated       ; altsyncram_egq3 ; work         ;
@@ -1478,108 +1490,92 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------+-------------------+---------+
 ; greset                                                                                                      ;                   ;         ;
 ; gclk                                                                                                        ;                   ;         ;
-;      - U2[0]~reg0                                                                                           ; 1                 ; 0       ;
-;      - U2[1]~reg0                                                                                           ; 1                 ; 0       ;
-;      - U2[2]~reg0                                                                                           ; 1                 ; 0       ;
-;      - U2[3]~reg0                                                                                           ; 1                 ; 0       ;
-;      - U2[4]~reg0                                                                                           ; 1                 ; 0       ;
-;      - U2[5]~reg0                                                                                           ; 1                 ; 0       ;
-;      - U2[6]~reg0                                                                                           ; 1                 ; 0       ;
-;      - U2[7]~reg0                                                                                           ; 0                 ; 0       ;
-;      - U2[8]~reg0                                                                                           ; 0                 ; 0       ;
-;      - U2[9]~reg0                                                                                           ; 0                 ; 0       ;
-;      - U2[10]~reg0                                                                                          ; 0                 ; 0       ;
-;      - U2[11]~reg0                                                                                          ; 0                 ; 0       ;
-;      - U2[12]~reg0                                                                                          ; 0                 ; 0       ;
-;      - U2[13]~reg0                                                                                          ; 0                 ; 0       ;
-;      - U2[14]~reg0                                                                                          ; 0                 ; 0       ;
-;      - U2[15]~reg0                                                                                          ; 0                 ; 0       ;
-;      - f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_5ar3:auto_generated|ram_block1a0 ; 0                 ; 0       ;
-;      - sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ram_block1a0   ; 0                 ; 0       ;
+;      - f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_5ar3:auto_generated|ram_block1a0 ; 1                 ; 0       ;
+;      - sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ram_block1a0   ; 1                 ; 0       ;
 ;      - sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ram_block1a9   ; 1                 ; 0       ;
 ;      - f_block:f1|U_tilde[0]                                                                                ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[15]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[14]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|shift_num[0]                                                                              ; 0                 ; 0       ;
-;      - f_block:f1|U_tilde[13]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[12]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|shift_num[1]                                                                              ; 0                 ; 0       ;
-;      - f_block:f1|U_tilde[11]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[10]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[9]                                                                                ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[8]                                                                                ; 1                 ; 0       ;
-;      - f_block:f1|shift_num[2]                                                                              ; 0                 ; 0       ;
-;      - f_block:f1|shift_num[4]                                                                              ; 0                 ; 0       ;
-;      - f_block:f1|U_tilde[23]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[22]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[21]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[20]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[19]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[18]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[17]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[16]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|shift_num[3]                                                                              ; 0                 ; 0       ;
-;      - f_block:f1|U_tilde[30]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[29]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[28]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[31]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[27]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[26]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[25]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[24]                                                                               ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[7]                                                                                ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[6]                                                                                ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[5]                                                                                ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[4]                                                                                ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[3]                                                                                ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[2]                                                                                ; 1                 ; 0       ;
-;      - f_block:f1|U_tilde[1]                                                                                ; 1                 ; 0       ;
-;      - f_block:f1|shift_num[5]                                                                              ; 0                 ; 0       ;
-;      - sincos:sc|nc                                                                                         ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[15]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[14]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|shift_num[0]                                                                              ; 1                 ; 0       ;
+;      - f_block:f1|U_tilde[13]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[12]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|shift_num[1]                                                                              ; 1                 ; 0       ;
+;      - f_block:f1|U_tilde[11]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[10]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[9]                                                                                ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[8]                                                                                ; 0                 ; 0       ;
+;      - f_block:f1|shift_num[2]                                                                              ; 1                 ; 0       ;
+;      - f_block:f1|shift_num[4]                                                                              ; 1                 ; 0       ;
+;      - f_block:f1|U_tilde[23]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[22]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[21]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[20]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[19]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[18]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[17]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[16]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|shift_num[3]                                                                              ; 1                 ; 0       ;
+;      - f_block:f1|U_tilde[30]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[29]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[28]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[31]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[27]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[26]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[25]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[24]                                                                               ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[7]                                                                                ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[6]                                                                                ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[5]                                                                                ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[4]                                                                                ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[3]                                                                                ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[2]                                                                                ; 0                 ; 0       ;
+;      - f_block:f1|U_tilde[1]                                                                                ; 0                 ; 0       ;
+;      - f_block:f1|shift_num[5]                                                                              ; 1                 ; 0       ;
+;      - sincos:sc|nc                                                                                         ; 1                 ; 0       ;
 ;      - sincos:sc|mc                                                                                         ; 0                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[28]                                                                      ; 1                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[29]                                                                      ; 1                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[30]                                                                      ; 1                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[31]                                                                      ; 1                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[26]                                                                      ; 1                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[27]                                                                      ; 1                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[28]                                                                      ; 0                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[29]                                                                      ; 0                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[30]                                                                      ; 0                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[31]                                                                      ; 0                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[26]                                                                      ; 0                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[27]                                                                      ; 0                 ; 0       ;
 ;      - LFSR_33:LF33|shift_register[20]                                                                      ; 0                 ; 0       ;
 ;      - LFSR_33:LF33|shift_register[21]                                                                      ; 0                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[24]                                                                      ; 1                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[25]                                                                      ; 1                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[22]                                                                      ; 1                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[23]                                                                      ; 1                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[24]                                                                      ; 0                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[25]                                                                      ; 0                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[22]                                                                      ; 0                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[23]                                                                      ; 0                 ; 0       ;
 ;      - LFSR_33:LF33|shift_register[18]                                                                      ; 0                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[19]                                                                      ; 1                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[19]                                                                      ; 0                 ; 0       ;
 ;      - LFSR_33:LF33|shift_register[12]                                                                      ; 0                 ; 0       ;
 ;      - LFSR_33:LF33|shift_register[13]                                                                      ; 1                 ; 0       ;
 ;      - LFSR_33:LF33|shift_register[16]                                                                      ; 0                 ; 0       ;
 ;      - LFSR_33:LF33|shift_register[17]                                                                      ; 1                 ; 0       ;
 ;      - LFSR_33:LF33|shift_register[14]                                                                      ; 1                 ; 0       ;
 ;      - LFSR_33:LF33|shift_register[15]                                                                      ; 0                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[10]                                                                      ; 0                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[10]                                                                      ; 1                 ; 0       ;
 ;      - LFSR_33:LF33|shift_register[11]                                                                      ; 0                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[2]                                                                       ; 1                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[3]                                                                       ; 1                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[4]                                                                       ; 1                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[2]                                                                       ; 0                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[3]                                                                       ; 0                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[4]                                                                       ; 0                 ; 0       ;
 ;      - LFSR_33:LF33|shift_register[8]                                                                       ; 0                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[6]                                                                       ; 1                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[6]                                                                       ; 0                 ; 0       ;
 ;      - LFSR_33:LF33|shift_register[7]                                                                       ; 0                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[9]                                                                       ; 0                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[1]                                                                       ; 1                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[9]                                                                       ; 1                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[1]                                                                       ; 0                 ; 0       ;
 ;      - LFSR_33:LF33|shift_register[0]                                                                       ; 1                 ; 0       ;
-;      - sincos:sc|nb                                                                                         ; 1                 ; 0       ;
-;      - sincos:sc|dSinpLUT[0]                                                                                ; 1                 ; 0       ;
+;      - sincos:sc|nb                                                                                         ; 0                 ; 0       ;
+;      - sincos:sc|dSinpLUT[0]                                                                                ; 0                 ; 0       ;
 ;      - sincos:sc|dSinpLUT[1]                                                                                ; 0                 ; 0       ;
 ;      - sincos:sc|dSinpLUT[2]                                                                                ; 0                 ; 0       ;
 ;      - sincos:sc|dSinpLUT[3]                                                                                ; 0                 ; 0       ;
-;      - sincos:sc|dSinpLUT[4]                                                                                ; 0                 ; 0       ;
-;      - sincos:sc|dSinpLUT[5]                                                                                ; 0                 ; 0       ;
+;      - sincos:sc|dSinpLUT[4]                                                                                ; 1                 ; 0       ;
+;      - sincos:sc|dSinpLUT[5]                                                                                ; 1                 ; 0       ;
 ;      - sincos:sc|dSinpLUT[6]                                                                                ; 0                 ; 0       ;
 ;      - sincos:sc|dSinpLUT[7]                                                                                ; 0                 ; 0       ;
-;      - sincos:sc|dSinpLUT[8]                                                                                ; 0                 ; 0       ;
+;      - sincos:sc|dSinpLUT[8]                                                                                ; 1                 ; 0       ;
 ;      - sincos:sc|dSinpLUT[9]                                                                                ; 0                 ; 0       ;
-;      - sincos:sc|dCospLUT[0]                                                                                ; 1                 ; 0       ;
+;      - sincos:sc|dCospLUT[0]                                                                                ; 0                 ; 0       ;
 ;      - sincos:sc|dCospLUT[1]                                                                                ; 0                 ; 0       ;
 ;      - sincos:sc|dCospLUT[2]                                                                                ; 0                 ; 0       ;
 ;      - sincos:sc|dCospLUT[3]                                                                                ; 0                 ; 0       ;
@@ -1587,37 +1583,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - sincos:sc|dCospLUT[5]                                                                                ; 0                 ; 0       ;
 ;      - sincos:sc|dCospLUT[6]                                                                                ; 0                 ; 0       ;
 ;      - sincos:sc|dCospLUT[7]                                                                                ; 0                 ; 0       ;
-;      - sincos:sc|dCospLUT[8]                                                                                ; 0                 ; 0       ;
+;      - sincos:sc|dCospLUT[8]                                                                                ; 1                 ; 0       ;
 ;      - sincos:sc|dCospLUT[9]                                                                                ; 0                 ; 0       ;
-;      - sincos:sc|mb                                                                                         ; 1                 ; 0       ;
-;      - LFSR_33:LF33|shift_register[32]                                                                      ; 1                 ; 0       ;
-;      - sincos:sc|na                                                                                         ; 1                 ; 0       ;
+;      - sincos:sc|mb                                                                                         ; 0                 ; 0       ;
+;      - LFSR_33:LF33|shift_register[32]                                                                      ; 0                 ; 0       ;
+;      - sincos:sc|na                                                                                         ; 0                 ; 0       ;
 ;      - sincos:sc|m                                                                                          ; 0                 ; 0       ;
 ;      - sincos:sc|dsc[0]                                                                                     ; 0                 ; 0       ;
-;      - sincos:sc|dsc[1]                                                                                     ; 0                 ; 0       ;
-;      - sincos:sc|dsc[2]                                                                                     ; 0                 ; 0       ;
-;      - sincos:sc|dsc[3]                                                                                     ; 0                 ; 0       ;
+;      - sincos:sc|dsc[1]                                                                                     ; 1                 ; 0       ;
+;      - sincos:sc|dsc[2]                                                                                     ; 1                 ; 0       ;
+;      - sincos:sc|dsc[3]                                                                                     ; 1                 ; 0       ;
 ;      - sincos:sc|dsc[4]                                                                                     ; 0                 ; 0       ;
-;      - sincos:sc|dsc[5]                                                                                     ; 1                 ; 0       ;
+;      - sincos:sc|dsc[5]                                                                                     ; 0                 ; 0       ;
 ;      - sincos:sc|dsc[6]                                                                                     ; 0                 ; 0       ;
-;      - sincos:sc|dsc[7]                                                                                     ; 0                 ; 0       ;
-;      - sincos:sc|dsc[8]                                                                                     ; 0                 ; 0       ;
+;      - sincos:sc|dsc[7]                                                                                     ; 1                 ; 0       ;
+;      - sincos:sc|dsc[8]                                                                                     ; 1                 ; 0       ;
 ;      - sincos:sc|dsc[9]                                                                                     ; 0                 ; 0       ;
-;      - sincos:sc|ma                                                                                         ; 1                 ; 0       ;
-;      - sincos:sc|n                                                                                          ; 1                 ; 0       ;
+;      - sincos:sc|ma                                                                                         ; 0                 ; 0       ;
+;      - sincos:sc|n                                                                                          ; 0                 ; 0       ;
 ;      - LFSR_16:LF16|shift_register[4]                                                                       ; 0                 ; 0       ;
-;      - LFSR_16:LF16|shift_register[5]                                                                       ; 0                 ; 0       ;
-;      - LFSR_16:LF16|shift_register[6]                                                                       ; 0                 ; 0       ;
-;      - LFSR_16:LF16|shift_register[7]                                                                       ; 0                 ; 0       ;
+;      - LFSR_16:LF16|shift_register[5]                                                                       ; 1                 ; 0       ;
+;      - LFSR_16:LF16|shift_register[6]                                                                       ; 1                 ; 0       ;
+;      - LFSR_16:LF16|shift_register[7]                                                                       ; 1                 ; 0       ;
 ;      - LFSR_16:LF16|shift_register[8]                                                                       ; 0                 ; 0       ;
 ;      - LFSR_16:LF16|shift_register[3]                                                                       ; 0                 ; 0       ;
 ;      - LFSR_16:LF16|shift_register[0]                                                                       ; 0                 ; 0       ;
-;      - LFSR_16:LF16|shift_register[1]                                                                       ; 0                 ; 0       ;
-;      - LFSR_16:LF16|shift_register[2]                                                                       ; 0                 ; 0       ;
-;      - f_block:f1|lpm_mult:Mult0|mult_66t:auto_generated|mac_mult1                                          ; 0                 ; 0       ;
-;      - lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1                                                     ; 0                 ; 0       ;
-;      - lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                                      ; 0                 ; 0       ;
-;      - lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                                     ; 0                 ; 0       ;
+;      - LFSR_16:LF16|shift_register[1]                                                                       ; 1                 ; 0       ;
+;      - LFSR_16:LF16|shift_register[2]                                                                       ; 1                 ; 0       ;
+;      - f_block:f1|lpm_mult:Mult0|mult_66t:auto_generated|mac_mult1                                          ; 1                 ; 0       ;
+;      - lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                                                      ; 1                 ; 0       ;
+;      - lpm_mult:Mult1|mult_36t:auto_generated|mac_out2                                                      ; 1                 ; 0       ;
+;      - lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1                                                     ; 1                 ; 0       ;
+;      - lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1                                                     ; 1                 ; 0       ;
 +-------------------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -1626,8 +1623,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-----------------+---------+------------+--------+----------------------+------------------+---------------------------+
 ; Name                            ; Location        ; Fan-Out ; Usage      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------+-----------------+---------+------------+--------+----------------------+------------------+---------------------------+
-; LFSR_33:LF33|shift_register[31] ; FF_X111_Y40_N25 ; 57      ; Sync. load ; no     ; --                   ; --               ; --                        ;
-; gclk                            ; PIN_M23         ; 140     ; Clock      ; no     ; --                   ; --               ; --                        ;
+; LFSR_33:LF33|shift_register[31] ; FF_X113_Y40_N13 ; 57      ; Sync. load ; no     ; --                   ; --               ; --                        ;
+; gclk                            ; PIN_M23         ; 125     ; Clock      ; no     ; --                   ; --               ; --                        ;
 +---------------------------------+-----------------+---------+------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1636,9 +1633,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-------------+----------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 ; Name                                                                                               ; Type ; Mode           ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF         ; Location                         ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
 +----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-------------+----------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_5ar3:auto_generated|ALTSYNCRAM ; AUTO ; ROM            ; Single Clock ; 256          ; 16           ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 4096  ; 256                         ; 16                          ; --                          ; --                          ; 4096                ; 1    ; a_coeff.mif ; M9K_X104_Y39_N0                  ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
-; f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_6ar3:auto_generated|ALTSYNCRAM ; AUTO ; ROM            ; Single Clock ; 256          ; 16           ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 4096  ; 256                         ; 16                          ; --                          ; --                          ; 4096                ; 1    ; b_coeff.mif ; M9K_X104_Y39_N0                  ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
-; sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ALTSYNCRAM   ; AUTO ; True Dual Port ; Single Clock ; 1024         ; 16           ; 1024         ; 16           ; yes                    ; yes                     ; yes                    ; yes                     ; 16384 ; 1024                        ; 16                          ; 1024                        ; 16                          ; 16384               ; 2    ; sin_cos.mif ; M9K_X104_Y41_N0, M9K_X104_Y40_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; f_block:f1|f_a_lut:LUT_a|altsyncram:altsyncram_component|altsyncram_5ar3:auto_generated|ALTSYNCRAM ; AUTO ; ROM            ; Single Clock ; 256          ; 16           ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 4096  ; 256                         ; 16                          ; --                          ; --                          ; 4096                ; 1    ; a_coeff.mif ; M9K_X104_Y40_N0                  ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; f_block:f1|f_b_lut:LUT_b|altsyncram:altsyncram_component|altsyncram_6ar3:auto_generated|ALTSYNCRAM ; AUTO ; ROM            ; Single Clock ; 256          ; 16           ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 4096  ; 256                         ; 16                          ; --                          ; --                          ; 4096                ; 1    ; b_coeff.mif ; M9K_X104_Y40_N0                  ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ALTSYNCRAM   ; AUTO ; True Dual Port ; Single Clock ; 1024         ; 16           ; 1024         ; 16           ; yes                    ; yes                     ; yes                    ; yes                     ; 16384 ; 1024                        ; 16                          ; 1024                        ; 16                          ; 16384               ; 2    ; sin_cos.mif ; M9K_X104_Y36_N0, M9K_X104_Y39_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 +----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-------------+----------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1881,12 +1878,12 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +----------------------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 ; Name                                                           ; Mode                       ; Location           ; Sign Representation ; Has Input Shift Register Chain ; Data A Input Register ; Data B Input Register ; Pipeline Register ; Output Register ;
 +----------------------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
-; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                ; Simple Multiplier (18-bit) ; DSPOUT_X93_Y41_N2  ;                     ; No                             ;                       ;                       ;                   ; yes             ;
-;    lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ;                            ; DSPMULT_X93_Y41_N0 ; Signed              ;                                ; yes                   ; yes                   ; no                ;                 ;
-; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2                ; Simple Multiplier (18-bit) ; DSPOUT_X93_Y40_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ;                            ; DSPMULT_X93_Y40_N0 ; Signed              ;                                ; yes                   ; yes                   ; no                ;                 ;
-; f_block:f1|lpm_mult:Mult0|mult_66t:auto_generated|mac_out2     ; Simple Multiplier (18-bit) ; DSPOUT_X93_Y39_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    f_block:f1|lpm_mult:Mult0|mult_66t:auto_generated|mac_mult1 ;                            ; DSPMULT_X93_Y39_N0 ; Signed              ;                                ; yes                   ; no                    ; no                ;                 ;
+; lpm_mult:Mult0|mult_36t:auto_generated|mac_out2                ; Simple Multiplier (18-bit) ; DSPOUT_X93_Y39_N2  ;                     ; No                             ;                       ;                       ;                   ; yes             ;
+;    lpm_mult:Mult0|mult_36t:auto_generated|mac_mult1            ;                            ; DSPMULT_X93_Y39_N0 ; Signed              ;                                ; yes                   ; yes                   ; no                ;                 ;
+; lpm_mult:Mult1|mult_36t:auto_generated|mac_out2                ; Simple Multiplier (18-bit) ; DSPOUT_X93_Y36_N2  ;                     ; No                             ;                       ;                       ;                   ; yes             ;
+;    lpm_mult:Mult1|mult_36t:auto_generated|mac_mult1            ;                            ; DSPMULT_X93_Y36_N0 ; Signed              ;                                ; yes                   ; yes                   ; no                ;                 ;
+; f_block:f1|lpm_mult:Mult0|mult_66t:auto_generated|mac_out2     ; Simple Multiplier (18-bit) ; DSPOUT_X93_Y40_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    f_block:f1|lpm_mult:Mult0|mult_66t:auto_generated|mac_mult1 ;                            ; DSPMULT_X93_Y40_N0 ; Signed              ;                                ; yes                   ; no                    ; no                ;                 ;
 +----------------------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 
 
@@ -1895,47 +1892,47 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 911 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 48 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 479 / 209,544 ( < 1 % ) ;
-; Direct links          ; 129 / 342,891 ( < 1 % ) ;
+; Block interconnects   ; 882 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 53 / 10,120 ( < 1 % )   ;
+; C4 interconnects      ; 438 / 209,544 ( < 1 % ) ;
+; Direct links          ; 114 / 342,891 ( < 1 % ) ;
 ; Global clocks         ; 0 / 20 ( 0 % )          ;
-; Local interconnects   ; 283 / 119,088 ( < 1 % ) ;
-; R24 interconnects     ; 42 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 948 / 289,782 ( < 1 % ) ;
+; Local interconnects   ; 264 / 119,088 ( < 1 % ) ;
+; R24 interconnects     ; 50 / 9,963 ( < 1 % )    ;
+; R4 interconnects      ; 936 / 289,782 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.20) ; Number of LABs  (Total = 46) ;
+; Number of Logic Elements  (Average = 12.74) ; Number of LABs  (Total = 42) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 5                            ;
-; 2                                           ; 2                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 0                            ;
+; 1                                           ; 3                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 2                            ;
+; 4                                           ; 2                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
 ; 7                                           ; 1                            ;
-; 8                                           ; 4                            ;
-; 9                                           ; 2                            ;
-; 10                                          ; 1                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 0                            ;
 ; 11                                          ; 1                            ;
-; 12                                          ; 0                            ;
+; 12                                          ; 2                            ;
 ; 13                                          ; 0                            ;
-; 14                                          ; 2                            ;
-; 15                                          ; 2                            ;
-; 16                                          ; 26                           ;
+; 14                                          ; 1                            ;
+; 15                                          ; 3                            ;
+; 16                                          ; 25                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.35) ; Number of LABs  (Total = 46) ;
+; LAB-wide Signals  (Average = 0.40) ; Number of LABs  (Total = 42) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 14                           ;
+; 1 Clock                            ; 15                           ;
 ; 1 Sync. load                       ; 2                            ;
 +------------------------------------+------------------------------+
 
@@ -1943,38 +1940,38 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 14.96) ; Number of LABs  (Total = 46) ;
+; Number of Signals Sourced  (Average = 15.48) ; Number of LABs  (Total = 42) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 5                            ;
-; 2                                            ; 1                            ;
+; 1                                            ; 3                            ;
+; 2                                            ; 0                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 1                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 1                            ;
-; 9                                            ; 3                            ;
+; 5                                            ; 2                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 1                            ;
 ; 10                                           ; 0                            ;
-; 11                                           ; 2                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 4                            ;
-; 15                                           ; 2                            ;
-; 16                                           ; 17                           ;
+; 11                                           ; 0                            ;
+; 12                                           ; 3                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 2                            ;
+; 15                                           ; 3                            ;
+; 16                                           ; 15                           ;
 ; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
+; 20                                           ; 2                            ;
 ; 21                                           ; 0                            ;
 ; 22                                           ; 1                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 1                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 0                            ;
 ; 27                                           ; 1                            ;
-; 28                                           ; 2                            ;
-; 29                                           ; 0                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 1                            ;
 ; 30                                           ; 0                            ;
 ; 31                                           ; 1                            ;
 ; 32                                           ; 2                            ;
@@ -1984,71 +1981,71 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.67) ; Number of LABs  (Total = 46) ;
+; Number of Signals Sourced Out  (Average = 9.19) ; Number of LABs  (Total = 42) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 5                            ;
-; 2                                               ; 3                            ;
-; 3                                               ; 2                            ;
-; 4                                               ; 3                            ;
+; 2                                               ; 1                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 4                            ;
 ; 5                                               ; 3                            ;
-; 6                                               ; 4                            ;
-; 7                                               ; 3                            ;
-; 8                                               ; 3                            ;
-; 9                                               ; 3                            ;
-; 10                                              ; 3                            ;
+; 6                                               ; 2                            ;
+; 7                                               ; 2                            ;
+; 8                                               ; 1                            ;
+; 9                                               ; 7                            ;
+; 10                                              ; 1                            ;
 ; 11                                              ; 2                            ;
-; 12                                              ; 1                            ;
+; 12                                              ; 2                            ;
 ; 13                                              ; 1                            ;
-; 14                                              ; 1                            ;
+; 14                                              ; 0                            ;
 ; 15                                              ; 0                            ;
 ; 16                                              ; 5                            ;
-; 17                                              ; 0                            ;
-; 18                                              ; 1                            ;
+; 17                                              ; 1                            ;
+; 18                                              ; 2                            ;
 ; 19                                              ; 0                            ;
 ; 20                                              ; 0                            ;
-; 21                                              ; 1                            ;
-; 22                                              ; 0                            ;
+; 21                                              ; 0                            ;
+; 22                                              ; 1                            ;
 ; 23                                              ; 0                            ;
 ; 24                                              ; 1                            ;
-; 25                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 14.22) ; Number of LABs  (Total = 46) ;
+; Number of Distinct Inputs  (Average = 14.74) ; Number of LABs  (Total = 42) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 2                            ;
-; 2                                            ; 0                            ;
-; 3                                            ; 3                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 3                            ;
+; 3                                            ; 1                            ;
 ; 4                                            ; 1                            ;
 ; 5                                            ; 1                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 4                            ;
-; 9                                            ; 2                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 3                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 5                            ;
 ; 13                                           ; 2                            ;
-; 14                                           ; 1                            ;
+; 14                                           ; 0                            ;
 ; 15                                           ; 2                            ;
-; 16                                           ; 4                            ;
-; 17                                           ; 3                            ;
-; 18                                           ; 3                            ;
-; 19                                           ; 6                            ;
-; 20                                           ; 2                            ;
+; 16                                           ; 5                            ;
+; 17                                           ; 4                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 4                            ;
+; 20                                           ; 3                            ;
 ; 21                                           ; 0                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 3                            ;
+; 22                                           ; 2                            ;
+; 23                                           ; 2                            ;
 ; 24                                           ; 0                            ;
-; 25                                           ; 1                            ;
+; 25                                           ; 0                            ;
 ; 26                                           ; 0                            ;
 ; 27                                           ; 0                            ;
-; 28                                           ; 1                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2191,27 +2188,28 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; I/O             ; gclk                 ; 3.8               ;
+; I/O             ; gclk                 ; 3.0               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+----------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                        ;
-+-----------------+--------------------------------+-------------------+
-; Source Register ; Destination Register           ; Delay Added in ns ;
-+-----------------+--------------------------------+-------------------+
-; gclk            ; LFSR_16:LF16|shift_register[8] ; 0.676             ;
-+-----------------+--------------------------------+-------------------+
-Note: This table only shows the top 1 path(s) that have the largest delay added for hold.
++---------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                         ;
++---------------------------------+---------------------------------+-------------------+
+; Source Register                 ; Destination Register            ; Delay Added in ns ;
++---------------------------------+---------------------------------+-------------------+
+; gclk                            ; LFSR_16:LF16|shift_register[6]  ; 0.569             ;
+; LFSR_33:LF33|shift_register[12] ; LFSR_33:LF33|shift_register[17] ; 0.047             ;
++---------------------------------+---------------------------------+-------------------+
+Note: This table only shows the top 2 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device EP4CE115F29C7 for design "Box_Muller"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -2245,38 +2243,38 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176218): Packed 80 registers into blocks of type Embedded multiplier block
-    Extra Info (176218): Packed 16 registers into blocks of type Embedded multiplier output
+    Extra Info (176218): Packed 32 registers into blocks of type Embedded multiplier output
     Extra Info (176220): Created 16 register duplicates
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:14
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:06
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 6% of the available device resources in the region that extends from location X104_Y37 to location X115_Y48
+    Info (170196): Router estimated peak interconnect usage is 5% of the available device resources in the region that extends from location X104_Y37 to location X115_Y48
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
-Info (11888): Total time spent on timing analysis during the Fitter is 1.02 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (11888): Total time spent on timing analysis during the Fitter is 0.50 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
-Info (144001): Generated suppressed messages file C:/Users/razze/Desktop/P8_code/Box_Muller/VHDL/output_files/Box_Muller.fit.smsg
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (144001): Generated suppressed messages file C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 6025 megabytes
-    Info: Processing ended: Thu May 05 11:24:32 2022
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:01:04
+    Info: Peak virtual memory: 5706 megabytes
+    Info: Processing ended: Sun May 22 21:26:11 2022
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/razze/Desktop/P8_code/Box_Muller/VHDL/output_files/Box_Muller.fit.smsg.
+The suppressed messages can be found in C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.fit.smsg.
 
 
