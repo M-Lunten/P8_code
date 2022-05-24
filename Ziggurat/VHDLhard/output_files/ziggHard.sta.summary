@@ -3,75 +3,75 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -6.856
-TNS   : -1081.955
+Slack : -7.961
+TNS   : -1258.877
 
 Type  : Slow 1200mV 85C Model Setup 'ZHcontrol:c2|mux7_9[0]'
-Slack : -5.114
-TNS   : -66.835
+Slack : -6.632
+TNS   : -85.482
 
 Type  : Slow 1200mV 85C Model Hold 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.195
-TNS   : 0.000
+Slack : -0.389
+TNS   : -0.389
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.392
+Slack : 0.404
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -385.820
+TNS   : -363.975
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.401
+Slack : 0.428
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -6.160
-TNS   : -977.754
+Slack : -7.187
+TNS   : -1140.408
 
 Type  : Slow 1200mV 0C Model Setup 'ZHcontrol:c2|mux7_9[0]'
-Slack : -4.757
-TNS   : -62.002
+Slack : -6.123
+TNS   : -79.252
 
 Type  : Slow 1200mV 0C Model Hold 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.305
-TNS   : 0.000
+Slack : -0.315
+TNS   : -0.315
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.351
+Slack : 0.356
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -384.940
+TNS   : -363.095
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.438
+Slack : 0.410
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -3.509
-TNS   : -464.315
+Slack : -4.085
+TNS   : -544.263
 
 Type  : Fast 1200mV 0C Model Setup 'ZHcontrol:c2|mux7_9[0]'
-Slack : -2.247
-TNS   : -28.073
-
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.178
-TNS   : 0.000
+Slack : -3.066
+TNS   : -38.402
 
 Type  : Fast 1200mV 0C Model Hold 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.189
+Slack : -0.224
+TNS   : -0.224
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.180
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -303.548
+TNS   : -283.155
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ZHcontrol:c2|mux7_9[0]'
-Slack : 0.300
+Slack : 0.281
 TNS   : 0.000
 
 ------------------------------------------------------------

@@ -7,8 +7,8 @@ port(
 	iclock : in std_logic;
 	muxctrl : in std_logic_vector(1 downto 0);
 	V4ctrl : in std_logic;
-	U1AinV,xusqinV : in std_logic_vector(15 downto 0);
-	U1A_xusqoutV: out std_logic_vector(15 downto 0)
+	U1AinV,Ys1inV : in std_logic_vector(15 downto 0);
+	U1A_Ys1outV: out std_logic_vector(15 downto 0)
 	);
 end V4;
 
@@ -16,7 +16,7 @@ architecture behavioural of V4 is
 
 component mux22 is
 port(
-	U1Ain,xusqin: in std_logic_vector(15 downto 0);
+	U1Ain,Ys1in: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
 	ctrl: in std_logic_vector(1 downto 0)
 	);
@@ -39,7 +39,7 @@ signal regout : std_logic_vector(15 downto 0);
 
 
 begin
-	c1: mux22 port map(U1AinV,xusqinV,muxout,muxctrl);
+	c1: mux22 port map(U1AinV,Ys1inV,muxout,muxctrl);
 	--c2: mux23 port map(U1AoutV,xusqoutV,regout,muxctrl);
 	
 	
@@ -49,7 +49,7 @@ begin
 	begin
 		if rising_edge(iclock) then 
 			if V4ctrl = '1' then 
-				U1A_xusqoutV <= muxout;
+				U1A_Ys1outV <= muxout;
 			end if;
 		
 		end if;

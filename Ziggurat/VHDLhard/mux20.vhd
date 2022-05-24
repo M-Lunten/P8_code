@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity mux20 is
 port(
-	iin,ys1in,fxin: in std_logic_vector(15 downto 0);
+	iin,xusqin,fxin: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
 	ctrl: in std_logic_vector(1 downto 0)
 	);
@@ -12,14 +12,14 @@ end mux20;
 
 architecture bhv of mux20 is
 begin
-	process(ctrl,iin,ys1in,fxin)
+	process(ctrl,iin,xusqin,fxin)
 
 	variable outTemp : std_logic_vector(15 downto 0);
 	begin
 		if ctrl = "01" then
 			outTemp := iin;
 		elsif ctrl = "10" then
-			outTemp := ys1in;
+			outTemp := xusqin;
 		elsif ctrl = "11" then
 			outTemp := fxin;	
 		else

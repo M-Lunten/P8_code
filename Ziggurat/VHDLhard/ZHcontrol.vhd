@@ -11,7 +11,7 @@ entity ZHcontrol is
 	D3ctrl : in std_logic;
 	D4ctrl : in std_logic;
 	D5ctrl : in std_logic;
-	NCTRL : in std_logic;
+	
 	
 	mux1_3 : out std_logic_vector(1 downto 0);
 	mux4_6 : out std_logic_vector(1 downto 0);
@@ -22,7 +22,7 @@ entity ZHcontrol is
 	mux18_19 : out std_logic_vector(1 downto 0) := "00";
 	mux20_21 : out std_logic_vector(1 downto 0) := "00";
 	mux22_23 : out std_logic_vector(1 downto 0);
-	mux_24 : out std_logic;
+	
 	isVal : out std_logic;
 	isOut : out std_logic_vector(20 downto 0);
 	StateOut : out std_logic_vector(3 downto 0);
@@ -37,8 +37,7 @@ end ZHcontrol;
 architecture behavioural of ZHcontrol is 
 	
 	signal State : std_logic_vector(3 downto 0);
-	signal NC : std_logic;
-	signal test : std_logic_vector(1 downto 0);
+
 	
 	
 	component qCounter is
@@ -82,16 +81,14 @@ begin
 					mux18_19 <= "01";-- u1 assign
 					mux20_21 <= "01";-- i assign
 					mux7_9 <= "01"; -- xi+1 calc and assign
-					--isVal <= '0';
-					NC <= NCTRL;
+					
+					
 				
 				when "0010" => --2
 					
 					
 				
-					--mux16_17 <= "01"; --xi used
-					--mux18_19 <= "01";-- u1 used
-					--mux20_21 <= "01";-- i used
+					
 					mux22_23 <= "01"; --U1A assigned
 					
 					mux1_3 <= "01"; -- calculating U1A
@@ -102,42 +99,27 @@ begin
 					iterOut <= std_logic_vector(itercount);
 					
 				when "0011" =>--3
-					--mux18_19 <= "01";-- u1 used
-					--mux22_23 <= "01"; --U1A maintained
 					
-					--mux10_12 <= "00";
 					
 					mux13_15 <= "10"; -- calculating D2
 					mux18_19 <= "01";-- u1 used
-					--isVal <= '0';
+					
 					
 				when "0100" =>--4
 					
-					--isVal <= '1' and D2ctrl;
-					--mux16_17 <= "10"; --write to out
-					--mux22_23 <= "01"; --U1A maintained
-					--mux18_19 <= "01";-- u1 maintained
 					
-					--mux_24 <= NC;
 					
 				when "0101" =>--5
-					--mux18_19 <= "01";-- u1 maintained
-					--mux22_23 <= "01"; --U1A used
-					--isVal <= '0';
+					
 					mux10_12 <= "10"; -- calculating D4
 					
 				when "0110" =>--6
 					
-					--isVal <= '1' and D4ctrl;
-					--mux16_17 <= "10"; --write to out
-					--mux18_19 <= "01";-- u1 maintained
 					
-					--mux_24 <= NC;
 					
 				when "0111" =>--7
 					
-					--isVal <= '0';
-					--mux18_19 <= "01";-- u1 used
+					
 					mux20_21 <= "10"; -- ys1 assigned
 					mux22_23 <= "10"; -- xusq assigned
 					
@@ -147,19 +129,17 @@ begin
 				when "1000" =>--8
 					
 					
-					--isVal <= '0';
+					
 					mux16_17 <= "11"; -- Y assigned
 					mux18_19 <= "10"; -- fxs1 assigned
-					--mux20_21 <= "10"; -- ys1 maintained
-					--mux22_23 <= "10"; -- xusq maintained
+					
 					
 					mux4_6 <= "10"; -- fxs1 calculated
 					mux7_9 <= "10"; -- y calculated
 					
 				when "1001" =>--9
 					
-					--isVal <= '0';
-					--mux16_17 <= "11"; -- Y maintained
+					
 					mux18_19 <= "10"; -- fxs1 used
 					mux20_21 <= "11"; -- fx assigned
 					
@@ -168,15 +148,12 @@ begin
 				when "1010" =>--10
 					mux16_17 <= "11"; -- Y maintained
 					mux20_21 <= "11"; -- fx maintained
-					--isVal <= '0';
+					
 					mux13_15 <= "11"; -- calculating D5
 					
 				when "1011" =>--11
 					
-					--mux16_17 <= "10"; --write to out
-					--isVal <= '1' and D5ctrl;
 					
-					--mux_24 <= NC;
 				when others => 
 					
 			end case;

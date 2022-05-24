@@ -29,7 +29,11 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "Box_Muller")
+<<<<<<< Updated upstream
   (DATE "05/22/2022 21:26:23")
+=======
+  (DATE "05/22/2022 10:06:37")
+>>>>>>> Stashed changes
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition")

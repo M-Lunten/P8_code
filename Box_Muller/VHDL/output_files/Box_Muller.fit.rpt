@@ -1,5 +1,9 @@
 Fitter report for Box_Muller
+<<<<<<< Updated upstream
 Sun May 22 21:26:10 2022
+=======
+Sun May 22 10:06:26 2022
+>>>>>>> Stashed changes
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -73,7 +77,11 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< Updated upstream
 ; Fitter Status                      ; Successful - Sun May 22 21:26:10 2022       ;
+=======
+; Fitter Status                      ; Successful - Sun May 22 10:06:26 2022       ;
+>>>>>>> Stashed changes
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Box_Muller                                  ;
 ; Top-level Entity Name              ; Box_Muller                                  ;
@@ -157,17 +165,30 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
+<<<<<<< Updated upstream
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.01        ;
 ; Maximum used               ; 4           ;
+=======
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.02        ;
+; Maximum used               ; 6           ;
+>>>>>>> Stashed changes
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.5%      ;
 ;     Processor 3            ;   0.4%      ;
 ;     Processor 4            ;   0.4%      ;
+<<<<<<< Updated upstream
+=======
+;     Processor 5            ;   0.4%      ;
+;     Processor 6            ;   0.4%      ;
+>>>>>>> Stashed changes
 +----------------------------+-------------+
 
 
@@ -345,7 +366,11 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
+<<<<<<< Updated upstream
 The pin-out file can be found in C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.pin.
+=======
+The pin-out file can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.pin.
+>>>>>>> Stashed changes
 
 
 +----------------------------------------------------------------------------+
@@ -2209,7 +2234,11 @@ Note: This table only shows the top 2 path(s) that have the largest delay added 
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+<<<<<<< Updated upstream
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+=======
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+>>>>>>> Stashed changes
 Info (119006): Selected device EP4CE115F29C7 for design "Box_Muller"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -2258,23 +2287,40 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+<<<<<<< Updated upstream
 Info (11888): Total time spent on timing analysis during the Fitter is 0.50 seconds.
+=======
+Info (11888): Total time spent on timing analysis during the Fitter is 0.47 seconds.
+>>>>>>> Stashed changes
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+<<<<<<< Updated upstream
 Info (144001): Generated suppressed messages file C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 5706 megabytes
     Info: Processing ended: Sun May 22 21:26:11 2022
     Info: Elapsed time: 00:00:19
     Info: Total CPU time (on all processors): 00:00:27
+=======
+Info (144001): Generated suppressed messages file C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 5840 megabytes
+    Info: Processing ended: Sun May 22 10:06:26 2022
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:30
+>>>>>>> Stashed changes
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
+<<<<<<< Updated upstream
 The suppressed messages can be found in C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.fit.smsg.
+=======
+The suppressed messages can be found in C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/output_files/Box_Muller.fit.smsg.
+>>>>>>> Stashed changes
 
 

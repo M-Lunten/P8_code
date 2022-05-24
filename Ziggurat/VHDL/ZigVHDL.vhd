@@ -124,7 +124,7 @@ end component;
 	
 	signal xu : 		std_logic_vector(15 downto 0) := "0000000000000000";
 	signal xu_1 : 		std_logic_vector(15 downto 0) := "0000000000000000";
-	signal xu_2 : 		std_logic_vector(15 downto 0) := "0000000000000000";
+	signal xu_2,xu_3 : 		std_logic_vector(15 downto 0) := "0000000000000000";
 	
 	
 	signal D1 : std_logic;
@@ -133,13 +133,14 @@ end component;
 	signal D4 : std_logic;
 	signal D5, D5_1 : std_logic;
 	
-	signal D1_1,D1_2 : std_logic;
-	signal D2_1,D2_2 : std_logic;
-	signal D3_1,D3_2 : std_logic;
+	signal D1_1,D1_2,D1_3 : std_logic;
+	signal D2_1,D2_2,D2_3 : std_logic;
+	signal D3_1,D3_2,D3_3 : std_logic;
 	signal D4_1,D4_2 : std_logic;
 	
 	constant area: std_logic_vector(15 downto 0) := "0000000010000001";
 	
+	signal fxd1,fxd2,fxd3,Yd1,Yd2 : std_logic_vector(15 downto 0);
 
 	signal valid : std_logic;
 	
@@ -150,7 +151,7 @@ end component;
 		c4: d2Gen port map(i_clock,xu,xiplus_1,D2);
 		c5: d3Gen port map(i_clock,i_2,D3);
 		c6: d4Gen port map(i_clock,AU,A0,D4);
-		c7: d5Gen port map(i_clock,Y,fx,D5);
+		c7: d5Gen port map(i_clock,Yd2,fxd3,D5);
 		
 
 		isVal <= valid;
@@ -213,6 +214,8 @@ end component;
 						U1_1 <= U1;
 						U1_2 <= U1_1;
 						U1_3 <= U1_2;
+						U1_4 <= U1_3;
+						U1_5 <= U1_4;
 						
 						
 						i_1 <= i;
@@ -223,8 +226,13 @@ end component;
 						YvS1 := (YmYmminus1 * unsigned(U1_2));--Q0.16 x Q0.16 -> Q0.32
 						YvS2 := shift_right(YvS1,16)(15 downto 0);
 						
-						YvS3 := Ymax - YvS2;-- Q0.16 - Q0.16
-						Y <= std_logic_vector(YvS3);
+						Yd1 <= std_logic_vector(YvS2);
+						
+						YvS3 := Ymax - unsigned(Yd1);-- Q0.16 - Q0.16
+						
+						Yd2 <= std_logic_vector(YvS3);
+						
+						Y <= Yd2;
 						
 -------------------------------------
 	
@@ -234,49 +242,61 @@ end component;
 						xuvS2 := unsigned(shift_right(xuvS1,16)(15 downto 0)); -- Q3.13
 						xu <= std_logic_vector(xuvS2);
 						
-						fxvS1 := (xuvS2*xuvS2); -- Q3.13 x Q3.13 -> 6.26
+						fxd1 <= xu;
+						
+						fxvS1 := (unsigned(xu)*unsigned(xu)); -- Q3.13 x Q3.13 -> 6.26
 						fxvS2 := unsigned(shift_right(fxvS1,13)(15 downto 0)); -- Q3.13
-						fxvS3 := signed(fxvS2)*signed(GRAD); -- Q3.13 x Q1.15 -> Q3.28
+						
+						fxd2 <= std_logic_vector(fxvS2);
+						
+						fxvS3 := signed(fxd2)*signed(GRAD); -- Q3.13 x Q1.15 -> Q3.28
 						fxvS4 := signed(shift_right(fxvS3,15)(15 downto 0)); -- Q3.13
-						fxvS5 := fxvS4 + signed(shift_right(YmaxMinus1,3)(15 downto 0)); -- Q3.13 + Q0.16
+						
+						fxd3 <= std_logic_vector(fxvS4);
+						
+						fxvS5 := signed(fxd3) + signed(shift_right(YmaxMinus1,3)(15 downto 0)); -- Q3.13 + Q0.16
 						fx <= std_logic_vector(fxvS5);
 						
 					
 						D1_1 <= D1;
 						D1_2 <= D1_1;
+						D1_3 <= D1_2;
 						D2_1 <= D2;
 						D2_2 <= D2_1;
+						D2_3 <= D2_2;
 						D3_1 <= D3;
 						D3_2 <= D3_1;
+						D3_3 <= D3_2;
 						D4_1 <= D4;
 						D4_2 <= D4_1;
 						D5_1 <= D5;
 						
 						
 						xu_1 <= xu;
+						xu_2 <= xu_1;
+						xu_3 <= xu_2;
 						
-						
-						if((D1_1='1') and (D2_1='1')) then 
-							if(U1_3(15)='1') then
-								zigout <= not(xu_1) + 1;
+						if((D1_3='1') and (D2_3='1')) then 
+							if(U1_5(15)='1') then
+								zigout <= not(xu_3) + 1;
 							else
-								zigout <= xu_1;
+								zigout <= xu_3;
 							end if;
 							valid <= '1';
 							
-						elsif ((D3_1='1') and (D4_1 = '1')) then
-							if(U1_3(15)='1') then
-								zigout <= not(xu_1) + 1;
+						elsif ((D3_3='1') and (D4_2 = '1')) then
+							if(U1_5(15)='1') then
+								zigout <= not(xu_3) + 1;
 							else
-								zigout <= xu_1;
+								zigout <= xu_3;
 							end if;
 							valid <= '1';
 							
-						elsif ((D1_1='0') and (D3_1='0') and (D5='1')) then	
-							if(U1_3(15)='1') then
-								zigout <= not(xu_1) + 1;
+						elsif ((D1_3='0') and (D3_3='0') and (D5='1')) then	
+							if(U1_5(15)='1') then
+								zigout <= not(xu_3) + 1;
 							else
-								zigout <= xu_1;
+								zigout <= xu_3;
 							end if;
 							valid <= '1';
 							

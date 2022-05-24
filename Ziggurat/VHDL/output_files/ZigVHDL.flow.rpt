@@ -1,5 +1,5 @@
 Flow report for ZigVHDL
-Wed May 18 14:41:05 2022
+Thu May 19 16:46:14 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed May 18 14:40:45 2022       ;
+; Flow Status                        ; Successful - Thu May 19 16:45:54 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ZigVHDL                                     ;
 ; Top-level Entity Name              ; ZigVHDL                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 428 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 320 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 200 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 200                                         ;
+; Total logic elements               ; 272 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 205 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 124 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 124                                         ;
 ; Total pins                         ; 20 / 529 ( 4 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 4,096 / 3,981,312 ( < 1 % )                 ;
+; Total memory bits                  ; 4,174 / 3,981,312 ( < 1 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 4 / 532 ( < 1 % )                           ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/18/2022 14:39:30 ;
+; Start date & time ; 05/19/2022 16:44:39 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ZigVHDL             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 83689965950041.165287757020668         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 83689965950041.165297147811824         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; zigLUT.cmp                             ; --            ; --          ; --         ;
@@ -94,11 +94,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 4831 MB             ; 00:00:23                           ;
-; Fitter               ; 00:00:34     ; 1.0                     ; 5863 MB             ; 00:00:29                           ;
-; Assembler            ; 00:00:26     ; 1.0                     ; 4682 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:19     ; 1.4                     ; 4872 MB             ; 00:00:02                           ;
-; Total                ; 00:01:48     ; --                      ; --                  ; 00:00:57                           ;
+; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 4837 MB             ; 00:00:22                           ;
+; Fitter               ; 00:00:36     ; 1.0                     ; 5925 MB             ; 00:00:26                           ;
+; Assembler            ; 00:00:26     ; 1.0                     ; 4681 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:19     ; 1.1                     ; 4873 MB             ; 00:00:02                           ;
+; Total                ; 00:01:50     ; --                      ; --                  ; 00:00:53                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

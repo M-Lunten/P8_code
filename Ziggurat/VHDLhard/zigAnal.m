@@ -27,5 +27,6 @@ hold on
 plot(xi, fi);
 hold off
 legend('Ideal Gaussian', 'VHDL simulation');
+title('The Distributions generated with MATLAB and simulated with VHDL');
 grid on
 xlim([-5 5])

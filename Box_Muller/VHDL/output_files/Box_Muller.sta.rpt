@@ -1,5 +1,9 @@
 Timing Analyzer report for Box_Muller
+<<<<<<< Updated upstream
 Sun May 22 21:26:20 2022
+=======
+Sun May 22 10:06:34 2022
+>>>>>>> Stashed changes
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -93,6 +97,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
+<<<<<<< Updated upstream
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
@@ -104,6 +109,20 @@ refer to the applicable agreement for further details.
 ;     Processor 2            ;  13.2%      ;
 ;     Processor 3            ;  13.1%      ;
 ;     Processor 4            ;  12.5%      ;
+=======
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.38        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;  12.4%      ;
+;     Processor 3            ;  12.2%      ;
+;     Processor 4            ;  12.0%      ;
+;     Processors 5-6         ;   1.0%      ;
+>>>>>>> Stashed changes
 +----------------------------+-------------+
 
 
@@ -561,14 +580,24 @@ No paths to report.
 ; 0.424 ; sincos:sc|n                     ; sincos:sc|na                                                                                                          ; gclk         ; gclk        ; 0.000        ; 0.044      ; 0.639      ;
 ; 0.426 ; sincos:sc|na                    ; sincos:sc|nb                                                                                                          ; gclk         ; gclk        ; 0.000        ; 0.044      ; 0.641      ;
 ; 0.428 ; sincos:sc|dsc[4]                ; LFSR_16:LF16|shift_register[3]                                                                                        ; gclk         ; gclk        ; 0.000        ; 0.044      ; 0.643      ;
+<<<<<<< Updated upstream
 ; 0.575 ; LFSR_16:LF16|shift_register[5]  ; sincos:sc|dsc[1]                                                                                                      ; gclk         ; gclk        ; 0.000        ; 0.046      ; 0.792      ;
 ; 0.575 ; sincos:sc|dSinpLUT[0]           ; sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ram_block1a0~porta_address_reg0 ; gclk         ; gclk        ; 0.000        ; 0.708      ; 1.484      ;
+=======
+; 0.575 ; sincos:sc|dSinpLUT[0]           ; sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ram_block1a0~porta_address_reg0 ; gclk         ; gclk        ; 0.000        ; 0.708      ; 1.484      ;
+; 0.575 ; LFSR_16:LF16|shift_register[5]  ; sincos:sc|dsc[1]                                                                                                      ; gclk         ; gclk        ; 0.000        ; 0.046      ; 0.792      ;
+>>>>>>> Stashed changes
 ; 0.577 ; LFSR_16:LF16|shift_register[4]  ; sincos:sc|dsc[0]                                                                                                      ; gclk         ; gclk        ; 0.000        ; 0.044      ; 0.792      ;
 ; 0.581 ; sincos:sc|dCospLUT[0]           ; sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ram_block1a0~portb_address_reg0 ; gclk         ; gclk        ; 0.000        ; 0.708      ; 1.490      ;
 ; 0.585 ; LFSR_16:LF16|shift_register[3]  ; LFSR_16:LF16|shift_register[8]                                                                                        ; gclk         ; gclk        ; 0.000        ; 0.044      ; 0.800      ;
 ; 0.596 ; LFSR_16:LF16|shift_register[2]  ; LFSR_16:LF16|shift_register[7]                                                                                        ; gclk         ; gclk        ; 0.000        ; 0.046      ; 0.813      ;
+<<<<<<< Updated upstream
 ; 0.602 ; LFSR_33:LF33|shift_register[9]  ; LFSR_33:LF33|shift_register[14]                                                                                       ; gclk         ; gclk        ; 0.000        ; 0.044      ; 0.817      ;
 ; 0.602 ; sincos:sc|dsc[0]                ; sincos:sc|dsc[5]                                                                                                      ; gclk         ; gclk        ; 0.000        ; 0.044      ; 0.817      ;
+=======
+; 0.602 ; sincos:sc|dsc[0]                ; sincos:sc|dsc[5]                                                                                                      ; gclk         ; gclk        ; 0.000        ; 0.044      ; 0.817      ;
+; 0.602 ; LFSR_33:LF33|shift_register[9]  ; LFSR_33:LF33|shift_register[14]                                                                                       ; gclk         ; gclk        ; 0.000        ; 0.044      ; 0.817      ;
+>>>>>>> Stashed changes
 ; 0.603 ; LFSR_33:LF33|shift_register[11] ; LFSR_33:LF33|shift_register[16]                                                                                       ; gclk         ; gclk        ; 0.000        ; 0.043      ; 0.817      ;
 ; 0.603 ; sincos:sc|dSinpLUT[3]           ; sincos:sc|sincosLUT:c1|altsyncram:altsyncram_component|altsyncram_egq3:auto_generated|ram_block1a0~porta_address_reg0 ; gclk         ; gclk        ; 0.000        ; 0.663      ; 1.467      ;
 ; 0.615 ; LFSR_33:LF33|shift_register[15] ; LFSR_33:LF33|shift_register[20]                                                                                       ; gclk         ; gclk        ; 0.000        ; 0.043      ; 0.829      ;
@@ -1259,11 +1288,19 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+<<<<<<< Updated upstream
     Info: Processing started: Sun May 22 21:26:17 2022
 Info: Command: quartus_sta Box_Muller -c Box_Muller
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+=======
+    Info: Processing started: Sun May 22 10:06:31 2022
+Info: Command: quartus_sta Box_Muller -c Box_Muller
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+>>>>>>> Stashed changes
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Box_Muller.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1330,9 +1367,15 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000            -313.073 gclk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
+<<<<<<< Updated upstream
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4841 megabytes
     Info: Processing ended: Sun May 22 21:26:20 2022
+=======
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4866 megabytes
+    Info: Processing ended: Sun May 22 10:06:34 2022
+>>>>>>> Stashed changes
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

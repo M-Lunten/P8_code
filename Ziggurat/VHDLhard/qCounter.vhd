@@ -20,7 +20,7 @@ end qCounter;
 
 architecture behavioural of qCounter is 
 Signal Si : std_logic_vector(3 downto 0) := "0000";
-signal clk2 : std_logic := '0';
+signal clk2 : std_logic := '1';
 
 begin 
 	process(iclock)

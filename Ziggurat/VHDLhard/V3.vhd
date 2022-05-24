@@ -7,8 +7,8 @@ port(
 	iclock : in std_logic;
 	muxctrl : in std_logic_vector(1 downto 0);
 	V3ctrl : in std_logic;
-	iinV,ys1inV,fxinV : in std_logic_vector(15 downto 0);
-	i_ys1_fxoutV: out std_logic_vector(15 downto 0)
+	iinV,xusqinV,fxinV : in std_logic_vector(15 downto 0);
+	i_xusq_fxoutV: out std_logic_vector(15 downto 0)
 	);
 end V3;
 
@@ -16,7 +16,7 @@ architecture behavioural of V3 is
 
 component mux20 is
 port(
-	iin,ys1in,fxin: in std_logic_vector(15 downto 0);
+	iin,xusqin,fxin: in std_logic_vector(15 downto 0);
 	output: out std_logic_vector(15 downto 0);
 	ctrl: in std_logic_vector(1 downto 0)
 	);
@@ -37,7 +37,7 @@ signal muxout : std_logic_vector(15 downto 0);
 signal regout : std_logic_vector(15 downto 0);
 
 begin
-	c1: mux20 port map(iinV,ys1inV,fxinV,muxout,muxctrl);
+	c1: mux20 port map(iinV,xusqinV,fxinV,muxout,muxctrl);
 	--c2: mux21 port map(ioutV,ys1outV,fxoutV,regout,muxctrl);
 	
 	
@@ -46,7 +46,7 @@ begin
 	begin
 		if rising_edge(iclock) then 
 			if V3ctrl = '1' then 
-				i_ys1_fxoutV <= muxout;
+				i_xusq_fxoutV <= muxout;
 			end if;
 		
 		end if;

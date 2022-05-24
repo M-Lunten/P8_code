@@ -1,5 +1,9 @@
 Flow report for Box_Muller
+<<<<<<< Updated upstream
 Sun May 22 21:26:23 2022
+=======
+Sun May 22 10:06:37 2022
+>>>>>>> Stashed changes
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +44,11 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< Updated upstream
 ; Flow Status                        ; Successful - Sun May 22 21:26:23 2022       ;
+=======
+; Flow Status                        ; Successful - Sun May 22 10:06:37 2022       ;
+>>>>>>> Stashed changes
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Box_Muller                                  ;
 ; Top-level Entity Name              ; Box_Muller                                  ;
@@ -64,7 +72,11 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< Updated upstream
 ; Start date & time ; 05/22/2022 21:25:30 ;
+=======
+; Start date & time ; 05/22/2022 10:05:50 ;
+>>>>>>> Stashed changes
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Box_Muller          ;
 +-------------------+---------------------+
@@ -75,7 +87,11 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+<<<<<<< Updated upstream
 ; COMPILER_SIGNATURE_ID               ; 128437433018357.165324753012804        ; --            ; --          ; --             ;
+=======
+; COMPILER_SIGNATURE_ID               ; 83689965950041.165320674904764         ; --            ; --          ; --             ;
+>>>>>>> Stashed changes
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim (Verilog)                     ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -100,12 +116,21 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4820 MB             ; 00:00:31                           ;
 ; Fitter               ; 00:00:18     ; 1.0                     ; 5706 MB             ; 00:00:26                           ;
 ; Assembler            ; 00:00:04     ; 1.0                     ; 4682 MB             ; 00:00:03                           ;
 ; Timing Analyzer      ; 00:00:03     ; 1.4                     ; 4841 MB             ; 00:00:03                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4654 MB             ; 00:00:02                           ;
 ; Total                ; 00:00:47     ; --                      ; --                  ; 00:01:05                           ;
+=======
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4832 MB             ; 00:00:27                           ;
+; Fitter               ; 00:00:19     ; 1.0                     ; 5840 MB             ; 00:00:30                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4680 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.4                     ; 4866 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:02                           ;
+; Total                ; 00:00:44     ; --                      ; --                  ; 00:01:05                           ;
+>>>>>>> Stashed changes
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,11 +139,19 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis ; DESKTOP-1ENLTR7  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Fitter               ; DESKTOP-1ENLTR7  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; DESKTOP-1ENLTR7  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DESKTOP-1ENLTR7  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-1ENLTR7  ; Windows 10 ; 10.0       ; x86_64         ;
+=======
+; Analysis & Synthesis ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-CTMPABKD  ; Windows 10 ; 10.0       ; x86_64         ;
+>>>>>>> Stashed changes
 +----------------------+------------------+------------+------------+----------------+
 
 

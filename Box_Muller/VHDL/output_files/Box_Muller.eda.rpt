@@ -1,5 +1,9 @@
 EDA Netlist Writer report for Box_Muller
+<<<<<<< Updated upstream
 Sun May 22 21:26:23 2022
+=======
+Sun May 22 10:06:37 2022
+>>>>>>> Stashed changes
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +40,11 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
+<<<<<<< Updated upstream
 ; EDA Netlist Writer Status ; Successful - Sun May 22 21:26:23 2022 ;
+=======
+; EDA Netlist Writer Status ; Successful - Sun May 22 10:06:37 2022 ;
+>>>>>>> Stashed changes
 ; Revision Name             ; Box_Muller                            ;
 ; Top-level Entity Name     ; Box_Muller                            ;
 ; Family                    ; Cyclone IV E                          ;
@@ -71,6 +79,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------+
 ; Generated Files                                                                                                 ;
 +-----------------------------------------------------------------------------------------------------------------+
+<<<<<<< Updated upstream
 ; C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller_7_1200mv_85c_slow.vo     ;
 ; C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller_7_1200mv_0c_slow.vo      ;
 ; C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller_min_1200mv_0c_fast.vo    ;
@@ -79,6 +88,16 @@ refer to the applicable agreement for further details.
 ; C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller_7_1200mv_0c_v_slow.sdo   ;
 ; C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller_min_1200mv_0c_v_fast.sdo ;
 ; C:/Users/morte/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller_v.sdo                    ;
+=======
+; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller_7_1200mv_85c_slow.vo     ;
+; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller_7_1200mv_0c_slow.vo      ;
+; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller_min_1200mv_0c_fast.vo    ;
+; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller.vo                       ;
+; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller_7_1200mv_85c_v_slow.sdo  ;
+; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller_7_1200mv_0c_v_slow.sdo   ;
+; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/Box_Muller_v.sdo                    ;
+>>>>>>> Stashed changes
 +-----------------------------------------------------------------------------------------------------------------+
 
 
@@ -88,6 +107,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+<<<<<<< Updated upstream
     Info: Processing started: Sun May 22 21:26:21 2022
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Box_Muller -c Box_Muller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -102,6 +122,22 @@ Info (204019): Generated file Box_Muller_v.sdo in folder "C:/Users/morte/Documen
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4654 megabytes
     Info: Processing ended: Sun May 22 21:26:23 2022
+=======
+    Info: Processing started: Sun May 22 10:06:35 2022
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Box_Muller -c Box_Muller
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file Box_Muller_7_1200mv_85c_slow.vo in folder "C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Box_Muller_7_1200mv_0c_slow.vo in folder "C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Box_Muller_min_1200mv_0c_fast.vo in folder "C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Box_Muller.vo in folder "C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Box_Muller_7_1200mv_85c_v_slow.sdo in folder "C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Box_Muller_7_1200mv_0c_v_slow.sdo in folder "C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Box_Muller_min_1200mv_0c_v_fast.sdo in folder "C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Box_Muller_v.sdo in folder "C:/Users/fivan/Documents/GitHub/P8_code/Box_Muller/VHDL/simulation/modelsim/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4656 megabytes
+    Info: Processing ended: Sun May 22 10:06:37 2022
+>>>>>>> Stashed changes
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
