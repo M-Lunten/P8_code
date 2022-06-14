@@ -1,0 +1,22 @@
+--Ones counter for 61  bit signal
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity counter_32bits is 
+	port (
+		clk: in std_logic;
+		out_sum: out std_logic_vector(31 downto 0)
+	);
+end counter_32bits;
+
+architecture behavior of counter_32bits is
+
+begin
+	process(clk)
+	signal count: std_logic_vector(31 downto 0);
+	begin
+	if rising_edge(clk) then
+		count = count + 1;
+	end if
+end behavior;

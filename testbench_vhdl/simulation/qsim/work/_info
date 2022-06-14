@@ -1,0 +1,147 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/simulation/qsim
+Ecounter_32bits
+Z1 w1655210665
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+Z10 8histogram_vhdl.vho
+Z11 Fhistogram_vhdl.vho
+l0
+L79
+V@l;4fWWMjMz;c5C3I5V120
+!s100 O8P85jTmJo5^CSSF9DJ7k1
+Z12 OV;C;10.5b;63
+32
+Z13 !s110 1655210667
+!i10b 1
+Z14 !s108 1655210667.000000
+Z15 !s90 -work|work|histogram_vhdl.vho|
+Z16 !s107 histogram_vhdl.vho|
+!i113 1
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 14 counter_32bits 0 22 @l;4fWWMjMz;c5C3I5V120
+l240
+L122
+VNPLIGKg<aFQzNB18J^X_>2
+!s100 ajFR;cQI2=TLA_LM3AkhT3
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Ecounter_32bits_vhd_vec_tst
+Z19 w1655210663
+R7
+R8
+R0
+Z20 8Waveform.vwf.vht
+Z21 FWaveform.vwf.vht
+l0
+L31
+V[IH52e]Jf1PW`FZ3KTej41
+!s100 `562HNIC=cj4]Si2^lFYa1
+R12
+32
+R13
+!i10b 1
+R14
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
+!i113 1
+R17
+R18
+Acounter_32bits_arch
+R7
+R8
+DEx4 work 26 counter_32bits_vhd_vec_tst 0 22 [IH52e]Jf1PW`FZ3KTej41
+l44
+L33
+VfQ8f^SbEKZa9YXHm0@`DJ1
+!s100 Cbg_ik`ozEE`nf2VNLBEh3
+R12
+32
+R13
+!i10b 1
+R14
+R22
+R23
+!i113 1
+R17
+R18
+Ehard_block
+R1
+R4
+R2
+R6
+R7
+R8
+R3
+R0
+R10
+R11
+l0
+L34
+VOgIg9T_BR7joedFDVM>H13
+!s100 A`ID_i56<Ua56=ZD=[EG=2
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
+l64
+L50
+V`^CmQg<48W[ez[JL_5@Yn2
+!s100 2S?JL;LJ@<3:BHXTNcXS]3
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
