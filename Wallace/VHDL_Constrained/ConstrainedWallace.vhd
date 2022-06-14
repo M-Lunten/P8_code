@@ -139,7 +139,7 @@ architecture rtl of ConstrainedWallace is
 	signal lfsrOut		: std_logic_vector(28 downto 0) := "00000000000000000000000000000";
 	signal addrAres   : std_logic_vector(15 downto 0) := "0000000000000000";
 	signal addrBres   : std_logic_vector(15 downto 0) := "0000000000000001";
-
+	signal regx1_chi   : std_logic_vector(15 downto 0) := "0000000000000001";
 
 begin
 
@@ -153,7 +153,7 @@ begin
 	mux6: mux4to1 port map (data0x => TPO, data1x => X1, data2x => X3, data3x => C1, sel => muxCtrl(7 downto 6), result => ALU1A);
 	mux7: mux4to1 port map (data0x => TPO, data1x => X1, data2x => X3, data3x => PA, sel => muxCtrl(9 downto 8), result => ALU1B);
 	mux8: mux4to1 port map (data0x => TPO, data1x => X2, data2x => X4, data3x => C1, sel => muxCtrl(11 downto 10), result => ALU2A);
-	mux9: mux4to1 port map (data0x => TPO, data1x => X2, data2x => X4, data3x => grnNumEx, sel => muxCtrl(13 downto 12), result => ALU2B);
+	mux9: mux4to1 port map (data0x => TPO, data1x => X2, data2x => X4, data3x => regx1_chi, sel => muxCtrl(13 downto 12), result => ALU2B);
 	mux10: mux4to1 port map (data0x => A1, data1x => PA, data2x => xor1, data3x => "0000000000000000", sel => muxCtrl(15 downto 14), result => addrAres);
 	mux11: mux4to1 port map (data0x => A2, data1x => A4, data2x => xor2, data3x => "0000000000000000", sel => muxCtrl(15 downto 14), result => addrBres);
 	
@@ -314,6 +314,7 @@ begin
 				Leaky2 <= ALU2Out;
 			end if;
 			
+			regx1_chi <= grnNumEx;
 			Leaky3 <= Leaky2;
 			
 			
