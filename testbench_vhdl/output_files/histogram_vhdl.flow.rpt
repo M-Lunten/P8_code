@@ -1,5 +1,5 @@
 Flow report for histogram_vhdl
-Tue Jun 14 17:12:45 2022
+Wed Jun 15 13:34:26 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Jun 14 17:12:21 2022       ;
+; Flow Status                        ; Successful - Wed Jun 15 13:34:26 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; histogram_vhdl                              ;
 ; Top-level Entity Name              ; histogram_vhdl                              ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/14/2022 17:09:59 ;
+; Start date & time ; 06/15/2022 13:31:16 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; histogram_vhdl      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589206.165521939907592         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 10995770589206.165529267606536         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; out_mux.cmp                            ; --            ; --          ; --         ;
@@ -92,11 +92,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:01     ; 1.0                     ; 4948 MB             ; 00:00:57                           ;
-; Fitter               ; 00:01:08     ; 1.1                     ; 5876 MB             ; 00:01:22                           ;
-; Assembler            ; 00:00:27     ; 1.0                     ; 4706 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:23     ; 1.4                     ; 4926 MB             ; 00:00:06                           ;
-; Total                ; 00:02:59     ; --                      ; --                  ; 00:02:29                           ;
+; Analysis & Synthesis ; 00:00:53     ; 1.0                     ; 4948 MB             ; 00:00:50                           ;
+; Fitter               ; 00:01:00     ; 1.1                     ; 5869 MB             ; 00:01:12                           ;
+; Assembler            ; 00:00:27     ; 1.0                     ; 4704 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:21     ; 1.3                     ; 4917 MB             ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:18     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:19     ; 1.0                     ; 4677 MB             ; 00:00:02                           ;
+; Total                ; 00:03:18     ; --                      ; --                  ; 00:02:14                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,6 +111,8 @@ refer to the applicable agreement for further details.
 ; Fitter               ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-0L3QH2SV  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -119,6 +123,8 @@ quartus_map --read_settings_files=on --write_settings_files=off histogram_vhdl -
 quartus_fit --read_settings_files=off --write_settings_files=off histogram_vhdl -c histogram_vhdl
 quartus_asm --read_settings_files=off --write_settings_files=off histogram_vhdl -c histogram_vhdl
 quartus_sta histogram_vhdl -c histogram_vhdl
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off histogram_vhdl -c histogram_vhdl --vector_source=C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/Waveform2.vwf --testbench_file=C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/simulation/qsim/Waveform2.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/simulation/qsim/ histogram_vhdl -c histogram_vhdl
 
 
 

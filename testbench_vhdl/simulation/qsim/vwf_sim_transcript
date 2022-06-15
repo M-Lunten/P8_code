@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off histogram_vhdl -c histogram_vhdl --vector_source="C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/Waveform.vwf" --testbench_file="C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off histogram_vhdl -c histogram_vhdl --vector_source="C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/Waveform2.vwf" --testbench_file="C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/simulation/qsim/Waveform2.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -25,11 +25,11 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Jun 14 14:44:21 2022
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off histogram_vhdl -c histogram_vhdl --vector_source=C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/Waveform.vwf --testbench_file=C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/simulation/qsim/Waveform.vwf.vht
+    Info: Processing started: Wed Jun 15 13:33:49 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off histogram_vhdl -c histogram_vhdl --vector_source=C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/Waveform2.vwf --testbench_file=C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/simulation/qsim/Waveform2.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-les
+arning (201005): Ignoring output pin "out_sum[10]" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -53,15 +53,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Jun 14 14:44:23 2022
+    Info: Processing started: Wed Jun 15 13:34:07 2022
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/simulation/qsim/ histogram_vhdl -c histogram_vhdl
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file histogram_vhdl.vho in folder "C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4640 megabytes
-    Info: Processing ended: Tue Jun 14 14:44:25 2022
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4677 megabytes
+    Info: Processing ended: Wed Jun 15 13:34:26 2022
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:02
 
 Completed successfully. 
 
@@ -77,16 +77,15 @@ c:/intelfpga_lite/18.1/modelsim_ase/win32aloem//vsim -c -do histogram_vhdl.do
 
 Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
-
 # 10.5b
 
 # do histogram_vhdl.do
 
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:44:27 on Jun 14,2022
+# Start time: 13:34:27 on Jun 15,2022
 # vcom -work work histogram_vhdl.vho 
 # -- Loading package STANDARD
-
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
@@ -98,61 +97,88 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
-# -- Compiling entity counter_32bits
-# -- Compiling architecture structure of counter_32bits
-# End time: 14:44:27 on Jun 14,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# -- Compiling entity histogram_vhdl
+# -- Compiling architecture structure of histogram_vhdl
 
+# End time: 13:34:29 on Jun 15,2022, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:44:27 on Jun 14,2022
-# vcom -work work Waveform.vwf.vht 
+# Start time: 13:34:29 on Jun 15,2022
+# vcom -work work Waveform2.vwf.vht 
 # -- Loading package STANDARD
+
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity counter_32bits_vhd_vec_tst
-# -- Compiling architecture counter_32bits_arch of counter_32bits_vhd_vec_tst
-# End time: 14:44:27 on Jun 14,2022, Elapsed time: 0:00:00
+# -- Compiling entity histogram_vhdl_vhd_vec_tst
+# -- Compiling architecture histogram_vhdl_arch of histogram_vhdl_vhd_vec_tst
+
+# End time: 13:34:29 on Jun 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.counter_32bits_vhd_vec_tst 
-# Start time: 14:44:28 on Jun 14,2022
+# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.histogram_vhdl_vhd_vec_tst 
+# Start time: 13:34:29 on Jun 15,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.counter_32bits_vhd_vec_tst(counter_32bits_arch)
+# Loading work.histogram_vhdl_vhd_vec_tst(histogram_vhdl_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading altera.dffeas_pack
 # Loading altera.altera_primitives_components
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
-# Loading work.counter_32bits(structure)
+# Loading work.histogram_vhdl(structure)
 # Loading work.hard_block(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
 # Loading cycloneive.cycloneive_ena_reg(behave)
-# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 12322 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 1453278 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
-# after#33
 
-# End time: 14:44:28 on Jun 14,2022, Elapsed time: 0:00:00
+# after#35
+
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# Simulation time: 652000 ps
+
+# Simulation time: 652000 ps
+
+# Simulation time: 652000 ps
+
+# Simulation time: 652000 ps
+
+# End time: 13:35:02 on Jun 15,2022, Elapsed time: 0:00:33
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/Waveform.vwf...
+Reading C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/Waveform2.vwf...
 
 Reading C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/simulation/qsim/histogram_vhdl.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/simulation/qsim/histogram_vhdl_20220614144429.sim.vwf
+Writing the resulting VWF to C:/Users/Morten/Documents/GitHub/P8_code/testbench_vhdl/simulation/qsim/histogram_vhdl_20220615133502.sim.vwf
 
 Finished VCD to VWF conversion.
 
