@@ -308,12 +308,10 @@ architecture behavior of histogram_vhdl is
 	process(master_clk)
 	begin
 	if rising_edge(master_clk) then
-		if unsigned(counter_out(4095 downto 4064)) >= 50 then
-			if unsigned(counter_out(31 downto 0)) >= 50 then
+		if unsigned(counter_out(2079 downto 2048)) >= 50 then
+			if unsigned(counter_out(2047 downto 2016)) >= 50 then
 				halt <= '1';
 			end if;
-		else
-			halt <= '0';
 		end if;
 	end if;
 	end process;

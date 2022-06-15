@@ -99,7 +99,7 @@ R23
 R17
 R18
 Ehard_block
-R1
+Z24 w1655292866
 R4
 R2
 R6
@@ -115,9 +115,9 @@ VOgIg9T_BR7joedFDVM>H13
 !s100 A`ID_i56<Ua56=ZD=[EG=2
 R12
 32
-R13
+Z25 !s110 1655292867
 !i10b 1
-R14
+Z26 !s108 1655292867.000000
 R15
 R16
 !i113 1
@@ -137,11 +137,101 @@ V`^CmQg<48W[ez[JL_5@Yn2
 !s100 2S?JL;LJ@<3:BHXTNcXS]3
 R12
 32
-R13
+R25
 !i10b 1
-R14
+R26
 R15
 R16
+!i113 1
+R17
+R18
+Ehistogram_vhdl
+R24
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R0
+R10
+R11
+l0
+L79
+VkIcDzT=949nC1YhWbDfiz0
+!s100 FPPHKnoPEEcIf7Dk^O:^m2
+R12
+32
+R25
+!i10b 1
+R26
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 14 histogram_vhdl 0 22 kIcDzT=949nC1YhWbDfiz0
+l11728
+L149
+VAPk:F`KJbK^[:hYLmkVNU1
+!s100 6o?Z@^iNj@DAjhn=zn:On2
+R12
+32
+!s110 1655292868
+!i10b 1
+R26
+R15
+R16
+!i113 1
+R17
+R18
+Ehistogram_vhdl_vhd_vec_tst
+Z27 w1655292847
+R7
+R8
+R0
+Z28 8Waveform2.vwf.vht
+Z29 FWaveform2.vwf.vht
+l0
+L31
+VR^Qb7[ZWbAQS53n=^2:Oh1
+!s100 LU9LD]CiRgPl7Wl[Bm20O2
+R12
+32
+Z30 !s110 1655292869
+!i10b 1
+Z31 !s108 1655292869.000000
+Z32 !s90 -work|work|Waveform2.vwf.vht|
+Z33 !s107 Waveform2.vwf.vht|
+!i113 1
+R17
+R18
+Ahistogram_vhdl_arch
+R7
+R8
+Z34 DEx4 work 26 histogram_vhdl_vhd_vec_tst 0 22 R^Qb7[ZWbAQS53n=^2:Oh1
+l50
+L33
+Z35 VK?3Vk1d`7ZFI;LMT>B1fH2
+Z36 !s100 DOV0BEUi_]OmDJh<8oFnN0
+R12
+32
+R30
+!i10b 1
+R31
+R32
+R33
 !i113 1
 R17
 R18
