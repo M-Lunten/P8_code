@@ -67,6 +67,9 @@ xlabel('x')
 ylabel('Probability')
 title('Sum of squares for VHDL simulation')
 
+%%
 [corr, lags] = xcorr(data1, 'normalized');
 figure(4)
 plot(lags, corr)
+xlabel('Lags')
+ylabel('Correlation')

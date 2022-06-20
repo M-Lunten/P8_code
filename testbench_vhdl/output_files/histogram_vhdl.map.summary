@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Wed Jun 15 13:31:53 2022
+Analysis & Synthesis Status : Successful - Wed Jun 15 14:50:44 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : histogram_vhdl
 Top-level Entity Name : histogram_vhdl
 Family : Cyclone IV E
-Total logic elements : 7,528
-    Total combinational functions : 7,528
-    Dedicated logic registers : 4,097
-Total registers : 4097
-Total pins : 57
+Total logic elements : 8,248
+    Total combinational functions : 8,034
+    Dedicated logic registers : 4,700
+Total registers : 4700
+Total pins : 4
 Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
+Total memory bits : 32,768
+Embedded Multiplier 9-bit elements : 4
 Total PLLs : 0

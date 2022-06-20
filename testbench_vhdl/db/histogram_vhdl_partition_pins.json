@@ -4,195 +4,19 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "out_sum[0]",
+					"name" : "lamp",
 					"strict" : false
 				},
 				{
-					"name" : "out_sum[1]",
+					"name" : "output",
 					"strict" : false
 				},
 				{
-					"name" : "out_sum[2]",
+					"name" : "boris_clk",
 					"strict" : false
 				},
 				{
-					"name" : "out_sum[3]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[4]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[5]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[6]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[7]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[8]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[9]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[10]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[11]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[12]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[13]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[14]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[15]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[16]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[17]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[18]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[19]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[20]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[21]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[22]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[23]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[24]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[25]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[26]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[27]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[28]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[29]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[30]",
-					"strict" : false
-				},
-				{
-					"name" : "out_sum[31]",
-					"strict" : false
-				},
-				{
-					"name" : "halt",
-					"strict" : false
-				},
-				{
-					"name" : "mux_ctrl[2]",
-					"strict" : false
-				},
-				{
-					"name" : "mux_ctrl[3]",
-					"strict" : false
-				},
-				{
-					"name" : "mux_ctrl[1]",
-					"strict" : false
-				},
-				{
-					"name" : "mux_ctrl[0]",
-					"strict" : false
-				},
-				{
-					"name" : "mux_ctrl[4]",
-					"strict" : false
-				},
-				{
-					"name" : "mux_ctrl[5]",
-					"strict" : false
-				},
-				{
-					"name" : "mux_ctrl[6]",
-					"strict" : false
-				},
-				{
-					"name" : "input[9]",
-					"strict" : false
-				},
-				{
-					"name" : "input[15]",
-					"strict" : false
-				},
-				{
-					"name" : "input[13]",
-					"strict" : false
-				},
-				{
-					"name" : "input[12]",
-					"strict" : false
-				},
-				{
-					"name" : "input[11]",
-					"strict" : false
-				},
-				{
-					"name" : "input[8]",
-					"strict" : false
-				},
-				{
-					"name" : "input[10]",
-					"strict" : false
-				},
-				{
-					"name" : "master_clk",
+					"name" : "clk",
 					"strict" : false
 				}
 			]

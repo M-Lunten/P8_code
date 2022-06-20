@@ -9,7 +9,7 @@ entity counter_32bits is
 	port (
 		clk: in std_logic;
 		input: in std_logic_vector(6 downto 0);
-		out_sum: out std_logic_vector(31 downto 0)
+		out_sum: out std_logic_vector(31 downto 0) := "00000000000000000000000000000000"
 	);
 end counter_32bits;
 
